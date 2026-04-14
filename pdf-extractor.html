@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extract Pages from PDF Free | FreeStudentTools</title>
+  <meta name="description" content="Extract specific pages from any PDF for free. Enter page numbers or ranges like 1,3,5-8. No sign-up, no upload — runs entirely in your browser.">
+  <meta name="keywords" content="pdf page extractor free, extract pages from pdf, split pdf pages online free, remove pages from pdf, pdf splitter no upload, extract pdf pages no signup">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/pdf-extractor.html">
+  <meta property="og:title" content="Free PDF Page Extractor — Extract Pages from PDF Online | FreeStudentTools">
+  <meta property="og:description" content="Extract specific pages from any PDF for free. Enter page numbers or ranges like 1,3,5-8. No sign-up, no upload — runs entirely in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/pdf-extractor.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Free PDF Page Extractor — Extract Pages from PDF Online | FreeStudentTools">
+  <meta name="twitter:description" content="Extract specific pages from any PDF for free. Enter page numbers or ranges like 1,3,5-8. No sign-up, no upload — runs entirely in your browser.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free PDF Page Extractor",
+        "description": "Extract specific pages from any PDF file for free. Enter individual page numbers or ranges like 1,3,5-8. Runs entirely in your browser — no uploads, no sign-up.",
+        "url": "https://freestudenttools.com/pdf-extractor.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Extract individual pages or page ranges from any PDF",
+          "Supports page ranges like 1,3,5-8",
+          "Quick-select presets: first page, last page, all pages, odd pages, even pages",
+          "Supports PDFs up to 100MB",
+          "100% browser-based — no file uploads",
+          "No watermarks added",
+          "No sign-up or email required",
+          "Instant download of extracted PDF"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to extract pages from a PDF for free",
+        "description": "Extract specific pages from any PDF in seconds — directly in your browser, with no uploads required.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Upload your PDF",
+            "text": "Click the upload area or drag and drop your PDF file onto the page."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Enter page numbers to extract",
+            "text": "Type the page numbers you want to keep, separated by commas. Use hyphens for ranges, e.g. 1,3,5-8,12."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Extract pages",
+            "text": "Click Extract Pages. The tool processes your file entirely in the browser and builds a new PDF containing only your chosen pages."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Download the extracted PDF",
+            "text": "Click the download button to save the new PDF file to your device."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the PDF page extractor really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using the open-source pdf-lib library."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What page range format should I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enter page numbers separated by commas. Use a hyphen for ranges. For example: 1,3,5-8,12 will extract pages 1, 3, 5, 6, 7, 8, and 12. Page numbers start at 1."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many pages can I extract at once?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can extract up to 50 pages in a single operation. The source PDF can be up to 100MB."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my PDF uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Everything runs inside your browser using pdf-lib. Your PDF is never uploaded to any server and is cleared from memory when you close the tab."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- GA4: activated only after cookie consent via common.js -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    /* ===== UX IMPROVEMENTS ===== */
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    button, [role="button"], select, input[type="file"] { cursor: pointer; }
+    button { touch-action: manipulation; }
+
+    /* Info strips */
+    .info-strip { display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border-radius:var(--radius-md); font-size:0.82rem; line-height:1.5; }
+    .info-strip.blue { background:var(--primary-light); border:1px solid var(--primary-border); color:#1e40af; }
+    .info-strip.orange { background:#FFF7ED; border:1px solid #FED7AA; color:#7c2d12; }
+    .info-strip svg { flex-shrink:0; margin-top:1px; }
+
+    /* Minimum tap target heights */
+    .btn { min-height: 44px; }
+    .btn-lg { min-height: 48px; }
+
+    /* Options panel heading */
+    .options-panel-title {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); margin-bottom: 14px; font-size: 0.95rem; font-weight: 600;
+    }
+    .options-panel-title svg { color: var(--text-secondary); }
+
+    /* Center alignment */
+    .page-hero { text-align: center; }
+    .page-hero p { margin-left: auto; margin-right: auto; }
+    .page-hero-badge { display: inline-flex; }
+    .tool-main .upload-zone { text-align: center; }
+    .tool-main .options-panel { text-align: left; }
+    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+
+    /* Page count badge shown after upload */
+    .pdf-info-bar {
+      display: none; align-items: center; gap: 12px;
+      background: var(--success-light); border: 1.5px solid #A7F3D0;
+      border-radius: var(--radius-md); padding: 12px 16px; margin-top: 12px;
+    }
+    .pdf-info-bar.show { display: flex; }
+    .pdf-info-bar .pdf-info-icon { width: 36px; height: 36px; background: white; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: var(--success); flex-shrink: 0; }
+    .pdf-info-text { font-size: 0.875rem; color: #065F46; }
+    .pdf-info-text strong { font-weight: 700; }
+
+    /* Page input area */
+    .page-input-group { margin-top: 8px; }
+    .page-input-group input[type="text"] {
+      width: 100%; height: 44px; padding: 0 14px;
+      border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      font-size: 0.9rem; color: var(--text-primary); font-family: var(--font);
+      transition: border-color var(--transition);
+    }
+    .page-input-group input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,115,232,0.1); }
+    .page-input-hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+
+    /* Quick select buttons */
+    .quick-select { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+
+    /* Extraction stats */
+    .extraction-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    @media (max-width: 480px) { .extraction-stats { grid-template-columns: 1fr; } }
+
+    /* Stat card */
+    .stat-card {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-card .stat-value { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+    .stat-card .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+  </style>
+</head>
+<body class="page-wrapper">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html">Image Compressor</a></li>
+        <li><a href="pdf-merger.html">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html" class="active">Page Extractor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="image-compressor.html">Image Compressor</a>
+    <a href="pdf-merger.html">PDF Merger</a>
+    <a href="pdf-extractor.html">PDF Page Extractor</a>
+    <a href="citation-generator.html">Citation Generator</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<div class="container">
+  <div class="ad-container ad-leaderboard"><!-- AdSense Ad Unit --></div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/><line x1="12" y1="9" x2="12" y2="9"/></svg>
+      PDF Page Extractor
+    </div>
+    <h1>Extract Pages from PDF — Free Online Tool</h1>
+    <p>Pull specific pages out of any PDF instantly. Enter individual page numbers or ranges like 1,3,5-8. No sign-up required. Your file never leaves your browser.</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: April 2026 &nbsp;·&nbsp; Powered by pdf-lib
+    </p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- Upload zone -->
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept=".pdf" aria-label="Select a PDF file to upload">
+          <div class="upload-zone-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Drop your PDF here or click to browse</h3>
+          <p>PDF files only</p>
+          <p class="file-types">Max file size: 100MB</p>
+        </div>
+
+        <!-- File selected bar -->
+        <div class="file-selected" id="fileInputSelected">
+          <div class="file-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div class="file-info">
+            <div class="file-name" id="fileName"></div>
+            <div class="file-size" id="fileSize"></div>
+          </div>
+          <button class="remove-file" id="removeFile" aria-label="Remove selected file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <!-- PDF info bar (shown after upload, reveals page count) -->
+        <div class="pdf-info-bar" id="pdfInfoBar" role="status" aria-live="polite">
+          <div class="pdf-info-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="pdf-info-text" id="pdfInfoText">PDF loaded — specify which pages to extract below.</div>
+        </div>
+
+        <!-- Options panel -->
+        <div class="options-panel">
+          <h4 class="options-panel-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Pages to Extract
+          </h4>
+          <div class="option-group">
+            <label for="pageInput" style="font-size:0.85rem;font-weight:600;color:var(--text-primary);display:block;margin-bottom:4px;">Page numbers</label>
+            <div class="page-input-group">
+              <input
+                type="text"
+                id="pageRangeInput"
+                placeholder="e.g. 1,3,5-8,12"
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Page numbers to extract, e.g. 1,3,5-8,12"
+                aria-describedby="pageInputHint"
+              >
+            </div>
+            <p class="page-input-hint" id="pageInputHint">Enter page numbers separated by commas. Use ranges like 3-7. Maximum 50 pages.</p>
+
+            <!-- Quick select buttons -->
+            <div class="quick-select" role="group" aria-label="Quick page selection shortcuts">
+              <button class="btn btn-ghost btn-sm quick-select-btn" data-action="first" aria-label="Select first page only" type="button">First page</button>
+              <button class="btn btn-ghost btn-sm quick-select-btn" data-action="last" aria-label="Select last page only" type="button">Last page</button>
+              <button class="btn btn-ghost btn-sm quick-select-btn" data-action="all" aria-label="Select all pages" type="button">All pages</button>
+              <button class="btn btn-ghost btn-sm quick-select-btn" data-action="odd" aria-label="Select all odd-numbered pages" type="button">Odd pages</button>
+              <button class="btn btn-ghost btn-sm quick-select-btn" data-action="even" aria-label="Select all even-numbered pages" type="button">Even pages</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action bar -->
+        <div class="action-bar">
+          <button class="btn btn-primary btn-lg" id="extractBtn" disabled aria-label="Extract selected pages from PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Extract Pages
+          </button>
+          <button class="btn btn-outline" id="resetBtn" style="display:none" aria-label="Start over and clear all inputs">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+            Start Over
+          </button>
+        </div>
+
+        <!-- Status message -->
+        <div class="status-msg" id="statusMsg" role="alert" aria-live="polite"></div>
+
+        <!-- Progress bar -->
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-label">
+            <span id="progressLabel">Processing...</span>
+            <span id="progressPct">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Result container -->
+        <div class="result-container" id="resultContainer">
+          <!-- Extraction stats -->
+          <div class="extraction-stats">
+            <div class="stat-card">
+              <div class="stat-value" id="pagesExtractedStat">—</div>
+              <div class="stat-label">Pages Extracted</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="outputSizeStat">—</div>
+              <div class="stat-label">Output File Size</div>
+            </div>
+          </div>
+
+          <!-- Download card -->
+          <div class="download-card">
+            <div class="file-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h4>Extracted Pages Ready!</h4>
+            <p id="downloadDesc">Your extracted pages have been saved to a new PDF.</p>
+            <button class="btn btn-success btn-lg" id="downloadBtn" aria-label="Download extracted pages as PDF">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Extracted PDF
+            </button>
+          </div>
+        </div>
+
+        <!-- Privacy note -->
+        <div class="info-strip blue" style="margin-top:24px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Privacy guaranteed:</strong> Page extraction runs entirely in your browser using pdf-lib. Your file is never uploaded to any server.</span>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="tool-sidebar">
+        <div class="ad-container ad-rectangle"><!-- AdSense Ad Unit --></div>
+
+        <div class="sidebar-card" style="margin-top:20px">
+          <h4>How It Works</h4>
+          <ul class="how-it-works">
+            <li><div class="step-num">1</div><div>Upload your PDF file</div></li>
+            <li><div class="step-num">2</div><div>Enter the page numbers or ranges you want to keep</div></li>
+            <li><div class="step-num">3</div><div>Click Extract Pages — a new PDF is built in your browser</div></li>
+            <li><div class="step-num">4</div><div>Download your extracted PDF instantly</div></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Page Range Tips</h4>
+          <ul class="sidebar-list" style="font-size:0.85rem;color:var(--text-secondary);line-height:1.7;list-style:none;padding:0;margin:0">
+            <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>1,3,5</strong> — individual pages</li>
+            <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>2-6</strong> — a continuous range</li>
+            <li style="padding:4px 0;border-bottom:1px solid var(--border)"><strong>1,4-7,10</strong> — mix of both</li>
+            <li style="padding:4px 0">Page order in the output matches your input order</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Other Tools</h4>
+          <ul class="sidebar-list">
+            <li>
+              <a href="pdf-merger.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                PDF Merger
+              </a>
+            </li>
+            <li>
+              <a href="compressor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+                PDF Compressor
+              </a>
+            </li>
+            <li>
+              <a href="pdf-converter.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                PDF Converter
+              </a>
+            </li>
+            <li>
+              <a href="ocr.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                OCR Scanner
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="ad-container ad-responsive"><!-- AdSense Ad Unit --></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/pdf-extractor.js"></script>
+</body>
+</html>

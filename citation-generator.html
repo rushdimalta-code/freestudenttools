@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Citation Generator — APA, MLA, Chicago | FreeStudentTools</title>
+  <meta name="description" content="Generate free citations in APA 7th, MLA 9th, and Chicago 17th format. Cite websites, books, journal articles, and YouTube videos. No sign-up required.">
+  <meta name="keywords" content="free citation generator, APA citation generator free, MLA citation generator, Chicago citation format, cite website free, bibliography generator no signup, reference generator students">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/citation-generator.html">
+  <meta property="og:title" content="Free Citation Generator — APA, MLA, Chicago | FreeStudentTools">
+  <meta property="og:description" content="Generate free citations in APA 7th, MLA 9th, and Chicago 17th format. Cite websites, books, journal articles, and YouTube videos. No sign-up required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/citation-generator.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Free Citation Generator — APA, MLA, Chicago | FreeStudentTools">
+  <meta name="twitter:description" content="Generate free citations in APA 7th, MLA 9th, and Chicago 17th format. Cite websites, books, journal articles, and YouTube videos. No sign-up required.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free Citation Generator",
+        "description": "Generate accurate citations in APA 7th, MLA 9th, and Chicago 17th edition format for websites, books, journal articles, and YouTube videos. Free, no sign-up required.",
+        "url": "https://freestudenttools.com/citation-generator.html",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "APA 7th edition citation formatting",
+          "MLA 9th edition citation formatting",
+          "Chicago 17th edition citation formatting",
+          "Cite websites, books, journal articles, and YouTube videos",
+          "Save and export multiple citations",
+          "100% free — no sign-up required"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to generate a citation for free",
+        "description": "Create a formatted citation in APA, MLA, or Chicago style in seconds.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Select a citation format",
+            "text": "Choose APA 7th, MLA 9th, or Chicago 17th edition from the format options."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Choose your source type",
+            "text": "Click the tab for your source type: Website, Book, Journal Article, or YouTube Video."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Fill in the source details",
+            "text": "Enter the author, title, publication date, and any other available details into the form fields."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Copy your citation",
+            "text": "Click Copy to copy the formatted citation to your clipboard, or Add to List to save multiple citations and export them as a text file."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the citation generator really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — 100% free with no account, no sign-up, and no paid tier required. The tool runs entirely in your browser."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which citation formats does it support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The generator supports APA 7th edition, MLA 9th edition, and Chicago 17th edition (bibliography style)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I save multiple citations at once?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use the Add to List button to collect citations, then use Copy All or Download as .txt to export the full list."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the tool auto-fill citations from a URL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No — the tool does not fetch or scrape URLs. You enter the source details manually, which ensures accuracy. Always verify the final citation against your institution's style guide."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- GA4: activated only after cookie consent via common.js -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    /* ===== UX IMPROVEMENTS ===== */
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    button, [role="button"], select, input[type="text"], input[type="number"], input[type="url"] { cursor: pointer; }
+    button { touch-action: manipulation; }
+
+    /* Info strips */
+    .info-strip { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: var(--radius-md); font-size: 0.82rem; line-height: 1.5; }
+    .info-strip.blue { background: var(--primary-light); border: 1px solid var(--primary-border); color: #1e40af; }
+    .info-strip.orange { background: #FFF7ED; border: 1px solid #FED7AA; color: #7c2d12; }
+    .info-strip svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* Minimum tap target heights */
+    .btn { min-height: 44px; }
+    .btn-lg { min-height: 48px; }
+
+    /* Options panel heading */
+    .options-panel-title {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); margin-bottom: 14px; font-size: 0.95rem; font-weight: 600;
+    }
+    .options-panel-title svg { color: var(--text-secondary); }
+
+    .page-hero { text-align: center; }
+    .page-hero p { margin-left: auto; margin-right: auto; }
+    .page-hero-badge { display: inline-flex; }
+    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+    .tool-main .options-panel { text-align: left; }
+
+    /* Source type tabs */
+    .source-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 24px; border-bottom: 2px solid var(--border); padding-bottom: 0; }
+    .source-tab { padding: 10px 18px; font-size: 0.875rem; font-weight: 500; color: var(--text-secondary); border: none; background: none; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all var(--transition); font-family: var(--font); border-radius: var(--radius-sm) var(--radius-sm) 0 0; display: flex; align-items: center; gap: 7px; }
+    .source-tab:hover { color: var(--primary); background: var(--primary-light); }
+    .source-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; background: var(--primary-light); }
+
+    /* Form fields */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    .form-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-field label { font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+    .form-field input[type="text"],
+    .form-field input[type="number"],
+    .form-field input[type="url"] {
+      height: 44px; padding: 0 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      font-size: 0.9rem; color: var(--text-primary); font-family: var(--font); transition: border-color var(--transition); background: var(--bg-white);
+    }
+    .form-field input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,115,232,0.1); }
+    .form-field .field-hint { font-size: 0.75rem; color: var(--text-muted); }
+    .field-optional { font-size: 0.72rem; color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; margin-left: 4px; }
+
+    /* Three-column form row */
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    @media (max-width: 640px) { .form-row-3 { grid-template-columns: 1fr; } }
+
+    /* Citation result */
+    .citation-output {
+      background: var(--bg-light); border: 1.5px solid var(--border); border-radius: var(--radius-md);
+      padding: 18px; font-size: 0.95rem; line-height: 1.75; color: var(--text-primary);
+      font-family: Georgia, 'Times New Roman', serif; word-break: break-word; min-height: 60px;
+    }
+    .citation-output .citation-hanging { padding-left: 2em; text-indent: -2em; }
+
+    /* All citations list */
+    .citations-list { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+    .citation-item {
+      background: var(--bg-white); border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
+    }
+    .citation-item-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--bg-light); border-bottom: 1px solid var(--border); gap: 12px; }
+    .citation-item-meta { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
+    .citation-format-badge { background: var(--primary-light); color: var(--primary); font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 100px; }
+    .citation-item-text { padding: 12px 14px; font-size: 0.9rem; line-height: 1.7; font-family: Georgia, 'Times New Roman', serif; color: var(--text-primary); word-break: break-word; }
+
+    /* Empty state */
+    .empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+    .empty-state svg { display: block; margin: 0 auto 14px; opacity: 0.4; }
+
+    /* Citation result section */
+    .citation-result-section { margin-top: 24px; }
+    .citation-result-section h4 { font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+
+    /* Copy btn inside citation output */
+    .citation-copy-wrap { position: relative; }
+    .citation-copy-btn {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); padding: 5px 12px;
+      font-size: 0.78rem; font-weight: 600; color: var(--text-secondary);
+      cursor: pointer; transition: all var(--transition); font-family: var(--font);
+      display: flex; align-items: center; gap: 5px;
+    }
+    .citation-copy-btn:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-light); }
+    .citation-copy-btn.copied { color: var(--success); border-color: var(--success); background: var(--success-light); }
+
+    /* Action bar */
+    .tool-main .action-bar { justify-content: flex-start; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+
+    /* Saved list header */
+    .saved-list-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 10px; }
+    .saved-list-header h4 { font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+    .saved-list-actions { display: flex; gap: 8px; }
+
+    /* Citation item actions */
+    .citation-item-actions { display: flex; gap: 6px; }
+    .citation-item-btn {
+      background: none; border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+      padding: 4px 10px; font-size: 0.75rem; font-weight: 600; color: var(--text-secondary);
+      cursor: pointer; transition: all var(--transition); font-family: var(--font);
+      display: flex; align-items: center; gap: 4px; min-height: 32px;
+    }
+    .citation-item-btn:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-light); }
+    .citation-item-btn.delete:hover { color: var(--error); border-color: var(--error); background: var(--error-light); }
+
+    @media (max-width: 480px) {
+      .page-hero h1 { font-size: 1.8rem; }
+      .source-tab { padding: 8px 12px; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body class="page-wrapper">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html">Image Compressor</a></li>
+        <li><a href="pdf-merger.html">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html">Page Extractor</a></li>
+        <li><a href="citation-generator.html" class="active">Citations</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="image-compressor.html">Image Compressor</a>
+    <a href="pdf-merger.html">PDF Merger</a>
+    <a href="pdf-extractor.html">PDF Page Extractor</a>
+    <a href="citation-generator.html">Citation Generator</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<div class="container">
+  <div class="ad-container ad-leaderboard"><!-- AdSense Ad Unit --></div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      Citation Generator
+    </div>
+    <h1>Free Citation Generator — APA, MLA &amp; Chicago</h1>
+    <p>Generate perfectly formatted citations for websites, books, journal articles, and YouTube videos. Supports APA 7th, MLA 9th, and Chicago 17th edition. No sign-up, no fees — runs entirely in your browser.</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: April 2026 &nbsp;·&nbsp; APA 7th &middot; MLA 9th &middot; Chicago 17th
+    </p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- Section 1: Format selector -->
+        <div class="options-panel">
+          <div class="options-panel-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+            Citation Format
+          </div>
+          <div class="radio-group" role="radiogroup" aria-label="Citation format">
+            <label class="radio-option selected">
+              <input class="format-radio" type="radio" name="citationFormat" value="apa" checked>
+              <span>APA 7th Edition</span>
+            </label>
+            <label class="radio-option">
+              <input class="format-radio" type="radio" name="citationFormat" value="mla">
+              <span>MLA 9th Edition</span>
+            </label>
+            <label class="radio-option">
+              <input class="format-radio" type="radio" name="citationFormat" value="chicago">
+              <span>Chicago 17th Edition</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Section 2: Source type tabs -->
+        <div class="source-tabs" role="tablist" aria-label="Source type">
+          <button class="source-tab active" role="tab" aria-selected="true" aria-controls="sourceForm" data-source="website" id="tab-website">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Website
+          </button>
+          <button class="source-tab" role="tab" aria-selected="false" aria-controls="sourceForm" data-source="book" id="tab-book">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            Book
+          </button>
+          <button class="source-tab" role="tab" aria-selected="false" aria-controls="sourceForm" data-source="journal" id="tab-journal">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Journal Article
+          </button>
+          <button class="source-tab" role="tab" aria-selected="false" aria-controls="sourceForm" data-source="youtube" id="tab-youtube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            YouTube Video
+          </button>
+        </div>
+
+        <!-- Section 3: Dynamic form -->
+        <div id="sourceForm" role="tabpanel" aria-labelledby="tab-website">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Section 4: Action bar -->
+        <div class="action-bar">
+          <button class="btn btn-primary btn-lg" id="generateBtn" aria-label="Generate citation">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            Generate Citation
+          </button>
+          <button class="btn btn-outline" id="addToListBtn" aria-label="Add citation to saved list">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add to List
+          </button>
+          <button class="btn btn-ghost btn-sm" id="clearFormBtn" aria-label="Clear form fields">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+            Clear Form
+          </button>
+        </div>
+
+        <!-- Status message -->
+        <div class="status-msg" id="statusMsg" role="alert" aria-live="polite"></div>
+
+        <!-- Section 5: Generated citation output -->
+        <div class="citation-result-section" id="citationResultSection">
+          <h4>Generated Citation</h4>
+          <div class="citation-copy-wrap">
+            <div class="citation-output" id="citationOutput" aria-live="polite"></div>
+            <button class="citation-copy-btn" id="copyBtn" aria-label="Copy citation to clipboard">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Info strip -->
+        <div class="info-strip orange" style="margin-top:20px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Style guide note:</strong> Always verify citations against your institution's style guide. Requirements may vary.</span>
+        </div>
+
+        <!-- Section 6 & 7: Saved citations list -->
+        <div style="margin-top:32px" id="savedListSection">
+          <div class="saved-list-header">
+            <h4>Saved Citations <span id="savedCount" style="font-weight:400;color:var(--text-muted);font-size:0.8rem;text-transform:none;letter-spacing:0;">(0)</span></h4>
+            <div class="saved-list-actions" id="exportBar" style="display:none">
+              <button class="btn btn-outline btn-sm" id="copyAllBtn" aria-label="Copy all saved citations to clipboard">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy All
+              </button>
+              <button class="btn btn-ghost btn-sm" id="downloadListBtn" aria-label="Download citations as text file">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download .txt
+              </button>
+            </div>
+          </div>
+          <div class="citations-list" id="citationsList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="tool-sidebar">
+        <div class="ad-container ad-rectangle"><!-- AdSense Ad Unit --></div>
+
+        <div class="sidebar-card" style="margin-top:20px">
+          <h4>How It Works</h4>
+          <ul class="how-it-works">
+            <li><div class="step-num">1</div><div>Choose APA, MLA, or Chicago format</div></li>
+            <li><div class="step-num">2</div><div>Select your source type (website, book, etc.)</div></li>
+            <li><div class="step-num">3</div><div>Fill in the author, title, and publication details</div></li>
+            <li><div class="step-num">4</div><div>Copy your citation or save it to the list</div></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Format Quick Reference</h4>
+          <ul class="sidebar-list" style="font-size:0.82rem;line-height:1.6;color:var(--text-secondary);">
+            <li style="padding:6px 0;border-bottom:1px solid var(--border);">
+              <strong style="color:var(--primary);">APA 7th</strong> — Author, A. (Year). Title. Publisher. DOI
+            </li>
+            <li style="padding:6px 0;border-bottom:1px solid var(--border);">
+              <strong style="color:var(--primary);">MLA 9th</strong> — Last, First. "Title." Source, Year.
+            </li>
+            <li style="padding:6px 0;">
+              <strong style="color:var(--primary);">Chicago 17th</strong> — Last, First. Title. City: Publisher, Year.
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Other Tools</h4>
+          <ul class="sidebar-list">
+            <li>
+              <a href="pdf-merger.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                PDF Merger
+              </a>
+            </li>
+            <li>
+              <a href="compressor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+                PDF Compressor
+              </a>
+            </li>
+            <li>
+              <a href="ocr.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                OCR Scanner
+              </a>
+            </li>
+            <li>
+              <a href="pdf-extractor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                PDF Page Extractor
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="ad-container ad-responsive"><!-- AdSense Ad Unit --></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/citation-generator.js"></script>
+</body>
+</html>

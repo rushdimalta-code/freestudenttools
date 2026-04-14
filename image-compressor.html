@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compress Images Free — JPG, PNG, WebP | FreeStudentTools</title>
+  <meta name="description" content="Compress JPG, PNG, and WebP images free online. Reduce file size for email or uploads. No sign-up, no file uploads — runs 100% in your browser.">
+  <meta name="keywords" content="free image compressor online, reduce image file size free, compress jpg png free, image size reducer no upload, compress image for email free, resize image no signup, webp compressor free">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/image-compressor.html">
+  <meta property="og:title" content="Free Image Compressor — Reduce JPG, PNG, WebP Size Online | FreeStudentTools">
+  <meta property="og:description" content="Compress JPG, PNG, and WebP images free online. No sign-up, no file uploads — runs 100% in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/image-compressor.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Free Image Compressor — Reduce JPG, PNG, WebP Size Online | FreeStudentTools">
+  <meta name="twitter:description" content="Compress JPG, PNG, and WebP images free online. No sign-up, no file uploads — runs 100% in your browser.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free Image Compressor",
+        "description": "Reduce the file size of JPG, PNG, and WebP images for free. Choose quality level and output format. Runs entirely in your browser — no uploads, no sign-up.",
+        "url": "https://freestudenttools.com/image-compressor.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Compress JPG, PNG, WebP, and GIF images",
+          "Three quality levels: low, medium, high",
+          "Output as JPEG or WebP for maximum compression",
+          "Before/after preview comparison",
+          "100% browser-based — no file uploads",
+          "No sign-up or watermarks"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to compress an image for free",
+        "description": "Reduce image file size in your browser — no uploads required.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Upload your image", "text": "Click the upload area or drag and drop a JPG, PNG, WebP, or GIF image." },
+          { "@type": "HowToStep", "position": 2, "name": "Choose quality and format", "text": "Select a quality level (Low, Medium, or High) and an output format." },
+          { "@type": "HowToStep", "position": 3, "name": "Compress", "text": "Click Compress Image. The browser re-encodes the image at the chosen quality." },
+          { "@type": "HowToStep", "position": 4, "name": "Download", "text": "Preview both versions side-by-side and download the compressed image." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this image compressor free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs in your browser using the Canvas API." }
+          },
+          {
+            "@type": "Question",
+            "name": "What image formats are supported?",
+            "acceptedAnswer": { "@type": "Answer", "text": "You can upload JPG, PNG, WebP, and GIF images. Output can be saved as JPEG or WebP." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my images uploaded to a server?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. All compression happens inside your browser using the HTML5 Canvas API. Your image never leaves your device." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between quality levels?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Low (40%) gives the smallest file size with visible quality reduction. Medium (70%) balances size and quality well for most uses. High (85%) keeps quality close to the original with modest file size reduction." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    .page-hero { text-align: center; }
+    .page-hero p { margin-left: auto; margin-right: auto; }
+    .page-hero-badge { display: inline-flex; }
+    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+    .tool-main .upload-zone { text-align: center; }
+    .tool-main .options-panel { text-align: left; }
+    .compression-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 20px; }
+    @media (max-width: 640px) { .compression-stats { grid-template-columns: 1fr; } }
+    .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+    .preview-box { border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
+    .preview-box-label { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); padding: 8px 12px; background: var(--bg-light); border-bottom: 1px solid var(--border); }
+    .preview-box img { width: 100%; height: 160px; object-fit: contain; background: var(--bg-gray); display: block; }
+    @media (max-width: 480px) { .preview-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body class="page-wrapper">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html" class="active">Image Compressor</a></li>
+        <li><a href="pdf-merger.html">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html">Page Extractor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="image-compressor.html">Image Compressor</a>
+    <a href="pdf-merger.html">PDF Merger</a>
+    <a href="pdf-extractor.html">PDF Page Extractor</a>
+    <a href="citation-generator.html">Citation Generator</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<div class="container">
+  <div class="ad-container ad-leaderboard" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      Image Compressor
+    </div>
+    <h1>Compress Images Free — Reduce JPG, PNG &amp; WebP Size</h1>
+    <p>Free online image compressor — reduce the file size of any JPG, PNG, or WebP image for email submissions, course portals, or web uploads. Choose quality level and output format. Your image never leaves your browser.</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: April 2026 &nbsp;·&nbsp; Powered by Canvas API
+    </p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept="image/*" aria-label="Upload image file" />
+          <div class="upload-zone-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <h3>Drop your image here or click to browse</h3>
+          <p>JPG, PNG, WebP, GIF supported</p>
+          <p class="file-types">Max file size: 20MB</p>
+        </div>
+
+        <div class="file-selected" id="fileInputSelected">
+          <div class="file-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </div>
+          <div class="file-info">
+            <div class="file-name" id="fileName"></div>
+            <div class="file-size" id="fileSize"></div>
+          </div>
+          <button class="remove-file" id="removeFile" aria-label="Remove file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="options-panel">
+          <h4 class="options-panel-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+            Compression Options
+          </h4>
+          <div class="option-group">
+            <label style="display:block;font-size:0.82rem;font-weight:600;color:var(--text-secondary);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em">Quality</label>
+            <div class="radio-group">
+              <label class="radio-option" id="radioLow">
+                <input type="radio" name="quality" value="low">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="#EF4444" aria-hidden="true"><circle cx="6" cy="6" r="6"/></svg>
+                Low (40%)
+              </label>
+              <label class="radio-option selected" id="radioMed">
+                <input type="radio" name="quality" value="medium" checked>
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="#F59E0B" aria-hidden="true"><circle cx="6" cy="6" r="6"/></svg>
+                Medium (70%)
+              </label>
+              <label class="radio-option" id="radioHigh">
+                <input type="radio" name="quality" value="high">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="#10B981" aria-hidden="true"><circle cx="6" cy="6" r="6"/></svg>
+                High (85%)
+              </label>
+            </div>
+          </div>
+          <div class="option-group" style="margin-top:16px;">
+            <label for="outputFormat" style="display:block;font-size:0.82rem;font-weight:600;color:var(--text-secondary);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em">Output Format</label>
+            <select id="outputFormat" class="select-styled" aria-label="Output format">
+              <option value="original">Same as original</option>
+              <option value="jpeg">JPEG (best compression)</option>
+              <option value="webp">WebP (modern, smaller)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <button class="btn btn-primary btn-lg" id="startBtn" disabled aria-label="Compress image">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+            Compress Image
+          </button>
+          <button class="btn btn-outline" id="resetBtn" style="display:none" aria-label="Start over">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+            Start Over
+          </button>
+        </div>
+
+        <div class="status-msg" id="statusMsg" role="alert" aria-live="polite"></div>
+
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-label">
+            <span id="progressLabel">Compressing...</span>
+            <span id="progressPct"></span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill indeterminate" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+          <div class="preview-grid">
+            <div class="preview-box">
+              <div class="preview-box-label">Original</div>
+              <img id="originalPreview" src="" alt="Original image preview">
+            </div>
+            <div class="preview-box">
+              <div class="preview-box-label">Compressed</div>
+              <img id="compressedPreview" src="" alt="Compressed image preview">
+            </div>
+          </div>
+
+          <div class="compression-stats">
+            <div class="stat-card">
+              <div class="stat-value" id="originalSizeStat">—</div>
+              <div class="stat-label">Original Size</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value" id="compressedSizeStat">—</div>
+              <div class="stat-label">Compressed Size</div>
+            </div>
+            <div class="stat-card highlight">
+              <div class="stat-value" id="savingPct">—</div>
+              <div class="stat-label">Size Reduction</div>
+            </div>
+          </div>
+
+          <div class="download-card">
+            <div class="file-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h4>Compressed Image Ready!</h4>
+            <p id="downloadDesc">Your image has been compressed. Click to download.</p>
+            <button class="btn btn-success btn-lg" id="downloadBtn" aria-label="Download compressed image">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Compressed Image
+            </button>
+          </div>
+        </div>
+
+        <div class="info-strip blue" style="margin-top:24px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Privacy guaranteed:</strong> Image compression runs entirely in your browser using the HTML5 Canvas API. Your image is never uploaded to any server.</span>
+        </div>
+
+      </div>
+
+      <div class="tool-sidebar">
+        <div class="ad-container ad-rectangle"><!-- AdSense Ad Unit --></div>
+        <div class="sidebar-card" style="margin-top:20px">
+          <h4>How It Works</h4>
+          <ul class="how-it-works">
+            <li><div class="step-num">1</div><div>Upload your image (JPG, PNG, WebP, GIF)</div></li>
+            <li><div class="step-num">2</div><div>Choose quality level and output format</div></li>
+            <li><div class="step-num">3</div><div>Click Compress — image is re-encoded in your browser</div></li>
+            <li><div class="step-num">4</div><div>Preview both versions and download the smaller file</div></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Other Tools</h4>
+          <ul class="sidebar-list">
+            <li><a href="ocr.html">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              OCR Scanner
+            </a></li>
+            <li><a href="compressor.html">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+              PDF Compressor
+            </a></li>
+            <li><a href="pdf-merger.html">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              PDF Merger
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="ad-container ad-responsive" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script src="js/image-compressor.js"></script>
+</body>
+</html>

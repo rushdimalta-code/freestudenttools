@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free OCR Scanner — Extract Text from Images | FreeStudentTools</title>
+  <meta name="description" content="Free online OCR tool. Extract text from images, scanned PDFs, and photos in 15+ languages. No sign-up, no file upload — runs 100% in your browser.">
+  <meta name="keywords" content="free OCR scanner online, image to text free, extract text from image, scan to text online, OCR no signup, free OCR for students, photo to text converter, scanned document to text">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/ocr.html">
+  <meta property="og:title" content="Free OCR Scanner — Extract Text from Images | FreeStudentTools">
+  <meta property="og:description" content="Extract text from any image or scanned document in 15+ languages. Runs entirely in your browser — no uploads, no sign-up, completely free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/ocr.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Free OCR Scanner — Extract Text from Images | FreeStudentTools">
+  <meta name="twitter:description" content="Extract text from any image or scanned document in 15+ languages. Runs entirely in your browser — no uploads, no sign-up, completely free.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free OCR Scanner",
+        "description": "Extract text from images, scanned PDFs, and photos using optical character recognition. Supports 15+ languages including Arabic, Chinese, French, and Spanish. Runs entirely in your browser.",
+        "url": "https://freestudenttools.com/ocr.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Extract text from JPG, PNG, BMP, TIFF, WEBP images",
+          "OCR scanned PDF documents",
+          "Supports 15+ languages including Arabic, Chinese, French, Spanish",
+          "Download extracted text as .docx or .txt",
+          "100% browser-based — no file uploads",
+          "No sign-up or email required"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to extract text from an image using free OCR",
+        "description": "Use FreeStudentTools OCR Scanner to extract text from any image or scanned PDF for free in your browser.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Upload your file", "text": "Click to upload or drag and drop your image (JPG, PNG, etc.) or scanned PDF." },
+          { "@type": "HowToStep", "position": 2, "name": "Select language", "text": "Choose the language of the text in your document." },
+          { "@type": "HowToStep", "position": 3, "name": "Start OCR", "text": "Click 'Start OCR'. The engine runs entirely in your browser — no upload needed." },
+          { "@type": "HowToStep", "position": 4, "name": "Download result", "text": "Download the extracted text as a Word document (.docx) or plain text (.txt)." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this OCR tool completely free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The OCR Scanner on FreeStudentTools.com is 100% free with no sign-up, no watermarks, and no file size limits (up to browser memory)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work on scanned PDFs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. The tool uses Tesseract.js to OCR each page of a scanned PDF and extract all text, even if the PDF has no text layer." }
+          },
+          {
+            "@type": "Question",
+            "name": "What languages does the OCR support?",
+            "acceptedAnswer": { "@type": "Answer", "text": "It supports 15+ languages including English, Arabic, French, German, Spanish, Italian, Portuguese, Russian, Chinese Simplified, Japanese, and Korean." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my files uploaded to a server?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. All OCR processing runs entirely in your browser using Tesseract.js. Your files never leave your device." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- GA4: activated only after cookie consent via common.js -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    /* ===== UX IMPROVEMENTS ===== */
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    button, [role="button"], select, input[type="file"] { cursor: pointer; }
+    button { touch-action: manipulation; }
+
+    /* Info strips */
+    .info-strip { display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border-radius:var(--radius-md); font-size:0.82rem; line-height:1.5; }
+    .info-strip.blue { background:var(--primary-light); border:1px solid var(--primary-border); color:#1e40af; }
+    .info-strip.orange { background:#FFF7ED; border:1px solid #FED7AA; color:#7c2d12; }
+    .info-strip svg { flex-shrink:0; margin-top:1px; }
+
+    /* Minimum tap target heights */
+    .btn { min-height: 44px; }
+    .btn-sm { min-height: 36px; }
+    .btn-lg { min-height: 48px; }
+
+    /* Styled select — custom arrow, 44px height */
+    .select-styled {
+      width: 100%;
+      padding: 10px 36px 10px 12px;
+      min-height: 44px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      background: var(--bg-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
+      background-size: 16px;
+      appearance: none;
+      -webkit-appearance: none;
+      font-family: var(--font);
+      transition: border-color 0.15s;
+    }
+    .select-styled:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+    /* Stats row for word/char count */
+    .result-stats-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .result-stat-item {
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .result-stat-item svg { color: var(--primary); flex-shrink: 0; }
+    .result-stat-label { font-size: 0.75rem; color: var(--text-muted); display: block; }
+    .result-stat-value { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); display: block; }
+
+    /* Result card */
+    .result-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin-top: 24px;
+    }
+    .result-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--bg-light);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .result-card-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .result-card-title svg { color: var(--primary); }
+    .result-card-body { background: var(--bg-white); }
+    .result-card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+    /* Options panel heading */
+    .options-panel-title {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); margin-bottom: 14px; font-size: 0.95rem; font-weight: 600;
+    }
+    .options-panel-title svg { color: var(--text-secondary); }
+
+    /* Override base CSS page-hero h1 to match global h1 spec */
+    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+
+    /* Center alignment */
+    .page-hero { text-align: center; }
+    .page-hero p { margin-left: auto; margin-right: auto; }
+    .page-hero-badge { display: inline-flex; }
+
+    .tool-main .upload-zone { text-align: center; }
+    .tool-main .options-panel { text-align: left; }
+    .tool-main .action-bar { justify-content: center; }
+    .tool-main .result-card-header { justify-content: space-between; }
+  </style>
+</head>
+<body class="page-wrapper">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html" class="active">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html">Image Compressor</a></li>
+        <li><a href="pdf-merger.html">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html">Page Extractor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-container ad-leaderboard"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      OCR Scanner
+    </div>
+    <h1>Extract Text from Images &amp; Scans</h1>
+    <p>Free online OCR (Optical Character Recognition) tool — upload any image or scanned PDF and instantly extract all text. Works on photos, screenshots, handwritten notes, and scanned textbook pages in 15+ languages. Everything runs in your browser — your files never leave your device.</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: April 2026 &nbsp;·&nbsp; Powered by Tesseract.js v5
+    </p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="tool-layout">
+
+      <!-- MAIN TOOL -->
+      <div class="tool-main">
+
+        <!-- Upload Zone -->
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept="image/*,.pdf" />
+          <div class="upload-zone-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Drop your image or PDF here or click to browse</h3>
+          <p>Images: JPG, PNG, BMP, TIFF, WEBP, GIF</p>
+          <p class="file-types">PDF: All pages will be scanned &nbsp;·&nbsp; Max file size: 50MB</p>
+        </div>
+
+        <!-- File Selected -->
+        <div class="file-selected" id="fileInputSelected">
+          <span class="file-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          </span>
+          <div class="file-info">
+            <div class="file-name"></div>
+            <div class="file-size"></div>
+          </div>
+          <button class="remove-file" id="removeFile" title="Remove file" aria-label="Remove file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <!-- Options -->
+        <div class="options-panel">
+          <h4 class="options-panel-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            Options
+          </h4>
+          <div class="option-group">
+            <label for="ocrLang">Document Language</label>
+            <select id="ocrLang" class="select-styled">
+              <option value="eng">English</option>
+              <option value="ara">Arabic (العربية)</option>
+              <option value="fra">French (Français)</option>
+              <option value="deu">German (Deutsch)</option>
+              <option value="spa">Spanish (Español)</option>
+              <option value="ita">Italian (Italiano)</option>
+              <option value="por">Portuguese (Português)</option>
+              <option value="rus">Russian (Русский)</option>
+              <option value="chi_sim">Chinese Simplified (中文)</option>
+              <option value="jpn">Japanese (日本語)</option>
+              <option value="kor">Korean (한국어)</option>
+              <option value="tur">Turkish (Türkçe)</option>
+              <option value="nld">Dutch (Nederlands)</option>
+              <option value="pol">Polish (Polski)</option>
+              <option value="ukr">Ukrainian (Українська)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="action-bar">
+          <button class="btn btn-primary btn-lg" id="startOCR" disabled aria-label="Extract text from uploaded image or PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Extract Text
+          </button>
+          <button class="btn btn-danger" id="cancelBtn" style="display:none" aria-label="Cancel OCR processing">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Cancel
+          </button>
+          <button class="btn btn-outline" id="resetBtn" style="display:none" aria-label="Start over and clear current file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+            Start Over
+          </button>
+        </div>
+
+        <!-- Status -->
+        <div class="status-msg" id="statusMsg" role="alert" aria-live="polite"></div>
+
+        <!-- Progress -->
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-label">
+            <span id="progressLabel">Processing...</span>
+            <span id="progressPct">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="result-container" id="resultContainer">
+          <div class="result-card">
+            <div class="result-card-header">
+              <div class="result-card-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                Extracted Text
+              </div>
+              <div class="result-card-actions">
+                <button class="btn btn-sm btn-outline" id="copyText" aria-label="Copy extracted text to clipboard">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  Copy
+                </button>
+                <button class="btn btn-sm btn-success" id="downloadDocx" aria-label="Download extracted text as Word document">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download .docx
+                </button>
+                <button class="btn btn-sm btn-outline" id="downloadTxt" aria-label="Download extracted text as plain text file">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download .txt
+                </button>
+              </div>
+            </div>
+            <div class="result-card-body">
+              <div class="result-text" id="resultText"></div>
+              <div class="result-stats-row">
+                <div class="result-stat-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  <div>
+                    <span class="result-stat-label">Words</span>
+                    <span class="result-stat-value" id="wordCount">—</span>
+                  </div>
+                </div>
+                <div class="result-stat-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                  <div>
+                    <span class="result-stat-label">Characters</span>
+                    <span class="result-stat-value" id="charCount">—</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mid-result ad (below result) -->
+        <div class="ad-container ad-responsive" id="resultAd" style="display:none">
+          <!-- AdSense Ad Unit -->
+        </div>
+
+        <!-- Info strips -->
+        <div class="info-strip blue" style="margin-top:24px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Privacy guaranteed:</strong> OCR processing runs entirely in your browser using Tesseract.js. Your images are never uploaded to any server. When you close this tab, all data is gone.</span>
+        </div>
+
+        <div class="info-strip orange" style="margin-top:10px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Copyright &amp; Fair Use:</strong> Only process documents you own or have explicit permission to use. This tool does not remove watermarks, DRM, or copyright protection. Extracting text from copyrighted material without authorisation may violate copyright law. You are solely responsible for ensuring lawful use.</span>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="tool-sidebar">
+        <div class="ad-container ad-rectangle"><!-- AdSense Ad Unit --></div>
+
+        <div class="sidebar-card" style="margin-top:20px">
+          <h4>How It Works</h4>
+          <ul class="how-it-works">
+            <li>
+              <div class="step-num">1</div>
+              <div>Upload your image or scanned document</div>
+            </li>
+            <li>
+              <div class="step-num">2</div>
+              <div>Select the language of the text in your image</div>
+            </li>
+            <li>
+              <div class="step-num">3</div>
+              <div>Click "Extract Text" and wait a few seconds</div>
+            </li>
+            <li>
+              <div class="step-num">4</div>
+              <div>Copy or download the extracted text instantly</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Other Tools</h4>
+          <ul class="sidebar-list">
+            <li>
+              <a href="pdf-converter.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                PDF to Word / Excel
+              </a>
+            </li>
+            <li>
+              <a href="compressor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+                PDF Compressor
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER AD -->
+<div class="container">
+  <div class="ad-container ad-responsive"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ocr.js"></script>
+</body>
+</html>

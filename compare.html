@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compare Universities Side-by-Side | FreeStudentTools</title>
+  <meta name="description" content="Compare 1,000+ universities: QS rankings, tuition fees, courses, cost of living, accommodation & campus facilities. Free, no sign-up.">
+  <meta name="keywords" content="compare universities, university comparison tool, compare degrees, side by side university, tuition comparison, university ranking comparison, cost of living comparison, best universities 2025, which university is better, compare courses, university facilities">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/compare.html">
+  <meta property="og:title" content="Compare Universities Side-by-Side — 1,000+ Universities | FreeStudentTools">
+  <meta property="og:description" content="Compare any two universities: QS rankings, tuition, cost of living, courses, intake dates & accommodation. Free, no sign-up.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/compare.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compare Universities Side-by-Side | FreeStudentTools">
+  <meta name="twitter:description" content="Compare 1,000+ universities: QS rankings, tuition, cost of living, courses & accommodation. Free, no sign-up.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "University Comparison Tool",
+    "url": "https://freestudenttools.com/compare.html",
+    "description": "Free tool to compare 1,000+ universities side-by-side: QS rankings, tuition fees, course language, intake deadlines, cost of living, accommodation, and campus facilities.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": ["QS 2025 Rankings", "Tuition fee comparison", "Cost of living data", "Application deadlines", "Course & curriculum details", "Accommodation comparison", "Campus location maps"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How many universities can I compare?", "acceptedAnswer": { "@type": "Answer", "text": "You can compare any two universities from our database of 1,000+ ranked universities across 100+ countries." } },
+      { "@type": "Question", "name": "Is the comparison tool free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, the tool is completely free with no sign-up required." } },
+      { "@type": "Question", "name": "Where does the data come from?", "acceptedAnswer": { "@type": "Answer", "text": "Data is sourced from official university websites, QS World Rankings 2025, and Numbeo cost of living data." } }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== COMPARE PAGE ===== */
+    .compare-hero {
+      background: linear-gradient(140deg, #0C4A6E 0%, #0369A1 55%, #0EA5E9 100%);
+      padding: 64px 0 48px;
+      position: relative; overflow: hidden;
+    }
+    .compare-hero::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 50% at 85% 30%, rgba(56,189,248,0.2) 0%, transparent 70%);
+    }
+    .compare-hero h1 { color: #fff; font-size: 2.5rem; letter-spacing: -0.03em; margin-bottom: 10px; }
+    .compare-hero p { color: #BAE6FD; font-size: 1rem; max-width: 560px; margin: 0 auto 0; }
+
+    /* Disclaimer banner */
+    .compare-disclaimer {
+      background: #FFFBEB; border: 1px solid #FDE68A;
+      border-radius: 10px; padding: 12px 18px; margin-bottom: 28px;
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: 0.84rem; color: #78350F; line-height: 1.55;
+    }
+    .compare-disclaimer svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* Selector area */
+    .compare-selector {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      margin-bottom: 28px;
+    }
+    .compare-selector h2 {
+      font-size: 1rem; font-weight: 700; margin-bottom: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .compare-selector-grid {
+      display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: end;
+    }
+    .compare-vs {
+      font-size: 1.2rem; font-weight: 800; color: var(--text-muted);
+      padding-bottom: 8px; text-align: center;
+    }
+    .compare-sel-label {
+      font-size: 0.8rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .compare-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .dot-a { background: #2563EB; }
+    .dot-b { background: #059669; }
+
+    .compare-select {
+      width: 100%;
+      padding: 10px 14px; font-size: 0.9rem;
+      border: 1.5px solid var(--border); border-radius: var(--radius-md);
+      background: var(--bg-white); color: var(--text-primary);
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 36px;
+      transition: border-color 0.15s;
+    }
+    .compare-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    .compare-select-a:focus { border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+    .compare-select-b:focus { border-color: #059669; box-shadow: 0 0 0 3px rgba(5,150,105,0.1); }
+
+    /* Level filter */
+    .compare-level-filter {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+      align-items: center;
+    }
+    .compare-level-label {
+      font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-right: 4px;
+    }
+    .level-pill {
+      padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--border);
+      font-size: 0.82rem; font-weight: 600; cursor: pointer; background: var(--bg-white);
+      color: var(--text-secondary); transition: all 0.15s;
+    }
+    .level-pill.active {
+      background: var(--primary); border-color: var(--primary); color: #fff;
+    }
+
+    /* Empty state */
+    .compare-empty {
+      text-align: center; padding: 64px 24px;
+      border: 2px dashed var(--border); border-radius: var(--radius-xl);
+    }
+    .compare-empty-icon {
+      width: 64px; height: 64px; border-radius: var(--radius-lg);
+      background: var(--bg-gray); display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px; color: var(--text-muted);
+    }
+    .compare-empty h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .compare-empty p { font-size: 0.88rem; color: var(--text-muted); max-width: 380px; margin: 0 auto; }
+
+    /* Comparison table */
+    .compare-table-wrap {
+      overflow-x: auto; border-radius: var(--radius-xl);
+      border: 1.5px solid var(--border); background: var(--bg-white);
+    }
+    .compare-table {
+      width: 100%; border-collapse: collapse; min-width: 640px;
+    }
+
+    /* Header row */
+    .cth-label {
+      width: 200px; background: var(--bg-gray); padding: 20px 24px;
+      border-right: 1px solid var(--border); border-bottom: 2px solid var(--border);
+      font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+      color: var(--text-muted);
+    }
+    .cth-uni {
+      padding: 20px 24px; border-bottom: 2px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+    .cth-uni:last-child { border-right: none; }
+    .cth-uni-name { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+    .cth-uni-meta { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+    .uni-a-accent { border-top: 3px solid #2563EB; }
+    .uni-b-accent { border-top: 3px solid #059669; }
+
+    /* Data rows */
+    .compare-table tr:not(:last-child) td { border-bottom: 1px solid var(--border); }
+    .compare-table td { padding: 16px 24px; vertical-align: top; }
+    .ctd-label {
+      background: var(--bg-gray); border-right: 1px solid var(--border);
+      font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);
+      width: 200px;
+    }
+    .ctd-val { border-right: 1px solid var(--border); font-size: 0.9rem; color: var(--text-primary); }
+    .ctd-val:last-child { border-right: none; }
+    .compare-table tr:hover td { background: #F9FAFB; }
+    .compare-table tr:hover .ctd-label { background: #F3F4F6; }
+
+    /* Section header rows */
+    .compare-section-row td {
+      background: var(--bg-gray); font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted);
+      padding: 10px 24px; border-bottom: 1px solid var(--border);
+    }
+
+    /* Win indicator */
+    .win-lower { color: #059669; font-weight: 700; }
+    .win-higher { color: #2563EB; font-weight: 700; }
+
+    /* Tag pills */
+    .compare-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .compare-tag {
+      background: var(--bg-gray); color: var(--text-secondary);
+      font-size: 0.75rem; font-weight: 500; padding: 2px 9px; border-radius: 6px;
+    }
+    .compare-tag.match { background: #ECFDF5; color: #059669; }
+
+    /* Accommodation badge */
+    .accom-yes { display: inline-flex; align-items: center; gap: 5px; color: #059669; font-weight: 600; font-size: 0.88rem; }
+    .accom-no { color: var(--text-muted); font-size: 0.88rem; }
+
+    /* Intake grid */
+    .intake-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 6px 0; border-bottom: 1px solid var(--border); gap: 8px;
+    }
+    .intake-row:last-child { border-bottom: none; }
+    .intake-level { font-size: 0.8rem; font-weight: 600; color: var(--text-primary); }
+    .intake-season { font-size: 0.78rem; color: var(--text-muted); }
+    .intake-deadline { font-size: 0.8rem; color: var(--text-primary); }
+
+    /* Ranking display */
+    .rank-num { font-size: 1.3rem; font-weight: 800; line-height: 1; }
+    .rank-label { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* Quick actions */
+    .compare-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+    .compare-action-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.78rem; font-weight: 600; padding: 5px 12px;
+      border-radius: 8px; text-decoration: none; border: 1.5px solid;
+      transition: all 0.15s;
+    }
+    .cab-a { color: #2563EB; border-color: #BFDBFE; background: #EFF6FF; }
+    .cab-a:hover { background: #DBEAFE; border-color: #93C5FD; text-decoration: none; }
+    .cab-b { color: #059669; border-color: #A7F3D0; background: #ECFDF5; }
+    .cab-b:hover { background: #D1FAE5; border-color: #6EE7B7; text-decoration: none; }
+
+    /* Summary cards */
+    .compare-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 28px; }
+    .compare-summary-card {
+      border-radius: var(--radius-lg); padding: 20px 22px;
+      border: 1.5px solid; display: flex; flex-direction: column; gap: 10px;
+    }
+    .csc-a { border-color: #BFDBFE; background: #EFF6FF; }
+    .csc-b { border-color: #A7F3D0; background: #ECFDF5; }
+    .csc-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+    .csc-a .csc-label { color: #1D4ED8; }
+    .csc-b .csc-label { color: #047857; }
+    .csc-name { font-size: 1rem; font-weight: 700; color: var(--text-primary); line-height: 1.3; }
+    .csc-stats { display: flex; gap: 16px; flex-wrap: wrap; }
+    .csc-stat strong { display: block; font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+    .csc-stat span { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* Course / stream selector */
+    .course-filter-row {
+      margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .course-filter-label {
+      font-size: 0.8rem; font-weight: 600; color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .course-filter-select {
+      flex: 1; min-width: 200px; padding: 8px 36px 8px 12px;
+      font-size: 0.88rem; border: 1.5px solid var(--border);
+      border-radius: var(--radius-md); background: var(--bg-white);
+      color: var(--text-primary); cursor: pointer; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 10px center;
+    }
+    .course-filter-select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+    /* Course details panel */
+    .course-details-panel {
+      background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl); padding: 28px 32px; margin-bottom: 24px;
+    }
+    .cdp-header {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 22px;
+    }
+    .cdp-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: #EFF6FF; display: flex; align-items: center;
+      justify-content: center; font-size: 1.5rem; flex-shrink: 0;
+    }
+    .cdp-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 2px; }
+    .cdp-desc { font-size: 0.86rem; color: var(--text-secondary); }
+
+    .cdp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .cdp-card {
+      background: var(--bg-gray); border-radius: var(--radius-md);
+      padding: 18px; border: 1px solid var(--border);
+    }
+    .cdp-card-title {
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--text-muted); margin-bottom: 12px;
+    }
+    .cdp-list { list-style: none; padding: 0; margin: 0; }
+    .cdp-list li {
+      font-size: 0.85rem; color: var(--text-secondary); padding: 3px 0;
+      padding-left: 16px; position: relative;
+    }
+    .cdp-list li::before { content: '·'; position: absolute; left: 4px; color: var(--text-muted); }
+    .cdp-duration { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
+
+    /* Uni-specific course cards */
+    .course-uni-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+    .course-uni-card {
+      border-radius: var(--radius-md); padding: 18px;
+      border: 1.5px solid;
+    }
+    .cuc-a { border-color: #BFDBFE; background: #EFF6FF; }
+    .cuc-b { border-color: #A7F3D0; background: #ECFDF5; }
+    .cuc-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+    .cuc-a .cuc-label { color: #1D4ED8; }
+    .cuc-b .cuc-label { color: #047857; }
+    .cuc-progname { font-size: 0.9rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
+    .cuc-notes { font-size: 0.83rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 8px; }
+    .cuc-link { font-size: 0.8rem; color: var(--primary); text-decoration: none; }
+    .cuc-link:hover { text-decoration: underline; }
+    .cuc-na { font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
+
+    /* Guide / city sections in table */
+    .col-range { font-size: 0.88rem; }
+    .col-range strong { display: block; font-weight: 700; color: var(--text-primary); }
+    .col-range span { font-size: 0.75rem; color: var(--text-muted); }
+    .col-links { display: flex; flex-direction: column; gap: 5px; }
+    .col-link { font-size: 0.83rem; color: var(--primary); text-decoration: none; }
+    .col-link:hover { text-decoration: underline; }
+    .col-contact { font-size: 0.85rem; margin-bottom: 6px; }
+    .col-contact strong { color: var(--text-primary); }
+    .col-contact span { color: var(--text-muted); font-size: 0.8rem; }
+    .leisure-tag {
+      display: inline-block; margin: 2px 3px 2px 0;
+      font-size: 0.76rem; color: var(--text-secondary);
+      background: var(--bg-gray); padding: 2px 8px; border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .compare-selector-grid { grid-template-columns: 1fr; }
+      .compare-vs { display: none; }
+      .compare-hero h1 { font-size: 1.9rem; }
+      .compare-summary { grid-template-columns: 1fr; }
+      .ctd-label { width: 130px; }
+      .cdp-grid { grid-template-columns: 1fr; }
+      .course-uni-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
+        <img src="assets/logo.png" alt="FreeStudentTools">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="compare.html" class="active">Compare</a></li>
+        <li><a href="tips.html">Student Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="scholarships.html">Scholarships</a>
+    <a href="compare.html">Compare Degrees</a>
+    <a href="tips.html">Student Tips</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-container ad-leaderboard" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- HERO -->
+<section class="compare-hero" aria-labelledby="compare-hero-heading">
+  <div class="container" style="text-align:center;position:relative;z-index:1">
+    <h1 id="compare-hero-heading">Compare Universities Side-by-Side</h1>
+    <p>Pick any two universities from 1,000+ ranked institutions across 100+ countries — QS rankings, tuition fees, courses, cost of living, accommodation, and campus facilities. Free, no sign-up.</p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main id="main-content">
+  <div class="container" style="padding-top:40px;padding-bottom:64px">
+
+    <!-- DISCLAIMER -->
+    <div class="compare-disclaimer" role="note">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span><strong>Informational only.</strong> All data on this page is sourced directly from official university websites and published without modification. We make no recommendations — choosing the right university is entirely your decision. Always verify current fees, intake dates, and requirements directly with each university before applying. Data is updated regularly but may not reflect mid-cycle changes.</span>
+    </div>
+
+    <!-- SELECTOR -->
+    <div class="compare-selector">
+      <h2>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        Select Two Universities to Compare
+      </h2>
+      <div class="compare-selector-grid">
+        <div>
+          <div class="compare-sel-label">
+            <div class="compare-dot dot-a"></div>
+            University A
+          </div>
+          <select id="uniA" class="compare-select compare-select-a" aria-label="Select University A">
+            <option value="">— Choose a university —</option>
+          </select>
+        </div>
+        <div class="compare-vs">VS</div>
+        <div>
+          <div class="compare-sel-label">
+            <div class="compare-dot dot-b"></div>
+            University B
+          </div>
+          <select id="uniB" class="compare-select compare-select-b" aria-label="Select University B">
+            <option value="">— Choose a university —</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Level filter -->
+      <div class="compare-level-filter">
+        <span class="compare-level-label">Show:</span>
+        <button class="level-pill active" data-level="all">All Levels</button>
+        <button class="level-pill" data-level="Bachelor">Bachelor</button>
+        <button class="level-pill" data-level="Master">Master</button>
+        <button class="level-pill" data-level="PhD">PhD</button>
+      </div>
+
+      <!-- Course / stream filter -->
+      <div class="course-filter-row">
+        <span class="course-filter-label">Course / Subject:</span>
+        <select id="courseSelect" class="course-filter-select" aria-label="Filter by course or subject stream">
+          <option value="">All subjects (no course filter)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="compareResults">
+      <!-- Empty state by default -->
+      <div class="compare-empty" id="compareEmpty">
+        <div class="compare-empty-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Choose two universities above</h3>
+        <p>Select University A and University B from the dropdowns to see a detailed side-by-side comparison of their degrees, tuition, accommodation, and more.</p>
+      </div>
+    </div>
+
+    <!-- MID AD -->
+    <div class="ad-container ad-responsive" aria-hidden="true" style="margin-top:32px"><!-- AdSense Ad Unit --></div>
+
+    <!-- QUICK LINKS -->
+    <div style="margin-top:40px;padding:32px;background:var(--bg-white);border:1.5px solid var(--border);border-radius:var(--radius-xl)">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+        <div style="width:40px;height:40px;background:#EFF6FF;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#2563EB">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:0.95rem">Explore individual universities</div>
+          <div style="font-size:0.82rem;color:var(--text-muted)">Check application deadlines and accommodation details for each</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="admissions.html" class="btn btn-primary" style="font-size:0.85rem;padding:8px 18px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Browse Admission Deadlines
+        </a>
+        <a href="scholarships.html" class="btn btn-ghost" style="font-size:0.85rem;padding:8px 18px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Find Scholarships
+        </a>
+        <a href="tips.html" class="btn btn-ghost" style="font-size:0.85rem;padding:8px 18px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Student Tips
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="assets/logo.png" alt="FreeStudentTools" style="height:48px;width:auto;filter:brightness(0) invert(1);opacity:0.9">
+        </div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Student Hub</h5>
+        <a href="admissions.html">Admission Deadlines</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="compare.html">Compare Degrees</a>
+        <a href="tips.html">Student Tips</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com — All tools are free to use.</span>
+      <div>
+        <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="data/universities.js"></script>
+<script src="data/universities_all.js"></script>
+<script src="data/uni_guide.js"></script>
+<script src="data/courses.js"></script>
+<script src="js/common.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  // Merge Tier 1 (full data) + Tier 2 (1000 ranked basic)
+  // Tier 1 always wins if both have the same name
+  const tier1 = (window.UNI_DATA && window.UNI_DATA.universities) ? window.UNI_DATA.universities : [];
+  // Deduplicate: any Tier2 entry whose name closely matches a Tier1 entry is dropped
+  const tier1Names = new Set(tier1.map(u => u.name.toLowerCase()));
+  function normName(n) { return n.toLowerCase().replace(/^(the |ethz - |eth\s-\s)/,'').replace(/[^a-z0-9]/g,' ').replace(/\s+/g,' ').trim(); }
+  const tier1NormNames = new Set(tier1.map(u => normName(u.name)));
+  const tier2raw   = (window.UNI_ALL && window.UNI_ALL.universities) ? window.UNI_ALL.universities : [];
+  const tier2 = tier2raw.filter(u => !tier1Names.has(u.name.toLowerCase()) && !tier1NormNames.has(normName(u.name)));
+  const unis = [...tier1, ...tier2];
+
+  const guide = window.UNI_GUIDE || {};
+  const coursesData = (window.COURSES_DATA && window.COURSES_DATA.streams) ? window.COURSES_DATA.streams : {};
+  const selA = document.getElementById('uniA');
+  const selB = document.getElementById('uniB');
+  const courseSelect = document.getElementById('courseSelect');
+  const resultsEl = document.getElementById('compareResults');
+  const emptyEl = document.getElementById('compareEmpty');
+  let activeLevel = 'all';
+  let activeStream = '';
+
+  // ── Populate dropdowns ─────────────────────────────────────────────────────
+  function populateDropdowns() {
+    const sorted = [...unis].sort((a, b) => a.name.localeCompare(b.name));
+    const groupsByRegion = {};
+    sorted.forEach(u => {
+      const region = u.region || 'Other';
+      if (!groupsByRegion[region]) groupsByRegion[region] = [];
+      groupsByRegion[region].push(u);
+    });
+
+    [selA, selB].forEach(sel => {
+      sel.innerHTML = '<option value="">— Choose a university —</option>';
+      Object.keys(groupsByRegion).sort().forEach(region => {
+        const og = document.createElement('optgroup');
+        og.label = region;
+        groupsByRegion[region].forEach(u => {
+          const opt = document.createElement('option');
+          opt.value = u.id;
+          opt.textContent = `${u.name} (${u.country})`;
+          og.appendChild(opt);
+        });
+        sel.appendChild(og);
+      });
+    });
+  }
+
+  // ── Populate course dropdown — always all 16 streams, never filtered ────────
+  function populateCourseDropdown() {
+    if (courseSelect.dataset.populated) return; // only build once
+    const allStreams = Object.keys(coursesData).sort();
+    // Use DocumentFragment — avoids triggering any change event during build
+    const frag = document.createDocumentFragment();
+    const blank = document.createElement('option');
+    blank.value = ''; blank.textContent = 'All subjects (no course filter)';
+    frag.appendChild(blank);
+    allStreams.forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.textContent = `${coursesData[s].icon} ${s}`;
+      frag.appendChild(opt);
+    });
+    courseSelect.appendChild(frag);
+    courseSelect.dataset.populated = '1';
+  }
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  const flag = code => code ? String.fromCodePoint(...[...code.toUpperCase()].map(c => 0x1F1E6 + c.charCodeAt(0) - 65)) : '';
+
+  function fmtDate(d) {
+    if (!d) return '—';
+    const dt = new Date(d);
+    return dt.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  function fmtTuition(usd) {
+    if (!usd || usd === 0) return 'Contact university';
+    return '$' + usd.toLocaleString() + ' USD/yr';
+  }
+
+  function getAdmissions(uni) {
+    if (!uni.admissions) return [];
+    if (activeLevel === 'all') return uni.admissions;
+    return uni.admissions.filter(a => a.level === activeLevel);
+  }
+
+  // ── Status badge ───────────────────────────────────────────────────────────
+  function statusBadge(status) {
+    const map = {
+      open: { label: 'Open', color: '#059669', bg: '#ECFDF5' },
+      closing_soon: { label: 'Closing Soon', color: '#D97706', bg: '#FFFBEB' },
+      closed: { label: 'Closed', color: '#DC2626', bg: '#FEF2F2' },
+      upcoming: { label: 'Upcoming', color: '#2563EB', bg: '#EFF6FF' },
+      results_pending: { label: 'Results Pending', color: '#7C3AED', bg: '#F5F3FF' },
+      results_released: { label: 'Results Out', color: '#0D9488', bg: '#F0FDFA' }
+    };
+    const s = map[status] || { label: status, color: '#6B7280', bg: '#F9FAFB' };
+    return `<span style="display:inline-block;padding:2px 8px;border-radius:6px;font-size:0.73rem;font-weight:700;color:${s.color};background:${s.bg}">${s.label}</span>`;
+  }
+
+  // ── Guide helpers ──────────────────────────────────────────────────────────
+  function guideCell(id) {
+    const g = guide[id];
+    if (!g) return '<span style="color:var(--text-muted);font-size:0.85rem">—</span>';
+    return g;
+  }
+
+  function fmtCurrency(val, currency) {
+    if (!val) return '—';
+    if (currency === 'USD') return '$' + val.toLocaleString();
+    if (currency === 'GBP') return '£' + val.toLocaleString();
+    if (currency === 'EUR') return '€' + val.toLocaleString();
+    if (currency === 'AUD') return 'A$' + val.toLocaleString();
+    if (currency === 'CAD') return 'C$' + val.toLocaleString();
+    if (currency === 'SGD') return 'S$' + val.toLocaleString();
+    if (currency === 'CHF') return 'CHF ' + val.toLocaleString();
+    if (currency === 'KRW') return '₩' + val.toLocaleString();
+    if (currency === 'JPY') return '¥' + val.toLocaleString();
+    if (currency === 'CNY') return '¥' + val.toLocaleString();
+    if (currency === 'INR') return '₹' + val.toLocaleString();
+    if (currency === 'BRL') return 'R$' + val.toLocaleString();
+    if (currency === 'ZAR') return 'R' + val.toLocaleString();
+    if (currency === 'NZD') return 'NZ$' + val.toLocaleString();
+    if (currency === 'SEK') return 'kr' + val.toLocaleString();
+    if (currency === 'DKK') return 'kr' + val.toLocaleString();
+    if (currency === 'CZK') return 'Kč' + val.toLocaleString();
+    return val.toLocaleString() + ' ' + (currency || '');
+  }
+
+  // ── City-level CoL data (primary) — single student/month, USD equiv ──────────
+  // Lookup priority: guide data (stored, exact) → CITY_COL → COUNTRY_COL (fallback)
+  const CITY_COL = {
+    // ── UK ──────────────────────────────────────────────────────────────────────
+    'London':         { h:[900,1500],  f:[300,520], t:[150,210], u:[60,120], e:[110,200] },
+    'Oxford':         { h:[800,1300],  f:[280,480], t:[75,125],  u:[60,110], e:[95,175]  },
+    'Cambridge':      { h:[800,1300],  f:[280,490], t:[70,120],  u:[60,110], e:[95,175]  },
+    'Edinburgh':      { h:[600,1000],  f:[265,440], t:[80,135],  u:[55,110], e:[78,155]  },
+    'Manchester':     { h:[550,900],   f:[250,420], t:[80,130],  u:[50,100], e:[72,145]  },
+    'Birmingham':     { h:[500,850],   f:[240,400], t:[80,130],  u:[50,100], e:[70,140]  },
+    'Bristol':        { h:[600,950],   f:[260,425], t:[75,125],  u:[55,110], e:[78,152]  },
+    'Glasgow':        { h:[480,800],   f:[238,398], t:[70,120],  u:[50,100], e:[66,132]  },
+    'Leeds':          { h:[500,850],   f:[240,400], t:[70,120],  u:[50,100], e:[68,135]  },
+    'Sheffield':      { h:[450,750],   f:[230,390], t:[65,110],  u:[50,100], e:[63,128]  },
+    'Nottingham':     { h:[450,750],   f:[230,390], t:[65,110],  u:[50,100], e:[63,128]  },
+    'Liverpool':      { h:[440,740],   f:[228,388], t:[65,110],  u:[50,100], e:[61,126]  },
+    'Southampton':    { h:[500,850],   f:[240,400], t:[70,120],  u:[50,100], e:[68,135]  },
+    'Newcastle':      { h:[440,730],   f:[225,385], t:[62,108],  u:[48,98],  e:[60,124]  },
+    'Cardiff':        { h:[440,730],   f:[225,385], t:[62,108],  u:[48,98],  e:[60,124]  },
+    'Coventry':       { h:[440,730],   f:[225,385], t:[62,108],  u:[48,98],  e:[60,124]  },
+    'Belfast':        { h:[400,700],   f:[220,380], t:[60,105],  u:[48,98],  e:[57,122]  },
+    // ── US ──────────────────────────────────────────────────────────────────────
+    'New York':       { h:[1200,2000], f:[410,710], t:[130,185], u:[80,160], e:[160,300] },
+    'Los Angeles':    { h:[1100,1800], f:[380,660], t:[100,165], u:[80,155], e:[140,270] },
+    'Boston':         { h:[1000,1700], f:[370,635], t:[100,165], u:[80,155], e:[125,245] },
+    'San Francisco':  { h:[1200,2000], f:[410,720], t:[110,175], u:[80,155], e:[160,300] },
+    'Chicago':        { h:[900,1500],  f:[350,605], t:[110,165], u:[80,155], e:[115,225] },
+    'Seattle':        { h:[1000,1700], f:[370,640], t:[110,170], u:[80,155], e:[125,245] },
+    'Austin':         { h:[900,1500],  f:[340,585], t:[70,135],  u:[80,155], e:[105,215] },
+    'Houston':        { h:[800,1350],  f:[330,570], t:[70,135],  u:[80,155], e:[95,195]  },
+    'Philadelphia':   { h:[900,1500],  f:[350,605], t:[110,165], u:[80,155], e:[105,215] },
+    'Washington':     { h:[1000,1700], f:[370,630], t:[120,175], u:[80,155], e:[125,245] },
+    'Atlanta':        { h:[800,1350],  f:[330,570], t:[70,135],  u:[80,155], e:[95,195]  },
+    'Miami':          { h:[900,1500],  f:[350,605], t:[80,145],  u:[90,165], e:[105,215] },
+    'Denver':         { h:[900,1500],  f:[340,585], t:[80,145],  u:[80,155], e:[105,215] },
+    'Pittsburgh':     { h:[700,1200],  f:[310,535], t:[80,140],  u:[70,145], e:[85,178]  },
+    'Ann Arbor':      { h:[800,1350],  f:[320,555], t:[70,125],  u:[70,142], e:[88,183]  },
+    'Berkeley':       { h:[1100,1800], f:[380,660], t:[100,165], u:[80,155], e:[140,270] },
+    'Durham':         { h:[800,1350],  f:[325,560], t:[70,130],  u:[72,144], e:[90,182]  },
+    'Nashville':      { h:[850,1400],  f:[335,575], t:[70,132],  u:[78,152], e:[97,205]  },
+    'Baltimore':      { h:[850,1400],  f:[335,575], t:[100,158], u:[78,152], e:[97,205]  },
+    // ── Australia ───────────────────────────────────────────────────────────────
+    'Sydney':         { h:[900,1550],  f:[310,550], t:[100,165], u:[80,145], e:[93,187]  },
+    'Melbourne':      { h:[800,1400],  f:[290,515], t:[100,158], u:[80,142], e:[88,178]  },
+    'Brisbane':       { h:[700,1200],  f:[270,485], t:[85,142],  u:[75,138], e:[77,160]  },
+    'Perth':          { h:[700,1200],  f:[280,495], t:[80,138],  u:[75,138], e:[77,160]  },
+    'Adelaide':       { h:[600,1000],  f:[260,455], t:[70,128],  u:[70,132], e:[72,148]  },
+    'Canberra':       { h:[700,1200],  f:[270,485], t:[75,132],  u:[75,138], e:[75,155]  },
+    // ── Canada ──────────────────────────────────────────────────────────────────
+    'Toronto':        { h:[900,1550],  f:[300,538], t:[110,165], u:[70,132], e:[93,193]  },
+    'Vancouver':      { h:[1000,1700], f:[300,545], t:[100,158], u:[70,132], e:[93,193]  },
+    'Montreal':       { h:[700,1200],  f:[270,485], t:[90,142],  u:[65,122], e:[77,160]  },
+    'Ottawa':         { h:[750,1250],  f:[280,495], t:[90,142],  u:[65,122], e:[80,163]  },
+    'Calgary':        { h:[800,1350],  f:[290,515], t:[90,142],  u:[70,132], e:[83,168]  },
+    'Edmonton':       { h:[750,1250],  f:[280,495], t:[90,142],  u:[70,132], e:[80,163]  },
+    // ── Germany ─────────────────────────────────────────────────────────────────
+    'Berlin':         { h:[550,950],   f:[260,445], t:[80,115],  u:[90,165], e:[93,170]  },
+    'Munich':         { h:[700,1200],  f:[290,495], t:[90,132],  u:[100,185], e:[103,180] },
+    'Hamburg':        { h:[600,1000],  f:[270,455], t:[85,122],  u:[90,165], e:[93,168]  },
+    'Frankfurt':      { h:[700,1200],  f:[280,475], t:[85,128],  u:[95,168], e:[98,173]  },
+    'Cologne':        { h:[550,900],   f:[260,445], t:[80,118],  u:[85,158], e:[88,160]  },
+    'Heidelberg':     { h:[500,850],   f:[250,425], t:[75,112],  u:[80,155], e:[83,155]  },
+    'Stuttgart':      { h:[600,1000],  f:[270,455], t:[80,122],  u:[90,165], e:[90,163]  },
+    'Düsseldorf':     { h:[600,1000],  f:[270,455], t:[80,122],  u:[85,158], e:[88,160]  },
+    'Dresden':        { h:[400,700],   f:[230,405], t:[65,102],  u:[75,142], e:[73,140]  },
+    'Leipzig':        { h:[380,650],   f:[222,390], t:[60,97],   u:[70,138], e:[68,135]  },
+    'Bonn':           { h:[500,850],   f:[250,425], t:[75,112],  u:[80,155], e:[80,153]  },
+    'Aachen':         { h:[450,750],   f:[240,412], t:[70,108],  u:[75,148], e:[73,145]  },
+    // ── France ──────────────────────────────────────────────────────────────────
+    'Paris':          { h:[800,1400],  f:[290,495], t:[90,133],  u:[80,142], e:[103,185] },
+    'Lyon':           { h:[500,850],   f:[250,425], t:[70,112],  u:[70,132], e:[78,150]  },
+    'Toulouse':       { h:[450,800],   f:[240,412], t:[65,108],  u:[65,128], e:[73,145]  },
+    'Bordeaux':       { h:[450,800],   f:[240,412], t:[65,108],  u:[65,128], e:[73,145]  },
+    'Marseille':      { h:[400,750],   f:[230,402], t:[60,102],  u:[65,128], e:[68,140]  },
+    'Strasbourg':     { h:[450,800],   f:[240,412], t:[65,108],  u:[65,128], e:[73,145]  },
+    'Grenoble':       { h:[400,700],   f:[230,392], t:[60,102],  u:[60,122], e:[68,138]  },
+    'Montpellier':    { h:[420,730],   f:[235,402], t:[60,102],  u:[60,122], e:[70,140]  },
+    'Lille':          { h:[420,730],   f:[235,402], t:[60,102],  u:[60,122], e:[70,140]  },
+    'Nice':           { h:[550,950],   f:[260,445], t:[65,112],  u:[70,132], e:[78,150]  },
+    'Rennes':         { h:[400,700],   f:[230,392], t:[55,97],   u:[60,122], e:[63,128]  },
+    'Nantes':         { h:[420,730],   f:[235,402], t:[60,102],  u:[60,122], e:[70,140]  },
+    // ── Netherlands ─────────────────────────────────────────────────────────────
+    'Amsterdam':      { h:[900,1500],  f:[280,485], t:[80,122],  u:[80,142], e:[103,178] },
+    'Delft':          { h:[650,1100],  f:[250,432], t:[70,118],  u:[70,132], e:[78,148]  },
+    'Rotterdam':      { h:[700,1150],  f:[260,445], t:[75,118],  u:[75,138], e:[83,155]  },
+    'Utrecht':        { h:[750,1250],  f:[260,445], t:[75,118],  u:[75,138], e:[83,155]  },
+    'Leiden':         { h:[700,1200],  f:[255,438], t:[70,118],  u:[70,132], e:[78,148]  },
+    'Eindhoven':      { h:[600,1000],  f:[240,412], t:[65,112],  u:[65,128], e:[73,138]  },
+    'Groningen':      { h:[550,950],   f:[235,405], t:[60,108],  u:[60,122], e:[68,133]  },
+    'Maastricht':     { h:[550,950],   f:[235,405], t:[60,108],  u:[60,122], e:[68,133]  },
+    // ── Switzerland ─────────────────────────────────────────────────────────────
+    'Zurich':         { h:[1200,2000], f:[450,755], t:[100,172], u:[110,202], e:[133,225] },
+    'Geneva':         { h:[1300,2100], f:[480,785], t:[100,172], u:[110,202], e:[133,225] },
+    'Basel':          { h:[1000,1700], f:[420,705], t:[90,162],  u:[100,188], e:[123,205] },
+    'Bern':           { h:[1000,1700], f:[420,705], t:[90,162],  u:[100,188], e:[123,205] },
+    'Lausanne':       { h:[1100,1800], f:[440,725], t:[95,168],  u:[105,192], e:[128,215] },
+    // ── Japan ───────────────────────────────────────────────────────────────────
+    'Tokyo':          { h:[600,1100],  f:[280,495], t:[90,142],  u:[80,142], e:[103,195] },
+    'Osaka':          { h:[450,800],   f:[250,445], t:[80,132],  u:[70,132], e:[83,165]  },
+    'Kyoto':          { h:[450,800],   f:[250,445], t:[75,128],  u:[70,132], e:[83,165]  },
+    'Nagoya':         { h:[400,750],   f:[240,425], t:[75,128],  u:[65,128], e:[78,155]  },
+    'Fukuoka':        { h:[350,650],   f:[220,392], t:[65,118],  u:[60,122], e:[73,145]  },
+    'Sapporo':        { h:[350,650],   f:[220,392], t:[65,118],  u:[60,122], e:[68,138]  },
+    'Sendai':         { h:[350,650],   f:[220,392], t:[60,112],  u:[60,122], e:[68,138]  },
+    'Yokohama':       { h:[550,950],   f:[260,445], t:[85,138],  u:[75,138], e:[88,170]  },
+    'Kobe':           { h:[400,750],   f:[240,425], t:[75,128],  u:[65,128], e:[78,155]  },
+    // ── China ───────────────────────────────────────────────────────────────────
+    'Beijing':        { h:[300,700],   f:[200,382], t:[40,82],   u:[50,102], e:[73,155]  },
+    'Shanghai':       { h:[350,800],   f:[220,405], t:[40,82],   u:[50,102], e:[83,165]  },
+    'Guangzhou':      { h:[250,600],   f:[180,355], t:[35,72],   u:[45,92],  e:[68,140]  },
+    'Shenzhen':       { h:[300,700],   f:[190,362], t:[35,72],   u:[45,92],  e:[73,145]  },
+    'Chengdu':        { h:[200,500],   f:[150,302], t:[30,67],   u:[40,82],  e:[58,125]  },
+    'Wuhan':          { h:[200,450],   f:[150,292], t:[30,62],   u:[38,80],  e:[53,118]  },
+    'Nanjing':        { h:[200,500],   f:[160,312], t:[30,67],   u:[40,84],  e:[58,125]  },
+    'Hangzhou':       { h:[250,580],   f:[170,332], t:[35,72],   u:[42,87],  e:[63,130]  },
+    "Xi'an":          { h:[180,420],   f:[140,282], t:[28,62],   u:[38,80],  e:[50,115]  },
+    'Tianjin':        { h:[200,460],   f:[150,297], t:[30,64],   u:[40,84],  e:[55,120]  },
+    'Harbin':         { h:[150,380],   f:[140,272], t:[28,60],   u:[38,82],  e:[48,108]  },
+    'Qingdao':        { h:[180,420],   f:[145,288], t:[28,60],   u:[38,80],  e:[50,115]  },
+    // ── South Korea ─────────────────────────────────────────────────────────────
+    'Seoul':          { h:[450,900],   f:[230,415], t:[70,112],  u:[70,132], e:[83,165]  },
+    'Busan':          { h:[350,700],   f:[200,372], t:[60,102],  u:[60,122], e:[68,140]  },
+    'Daejeon':        { h:[300,600],   f:[180,342], t:[55,97],   u:[55,112], e:[63,128]  },
+    'Daegu':          { h:[300,600],   f:[180,342], t:[55,97],   u:[55,112], e:[60,125]  },
+    'Incheon':        { h:[380,750],   f:[210,382], t:[65,108],  u:[65,122], e:[73,145]  },
+    'Gwangju':        { h:[280,580],   f:[175,332], t:[55,92],   u:[55,112], e:[60,125]  },
+    // ── India ───────────────────────────────────────────────────────────────────
+    'Mumbai':         { h:[200,500],   f:[100,222], t:[25,62],   u:[30,72],  e:[43,105]  },
+    'Delhi':          { h:[150,400],   f:[90,202],  t:[20,52],   u:[25,67],  e:[38,95]   },
+    'Bangalore':      { h:[150,400],   f:[90,202],  t:[20,52],   u:[25,67],  e:[38,95]   },
+    'Chennai':        { h:[130,350],   f:[85,192],  t:[20,50],   u:[24,64],  e:[34,88]   },
+    'Hyderabad':      { h:[130,350],   f:[85,192],  t:[20,50],   u:[24,64],  e:[34,88]   },
+    'Pune':           { h:[130,350],   f:[85,192],  t:[20,50],   u:[24,64],  e:[34,88]   },
+    'Kolkata':        { h:[100,280],   f:[75,172],  t:[18,44],   u:[22,60],  e:[30,78]   },
+    'Ahmedabad':      { h:[100,270],   f:[70,162],  t:[18,42],   u:[20,57],  e:[28,73]   },
+    // ── Brazil ──────────────────────────────────────────────────────────────────
+    'São Paulo':      { h:[350,700],   f:[220,395], t:[50,97],   u:[60,117], e:[63,135]  },
+    'Rio de Janeiro': { h:[320,650],   f:[210,378], t:[45,92],   u:[55,112], e:[58,128]  },
+    'Belo Horizonte': { h:[250,520],   f:[170,318], t:[38,77],   u:[48,97],  e:[48,108]  },
+    'Porto Alegre':   { h:[240,500],   f:[165,308], t:[38,74],   u:[47,95],  e:[45,105]  },
+    'Curitiba':       { h:[230,490],   f:[160,302], t:[36,72],   u:[46,94],  e:[43,102]  },
+    'Campinas':       { h:[250,520],   f:[170,318], t:[38,76],   u:[48,96],  e:[46,106]  },
+    'Salvador':       { h:[200,430],   f:[150,282], t:[33,67],   u:[42,87],  e:[40,95]   },
+    // ── South Africa ────────────────────────────────────────────────────────────
+    'Cape Town':      { h:[280,600],   f:[170,312], t:[45,92],   u:[45,97],  e:[53,120]  },
+    'Johannesburg':   { h:[250,550],   f:[160,298], t:[45,92],   u:[45,94],  e:[48,115]  },
+    'Pretoria':       { h:[230,510],   f:[155,288], t:[40,84],   u:[42,90],  e:[45,108]  },
+    'Durban':         { h:[220,490],   f:[150,278], t:[38,80],   u:[40,87],  e:[43,103]  },
+    'Stellenbosch':   { h:[250,530],   f:[160,298], t:[40,84],   u:[42,90],  e:[45,108]  },
+    'Bloemfontein':   { h:[180,400],   f:[130,248], t:[32,67],   u:[35,77],  e:[38,92]   },
+    // ── Spain ───────────────────────────────────────────────────────────────────
+    'Madrid':         { h:[550,950],   f:[240,425], t:[60,102],  u:[70,132], e:[83,165]  },
+    'Barcelona':      { h:[650,1100],  f:[250,445], t:[60,102],  u:[70,132], e:[88,170]  },
+    'Valencia':       { h:[450,800],   f:[220,392], t:[50,92],   u:[65,122], e:[73,145]  },
+    'Seville':        { h:[380,700],   f:[210,378], t:[45,87],   u:[60,117], e:[68,140]  },
+    'Granada':        { h:[320,600],   f:[195,358], t:[40,80],   u:[55,112], e:[60,130]  },
+    'Salamanca':      { h:[350,650],   f:[205,368], t:[40,82],   u:[57,115], e:[63,132]  },
+    'Bilbao':         { h:[450,800],   f:[230,412], t:[55,97],   u:[65,122], e:[75,148]  },
+    'Malaga':         { h:[420,750],   f:[215,388], t:[50,92],   u:[62,120], e:[70,142]  },
+    // ── Italy ───────────────────────────────────────────────────────────────────
+    'Milan':          { h:[700,1200],  f:[270,472], t:[80,128],  u:[80,148], e:[98,180]  },
+    'Rome':           { h:[600,1050],  f:[250,442], t:[75,122],  u:[75,140], e:[88,170]  },
+    'Bologna':        { h:[500,880],   f:[240,422], t:[65,112],  u:[68,132], e:[78,155]  },
+    'Florence':       { h:[550,950],   f:[250,438], t:[65,110],  u:[70,135], e:[80,158]  },
+    'Turin':          { h:[450,800],   f:[235,418], t:[65,110],  u:[68,132], e:[75,150]  },
+    'Naples':         { h:[350,650],   f:[215,382], t:[50,92],   u:[58,117], e:[63,135]  },
+    'Padova':         { h:[450,800],   f:[235,418], t:[60,108],  u:[65,130], e:[73,148]  },
+    'Trento':         { h:[420,760],   f:[228,408], t:[58,105],  u:[63,127], e:[70,142]  },
+    'Pisa':           { h:[400,730],   f:[225,402], t:[55,102],  u:[62,125], e:[67,138]  },
+    'Perugia':        { h:[350,650],   f:[210,378], t:[48,90],   u:[58,117], e:[60,128]  },
+    // ── Nordics ─────────────────────────────────────────────────────────────────
+    'Stockholm':      { h:[750,1300],  f:[320,545], t:[90,142],  u:[90,168], e:[98,180]  },
+    'Gothenburg':     { h:[600,1050],  f:[290,505], t:[85,138],  u:[85,158], e:[88,165]  },
+    'Uppsala':        { h:[600,1050],  f:[285,498], t:[80,132],  u:[80,153], e:[85,160]  },
+    'Lund':           { h:[550,980],   f:[278,487], t:[75,128],  u:[78,150], e:[83,158]  },
+    'Linköping':      { h:[500,900],   f:[270,468], t:[70,122],  u:[75,145], e:[78,152]  },
+    'Copenhagen':     { h:[700,1200],  f:[320,548], t:[90,142],  u:[85,158], e:[93,175]  },
+    'Aarhus':         { h:[600,1050],  f:[295,508], t:[82,135],  u:[80,152], e:[87,168]  },
+    'Oslo':           { h:[800,1400],  f:[380,645], t:[100,162], u:[90,172], e:[103,195] },
+    'Bergen':         { h:[700,1250],  f:[355,605], t:[90,152],  u:[88,168], e:[97,188]  },
+    'Helsinki':       { h:[650,1100],  f:[290,505], t:[80,132],  u:[80,152], e:[88,165]  },
+    // ── Other Europe ────────────────────────────────────────────────────────────
+    'Vienna':         { h:[550,950],   f:[260,452], t:[75,122],  u:[80,152], e:[88,165]  },
+    'Dublin':         { h:[900,1500],  f:[310,535], t:[100,162], u:[75,142], e:[98,185]  },
+    'Brussels':       { h:[600,1000],  f:[260,452], t:[75,122],  u:[75,142], e:[83,158]  },
+    'Prague':         { h:[400,700],   f:[200,362], t:[45,82],   u:[60,117], e:[63,130]  },
+    'Warsaw':         { h:[350,650],   f:[185,342], t:[40,77],   u:[55,112], e:[58,125]  },
+    'Krakow':         { h:[300,580],   f:[170,318], t:[35,67],   u:[50,102], e:[50,112]  },
+    'Wroclaw':        { h:[280,560],   f:[165,308], t:[32,64],   u:[48,98],  e:[50,112]  },
+    'Poznan':         { h:[270,540],   f:[160,300], t:[30,62],   u:[46,95],  e:[47,107]  },
+    'Budapest':       { h:[350,650],   f:[190,348], t:[38,74],   u:[55,110], e:[58,122]  },
+    'Bucharest':      { h:[250,500],   f:[155,288], t:[28,57],   u:[45,92],  e:[48,105]  },
+    'Athens':         { h:[350,650],   f:[200,362], t:[45,84],   u:[60,117], e:[60,130]  },
+    'Lisbon':         { h:[550,950],   f:[230,412], t:[55,102],  u:[60,117], e:[73,145]  },
+    'Porto':          { h:[480,850],   f:[215,392], t:[50,92],   u:[55,112], e:[65,135]  },
+    'Istanbul':       { h:[250,550],   f:[150,292], t:[30,67],   u:[45,94],  e:[48,110]  },
+    'Ankara':         { h:[200,450],   f:[130,262], t:[25,57],   u:[40,84],  e:[40,95]   },
+    'Moscow':         { h:[350,700],   f:[170,312], t:[35,65],   u:[48,95],  e:[48,108]  },
+    'Saint Petersburg':{ h:[280,580],  f:[155,292], t:[28,57],   u:[42,87],  e:[42,100]  },
+    // ── Middle East & Asia-Pacific ───────────────────────────────────────────────
+    'Singapore':      { h:[800,1400],  f:[310,555], t:[90,152],  u:[90,162], e:[113,205] },
+    'Hong Kong':      { h:[1000,1800], f:[330,575], t:[90,152],  u:[90,162], e:[113,205] },
+    'Dubai':          { h:[700,1300],  f:[280,505], t:[80,142],  u:[80,152], e:[103,205] },
+    'Abu Dhabi':      { h:[650,1200],  f:[270,488], t:[75,138],  u:[78,150], e:[98,195]  },
+    'Kuala Lumpur':   { h:[200,450],   f:[120,252], t:[30,72],   u:[40,82],  e:[43,95]   },
+    'Penang':         { h:[180,390],   f:[110,232], t:[28,64],   u:[38,78],  e:[38,88]   },
+    'Taipei':         { h:[300,600],   f:[190,342], t:[45,87],   u:[52,105], e:[55,120]  },
+    'Bangkok':        { h:[200,450],   f:[120,252], t:[30,70],   u:[40,82],  e:[43,95]   },
+    'Jakarta':        { h:[150,350],   f:[100,222], t:[25,62],   u:[35,72],  e:[33,83]   },
+    // ── NZ & others ─────────────────────────────────────────────────────────────
+    'Auckland':       { h:[700,1200],  f:[280,495], t:[80,138],  u:[75,142], e:[88,170]  },
+    'Wellington':     { h:[650,1100],  f:[265,473], t:[78,133],  u:[72,138], e:[83,162]  },
+    'Christchurch':   { h:[550,950],   f:[250,448], t:[68,122],  u:[68,132], e:[75,150]  },
+    'Dunedin':        { h:[480,850],   f:[235,422], t:[60,115],  u:[62,124], e:[68,138]  },
+  };
+
+  // ── Country-level fallback ─────────────────────────────────────────────────
+  const COUNTRY_COL = {
+    'United States':  { h:[800,1400],  f:[340,600], t:[90,150],  u:[75,145], e:[110,220] },
+    'United Kingdom': { h:[600,1000],  f:[250,450], t:[80,150],  u:[50,100], e:[80,165]  },
+    'Australia':      { h:[650,1100],  f:[280,500], t:[80,140],  u:[70,130], e:[82,165]  },
+    'Canada':         { h:[650,1100],  f:[280,500], t:[80,130],  u:[60,120], e:[82,158]  },
+    'Germany':        { h:[500,900],   f:[255,430], t:[75,108],  u:[85,158], e:[85,158]  },
+    'France':         { h:[500,900],   f:[250,430], t:[70,112],  u:[70,132], e:[80,152]  },
+    'Netherlands':    { h:[600,1000],  f:[255,432], t:[72,115],  u:[72,135], e:[85,158]  },
+    'Switzerland':    { h:[1000,1700], f:[430,720], t:[92,165],  u:[105,192], e:[125,212] },
+    'Sweden':         { h:[580,980],   f:[300,510], t:[78,125],  u:[82,155], e:[85,158]  },
+    'Denmark':        { h:[620,1050],  f:[310,530], t:[82,135],  u:[82,155], e:[93,165]  },
+    'Norway':         { h:[650,1150],  f:[360,615], t:[85,148],  u:[85,158], e:[95,178]  },
+    'Finland':        { h:[480,830],   f:[255,440], t:[65,115],  u:[72,135], e:[73,148]  },
+    'Belgium':        { h:[520,920],   f:[255,430], t:[72,115],  u:[72,125], e:[73,145]  },
+    'Spain':          { h:[420,780],   f:[225,408], t:[52,94],   u:[62,115], e:[73,148]  },
+    'Italy':          { h:[420,780],   f:[225,408], t:[52,94],   u:[62,125], e:[73,148]  },
+    'Portugal':       { h:[420,740],   f:[205,390], t:[42,84],   u:[57,115], e:[63,128]  },
+    'Austria':        { h:[520,920],   f:[255,440], t:[68,115],  u:[72,135], e:[78,152]  },
+    'Poland':         { h:[310,570],   f:[182,328], t:[37,68],   u:[52,105], e:[53,118]  },
+    'Czech Republic': { h:[360,620],   f:[202,368], t:[42,74],   u:[57,115], e:[58,118]  },
+    'Russia':         { h:[220,430],   f:[155,292], t:[28,55],   u:[42,85],  e:[43,98]   },
+    'Turkey':         { h:[220,430],   f:[135,262], t:[27,55],   u:[42,94],  e:[43,98]   },
+    'Japan':          { h:[420,820],   f:[255,458], t:[82,135],  u:[72,135], e:[83,168]  },
+    'China':          { h:[220,530],   f:[155,308], t:[32,74],   u:[42,84],  e:[53,128]  },
+    'South Korea':    { h:[370,720],   f:[205,388], t:[62,105],  u:[62,115], e:[73,148]  },
+    'Singapore':      { h:[700,1300],  f:[300,550], t:[80,140],  u:[80,150], e:[100,180] },
+    'Hong Kong':      { h:[900,1600],  f:[300,550], t:[80,140],  u:[80,150], e:[100,180] },
+    'India':          { h:[110,265],   f:[82,185],  t:[20,52],   u:[26,63],  e:[32,85]   },
+    'Malaysia':       { h:[205,460],   f:[122,258], t:[32,74],   u:[42,84],  e:[42,95]   },
+    'Indonesia':      { h:[155,360],   f:[102,228], t:[26,62],   u:[36,74],  e:[32,85]   },
+    'Thailand':       { h:[205,460],   f:[122,258], t:[32,74],   u:[42,84],  e:[42,95]   },
+    'Taiwan':         { h:[255,515],   f:[182,342], t:[42,84],   u:[52,105], e:[52,118]  },
+    'Brazil':         { h:[255,515],   f:[182,342], t:[42,84],   u:[52,105], e:[52,118]  },
+    'Mexico':         { h:[205,460],   f:[152,292], t:[32,68],   u:[42,89],  e:[42,95]   },
+    'Argentina':      { h:[155,360],   f:[132,262], t:[26,58],   u:[36,78],  e:[37,85]   },
+    'Chile':          { h:[255,515],   f:[162,308], t:[37,74],   u:[47,94],  e:[47,105]  },
+    'Colombia':       { h:[185,392],   f:[132,262], t:[26,58],   u:[36,78],  e:[37,85]   },
+    'South Africa':   { h:[210,462],   f:[152,292], t:[42,84],   u:[42,94],  e:[43,95]   },
+    'Egypt':          { h:[102,258],   f:[82,185],  t:[16,42],   u:[26,63],  e:[27,70]   },
+    'Nigeria':        { h:[102,258],   f:[82,185],  t:[20,52],   u:[26,63],  e:[27,70]   },
+    'Kenya':          { h:[102,258],   f:[82,185],  t:[20,52],   u:[26,63],  e:[27,70]   },
+    'New Zealand':    { h:[620,1050],  f:[285,492], t:[78,135],  u:[72,135], e:[83,165]  },
+    'Ireland':        { h:[720,1250],  f:[305,535], t:[82,145],  u:[72,135], e:[93,178]  },
+    'Israel':         { h:[515,920],   f:[285,492], t:[62,115],  u:[72,135], e:[83,158]  },
+    'Saudi Arabia':   { h:[310,620],   f:[182,342], t:[42,84],   u:[42,84],  e:[52,118]  },
+    'UAE':            { h:[515,1050],  f:[255,462], t:[62,125],  u:[72,135], e:[83,168]  },
+    'Pakistan':       { h:[84,208],    f:[62,145],  t:[16,37],   u:[21,53],  e:[22,58]   },
+    'Bangladesh':     { h:[63,165],    f:[52,125],  t:[11,32],   u:[16,43],  e:[16,48]   },
+    'Sri Lanka':      { h:[84,208],    f:[62,145],  t:[16,37],   u:[21,53],  e:[22,58]   },
+    'Ghana':          { h:[103,228],   f:[82,175],  t:[21,47],   u:[26,58],  e:[27,65]   },
+    'Lebanon':        { h:[155,362],   f:[122,262], t:[26,63],   u:[36,84],  e:[37,85]   },
+  };
+
+  // Normalise city names for lookup (strip accents, lowercase, trim)
+  function normCity(s) {
+    return s.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+  const _cityIndex = {};
+  Object.keys(CITY_COL).forEach(k => { _cityIndex[normCity(k)] = k; });
+
+  function lookupCity(name) {
+    if (!name) return null;
+    const n = normCity(name);
+    if (_cityIndex[n]) return CITY_COL[_cityIndex[n]];
+    // partial: try removing common suffixes like "city", "metropolitan area"
+    const short = n.replace(/\s+(city|metropolitan area|urban area|district)$/, '').trim();
+    if (_cityIndex[short]) return CITY_COL[_cityIndex[short]];
+    return null;
+  }
+
+  function getCityForId(id) {
+    // 1. Guide has a city field like "Cape Town, South Africa"
+    const g = guide[id];
+    if (g && g.city) return g.city.split(',')[0].trim();
+    // 2. Tier-2 stateProvince sometimes IS the city (e.g. "Tokyo", "Seoul")
+    const u = unis.find(x => x.id === id);
+    if (u && u.stateProvince) return u.stateProvince.trim();
+    return null;
+  }
+
+  function costOfLivingRows(id) {
+    const g = guide[id];
+    const u = unis.find(x => x.id === id);
+    const country = u ? u.country : '';
+    let isFallback = false;
+    let fallbackLabel = '';
+    let cur = 'USD';
+    let housing = null, food = null, transport = null, utilities = null, entertainment = null;
+    let notes = null, source = null, transportNote = '';
+
+    if (g && g.costOfLiving) {
+      // ── Tier 1: stored guide data (city-specific, authoritative) ────────────
+      const c = g.costOfLiving;
+      const m = c.monthly || {};
+      const o = c.otherMonthly || {};
+      cur        = c.currency || 'USD';
+      housing    = m.dormRoom || m.sharedApartment || null;
+      food       = o.food || null;
+      transport  = o.transport || null;
+      transportNote = (o.transport && o.transport.note) ? o.transport.note : '';
+      utilities  = o.utilities || null;
+      notes = c.notes || null;
+      source = c.source || null;
+    } else {
+      // ── Tier 2: city lookup → country fallback ───────────────────────────────
+      isFallback = true;
+      const cityName = getCityForId(id);
+      const cc = lookupCity(cityName) || COUNTRY_COL[country];
+      if (cc) {
+        housing      = { min: cc.h[0], max: cc.h[1] };
+        food         = { min: cc.f[0], max: cc.f[1] };
+        transport    = { min: cc.t[0], max: cc.t[1] };
+        utilities    = { min: cc.u[0], max: cc.u[1] };
+        entertainment= { min: cc.e[0], max: cc.e[1] };
+        // Label tells user how precise the estimate is
+        const matchedCity = cityName ? lookupCity(cityName) : null;
+        fallbackLabel = matchedCity && cityName
+          ? `City estimates for ${cityName}.`
+          : cityName
+            ? `No city data for ${cityName} — using ${country} average.`
+            : `Country-level estimates for ${country}.`;
+      }
+    }
+
+    // Infer entertainment if not explicitly stored (12–18% of housing+food)
+    if (!entertainment && housing && food) {
+      entertainment = {
+        min: Math.round((housing.min + food.min) * 0.12),
+        max: Math.round((housing.max + food.max) * 0.18)
+      };
+    }
+
+    if (!housing && !food) {
+      return `<div style="font-size:0.84rem;color:var(--text-muted)">No cost data available.${country ? ` <a href="https://www.numbeo.com/cost-of-living/country_result.jsp?country=${encodeURIComponent(country)}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Check Numbeo ↗</a>` : ''}</div>`;
+    }
+
+    const items = [
+      { label: 'Housing (shared/dorm)', icon: '🏠', val: housing },
+      { label: 'Food & groceries',      icon: '🛒', val: food },
+      { label: 'Transport' + (transportNote ? ` <span style="font-weight:400;color:var(--text-muted)">(${transportNote})</span>` : ''), icon: '🚌', val: transport },
+      { label: 'Utilities & internet',  icon: '💡', val: utilities },
+      { label: 'Social & leisure',      icon: '🎭', val: entertainment },
+    ].filter(x => x.val);
+
+    const totalMin = items.reduce((s, x) => s + x.val.min, 0);
+    const totalMax = items.reduce((s, x) => s + x.val.max, 0);
+
+    const rows = items.map(x => `
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid var(--border)">
+        <span style="font-size:0.82rem;color:var(--text-secondary)">${x.icon} ${x.label}</span>
+        <span style="font-size:0.83rem;font-weight:600;white-space:nowrap;margin-left:8px">${fmtCurrency(x.val.min, cur)} – ${fmtCurrency(x.val.max, cur)}</span>
+      </div>`).join('');
+
+    const totalRow = `
+      <div style="display:flex;justify-content:space-between;align-items:baseline;padding:7px 0 3px;margin-top:2px">
+        <span style="font-size:0.84rem;font-weight:700;color:var(--text-primary)">📊 Total / month (est.)</span>
+        <span style="font-size:0.9rem;font-weight:800;color:var(--primary);white-space:nowrap;margin-left:8px">${fmtCurrency(totalMin, cur)} – ${fmtCurrency(totalMax, cur)}</span>
+      </div>`;
+
+    const disclaimer = isFallback
+      ? `<div style="font-size:0.74rem;color:var(--text-muted);margin-top:6px;line-height:1.5">${fallbackLabel} <a href="https://www.numbeo.com/cost-of-living/country_result.jsp?country=${encodeURIComponent(country)}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Verify on Numbeo ↗</a></div>`
+      : `<div style="font-size:0.74rem;color:var(--text-muted);margin-top:6px;line-height:1.5">${notes ? notes + ' ' : ''}${source ? `<a href="${source}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Source ↗</a>` : ''}</div>`;
+
+    return `<div style="min-width:200px">${rows}${totalRow}${disclaimer}</div>`;
+  }
+
+  function rentalLinksCell(id) {
+    const g = guide[id];
+    const u = unis.find(x => x.id === id);
+    if (!g || !g.rentalLinks || !g.rentalLinks.length) {
+      const country = u ? u.country : '';
+      const genericLinks = {
+        'United Kingdom': [{ label: 'SpareRoom UK', url: 'https://www.spareroom.co.uk' }, { label: 'Rightmove — Student Rentals', url: 'https://www.rightmove.co.uk/student-accommodation.html' }],
+        'United States': [{ label: 'Apartments.com', url: 'https://www.apartments.com' }, { label: 'Craigslist Housing', url: 'https://www.craigslist.org' }],
+        'Australia': [{ label: 'Domain.com.au', url: 'https://www.domain.com.au/rent/' }, { label: 'Flatmates.com.au', url: 'https://flatmates.com.au' }],
+        'Canada': [{ label: 'Kijiji Rentals', url: 'https://www.kijiji.ca/b-apartments-condos/canada/c37l0' }, { label: 'PadMapper Canada', url: 'https://www.padmapper.com' }],
+        'Germany': [{ label: 'WG-Gesucht', url: 'https://www.wg-gesucht.de' }, { label: 'ImmobilienScout24', url: 'https://www.immobilienscout24.de' }],
+        'Netherlands': [{ label: 'Kamernet', url: 'https://kamernet.nl' }, { label: 'Pararius', url: 'https://www.pararius.com' }],
+        'France': [{ label: 'Se Loger', url: 'https://www.seloger.com' }, { label: 'Le Bon Coin — Location', url: 'https://www.leboncoin.fr/annonces/offres/locations/' }],
+        'Spain': [{ label: 'Idealista', url: 'https://www.idealista.com/alquiler-viviendas/' }, { label: 'Badi — Rooms', url: 'https://badi.com' }],
+        'Italy': [{ label: 'Immobiliare.it', url: 'https://www.immobiliare.it/affitto/' }, { label: 'Subito Affitti', url: 'https://www.subito.it/annunci-italia/affitti/' }],
+        'China': [{ label: 'Anjuke — 安居客', url: 'https://zu.anjuke.com' }, { label: 'Beike/链家', url: 'https://bj.ke.com/zufang/' }],
+        'Japan': [{ label: 'SUUMO Rentals', url: 'https://suumo.jp/chintai/' }, { label: 'Sakura House', url: 'https://www.sakura-house.com' }],
+        'South Korea': [{ label: 'Zigbang (직방)', url: 'https://www.zigbang.com' }, { label: 'Dabang (다방)', url: 'https://www.dabangapp.com' }],
+        'India': [{ label: 'NoBroker', url: 'https://www.nobroker.in' }, { label: '99acres Rentals', url: 'https://www.99acres.com/property-for-rent-in-india-ffid' }],
+        'Singapore': [{ label: 'PropertyGuru', url: 'https://www.propertyguru.com.sg/property-for-rent' }, { label: 'SRX Singapore', url: 'https://www.srx.com.sg/rent' }],
+        'Brazil': [{ label: 'QuintoAndar', url: 'https://www.quintoandar.com.br' }, { label: 'ZAP Imóveis', url: 'https://www.zapimoveis.com.br/aluguel/' }],
+      };
+      const links = genericLinks[country];
+      if (links) return `<div class="col-links">${links.map(r => `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="col-link">${r.label} ↗</a>`).join('')}<div style="font-size:0.75rem;color:var(--text-muted);margin-top:4px">General portals for ${country}</div></div>`;
+      return `<span style="color:var(--text-muted);font-size:0.85rem">Search local rental portals for ${country || 'this country'}</span>`;
+    }
+    return `<div class="col-links">${g.rentalLinks.map(r => `<a href="${r.url}" target="_blank" rel="noopener noreferrer" class="col-link">${r.label} ↗</a>`).join('')}</div>`;
+  }
+
+  function contactsCell(id) {
+    const g = guide[id];
+    const u = unis.find(x => x.id === id);
+    if (!g || !g.importantContacts) {
+      // Show country emergency number from a basic lookup
+      const emergencyMap = { 'United States':'911','United Kingdom':'999','Australia':'000','Canada':'911','New Zealand':'111','Germany':'112','France':'112','Italy':'112','Spain':'112','Netherlands':'112','Belgium':'112','Switzerland':'112','Sweden':'112','Norway':'112','Denmark':'112','Finland':'112','Ireland':'999 / 112','Japan':'110 (police) / 119 (fire/ambulance)','China':'110 (police) / 120 (ambulance)','South Korea':'112 (police) / 119 (fire/ambulance)','India':'112','Singapore':'999 (police) / 995 (ambulance)','Malaysia':'999','Brazil':'190 (police) / 192 (ambulance)','South Africa':'10111 (police) / 10177 (ambulance)' };
+      const country = u ? u.country : '';
+      const em = emergencyMap[country];
+      return `<div class="col-contact">${em ? `<strong>Emergency (${country}):</strong> <span>${em}</span><br>` : ''}<span style="color:var(--text-muted);font-size:0.78rem">Detailed contacts not yet in our database — check the university's international student office.</span></div>`;
+    }
+    const ic = g.importantContacts;
+    const parts = [];
+    if (ic.emergencyNumber) parts.push(`<div class="col-contact"><strong>Emergency:</strong> <span>${ic.emergencyNumber}</span></div>`);
+    if (ic.police) parts.push(`<div class="col-contact"><strong>Police (non-emergency):</strong> <span>${ic.police.number || ''}</span></div>`);
+    if (ic.hospital) parts.push(`<div class="col-contact"><strong>Hospital:</strong> <span>${ic.hospital.name}${ic.hospital.url ? ` — <a href="${ic.hospital.url}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">info ↗</a>` : ''}</span></div>`);
+    return parts.join('') || '<span style="color:var(--text-muted);font-size:0.85rem">—</span>';
+  }
+
+  function leisureCell(id) {
+    const g = guide[id];
+    if (!g || !g.leisure || !g.leisure.length) return '<span style="color:var(--text-muted);font-size:0.85rem">—</span>';
+    return g.leisure.map(l => `<span class="leisure-tag" title="${l.type}">${l.name}</span>`).join('');
+  }
+
+  function airportCell(id) {
+    const g = guide[id];
+    if (!g || !g.nearestAirport) return '<span style="color:var(--text-muted);font-size:0.85rem">—</span>';
+    const a = g.nearestAirport;
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.mapsQuery || a.name)}`;
+    return `<div style="font-size:0.88rem"><strong>${a.name}</strong> (${a.code})<br><span style="color:var(--text-muted);font-size:0.8rem">${a.distanceKm} km from campus · <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Map ↗</a></span></div>`;
+  }
+
+  function mapCell(id) {
+    const g = guide[id];
+    const u = unis.find(x => x.id === id);
+    if (g && g.mapQuery) {
+      const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(g.mapQuery)}`;
+      return `<div style="font-size:0.88rem">${g.city || '—'}<br><a href="${url}" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-size:0.8rem">Open in Google Maps ↗</a></div>`;
+    }
+    // Fallback for Tier 2: use university name + country
+    const loc = u ? `${u.stateProvince ? u.stateProvince + ', ' : ''}${u.country}` : '—';
+    const q = u ? encodeURIComponent(u.name + ', ' + (u.country || '')) : '';
+    return `<div style="font-size:0.88rem">${loc}${q ? `<br><a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-size:0.8rem">Search on Maps ↗</a>` : ''}</div>`;
+  }
+
+  function langCell(id) {
+    const g = guide[id];
+    if (g && g.courseLanguage) {
+      return `<div style="font-size:0.88rem"><strong>${g.courseLanguage}</strong>${g.languageNotes ? `<br><span style="color:var(--text-muted);font-size:0.78rem;line-height:1.5;display:block;margin-top:4px">${g.languageNotes}</span>` : ''}</div>`;
+    }
+    const u = unis.find(x => x.id === id);
+    // Infer likely language from country
+    const langMap = { 'United States':'English','United Kingdom':'English','Australia':'English','Canada':'English / French','New Zealand':'English','Ireland':'English','Singapore':'English','Germany':'German','Austria':'German','Switzerland':'German / French','France':'French','Spain':'Spanish','Italy':'Italian','Japan':'Japanese','China':'Chinese (Mandarin)','South Korea':'Korean','Brazil':'Portuguese','Netherlands':'Dutch / English','Sweden':'Swedish / English','Denmark':'Danish / English','Norway':'Norwegian / English','Finland':'Finnish / English / Swedish','Poland':'Polish','Russia':'Russian','Turkey':'Turkish','India':'English / Hindi','Indonesia':'Indonesian','Malaysia':'Malay / English' };
+    const inferred = u && langMap[u.country] ? langMap[u.country] : null;
+    return `<div style="font-size:0.88rem">${inferred ? `<strong>${inferred}</strong><br><span style="color:var(--text-muted);font-size:0.78rem;margin-top:4px;display:block">Inferred from country — verify with university</span>` : '<span style="color:var(--text-muted)">Check university website</span>'}</div>`;
+  }
+
+  // ── Country-level banking data ─────────────────────────────────────────────
+  // localBanks: top student-friendly banks with URLs
+  // transfer: recommended services for sending/receiving money internationally
+  // openReqs: typical documents to open an account
+  // atm: ATM access tip
+  const COUNTRY_BANKING = {
+    'United States': {
+      localBanks: [
+        { name: 'Chase College Checking', url: 'https://www.chase.com/personal/checking/college-checking' },
+        { name: 'Bank of America Advantage SafeBalance', url: 'https://www.bankofamerica.com/deposits/checking/student-banking/' },
+        { name: 'Charles Schwab (no foreign ATM fees)', url: 'https://www.schwab.com/checking' },
+        { name: 'Discover Cashback Debit', url: 'https://www.discover.com/online-banking/checking/' },
+      ],
+      transfer: ['Wise (best exchange rates)', 'Remitly', 'Western Union', 'Zelle (domestic only)'],
+      openReqs: 'Passport + SSN or ITIN + US address. Some banks accept I-20 visa form instead of SSN for new internationals.',
+      atm: 'Use your own bank\'s ATM to avoid fees. Charles Schwab reimburses all ATM fees worldwide.',
+      digital: ['Wise debit card', 'Revolut', 'PayPal'],
+    },
+    'United Kingdom': {
+      localBanks: [
+        { name: 'Barclays Student Account', url: 'https://www.barclays.co.uk/current-accounts/student-account/' },
+        { name: 'HSBC Student Bank Account', url: 'https://www.hsbc.co.uk/current-accounts/products/student/' },
+        { name: 'Santander 123 Student Account', url: 'https://www.santander.co.uk/personal/current-accounts/student-current-account' },
+        { name: 'Monzo (digital, instant setup)', url: 'https://monzo.com' },
+      ],
+      transfer: ['Wise (best rates for GBP)', 'Revolut', 'Western Union', 'Remitly'],
+      openReqs: 'Passport + university offer/enrollment letter + UK address. Monzo and Starling open with just passport — useful on arrival.',
+      atm: 'Free withdrawals at any LINK ATM. Avoid non-LINK machines — they charge fees.',
+      digital: ['Monzo', 'Starling Bank', 'Wise debit card'],
+    },
+    'Australia': {
+      localBanks: [
+        { name: 'Commonwealth Bank Student Account', url: 'https://www.commbank.com.au/banking/student-banking.html' },
+        { name: 'ANZ Access Advantage', url: 'https://www.anz.com.au/personal/bank-accounts/everyday-accounts/' },
+        { name: 'NAB Classic Banking', url: 'https://www.nab.com.au/personal/bank-accounts/transaction-accounts' },
+        { name: 'Westpac Choice', url: 'https://www.westpac.com.au/personal-banking/bank-accounts/transaction/' },
+      ],
+      transfer: ['Wise', 'Western Union', 'OFX (good AUD rates)', 'Remitly'],
+      openReqs: 'Passport + student visa + Australian address. You can open a CBA account online before arriving.',
+      atm: 'All major banks have large ATM networks. ING and HSBC offer fee-free ATM access.',
+      digital: ['Wise debit card', 'Revolut', 'Up Bank'],
+    },
+    'Canada': {
+      localBanks: [
+        { name: 'TD Student Banking', url: 'https://www.td.com/ca/en/personal-banking/products/bank-accounts/student-chequing-accounts/' },
+        { name: 'RBC Student Banking', url: 'https://www.rbc.com/student/' },
+        { name: 'Scotiabank Student Banking', url: 'https://www.scotiabank.com/ca/en/personal/bank-accounts/chequing-accounts/student-banking.html' },
+        { name: 'Simplii Financial (digital, free)', url: 'https://www.simplii.com' },
+      ],
+      transfer: ['Wise', 'Western Union', 'Remitly', 'OFX'],
+      openReqs: 'Passport + study permit + Canadian address. Most Big 5 banks allow pre-arrival online account opening.',
+      atm: 'Use your bank\'s ATM network. Interac is universal across Canadian ATMs.',
+      digital: ['Wise debit card', 'Revolut', 'EQ Bank'],
+    },
+    'Germany': {
+      localBanks: [
+        { name: 'Deutsche Bank Student Account', url: 'https://www.deutsche-bank.de/pk/konto-und-karte/konten/student.html' },
+        { name: 'Commerzbank (free for students)', url: 'https://www.commerzbank.de/privatkunden/konten-karten/' },
+        { name: 'DKB (free + ATM worldwide)', url: 'https://www.dkb.de/privatkunden/produkte/banking/girokonto/' },
+        { name: 'N26 (digital, instant)', url: 'https://n26.com/de-de' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA transfer (within EU, free)'],
+      openReqs: 'Passport + Anmeldung (registration certificate) + enrollment letter. N26 opens online with passport only.',
+      atm: 'DKB offers free cash withdrawals worldwide. Sparkasse ATMs widely available but may charge non-customers.',
+      digital: ['N26', 'Wise debit card', 'Revolut'],
+    },
+    'France': {
+      localBanks: [
+        { name: 'BNP Paribas Hello bank! (free)', url: 'https://www.hellobank.fr' },
+        { name: 'Société Générale Student Pack', url: 'https://particuliers.sg.fr/etudiants' },
+        { name: 'Crédit Agricole', url: 'https://www.credit-agricole.fr/particulier/compte/compte-courant.html' },
+        { name: 'Lydia (digital peer payments)', url: 'https://www.lydia-app.com' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (free within EU)'],
+      openReqs: 'Passport + visa + proof of address (CAF letter or university housing) + enrollment certificate.',
+      atm: 'Free ATMs at your own bank\'s network. Avoid "distributeurs privés" — they charge fees.',
+      digital: ['N26', 'Wise debit card', 'Revolut', 'Lydia'],
+    },
+    'Netherlands': {
+      localBanks: [
+        { name: 'ING Studentenpakket', url: 'https://www.ing.nl/particulier/betaalrekeningen/studenten.html' },
+        { name: 'ABN AMRO Student Account', url: 'https://www.abnamro.nl/nl/prive/betalen/rekeningen/student.html' },
+        { name: 'Bunq (digital, instant)', url: 'https://www.bunq.com' },
+        { name: 'Revolut', url: 'https://www.revolut.com' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (free EU transfers)'],
+      openReqs: 'Passport + BSN (citizen service number — register at gemeente) + Dutch address. Bunq and Revolut work while waiting for BSN.',
+      atm: 'iDEAL and PIN card dominant. Tikkie app for splitting bills with housemates. ING has the widest free ATM network.',
+      digital: ['iDEAL', 'Tikkie', 'Bunq', 'N26', 'Wise debit card'],
+    },
+    'Switzerland': {
+      localBanks: [
+        { name: 'UBS Student Account', url: 'https://www.ubs.com/ch/en/private/accounts-and-cards/accounts/youth-student-account.html' },
+        { name: 'Credit Suisse (now UBS)', url: 'https://www.ubs.com' },
+        { name: 'Neon (digital, free)', url: 'https://www.neon-free.ch' },
+        { name: 'Zak by Bank Cler (digital)', url: 'https://www.bankcler.ch/zak' },
+      ],
+      transfer: ['Wise (CHF transfers)', 'Revolut', 'Western Union'],
+      openReqs: 'Passport + residence permit (B/L permit) + Swiss address. Neon opens digitally — useful before permit arrives.',
+      atm: 'UBS and Credit Suisse ATMs everywhere. Neon offers free withdrawals at PostFinance ATMs.',
+      digital: ['Neon', 'Zak', 'Wise debit card', 'Revolut'],
+    },
+    'Japan': {
+      localBanks: [
+        { name: 'Japan Post Bank (ゆうちょ銀行)', url: 'https://www.jp-bank.japanpost.jp' },
+        { name: 'MUFG (三菱UFJ銀行)', url: 'https://www.bk.mufg.jp' },
+        { name: 'Sumitomo Mitsui (三井住友銀行)', url: 'https://www.smbc.co.jp' },
+        { name: 'Seven Bank (at 7-Eleven, easy for internationals)', url: 'https://www.sevenbank.co.jp/english/' },
+      ],
+      transfer: ['Wise', 'Western Union', 'Revolut', 'SBI Remit (good JPY rates)'],
+      openReqs: 'Residence card (在留カード) + My Number card or notification letter + enrolled address. Japan Post Bank is easiest for new arrivals.',
+      atm: '7-Eleven ATMs accept foreign cards 24/7. Japan Post ATMs also international-friendly.',
+      digital: ['Wise debit card', 'Revolut', 'PayPay (mobile payments in Japan)'],
+    },
+    'China': {
+      localBanks: [
+        { name: 'Bank of China (中国银行) — most international-friendly', url: 'https://www.boc.cn' },
+        { name: 'ICBC (工商银行)', url: 'https://www.icbc.com.cn' },
+        { name: 'China Construction Bank (建设银行)', url: 'https://www.ccb.com' },
+        { name: 'CITIC Bank (most UnionPay coverage)', url: 'https://www.citicbank.com' },
+      ],
+      transfer: ['Wise (to/from CNY)', 'Western Union', 'WorldRemit', 'Bank of China international wire'],
+      openReqs: 'Passport + student visa (X1/X2) + university enrollment letter + local phone number. Bank of China recommended — most branches help international students.',
+      atm: 'UnionPay ATMs everywhere. Visa/MC accepted at Bank of China and ICBC ATMs in major cities. Note: mobile payments (WeChat Pay, Alipay) dominate day-to-day.',
+      digital: ['WeChat Pay (必备)', 'Alipay (必备)', 'Wise (for international transfers)'],
+    },
+    'South Korea': {
+      localBanks: [
+        { name: 'Woori Bank (우리은행) — popular with international students', url: 'https://www.wooribank.com' },
+        { name: 'KEB Hana Bank', url: 'https://www.kebhana.com' },
+        { name: 'Shinhan Bank', url: 'https://www.shinhanbank.com' },
+        { name: 'Kakao Bank (digital, easiest)', url: 'https://www.kakaobank.com' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'KakaoBank international transfer'],
+      openReqs: 'ARC (Alien Registration Card) + passport + enrollment letter. Kakao Bank allows some accounts before ARC.',
+      atm: 'GS25 and CU convenience store ATMs accept foreign cards. Woori and Hana widely available.',
+      digital: ['KakaoPay', 'Naver Pay', 'Wise debit card'],
+    },
+    'Singapore': {
+      localBanks: [
+        { name: 'DBS/POSB Multiplier Account', url: 'https://www.dbs.com.sg/personal/accounts/bank-accounts/multiplier' },
+        { name: 'OCBC Frank Account (student-friendly)', url: 'https://www.ocbc.com/personal-banking/accounts/frank-account' },
+        { name: 'UOB One Account', url: 'https://www.uob.com.sg/personal/save/chequeing/one-account.page' },
+        { name: 'Wise (digital)', url: 'https://wise.com/sg' },
+      ],
+      transfer: ['Wise (best SGD rates)', 'Revolut', 'Western Union', 'PayNow (instant, domestic)'],
+      openReqs: 'Passport + Student Pass (issued by ICA) + local address. OCBC Frank is fastest to open online.',
+      atm: 'NETS and ATMs everywhere. DBS and OCBC have the widest ATM networks. Most places accept card or PayNow.',
+      digital: ['PayNow (linked to phone number)', 'GrabPay', 'Wise debit card'],
+    },
+    'India': {
+      localBanks: [
+        { name: 'State Bank of India (SBI) — widest branch network', url: 'https://sbi.co.in' },
+        { name: 'HDFC Bank — student account', url: 'https://www.hdfcbank.com/personal/save/accounts/savings-accounts/basic-savings-bank-deposit-account' },
+        { name: 'ICICI Bank — student banking', url: 'https://www.icicibank.com/personal-banking/account' },
+        { name: 'Kotak 811 (zero-balance digital)', url: 'https://www.kotak.com/en/personal-banking/accounts/811-digital-bank-account.html' },
+      ],
+      transfer: ['Wise', 'Remitly (good INR rates)', 'Western Union', 'NEFT/RTGS (domestic)'],
+      openReqs: 'Aadhaar card + PAN card + enrollment letter + address proof. Kotak 811 opens instantly with Aadhaar.',
+      atm: 'ATMs everywhere in cities. SBI has the most ATMs nationally. UPI (Google Pay, PhonePe) is dominant for daily payments.',
+      digital: ['Google Pay (GPay)', 'PhonePe', 'Paytm', 'Wise debit card'],
+    },
+    'Brazil': {
+      localBanks: [
+        { name: 'Nubank (digital, no fees)', url: 'https://nubank.com.br' },
+        { name: 'Bradesco Universitário', url: 'https://banco.bradesco/html/classic/produtos-servicos/conta-corrente/conta-universitaria.shtm' },
+        { name: 'Banco do Brasil — Conta Universitária', url: 'https://www.bb.com.br' },
+        { name: 'Inter (digital, fee-free)', url: 'https://www.bancointer.com.br' },
+      ],
+      transfer: ['Wise', 'Remitly', 'Western Union', 'PIX (instant, domestic)'],
+      openReqs: 'CPF (tax number — get on arrival) + RNE or CRNM (foreigner registration) + enrollment letter. Nubank requires only CPF.',
+      atm: 'Banco24Horas network accepts most cards. Nubank and Inter reimburse ATM fees.',
+      digital: ['PIX (instant transfers)', 'Nubank', 'Wise debit card'],
+    },
+    'South Africa': {
+      localBanks: [
+        { name: 'Capitec Student Account', url: 'https://www.capitecbank.co.za/personal/transact' },
+        { name: 'Absa Student Banking', url: 'https://www.absa.co.za/personal/transact/bank-accounts/student-bank-accounts/' },
+        { name: 'FNB Student Account', url: 'https://www.fnb.co.za/accounts/student-accounts.html' },
+        { name: 'Standard Bank Student Account', url: 'https://www.standardbank.co.za/southafrica/personal/products-and-services/bank-with-us/bank-accounts/youth-and-student/student-account' },
+      ],
+      transfer: ['Wise', 'Western Union', 'WorldRemit', 'Remitly'],
+      openReqs: 'Passport or SA ID + student card + proof of address + enrollment letter. Capitec is easiest — same-day account.',
+      atm: 'Capitec, ABSA, and FNB have large ATM networks. Many outlets accept card-only. Avoid airport ATMs — high fees.',
+      digital: ['SnapScan', 'Zapper', 'Wise debit card', 'Revolut'],
+    },
+    'Sweden': {
+      localBanks: [
+        { name: 'Swedbank Student Account', url: 'https://www.swedbank.se/privat/bank-och-betala/konton/student.html' },
+        { name: 'SEB Enkla Vardagen', url: 'https://seb.se/privat/konton-och-kort/konton/enkla-vardagen' },
+        { name: 'Revolut (digital, instant)', url: 'https://www.revolut.com' },
+        { name: 'Wise (digital)', url: 'https://wise.com/se' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA/SWIFT'],
+      openReqs: 'Personnummer (personal ID number — registered with Skatteverket) + passport. Revolut/Wise work without personnummer.',
+      atm: 'Swish (mobile) is used everywhere. ATMs available but Sweden is largely cashless.',
+      digital: ['Swish (essential in Sweden)', 'Revolut', 'Wise debit card'],
+    },
+    'Denmark': {
+      localBanks: [
+        { name: 'Danske Bank Student Account', url: 'https://danskebank.dk/privat/produkter/konto' },
+        { name: 'Nordea Student Account', url: 'https://www.nordea.dk/privat/produkter/konti.html' },
+        { name: 'Lunar (digital)', url: 'https://www.lunar.app/da' },
+        { name: 'Revolut', url: 'https://www.revolut.com' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (free EU transfers)'],
+      openReqs: 'CPR number (civil registration — register at borgerservice) + passport. Lunar/Revolut work while waiting for CPR.',
+      atm: 'Mobile Pay (MobilePay) is ubiquitous. Nordea and Danske Bank have ATMs. Denmark is largely cashless.',
+      digital: ['MobilePay (essential)', 'Revolut', 'Wise debit card'],
+    },
+    'Spain': {
+      localBanks: [
+        { name: 'BBVA Cuenta Online (free)', url: 'https://www.bbva.es/personas/productos/cuentas/cuenta-online.html' },
+        { name: 'Santander Student Account', url: 'https://www.bancosantander.es/particulares/cuentas/cuenta-online' },
+        { name: 'N26 (digital)', url: 'https://n26.com/es-es' },
+        { name: 'Revolut', url: 'https://www.revolut.com/es-es' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (free EU transfers)'],
+      openReqs: 'Passport + NIE (Número de Identidad de Extranjero) + enrollment letter + Spanish address. N26 needs only passport.',
+      atm: 'BBVA and Santander ATMs everywhere. Avoid small independent ATMs — charge up to €6 per withdrawal.',
+      digital: ['Bizum (Spanish instant payments)', 'Revolut', 'Wise debit card'],
+    },
+    'Italy': {
+      localBanks: [
+        { name: 'Intesa Sanpaolo XME Young', url: 'https://www.intesasanpaolo.com/it/persone/conti-e-carte/conti/xme-conto.html' },
+        { name: 'Unicredit Students Account', url: 'https://www.unicredit.it' },
+        { name: 'N26 (digital, instant)', url: 'https://n26.com/it-it' },
+        { name: 'Hype (Italian digital bank)', url: 'https://www.hype.it' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (free EU transfers)'],
+      openReqs: 'Passport + Codice Fiscale (tax code — get free at Agenzia delle Entrate) + enrollment letter. N26 needs only passport.',
+      atm: 'Bancomat ATMs everywhere. N26 and Hype offer free withdrawals at PosteMat ATMs.',
+      digital: ['Satispay (Italian payments)', 'Hype', 'N26', 'Wise debit card'],
+    },
+    'New Zealand': {
+      localBanks: [
+        { name: 'ANZ Bank NZ', url: 'https://www.anz.co.nz/personal/bank-accounts/' },
+        { name: 'ASB Bank', url: 'https://www.asb.co.nz/bank-accounts/' },
+        { name: 'BNZ Student Account', url: 'https://www.bnz.co.nz/personal-banking/accounts/everyday-banking' },
+        { name: 'Wise (digital)', url: 'https://wise.com/nz' },
+      ],
+      transfer: ['Wise', 'Western Union', 'OFX', 'Remitly'],
+      openReqs: 'Passport + student visa + NZ address. ANZ and ASB allow online pre-arrival account opening.',
+      atm: 'All major banks have nationwide ATM networks. Contactless card payments widely accepted.',
+      digital: ['Wise debit card', 'Revolut', 'PayPal'],
+    },
+    'Ireland': {
+      localBanks: [
+        { name: 'AIB Student Account', url: 'https://aib.ie/i-am/student' },
+        { name: 'Bank of Ireland Student Account', url: 'https://www.bankofireland.com/banking-and-payments/current-accounts/student-account/' },
+        { name: 'N26 (digital, instant)', url: 'https://n26.com/en-ie' },
+        { name: 'Revolut (widely used in Ireland)', url: 'https://www.revolut.com/ie' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (free EU transfers)'],
+      openReqs: 'Passport + PPS number (PPSN — get at local Intreo office) + enrollment letter + Irish address. N26/Revolut work immediately.',
+      atm: 'AIB and BOI ATMs free for customers. Most payments by contactless card. Revolut widely accepted.',
+      digital: ['Revolut (extremely popular in Ireland)', 'N26', 'Wise debit card'],
+    },
+    'Malaysia': {
+      localBanks: [
+        { name: 'Maybank Student Account', url: 'https://www.maybank2u.com.my/maybank2u/malaysia/en/personal/accounts/savings_accounts/savings_accounts.page' },
+        { name: 'CIMB Bank', url: 'https://www.cimb.com.my/en/personal/accounts/current-accounts.html' },
+        { name: 'Public Bank', url: 'https://www.pbebank.com' },
+        { name: 'BigPay (digital, easy for internationals)', url: 'https://bigpay.com.my' },
+      ],
+      transfer: ['Wise', 'Western Union', 'Remitly', 'BigPay'],
+      openReqs: 'Passport + student pass + enrollment letter + Malaysian address. BigPay opens with passport only.',
+      atm: 'Maybank and CIMB have widest ATM networks. DuitNow (like PayNow) for instant transfers.',
+      digital: ['Touch \'n Go eWallet', 'BigPay', 'Wise debit card', 'GrabPay'],
+    },
+    'Hong Kong': {
+      localBanks: [
+        { name: 'HSBC HK Student Account', url: 'https://www.hsbc.com.hk/accounts/products/everyday-global/' },
+        { name: 'Hang Seng Bank', url: 'https://www.hangseng.com/en-hk/personal/banking/accounts/' },
+        { name: 'Bank of China HK', url: 'https://www.bochk.com/en/personal/account/currentaccount.html' },
+        { name: 'ZA Bank (digital, instant)', url: 'https://www.zabank.com' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'FPS (Faster Payment System — domestic)'],
+      openReqs: 'Passport + Hong Kong ID (HKID) or entry permit + enrollment letter. ZA Bank opens digitally with HKID.',
+      atm: 'HSBC, Hang Seng ATMs everywhere. Most shops accept Octopus card or FPS.',
+      digital: ['Octopus card (for transport & payments)', 'PayMe', 'FPS', 'Wise debit card'],
+    },
+    'Saudi Arabia': {
+      localBanks: [
+        { name: 'Al Rajhi Bank (student-friendly)', url: 'https://www.alrajhibank.com.sa' },
+        { name: 'Saudi National Bank (SNB)', url: 'https://www.alahli.com' },
+        { name: 'Riyad Bank', url: 'https://www.riyadbank.com' },
+        { name: 'STC Pay (digital wallet)', url: 'https://stcpay.com.sa' },
+      ],
+      transfer: ['Wise', 'Western Union', 'Remitly', 'Bank transfer (IBAN based)'],
+      openReqs: 'Iqama (residency permit) + passport + enrollment letter. Al Rajhi Bank processes internationals quickly.',
+      atm: 'ATMs at all major banks and shopping malls. Most payments via mada card or STC Pay.',
+      digital: ['STC Pay', 'Apple Pay widely accepted', 'Wise debit card'],
+    },
+    'UAE': {
+      localBanks: [
+        { name: 'Emirates NBD Student Account', url: 'https://www.emiratesnbd.com/en/personal-banking/accounts' },
+        { name: 'Mashreq Neo (digital, easy)', url: 'https://neo.mashreq.com' },
+        { name: 'ADCB Bank', url: 'https://www.adcb.com' },
+        { name: 'Wise (multi-currency)', url: 'https://wise.com/ae' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'Al Ansari Exchange'],
+      openReqs: 'Passport + UAE residence visa + Emirates ID + enrollment letter. Mashreq Neo opens digitally in minutes.',
+      atm: 'ATMs at all malls and major locations. UAE is very card-friendly. Apple/Google Pay widely accepted.',
+      digital: ['Mashreq Neo', 'Apple Pay', 'Wise debit card', 'Revolut'],
+    },
+    'Turkey': {
+      localBanks: [
+        { name: 'Garanti BBVA (recommended for students)', url: 'https://www.garantibbva.com.tr' },
+        { name: 'İş Bankası (İşCep digital)', url: 'https://www.isbank.com.tr' },
+        { name: 'Akbank', url: 'https://www.akbank.com' },
+        { name: 'Papara (digital, no fees)', url: 'https://www.papara.com' },
+      ],
+      transfer: ['Wise', 'Western Union', 'Remitly', 'Papara international'],
+      openReqs: 'Passport + residence permit + Turkish tax number (vergi numarası — get at tax office) + enrollment letter. Papara opens with passport only.',
+      atm: 'ATMs everywhere (Garanti, İş, Akbank). Papara card works without local bank account.',
+      digital: ['Papara', 'Garanti Pay', 'Wise debit card'],
+    },
+    'Russia': {
+      localBanks: [
+        { name: 'Sberbank (most widespread)', url: 'https://www.sberbank.ru' },
+        { name: 'Tinkoff (digital, instant)', url: 'https://www.tinkoff.ru' },
+        { name: 'VTB Bank', url: 'https://www.vtb.ru' },
+      ],
+      transfer: ['Western Union (limited)', 'Wise (some restrictions)', 'UnionPay transfer', 'Cash via exchange offices'],
+      openReqs: 'Passport + migration card + registration at place of stay + enrollment letter. Tinkoff delivers card to address — easiest for internationals.',
+      atm: 'Sberbank ATMs everywhere. Note: Visa/Mastercard suspended operations in Russia — use UnionPay or Mir card.',
+      digital: ['SBP (Faster Payments System)', 'SberPay', 'Tinkoff Pay'],
+    },
+    'Poland': {
+      localBanks: [
+        { name: 'mBank (online-first, free)', url: 'https://www.mbank.pl' },
+        { name: 'PKO BP Student Account', url: 'https://www.pkobp.pl' },
+        { name: 'Revolut (widely used)', url: 'https://www.revolut.com/pl-PL' },
+        { name: 'N26', url: 'https://n26.com/pl-pl' },
+      ],
+      transfer: ['Wise', 'Revolut', 'Western Union', 'SEPA (PLN → EUR conversion applies)'],
+      openReqs: 'Passport + PESEL number (register at local town hall — gmina) + enrollment letter + Polish address. Revolut needs passport only.',
+      atm: 'Planet Cash and Euronet ATMs — check fees. mBank and PKO free for customers.',
+      digital: ['BLIK (Polish instant payments)', 'Revolut', 'Wise debit card'],
+    },
+  };
+
+  function bankingCell(id) {
+    const g = guide[id];
+    const u = unis.find(x => x.id === id);
+    const country = u ? u.country : '';
+
+    // Check if guide has specific banking data
+    const bankData = (g && g.banking) ? g.banking : (COUNTRY_BANKING[country] || null);
+
+    if (!bankData) {
+      return `<div style="font-size:0.84rem;color:var(--text-muted)">Banking info not yet available for ${country || 'this country'}.<br><strong>Universal tip:</strong> <a href="https://wise.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Wise ↗</a> and <a href="https://revolut.com" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Revolut ↗</a> work in most countries with competitive exchange rates.</div>`;
+    }
+
+    const banks = bankData.localBanks || [];
+    const transfer = bankData.transfer || [];
+    const digital = bankData.digital || [];
+
+    return `<div style="font-size:0.82rem">
+      ${banks.length ? `
+        <div style="font-weight:700;font-size:0.78rem;color:var(--text-muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em">🏦 Local Student Banks</div>
+        <div style="margin-bottom:10px">${banks.map(b => `<a href="${b.url}" target="_blank" rel="noopener noreferrer" style="display:block;color:var(--primary);margin-bottom:3px;font-size:0.82rem">${b.name} ↗</a>`).join('')}</div>
+      ` : ''}
+      ${transfer.length ? `
+        <div style="font-weight:700;font-size:0.78rem;color:var(--text-muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em">💸 Transfer In / Out</div>
+        <div style="margin-bottom:10px">${transfer.map(t => `<span style="display:block;color:var(--text-secondary);margin-bottom:2px">• ${t}</span>`).join('')}</div>
+      ` : ''}
+      ${digital.length ? `
+        <div style="font-weight:700;font-size:0.78rem;color:var(--text-muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em">📱 Digital / Mobile Payments</div>
+        <div style="margin-bottom:10px">${digital.map(d => `<span style="display:block;color:var(--text-secondary);margin-bottom:2px">• ${d}</span>`).join('')}</div>
+      ` : ''}
+      ${bankData.openReqs ? `
+        <div style="font-weight:700;font-size:0.78rem;color:var(--text-muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em">📋 To Open an Account</div>
+        <div style="color:var(--text-secondary);line-height:1.55;margin-bottom:8px">${bankData.openReqs}</div>
+      ` : ''}
+      ${bankData.atm ? `<div style="font-size:0.78rem;color:var(--text-muted);line-height:1.5;padding-top:6px;border-top:1px solid var(--border)">🏧 ${bankData.atm}</div>` : ''}
+    </div>`;
+  }
+
+  // ── Course details panel ───────────────────────────────────────────────────
+  function buildCoursePanel(uA, uB) {
+    if (!activeStream || !coursesData[activeStream]) return '';
+    const sd = coursesData[activeStream];
+    const level = activeLevel === 'all' ? 'Bachelor' : activeLevel;
+    const cur = sd.typicalCurriculum[level] || sd.typicalCurriculum['Bachelor'];
+    const assess = sd.assessment[level] || sd.assessment['Bachelor'];
+
+    // University-specific programme info
+    function uniProg(uni, cssClass, label) {
+      const prog = sd.universities && sd.universities[uni.id];
+      if (!prog) {
+        // Check if university offers this stream (guard against undefined streams)
+        const uniStreams = uni.streams || [];
+        if (uniStreams.length > 0 && !uniStreams.includes(activeStream)) {
+          return `<div class="course-uni-card ${cssClass}"><div class="cuc-label">${label} — ${uni.shortName || uni.name}</div><div class="cuc-na">${uni.name} does not list ${activeStream} as an available stream.</div></div>`;
+        }
+        return `<div class="course-uni-card ${cssClass}"><div class="cuc-label">${label} — ${uni.shortName || uni.name}</div><div class="cuc-na">Programme details not yet in our database. <a href="${uni.website || '#'}" target="_blank" rel="noopener noreferrer" class="cuc-link">Check official site ↗</a></div></div>`;
+      }
+      return `<div class="course-uni-card ${cssClass}">
+        <div class="cuc-label">${label} — ${uni.shortName || uni.name}</div>
+        <div class="cuc-progname">${prog.programName}</div>
+        <div class="cuc-notes">${prog.notes}</div>
+        ${prog.admissionsLink ? `<a href="${prog.admissionsLink}" target="_blank" rel="noopener noreferrer" class="cuc-link">Programme page ↗</a>` : ''}
+      </div>`;
+    }
+
+    const coreList  = (cur.core || []).map(m => `<li>${m}</li>`).join('');
+    const electList = (cur.electives || cur.specialisations || []).map(m => `<li>${m}</li>`).join('');
+    const careerList = (sd.careers || []).map(c => `<li>${c}</li>`).join('');
+
+    return `
+      <div class="course-details-panel">
+        <div class="cdp-header">
+          <div class="cdp-icon">${sd.icon}</div>
+          <div>
+            <div class="cdp-title">${activeStream}</div>
+            <div class="cdp-desc">${sd.description}</div>
+          </div>
+        </div>
+
+        <div class="cdp-grid">
+          <div class="cdp-card">
+            <div class="cdp-card-title">${level} Curriculum${cur.duration ? ' · ' + cur.duration : ''}</div>
+            <div class="cdp-duration">${cur.duration || ''}</div>
+            ${coreList ? `<div style="font-size:0.78rem;font-weight:600;color:var(--text-muted);margin:8px 0 4px">Core modules</div><ul class="cdp-list">${coreList}</ul>` : ''}
+            ${electList ? `<div style="font-size:0.78rem;font-weight:600;color:var(--text-muted);margin:8px 0 4px">${level === 'Master' ? 'Specialisations' : 'Electives'}</div><ul class="cdp-list">${electList}</ul>` : ''}
+            ${cur.capstone ? `<div style="font-size:0.78rem;font-weight:600;color:var(--text-muted);margin:8px 0 4px">Capstone / Final project</div><div style="font-size:0.83rem;color:var(--text-secondary)">${cur.capstone}</div>` : ''}
+          </div>
+          <div class="cdp-card">
+            <div class="cdp-card-title">Assessment &amp; Careers</div>
+            <div style="font-size:0.78rem;font-weight:600;color:var(--text-muted);margin-bottom:6px">How you're assessed</div>
+            <div style="font-size:0.84rem;color:var(--text-secondary);line-height:1.6;margin-bottom:12px">${assess || '—'}</div>
+            <div style="font-size:0.78rem;font-weight:600;color:var(--text-muted);margin-bottom:6px">Career outcomes</div>
+            <ul class="cdp-list">${careerList}</ul>
+            ${sd.typicalCurriculum.PhD && sd.typicalCurriculum.PhD.funding ? `<div style="font-size:0.78rem;color:#059669;margin-top:10px;font-weight:600">${sd.typicalCurriculum.PhD.funding}</div>` : ''}
+          </div>
+        </div>
+
+        <div class="course-uni-grid">
+          ${uniProg(uA, 'cuc-a', 'University A')}
+          ${uniProg(uB, 'cuc-b', 'University B')}
+        </div>
+      </div>
+    `;
+  }
+
+  // ── Render comparison ──────────────────────────────────────────────────────
+  let _rendering = false;
+  function render() {
+    if (_rendering) return;
+    _rendering = true;
+    try { _render(); } finally { _rendering = false; }
+  }
+  function _render() {
+    const idA = selA.value;
+    const idB = selB.value;
+
+    if (!idA || !idB) {
+      resultsEl.innerHTML = '';
+      resultsEl.appendChild(emptyEl);
+      return;
+    }
+
+    const uA = unis.find(u => u.id === idA);
+    const uB = unis.find(u => u.id === idB);
+    if (!uA || !uB) {
+      resultsEl.innerHTML = '';
+      resultsEl.appendChild(emptyEl);
+      return;
+    }
+
+    const adA = getAdmissions(uA);
+    const adB = getAdmissions(uB);
+
+    const commonStreams = (uA.streams || []).filter(s => (uB.streams || []).includes(s));
+
+    const minTuitionA = adA.length ? Math.min(...adA.map(a => a.tuitionUSD || 0).filter(t => t > 0)) : 0;
+    const minTuitionB = adB.length ? Math.min(...adB.map(a => a.tuitionUSD || 0).filter(t => t > 0)) : 0;
+
+    const now = new Date();
+    const nextDeadlineA = adA.filter(a => new Date(a.deadline) > now).sort((x,y) => new Date(x.deadline) - new Date(y.deadline))[0];
+    const nextDeadlineB = adB.filter(a => new Date(a.deadline) > now).sort((x,y) => new Date(x.deadline) - new Date(y.deadline))[0];
+
+    function streamTags(uni, highlight) {
+      return (uni.streams || []).map(s => `<span class="compare-tag ${highlight.includes(s) ? 'match' : ''}">${s}</span>`).join('') || '<span style="color:var(--text-muted);font-size:0.85rem">No subject data available</span>';
+    }
+
+    function intakeRows(ads) {
+      if (!ads.length) return '<span style="color:var(--text-muted);font-size:0.85rem">No intakes for selected level</span>';
+      return ads.map(a => `
+        <div class="intake-row">
+          <div>
+            <div class="intake-level">${a.level} · ${a.intake} ${a.year}</div>
+            <div class="intake-season">${statusBadge(a.status)}</div>
+          </div>
+          <div style="text-align:right">
+            <div class="intake-deadline">${fmtDate(a.deadline)}</div>
+            <div style="font-size:0.75rem;color:var(--text-muted)">${fmtTuition(a.tuitionUSD)}</div>
+          </div>
+        </div>`).join('');
+    }
+
+    function accomCell(uni) {
+      if (!uni.accommodation || !uni.accommodation.available) return '<span class="accom-no">Not confirmed on campus</span>';
+      const a = uni.accommodation;
+      return `<div class="accom-yes"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>On-campus available</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:6px">${(a.types||[]).join(' · ')}</div>
+        ${a.notes ? `<div style="font-size:0.8rem;color:var(--text-secondary);margin-top:5px;line-height:1.5">${a.notes}</div>` : ''}
+        ${a.link ? `<a href="${a.link}" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem;color:var(--primary);text-decoration:none;margin-top:6px;display:inline-block">Housing info ↗</a>` : ''}`;
+    }
+
+    const html = `
+      ${buildCoursePanel(uA, uB)}
+
+      <!-- Summary cards -->
+      <div class="compare-summary">
+        <div class="compare-summary-card csc-a">
+          <div class="csc-label">University A</div>
+          <div class="csc-name">${uA.name}</div>
+          <div class="csc-stats">
+            ${uA.ranking ? `<div class="csc-stat"><strong>#${uA.ranking}</strong><span>QS 2025</span></div>` : ''}
+            <div class="csc-stat"><strong>${flag(uA.countryCode)} ${uA.country}</strong><span>Country</span></div>
+            ${nextDeadlineA ? `<div class="csc-stat"><strong>${fmtDate(nextDeadlineA.deadline)}</strong><span>Next deadline</span></div>` : ''}
+          </div>
+          <div class="compare-actions">
+            ${uA.website ? `<a href="${uA.website}" target="_blank" rel="noopener noreferrer" class="compare-action-btn cab-a">Official site ↗</a>` : ''}
+          </div>
+        </div>
+        <div class="compare-summary-card csc-b">
+          <div class="csc-label">University B</div>
+          <div class="csc-name">${uB.name}</div>
+          <div class="csc-stats">
+            ${uB.ranking ? `<div class="csc-stat"><strong>#${uB.ranking}</strong><span>QS 2025</span></div>` : ''}
+            <div class="csc-stat"><strong>${flag(uB.countryCode)} ${uB.country}</strong><span>Country</span></div>
+            ${nextDeadlineB ? `<div class="csc-stat"><strong>${fmtDate(nextDeadlineB.deadline)}</strong><span>Next deadline</span></div>` : ''}
+          </div>
+          <div class="compare-actions">
+            ${uB.website ? `<a href="${uB.website}" target="_blank" rel="noopener noreferrer" class="compare-action-btn cab-b">Official site ↗</a>` : ''}
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="compare-table-wrap">
+        <table class="compare-table" aria-label="University comparison">
+          <thead>
+            <tr>
+              <th class="cth-label" scope="col">Category</th>
+              <th class="cth-uni uni-a-accent" scope="col">
+                <div class="cth-uni-name">${uA.shortName || uA.name}</div>
+                <div class="cth-uni-meta">${flag(uA.countryCode)} ${uA.country}${uA.ranking ? ' · QS #' + uA.ranking : ''}</div>
+              </th>
+              <th class="cth-uni uni-b-accent" scope="col">
+                <div class="cth-uni-name">${uB.shortName || uB.name}</div>
+                <div class="cth-uni-meta">${flag(uB.countryCode)} ${uB.country}${uB.ranking ? ' · QS #' + uB.ranking : ''}</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="compare-section-row"><td colspan="3">Overview</td></tr>
+            <tr>
+              <td class="ctd-label">QS World Ranking (2025)</td>
+              <td class="ctd-val"><div class="rank-num ${uA.ranking && uB.ranking && uA.ranking < uB.ranking ? 'win-lower' : ''}">${uA.ranking ? '#' + uA.ranking : '—'}</div>${uA.ranking && uB.ranking && uA.ranking < uB.ranking ? '<div style="font-size:0.75rem;color:#059669;margin-top:2px">Higher ranked</div>' : ''}</td>
+              <td class="ctd-val"><div class="rank-num ${uB.ranking && uA.ranking && uB.ranking < uA.ranking ? 'win-lower' : ''}">${uB.ranking ? '#' + uB.ranking : '—'}</div>${uB.ranking && uA.ranking && uB.ranking < uA.ranking ? '<div style="font-size:0.75rem;color:#059669;margin-top:2px">Higher ranked</div>' : ''}</td>
+            </tr>
+            <tr>
+              <td class="ctd-label">Country / Region</td>
+              <td class="ctd-val">${flag(uA.countryCode)} ${uA.country}<br><span style="font-size:0.8rem;color:var(--text-muted)">${uA.region}</span></td>
+              <td class="ctd-val">${flag(uB.countryCode)} ${uB.country}<br><span style="font-size:0.8rem;color:var(--text-muted)">${uB.region}</span></td>
+            </tr>
+            <tr>
+              <td class="ctd-label">Degree Levels</td>
+              <td class="ctd-val"><div class="compare-tags">${(uA.levels || ['Bachelor', 'Master', 'PhD']).map(l => `<span class="compare-tag">${l}</span>`).join('')}</div></td>
+              <td class="ctd-val"><div class="compare-tags">${(uB.levels || ['Bachelor', 'Master', 'PhD']).map(l => `<span class="compare-tag">${l}</span>`).join('')}</div></td>
+            </tr>
+            <tr>
+              <td class="ctd-label">Official Website</td>
+              <td class="ctd-val">${uA.website ? `<a href="${uA.website}" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-size:0.85rem">${uA.website.replace('https://','').replace('http://','').split('/')[0]} ↗</a>` : '<span style="color:var(--text-muted)">—</span>'}</td>
+              <td class="ctd-val">${uB.website ? `<a href="${uB.website}" target="_blank" rel="noopener noreferrer" style="color:#059669;font-size:0.85rem">${uB.website.replace('https://','').replace('http://','').split('/')[0]} ↗</a>` : '<span style="color:var(--text-muted)">—</span>'}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Subjects &amp; Streams${commonStreams.length > 0 ? ` · <span style="color:#059669;font-weight:600">${commonStreams.length} in common</span>` : ''}</td></tr>
+            <tr>
+              <td class="ctd-label">Available Streams</td>
+              <td class="ctd-val"><div class="compare-tags">${streamTags(uA, commonStreams)}</div>${commonStreams.length > 0 ? '<div style="font-size:0.75rem;color:#059669;margin-top:8px">★ Green = offered by both</div>' : ''}</td>
+              <td class="ctd-val"><div class="compare-tags">${streamTags(uB, commonStreams)}</div>${commonStreams.length > 0 ? '<div style="font-size:0.75rem;color:#059669;margin-top:8px">★ Green = offered by both</div>' : ''}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Tuition Fees (${activeLevel === 'all' ? 'All Levels' : activeLevel})</td></tr>
+            <tr>
+              <td class="ctd-label">Starting From (USD/yr)</td>
+              <td class="ctd-val"><div style="font-size:1.15rem;font-weight:700${minTuitionA>0&&minTuitionB>0&&minTuitionA<minTuitionB?';color:#059669':''}">${minTuitionA > 0 ? '$' + minTuitionA.toLocaleString() : 'Contact university'}</div>${minTuitionA>0&&minTuitionB>0&&minTuitionA<minTuitionB?'<div style="font-size:0.75rem;color:#059669">Lower tuition</div>':''}</td>
+              <td class="ctd-val"><div style="font-size:1.15rem;font-weight:700${minTuitionB>0&&minTuitionA>0&&minTuitionB<minTuitionA?';color:#059669':''}">${minTuitionB > 0 ? '$' + minTuitionB.toLocaleString() : 'Contact university'}</div>${minTuitionB>0&&minTuitionA>0&&minTuitionB<minTuitionA?'<div style="font-size:0.75rem;color:#059669">Lower tuition</div>':''}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Intakes &amp; Deadlines (${activeLevel === 'all' ? 'All Levels' : activeLevel})</td></tr>
+            <tr>
+              <td class="ctd-label">Application Deadlines</td>
+              <td class="ctd-val" style="padding:12px 24px">${intakeRows(adA)}</td>
+              <td class="ctd-val" style="padding:12px 24px">${intakeRows(adB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Accommodation</td></tr>
+            <tr>
+              <td class="ctd-label">On-Campus Housing</td>
+              <td class="ctd-val">${accomCell(uA)}</td>
+              <td class="ctd-val">${accomCell(uB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">City &amp; Location</td></tr>
+            <tr>
+              <td class="ctd-label">Campus City</td>
+              <td class="ctd-val">${mapCell(idA)}</td>
+              <td class="ctd-val">${mapCell(idB)}</td>
+            </tr>
+            <tr>
+              <td class="ctd-label">Nearest Airport</td>
+              <td class="ctd-val">${airportCell(idA)}</td>
+              <td class="ctd-val">${airportCell(idB)}</td>
+            </tr>
+            <tr>
+              <td class="ctd-label">Course Language</td>
+              <td class="ctd-val">${langCell(idA)}</td>
+              <td class="ctd-val">${langCell(idB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Cost of Living — Single Student, Monthly Estimate</td></tr>
+            <tr>
+              <td class="ctd-label">Full Breakdown</td>
+              <td class="ctd-val">${costOfLivingRows(idA)}</td>
+              <td class="ctd-val">${costOfLivingRows(idB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Student Housing Resources</td></tr>
+            <tr>
+              <td class="ctd-label">Rental Portals</td>
+              <td class="ctd-val">${rentalLinksCell(idA)}</td>
+              <td class="ctd-val">${rentalLinksCell(idB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Facilities &amp; Campus Life</td></tr>
+            <tr>
+              <td class="ctd-label">Nearby Leisure</td>
+              <td class="ctd-val">${leisureCell(idA)}</td>
+              <td class="ctd-val">${leisureCell(idB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Important Contacts</td></tr>
+            <tr>
+              <td class="ctd-label">Emergency &amp; Medical</td>
+              <td class="ctd-val">${contactsCell(idA)}</td>
+              <td class="ctd-val">${contactsCell(idB)}</td>
+            </tr>
+
+            <tr class="compare-section-row"><td colspan="3">Banking &amp; Money Transfers — Student Guide</td></tr>
+            <tr>
+              <td class="ctd-label">Local Banks &amp; Transfers</td>
+              <td class="ctd-val">${bankingCell(idA)}</td>
+              <td class="ctd-val">${bankingCell(idB)}</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:14px;font-size:0.78rem;color:var(--text-muted);display:flex;align-items:center;gap:6px">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Data last updated: ${window.UNI_DATA ? window.UNI_DATA.lastUpdated : 'N/A'} · Sourced from official university websites · Always verify directly with the institution before applying.
+      </div>
+
+      <div style="margin-top:20px;padding:16px 20px;background:var(--bg-white);border:1.5px solid var(--border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div style="font-size:0.85rem;color:var(--text-secondary)">
+          <strong>Share this comparison</strong> — send to a friend, parent, or advisor
+        </div>
+        <button id="shareBtn" onclick="(function(){
+          const url = window.location.href;
+          if (navigator.share) {
+            navigator.share({ title: 'University Comparison — FreeStudentTools', url });
+          } else {
+            navigator.clipboard.writeText(url).then(() => {
+              const b = document.getElementById('shareBtn');
+              const orig = b.innerHTML;
+              b.innerHTML = '✓ Link copied!';
+              b.style.background = '#059669';
+              setTimeout(() => { b.innerHTML = orig; b.style.background = ''; }, 2500);
+            });
+          }
+        })()" style="padding:9px 20px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:0.84rem;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:7px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Copy comparison link
+        </button>
+      </div>
+    `;
+
+    resultsEl.innerHTML = html;
+  }
+
+  // ── Level filter buttons ───────────────────────────────────────────────────
+  document.querySelectorAll('.level-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.level-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeLevel = btn.dataset.level;
+      render();
+    });
+  });
+
+  // ── Course select ──────────────────────────────────────────────────────────
+  courseSelect.addEventListener('change', () => {
+    activeStream = courseSelect.value;
+    render();
+  });
+
+  // ── Dropdown change ────────────────────────────────────────────────────────
+  selA.addEventListener('change', render);
+  selB.addEventListener('change', render);
+
+  // ── URL params for sharing ─────────────────────────────────────────────────
+  const params = new URLSearchParams(location.search);
+  if (params.get('a')) selA.value = params.get('a');
+  if (params.get('b')) selB.value = params.get('b');
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+  populateDropdowns();
+  populateCourseDropdown();
+
+  if (params.get('a')) selA.value = params.get('a');
+  if (params.get('b')) selB.value = params.get('b');
+
+  if (selA.value && selB.value) render();
+
+  // Update URL on change for shareability
+  function updateURL() {
+    const url = new URL(location.href);
+    if (selA.value) url.searchParams.set('a', selA.value);
+    else url.searchParams.delete('a');
+    if (selB.value) url.searchParams.set('b', selB.value);
+    else url.searchParams.delete('b');
+    history.replaceState(null, '', url.toString());
+  }
+
+  selA.addEventListener('change', updateURL);
+  selB.addEventListener('change', updateURL);
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Student Tools — OCR, PDF &amp; University Hub | FreeStudentTools</title>
+  <meta name="description" content="Free student tools: OCR scanner, PDF converter, compare 1,000+ universities, scholarships, admission deadlines & tips. No sign-up, no uploads, always free.">
+  <meta name="keywords" content="free student tools, free OCR scanner online, PDF to Word free no signup, compress PDF free, compare universities, university scholarships, admission deadlines, student tips, image to text free, student document tools, no upload PDF converter, free PDF tools for students, university comparison tool 2025">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/">
+  <meta property="og:title" content="Free Student Tools — OCR, PDF Converter, University Comparison &amp; More">
+  <meta property="og:description" content="Free tools for students: OCR scanner, PDF converter, compare 1,000+ universities, find scholarships, check admission deadlines. No sign-up, no uploads, always free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Student Tools — OCR, PDF, University Comparison | FreeStudentTools">
+  <meta name="twitter:description" content="Free student tools: OCR, PDF converter, compare 1,000+ universities, scholarships & admission deadlines. No sign-up, no uploads.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "FreeStudentTools",
+        "url": "https://freestudenttools.com/",
+        "description": "Free browser-based document tools for students: OCR scanner, PDF to Word converter, and PDF compressor."
+      },
+      {
+        "@type": "Organization",
+        "name": "FreeStudentTools",
+        "url": "https://freestudenttools.com/",
+        "logo": "https://freestudenttools.com/assets/logo.png",
+        "description": "Free browser-based document tools for students. No sign-up, no file uploads, no fees.",
+        "sameAs": []
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are all tools on FreeStudentTools completely free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Every tool on FreeStudentTools.com is 100% free with no hidden fees, no watermarks, and no paid tiers. The site is funded by ads."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to sign up or create an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. There is no sign-up, no email required, and no account. You open the tool, use it, and download your result."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my files uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All processing happens entirely inside your browser using JavaScript. Your files never leave your device and are never sent to any server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What tools are available on FreeStudentTools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "FreeStudentTools offers seven free tools: OCR Scanner (extract text from images and PDFs), PDF to Word/Excel Converter, PDF Compressor, Image Compressor (JPG, PNG, WebP), PDF Merger (combine multiple PDFs), PDF Page Extractor, and a Citation Generator (APA, MLA, Chicago)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does FreeStudentTools work on mobile phones?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All tools are fully responsive and work on any modern browser — phone, tablet, or laptop — with no app installation required."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    /* ===== HOME PAGE SPECIFIC ===== */
+
+    /* Section label */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    /* Hero CTA row */
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    /* Tool grid: auto-fit, min 260px per card */
+    .tools-grid-home {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .tool-card-home {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px 22px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      text-decoration: none;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card-home::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .tool-card-home:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
+    }
+
+    .tool-card-home.c-blue:hover { border-color: var(--primary); }
+    .tool-card-home.c-blue::after { background: var(--primary); }
+    .tool-card-home.c-blue:hover::after { opacity: 1; }
+
+    .tool-card-home.c-green:hover { border-color: var(--success); }
+    .tool-card-home.c-green::after { background: var(--success); }
+    .tool-card-home.c-green:hover::after { opacity: 1; }
+
+    .tool-card-home.c-purple:hover { border-color: #7C3AED; }
+    .tool-card-home.c-purple::after { background: #7C3AED; }
+    .tool-card-home.c-purple:hover::after { opacity: 1; }
+
+    .tool-card-home.c-orange:hover { border-color: var(--orange); }
+    .tool-card-home.c-orange::after { background: var(--orange); }
+    .tool-card-home.c-orange:hover::after { opacity: 1; }
+
+    .tc-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    .tc-icon.blue { background: var(--primary-light); color: var(--primary); }
+    .tc-icon.green { background: var(--success-light); color: var(--success); }
+    .tc-icon.purple { background: #F5F3FF; color: #7C3AED; }
+    .tc-icon.orange { background: var(--orange-light); color: var(--orange); }
+
+    .tool-card-home h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .tool-card-home p { font-size: 0.875rem; flex: 1; margin-bottom: 20px; }
+
+    .tc-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top: auto;
+      transition: gap 0.15s;
+    }
+
+    .c-blue .tc-link { color: var(--primary); }
+    .c-green .tc-link { color: var(--success); }
+    .c-purple .tc-link { color: #7C3AED; }
+    .c-orange .tc-link { color: var(--orange); }
+
+    .tool-card-home:hover .tc-link { gap: 8px; }
+
+    /* Privacy section */
+    .privacy-section {
+      background: var(--bg-white);
+      padding: 72px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .privacy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      text-align: left;
+      margin-top: 36px;
+    }
+
+    /* Feature badge */
+    .feature-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--success-light);
+      border: 1px solid #A7F3D0;
+      color: #065F46;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    /* Why section tool category labels */
+    .tool-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 9px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .tag-blue { background: var(--primary-light); color: var(--primary); }
+    .tag-green { background: var(--success-light); color: #059669; }
+    .tag-purple { background: #F5F3FF; color: #7C3AED; }
+    .tag-orange { background: var(--orange-light); color: var(--orange); }
+
+    @media (max-width: 900px) {
+      .tools-grid-home { grid-template-columns: 1fr; }
+    }
+
+    /* ===== ENHANCED HERO ===== */
+    .hero {
+      background: linear-gradient(140deg, #0F172A 0%, #1E3A8A 55%, #1d4ed8 100%) !important;
+      padding: 80px 0 64px !important;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(99,102,241,0.18) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 10% 80%, rgba(16,185,129,0.08) 0%, transparent 60%);
+    }
+    .hero .hero-pill {
+      background: rgba(255,255,255,0.12) !important; border: 1px solid rgba(255,255,255,0.22) !important;
+      color: #BAE6FD !important;
+    }
+    .hero h1 { color: #fff !important; font-size: 3rem !important; letter-spacing: -0.03em !important; }
+    .hero > .container > p { color: #93C5FD !important; font-size: 1.1rem !important; max-width: 600px; margin: 0 auto 28px !important; }
+    .hero .trust-row-item { color: rgba(255,255,255,0.85) !important; }
+    .hero .trust-badges { margin-top: 20px; }
+    .hero .trust-badge { background: rgba(255,255,255,0.1) !important; border: 1px solid rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.85) !important; }
+
+    /* Hero stat pills */
+    .hero-stat-strip {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+      margin-top: 36px; margin-bottom: 0;
+    }
+    .hero-stat-pill {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 40px; padding: 8px 18px; backdrop-filter: blur(6px);
+    }
+    .hero-stat-pill strong { color: #fff; font-size: 1.1rem; font-weight: 700; }
+    .hero-stat-pill span { color: #BAE6FD; font-size: 0.8rem; }
+
+    /* ===== STUDENT HUB SECTION ===== */
+    .student-hub-section {
+      padding: 60px 0 48px;
+      background: linear-gradient(180deg, #F0F9FF 0%, #ffffff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .student-hub-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    }
+    .hub-card {
+      border-radius: var(--radius-xl); padding: 36px 32px;
+      display: flex; flex-direction: column; text-decoration: none;
+      position: relative; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s;
+      min-height: 220px;
+    }
+    .hub-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); text-decoration: none; }
+    .hub-card-admissions {
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+    }
+    .hub-card-scholarships {
+      background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);
+    }
+    .hub-card-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9); font-size: 0.7rem; font-weight: 700;
+      padding: 3px 10px; border-radius: 12px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em;
+      width: fit-content;
+    }
+    .hub-card-badge.new-badge { background: rgba(251,191,36,0.25); border-color: rgba(251,191,36,0.4); color: #FDE68A; }
+    .hub-card h3 { color: #fff; font-size: 1.4rem; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .hub-card p { color: rgba(255,255,255,0.7); font-size: 0.9rem; flex: 1; margin-bottom: 20px; line-height: 1.6; }
+    .hub-card-stats { display: flex; gap: 20px; margin-bottom: 24px; }
+    .hub-card-stat strong { display: block; color: #fff; font-size: 1.3rem; font-weight: 700; }
+    .hub-card-stat span { color: rgba(255,255,255,0.6); font-size: 0.75rem; }
+    .hub-card-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+      color: #fff; font-size: 0.875rem; font-weight: 600;
+      padding: 10px 20px; border-radius: 24px; width: fit-content;
+      transition: background 0.15s;
+    }
+    .hub-card:hover .hub-card-cta { background: rgba(255,255,255,0.25); }
+    .hub-card-bg-icon {
+      position: absolute; right: -20px; bottom: -20px; opacity: 0.06;
+    }
+
+    /* ===== TOOLS SECTION LABEL ===== */
+    .tools-category-label {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-muted); margin: 32px 0 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .tools-category-label::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* NEW badge on cards */
+    .tool-card-new {
+      position: absolute; top: 16px; right: 16px;
+      background: #FEF08A; color: #713F12;
+      font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 2px 7px; border-radius: 6px;
+    }
+
+    /* Dark navy card color */
+    .c-navy:hover { border-color: #1E3A8A; }
+    .c-navy::after { background: #1E3A8A; }
+    .c-navy:hover::after { opacity: 1; }
+    .tc-icon.navy { background: #EFF6FF; color: #1E3A8A; }
+    .tag-navy { background: #EFF6FF; color: #1E3A8A; }
+    .c-navy .tc-link { color: #1E3A8A; }
+
+    /* Emerald variant */
+    .c-emerald:hover { border-color: #059669; }
+    .c-emerald::after { background: #059669; }
+    .c-emerald:hover::after { opacity: 1; }
+    .tc-icon.emerald { background: #ECFDF5; color: #059669; }
+    .tag-emerald { background: #ECFDF5; color: #059669; }
+    .c-emerald .tc-link { color: #059669; }
+
+    @media (max-width: 768px) {
+      .student-hub-inner { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem !important; }
+      .hero-stat-strip { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
+        <img src="assets/logo.png" alt="FreeStudentTools">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html">Image Compressor</a></li>
+        <li><a href="pdf-merger.html">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html">Page Extractor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="image-compressor.html">Image Compressor</a>
+    <a href="pdf-merger.html">PDF Merger</a>
+    <a href="pdf-extractor.html">PDF Page Extractor</a>
+    <a href="citation-generator.html">Citation Generator</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="scholarships.html">Scholarships</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-container ad-leaderboard" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-pill" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Built for Students — No Catch, No Cost, Ever
+    </div>
+
+    <h1 id="hero-heading">Free Document Tools<br>Built for Students</h1>
+    <p>OCR scanning, PDF conversion, and compression — completely free. No account. No email. Your files never leave your device.</p>
+
+    <div class="hero-cta">
+      <a href="ocr.html" class="btn btn-primary btn-lg">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Try OCR Scanner
+      </a>
+      <a href="pdf-converter.html" class="btn btn-ghost btn-lg">
+        Convert a PDF
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="trust-row" aria-label="Key benefits">
+      <span class="trust-row-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        No sign-up
+      </span>
+      <span class="trust-row-sep" aria-hidden="true">·</span>
+      <span class="trust-row-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        No email
+      </span>
+      <span class="trust-row-sep" aria-hidden="true">·</span>
+      <span class="trust-row-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        No file storage
+      </span>
+      <span class="trust-row-sep" aria-hidden="true">·</span>
+      <span class="trust-row-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        No watermarks
+      </span>
+      <span class="trust-row-sep" aria-hidden="true">·</span>
+      <span class="trust-row-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        100% Free
+      </span>
+    </div>
+
+    <div class="trust-badges" aria-label="Trust indicators">
+      <div class="trust-badge">
+        <div class="icon" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        Files never leave your device
+      </div>
+      <div class="trust-badge">
+        <div class="icon" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        No sign-up or email required
+      </div>
+      <div class="trust-badge">
+        <div class="icon" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        GDPR &amp; privacy compliant
+      </div>
+      <div class="trust-badge">
+        <div class="icon" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        Download instantly
+      </div>
+    </div>
+
+    <div class="hero-stat-strip" aria-label="Site stats">
+      <div class="hero-stat-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <strong>9</strong><span>Free Tools</span>
+      </div>
+      <div class="hero-stat-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <strong>1,500+</strong><span>Universities Tracked</span>
+      </div>
+      <div class="hero-stat-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <strong>800+</strong><span>Scholarships</span>
+      </div>
+      <div class="hero-stat-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#BAE6FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <strong>$0</strong><span>Always Free</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDENT HUB -->
+<section class="student-hub-section" aria-labelledby="hub-heading">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Student Hub — New
+    </p>
+    <h2 id="hub-heading">Everything for Your University Journey</h2>
+    <p class="subtitle" style="margin-bottom:28px">Track deadlines, find funding, compare universities, and get the advice nobody gives you — all in one place, all free.</p>
+    <div class="student-hub-inner">
+
+      <a href="admissions.html" class="hub-card hub-card-admissions" aria-label="University Admissions Tracker">
+        <div class="hub-card-badge new-badge">New</div>
+        <h3>University Admissions Tracker</h3>
+        <p>1,500+ universities. Deadlines, intake dates, housing info, cost of living, Google Maps, and rental links — all in one expandable card.</p>
+        <div class="hub-card-stats">
+          <div class="hub-card-stat"><strong>1,500+</strong><span>Universities</span></div>
+          <div class="hub-card-stat"><strong>180+</strong><span>Countries</span></div>
+          <div class="hub-card-stat"><strong>Daily</strong><span>Updates</span></div>
+        </div>
+        <div class="hub-card-cta">Browse deadlines <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <svg class="hub-card-bg-icon" width="140" height="140" viewBox="0 0 24 24" fill="white" stroke="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+      </a>
+
+      <a href="scholarships.html" class="hub-card hub-card-scholarships" aria-label="Scholarships Finder">
+        <div class="hub-card-badge new-badge">New</div>
+        <h3>Scholarships Finder</h3>
+        <p>800+ scholarships from universities and governments. Filter by funding type, country, level, and deadline. Every link goes straight to the official source.</p>
+        <div class="hub-card-stats">
+          <div class="hub-card-stat"><strong>800+</strong><span>Scholarships</span></div>
+          <div class="hub-card-stat"><strong>60+</strong><span>Countries</span></div>
+          <div class="hub-card-stat"><strong>$0</strong><span>To Access</span></div>
+        </div>
+        <div class="hub-card-cta">Find scholarships <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <svg class="hub-card-bg-icon" width="140" height="140" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </a>
+
+    </div>
+
+    <!-- Compare + Tips quick links -->
+    <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+      <a href="compare.html" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:24px;border:1.5px solid var(--border);background:var(--bg-white);color:var(--text-primary);font-size:0.85rem;font-weight:600;text-decoration:none;transition:border-color 0.15s" onmouseover="this.style.borderColor='#1E3A8A'" onmouseout="this.style.borderColor='var(--border)'">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        Compare Degrees
+      </a>
+      <a href="tips.html" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:24px;border:1.5px solid var(--border);background:var(--bg-white);color:var(--text-primary);font-size:0.85rem;font-weight:600;text-decoration:none;transition:border-color 0.15s" onmouseover="this.style.borderColor='#4338CA'" onmouseout="this.style.borderColor='var(--border)'">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        Student Tips Guide
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS SECTION -->
+<section class="tools-section" id="main-content" aria-labelledby="tools-heading">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      Available Tools
+    </p>
+    <h2 id="tools-heading">Choose Your Tool</h2>
+    <p class="subtitle">All tools run entirely in your browser — no uploads, no waiting, no data stored.</p>
+
+    <div class="tools-grid-home" role="list">
+
+      <a href="ocr.html" class="tool-card-home c-blue" role="listitem" aria-label="OCR Scanner — Extract text from images and PDFs">
+        <div class="tc-icon blue" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
+        <div class="tool-tag tag-blue">OCR Scanner</div>
+        <h3>Extract Text from Images &amp; PDFs</h3>
+        <p>Scan photos, images, or scanned documents and extract all text. Supports 15+ languages including Arabic, French, and Chinese.</p>
+        <span class="tc-link">
+          Use OCR Scanner
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="pdf-converter.html" class="tool-card-home c-green" role="listitem" aria-label="PDF Converter — Convert PDF to Word or Excel">
+        <div class="tc-icon green" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="tool-tag tag-green">PDF Converter</div>
+        <h3>Convert PDF to Word or Excel</h3>
+        <p>Convert any PDF to an editable Word document or Excel spreadsheet. Built-in OCR handles scanned PDFs automatically.</p>
+        <span class="tc-link">
+          Convert PDF
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="compressor.html" class="tool-card-home c-orange" role="listitem" aria-label="PDF Compressor — Reduce PDF file size">
+        <div class="tc-icon orange" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+        </div>
+        <div class="tool-tag tag-orange">PDF Compressor</div>
+        <h3>Compress PDF to a Smaller File Size</h3>
+        <p>Reduce PDF file size for email submissions, course uploads, or storage. Choose your compression level — low, medium, or high.</p>
+        <span class="tc-link">
+          Compress PDF
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="image-compressor.html" class="tool-card-home c-purple" role="listitem" aria-label="Image Compressor — Reduce JPG, PNG, WebP file size">
+        <div class="tc-icon purple" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <div class="tool-tag tag-purple">Image Compressor</div>
+        <h3>Compress Images — JPG, PNG &amp; WebP</h3>
+        <p>Reduce the file size of any image for email, course portals, or web uploads. Choose quality level and output format — all in your browser.</p>
+        <span class="tc-link" style="color:#7C3AED">
+          Compress Image
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="pdf-merger.html" class="tool-card-home c-blue" role="listitem" aria-label="PDF Merger — Combine multiple PDFs into one">
+        <div class="tc-icon blue" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <div class="tool-tag tag-blue">PDF Merger</div>
+        <h3>Merge Multiple PDFs into One</h3>
+        <p>Combine up to 10 PDF files into a single document. Drag to reorder pages. Runs entirely in your browser — no uploads needed.</p>
+        <span class="tc-link">
+          Merge PDFs
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="pdf-extractor.html" class="tool-card-home c-green" role="listitem" aria-label="PDF Page Extractor — Extract specific pages from a PDF">
+        <div class="tc-icon green" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="tool-tag tag-green">Page Extractor</div>
+        <h3>Extract Specific Pages from a PDF</h3>
+        <p>Pull out individual pages or ranges from any PDF — e.g. pages 1, 3, 5–8. Enter page numbers and download a new PDF instantly.</p>
+        <span class="tc-link">
+          Extract Pages
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="citation-generator.html" class="tool-card-home c-orange" role="listitem" aria-label="Citation Generator — APA, MLA, Chicago citations">
+        <div class="tc-icon orange" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="7" x2="16" y2="7"/><line x1="9" y1="11" x2="16" y2="11"/><line x1="9" y1="15" x2="13" y2="15"/></svg>
+        </div>
+        <div class="tool-tag tag-orange">Citation Generator</div>
+        <h3>Generate APA, MLA &amp; Chicago Citations</h3>
+        <p>Create accurate references for websites, books, journal articles, and YouTube videos. Supports APA 7th, MLA 9th, and Chicago 17th edition.</p>
+        <span class="tc-link">
+          Generate Citation
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="admissions.html" class="tool-card-home c-blue" role="listitem" aria-label="Admission Deadlines — Track university application deadlines worldwide">
+        <div class="tc-icon blue" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8.01" y2="14"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="14" x2="16.01" y2="14"/></svg>
+        </div>
+        <div class="tool-tag tag-blue">Admission Deadlines</div>
+        <h3>Track University Application Deadlines</h3>
+        <p>1,500+ universities across 180+ countries. Filter by subject, level, country, and intake. Includes housing info. Updated daily.</p>
+        <span class="tc-link">
+          Browse deadlines
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="scholarships.html" class="tool-card-home c-green" role="listitem" aria-label="Scholarships — Find fully funded and partial scholarships worldwide">
+        <div class="tc-icon green" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="tool-tag tag-green">Scholarships</div>
+        <h3>Find Fully Funded &amp; Partial Scholarships</h3>
+        <p>800+ scholarships from universities and governments worldwide. Filter by country, subject, level, and funding type. Links go straight to the official source.</p>
+        <span class="tc-link">
+          Find scholarships
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="compare.html" class="tool-card-home c-navy" role="listitem" aria-label="Compare Degrees — Side-by-side university comparison">
+        <span class="tool-card-new" aria-hidden="true">NEW</span>
+        <div class="tc-icon navy" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="tool-tag tag-navy">Compare Degrees</div>
+        <h3>Compare Two Universities Side-by-Side</h3>
+        <p>Pick any two universities and compare tuition, ranking, intake dates, subjects, and accommodation. No recommendations — just the facts from official sources.</p>
+        <span class="tc-link">
+          Compare now
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="tips.html" class="tool-card-home c-emerald" role="listitem" aria-label="Student Tips — University survival guide for freshers">
+        <span class="tool-card-new" aria-hidden="true">NEW</span>
+        <div class="tc-icon emerald" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="tool-tag tag-emerald">Student Tips</div>
+        <h3>The University Survival Guide</h3>
+        <p>How to apply, write a reference letter, nail your interview, save money, and survive your first year. Honest, practical tips — no fluff.</p>
+        <span class="tc-link">
+          Read the guide
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- MID AD -->
+<div class="container">
+  <div class="ad-container ad-responsive" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- PRIVACY SECTION -->
+<section class="privacy-section" aria-labelledby="privacy-heading">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;text-align:center">
+      <div class="feature-badge" aria-hidden="true">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Privacy &amp; GDPR Compliant
+      </div>
+      <h2 id="privacy-heading">Your Documents Are 100% Private</h2>
+      <p style="font-size:1rem;max-width:560px;margin:10px auto 0">Unlike tools that upload your files to servers, everything here runs in your browser. <strong style="color:var(--text-primary)">We never see your documents.</strong></p>
+
+      <div class="privacy-grid">
+        <div class="privacy-feature-card">
+          <div class="privacy-feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <strong style="font-size:0.9rem;color:var(--text-primary);display:block;margin-bottom:4px">Browser-Only Processing</strong>
+          <p style="font-size:0.82rem;margin:0">OCR, PDF conversion and compression all run locally inside your browser. Zero server involvement.</p>
+        </div>
+        <div class="privacy-feature-card">
+          <div class="privacy-feature-icon" style="background:#FEF2F2;color:#DC2626">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+          </div>
+          <strong style="font-size:0.9rem;color:var(--text-primary);display:block;margin-bottom:4px">Auto-Deleted on Close</strong>
+          <p style="font-size:0.82rem;margin:0">Close the tab and your file is gone — no trace left anywhere.</p>
+        </div>
+        <div class="privacy-feature-card">
+          <div class="privacy-feature-icon" style="background:#FFFBEB;color:#D97706">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <strong style="font-size:0.9rem;color:var(--text-primary);display:block;margin-bottom:4px">No Email or Account</strong>
+          <p style="font-size:0.82rem;margin:0">We collect zero personal data. No registration, no tracking of you as a person.</p>
+        </div>
+        <div class="privacy-feature-card">
+          <div class="privacy-feature-icon" style="background:#F5F3FF;color:#7C3AED">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <strong style="font-size:0.9rem;color:var(--text-primary);display:block;margin-bottom:4px">GDPR &amp; CCPA Compliant</strong>
+          <p style="font-size:0.82rem;margin:0">Cookie consent, clear privacy policy, no personal data storage. Full compliance.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY SECTION -->
+<section class="why-section" aria-labelledby="why-heading">
+  <div class="container">
+    <p class="section-label" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Why FreeStudentTools
+    </p>
+    <h2 id="why-heading">Built Differently. Built for You.</h2>
+    <p class="subtitle">We built this because students deserve free, trustworthy tools — not watered-down trials.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon icon-lock">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4>Your Files Stay Private</h4>
+        <p>All processing happens inside your browser. Your documents are never uploaded to any server or stored anywhere.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-bolt">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h4>No Sign-Up Required</h4>
+        <p>No account, no email, no password. Open the tool, use it, download your result. That's it.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-tag">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h4>Always Free</h4>
+        <p>No freemium tricks, no watermarks, no hidden paid tiers. Every feature on this site is completely free.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-device">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h4>Works on Any Device</h4>
+        <p>Phone, tablet, laptop — all tools are fully responsive and work on any modern browser without installing anything.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-grad">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h4>Built for Students</h4>
+        <p>Designed around what students actually need — scan notes, convert PDFs, compress submissions, merge documents, and generate citations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-globe">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h4>Multi-Language Support</h4>
+        <p>OCR supports 15+ languages including Arabic, French, Spanish, Chinese, Japanese, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-container ad-responsive" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="assets/logo.png" alt="FreeStudentTools" style="height:48px;width:auto;filter:brightness(0) invert(1);opacity:0.9">
+        </div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Student Hub</h5>
+        <a href="admissions.html">Admission Deadlines</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="compare.html">Compare Degrees</a>
+        <a href="tips.html">Student Tips</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com — All tools are free to use.</span>
+      <div>
+        <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+</body>
+</html>

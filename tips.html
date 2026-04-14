@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Tips — Apply, Save Money &amp; Uni Life | FreeStudentTools</title>
+  <meta name="description" content="Practical tips for students: how to apply, write a reference letter, nail interviews, save money, and enjoy university life. No fluff, no AI filler.">
+  <meta name="keywords" content="university application tips, how to apply to university, student money saving tips, admission interview tips, how to write reference letter, tips for freshers, student life advice, university survival guide">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/tips.html">
+  <meta property="og:title" content="Student Tips — How to Apply, Save Money &amp; Survive University">
+  <meta property="og:description" content="Practical, no-nonsense tips for students applying to university and starting out. Written by people who have been through it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://freestudenttools.com/tips.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Student Tips — How to Apply &amp; Save Money at University | FreeStudentTools">
+  <meta name="twitter:description" content="Practical, no-nonsense tips for students applying to university and starting out. How to apply, save money, and nail your interview.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How do I apply to university?", "acceptedAnswer": {"@type": "Answer", "text": "Start by shortlisting universities that genuinely match your goals — not just rankings. Check entry requirements, application portals (UCAS, Common App, local portals), required documents, and deadlines at least 6 months in advance."}},
+      {"@type": "Question", "name": "How do I ask for a reference letter?", "acceptedAnswer": {"@type": "Answer", "text": "Ask a teacher or professor who knows your work well — not just your favourite. Ask early (at least 6-8 weeks before the deadline), share your CV and personal statement draft, and remind them two weeks before the deadline."}},
+      {"@type": "Question", "name": "How can students save money at university?", "acceptedAnswer": {"@type": "Answer", "text": "Cook in bulk, use student discount cards (NUS, ISIC), buy second-hand textbooks, split subscriptions with flatmates, and always ask 'do you have a student discount?' everywhere you go."}}
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== TIPS PAGE ===== */
+    .tips-hero {
+      background: linear-gradient(140deg, #1E1B4B 0%, #4338CA 55%, #6366F1 100%);
+      padding: 72px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .tips-hero::before {
+      content: '';
+      position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(ellipse 60% 50% at 85% 30%, rgba(139,92,246,0.25) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 5% 85%, rgba(16,185,129,0.07) 0%, transparent 60%);
+    }
+    .tips-hero-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+      color: #C7D2FE; font-size: 0.78rem; font-weight: 700;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 20px;
+    }
+    .tips-hero h1 { color: #fff; font-size: 2.8rem; letter-spacing: -0.03em; margin-bottom: 14px; }
+    .tips-hero p { color: #A5B4FC; font-size: 1.05rem; max-width: 580px; margin: 0 auto 32px; }
+    .tips-hero-stats {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 28px;
+    }
+    .tips-hero-stat {
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 40px; padding: 7px 16px;
+    }
+    .tips-hero-stat strong { color: #fff; font-size: 1rem; font-weight: 700; }
+    .tips-hero-stat span { color: #C7D2FE; font-size: 0.78rem; }
+
+    /* Category nav */
+    .tips-nav {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 64px; z-index: 40;
+    }
+    .tips-nav-inner {
+      display: flex; gap: 0; overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .tips-nav-inner::-webkit-scrollbar { display: none; }
+    .tips-nav-link {
+      display: flex; align-items: center; gap: 6px;
+      padding: 14px 20px; font-size: 0.85rem; font-weight: 600;
+      color: var(--text-muted); text-decoration: none; white-space: nowrap;
+      border-bottom: 2px solid transparent; transition: all 0.15s;
+    }
+    .tips-nav-link:hover { color: #4338CA; border-bottom-color: #4338CA; }
+    .tips-nav-link.active { color: #4338CA; border-bottom-color: #4338CA; }
+
+    /* Tips layout */
+    .tips-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 40px;
+      align-items: start;
+      padding: 48px 0 64px;
+    }
+
+    /* Sidebar TOC */
+    .tips-toc {
+      position: sticky; top: 116px;
+      background: var(--bg-white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+    .tips-toc h4 {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .tips-toc a {
+      display: block; font-size: 0.83rem; color: var(--text-secondary);
+      padding: 5px 0; text-decoration: none; border-left: 2px solid transparent;
+      padding-left: 10px; transition: all 0.15s; line-height: 1.4;
+    }
+    .tips-toc a:hover { color: #4338CA; border-left-color: #4338CA; }
+    .tips-toc a.active { color: #4338CA; border-left-color: #4338CA; font-weight: 600; }
+
+    /* Category sections */
+    .tip-section {
+      margin-bottom: 56px;
+      scroll-margin-top: 120px;
+    }
+    .tip-section-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 28px; padding-bottom: 16px;
+      border-bottom: 2px solid var(--border);
+    }
+    .tip-section-icon {
+      width: 46px; height: 46px; border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .tip-section-header h2 { font-size: 1.5rem; letter-spacing: -0.02em; margin: 0; }
+    .tip-section-header p { font-size: 0.85rem; color: var(--text-muted); margin: 2px 0 0; }
+
+    /* Tip cards */
+    .tip-cards { display: flex; flex-direction: column; gap: 16px; }
+    .tip-card {
+      background: var(--bg-white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .tip-card:hover { box-shadow: var(--shadow-md); border-color: #C7D2FE; }
+    .tip-card-header {
+      display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px;
+    }
+    .tip-num {
+      width: 26px; height: 26px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+    }
+    .tip-card h3 { font-size: 1rem; margin: 0; line-height: 1.4; }
+    .tip-card p { font-size: 0.88rem; color: var(--text-secondary); margin: 0; line-height: 1.65; }
+    .tip-card ul {
+      margin: 10px 0 0; padding-left: 0; list-style: none;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .tip-card ul li {
+      font-size: 0.87rem; color: var(--text-secondary);
+      padding-left: 20px; position: relative; line-height: 1.5;
+    }
+    .tip-card ul li::before {
+      content: '→'; position: absolute; left: 0;
+      color: #6366F1; font-weight: 700; font-size: 0.78rem;
+    }
+    .tip-highlight {
+      background: #EEF2FF; border: 1px solid #C7D2FE;
+      border-radius: 8px; padding: 12px 16px; margin-top: 12px;
+      font-size: 0.84rem; color: #3730A3; line-height: 1.55;
+    }
+    .tip-highlight strong { color: #3730A3; }
+
+    /* Colour themes per section */
+    .theme-purple .tip-section-icon { background: #EEF2FF; color: #4338CA; }
+    .theme-purple .tip-num { background: #EEF2FF; color: #4338CA; }
+    .theme-blue .tip-section-icon { background: var(--primary-light); color: var(--primary); }
+    .theme-blue .tip-num { background: var(--primary-light); color: var(--primary); }
+    .theme-green .tip-section-icon { background: var(--success-light); color: #059669; }
+    .theme-green .tip-num { background: var(--success-light); color: #059669; }
+    .theme-orange .tip-section-icon { background: var(--orange-light); color: var(--orange); }
+    .theme-orange .tip-num { background: var(--orange-light); color: var(--orange); }
+    .theme-red .tip-section-icon { background: #FEF2F2; color: #DC2626; }
+    .theme-red .tip-num { background: #FEF2F2; color: #DC2626; }
+    .theme-teal .tip-section-icon { background: #F0FDFA; color: #0D9488; }
+    .theme-teal .tip-num { background: #F0FDFA; color: #0D9488; }
+    .theme-amber .tip-section-icon { background: #FFFBEB; color: #D97706; }
+    .theme-amber .tip-num { background: #FFFBEB; color: #D97706; }
+
+    .theme-green .tip-highlight { background: #F0FDF4; border-color: #A7F3D0; color: #065F46; }
+    .theme-green .tip-highlight strong { color: #065F46; }
+    .theme-orange .tip-highlight { background: #FFF7ED; border-color: #FED7AA; color: #92400E; }
+    .theme-orange .tip-highlight strong { color: #92400E; }
+    .theme-amber .tip-highlight { background: #FFFBEB; border-color: #FDE68A; color: #78350F; }
+    .theme-amber .tip-highlight strong { color: #78350F; }
+
+    /* Fresher's checklist */
+    .checklist-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px;
+    }
+    .checklist-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: 10px; padding: 14px 16px;
+    }
+    .checklist-item input[type="checkbox"] {
+      width: 17px; height: 17px; accent-color: #4338CA; margin-top: 1px; flex-shrink: 0; cursor: pointer;
+    }
+    .checklist-item label { font-size: 0.87rem; color: var(--text-secondary); cursor: pointer; line-height: 1.4; }
+
+    /* CTA strip */
+    .tips-cta-strip {
+      background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%);
+      border-radius: var(--radius-xl); padding: 40px 36px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      margin-top: 12px; flex-wrap: wrap;
+    }
+    .tips-cta-strip h3 { color: #fff; font-size: 1.3rem; margin-bottom: 6px; }
+    .tips-cta-strip p { color: #A5B4FC; font-size: 0.9rem; margin: 0; }
+    .tips-cta-btns { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+    .btn-indigo {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+      color: #fff; font-size: 0.875rem; font-weight: 600;
+      padding: 10px 20px; border-radius: 24px; text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-indigo:hover { background: rgba(255,255,255,0.25); text-decoration: none; }
+    .btn-indigo-solid {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #fff; color: #4338CA;
+      font-size: 0.875rem; font-weight: 700;
+      padding: 10px 22px; border-radius: 24px; text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn-indigo-solid:hover { opacity: 0.9; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .tips-layout { grid-template-columns: 1fr; }
+      .tips-toc { display: none; }
+      .tips-hero h1 { font-size: 2rem; }
+      .checklist-grid { grid-template-columns: 1fr; }
+      .tips-cta-strip { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
+        <img src="assets/logo.png" alt="FreeStudentTools">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="tips.html" class="active">Student Tips</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="scholarships.html">Scholarships</a>
+    <a href="compare.html">Compare</a>
+    <a href="tips.html">Student Tips</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<!-- TOP AD -->
+<div class="container">
+  <div class="ad-container ad-leaderboard" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- HERO -->
+<section class="tips-hero" aria-labelledby="tips-hero-heading">
+  <div class="container" style="text-align:center;position:relative;z-index:1">
+    <div class="tips-hero-pill" aria-hidden="true">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      For Students, By Students
+    </div>
+    <h1 id="tips-hero-heading">The University Survival Guide<br><span style="color:#C7D2FE">No one actually gave you</span></h1>
+    <p>Straight-talking tips on applications, interviews, money, and making the most of your time at university. Practical. Honest. No fluff.</p>
+
+    <div class="tips-hero-stats" aria-label="Guide stats">
+      <div class="tips-hero-stat">
+        <strong>7</strong><span>Topic Areas</span>
+      </div>
+      <div class="tips-hero-stat">
+        <strong>50+</strong><span>Actionable Tips</span>
+      </div>
+      <div class="tips-hero-stat">
+        <strong>0</strong><span>Sponsored Advice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY NAV -->
+<div class="tips-nav" role="navigation" aria-label="Tips categories">
+  <div class="container">
+    <div class="tips-nav-inner">
+      <a href="#applying" class="tips-nav-link active">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        How to Apply
+      </a>
+      <a href="#reference" class="tips-nav-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Reference Letters
+      </a>
+      <a href="#application-form" class="tips-nav-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Application Form
+      </a>
+      <a href="#interview" class="tips-nav-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Interview Tips
+      </a>
+      <a href="#money" class="tips-nav-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Save Money
+      </a>
+      <a href="#dosdont" class="tips-nav-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Do's &amp; Don'ts
+      </a>
+      <a href="#fresher" class="tips-nav-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        Fresher's Checklist
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main id="main-content">
+  <div class="container">
+    <div class="tips-layout">
+
+      <!-- SIDEBAR TOC -->
+      <aside class="tips-toc" aria-label="Table of contents">
+        <h4>On this page</h4>
+        <a href="#applying" class="active">How to Apply</a>
+        <a href="#reference">Reference Letters</a>
+        <a href="#application-form">Application Form</a>
+        <a href="#interview">Interview Tips</a>
+        <a href="#money">Save Money</a>
+        <a href="#dosdont">Do's &amp; Don'ts</a>
+        <a href="#fresher">Fresher's Checklist</a>
+      </aside>
+
+      <!-- TIPS CONTENT -->
+      <div>
+
+        <!-- ===== 1. HOW TO APPLY ===== -->
+        <section class="tip-section theme-purple" id="applying" aria-labelledby="applying-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <h2 id="applying-heading">How to Apply to University</h2>
+              <p>Before you fill in a single form, get the groundwork right</p>
+            </div>
+          </div>
+          <div class="tip-cards">
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">01</div>
+                <h3>Start 12 months before your target intake — not 12 weeks</h3>
+              </div>
+              <p>Most students start too late and end up rushed. Strong applications take time — personal statement drafts, referee requests, document gathering. Mark your deadlines in a calendar the moment you decide to apply.</p>
+              <ul>
+                <li>Identify your top 5–8 universities and note each deadline separately</li>
+                <li>Create a spreadsheet: university, deadline, portal, documents needed, status</li>
+                <li>Set reminders 8 weeks, 4 weeks, and 2 weeks before each deadline</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">02</div>
+                <h3>Research entry requirements — not just rankings</h3>
+              </div>
+              <p>A university ranked #50 with an 85% offer rate in your subject may be a better bet than a #10 with 12%. Look at what they actually require: grades, English language tests (IELTS/TOEFL/Duolingo), portfolio, work experience, or entrance exams.</p>
+              <ul>
+                <li>Always check the department page — not just the university homepage</li>
+                <li>Look at typical offer grades vs. minimum requirements</li>
+                <li>Check if your qualification is recognised (some countries use specific equivalency systems)</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">03</div>
+                <h3>Know which portal you're applying through</h3>
+              </div>
+              <p>Different countries and universities use different systems. Using the wrong one can mean your application never arrives.</p>
+              <ul>
+                <li><strong>UK:</strong> UCAS (ucas.com) — up to 5 choices, one personal statement</li>
+                <li><strong>USA:</strong> Common App (commonapp.org) or Coalition App — each school may require extra essays</li>
+                <li><strong>Canada:</strong> OUAC (Ontario), direct portals for other provinces</li>
+                <li><strong>Australia:</strong> UAC, VTAC, QTAC depending on state</li>
+                <li><strong>Europe:</strong> Most universities have direct online application portals</li>
+              </ul>
+              <div class="tip-highlight">
+                <strong>Pro tip:</strong> Create a dedicated email address just for university applications. Using your personal or school email risks missing important communications.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">04</div>
+                <h3>Your personal statement is your voice — use it</h3>
+              </div>
+              <p>This is not a CV rewrite. Admissions teams read thousands of statements. Yours needs to show why you specifically want this subject, what you have already done to explore it, and what you plan to do with it. Be specific. Be real.</p>
+              <ul>
+                <li>Open with something that shows genuine curiosity — not "Since childhood I have always loved..."</li>
+                <li>Talk about actual experiences: a book that changed your thinking, a project you ran, a problem you solved</li>
+                <li>Keep extracurriculars brief unless they directly relate to your course</li>
+                <li>Write 5+ drafts. Have at least 2 people (teacher + someone who doesn't know you) review it</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 2. REFERENCE LETTERS ===== -->
+        <section class="tip-section theme-blue" id="reference" aria-labelledby="reference-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <h2 id="reference-heading">Reference Letters</h2>
+              <p>How to ask, who to ask, and what to give them</p>
+            </div>
+          </div>
+          <div class="tip-cards">
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">01</div>
+                <h3>Choose someone who actually knows your academic work</h3>
+              </div>
+              <p>Your favourite teacher isn't automatically the right choice. Pick someone who has seen your thinking, your effort, and ideally your growth in a subject relevant to what you're applying for.</p>
+              <ul>
+                <li>For a science degree — your chemistry or physics teacher/professor is ideal</li>
+                <li>For a professional programme (law, medicine) — someone who has seen you handle complex problems</li>
+                <li>For postgraduate applications — a research supervisor is worth more than a lecturer you barely know</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">02</div>
+                <h3>Ask early — then make it easy for them</h3>
+              </div>
+              <p>Ask at least 6–8 weeks before the earliest deadline. Don't just fire off a message. Have a proper conversation, explain where you're applying and why, and then send them everything they need in one email.</p>
+              <ul>
+                <li>Your up-to-date CV or academic transcript</li>
+                <li>Your personal statement draft</li>
+                <li>A short summary of why you chose each university/programme</li>
+                <li>Specific deadlines and submission instructions for each institution</li>
+                <li>A polite reminder 2 weeks before the deadline — no one minds it</li>
+              </ul>
+              <div class="tip-highlight">
+                <strong>Important:</strong> Never assume your referee has submitted. Confirm with them a few days before the deadline that it's been sent. A missed reference has derailed many otherwise strong applications.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">03</div>
+                <h3>Say thank you — properly</h3>
+              </div>
+              <p>Writing a reference takes time and thought. A genuine thank-you (not a 2-word text) goes a long way. Update them on outcomes too — good referees care about your progress.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 3. APPLICATION FORM ===== -->
+        <section class="tip-section theme-teal" id="application-form" aria-labelledby="appform-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            </div>
+            <div>
+              <h2 id="appform-heading">Completing the Application Form</h2>
+              <p>What to focus on so nothing gets missed</p>
+            </div>
+          </div>
+          <div class="tip-cards">
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">01</div>
+                <h3>Read every instruction before typing a single word</h3>
+              </div>
+              <p>Each portal has its own rules — word limits, required document formats, whether transcripts must be certified, how grades should be entered. Read first, fill later.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">02</div>
+                <h3>Documents to have ready before you start</h3>
+              </div>
+              <p>Gather everything before you open the form. Uploading on the fly causes errors and wasted time.</p>
+              <ul>
+                <li>Passport (valid, full name as it appears on all documents)</li>
+                <li>Academic transcripts (official, certified where required)</li>
+                <li>English language test scores (IELTS, TOEFL, PTE, Duolingo)</li>
+                <li>Personal statement (final version, correct word count)</li>
+                <li>CV / résumé (academic format, not creative design)</li>
+                <li>Referee contact details and confirmation they're ready</li>
+                <li>Proof of any qualifications, awards, or work experience mentioned</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">03</div>
+                <h3>Save and screenshot your submission confirmation</h3>
+              </div>
+              <p>Every portal should give you a confirmation email or reference number. Save it. Screenshot the confirmation page. If your application goes missing, that reference number is your only proof it was submitted.</p>
+              <div class="tip-highlight">
+                <strong>Always double-check:</strong> the course code, intake year, campus (some universities have multiple), and your email address are correct before you hit submit.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">04</div>
+                <h3>Follow up if you hear nothing after 4–6 weeks</h3>
+              </div>
+              <p>Universities are usually clear about their timelines. If you haven't heard anything and you're past their stated review period, a polite follow-up email to the admissions office is completely appropriate. Keep it brief and professional.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- MID AD -->
+        <div class="ad-container ad-responsive" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+
+        <!-- ===== 4. INTERVIEW TIPS ===== -->
+        <section class="tip-section theme-orange" id="interview" aria-labelledby="interview-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <h2 id="interview-heading">Answering Questions During Admission</h2>
+              <p>How to handle interviews — in person, online, and panel formats</p>
+            </div>
+          </div>
+          <div class="tip-cards">
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">01</div>
+                <h3>They are not trying to catch you out — they are trying to understand you</h3>
+              </div>
+              <p>University interviewers want to see how you think, not how polished your rehearsed answers are. Treat it as a conversation about a subject you care about, not an interrogation. Curiosity and honesty go further than scripted responses.</p>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">02</div>
+                <h3>Questions you will almost certainly be asked</h3>
+              </div>
+              <ul>
+                <li>Why this course — and why here specifically?</li>
+                <li>What have you read, watched, or done outside class that relates to this subject?</li>
+                <li>Tell me about a topic in your field that interests or puzzles you</li>
+                <li>Where do you see yourself in 5–10 years?</li>
+                <li>How do you handle challenges or setbacks?</li>
+                <li>What makes you different from other applicants?</li>
+              </ul>
+              <div class="tip-highlight">
+                <strong>Prepare specific examples</strong> for each — actual books, events, projects. "I've always loved science" is forgettable. "I read about CRISPR gene editing and started following the regulatory debates" is memorable.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">03</div>
+                <h3>For online/video interviews</h3>
+              </div>
+              <ul>
+                <li>Test your connection, camera, and microphone the day before — not 10 minutes before</li>
+                <li>Use a clean, quiet background with good lighting on your face (not backlit)</li>
+                <li>Look at the camera, not the screen — it reads as eye contact to the interviewer</li>
+                <li>Have a backup plan (phone data, a neighbour's wifi) in case your connection drops</li>
+                <li>Close all browser tabs and notifications before the call starts</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">04</div>
+                <h3>Prepare questions to ask them</h3>
+              </div>
+              <p>The "do you have any questions for us?" moment matters. It shows genuine interest and gives you real information. Avoid questions answered on their website — ask about things that actually concern you.</p>
+              <ul>
+                <li>What does a typical week look like for a first-year student in this department?</li>
+                <li>What support is available for international/international students adjusting to the city?</li>
+                <li>What career paths do your graduates typically take?</li>
+                <li>Are there research or industry placement opportunities within the programme?</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 5. SAVE MONEY ===== -->
+        <section class="tip-section theme-green" id="money" aria-labelledby="money-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <h2 id="money-heading">How to Save Money at University</h2>
+              <p>Small habits that compound into serious savings over 3–4 years</p>
+            </div>
+          </div>
+          <div class="tip-cards">
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">01</div>
+                <h3>Student discount cards are worth every penny</h3>
+              </div>
+              <p>Get an NUS Extra / Totum card (UK), ISIC card (international), or your university ID registered on student discount platforms. Then actually use them — restaurants, clothing, transport, software, streaming — the savings add up fast.</p>
+              <ul>
+                <li><strong>Software:</strong> Microsoft 365, Adobe Creative Cloud, Notion, Spotify all have steep student discounts</li>
+                <li><strong>Transport:</strong> 16–25 railcard (UK), student bus passes, Eurostar/Interrail student fares</li>
+                <li><strong>Shopping:</strong> ASOS, UNIQLO, Apple, Dell all offer student pricing</li>
+                <li><strong>Food:</strong> UNIDAYS and Student Beans list hundreds of food deals</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">02</div>
+                <h3>Textbooks: the most overpaid expense in student life</h3>
+              </div>
+              <p>Never buy a new textbook unless you absolutely have to. There are almost always cheaper options.</p>
+              <ul>
+                <li>Check your university library first — most core texts are available there</li>
+                <li>Buy second-hand on AbeBooks, ThriftBooks, eBay, or student Facebook groups</li>
+                <li>Z-Library, Library Genesis, and Open Library have legal free ebooks for many titles</li>
+                <li>Rent textbooks via Chegg, VitalSource, or Amazon Textbook Rental</li>
+                <li>Split the cost with a coursemate — share the physical book or PDF</li>
+              </ul>
+              <div class="tip-highlight">
+                <strong>Wait before buying:</strong> lecturers often recommend books they barely reference. Wait 2–3 weeks into term before buying anything. You'll know which ones you actually need.
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">03</div>
+                <h3>Food: cook in batches, eat like you have a plan</h3>
+              </div>
+              <p>Eating out or ordering delivery is the single fastest way to drain a student budget. A batch cooking session once or twice a week means hot meals all week for a fraction of the cost.</p>
+              <ul>
+                <li>Rice, lentils, pasta, eggs, frozen vegetables — high protein, low cost, easy to cook</li>
+                <li>Shop at Aldi, Lidl, local markets, or ethnic supermarkets (often 30–50% cheaper for staples)</li>
+                <li>Use Olio, Too Good To Go, and Karma apps for discounted surplus food</li>
+                <li>Never food shop hungry — you will spend twice what you planned</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">04</div>
+                <h3>Split everything splittable</h3>
+              </div>
+              <ul>
+                <li>Spotify Family / Apple Music family plans — split 6 ways = near free</li>
+                <li>Netflix, Disney+, Prime — check your university's shared streaming deals first</li>
+                <li>Household groceries with flatmates — buying in bulk splits the cost further</li>
+                <li>Uber / taxi share on nights out rather than solo rides home</li>
+              </ul>
+            </div>
+            <div class="tip-card">
+              <div class="tip-card-header">
+                <div class="tip-num">05</div>
+                <h3>Track your spending for just one month</h3>
+              </div>
+              <p>Most students have no idea where their money actually goes. One month of honest tracking (Monzo, Revolut, YNAB, or even a spreadsheet) is usually enough to identify 2–3 habits worth cutting. That awareness sticks.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 6. DO'S AND DON'TS ===== -->
+        <section class="tip-section theme-red" id="dosdont" aria-labelledby="dosdont-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <h2 id="dosdont-heading">Things to Do &amp; Don't During University</h2>
+              <p>Things people usually figure out too late — you don't have to</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;font-weight:700;color:#059669;font-size:0.95rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                DO
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Go to your first lectures even if they feel pointless.</strong> The first weeks set the pace and the social baseline — miss them and you're always catching up.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Join 2–3 societies or clubs in your first term.</strong> Most friendships at university happen through shared activity — lectures alone are a slow route to a social life.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Use office hours.</strong> Lecturers and tutors are paid to help — most see very few students during office hours. Going once puts you ahead of 90% of your cohort.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Open a local bank account early.</strong> Many banks offer student accounts with interest-free overdrafts and perks. Do it in week one.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Register with a local GP/doctor within the first week.</strong> You will need one eventually — don't do it for the first time when you're ill.</p>
+              </div>
+              <div class="tip-card">
+                <p><strong>Build your network quietly and consistently.</strong> Exchange details with peers whose work you respect. Opportunities rarely come from job boards — they come from people.</p>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;font-weight:700;color:#DC2626;font-size:0.95rem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                DON'T
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Don't leave every assignment until the night before.</strong> Once is survivable. As a habit it destroys your grades, your health, and your enjoyment of the subject.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Don't use AI to write your work and submit it as your own.</strong> Detection has improved dramatically. Beyond the risk — you're paying for an education. Use the tools to learn, not to avoid learning.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Don't go into overdraft for lifestyle expenses.</strong> Student overdrafts are interest-free — but they're a safety net, not extra spending money.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Don't isolate yourself when you're struggling.</strong> Every university has a student wellbeing team, counselling service, and peer support network. Use them before small problems become big ones.</p>
+              </div>
+              <div class="tip-card" style="margin-bottom:10px">
+                <p><strong>Don't skip sleep consistently.</strong> Short-term productivity from all-nighters is wiped out by the cognitive cost. Sleep debt is real and it catches up with you before exams.</p>
+              </div>
+              <div class="tip-card">
+                <p><strong>Don't compare your timeline to others.</strong> Some people graduate with job offers and some take a winding path. Both are normal. Run your own race.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== 7. FRESHER'S CHECKLIST ===== -->
+        <section class="tip-section theme-amber" id="fresher" aria-labelledby="fresher-heading">
+          <div class="tip-section-header">
+            <div class="tip-section-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <h2 id="fresher-heading">The Fresher's Checklist</h2>
+              <p>Everything to sort in your first two weeks. Tick them off as you go.</p>
+            </div>
+          </div>
+          <div class="checklist-grid" id="freshersChecklist">
+            <div class="checklist-item">
+              <input type="checkbox" id="c1">
+              <label for="c1">Register with your university's student portal and set up your student email</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c2">
+              <label for="c2">Register with a local GP (doctor) — don't wait until you're sick</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c3">
+              <label for="c3">Open a student bank account if you haven't already</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c4">
+              <label for="c4">Get a SIM or local phone plan (check if your current plan works abroad)</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c5">
+              <label for="c5">Find the library — and register your access / get your student card</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c6">
+              <label for="c6">Attend your course induction and meet your personal tutor</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c7">
+              <label for="c7">Get an NUS / ISIC / student discount card</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c8">
+              <label for="c8">Sign up for at least one society or sports club in the first week</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c9">
+              <label for="c9">Set up your accommodation — know where the nearest supermarket is</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c10">
+              <label for="c10">Check your timetable and add all deadlines to your calendar</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c11">
+              <label for="c11">Download Microsoft 365 or Google Workspace using your student email</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c12">
+              <label for="c12">Know where the student support / wellbeing office is located</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c13">
+              <label for="c13">Set a monthly budget and track it for at least the first term</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c14">
+              <label for="c14">If international: register with your country's embassy or consulate locally</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c15">
+              <label for="c15">Introduce yourself to at least 3 people on your course in the first week</label>
+            </div>
+            <div class="checklist-item">
+              <input type="checkbox" id="c16">
+              <label for="c16">Locate the nearest pharmacy, bank/ATM, and transport stop to your accommodation</label>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:14px 18px;background:var(--bg-gray);border-radius:10px;font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:8px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Your progress is saved in your browser. Ticking items here is just for you.
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="tips-cta-strip">
+          <div>
+            <h3>Now find your university and check deadlines</h3>
+            <p>1,500+ universities tracked. Filter by country, subject, level, and intake — all links go directly to official pages.</p>
+          </div>
+          <div class="tips-cta-btns">
+            <a href="admissions.html" class="btn-indigo-solid">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Browse Deadlines
+            </a>
+            <a href="scholarships.html" class="btn-indigo">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              Find Scholarships
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end tips content -->
+    </div><!-- end layout -->
+  </div><!-- end container -->
+</main>
+
+<!-- BOTTOM AD -->
+<div class="container">
+  <div class="ad-container ad-responsive" aria-hidden="true"><!-- AdSense Ad Unit --></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="assets/logo.png" alt="FreeStudentTools" style="height:48px;width:auto;filter:brightness(0) invert(1);opacity:0.9">
+        </div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Student Hub</h5>
+        <a href="admissions.html">Admission Deadlines</a>
+        <a href="scholarships.html">Scholarships</a>
+        <a href="compare.html">Compare Degrees</a>
+        <a href="tips.html">Student Tips</a>
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com — All tools are free to use.</span>
+      <div>
+        <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+        <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- COOKIE CONSENT -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/common.js"></script>
+<script>
+  // Smooth active state on category nav and TOC
+  const tipSections = document.querySelectorAll('.tip-section');
+  const navLinks = document.querySelectorAll('.tips-nav-link');
+  const tocLinks = document.querySelectorAll('.tips-toc a');
+
+  function updateActiveLinks() {
+    let current = '';
+    tipSections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top <= 140) current = section.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+    tocLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveLinks, { passive: true });
+
+  // Persist checklist in localStorage
+  const checks = document.querySelectorAll('#freshersChecklist input[type="checkbox"]');
+  checks.forEach(cb => {
+    const saved = localStorage.getItem('fst_' + cb.id);
+    if (saved === '1') cb.checked = true;
+    cb.addEventListener('change', () => {
+      localStorage.setItem('fst_' + cb.id, cb.checked ? '1' : '0');
+    });
+  });
+</script>
+</body>
+</html>

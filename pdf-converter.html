@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free PDF to Word &amp; Excel Converter | FreeStudentTools</title>
+  <meta name="description" content="Convert PDF to editable Word (.docx) or Excel (.xlsx) free online. Built-in OCR for scanned PDFs. No watermarks, no sign-up, files never leave your browser.">
+  <meta name="keywords" content="PDF to Word free, PDF to Excel free, convert PDF to Word no signup, PDF converter no watermark, free PDF to docx, scanned PDF to Word, PDF converter no upload, free PDF to xlsx">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/pdf-converter.html">
+  <meta property="og:title" content="Free PDF to Word &amp; Excel Converter — No Sign-Up | FreeStudentTools">
+  <meta property="og:description" content="Convert PDF to editable Word (.docx) or Excel (.xlsx) free online. Built-in OCR for scanned PDFs. No watermarks, no sign-up, files never leave your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/pdf-converter.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Free PDF to Word &amp; Excel Converter — No Sign-Up | FreeStudentTools">
+  <meta name="twitter:description" content="Convert PDF to editable Word (.docx) or Excel (.xlsx) free online. Built-in OCR for scanned PDFs. No watermarks, no sign-up, files never leave your browser.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free PDF to Word and Excel Converter",
+        "description": "Convert PDF files to editable Word (.docx) or Excel (.xlsx) documents for free. Includes built-in OCR for scanned PDFs. No file uploads — runs entirely in your browser.",
+        "url": "https://freestudenttools.com/pdf-converter.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Convert PDF to Word (.docx)",
+          "Convert PDF to Excel (.xlsx)",
+          "Built-in OCR for scanned and image-based PDFs",
+          "Editable text or layout-with-images mode",
+          "Supports 10+ languages for scanned PDF OCR",
+          "100% browser-based — no file uploads",
+          "No watermarks, no sign-up required"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to convert a PDF to Word or Excel for free",
+        "description": "Convert any PDF to an editable Word or Excel document in your browser — no uploads, no sign-up.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Upload your PDF",
+            "text": "Click the upload area or drag and drop your PDF file onto the page."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Choose output format",
+            "text": "Select Word (.docx) or Excel (.xlsx) as your desired output format."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Convert",
+            "text": "Click Convert. The tool extracts text from the PDF — using built-in OCR if the PDF is scanned."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Download your file",
+            "text": "Click the download button to save your converted Word or Excel file to your device."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this PDF to Word converter really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — completely free. No sign-up, no watermarks, no paid tier. The converter runs entirely in your browser using open-source libraries."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work on scanned PDFs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If your PDF contains scanned images rather than a text layer, the tool automatically runs OCR (optical character recognition) to extract the text before converting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my files uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All processing happens inside your browser. Your files are never sent to any server and are discarded when you close the tab."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between Word and Excel output?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Word (.docx) is best for documents with paragraphs, headings, and text content. Excel (.xlsx) is best for PDFs containing tables or structured data you want to edit in a spreadsheet."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- GA4: activated only after cookie consent via common.js -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    /* ===== UX IMPROVEMENTS ===== */
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    button, [role="button"], select, input[type="file"] { cursor: pointer; }
+    button { touch-action: manipulation; }
+
+    /* Info strips */
+    .info-strip { display:flex; align-items:flex-start; gap:10px; padding:12px 14px; border-radius:var(--radius-md); font-size:0.82rem; line-height:1.5; }
+    .info-strip.blue { background:var(--primary-light); border:1px solid var(--primary-border); color:#1e40af; }
+    .info-strip.orange { background:#FFF7ED; border:1px solid #FED7AA; color:#7c2d12; }
+    .info-strip svg { flex-shrink:0; margin-top:1px; }
+
+    /* Minimum tap target heights */
+    .btn { min-height: 44px; }
+    .btn-sm { min-height: 36px; }
+    .btn-lg { min-height: 48px; }
+
+    /* Styled select */
+    .select-styled {
+      width: 100%;
+      padding: 10px 36px 10px 12px;
+      min-height: 44px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      background: var(--bg-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 10px center;
+      background-size: 16px;
+      appearance: none;
+      -webkit-appearance: none;
+      font-family: var(--font);
+      transition: border-color 0.15s;
+    }
+    .select-styled:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.1); }
+
+    /* Radio option improved selected state */
+    .radio-option:has(input:checked),
+    .radio-option.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      color: var(--primary);
+      box-shadow: 0 0 0 1px var(--primary);
+    }
+
+    /* Options panel heading */
+    .options-panel-title {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); margin-bottom: 14px; font-size: 0.95rem; font-weight: 600;
+    }
+    .options-panel-title svg { color: var(--text-secondary); }
+
+    /* Download card */
+    .download-card {
+      border: 1px solid var(--primary-border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      text-align: center;
+      background: var(--bg-white);
+      margin-top: 20px;
+    }
+    .download-card .file-icon {
+      width: 56px; height: 56px;
+      background: var(--primary-light);
+      border-radius: var(--radius-md);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--primary);
+    }
+    .download-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+    .download-card p { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 20px; }
+
+    /* Override base CSS page-hero h1 to match global h1 spec */
+    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+
+    /* Center alignment */
+    .page-hero { text-align: center; }
+    .page-hero p { margin-left: auto; margin-right: auto; }
+    .page-hero-badge { display: inline-flex; }
+
+    .tool-main .upload-zone { text-align: center; }
+    .tool-main .options-panel { text-align: left; }
+    .tool-main .action-bar { justify-content: center; }
+    .tool-main .result-card-header { justify-content: space-between; }
+  </style>
+</head>
+<body class="page-wrapper">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html" class="active">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html">Image Compressor</a></li>
+        <li><a href="pdf-merger.html">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html">Page Extractor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="ad-container ad-leaderboard"><!-- AdSense Ad Unit --></div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      PDF Converter
+    </div>
+    <h1>Convert PDF to Word or Excel — Free</h1>
+    <p>Free PDF to Word (.docx) and PDF to Excel (.xlsx) converter — no sign-up required. Extracts text from any PDF and converts it to an editable document. Built-in OCR automatically handles scanned PDFs. No file uploads — runs entirely in your browser.</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: April 2026 &nbsp;·&nbsp; Powered by PDF.js &amp; docx.js
+    </p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="tool-layout">
+
+      <div class="tool-main">
+
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept=".pdf" />
+          <div class="upload-zone-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Drop your PDF here or click to browse</h3>
+          <p>PDF files only</p>
+          <p class="file-types">Max file size: 50MB</p>
+        </div>
+
+        <div class="file-selected" id="fileInputSelected">
+          <span class="file-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <div class="file-info">
+            <div class="file-name"></div>
+            <div class="file-size"></div>
+          </div>
+          <button class="remove-file" id="removeFile" aria-label="Remove file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="options-panel">
+          <h4 class="options-panel-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            Options
+          </h4>
+
+          <div class="option-group">
+            <label>Conversion Mode</label>
+            <div class="radio-group">
+              <label class="radio-option selected" id="modeText">
+                <input type="radio" name="mode" value="text" checked>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+                Editable Text
+              </label>
+              <label class="radio-option" id="modeLayout">
+                <input type="radio" name="mode" value="layout">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                With Layout (images + formatting)
+              </label>
+            </div>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;margin-bottom:0">
+              <strong>Editable Text</strong> — extracts text only, fully editable.<br>
+              <strong>With Layout</strong> — preserves logos, images, signatures and formatting. Pages saved as images in Word.
+            </p>
+          </div>
+
+          <div class="option-group">
+            <label>Output Format</label>
+            <div class="radio-group">
+              <label class="radio-option selected" id="radioWord">
+                <input type="radio" name="format" value="word" checked>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Word (.docx)
+              </label>
+              <label class="radio-option" id="radioExcel">
+                <input type="radio" name="format" value="excel">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+                Excel (.xlsx)
+              </label>
+            </div>
+          </div>
+          <div class="option-group" id="langGroup">
+            <label for="pdfLang">PDF Language (for scanned PDFs — Editable Text mode only)</label>
+            <select id="pdfLang" class="select-styled">
+              <option value="eng">English</option>
+              <option value="ara">Arabic</option>
+              <option value="fra">French</option>
+              <option value="deu">German</option>
+              <option value="spa">Spanish</option>
+              <option value="ita">Italian</option>
+              <option value="por">Portuguese</option>
+              <option value="rus">Russian</option>
+              <option value="chi_sim">Chinese Simplified</option>
+              <option value="jpn">Japanese</option>
+              <option value="kor">Korean</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="action-bar">
+          <button class="btn btn-primary btn-lg" id="startConvert" disabled aria-label="Convert uploaded PDF to selected format">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Convert PDF
+          </button>
+          <button class="btn btn-danger" id="cancelBtn" style="display:none" aria-label="Cancel PDF conversion">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Cancel
+          </button>
+          <button class="btn btn-outline" id="resetBtn" style="display:none" aria-label="Start over and clear current file">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+            Start Over
+          </button>
+        </div>
+
+        <div class="status-msg" id="statusMsg" role="alert" aria-live="polite"></div>
+
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-label">
+            <span id="progressLabel">Processing...</span>
+            <span id="progressPct">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div class="result-container" id="resultContainer">
+          <div class="download-card">
+            <div class="file-icon" id="downloadIcon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h4 id="downloadTitle">Your file is ready!</h4>
+            <p id="downloadDesc">Conversion complete. Click below to download.</p>
+            <button class="btn btn-success btn-lg" id="downloadBtn" aria-label="Download converted file">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download File
+            </button>
+          </div>
+          <div class="info-strip blue" style="margin-top:16px" role="note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>Complex formatting like tables may not be preserved perfectly. Best results with text-heavy PDFs.</span>
+          </div>
+        </div>
+
+        <div class="info-strip blue" style="margin-top:24px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Privacy guaranteed:</strong> PDF processing happens entirely in your browser. Your PDF is never uploaded to any server.</span>
+        </div>
+
+        <div class="info-strip orange" style="margin-top:10px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span><strong>Copyright &amp; Fair Use:</strong> Only convert PDFs you own or have explicit permission to use. This tool does not bypass DRM or remove watermarks. Converting copyrighted material without authorisation may violate copyright law. You are solely responsible for ensuring lawful use.</span>
+        </div>
+
+      </div>
+
+      <div class="tool-sidebar">
+        <div class="ad-container ad-rectangle"><!-- AdSense Ad Unit --></div>
+        <div class="sidebar-card" style="margin-top:20px">
+          <h4>How It Works</h4>
+          <ul class="how-it-works">
+            <li><div class="step-num">1</div><div>Upload your PDF file</div></li>
+            <li><div class="step-num">2</div><div>Choose Word or Excel output</div></li>
+            <li><div class="step-num">3</div><div>Click Convert — text is extracted from your PDF</div></li>
+            <li><div class="step-num">4</div><div>Download your editable file instantly</div></li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h4>Other Tools</h4>
+          <ul class="sidebar-list">
+            <li>
+              <a href="ocr.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                OCR Scanner
+              </a>
+            </li>
+            <li>
+              <a href="compressor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+                PDF Compressor
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="ad-container ad-responsive"><!-- AdSense Ad Unit --></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/pdf-converter.js"></script>
+</body>
+</html>

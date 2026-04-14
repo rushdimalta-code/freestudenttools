@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free PDF Merger — Combine Multiple PDFs Online | FreeStudentTools</title>
+  <meta name="description" content="Merge multiple PDF files into one document free online. No sign-up, no file uploads — runs entirely in your browser using pdf-lib.">
+  <meta name="keywords" content="pdf merger free, combine pdf files online, merge pdf no signup, join pdf files free, pdf combiner online, merge pdfs free no upload">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/pdf-merger.html">
+  <meta property="og:title" content="Free PDF Merger — Combine Multiple PDFs Online | FreeStudentTools">
+  <meta property="og:description" content="Merge multiple PDF files into one document free online. No sign-up, no file uploads — runs entirely in your browser using pdf-lib.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/pdf-merger.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Free PDF Merger — Combine Multiple PDFs Online | FreeStudentTools">
+  <meta name="twitter:description" content="Merge multiple PDF files into one document free online. No sign-up, no file uploads — runs entirely in your browser using pdf-lib.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "Free PDF Merger",
+        "description": "Combine multiple PDF files into a single document for free. Runs entirely in your browser — no sign-up, no uploads, no watermarks.",
+        "url": "https://freestudenttools.com/pdf-merger.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Merge up to 10 PDF files at once",
+          "Supports files up to 200MB total",
+          "100% browser-based — no file uploads",
+          "No watermarks added",
+          "No sign-up or email required",
+          "Instant download of merged PDF"
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to merge PDF files for free",
+        "description": "Combine multiple PDF files into one document — directly in your browser, with no uploads required.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Add your PDF files",
+            "text": "Click the upload area or drag and drop your PDF files onto the page. You can add up to 10 files."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Arrange the order",
+            "text": "Review the file list. Remove any files you don't need. The PDFs will be merged in the order shown."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Merge PDFs",
+            "text": "Click Merge PDFs. The tool combines your files entirely in the browser and shows a progress indicator."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Download the merged PDF",
+            "text": "Click Download to save your combined PDF file to your device."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is the PDF merger really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using the open-source pdf-lib library."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many PDF files can I merge at once?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can merge up to 10 PDF files in a single operation. If you need to merge more, download the result and add it as the first file in a new batch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a file size limit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The combined total of all selected files must be under 200MB. Individual files can be any size as long as the total stays within this limit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my files uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Everything runs inside your browser using pdf-lib. Your PDFs are never sent to any server and are cleared from memory when you close the tab."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- GA4: activated only after cookie consent via common.js -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    /* ===== UX IMPROVEMENTS ===== */
+    :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+    button, [role="button"], select, input[type="file"] { cursor: pointer; }
+    button { touch-action: manipulation; }
+
+    /* Info strips */
+    .info-strip { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; border-radius: var(--radius-md); font-size: 0.82rem; line-height: 1.5; }
+    .info-strip.blue { background: var(--primary-light); border: 1px solid var(--primary-border); color: #1e40af; }
+    .info-strip.orange { background: #FFF7ED; border: 1px solid #FED7AA; color: #7c2d12; }
+    .info-strip svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* Minimum tap target heights */
+    .btn { min-height: 44px; }
+    .btn-lg { min-height: 48px; }
+
+    /* Options panel heading */
+    .options-panel-title {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text-primary); margin-bottom: 14px; font-size: 0.95rem; font-weight: 600;
+    }
+    .options-panel-title svg { color: var(--text-secondary); }
+
+    /* Center alignment */
+    .page-hero { text-align: center; }
+    .page-hero p { margin-left: auto; margin-right: auto; }
+    .page-hero-badge { display: inline-flex; }
+    .tool-main .upload-zone { text-align: center; }
+    .tool-main .options-panel { text-align: left; }
+    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
+
+    /* File list */
+    .file-list { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+    .file-list-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--bg-white); border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm); padding: 10px 14px;
+    }
+    .file-list-item .file-list-icon {
+      width: 36px; height: 36px; background: var(--primary-light);
+      border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
+      color: var(--primary); flex-shrink: 0;
+    }
+    .file-list-item .file-list-name { flex: 1; font-size: 0.875rem; font-weight: 500; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+    .file-list-item .file-list-size { font-size: 0.78rem; color: var(--text-muted); flex-shrink: 0; }
+    .file-list-item .file-list-remove { background: none; border: none; cursor: pointer; color: var(--text-muted); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); transition: all var(--transition); flex-shrink: 0; }
+    .file-list-item .file-list-remove:hover { color: var(--error); background: var(--error-light); }
+    .file-list-drag-hint { font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 8px; }
+
+    /* Merge stats */
+    .merge-stats { display: flex; gap: 16px; margin-top: 16px; padding: 14px; background: var(--bg-light); border: 1.5px solid var(--border); border-radius: var(--radius-md); }
+    .merge-stat { flex: 1; text-align: center; }
+    .merge-stat-value { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+    .merge-stat-label { font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+
+    /* Action bar */
+    .tool-main .action-bar { justify-content: flex-start; gap: 10px; flex-wrap: wrap; }
+
+    @media (max-width: 480px) {
+      .merge-stats { flex-direction: column; gap: 10px; }
+      .page-hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body class="page-wrapper">
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ocr.html">OCR Scanner</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">PDF Compressor</a></li>
+        <li><a href="image-compressor.html">Image Compressor</a></li>
+        <li><a href="pdf-merger.html" class="active">PDF Merger</a></li>
+        <li><a href="pdf-extractor.html">Page Extractor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="image-compressor.html">Image Compressor</a>
+    <a href="pdf-merger.html">PDF Merger</a>
+    <a href="pdf-extractor.html">PDF Page Extractor</a>
+    <a href="citation-generator.html">Citation Generator</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</nav>
+
+<div class="container">
+  <div class="ad-container ad-leaderboard"><!-- AdSense Ad Unit --></div>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+      PDF Merger
+    </div>
+    <h1>Merge PDF Files Free — Combine PDFs Online</h1>
+    <p>Free online PDF merger — combine multiple PDF files into one document. Upload up to 10 files, arrange the order, and merge in seconds. No sign-up required. Your files never leave your browser.</p>
+    <p style="font-size:0.78rem;color:var(--text-secondary);margin-top:10px;">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: April 2026 &nbsp;·&nbsp; Powered by pdf-lib
+    </p>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="container">
+    <div class="tool-layout">
+      <div class="tool-main">
+
+        <!-- Upload zone -->
+        <div class="upload-zone" id="uploadZone">
+          <input type="file" id="fileInput" accept=".pdf" multiple>
+          <div class="upload-zone-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3>Drop PDF files here or click to browse</h3>
+          <p>Select multiple PDF files at once</p>
+          <p class="file-types">Up to 10 files &nbsp;·&nbsp; Max 200MB total</p>
+        </div>
+
+        <!-- File list (shown after files are added) -->
+        <div id="fileListSection" style="display:none">
+          <div class="file-list" id="fileList" role="list" aria-label="Selected PDF files"></div>
+          <p class="file-list-drag-hint" id="fileListHint"></p>
+
+          <!-- Merge stats -->
+          <div class="merge-stats" id="mergeStats">
+            <div class="merge-stat">
+              <div class="merge-stat-value" id="statFiles">0</div>
+              <div class="merge-stat-label">Files to Merge</div>
+            </div>
+            <div class="merge-stat">
+              <div class="merge-stat-value" id="statPages">—</div>
+              <div class="merge-stat-label">Total Pages</div>
+            </div>
+            <div class="merge-stat">
+              <div class="merge-stat-value" id="statSize">0 KB</div>
+              <div class="merge-stat-label">Total Size</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action bar -->
+        <div class="action-bar" style="margin-top:20px">
+          <button class="btn btn-primary btn-lg" id="mergeBtn" disabled aria-label="Merge PDFs">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            Merge PDFs
+          </button>
+          <button class="btn btn-outline" id="clearAllBtn" style="display:none" aria-label="Clear all files">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+            Clear All
+          </button>
+        </div>
+
+        <!-- Status message -->
+        <div class="status-msg" id="statusMsg" role="alert" aria-live="polite"></div>
+
+        <!-- Progress bar -->
+        <div class="progress-container" id="progressContainer">
+          <div class="progress-label">
+            <span id="progressLabel">Merging...</span>
+            <span id="progressPct">0%</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <!-- Result container -->
+        <div class="result-container" id="resultContainer">
+          <div class="download-card">
+            <div style="width:52px;height:52px;background:var(--success-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:var(--success);" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h4>Merged PDF Ready!</h4>
+            <p id="downloadDesc">Your PDFs have been combined. Click to download.</p>
+            <button class="btn btn-success btn-lg" id="downloadBtn" aria-label="Download merged PDF">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Merged PDF
+            </button>
+            <button class="btn btn-ghost btn-sm" id="mergeAgainBtn" style="margin-top:10px" aria-label="Merge more PDFs">
+              Merge more PDFs
+            </button>
+          </div>
+        </div>
+
+        <!-- Privacy info strip -->
+        <div class="info-strip blue" style="margin-top:24px" role="note">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>Privacy guaranteed:</strong> PDF merging runs entirely in your browser using pdf-lib. Your files are never uploaded to any server and are cleared from memory when you close the tab.</span>
+        </div>
+
+      </div>
+
+      <!-- Sidebar -->
+      <div class="tool-sidebar">
+        <div class="ad-container ad-rectangle"><!-- AdSense Ad Unit --></div>
+
+        <div class="sidebar-card" style="margin-top:20px">
+          <h4>How It Works</h4>
+          <ul class="how-it-works">
+            <li><div class="step-num">1</div><div>Add your PDF files (up to 10)</div></li>
+            <li><div class="step-num">2</div><div>Review the list — remove any unwanted files</div></li>
+            <li><div class="step-num">3</div><div>Click Merge PDFs — all pages are combined in order</div></li>
+            <li><div class="step-num">4</div><div>Download your single merged PDF instantly</div></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h4>Other Tools</h4>
+          <ul class="sidebar-list">
+            <li>
+              <a href="compressor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+                PDF Compressor
+              </a>
+            </li>
+            <li>
+              <a href="pdf-extractor.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                PDF Page Extractor
+              </a>
+            </li>
+            <li>
+              <a href="pdf-converter.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+                PDF to Word / Excel
+              </a>
+            </li>
+            <li>
+              <a href="ocr.html">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                OCR Scanner
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="ad-container ad-responsive"><!-- AdSense Ad Unit --></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Tools</h5>
+        <a href="ocr.html">OCR Scanner</a>
+        <a href="pdf-converter.html">PDF to Word / Excel</a>
+        <a href="compressor.html">PDF Compressor</a>
+        <a href="image-compressor.html">Image Compressor</a>
+        <a href="pdf-merger.html">PDF Merger</a>
+        <a href="pdf-extractor.html">PDF Page Extractor</a>
+        <a href="citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/pdf-merger.js"></script>
+</body>
+</html>

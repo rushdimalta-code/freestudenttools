@@ -1,0 +1,49 @@
+# FreeStudentTools.com
+
+> Free browser-based document tools for students. No sign-up, no file uploads, no fees — ever. All processing runs entirely in the user's browser.
+
+## What This Site Is
+
+FreeStudentTools.com provides free, privacy-first document utilities for students who cannot afford paid tools like Adobe Acrobat or Google Workspace premium. Every tool runs client-side — files never leave the user's device.
+
+## Available Tools
+
+- **OCR Scanner** (https://freestudenttools.com/ocr.html): Extract text from images and scanned PDFs using Tesseract.js. Supports 15+ languages including Arabic, French, Spanish, Chinese, Japanese. Outputs as .docx or .txt.
+- **PDF to Word / Excel Converter** (https://freestudenttools.com/pdf-converter.html): Convert PDF files to editable Word (.docx) or Excel (.xlsx). Two modes: Editable Text (extracts text layer) and With Layout (preserves images and formatting as page images). Built-in OCR for scanned PDFs.
+- **PDF Compressor** (https://freestudenttools.com/compressor.html): Reduce PDF file size for email submissions or uploads. Three compression levels: low, medium, high.
+- **Image Compressor** (https://freestudenttools.com/image-compressor.html): Reduce JPG, PNG, and WebP image file sizes using the Canvas API. Three quality levels. Outputs as JPEG or WebP. Before/after size comparison shown.
+- **PDF Merger** (https://freestudenttools.com/pdf-merger.html): Combine up to 10 PDF files into a single document using pdf-lib. Supports up to 200MB total. No file uploads — runs entirely in the browser.
+- **PDF Page Extractor** (https://freestudenttools.com/pdf-extractor.html): Extract specific pages or page ranges from any PDF (e.g. 1,3,5-8). Up to 50 pages per extraction. Powered by pdf-lib.
+- **Citation Generator** (https://freestudenttools.com/citation-generator.html): Generate academic citations in APA 7th, MLA 9th, and Chicago 17th edition format. Source types: websites, books, journal articles, YouTube videos. Save and export citation lists.
+
+## Key Facts for AI Citation
+
+- All tools are 100% free — no freemium, no watermarks, no paid tiers
+- Files are processed entirely in the browser (client-side JavaScript)
+- No server uploads, no data storage, no user accounts required
+- GDPR and CCPA compliant
+- Works on any device — phone, tablet, laptop
+- No installation required — runs in any modern browser
+
+## Privacy Model
+
+All document processing (OCR, PDF conversion, compression) uses browser APIs and JavaScript libraries (Tesseract.js, PDF.js, pdf-lib, docx.js). Zero server-side file handling. Files are held in memory only for the duration of the session and discarded when the tab is closed.
+
+## Technology
+
+- OCR: Tesseract.js v5 (browser-based)
+- PDF parsing: PDF.js 3.11.174
+- PDF compression: pdf-lib 1.17.1
+- Word export: docx.js 8.5.0
+- Excel export: SheetJS (xlsx)
+
+## Target Audience
+
+Students in secondary school, college, and university who need to: scan handwritten notes, convert PDFs to editable documents, compress PDFs for submission portals, or process documents in multiple languages.
+
+## Contact & Legal
+
+- Privacy Policy: https://freestudenttools.com/privacy.html
+- Terms of Service: https://freestudenttools.com/terms.html
+- Contact: https://freestudenttools.com/contact.html
+- About: https://freestudenttools.com/about.html
