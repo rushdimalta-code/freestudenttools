@@ -1,0 +1,45 @@
+name: Daily University & Scholarship Data Refresh
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC every day
+  workflow_dispatch:        # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write           # needed to commit & push updated data files
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml python-dotenv
+
+      - name: Run data updater
+        run: python3 tools/update_university_data.py
+
+      - name: Commit updated data files
+        run: |
+          git config --local user.email "bot@freestudenttools.com"
+          git config --local user.name "FreeStudentTools Data Bot"
+          git add data/universities.js data/scholarships_data.js
+          git diff --staged --quiet && echo "No data changes today" || \
+            git commit -m "chore: daily data refresh $(date -u +%Y-%m-%d)"
+
+      - name: Push changes
+        run: git push origin main
+
+      - name: Trigger Netlify redeploy
+        if: ${{ env.NETLIFY_DEPLOY_HOOK != '' }}
+        run: curl -s -X POST "$NETLIFY_DEPLOY_HOOK"
+        env:
+          NETLIFY_DEPLOY_HOOK: ${{ secrets.NETLIFY_DEPLOY_HOOK }}

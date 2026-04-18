@@ -294,7 +294,7 @@
       border-bottom: 1px solid var(--border);
     }
     .student-hub-inner {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
     }
     .hub-card {
       border-radius: var(--radius-xl); padding: 36px 32px;
@@ -308,6 +308,9 @@
     }
     .hub-card-scholarships {
       background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);
+    }
+    .hub-card-compare {
+      background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 100%);
     }
     .hub-card-badge {
       display: inline-flex; align-items: center; gap: 5px;
@@ -368,6 +371,9 @@
     .tag-emerald { background: #ECFDF5; color: #059669; }
     .c-emerald .tc-link { color: #059669; }
 
+    @media (max-width: 960px) {
+      .student-hub-inner { grid-template-columns: 1fr 1fr; }
+    }
     @media (max-width: 768px) {
       .student-hub-inner { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.2rem !important; }
@@ -385,17 +391,16 @@
       <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
         <img src="assets/logo.png" alt="FreeStudentTools">
       </a>
-      <ul class="nav-links" role="list">
+            <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="compare.html">Compare</a></li>
         <li><a href="ocr.html">OCR Scanner</a></li>
         <li><a href="pdf-converter.html">PDF Converter</a></li>
         <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="image-compressor.html">Image Compressor</a></li>
-        <li><a href="pdf-merger.html">PDF Merger</a></li>
-        <li><a href="pdf-extractor.html">Page Extractor</a></li>
         <li><a href="citation-generator.html">Citations</a></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="scholarships.html">Scholarships</a></li>
+        <li><a href="tips.html">Tips</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -403,8 +408,12 @@
       </button>
     </div>
   </div>
-  <nav class="nav-mobile" aria-label="Mobile navigation">
-    <a href="index.html">Home</a>
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="index.html" class="active">Home</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="scholarships.html">Scholarships</a>
+    <a href="compare.html">Compare Degrees</a>
+    <a href="tips.html">Student Tips</a>
     <a href="ocr.html">OCR Scanner</a>
     <a href="pdf-converter.html">PDF Converter</a>
     <a href="compressor.html">PDF Compressor</a>
@@ -412,8 +421,6 @@
     <a href="pdf-merger.html">PDF Merger</a>
     <a href="pdf-extractor.html">PDF Page Extractor</a>
     <a href="citation-generator.html">Citation Generator</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="scholarships.html">Scholarships</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -558,14 +565,23 @@
         <svg class="hub-card-bg-icon" width="140" height="140" viewBox="0 0 24 24" fill="white" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </a>
 
+      <a href="compare.html" class="hub-card hub-card-compare" aria-label="University Degree Comparison Tool">
+        <div class="hub-card-badge new-badge">Featured</div>
+        <h3>University Degree Comparison</h3>
+        <p>Compare any two universities side-by-side — tuition, cost of living by city, banking, accommodation, entry requirements, and course details. 1,040+ universities.</p>
+        <div class="hub-card-stats">
+          <div class="hub-card-stat"><strong>1,040+</strong><span>Universities</span></div>
+          <div class="hub-card-stat"><strong>190</strong><span>Cities CoL</span></div>
+          <div class="hub-card-stat"><strong>Free</strong><span>Always</span></div>
+        </div>
+        <div class="hub-card-cta">Compare now <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+        <svg class="hub-card-bg-icon" width="140" height="140" viewBox="0 0 24 24" fill="white" stroke="none"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9" stroke="white" stroke-width="2"/></svg>
+      </a>
+
     </div>
 
-    <!-- Compare + Tips quick links -->
+    <!-- Tips quick link -->
     <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
-      <a href="compare.html" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:24px;border:1.5px solid var(--border);background:var(--bg-white);color:var(--text-primary);font-size:0.85rem;font-weight:600;text-decoration:none;transition:border-color 0.15s" onmouseover="this.style.borderColor='#1E3A8A'" onmouseout="this.style.borderColor='var(--border)'">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-        Compare Degrees
-      </a>
       <a href="tips.html" style="display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:24px;border:1.5px solid var(--border);background:var(--bg-white);color:var(--text-primary);font-size:0.85rem;font-weight:600;text-decoration:none;transition:border-color 0.15s" onmouseover="this.style.borderColor='#4338CA'" onmouseout="this.style.borderColor='var(--border)'">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         Student Tips Guide
@@ -853,13 +869,18 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo">
-          <img src="assets/logo.png" alt="FreeStudentTools" style="height:48px;width:auto;filter:brightness(0) invert(1);opacity:0.9">
-        </div>
-        <p>Free browser-based document tools for students. No uploads, no storage, no fees — ever.</p>
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">
-        <h5>Tools</h5>
+        <h5>University Hub</h5>
+        <a href="admissions.html">Admissions Tracker</a>
+        <a href="scholarships.html">Scholarships Finder</a>
+        <a href="compare.html">Compare Degrees</a>
+        <a href="tips.html">Student Tips</a>
+      </div>
+      <div class="footer-col">
+        <h5>Document Tools</h5>
         <a href="ocr.html">OCR Scanner</a>
         <a href="pdf-converter.html">PDF to Word / Excel</a>
         <a href="compressor.html">PDF Compressor</a>
@@ -869,11 +890,7 @@
         <a href="citation-generator.html">Citation Generator</a>
       </div>
       <div class="footer-col">
-        <h5>Student Hub</h5>
-        <a href="admissions.html">Admission Deadlines</a>
-        <a href="scholarships.html">Scholarships</a>
-        <a href="compare.html">Compare Degrees</a>
-        <a href="tips.html">Student Tips</a>
+        <h5>Info</h5>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy Policy</a>
@@ -881,12 +898,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 FreeStudentTools.com — All tools are free to use.</span>
-      <div>
-        <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
-        <a href="terms.html">Terms</a> &nbsp;·&nbsp;
-        <a href="contact.html">Contact</a>
-      </div>
+      <span>&copy; 2026 FreeStudentTools.com</span>
+      <div><a href="privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="terms.html">Terms</a></div>
     </div>
   </div>
 </footer>
