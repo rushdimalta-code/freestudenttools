@@ -1,4 +1,4 @@
 window.UNI_DATA = {
-  "lastUpdated": "2026-04-21",
+  "lastUpdated": "2026-04-22",
   "universities": []
 };
