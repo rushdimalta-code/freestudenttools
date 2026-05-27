@@ -1,4 +1,4 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-05-26",
+  "lastUpdated": "2026-05-27",
   "scholarships": []
 };
