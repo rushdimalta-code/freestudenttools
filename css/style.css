@@ -1444,3 +1444,304 @@ footer {
   text-decoration: none;
   transform: translateY(-2px);
 }
+
+/* ===== SCROLL ENTRANCE ANIMATIONS ===== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1), transform 0.55s cubic-bezier(0.4,0,0.2,1);
+}
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-animate][data-delay="1"] { transition-delay: 0.08s; }
+[data-animate][data-delay="2"] { transition-delay: 0.16s; }
+[data-animate][data-delay="3"] { transition-delay: 0.24s; }
+[data-animate][data-delay="4"] { transition-delay: 0.32s; }
+[data-animate][data-delay="5"] { transition-delay: 0.40s; }
+[data-animate][data-delay="6"] { transition-delay: 0.48s; }
+[data-animate][data-delay="7"] { transition-delay: 0.56s; }
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] { opacity: 1; transform: none; transition: none; }
+}
+
+/* ===== SCHOLARSHIP / ADMISSIONS CARD UPGRADES ===== */
+.schol-card, .uni-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+.schol-card:hover, .uni-card:hover {
+  border-color: var(--primary-border);
+  box-shadow: 0 8px 24px rgba(26,115,232,0.1);
+  transform: translateY(-2px);
+}
+
+/* Amount badges */
+.amount-badge { display:inline-flex; align-items:center; font-size:0.72rem; font-weight:700; padding:3px 10px; border-radius:12px; text-transform:uppercase; letter-spacing:0.04em; }
+.amount-full { background:#DCFCE7; color:#14532d; }
+.amount-partial { background:#FEF9C3; color:#713F12; }
+.amount-tuition { background:#DBEAFE; color:#1e3a8a; }
+.amount-living { background:#F0FDF4; color:#15803D; }
+.amount-varies { background:#F1F5F9; color:#475569; }
+
+/* Status blocks */
+.status-block { display:inline-flex; align-items:center; gap:6px; font-size:0.78rem; font-weight:600; padding:4px 10px; border-radius:12px; }
+.status-dot { width:7px; height:7px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.status-open { background:#DCFCE7; color:#15803D; }
+.status-warning { background:#FEF3C7; color:#92400E; }
+.status-upcoming { background:#EFF6FF; color:#1D4ED8; }
+.status-closed { background:#F1F5F9; color:#64748B; }
+
+/* Level badges */
+.level-badge { display:inline-flex; align-items:center; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:8px; margin-right:4px; margin-bottom:4px; }
+.level-bachelor { background:#EDE9FE; color:#5B21B6; }
+.level-master { background:#DBEAFE; color:#1E40AF; }
+.level-phd { background:#FEE2E2; color:#991B1B; }
+
+/* Tags */
+.tag { display:inline-flex; align-items:center; font-size:0.72rem; font-weight:500; padding:2px 8px; border-radius:6px; background:#F1F5F9; color:#475569; margin-right:4px; margin-bottom:4px; }
+.tag-more { background:#EFF6FF; color:#1D4ED8; font-weight:700; }
+
+/* Scholarship card layout */
+.schol-card-body { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:20px 20px 0; }
+.schol-meta { flex:1; min-width:0; }
+.schol-top { display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
+.schol-name { font-size:1.05rem; font-weight:700; color:var(--text-primary); margin:4px 0 6px; }
+.schol-provider { font-size:0.82rem; color:var(--text-muted); margin-bottom:8px; }
+.schol-amount-desc { font-size:0.85rem; color:var(--text-secondary); margin-bottom:10px; line-height:1.5; }
+.schol-tags { display:flex; flex-wrap:wrap; gap:3px; }
+.schol-aside { display:flex; flex-direction:column; align-items:flex-end; gap:6px; min-width:120px; }
+.schol-deadline { display:flex; align-items:center; gap:5px; font-size:0.78rem; font-weight:600; color:var(--text-secondary); }
+.schol-deadline.urgent { color:var(--error); }
+.competition-level { display:inline-flex; align-items:center; gap:4px; font-size:0.72rem; font-weight:600; padding:3px 8px; border-radius:8px; background:#FFF7ED; color:#92400E; }
+.schol-card-footer { display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-top:1px solid #F1F5F9; margin-top:14px; }
+.schol-expanded { border-top:1px solid #EFF6FF; background:#FAFBFF; padding:20px; }
+.expanded-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:14px; }
+.exp-block h4 { font-size:0.85rem; font-weight:700; color:var(--text-primary); margin-bottom:8px; display:flex; align-items:center; }
+.exp-block p { font-size:0.85rem; color:var(--text-secondary); line-height:1.6; }
+.requirements-list { list-style:disc; padding-left:18px; }
+.requirements-list li { font-size:0.84rem; color:var(--text-secondary); margin-bottom:4px; }
+.exp-note { background:#EFF6FF; border-left:3px solid var(--primary); padding:10px 14px; border-radius:0 var(--radius-sm) var(--radius-sm) 0; font-size:0.84rem; color:var(--text-secondary); margin-bottom:14px; line-height:1.6; }
+.exp-dates { display:flex; gap:20px; margin-bottom:14px; }
+.exp-date-item { display:flex; flex-direction:column; gap:2px; }
+.exp-date-item span { font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--text-muted); }
+.exp-date-item strong { font-size:0.9rem; color:var(--text-primary); }
+.schol-apply-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.schol-country-note { font-size:0.78rem; color:var(--text-muted); margin-top:12px; line-height:1.5; display:flex; align-items:flex-start; gap:5px; }
+.flag-country { display:inline-flex; align-items:center; gap:4px; font-size:0.82rem; color:var(--text-secondary); }
+
+/* University cards */
+.uni-card { padding:0; }
+.uni-card-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding:18px 20px 14px; }
+.uni-meta { flex:1; min-width:0; }
+.uni-rank-flag { display:flex; align-items:center; gap:6px; margin-bottom:6px; }
+.rank-badge { background:var(--primary); color:white; font-size:0.7rem; font-weight:800; padding:2px 8px; border-radius:8px; }
+.flag-emoji { font-size:1rem; }
+.uni-country { font-size:0.78rem; color:var(--text-muted); font-weight:500; }
+.uni-name { font-size:1.05rem; font-weight:700; margin:4px 0 8px; }
+.uni-name a { color:var(--text-primary); text-decoration:none; }
+.uni-name a:hover { color:var(--primary); text-decoration:underline; }
+.uni-tags { display:flex; flex-wrap:wrap; gap:3px; }
+.uni-card-aside { display:flex; flex-direction:column; align-items:flex-end; gap:6px; min-width:120px; }
+.deadline-display { display:flex; align-items:center; gap:5px; font-size:0.78rem; font-weight:600; color:var(--text-secondary); }
+.uni-levels { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:3px; }
+.accom-badge { display:inline-flex; align-items:center; gap:4px; font-size:0.72rem; font-weight:600; background:#ECFDF5; color:#065F46; padding:3px 8px; border-radius:8px; }
+.uni-card-footer { display:flex; align-items:center; justify-content:space-between; padding:12px 20px; border-top:1px solid #F1F5F9; }
+.uni-expanded { border-top:1px solid #EFF6FF; background:#FAFBFF; }
+.expanded-section { padding:16px 20px; border-bottom:1px solid #F1F5F9; }
+.expanded-section:last-child { border-bottom:none; }
+.expanded-section h4 { font-size:0.875rem; font-weight:700; color:var(--text-primary); margin-bottom:10px; display:flex; align-items:center; gap:5px; }
+.table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.deadlines-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+.deadlines-table th { background:#F8FAFC; font-weight:700; color:var(--text-secondary); padding:8px 10px; text-align:left; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; border-bottom:1px solid var(--border); white-space:nowrap; }
+.deadlines-table td { padding:10px 10px; border-bottom:1px solid #F1F5F9; color:var(--text-primary); white-space:nowrap; }
+.deadlines-table tr:last-child td { border-bottom:none; }
+.status-pill { display:inline-block; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:8px; }
+.apply-link { font-weight:700; font-size:0.82rem; color:var(--primary); text-decoration:none; }
+.apply-link:hover { text-decoration:underline; }
+.accom-section h4 { color:#065F46; }
+.accom-na h4 { color:var(--text-muted); }
+.accom-types { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
+.accom-type-tag { background:#ECFDF5; color:#065F46; font-size:0.75rem; font-weight:600; padding:3px 9px; border-radius:8px; }
+.accom-link { font-size:0.82rem; color:var(--primary); text-decoration:none; font-weight:600; }
+.accom-link:hover { text-decoration:underline; }
+.no-results { text-align:center; padding:48px 24px; color:var(--text-muted); }
+.no-results p { font-size:1rem; color:var(--text-secondary); margin:12px 0 16px; }
+.uni-grid { display:flex; flex-direction:column; gap:0; }
+.scholarship-list { display:flex; flex-direction:column; gap:0; }
+.results-toolbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; gap:12px; flex-wrap:wrap; }
+.result-count { font-weight:600; color:var(--text-primary); font-size:0.95rem; margin:0; }
+.sort-wrap { display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-muted); }
+.sort-wrap select { font-size:0.85rem; padding:5px 10px; border-radius:var(--radius-sm); border:1px solid var(--border); background:white; color:var(--text-primary); }
+
+/* Scholar + Admissions layout */
+.scholar-body, .admissions-body { display:grid; grid-template-columns:220px 1fr; gap:24px; padding-top:24px; align-items:start; }
+@media (max-width:768px) { .scholar-body, .admissions-body { grid-template-columns:1fr; } }
+.filter-sidebar { background:#F8FAFC; border:1.5px solid var(--border); border-radius:var(--radius-lg); padding:20px; position:sticky; top:80px; }
+.filter-sidebar h3 { font-size:0.875rem; font-weight:700; color:var(--text-primary); margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
+.filter-sidebar h3 a { font-size:0.78rem; font-weight:600; color:var(--primary); cursor:pointer; }
+.filter-group { margin-bottom:14px; }
+.filter-group label { display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px; }
+.filter-group select, .filter-group input[type="date"] { width:100%; padding:7px 10px; border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:0.85rem; color:var(--text-primary); background:white; transition:border-color 0.15s; }
+.filter-group select:focus, .filter-group input:focus { outline:none; border-color:var(--primary); }
+.filter-checkbox { display:flex; align-items:center; gap:8px; font-size:0.875rem; color:var(--text-secondary); font-weight:500; cursor:pointer; }
+.filter-checkbox input { width:16px; height:16px; accent-color:var(--primary); }
+.date-range-presets { display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
+.preset-btn { font-size:0.72rem; font-weight:600; padding:3px 8px; border:1.5px solid var(--border); border-radius:8px; background:white; color:var(--text-secondary); cursor:pointer; transition:all 0.15s; }
+.preset-btn:hover { border-color:var(--primary); color:var(--primary); background:var(--primary-light); }
+
+/* Loading shimmer */
+.loading-shimmer { background:linear-gradient(90deg,#F1F5F9 25%,#E2E8F0 37%,#F1F5F9 63%); background-size:400% 100%; animation:shimmer 1.4s ease infinite; border-radius:var(--radius-md); }
+@keyframes shimmer { 0%{background-position:100% 50%} 100%{background-position:0 50%} }
+
+/* Cost of living grid */
+.col-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+@media (max-width:600px) { .col-grid { grid-template-columns:1fr; } .expanded-cols { grid-template-columns:1fr; } }
+
+/* ===== HOMEPAGE VISUAL UPGRADE ===== */
+
+/* Animated gradient text on hero headline */
+@keyframes gradient-pan {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.hero-h1-gradient {
+  background: linear-gradient(135deg, #93C5FD, #C4B5FD, #67E8F9, #93C5FD);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-pan 6s ease infinite;
+}
+
+/* Floating hero orbs */
+@keyframes orb-float-a {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50% { transform: translate(-20px,-30px) scale(1.08); }
+}
+@keyframes orb-float-b {
+  0%,100% { transform: translate(0,0) scale(1); }
+  40% { transform: translate(15px,20px) scale(0.95); }
+  80% { transform: translate(-10px,-10px) scale(1.04); }
+}
+@keyframes orb-float-c {
+  0%,100% { transform: translate(0,0); opacity:.4; }
+  50% { transform: translate(10px,-15px); opacity:.7; }
+}
+.hero-orb {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; will-change: transform; z-index: 0;
+}
+.hero-orb.orb-a {
+  width: 520px; height: 520px; top: -200px; right: -100px;
+  background: radial-gradient(circle, rgba(99,102,241,.45) 0%, transparent 70%);
+  filter: blur(50px);
+  animation: orb-float-a 9s ease-in-out infinite;
+}
+.hero-orb.orb-b {
+  width: 380px; height: 380px; bottom: -180px; left: -60px;
+  background: radial-gradient(circle, rgba(16,185,129,.3) 0%, transparent 70%);
+  filter: blur(48px);
+  animation: orb-float-b 13s ease-in-out infinite;
+}
+.hero-orb.orb-c {
+  width: 250px; height: 250px; top: 45%; left: 35%;
+  background: radial-gradient(circle, rgba(59,130,246,.35) 0%, transparent 65%);
+  filter: blur(36px);
+  animation: orb-float-c 7s ease-in-out 1.5s infinite;
+}
+.hero > .container { position: relative; z-index: 1; }
+
+/* Shimmer CTA button */
+@keyframes btn-shine {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.btn-cta-shine {
+  background: linear-gradient(135deg, #1d4ed8 0%, #4F46E5 35%, #7C3AED 65%, #1d4ed8 100%);
+  background-size: 300% 100%;
+  animation: btn-shine 3.5s linear infinite;
+  border: none; color: white;
+  box-shadow: 0 4px 20px rgba(79,70,229,.4), 0 1px 4px rgba(0,0,0,.15);
+}
+.btn-cta-shine:hover {
+  color: white; text-decoration: none;
+  box-shadow: 0 6px 30px rgba(79,70,229,.55), 0 2px 8px rgba(0,0,0,.15);
+  animation-duration: 1.8s;
+}
+
+/* Tool card visible top accent stripe */
+.tc-top-stripe {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  opacity: .45; transition: opacity .2s;
+}
+.tool-card-home:hover .tc-top-stripe { opacity: 1; }
+.tc-top-stripe.stripe-blue    { background: linear-gradient(90deg, #1A73E8, #60A5FA); }
+.tc-top-stripe.stripe-green   { background: linear-gradient(90deg, #10B981, #34D399); }
+.tc-top-stripe.stripe-purple  { background: linear-gradient(90deg, #7C3AED, #A78BFA); }
+.tc-top-stripe.stripe-orange  { background: linear-gradient(90deg, #F7941D, #FBBF24); }
+.tc-top-stripe.stripe-navy    { background: linear-gradient(90deg, #1E3A8A, #3B82F6); }
+.tc-top-stripe.stripe-emerald { background: linear-gradient(90deg, #059669, #34D399); }
+
+/* Colored glow on card hover */
+.tool-card-home.c-blue:hover   { box-shadow: 0 12px 36px rgba(26,115,232,.18), var(--shadow-lg); }
+.tool-card-home.c-green:hover  { box-shadow: 0 12px 36px rgba(16,185,129,.18), var(--shadow-lg); }
+.tool-card-home.c-purple:hover { box-shadow: 0 12px 36px rgba(124,58,237,.18), var(--shadow-lg); }
+.tool-card-home.c-orange:hover { box-shadow: 0 12px 36px rgba(247,148,29,.18), var(--shadow-lg); }
+.tool-card-home.c-navy:hover   { box-shadow: 0 12px 36px rgba(30,58,138,.18), var(--shadow-lg); }
+.tool-card-home.c-emerald:hover{ box-shadow: 0 12px 36px rgba(5,150,105,.18), var(--shadow-lg); }
+
+/* Hub card glow boost */
+.hub-card-admissions:hover  { box-shadow: 0 28px 52px rgba(30,58,138,.45) !important; }
+.hub-card-scholarships:hover{ box-shadow: 0 28px 52px rgba(6,95,70,.45) !important; }
+.hub-card-compare:hover     { box-shadow: 0 28px 52px rgba(67,56,202,.45) !important; }
+
+/* Daily spotlight strip */
+.spotlight-strip {
+  background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 60%, #0F172A 100%);
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.spotlight-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; flex-wrap: wrap; font-size: 0.82rem;
+}
+.spotlight-chip {
+  background: linear-gradient(135deg, #7C3AED, #4F46E5);
+  color: white; font-weight: 700; font-size: 0.68rem;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  padding: 3px 12px; border-radius: 20px; flex-shrink: 0;
+}
+.spotlight-text { color: rgba(255,255,255,.82); font-weight: 500; }
+.spotlight-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  color: #93C5FD; font-weight: 700; text-decoration: none;
+}
+.spotlight-link:hover { color: #BAE6FD; text-decoration: none; }
+.spotlight-link svg { transition: transform .15s; }
+.spotlight-link:hover svg { transform: translateX(3px); }
+
+/* Section heading gradient underline */
+.section-h-accent { position: relative; display: inline-block; }
+.section-h-accent::after {
+  content: ''; position: absolute; bottom: -10px; left: 0;
+  width: 44px; height: 3px;
+  background: linear-gradient(90deg, var(--primary), #7C3AED);
+  border-radius: 2px;
+}
+
+/* Tools section soft gradient bg */
+.tools-section { background: linear-gradient(180deg, #F8FAFF 0%, #fff 100%); }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-orb { animation: none !important; }
+  .btn-cta-shine { animation: none !important; background: #1d4ed8; }
+  .hero-h1-gradient { animation: none !important; }
+}

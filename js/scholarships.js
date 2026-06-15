@@ -11,7 +11,7 @@
     all: [],
     filtered: [],
     page: 1,
-    perPage: 10,
+    perPage: 200,
     search: '',
     country: '',
     stream: '',

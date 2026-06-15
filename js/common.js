@@ -1,5 +1,4 @@
 // ===== GOOGLE ANALYTICS 4 =====
-// Replace G-XXXXXXXXXX with your actual GA4 Measurement ID
 const GA_MEASUREMENT_ID = 'G-WX0M0TK16J';
 
 function initGA() {
@@ -86,6 +85,25 @@ function initCookieConsent() {
     banner.classList.remove('show');
   });
 }
+
+// ===== SCROLL ENTRANCE ANIMATIONS =====
+(function () {
+  const els = document.querySelectorAll('[data-animate]');
+  if (!els.length) return;
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(el) { el.classList.add('is-visible'); });
+    return;
+  }
+  const io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(function(el) { io.observe(el); });
+})();
 
 // ===== UTILITIES =====
 function formatBytes(bytes) {

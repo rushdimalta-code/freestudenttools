@@ -1,681 +1,180 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-06-15",
+  "lastUpdated": "2026-06-16",
   "scholarships": [
-    {
-      "id": "fulbright_foreign",
-      "name": "Fulbright Foreign Student Program",
-      "provider": "U.S. Department of State",
-      "university": null,
-      "country": "United States",
-      "countryCode": "US",
-      "amountType": "full",
-      "amountDesc": "Full tuition, living stipend, health insurance, and return airfare",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Non-U.S. citizens applying to study at a U.S. university. Eligibility varies by country — check your country's Fulbright Commission.",
-      "requirements": [
-        "Bachelor's degree (or equivalent)",
-        "English proficiency (TOEFL/IELTS)",
-        "Strong academic record",
-        "Leadership and community engagement",
-        "Apply through your country's Fulbright Commission"
-      ],
-      "notes": "One of the most prestigious international scholarships. Very high competition. Each country has its own application portal and deadlines.",
-      "deadline": "2026-10-15",
-      "notificationDate": "2027-03-01",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://foreign.fulbrightonline.org"
-    },
-    {
-      "id": "chevening",
-      "name": "Chevening Scholarship",
-      "provider": "UK Government (FCDO)",
-      "university": null,
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly living allowance, flights, and travel grant",
-      "levels": ["Master"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of Chevening-eligible countries with at least 2 years of work experience. Must return to home country for at least 2 years after studying.",
-      "requirements": [
-        "At least 2 years of work or voluntary experience",
-        "Bachelor's degree with upper second-class honours (2:1) or equivalent",
-        "English language requirement (IELTS, TOEFL, or equivalent)",
-        "Apply to at least 3 eligible UK universities simultaneously",
-        "Commitment to return home after study"
-      ],
-      "notes": "Funded by the UK Foreign, Commonwealth & Development Office. Applications open annually in August and close in November.",
-      "deadline": "2026-11-04",
-      "notificationDate": "2027-06-01",
-      "status": "upcoming",
-      "competitionLevel": "Very High",
-      "link": "https://www.chevening.org/scholarships"
-    },
-    {
-      "id": "gates_cambridge",
-      "name": "Gates Cambridge Scholarship",
-      "provider": "Bill & Melinda Gates Foundation",
-      "university": "University of Cambridge",
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "full",
-      "amountDesc": "Full cost of study including tuition, maintenance allowance, and flights",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of any country outside the UK applying to a full-time postgraduate degree at Cambridge. Selected on academic merit, leadership, and commitment to improving lives of others.",
-      "requirements": [
-        "Apply for admission to the University of Cambridge first",
-        "First-class undergraduate degree (or equivalent)",
-        "Evidence of leadership and social commitment",
-        "Research proposal (for PhD applicants)",
-        "References from academic supervisors"
-      ],
-      "notes": "US citizens have a separate round (Round 1). All other nationalities apply in Round 2. Competition is extremely high — fewer than 1% of applicants receive the award.",
-      "deadline": "2026-12-03",
-      "notificationDate": "2027-04-01",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://www.gatescambridge.org"
-    },
-    {
-      "id": "rhodes",
-      "name": "Rhodes Scholarship",
-      "provider": "Rhodes Trust",
-      "university": "University of Oxford",
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly stipend, travel grant, and health insurance",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of selected countries aged 18–28 (varies by country). Must demonstrate academic excellence, character, leadership, and commitment to others.",
-      "requirements": [
-        "Bachelor's degree with outstanding academic record",
-        "Evidence of leadership and community involvement",
-        "Apply through your country's Rhodes Secretariat",
-        "Must be between 18 and 28 years old (varies by country)",
-        "Physical vigour"
-      ],
-      "notes": "The world's oldest and most celebrated international scholarship. Available to students from over 60 countries worldwide.",
-      "deadline": "2026-10-01",
-      "notificationDate": "2026-11-30",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://www.rhodeshouse.ox.ac.uk/scholarships"
-    },
-    {
-      "id": "clarendon_oxford",
-      "name": "Clarendon Fund Scholarship",
-      "provider": "University of Oxford",
-      "university": "University of Oxford",
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "full",
-      "amountDesc": "Full tuition fees and a generous living expenses grant",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Open to any nationality. Awarded automatically to the highest-ranked applicants applying for graduate study at Oxford — no separate application required.",
-      "requirements": [
-        "Apply for graduate admission to Oxford in the normal way",
-        "First-class undergraduate degree or equivalent",
-        "No separate scholarship application needed",
-        "Automatically considered when you submit your Oxford application"
-      ],
-      "notes": "You are automatically considered when you apply to Oxford — no additional form required. Awards are made on academic merit.",
-      "deadline": "2027-01-22",
-      "notificationDate": "2027-03-15",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://www.ox.ac.uk/clarendon"
-    },
-    {
-      "id": "daad_master",
-      "name": "DAAD Scholarships for Development-Related Postgraduate Courses",
-      "provider": "DAAD (German Academic Exchange Service)",
-      "university": null,
-      "country": "Germany",
-      "countryCode": "DE",
-      "amountType": "full",
-      "amountDesc": "Monthly stipend, travel costs, health insurance, and study/research allowance",
-      "levels": ["Master", "PhD"],
-      "streams": ["Engineering", "Environmental Science", "Agriculture", "Public Health", "Social Sciences", "Economics"],
-      "eligibility": "Graduates from developing countries with at least 2 years of professional experience after completing their first degree. Candidates should intend to return to their home country after study.",
-      "requirements": [
-        "Bachelor's degree (at least equivalent to German Diplom/Master)",
-        "At least 2 years of work experience after graduation",
-        "Proof of English or German language proficiency",
-        "Nomination by a German university (for some programs)",
-        "Statement of purpose and CV"
-      ],
-      "notes": "Germany charges no tuition fees at public universities. DAAD covers living costs and health insurance. Check the DAAD portal for specific program deadlines.",
-      "deadline": "2026-10-31",
-      "notificationDate": "2027-02-01",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships"
-    },
-    {
-      "id": "mext_japan",
-      "name": "MEXT Japanese Government Scholarship",
-      "provider": "Ministry of Education, Culture, Sports, Science and Technology (Japan)",
-      "university": null,
-      "country": "Japan",
-      "countryCode": "JP",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly stipend (¥117,000–¥145,000), and return airfare",
-      "levels": ["Bachelor", "Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of countries with diplomatic relations with Japan. Age limit varies by category. Strong academic record required.",
-      "requirements": [
-        "Nationality of a country with Japanese diplomatic relations",
-        "Strong academic performance (usually top of class)",
-        "Physical and mental health",
-        "Japanese or English language ability",
-        "Apply through the Japanese Embassy or Consulate in your home country"
-      ],
-      "notes": "Apply through the Japanese Embassy in your home country. Separate streams exist for undergraduates, research students, and teacher training. Applications typically open in April/May.",
-      "deadline": "2026-06-15",
-      "notificationDate": "2026-12-01",
-      "status": "open",
-      "competitionLevel": "High",
-      "link": "https://www.mext.go.jp/en/policy/education/highered/title02/detail02/sdetail02/1373897.htm"
-    },
-    {
-      "id": "gks_korea",
-      "name": "Global Korea Scholarship (GKS)",
-      "provider": "National Institute for International Education (NIIED), South Korea",
-      "university": null,
-      "country": "South Korea",
-      "countryCode": "KR",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly allowance (KRW 900,000–1,000,000), Korean language training, and airfare",
-      "levels": ["Bachelor", "Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of GKS-eligible countries aged under 25 (undergraduate) or under 40 (graduate). Must not be a Korean citizen. Strong academic record required.",
-      "requirements": [
-        "Citizen of a GKS-eligible country",
-        "GPA of 80% or above in most recent studies",
-        "Age: under 25 for undergraduate, under 40 for graduate",
-        "Medical certificate of good health",
-        "Apply through the Korean Embassy or directly to a Korean university"
-      ],
-      "notes": "Two application tracks: Embassy Track (apply at Korean Embassy abroad) and University Track (apply directly to a Korean university). Embassy track is more competitive.",
-      "deadline": "2026-09-20",
-      "notificationDate": "2027-01-15",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.studyinkorea.go.kr/en/sub/gks/allnew_gks_k.do"
-    },
-    {
-      "id": "csc_china",
-      "name": "Chinese Government Scholarship (CSC)",
-      "provider": "China Scholarship Council (CSC)",
-      "university": null,
-      "country": "China",
-      "countryCode": "CN",
-      "amountType": "full",
-      "amountDesc": "Full tuition, accommodation on campus, monthly living allowance (CNY 2,500–3,500), and comprehensive medical insurance",
-      "levels": ["Bachelor", "Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Non-Chinese citizens aged under 25 (undergraduate) or under 35/40 (graduate). Good academic standing. Health requirements apply.",
-      "requirements": [
-        "Non-Chinese citizen in good health",
-        "High school diploma for undergraduate; bachelor's degree for master's; master's degree for PhD",
-        "Age limit: ≤25 for undergrad, ≤35 for master's, ≤40 for PhD",
-        "Study plan or research proposal",
-        "Two academic recommendation letters"
-      ],
-      "notes": "Applications for the 2027 intake typically open in March 2027. Apply via the CSC online portal or through your home country's Chinese Embassy. Many Chinese universities also have their own CSC-funded scholarships.",
-      "deadline": "2027-03-31",
-      "notificationDate": "2027-06-30",
-      "status": "upcoming",
-      "competitionLevel": "Medium",
-      "link": "https://www.campuschina.org/scholarships/index.html"
-    },
-    {
-      "id": "erasmus_mundus",
-      "name": "Erasmus Mundus Joint Programmes",
-      "provider": "European Commission",
-      "university": null,
-      "country": "European Union",
-      "countryCode": "EU",
-      "amountType": "full",
-      "amountDesc": "Full tuition waiver, monthly allowance (€1,000–€1,400), travel and installation costs",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Open to students worldwide. You apply to a specific Erasmus Mundus programme (there are 200+ joint programmes). Most accept students from all nationalities.",
-      "requirements": [
-        "Bachelor's degree for master's programmes; master's degree for doctoral programmes",
-        "Language proficiency (English, French, or programme-specific language)",
-        "Motivation letter and CV",
-        "Academic transcripts and references",
-        "Apply directly to your chosen Erasmus Mundus programme"
-      ],
-      "notes": "Deadlines vary by programme — typically between November and February. You must apply to the specific joint programme, not to the EU centrally. Browse programmes at the official catalogue.",
-      "deadline": "2027-01-15",
-      "notificationDate": "2027-04-30",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
-    },
-    {
-      "id": "commonwealth_master",
-      "name": "Commonwealth Master's Scholarship",
-      "provider": "Commonwealth Scholarship Commission (UK)",
-      "university": null,
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "full",
-      "amountDesc": "Full tuition fees, living allowance, airfare, and thesis grant",
-      "levels": ["Master"],
-      "streams": ["Science", "Engineering", "Public Health", "Agriculture", "Social Sciences", "Humanities"],
-      "eligibility": "Citizens of eligible Commonwealth countries who are unable to afford to study in the UK without this scholarship. Applicants must be in their home country at the time of applying.",
-      "requirements": [
-        "Citizen of an eligible Commonwealth country",
-        "First degree with at least upper second-class (2:1) honours",
-        "Commitment to development of your home country",
-        "Must be in your home country at time of application",
-        "Apply through your country's nominating agency"
-      ],
-      "notes": "Applications are made through your country's nominating agency — not directly to the Commission. Contact your national agency early as they set their own internal deadlines.",
-      "deadline": "2026-12-15",
-      "notificationDate": "2027-05-01",
-      "status": "upcoming",
-      "competitionLevel": "Very High",
-      "link": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships"
-    },
-    {
-      "id": "australia_awards",
-      "name": "Australia Awards Scholarships",
-      "provider": "Australian Government (DFAT)",
-      "university": null,
-      "country": "Australia",
-      "countryCode": "AU",
-      "amountType": "full",
-      "amountDesc": "Full tuition, return airfare, establishment allowance, living expenses, and health cover",
-      "levels": ["Bachelor", "Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of eligible developing countries in the Indo-Pacific region, Africa, Middle East, and other areas. Must be a citizen and living in the home country at the time of applying.",
-      "requirements": [
-        "Citizen of an Australia Awards eligible country",
-        "Residing in your home country at the time of applying",
-        "Meet academic requirements set by Australian universities",
-        "English language proficiency (IELTS, TOEFL, or equivalent)",
-        "Return to home country for at least 2 years after studying"
-      ],
-      "notes": "Application periods vary by country — most open between February and April each year. Check the Australia Awards website for your country's specific dates.",
-      "deadline": "2027-04-30",
-      "notificationDate": "2027-09-01",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.australiaawards.gov.au"
-    },
-    {
-      "id": "swiss_excellence",
-      "name": "Swiss Government Excellence Scholarships",
-      "provider": "Swiss Confederation",
-      "university": null,
-      "country": "Switzerland",
-      "countryCode": "CH",
-      "amountType": "full",
-      "amountDesc": "Monthly stipend (CHF 1,920), housing allowance, health insurance, and Swiss travel pass",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of eligible countries with a university degree. Applicants must contact the Swiss Embassy or the relevant national body in their country.",
-      "requirements": [
-        "Bachelor's or master's degree as appropriate",
-        "Excellent academic record",
-        "Research proposal (for research scholarships)",
-        "Approval of a Swiss host institution",
-        "Apply through the Swiss Embassy or national agency in your country"
-      ],
-      "notes": "Switzerland offers research and postgraduate scholarships. Applications must go through the Swiss Embassy or a specific national authority in your home country. Deadlines are usually between October and December for the following academic year.",
-      "deadline": "2026-12-01",
-      "notificationDate": "2027-03-01",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html"
-    },
-    {
-      "id": "aga_khan",
-      "name": "Aga Khan Foundation International Scholarship",
-      "provider": "Aga Khan Foundation",
-      "university": null,
-      "country": "Various",
-      "countryCode": "GB",
-      "amountType": "partial",
-      "amountDesc": "50% grant / 50% loan package. Covers tuition and living costs at study destination",
-      "levels": ["Master"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of select developing countries who lack the means to fund postgraduate study abroad. Applicants must demonstrate outstanding academic ability and financial need.",
-      "requirements": [
-        "Citizen of an AKF eligible developing country",
-        "Bachelor's degree with outstanding academic record",
-        "Demonstrated financial need",
-        "Must have been unable to secure funding elsewhere",
-        "Apply through your national AKF office"
-      ],
-      "notes": "Awarded to students who cannot secure adequate funding elsewhere. Half the award is a grant and half is a loan repayable after graduation. Applications typically open in January/February.",
-      "deadline": "2027-03-31",
-      "notificationDate": "2027-06-30",
-      "status": "upcoming",
-      "competitionLevel": "Very High",
-      "link": "https://the.akdn/en/resources-media/resources/grants-scholarships/aga-khan-foundation-international-scholarship-programme"
-    },
-    {
-      "id": "rotary_peace",
-      "name": "Rotary Peace Fellowship",
-      "provider": "Rotary International",
-      "university": null,
-      "country": "Various",
-      "countryCode": "US",
-      "amountType": "full",
-      "amountDesc": "Full tuition, accommodation, travel, and living expenses",
-      "levels": ["Master"],
-      "streams": ["Social Sciences", "Politics", "Humanities", "Economics", "Public Health"],
-      "eligibility": "Professionals with at least 3 years of relevant work experience in peace and conflict resolution fields. Awarded to study at one of seven Rotary Peace Centres worldwide.",
-      "requirements": [
-        "At least 3 years of relevant full-time work experience",
-        "Bachelor's degree",
-        "Proficiency in English (and ideally the language of the host country)",
-        "Demonstrated commitment to peace and cross-cultural understanding",
-        "Apply through your local Rotary club or district"
-      ],
-      "notes": "Study locations include Duke, University of Bradford, Uppsala, Chulalongkorn, Makerere, International Christian University (Tokyo), and University of Queensland. Applications open May 1 each year.",
-      "deadline": "2026-11-15",
-      "notificationDate": "2027-04-01",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://www.rotary.org/en/our-programs/peace-fellowships"
-    },
-    {
-      "id": "schwarzman_scholars",
-      "name": "Schwarzman Scholars",
-      "provider": "Schwarzman Scholars",
-      "university": "Tsinghua University",
-      "country": "China",
-      "countryCode": "CN",
-      "amountType": "full",
-      "amountDesc": "Full tuition, accommodation in Schwarzman College, travel, and living stipend",
-      "levels": ["Master"],
-      "streams": ["Business", "Public Policy", "International Relations", "Economics", "Social Sciences"],
-      "eligibility": "Students and young professionals aged 18–28 from any country who show leadership potential. Focuses on global leadership in the context of China.",
-      "requirements": [
-        "Bachelor's degree or final year undergraduate",
-        "Age: 18–28 by August 1 of the year of enrollment",
-        "Demonstrated leadership and excellence",
-        "Strong command of English",
-        "No prior knowledge of Chinese required"
-      ],
-      "notes": "One-year Master's in Global Affairs at Tsinghua University, Beijing. Designed to prepare future leaders to navigate the US-China relationship and global challenges.",
-      "deadline": "2026-09-24",
-      "notificationDate": "2027-02-28",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://www.schwarzmanscholars.org"
-    },
-    {
-      "id": "knight_hennessy",
-      "name": "Knight-Hennessy Scholars",
-      "provider": "Knight-Hennessy Scholars Program",
-      "university": "Stanford University",
-      "country": "United States",
-      "countryCode": "US",
-      "amountType": "full",
-      "amountDesc": "Full tuition, stipend for living expenses, travel, and enrichment activities",
-      "levels": ["Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Any nationality. Applicants must apply to a Stanford graduate degree simultaneously. Focus on future leaders who demonstrate civic commitment and collaborative leadership.",
-      "requirements": [
-        "Apply for admission to a Stanford graduate program simultaneously",
-        "Bachelor's degree or final year undergraduate",
-        "Any nationality welcomed",
-        "Leadership experience and demonstrated commitment to service",
-        "Two essays and three recommendations required"
-      ],
-      "notes": "Up to 100 scholars selected annually across all Stanford schools. You apply to both the degree program and KH scholarship at the same time. Deadline is set by the Stanford graduate program you apply to.",
-      "deadline": "2026-10-08",
-      "notificationDate": "2027-04-01",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://knight-hennessy.stanford.edu"
-    },
-    {
-      "id": "eth_zurich_excellence",
-      "name": "ETH Zurich Excellence Scholarship & Opportunity Award",
-      "provider": "ETH Zurich",
-      "university": "ETH Zurich",
-      "country": "Switzerland",
-      "countryCode": "CH",
-      "amountType": "partial",
-      "amountDesc": "CHF 12,000 per semester plus fee waiver. Top performers may receive full award.",
-      "levels": ["Master"],
-      "streams": ["Engineering", "Computer Science", "Mathematics", "Physics", "Architecture", "Environmental Science"],
-      "eligibility": "Top students applying to an ETH Zurich master's programme. Must be applying from outside ETH (i.e., graduated from another institution).",
-      "requirements": [
-        "Outstanding academic record in a relevant bachelor's degree",
-        "Applying to an ETH Zurich master's programme",
-        "Must have completed bachelor's degree at a different institution",
-        "Submit excellence scholarship application by the ETH portal deadline",
-        "Letter of motivation and academic transcripts"
-      ],
-      "notes": "One of Europe's top engineering and science universities. Apply before 15 December for the following autumn intake. The full award (ESOP) covers tuition plus a living stipend.",
-      "deadline": "2026-12-15",
-      "notificationDate": "2027-03-01",
-      "status": "upcoming",
-      "competitionLevel": "Very High",
-      "link": "https://ethz.ch/en/studies/financial/scholarships/excellencescholarship.html"
-    },
-    {
-      "id": "nottingham_dev_solutions",
-      "name": "Developing Solutions Scholarship",
-      "provider": "University of Nottingham",
-      "university": "University of Nottingham",
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "full",
-      "amountDesc": "Full tuition fees and living expenses for one year of master's study",
-      "levels": ["Master"],
-      "streams": ["All streams"],
-      "eligibility": "Citizens of Africa, India, or Commonwealth countries outside the UK. Must have a strong academic record and genuine financial need.",
-      "requirements": [
-        "Citizen of Africa, India, or an eligible Commonwealth country",
-        "Unconditional or conditional offer from University of Nottingham",
-        "First-class or strong upper-second bachelor's degree",
-        "Personal statement demonstrating development impact",
-        "Evidence of financial need"
-      ],
-      "notes": "20 scholarships awarded annually. Prioritises applicants who plan to use their degree for development in their home country. Applications typically open in February.",
-      "deadline": "2026-06-01",
-      "notificationDate": "2026-09-01",
-      "status": "open",
-      "competitionLevel": "High",
-      "link": "https://www.nottingham.ac.uk/studywithus/international-applicants/scholarships-fees-and-finance/scholarships/developing-solutions-masters-scholarship.aspx"
-    },
-    {
-      "id": "tu_delft_excellence",
-      "name": "TU Delft Excellence Scholarship",
-      "provider": "TU Delft",
-      "university": "TU Delft",
-      "country": "Netherlands",
-      "countryCode": "NL",
-      "amountType": "tuition_only",
-      "amountDesc": "Full tuition waiver for non-EEA students (approx. €18,000–€20,000 per year)",
-      "levels": ["Master"],
-      "streams": ["Engineering", "Computer Science", "Architecture", "Environmental Science", "Mathematics"],
-      "eligibility": "Outstanding non-EEA students applying to a TU Delft master's programme. First degree must be from a non-Dutch university.",
-      "requirements": [
-        "Non-EEA citizenship",
-        "Bachelor's degree from a non-Dutch university in a relevant field",
-        "GPA in top 5–10% of your cohort",
-        "Motivation letter",
-        "Two letters of recommendation"
-      ],
-      "notes": "One of Europe's leading technical universities. The scholarship covers tuition only — you will need to fund your own living costs (approx. €800–€1,200/month in Delft).",
-      "deadline": "2027-01-15",
-      "notificationDate": "2027-03-15",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.tudelft.nl/en/education/practical-matters/scholarships/tu-delft-excellence-scholarships"
-    },
-    {
-      "id": "manchester_gsp",
-      "name": "Manchester Global Scholarship Programme",
-      "provider": "University of Manchester",
-      "university": "University of Manchester",
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "partial",
-      "amountDesc": "Awards range from £5,000 to full tuition, depending on academic merit",
-      "levels": ["Master"],
-      "streams": ["All streams"],
-      "eligibility": "International students (non-UK) applying for a full-time taught master's at the University of Manchester. Awarded on academic merit.",
-      "requirements": [
-        "Accepted offer to a full-time taught master's at Manchester",
-        "Strong academic transcripts",
-        "Personal statement explaining impact of study",
-        "No separate application — automatically considered",
-        "First or high upper-second bachelor's degree"
-      ],
-      "notes": "Competition is intense for full awards. Partial awards are more accessible. Check if your specific programme is included in the scheme.",
-      "deadline": "2026-07-31",
-      "notificationDate": "2026-09-01",
-      "status": "open",
-      "competitionLevel": "High",
-      "link": "https://www.manchester.ac.uk/study/international/finances/funding/scholarships/global-scholarship-programme"
-    },
-    {
-      "id": "endeavour_australia",
-      "name": "Destination Australia Scholarship",
-      "provider": "Australian Government (Department of Education)",
-      "university": null,
-      "country": "Australia",
-      "countryCode": "AU",
-      "amountType": "partial",
-      "amountDesc": "Up to AUD 15,000 per year contribution towards tuition or living costs",
-      "levels": ["Bachelor", "Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Domestic and international students studying at regional Australian universities or campuses. Designed to encourage study in regional Australia.",
-      "requirements": [
-        "Enrolled in or applying to an eligible regional Australian university",
-        "Domestic or international student",
-        "Meet the admission requirements of the institution",
-        "Study in a regional or remote location in Australia",
-        "Apply through participating institutions"
-      ],
-      "notes": "Offered through participating regional universities. Contact individual universities for their application deadlines and processes.",
-      "deadline": "2026-09-30",
-      "notificationDate": "2026-11-01",
-      "status": "upcoming",
-      "competitionLevel": "Medium",
-      "link": "https://www.destinationaustralia.gov.au"
-    },
-    {
-      "id": "vanier_canada",
-      "name": "Vanier Canada Graduate Scholarship",
-      "provider": "Government of Canada",
-      "university": null,
-      "country": "Canada",
-      "countryCode": "CA",
-      "amountType": "full",
-      "amountDesc": "CAD $50,000 per year for up to 3 years of doctoral study",
-      "levels": ["PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Canadian and international students who plan to pursue a doctoral programme at a Canadian university. Demonstrates academic excellence, leadership, and research potential.",
-      "requirements": [
-        "Nominated by a Canadian university",
-        "Planning to enrol in a doctoral programme",
-        "Overall average of 80% or above in each of the past two years",
-        "Strong leadership profile",
-        "Compelling research proposal"
-      ],
-      "notes": "Nominations come from Canadian universities — you cannot apply directly. Contact the graduate school of the Canadian university where you plan to study. Nominating university sets internal deadlines (usually August–September).",
-      "deadline": "2026-11-03",
-      "notificationDate": "2027-04-01",
-      "status": "upcoming",
-      "competitionLevel": "Extremely High",
-      "link": "https://vanier.gc.ca/en/home-accueil.html"
-    },
-    {
-      "id": "turkiye_burslari",
-      "name": "Türkiye Scholarships",
-      "provider": "Turkish Government (YTB)",
-      "university": null,
-      "country": "Turkey",
-      "countryCode": "TR",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly stipend, accommodation, health insurance, and return airfare",
-      "levels": ["Bachelor", "Master", "PhD"],
-      "streams": ["All streams"],
-      "eligibility": "Non-Turkish citizens from eligible countries worldwide. Different age limits apply: under 21 (bachelor's), under 30 (master's), under 35 (PhD). Academic achievement required.",
-      "requirements": [
-        "Non-Turkish citizen",
-        "Age: ≤21 for bachelor's, ≤30 for master's, ≤35 for PhD",
-        "High academic achievement (at least 70–75% for humanities, 90% for medicine/engineering)",
-        "Turkish language training provided after arrival (1 year)",
-        "Online application via the Türkiye Scholarships portal"
-      ],
-      "notes": "Over 6,000 scholarships awarded annually from 180+ countries. Applications open in January each year and close in February. Includes a mandatory one-year Turkish language course if applicable.",
-      "deadline": "2027-02-20",
-      "notificationDate": "2027-07-01",
-      "status": "upcoming",
-      "competitionLevel": "Medium",
-      "link": "https://www.turkiyeburslari.gov.tr/en"
-    },
-    {
-      "id": "hec_paris_merit",
-      "name": "HEC Paris Excellence Scholarship",
-      "provider": "HEC Paris",
-      "university": "HEC Paris",
-      "country": "France",
-      "countryCode": "FR",
-      "amountType": "partial",
-      "amountDesc": "€5,000–€30,000 towards tuition, awarded on academic and professional merit",
-      "levels": ["Master"],
-      "streams": ["Business", "Economics", "Finance", "Social Sciences"],
-      "eligibility": "International applicants to HEC Paris master's programmes, including MSc and MBA. Awarded to candidates who demonstrate exceptional academic and professional profile.",
-      "requirements": [
-        "Application for admission to an HEC Paris master's or MBA programme",
-        "Outstanding academic record",
-        "Relevant professional experience (for MBA)",
-        "No separate scholarship form — considered automatically in admissions",
-        "GMAT or GRE may be required depending on programme"
-      ],
-      "notes": "Scholarship assessed during the admissions process. Amount varies significantly. HEC also offers need-based bursaries — contact the financial aid office.",
-      "deadline": "2027-01-05",
-      "notificationDate": "2027-03-01",
-      "status": "upcoming",
-      "competitionLevel": "High",
-      "link": "https://www.hec.edu/en/master-s-programs/financial-aid-scholarships"
-    },
-    {
-      "id": "mastercard_foundation_scholars",
-      "name": "Mastercard Foundation Scholars Program",
-      "provider": "Mastercard Foundation",
-      "university": null,
-      "country": "Various",
-      "countryCode": "US",
-      "amountType": "full",
-      "amountDesc": "Full tuition, accommodation, travel, living stipend, and mentorship",
-      "levels": ["Bachelor", "Master"],
-      "streams": ["All streams"],
-      "eligibility": "Academically talented young Africans with demonstrated financial need and a commitment to give back to their communities. Offered through 38+ partner universities worldwide.",
-      "requirements": [
-        "African citizen",
-        "Demonstrated financial need",
-        "Strong academic record",
-        "Leadership and community engagement",
-        "Apply through one of the Mastercard Foundation partner universities"
-      ],
-      "notes": "Apply through a specific partner university — not directly to the Foundation. Partner universities include University of Toronto, McGill, Sciences Po, AUC, USIU Africa, and many more. Each has its own deadline.",
-      "deadline": "2027-01-31",
-      "notificationDate": "2027-04-30",
-      "status": "upcoming",
-      "competitionLevel": "Very High",
-      "link": "https://mastercardfdn.org/all/scholars"
-    }
-  ]
 
+    { "id": "fulbright_foreign", "name": "Fulbright Foreign Student Program", "provider": "U.S. Department of State", "university": null, "country": "United States", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, living stipend, health insurance, and return airfare", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-U.S. citizens applying to study at a U.S. university. Eligibility and deadlines vary by country — apply through your country's Fulbright Commission.", "requirements": ["Bachelor's degree or equivalent", "English proficiency (TOEFL/IELTS)", "Strong academic record", "Leadership and community engagement", "Apply through your country's Fulbright Commission"], "notes": "One of the most prestigious international scholarships. Each country has its own portal and deadline — check your national commission.", "deadline": "2026-10-15", "notificationDate": "2027-03-01", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://foreign.fulbrightonline.org" },
+
+    { "id": "chevening", "name": "Chevening Scholarship", "provider": "UK Foreign, Commonwealth & Development Office", "university": null, "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition, monthly living allowance, return flights, and visa fees", "levels": ["Master"], "streams": ["All streams"], "eligibility": "Citizens of Chevening-eligible countries (140+). Minimum 2 years' work experience. Bachelor's degree required.", "requirements": ["Citizen of a Chevening-eligible country", "Bachelor's degree (min 2:1 or equivalent)", "At least 2 years' full-time work experience", "English proficiency (IELTS 6.5+)", "Demonstrate leadership potential"], "notes": "Apply to 3 UK universities as part of the application. Opens September 2026, closes November 2026. Results announced June 2027.", "deadline": "2026-11-05", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.chevening.org/scholarships" },
+
+    { "id": "commonwealth_scholarship", "name": "Commonwealth Scholarship and Fellowship Plan", "provider": "Commonwealth Scholarship Commission in the UK", "university": null, "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition, living allowance, airfare, and thesis grant", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of Commonwealth countries who are not permanent residents of the UK. Must have a first-class or strong upper-second undergraduate degree.", "requirements": ["Commonwealth country citizenship", "First-class or 2:1 degree (or equivalent)", "English proficiency", "Cannot be a UK resident", "Home government nomination required for some awards"], "notes": "Covers doctoral, master's, and split-site (PhD) awards. Managed in partnership with UK universities.", "deadline": "2026-12-15", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://cscuk.fcdo.gov.uk/scholarships" },
+
+    { "id": "gates_cambridge", "name": "Gates Cambridge Scholarship", "provider": "Bill & Melinda Gates Foundation", "university": "University of Cambridge", "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition, maintenance allowance, airfare, and research support", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-UK citizens applying to any postgraduate program at the University of Cambridge. Exceptional academic record required.", "requirements": ["Non-UK citizen", "Apply to Cambridge postgraduate program simultaneously", "Outstanding academic achievement", "Leadership capacity", "Commitment to improving lives of others"], "notes": "2,000+ applications received per year for ~80 awards. One of the most competitive scholarships globally.", "deadline": "2026-12-03", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://www.gatescambridge.org" },
+
+    { "id": "rhodes_scholarship", "name": "Rhodes Scholarship", "provider": "Rhodes Trust", "university": "University of Oxford", "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition, living stipend, airfare, and health insurance at Oxford", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of 64 countries aged 18–28 (varies by constituency). Exceptional academic achievement and proven leadership.", "requirements": ["Citizen of a Rhodes-eligible country", "Aged 18–28 (varies)", "Outstanding academic record", "Leadership, character, and commitment to service", "Apply through national constituency"], "notes": "One of the world's oldest and most prestigious international scholarships. 100+ scholars selected annually worldwide.", "deadline": "2026-10-01", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://www.rhodeshouse.ox.ac.uk/scholarships" },
+
+    { "id": "marshall_scholarship", "name": "Marshall Scholarship", "provider": "Marshall Aid Commemoration Commission", "university": null, "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition, living grant, airfare, and research support for study in the UK", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "U.S. citizens only. High GPA (3.7+ recommended), strong extracurricular record, and recent undergraduate degree (within 2 years).", "requirements": ["U.S. citizen", "Minimum GPA 3.7 (3.8+ competitive)", "Completed undergraduate degree within 2 years", "Leadership and character", "Endorsed by home university"], "notes": "Only for U.S. citizens studying in the UK. Around 50 awards per year. Applications via U.S. college/university.", "deadline": "2026-09-30", "notificationDate": "2026-12-01", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://www.marshallscholarship.org" },
+
+    { "id": "daad_research_grants", "name": "DAAD Research Grants — Short-term", "provider": "DAAD (German Academic Exchange Service)", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "partial", "amountDesc": "Monthly living stipend (€861–€1,200), travel allowance, and health insurance for 1–6 months", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Graduates from all countries who are currently enrolled in a doctoral program or completed a Master's degree within 6 years.", "requirements": ["Enrolled in or recently completed postgraduate program", "Specific research project in Germany", "Acceptance from German host supervisor", "German or English proficiency depending on project"], "notes": "One of DAAD's most flexible programs — supports 1–6 month research stays in Germany. Multiple rounds per year.", "deadline": "2026-10-31", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships" },
+
+    { "id": "daad_doctoral", "name": "DAAD Doctoral Scholarships", "provider": "DAAD (German Academic Exchange Service)", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "full", "amountDesc": "Monthly stipend (€1,200), travel allowance, and health insurance for up to 4 years", "levels": ["PhD"], "streams": ["All streams"], "eligibility": "International graduates with an excellent Master's degree wishing to pursue a PhD at a German institution.", "requirements": ["Excellent Master's degree", "Acceptance from a German university supervisor", "Research proposal", "German or English proficiency", "Apply at least 6 months before start"], "notes": "DAAD doctoral scholarships run for up to 4 years. Must have a German host supervisor lined up at application.", "deadline": "2026-10-15", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "High", "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships" },
+
+    { "id": "daad_study_scholarship", "name": "DAAD Study Scholarships for Master's Programs", "provider": "DAAD (German Academic Exchange Service)", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "partial", "amountDesc": "Monthly stipend (€934) plus travel, health insurance, and study allowances", "levels": ["Master"], "streams": ["Arts & Humanities", "Social Sciences", "Architecture & Design", "Business & Economics"], "eligibility": "Graduates from all countries with a first university degree, applying to a full Master's program in Germany. Primarily for humanities, social and political sciences.", "requirements": ["First university degree (Bachelor's or equivalent)", "German language proficiency (for German-taught programs)", "Strong academic record", "Relevant prior studies"], "notes": "For study programs taught in German. Separate DAAD scholarships exist for English-taught programs in STEM fields.", "deadline": "2026-11-15", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships" },
+
+    { "id": "daad_helmut_schmidt", "name": "DAAD Helmut Schmidt Programme", "provider": "DAAD (German Academic Exchange Service)", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "partial", "amountDesc": "Monthly stipend, travel allowance, health insurance, and full tuition for 1–2 years", "levels": ["Master"], "streams": ["Business & Economics", "Social Sciences", "Law"], "eligibility": "Graduates from developing countries applying to English-taught public policy, economics, law, or social sciences Master's programs in Germany.", "requirements": ["Undergraduate degree", "English proficiency (IELTS/TOEFL)", "Citizen of a developing country", "Demonstrated public service interest", "2+ years' work experience preferred"], "notes": "Focused on future leaders from developing and newly industrialising countries. Named after former German Chancellor Helmut Schmidt.", "deadline": "2026-10-31", "notificationDate": "2027-03-01", "status": "upcoming", "competitionLevel": "High", "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships" },
+
+    { "id": "mext_research", "name": "MEXT Japanese Government Scholarship — Research Student", "provider": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan", "university": null, "country": "Japan", "countryCode": "JP", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (¥143,000–¥145,000), and airfare", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-Japanese nationals under 35 who hold a bachelor's degree. Apply via Japanese embassy in your country.", "requirements": ["Non-Japanese national", "Bachelor's degree", "Under 35 years old", "Apply through Japanese embassy or consulate", "Japanese or English language proficiency"], "notes": "Embassy-recommended students are placed as research students first, then apply to graduate programs. Very prestigious and competitive.", "deadline": "2026-08-31", "notificationDate": "2027-01-31", "status": "open", "competitionLevel": "Very High", "link": "https://www.mext.go.jp/en/policy/education/highered/title02/detail02/sdetail02/1373897.htm" },
+
+    { "id": "mext_undergraduate", "name": "MEXT Japanese Government Scholarship — Undergraduate", "provider": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan", "university": null, "country": "Japan", "countryCode": "JP", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (¥117,000), Japanese language preparation, and airfare", "levels": ["Bachelor"], "streams": ["All streams"], "eligibility": "Non-Japanese nationals aged 17–21 who have completed 12 years of education. Apply via Japanese embassy.", "requirements": ["Non-Japanese national", "Completed 12 years of schooling", "Aged 17–21 at time of enrollment", "Apply through Japanese embassy", "Pass embassy screening and written exam"], "notes": "5–7 year program including 1–2 years of Japanese language preparation before starting the degree.", "deadline": "2026-06-30", "notificationDate": "2026-12-31", "status": "open", "competitionLevel": "Very High", "link": "https://www.mext.go.jp/en/policy/education/highered/title02/detail02/sdetail02/1373897.htm" },
+
+    { "id": "australia_awards_africa", "name": "Australia Awards Scholarships — Africa", "provider": "Australian Department of Foreign Affairs and Trade (DFAT)", "university": null, "country": "Australia", "countryCode": "AU", "amountType": "full", "amountDesc": "Full tuition, return airfare, Overseas Student Health Cover, monthly allowance, and establishment allowance", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of eligible African countries. Typically requires work experience and evidence of capacity to contribute to development on return.", "requirements": ["Citizen of an eligible African country", "Not a permanent resident of Australia", "Minimum 2–5 years' relevant work experience", "English proficiency (IELTS 6.5+)", "Return-to-home-country obligation for 2 years post-study"], "notes": "Specific countries covered and deadlines vary. Check DFAT website for your country. Some programs open June–August.", "deadline": "2026-07-31", "notificationDate": "2026-12-31", "status": "open", "competitionLevel": "High", "link": "https://www.dfat.gov.au/people-to-people/australia-awards" },
+
+    { "id": "australia_awards_pacific", "name": "Australia Awards Scholarships — Pacific", "provider": "Australian Department of Foreign Affairs and Trade (DFAT)", "university": null, "country": "Australia", "countryCode": "AU", "amountType": "full", "amountDesc": "Full tuition, return airfare, monthly living allowance, health cover, and pre-departure preparation", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of Pacific Island nations. No prior study in Australia. Return obligation after completion.", "requirements": ["Citizen of eligible Pacific Island nation", "Not a permanent resident of Australia", "English proficiency (IELTS 5.5–6.5 depending on program)", "Return-to-home obligation for 2 years"], "notes": "Covers undergraduate programs — unlike most international scholarships. Pacific focus on development-related fields.", "deadline": "2026-08-31", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-pacific" },
+
+    { "id": "erasmus_mundus", "name": "Erasmus Mundus Joint Master Degrees (EMJM)", "provider": "European Commission", "university": null, "country": "European Union", "countryCode": "EU", "amountType": "full", "amountDesc": "€1,400/month living allowance, tuition waiver, travel costs, and installation allowance", "levels": ["Master"], "streams": ["All streams"], "eligibility": "Open to all nationalities. Must apply to an Erasmus Mundus program — study takes place in 2+ EU countries.", "requirements": ["Bachelor's degree or equivalent", "English or relevant language proficiency", "Apply to specific Erasmus Mundus program", "No prior Erasmus Mundus scholarship received"], "notes": "Scholarships attached to specific Joint Master programs. Over 100 programs available. Each program has its own deadline — check the Erasmus Mundus Catalogue.", "deadline": "2027-01-15", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en" },
+
+    { "id": "marie_curie", "name": "Marie Skłodowska-Curie Actions Individual Fellowship", "provider": "European Commission (Horizon Europe)", "university": null, "country": "European Union", "countryCode": "EU", "amountType": "full", "amountDesc": "Monthly living allowance, mobility allowance, family allowance, and full research costs for 1–2 years", "levels": ["PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Medicine & Health Sciences", "Social Sciences", "Arts & Humanities"], "eligibility": "Experienced researchers (PhD holders or 4+ years' research experience). Must move to a different country for the fellowship.", "requirements": ["PhD degree or 4+ years' full-time research experience", "Mobility rule: must not have resided in host country for more than 12 months in last 3 years", "Host institution in EU or associated country", "Research proposal"], "notes": "Competitive EU-funded postdoctoral fellowship. Annual call — apply in September, results in February/March.", "deadline": "2026-09-10", "notificationDate": "2027-03-01", "status": "upcoming", "competitionLevel": "Very High", "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships" },
+
+    { "id": "chinese_gov_scholarship_a", "name": "Chinese Government Scholarship — Type A (Full)", "provider": "China Scholarship Council (CSC)", "university": null, "country": "China", "countryCode": "CN", "amountType": "full", "amountDesc": "Full tuition, accommodation on campus, monthly stipend (¥2,500–¥3,500), and comprehensive medical insurance", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-Chinese nationals under 25 (UG), 35 (Master's), or 40 (PhD). Strong academic record. Apply via Chinese embassy or directly through CSC partner universities.", "requirements": ["Non-Chinese national", "Age limits by level", "Strong GPA (typically 3.0+/4.0)", "English or Chinese proficiency", "Physical health certificate", "No criminal record"], "notes": "Most applications close March–July annually. Two pathways: embassy nomination or university recommendation. One of the largest scholarship programs globally.", "deadline": "2026-07-15", "notificationDate": "2026-09-30", "status": "open", "competitionLevel": "Medium", "link": "https://www.campuschina.org" },
+
+    { "id": "csc_belt_road", "name": "Belt and Road Scholarship (Chinese Government)", "provider": "China Scholarship Council (CSC)", "university": null, "country": "China", "countryCode": "CN", "amountType": "full", "amountDesc": "Full tuition, accommodation, monthly stipend, and medical insurance", "levels": ["Bachelor", "Master", "PhD"], "streams": ["Engineering & Technology", "Natural Sciences", "Business & Economics"], "eligibility": "Citizens of Belt and Road countries. Intended for study in engineering, science, and technical fields at designated Chinese universities.", "requirements": ["Citizen of a Belt and Road Initiative country", "Age limits by level", "English or Chinese proficiency", "Academic merit", "Apply through designated Chinese partner universities"], "notes": "Covers citizens of 102+ Belt and Road countries. Specific to technical and STEM disciplines. Check CSC for partner university list.", "deadline": "2026-06-30", "notificationDate": "2026-09-30", "status": "open", "competitionLevel": "Medium", "link": "https://www.campuschina.org" },
+
+    { "id": "gks_graduate", "name": "Global Korea Scholarship (GKS) — Graduate", "provider": "National Institute for International Education (NIIED), South Korea", "university": null, "country": "South Korea", "countryCode": "KR", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (₩900,000–₩1,000,000), Korean language training, airfare, medical insurance, and settlement allowance", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of GKS-eligible countries (160+). Under 40 years old. Bachelor's degree with strong GPA.", "requirements": ["Citizen of eligible country (not Korean)", "Bachelor's degree", "Under 40 years old", "GPA equivalent to 2.64/4.0+ (3.0/4.5)", "Apply through Korean embassy or Korean university"], "notes": "Includes 1-year Korean language training before your degree begins. Two tracks: embassy recommendation and direct university application.", "deadline": "2026-09-30", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.studyinkorea.go.kr/en/sub/gks/allnew_invite.do" },
+
+    { "id": "gks_undergraduate", "name": "Global Korea Scholarship (GKS) — Undergraduate", "provider": "National Institute for International Education (NIIED), South Korea", "university": null, "country": "South Korea", "countryCode": "KR", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (₩900,000), Korean language training, airfare, and medical insurance", "levels": ["Bachelor"], "streams": ["All streams"], "eligibility": "Citizens of GKS-eligible countries aged 18–25 by March of intake year. High school diploma with strong academic record.", "requirements": ["Citizen of eligible country", "Aged 18–25", "High school diploma (all grades above average)", "Not previously studied in Korea on a GKS scholarship", "Apply via Korean embassy"], "notes": "Includes 1-year intensive Korean language course. Program lasts 5 years including language training.", "deadline": "2026-09-30", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.studyinkorea.go.kr/en/sub/gks/allnew_invite.do" },
+
+    { "id": "turkiye_burslari", "name": "Türkiye Bursları Scholarship", "provider": "Presidency for Turks Abroad and Related Communities (YTB)", "university": null, "country": "Turkey", "countryCode": "TR", "amountType": "full", "amountDesc": "Full tuition, accommodation, monthly stipend (₺1,700–₺2,600), Turkish language course, health insurance, and airfare", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-Turkish citizens under 21 (UG), 30 (Master's), or 35 (PhD). All nationalities except those of Turkish origin.", "requirements": ["Non-Turkish citizen", "Age limits by level", "Min GPA: 70% (UG), 75% (Master's/PhD)", "English or Turkish proficiency", "Not currently studying in Turkey on another scholarship"], "notes": "One of the world's largest scholarship programs covering 180+ countries. Applications usually open in January.", "deadline": "2027-02-20", "notificationDate": "2027-06-01", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.turkiyeburslari.gov.tr" },
+
+    { "id": "stipendium_hungaricum", "name": "Stipendium Hungaricum Scholarship", "provider": "Tempus Public Foundation (Hungarian Government)", "university": null, "country": "Hungary", "countryCode": "HU", "amountType": "full", "amountDesc": "Full tuition waiver, monthly stipend (HUF 130,000 UG / HUF 180,000 PG), accommodation, and health insurance", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of 90+ partner countries. Apply through the sending organisation in your home country. Self-funded maintenance contributions may apply at some universities.", "requirements": ["Citizen of a partner country", "Age and degree requirements vary by level", "English or Hungarian proficiency", "Nomination by home country's sending organisation", "Academic merit"], "notes": "100+ universities in Hungary. Applications open in November and close in January. Check the Stipendium Hungaricum portal for your country's sending organisation.", "deadline": "2027-01-15", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://stipendiumhungaricum.hu/apply" },
+
+    { "id": "swiss_excellence", "name": "Swiss Government Excellence Scholarships", "provider": "State Secretariat for Education, Research and Innovation (SERI), Switzerland", "university": null, "country": "Switzerland", "countryCode": "CH", "amountType": "partial", "amountDesc": "Monthly allowance (CHF 1,920), tuition exemption (some universities), accommodation supplement, and health insurance", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Graduates from 180+ countries for research and postdoctoral stays in Switzerland. Eligibility and deadlines vary by nationality.", "requirements": ["Bachelor's or Master's degree (depending on program)", "Excellent academic record", "Research project or host institution in Switzerland", "Age limit: under 35 for PhD, 40 for postdoc", "Check country-specific conditions"], "notes": "Application deadlines vary by country — typically December to March. Apply through the Swiss Embassy in your home country.", "deadline": "2026-12-01", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html" },
+
+    { "id": "eiffel_excellence", "name": "Eiffel Excellence Scholarship Programme (France)", "provider": "Campus France / French Ministry for Europe and Foreign Affairs", "university": null, "country": "France", "countryCode": "FR", "amountType": "partial", "amountDesc": "Monthly allowance (€1,181 Master's / €1,400 PhD), health insurance, and cultural allowances", "levels": ["Master", "PhD"], "streams": ["Engineering & Technology", "Natural Sciences", "Business & Economics", "Law", "Social Sciences"], "eligibility": "International students under 30 (Master's) or 35 (PhD) applying to a French public institution. Must be nominated by a French higher education institution.", "requirements": ["Under 30 (Master's) or 35 (PhD)", "Nominated by a French institution", "Not a French national or permanent resident", "Excellence academic record", "Apply through a French partner institution"], "notes": "Institutions nominate candidates — contact your target French university directly to express interest and obtain their nomination.", "deadline": "2027-01-13", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.campusfrance.org/en/eiffel-scholarship-program-excellence" },
+
+    { "id": "holland_scholarship", "name": "Holland Scholarship", "provider": "Dutch Ministry of Education, Culture and Science", "university": null, "country": "Netherlands", "countryCode": "NL", "amountType": "partial", "amountDesc": "€5,000 one-time grant (paid in first year of study)", "levels": ["Bachelor", "Master"], "streams": ["All streams"], "eligibility": "Non-EEA (non-EU/EEA) students applying to a Dutch university for a full degree program. Must be selected by the university.", "requirements": ["Non-EU/EEA national", "Applying to full bachelor's or master's program in the Netherlands", "Selected by the Dutch university of your choice", "Check university-specific GPA requirements"], "notes": "Apply through your chosen Dutch university — not through a central portal. Each university has its own deadline and eligibility criteria.", "deadline": "2027-02-01", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.studyinholland.nl/scholarships/holland-scholarship" },
+
+    { "id": "swedish_institute", "name": "Swedish Institute Scholarships for Global Professionals (SISGP)", "provider": "Swedish Institute", "university": null, "country": "Sweden", "countryCode": "SE", "amountType": "full", "amountDesc": "Full tuition (paid directly to university), monthly living allowance (SEK 10,000–11,000), travel grant, and insurance", "levels": ["Master"], "streams": ["All streams"], "eligibility": "Citizens of eligible countries (around 43 countries covered). Minimum 3,000 hours (approx. 1.5 years) of full-time work experience.", "requirements": ["Citizen of an eligible country", "Bachelor's degree", "At least 3,000 hours' work experience", "Leadership potential", "Apply to a Swedish university simultaneously"], "notes": "Eligible countries rotate — check the Swedish Institute website for the current list. Applications open in February.", "deadline": "2027-02-10", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals" },
+
+    { "id": "austrian_oead", "name": "OeAD Government Scholarship (Austria)", "provider": "OeAD (Austrian Agency for International Cooperation in Education and Research)", "university": null, "country": "Austria", "countryCode": "AT", "amountType": "partial", "amountDesc": "Monthly allowance (€1,260), accommodation supplement, and travel costs", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of eligible countries applying for research stays or postgraduate degrees in Austria. Availability depends on bilateral agreements.", "requirements": ["Citizen of an eligible country", "Undergraduate degree", "Research project or host institution in Austria", "Language proficiency (German or English)", "Apply through the OeAD or your home country bilateral agreement"], "notes": "Covers both study and research scholarships. Programs vary by country of origin. Check bilateral agreements on the OeAD portal.", "deadline": "2026-09-30", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://oead.at/en/to-austria/grants-scholarships" },
+
+    { "id": "vlir_uos", "name": "VLIR-UOS Scholarship (Belgium)", "provider": "Flemish Interuniversity Council (VLIR-UOS)", "university": null, "country": "Belgium", "countryCode": "BE", "amountType": "full", "amountDesc": "Full tuition, monthly allowance, airfare, insurance, and installation grant", "levels": ["Master"], "streams": ["All streams"], "eligibility": "Citizens of 31 eligible developing countries in Africa, Asia, and Latin America. Must apply to a VLIR-UOS-listed program in Flanders (Belgium).", "requirements": ["Citizen of eligible developing country (list of 31)", "Bachelor's degree", "Not studied or lived in Belgium for more than 6 months in last 3 years", "English proficiency", "Apply to a specific VLIR-UOS program"], "notes": "Applicants apply to the program and the scholarship simultaneously. Programs offered at Flemish universities (KU Leuven, Ghent, etc.).", "deadline": "2027-02-01", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.vliruos.be/en/scholarships/6" },
+
+    { "id": "italian_gov_scholarship", "name": "Italian Government Scholarship (MAECI)", "provider": "Italian Ministry of Foreign Affairs and International Cooperation (MAECI)", "university": null, "country": "Italy", "countryCode": "IT", "amountType": "partial", "amountDesc": "Monthly allowance (€900), tuition waiver at some institutions, and health insurance", "levels": ["Master", "PhD"], "streams": ["Arts & Humanities", "Architecture & Design", "Music", "Natural Sciences", "Social Sciences"], "eligibility": "Non-EU citizens from 196+ countries for study, research, or language training in Italy. Varies by bilateral agreements.", "requirements": ["Non-EU citizen", "Bachelor's degree or equivalent", "Italian proficiency (for some programs)", "English proficiency (for English-taught programs)", "Apply through your country's Italian Embassy or via the Italian portal"], "notes": "Strong emphasis on arts, architecture, music, and design. Scholarships for higher arts institutes (AFAM) also available.", "deadline": "2027-02-28", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Medium", "link": "https://studyinitaly.esteri.it/en/home" },
+
+    { "id": "polish_nawa", "name": "Polish National Agency for Academic Exchange (NAWA) Scholarship", "provider": "National Agency for Academic Exchange (NAWA), Poland", "university": null, "country": "Poland", "countryCode": "PL", "amountType": "partial", "amountDesc": "Monthly stipend (PLN 1,500–3,000), accommodation subsidy, and health insurance", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of non-EU countries. Several programs available — Ignacy Łukasiewicz, Banach, and others target different regions and levels.", "requirements": ["Non-EU citizen", "Bachelor's or master's degree depending on program", "English or Polish proficiency", "Academic merit", "Some programs require nomination from home institution"], "notes": "Multiple programs under NAWA covering short-term and full-degree scholarships. Check NAWA website for current open calls.", "deadline": "2026-12-15", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://nawa.gov.pl/en/students" },
+
+    { "id": "czech_gov_scholarship", "name": "Czech Government Development Scholarship", "provider": "Czech Ministry of Education, Youth and Sports", "university": null, "country": "Czech Republic", "countryCode": "CZ", "amountType": "partial", "amountDesc": "Monthly stipend (CZK 12,000–14,000), accommodation, and tuition waiver at state institutions", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of developing countries and countries in transition nominated by the Czech Ministry. Availability depends on bilateral agreements.", "requirements": ["Citizen of a developing or transition country", "Academic merit", "Czech or English proficiency", "Nomination through bilateral agreement", "Medical certificate"], "notes": "Applications made through Czech Embassies in your home country. Aimed at development cooperation partners.", "deadline": "2026-09-30", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.msmt.cz/areas-of-work/higher-education-institutions/scholarships" },
+
+    { "id": "iccr_scholarship", "name": "ICCR Scholarship (India)", "provider": "Indian Council for Cultural Relations (ICCR)", "university": null, "country": "India", "countryCode": "IN", "amountType": "full", "amountDesc": "Tuition waiver, monthly stipend (₹15,000–₹30,000), accommodation, and medical insurance", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-Indian citizens from 160+ countries. Several programs: General, Cultural Exchange, SAARC, and others.", "requirements": ["Non-Indian citizen", "Academic merit", "English proficiency", "Age limits vary by program", "Apply through Indian Embassy in your country"], "notes": "One of the world's most extensive scholarship programs. Study in any of 500+ Indian universities. Strong cultural exchange component.", "deadline": "2027-01-31", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Medium", "link": "https://a2ascholarships.iccr.gov.in" },
+
+    { "id": "russian_gov_scholarship", "name": "Russian Government Scholarship", "provider": "Ministry of Education and Science of the Russian Federation", "university": null, "country": "Russia", "countryCode": "RU", "amountType": "partial", "amountDesc": "Tuition waiver, dormitory accommodation, and monthly stipend (varies)", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-Russian citizens from 173+ countries. Applications made through Rossotrudnichestvo offices or Russian embassies.", "requirements": ["Non-Russian citizen", "Academic merit", "Russian or English proficiency depending on program", "Apply via Rossotrudnichestvo or Russian Embassy", "Age limits vary by level"], "notes": "15,000 government-sponsored places per year. Study in Russian may be required; language preparation programs are included.", "deadline": "2027-01-20", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://russia.study/en" },
+
+    { "id": "kasp_saudi", "name": "King Abdullah Scholarship Program (Saudi Arabia)", "provider": "Saudi Arabian Cultural Mission (SACM)", "university": null, "country": "Saudi Arabia", "countryCode": "SA", "amountType": "full", "amountDesc": "Full tuition, monthly allowance, airfare, health insurance, and housing allowance for Saudi nationals studying abroad", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Saudi Arabian nationals only. For study at accredited universities in approved countries (USA, UK, Canada, Australia, etc.).", "requirements": ["Saudi Arabian national", "Enrolled at or accepted by an accredited foreign university", "SACM approval of institution and program", "Satisfactory academic progress", "Service return obligation"], "notes": "For Saudi nationals, not international students. One of the world's largest government-funded outbound programs.", "deadline": "2027-01-31", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.sacm.org.sa/en" },
+
+    { "id": "khalifa_scholarship", "name": "Khalifa International Award for Education (UAE)", "provider": "Khalifa Scholarship Program / Abu Dhabi Government", "university": null, "country": "United Arab Emirates", "countryCode": "AE", "amountType": "full", "amountDesc": "Full tuition, monthly living allowance, airfare, and accommodation for UAE nationals studying internationally", "levels": ["Bachelor", "Master", "PhD"], "streams": ["Engineering & Technology", "Natural Sciences", "Business & Economics", "Medicine & Health Sciences"], "eligibility": "UAE nationals for study at top-ranked international universities. Focus on STEM and business disciplines.", "requirements": ["UAE national", "Acceptance from a top-ranked international university", "Minimum GPA requirements", "Focus area must match national priority fields"], "notes": "For UAE nationals studying internationally. Strong focus on strategic sectors aligned with UAE Vision 2030.", "deadline": "2027-02-28", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "High", "link": "https://mohesr.gov.ae/en-us/Scholarship" },
+
+    { "id": "aga_khan_scholarship", "name": "Aga Khan Foundation International Scholarship", "provider": "Aga Khan Foundation", "university": null, "country": "Various", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition and living costs (50% grant + 50% interest-free loan, repaid after graduation)", "levels": ["Master"], "streams": ["All streams"], "eligibility": "Citizens of select developing countries in Asia and Africa who have been accepted to a leading international university. Demonstrates exceptional ability and commitment to community development.", "requirements": ["Citizen of eligible country (Kenya, India, Pakistan, Bangladesh, Tajikistan, etc.)", "Accepted by an internationally recognised university", "Demonstrated financial need", "2+ years' post-graduate work experience", "Commitment to return and contribute to home country"], "notes": "Highly competitive — around 100–150 scholarships per year globally. Financial need is as important as academic merit.", "deadline": "2026-12-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://www.akdn.org/our-agencies/aga-khan-foundation/international-scholarship-programme" },
+
+    { "id": "mastercard_foundation_scholars", "name": "Mastercard Foundation Scholars Program", "provider": "Mastercard Foundation", "university": null, "country": "Various", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, accommodation, travel, living stipend, and mentorship", "levels": ["Bachelor", "Master"], "streams": ["All streams"], "eligibility": "Academically talented young Africans with demonstrated financial need. Apply through 38+ partner universities, not directly to the Foundation.", "requirements": ["African citizen", "Demonstrated financial need", "Strong academic record", "Leadership and community engagement", "Apply through a partner university (Toronto, McGill, AUC, Sciences Po, etc.)"], "notes": "Apply through a specific Mastercard Foundation partner university — not directly to the Foundation. Each has its own deadline.", "deadline": "2027-01-31", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://mastercardfdn.org/all/scholars" },
+
+    { "id": "ford_foundation_fellowship", "name": "Ford Foundation International Fellowship Program", "provider": "Ford Foundation", "university": null, "country": "United States", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, living expenses, research costs, and language training for study at international universities", "levels": ["Master", "PhD"], "streams": ["Social Sciences", "Arts & Humanities", "Law", "Education"], "eligibility": "Citizens of 22 countries in Africa, Latin America, Middle East, and Asia with strong leadership potential and commitment to social justice.", "requirements": ["Citizen of an IFP-eligible country", "Demonstrated intellectual ability and leadership", "Commitment to social change and equity", "Plan to return to home country", "Apply through National Partner organisations in each country"], "notes": "Closed to new applications in some countries — check Ford Foundation website for active partner countries and organisations.", "deadline": "2026-12-15", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.fordfoundation.org/work/our-grants/grants-database" },
+
+    { "id": "rotary_peace_fellowship", "name": "Rotary Peace Fellowship", "provider": "Rotary Foundation", "university": null, "country": "Various", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, accommodation, a stipend, and airfare for the duration of study", "levels": ["Master", "PhD"], "streams": ["Social Sciences", "Law", "Medicine & Health Sciences", "Education"], "eligibility": "Individuals with 3+ years' work experience in peace and development. Must demonstrate commitment to international understanding and peace.", "requirements": ["3+ years' work experience in peace/conflict/development", "English proficiency", "Apply through local Rotary Club", "Study at one of 7 Rotary Peace Centers (Bradford, Chulalongkorn, Duke/UNC, International Christian Univ, Makerere, Queensland, Uppsala)"], "notes": "Highly competitive — only ~130 awards per year worldwide for 7 Rotary Peace Centers. Applications close mid-May.", "deadline": "2026-09-15", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://www.rotary.org/en/our-programs/peace-fellowships" },
+
+    { "id": "open_society_fellowship", "name": "Open Society Foundations Scholarships", "provider": "Open Society Foundations", "university": null, "country": "Various", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, living expenses, and research support — varies by program", "levels": ["Master", "PhD"], "streams": ["Law", "Social Sciences", "Arts & Humanities", "Business & Economics"], "eligibility": "Citizens of specific countries in Eastern Europe, Asia, Africa, and the Middle East. Programs target law, journalism, human rights, and civil society.", "requirements": ["Citizen of an Open Society-eligible country", "Demonstrated commitment to open society values", "Strong academic record", "Program-specific requirements vary significantly"], "notes": "Many different programs — Global Network Scholarship, Junior Faculty Development, and others. Check OSF website for current open programs.", "deadline": "2026-11-30", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.opensocietyfoundations.org/grants/open-society-scholarship-programs" },
+
+    { "id": "heinrich_boll", "name": "Heinrich Böll Foundation Scholarship (Germany)", "provider": "Heinrich Böll Foundation", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "partial", "amountDesc": "Monthly stipend (€934 Master's / €1,200 PhD) plus study allowance and health insurance supplement", "levels": ["Master", "PhD"], "streams": ["Social Sciences", "Arts & Humanities", "Natural Sciences", "Law"], "eligibility": "International students and Germans. Strongly values political engagement, ecological thinking, and democratic principles. Apply twice per year.", "requirements": ["Academic excellence", "Social and political engagement", "Commitment to ecological sustainability and democracy", "Enrolled or applying to a German university", "Two rounds: April and October deadlines"], "notes": "Rooted in Green politics and feminist values. Strong social engagement is as important as academic achievement.", "deadline": "2026-09-01", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.boell.de/en/scholarships" },
+
+    { "id": "friedrich_ebert", "name": "Friedrich Ebert Foundation Scholarship (Germany)", "provider": "Friedrich-Ebert-Stiftung (FES)", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "partial", "amountDesc": "Monthly stipend (€934 Master's / €1,200 PhD) plus study and research allowances", "levels": ["Bachelor", "Master", "PhD"], "streams": ["Social Sciences", "Law", "Business & Economics", "Arts & Humanities"], "eligibility": "German and international students with outstanding academic records and social-democratic political engagement. Study in Germany.", "requirements": ["Enrolled at a German university", "Outstanding academic record", "Strong social and political engagement", "Ideological alignment with social-democratic values", "Application and interview in German"], "notes": "Linked to the German Social Democratic Party values. International applicants must demonstrate German language proficiency.", "deadline": "2026-09-30", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.fes.de/en/studienfoerderung" },
+
+    { "id": "konrad_adenauer", "name": "Konrad Adenauer Foundation Scholarship (Germany)", "provider": "Konrad-Adenauer-Stiftung (KAS)", "university": null, "country": "Germany", "countryCode": "DE", "amountType": "partial", "amountDesc": "Monthly stipend (€934 Master's / €1,200 PhD), study allowance, and ideological integration program", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "German students and international students studying in Germany. Values Catholic Christian social teaching and Christian democratic principles.", "requirements": ["Enrolled at a German university", "Excellent academic performance", "Social engagement and civic involvement", "Christian democratic values", "Two application rounds per year (January and July)"], "notes": "Associated with the CDU/CSU political tradition. Offers a broad ideological and cultural integration program.", "deadline": "2026-07-15", "notificationDate": "2026-11-30", "status": "open", "competitionLevel": "High", "link": "https://www.kas.de/en/web/stipendium" },
+
+    { "id": "stanford_knight_hennessy", "name": "Knight-Hennessy Scholars Program", "provider": "Knight-Hennessy Scholars / Stanford University", "university": "Stanford University", "country": "United States", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, stipend, accommodation, and leadership development funding for any Stanford graduate program", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "All nationalities. Applying to any Stanford graduate program. Exceptional academic achievement, leadership, and civic commitment required.", "requirements": ["Accepted into any Stanford graduate program", "Demonstrated civic mindset and leadership", "All nationalities welcome", "Apply simultaneously to Stanford grad program and Knight-Hennessy"], "notes": "Around 100 scholars per year across all Stanford graduate schools. One of the most generous scholarships in the world — covers any Stanford master's or PhD.", "deadline": "2026-10-14", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://knight-hennessy.stanford.edu" },
+
+    { "id": "oxford_clarendon", "name": "Clarendon Fund Scholarships (Oxford)", "provider": "University of Oxford", "university": "University of Oxford", "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition and generous living grant for the duration of postgraduate study", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "All nationalities. No separate application — you are automatically considered when you submit a graduate application to Oxford by the first deadline.", "requirements": ["Apply to Oxford graduate program by first deadline (typically December)", "Outstanding academic achievement", "All nationalities welcome", "No separate application needed"], "notes": "Do not need to apply separately — auto-consideration with any Oxford graduate application submitted by December deadline. Around 150 awards per year.", "deadline": "2026-12-05", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.ox.ac.uk/clarendon" },
+
+    { "id": "oxford_weidenfeld", "name": "Weidenfeld-Hoffmann Scholarships (Oxford)", "provider": "Weidenfeld-Hoffmann Trust / University of Oxford", "university": "University of Oxford", "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition, living grant, flights, and Hoffmann Leadership Programme (workshops, residentials, mentoring)", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of eligible countries in Africa, Asia, Eastern Europe, and Latin America. Strong potential for positive impact in home country on return.", "requirements": ["Citizen of a Weidenfeld-eligible country", "Apply to Oxford postgraduate program", "Commitment to leadership and development in home country", "Submit supplementary materials through Oxford's scholarship system"], "notes": "Uniquely combines scholarship funding with a leadership development programme run by the Hoffmann Centre for Sustainable Resource Economy.", "deadline": "2027-01-10", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.ox.ac.uk/weidenfeld-hoffmann" },
+
+    { "id": "eth_excellence", "name": "ETH Excellence Scholarship & Opportunity Programme (ESOP)", "provider": "ETH Zurich", "university": "ETH Zurich", "country": "Switzerland", "countryCode": "CH", "amountType": "full", "amountDesc": "CHF 12,000 annual living grant and tuition waiver for the master's program (2 years)", "levels": ["Master"], "streams": ["Engineering & Technology", "Natural Sciences", "Computer Science & IT", "Architecture & Design"], "eligibility": "Non-Swiss students with outstanding bachelor's degrees applying to ETH Zurich master's programs. Must be admitted to ETH first.", "requirements": ["Apply to and be admitted to an ETH Zurich master's program", "Outstanding bachelor's degree (top 10% of class)", "Submit scholarship application after admission", "All nationalities eligible"], "notes": "Apply to ETH Zurich master's program first — scholarship application submitted after conditional admission. Deadline: December 15.", "deadline": "2026-12-15", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://ethz.ch/en/studies/financial/scholarships/excellence-scholarship.html" },
+
+    { "id": "epfl_excellence", "name": "EPFL Excellence Fellowship", "provider": "EPFL (École Polytechnique Fédérale de Lausanne)", "university": "EPFL", "country": "Switzerland", "countryCode": "CH", "amountType": "partial", "amountDesc": "CHF 15,000 per year living allowance for 2-year master's program", "levels": ["Master"], "streams": ["Engineering & Technology", "Natural Sciences", "Computer Science & IT", "Architecture & Design"], "eligibility": "Outstanding students applying to EPFL master's programs. Top 10% of undergraduate class. All nationalities.", "requirements": ["Outstanding undergraduate record (top 10% of class)", "Apply to EPFL master's program", "Motivation letter highlighting academic excellence", "All nationalities eligible"], "notes": "Automatically considered during EPFL master's admissions if you are admitted — no separate scholarship application.", "deadline": "2026-11-15", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.epfl.ch/education/master/excellence-fellowship" },
+
+    { "id": "tu_delft_excellence", "name": "TU Delft Excellence Scholarship (Holland Scholarship)", "provider": "Delft University of Technology", "university": "Delft University of Technology", "country": "Netherlands", "countryCode": "NL", "amountType": "partial", "amountDesc": "€5,000 grant in first year of master's study", "levels": ["Master"], "streams": ["Engineering & Technology", "Computer Science & IT", "Architecture & Design"], "eligibility": "Non-EEA students applying to specific TU Delft master's programs with a GPA equivalent to Dutch 8/10 or higher.", "requirements": ["Non-EEA national", "Outstanding GPA (equivalent to 8/10 Dutch scale)", "Applying to eligible TU Delft master's program", "Apply before TU Delft scholarship deadline (January)"], "notes": "Applied for alongside TU Delft admissions application. Program-specific — check TU Delft's scholarship page for eligible programs.", "deadline": "2027-01-15", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.tudelft.nl/onderwijs/praktische-zaken/scholarships" },
+
+    { "id": "nus_research_scholarship", "name": "NUS Research Scholarship", "provider": "National University of Singapore", "university": "National University of Singapore", "country": "Singapore", "countryCode": "SG", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (SGD 2,500–2,700), and hospitalization insurance", "levels": ["PhD"], "streams": ["All streams"], "eligibility": "International and Singapore students applying for a PhD at NUS. Strong academic record and research aptitude required.", "requirements": ["Bachelor's or Master's degree with strong academic record", "Research proposal or match with NUS faculty", "English proficiency", "Apply to NUS PhD program — scholarship is part of application process"], "notes": "Most PhD students at NUS receive some form of funding. Top candidates receive full NUS Research Scholarship automatically.", "deadline": "2026-11-30", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "High", "link": "https://ngs.nus.edu.sg/wp-content/uploads/2022/05/NUS-Graduate-School-Research-Scholarships-Brochure.pdf" },
+
+    { "id": "anu_chancellors", "name": "ANU Chancellor's International Scholarship", "provider": "Australian National University", "university": "Australian National University", "country": "Australia", "countryCode": "AU", "amountType": "partial", "amountDesc": "25–50% tuition fee reduction for the duration of undergraduate or postgraduate study", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "International students applying to ANU who have achieved exceptional academic results (typically ATAR 99+ or equivalent GPA).", "requirements": ["International (non-Australian) student", "Exceptional academic achievement", "Apply to ANU program", "Scholarship assessed automatically with ANU application", "Maintain GPA above threshold to keep scholarship"], "notes": "No separate application needed — automatically considered for all high-achieving international applicants to ANU.", "deadline": "2026-12-15", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "High", "link": "https://www.anu.edu.au/study/scholarships/find-a-scholarship/anu-chancellors-international-scholarship" },
+
+    { "id": "edinburgh_global", "name": "Edinburgh Global Research Scholarships", "provider": "University of Edinburgh", "university": "University of Edinburgh", "country": "United Kingdom", "countryCode": "GB", "amountType": "partial", "amountDesc": "Covers the overseas fee premium (difference between home and international tuition rate)", "levels": ["PhD"], "streams": ["All streams"], "eligibility": "Non-UK students applying for full-time PhD study at the University of Edinburgh. Allocated on academic merit.", "requirements": ["Non-UK national", "Applying to Edinburgh PhD program", "Outstanding academic record", "Strong research proposal", "Apply before March deadline"], "notes": "Covers the overseas premium only — covers cost difference between UK-home and international fees. Often combined with other awards.", "deadline": "2027-03-01", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.ed.ac.uk/student-funding/postgraduate/international/global/research" },
+
+    { "id": "melbourne_research", "name": "Melbourne Research Scholarship (MRS)", "provider": "University of Melbourne", "university": "University of Melbourne", "country": "Australia", "countryCode": "AU", "amountType": "full", "amountDesc": "Full tuition waiver, annual living allowance (AUD 32,000+), and relocation grant for up to 4 years (PhD) or 2 years (Research Master's)", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Domestic and international students applying for Melbourne research degrees. Selected on academic merit — GPA equivalent to Melbourne H1 (first class honours).", "requirements": ["Applying to a Melbourne research degree", "First-class honours degree or equivalent (GPA 3.6+/4.0)", "Evidence of research potential", "Strong research proposal with supervisor support"], "notes": "Highly competitive — strong research publication record (or honours thesis) dramatically improves chances.", "deadline": "2026-10-31", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "Very High", "link": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship" },
+
+    { "id": "vanier_canada", "name": "Vanier Canada Graduate Scholarship (CGS)", "provider": "Government of Canada", "university": null, "country": "Canada", "countryCode": "CA", "amountType": "partial", "amountDesc": "CAD $50,000 per year for up to 3 years of doctoral study in Canada", "levels": ["PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Social Sciences", "Arts & Humanities", "Medicine & Health Sciences"], "eligibility": "Canadian citizens, permanent residents, and international students nominated by Canadian universities. Exceptional academic achievement and leadership.", "requirements": ["Nominated by Canadian institution (you cannot apply directly)", "Intending to pursue a full-time PhD at a Canadian university", "Excellent academic record (GPA equivalent to A+ in last 2 years)", "Leadership qualities and research potential"], "notes": "You must be nominated by the university — contact the financial aid office of your target Canadian university to express interest.", "deadline": "2026-11-01", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://vanier.gc.ca/en/home-accueil.html" },
+
+    { "id": "banting_postdoc", "name": "Banting Postdoctoral Fellowships (Canada)", "provider": "Government of Canada", "university": null, "country": "Canada", "countryCode": "CA", "amountType": "partial", "amountDesc": "CAD $70,000 per year for 2 years of postdoctoral research in Canada", "levels": ["PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Canadian and international researchers who have completed their PhD within the last 3 years. Must be nominated by a Canadian institution.", "requirements": ["PhD completed within last 3 years (or will complete by start of fellowship)", "Nominated by Canadian host institution", "Exceptional research track record", "Alignment with Canadian research priorities"], "notes": "70 fellowships per year. Must already be in negotiation with a Canadian university host supervisor. Extremely competitive.", "deadline": "2026-09-17", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "Extremely High", "link": "https://banting.fellowships-bourses.gc.ca" },
+
+    { "id": "new_zealand_gov", "name": "New Zealand Government Scholarships (NZAS)", "provider": "New Zealand Ministry of Foreign Affairs and Trade", "university": null, "country": "New Zealand", "countryCode": "NZ", "amountType": "full", "amountDesc": "Full tuition, monthly living allowance, airfare, medical insurance, and establishment allowance", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of eligible Pacific and Asia-Pacific countries. Focus on development priorities. Return obligation applies.", "requirements": ["Citizen of eligible Pacific or Asia-Pacific country", "Academic merit", "English proficiency (IELTS 6.5+)", "Demonstrated capacity to contribute to home country development", "Return to home country obligation"], "notes": "Priority given to Pacific Island countries. Managed by New Zealand High Commissions and Embassies.", "deadline": "2027-01-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.mfat.govt.nz/en/aid-and-development/new-zealand-scholarships" },
+
+    { "id": "malaysia_msd", "name": "Malaysian Government Scholarship (MSD Scholarship)", "provider": "Jabatan Perkhidmatan Awam (JPA) / Public Service Department, Malaysia", "university": null, "country": "Malaysia", "countryCode": "MY", "amountType": "full", "amountDesc": "Full tuition, monthly allowance, airfare, and book allowance for study abroad", "levels": ["Bachelor", "Master", "PhD"], "streams": ["Engineering & Technology", "Medicine & Health Sciences", "Natural Sciences", "Business & Economics"], "eligibility": "Malaysian citizens with outstanding academic results. Strong focus on STEM and medicine. Priority for Bumi students; open applicants also considered.", "requirements": ["Malaysian citizen", "Outstanding SPM/STPM results (10A+/4A typically)", "Age limit 18–25 for UG, varies for PG", "Apply via JPA online portal", "Bonding obligation upon completion"], "notes": "Highly competitive — only a few hundred places per year for overseas study. Selection involves interviews and psychological tests.", "deadline": "2027-01-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.jpa.gov.my/index.php/en/biasiswa" },
+
+    { "id": "singa_singapore", "name": "Singapore International Graduate Award (SINGA)", "provider": "A*STAR, NUS, NTU, SUTD, SIT (Singapore)", "university": null, "country": "Singapore", "countryCode": "SG", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (SGD 2,200), one-time airfare, and settling allowance", "levels": ["PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Computer Science & IT", "Medicine & Health Sciences"], "eligibility": "International students only (Singapore PRs and citizens not eligible). Strong STEM background for PhD research in Singapore.", "requirements": ["Non-Singapore citizen and non-PR", "Bachelor's or Master's degree in STEM", "Strong research aptitude", "Minimum GPA equivalent to 3.5/4.0"], "notes": "Joint program by A*STAR, NUS, NTU, SUTD, and SIT. Three intakes per year. STEM-focused research scholarship.", "deadline": "2027-01-01", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.singa.a-star.edu.sg" },
+
+    { "id": "thailand_gov", "name": "Thailand Government Scholarship (ODOS)", "provider": "Office of the Higher Education Commission (OHEC), Thailand", "university": null, "country": "Thailand", "countryCode": "TH", "amountType": "full", "amountDesc": "Full tuition, monthly stipend, airfare, accommodation, and medical insurance", "levels": ["Master", "PhD"], "streams": ["Engineering & Technology", "Natural Sciences", "Medicine & Health Sciences", "Business & Economics"], "eligibility": "Thai government officials and civil servants, and occasionally non-Thai nationals through bilateral programs. ODOS program primarily for Thai nationals.", "requirements": ["Thai national or bilateral partner citizen", "Employed by Thai government (some programs)", "English proficiency", "Work in development-related field"], "notes": "Primarily for Thai nationals pursuing overseas study. International students benefit via bilateral scholarship agreements with Thailand.", "deadline": "2027-03-31", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.mua.go.th/main2021" },
+
+    { "id": "nrf_south_africa", "name": "NRF-DSI Innovation Doctoral Scholarship (South Africa)", "provider": "National Research Foundation (NRF), South Africa", "university": null, "country": "South Africa", "countryCode": "ZA", "amountType": "partial", "amountDesc": "ZAR 100,000+ annual stipend for doctoral research at a South African university", "levels": ["PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Medicine & Health Sciences", "Computer Science & IT"], "eligibility": "South African citizens or permanent residents enrolled in or applying to a South African university doctoral program. Focus on STEM and innovation.", "requirements": ["South African citizen or permanent resident", "Enrolled or accepted at SA university for PhD", "Strong academic record (B+ average or above)", "STEM or innovation research focus", "Apply via NRF online system"], "notes": "Multiple NRF scholarship streams available — check NRF Online for current calls. Innovation focus aligns with South Africa's national development goals.", "deadline": "2026-08-31", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://nrfscholarships.nrf.ac.za" },
+
+    { "id": "african_dev_bank", "name": "African Development Bank (AfDB) Scholarship", "provider": "African Development Bank Group", "university": null, "country": "Various", "countryCode": "CD", "amountType": "full", "amountDesc": "Full tuition, living allowance, airfare, insurance, and research allowance", "levels": ["Master"], "streams": ["Business & Economics", "Engineering & Technology", "Natural Sciences", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Citizens of AfDB Regional Member Countries (RMC). Study at selected partner universities in Africa and internationally. Focus on development-oriented fields.", "requirements": ["Citizen of an AfDB Regional Member Country", "Bachelor's degree with strong academic record", "Maximum 45 years old", "Not already holding a similar scholarship", "Commitment to return and work in Africa"], "notes": "Apply to specific partner universities — not directly to AfDB. Check their website for current partner programs.", "deadline": "2027-01-31", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.afdb.org/en/topics-and-sectors/sectors/human-development/scholarships" },
+
+    { "id": "romania_gov", "name": "Romanian Government Scholarship", "provider": "Romanian Ministry of Education", "university": null, "country": "Romania", "countryCode": "RO", "amountType": "partial", "amountDesc": "Tuition waiver, accommodation, and monthly stipend (RON 600–900)", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of countries with bilateral agreements with Romania. No age limit. Apply through Romanian embassies.", "requirements": ["Citizen of a partner country", "Academic merit", "Romanian language study (required for most programs; language prep provided)", "Medical certificate", "Apply through Romanian Embassy"], "notes": "Includes a Romanian language preparation year. Many programs are in Romanian but some English-taught options exist.", "deadline": "2027-03-15", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Low", "link": "https://www.roburse.ro/en" },
+
+    { "id": "humphrey_fellowship", "name": "Hubert H. Humphrey Fellowship Program", "provider": "U.S. Department of State", "university": null, "country": "United States", "countryCode": "US", "amountType": "full", "amountDesc": "Full non-degree academic program, living allowance, airfare, health insurance, and professional development funding", "levels": ["Master"], "streams": ["Social Sciences", "Law", "Business & Economics", "Medicine & Health Sciences", "Engineering & Technology"], "eligibility": "Mid-career professionals from 90+ countries with 5+ years' professional experience and a commitment to public service. Non-degree program.", "requirements": ["Citizen of eligible country", "5+ years' work experience in field", "Demonstrated leadership", "Commitment to return and serve in home country", "No previous US degree", "Apply through U.S. Embassy"], "notes": "This is a non-degree professional development program — participants are placed at US universities for 10 months, not to earn a degree.", "deadline": "2026-10-01", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "High", "link": "https://www.humphreyfellowship.org" },
+
+    { "id": "wjwb_scholarship", "name": "World Bank Group JJ/WBGSP Scholarship", "provider": "World Bank Group", "university": null, "country": "Various", "countryCode": "US", "amountType": "full", "amountDesc": "Full tuition, monthly living allowance, travel, insurance, and research support", "levels": ["Master"], "streams": ["Business & Economics", "Social Sciences", "Engineering & Technology", "Natural Sciences"], "eligibility": "Citizens of World Bank member countries who are development professionals. Must be employed or have a job offer in a developing country after graduation.", "requirements": ["Citizen of a World Bank member developing country", "Employed in development-related work", "Bachelor's degree", "Under 45 years old", "Accepted to a JJ/WBGSP-partner university program"], "notes": "Apply to a partner university and the scholarship simultaneously. Partner universities include Oxford, Harvard, Stanford, and 30+ others.", "deadline": "2027-02-15", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.worldbank.org/en/programs/scholarships" },
+
+    { "id": "ntu_research_scholarship", "name": "NTU Research Scholarship (Singapore)", "provider": "Nanyang Technological University", "university": "Nanyang Technological University", "country": "Singapore", "countryCode": "SG", "amountType": "full", "amountDesc": "Full tuition, monthly stipend (SGD 2,000–2,700), and medical insurance", "levels": ["PhD"], "streams": ["Engineering & Technology", "Computer Science & IT", "Natural Sciences", "Business & Economics", "Medicine & Health Sciences"], "eligibility": "International and Singapore students applying to NTU PhD programs. Must have a strong academic record and research aptitude.", "requirements": ["Bachelor's or Master's degree", "Minimum CGPA 3.5/5.0 or equivalent", "Research proposal matching NTU faculty interests", "Apply via NTU online application system"], "notes": "Most NTU PhD students receive some form of funding — the Research Scholarship is the main vehicle. Competitive for top students.", "deadline": "2027-01-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.ntu.edu.sg/graduate-college/admissions/scholarships-and-financial-aid" },
+
+    { "id": "kaist_scholarship", "name": "KAIST Graduate Scholarship (Korea)", "provider": "KAIST (Korea Advanced Institute of Science and Technology)", "university": "KAIST", "country": "South Korea", "countryCode": "KR", "amountType": "full", "amountDesc": "Full tuition waiver, monthly stipend (KRW 500,000–1,000,000), and dormitory accommodation", "levels": ["Master", "PhD"], "streams": ["Engineering & Technology", "Computer Science & IT", "Natural Sciences", "Business & Economics"], "eligibility": "International students applying to KAIST graduate programs. Strong STEM background required.", "requirements": ["Non-Korean national for international track", "Bachelor's degree in STEM or related field", "English proficiency (TOEFL/IELTS)", "Strong academic record", "Research proposal aligned with KAIST faculty"], "notes": "Almost all admitted international students at KAIST receive full financial support. KAIST consistently ranks in the global top 50 for engineering.", "deadline": "2026-11-30", "notificationDate": "2027-02-28", "status": "upcoming", "competitionLevel": "High", "link": "https://admission.kaist.ac.kr/intl-graduate" },
+
+    { "id": "leiden_excellence", "name": "Leiden University Excellence Scholarship (LExS)", "provider": "Leiden University", "university": "Leiden University", "country": "Netherlands", "countryCode": "NL", "amountType": "partial", "amountDesc": "€10,000, €15,000, or full tuition waiver for 1-year master's program", "levels": ["Master"], "streams": ["Arts & Humanities", "Social Sciences", "Law", "Medicine & Health Sciences", "Natural Sciences"], "eligibility": "Non-EU students applying to a Leiden University master's program. Top 10% of undergraduate class.", "requirements": ["Non-EU/EEA national", "Undergraduate GPA in top 10% of class", "Applying to eligible Leiden master's program", "Apply before February scholarship deadline"], "notes": "Three award levels based on GPA. No separate application form — scholarship considered alongside master's application.", "deadline": "2027-02-01", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.universiteitleiden.nl/en/education/scholarships/leiden-university-excellence-scholarship" },
+
+    { "id": "unsw_excellence", "name": "UNSW Global Excellence Scholarship", "provider": "University of New South Wales (UNSW Sydney)", "university": "UNSW Sydney", "country": "Australia", "countryCode": "AU", "amountType": "partial", "amountDesc": "AUD $10,000 per year reduction in tuition for the duration of an undergraduate degree (3–5 years)", "levels": ["Bachelor"], "streams": ["Engineering & Technology", "Business & Economics", "Computer Science & IT", "Natural Sciences", "Architecture & Design"], "eligibility": "International students (non-Australian/NZ) applying to undergraduate programs. High academic achievement required.", "requirements": ["International student (non-Australian/NZ citizen)", "Minimum equivalent ATAR 95+ or equivalent", "Accepted to an eligible UNSW undergraduate program", "Maintain required GPA to continue scholarship"], "notes": "Apply through UNSW admissions — no separate scholarship form. Automatically considered for high-achieving applicants.", "deadline": "2026-12-15", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.unsw.edu.au/study/scholarships/excellence-scholarships" },
+
+    { "id": "mcgill_entrance", "name": "McGill University Entrance Scholarships", "provider": "McGill University", "university": "McGill University", "country": "Canada", "countryCode": "CA", "amountType": "partial", "amountDesc": "CAD $3,000–$30,000 per year, depending on academic merit and program", "levels": ["Bachelor"], "streams": ["All streams"], "eligibility": "Outstanding students admitted to McGill undergraduate programs. Both domestic and international students eligible. Based purely on academic achievement.", "requirements": ["High school grades equivalent to 93%+ average", "Admitted to McGill undergraduate program", "No separate application needed for entrance awards", "Some awards require essays or additional application"], "notes": "Over 1,200 entrance awards distributed annually. Major entrance scholarships (e.g., Scholarships of Excellence) require separate application.", "deadline": "2027-01-15", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.mcgill.ca/studentaid/scholarships-awards" },
+
+    { "id": "ghent_special", "name": "Ghent University Special Research Fund (BOF) Scholarship", "provider": "Ghent University", "university": "Ghent University", "country": "Belgium", "countryCode": "BE", "amountType": "full", "amountDesc": "Full PhD funding (salary ~€2,200/month net) for 4 years including social benefits", "levels": ["PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Social Sciences", "Medicine & Health Sciences", "Arts & Humanities"], "eligibility": "All nationalities. Applied for through research projects with a Ghent University promoter. Must have excellent academic record.", "requirements": ["Master's degree with excellent results (magna cum laude equivalent)", "Research project aligned with Ghent University faculty", "Apply jointly with supervisor through BOF calls", "All nationalities welcome"], "notes": "PhD positions in Belgium are employment contracts, not scholarships — PhD students receive a salary and social security. Contact faculty directly.", "deadline": "2026-09-30", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.ugent.be/en/research/funding/bof/phd-scholarships" },
+
+    { "id": "ku_leuven_phd", "name": "KU Leuven PhD Scholarship (Internal Mandate)", "provider": "KU Leuven", "university": "KU Leuven", "country": "Belgium", "countryCode": "BE", "amountType": "full", "amountDesc": "Full PhD salary (~€2,100–2,400/month net) for 4 years with Belgian social benefits", "levels": ["PhD"], "streams": ["All streams"], "eligibility": "All nationalities. Must find a KU Leuven promoter and be admitted to a doctoral program. Strong academic record required.", "requirements": ["Master's degree with high distinction", "KU Leuven promoter acceptance", "Strong research proposal", "Apply through faculty — no central application portal for all positions"], "notes": "PhD at Belgian universities is typically a funded employment contract. Email faculty directly with your CV, research statement, and transcripts.", "deadline": "2026-10-31", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.kuleuven.be/english/research/phd" },
+
+    { "id": "trinity_college_scholarship", "name": "Trinity College Dublin Postgraduate Research Scholarships", "provider": "Trinity College Dublin", "university": "Trinity College Dublin", "country": "Ireland", "countryCode": "IE", "amountType": "partial", "amountDesc": "Annual stipend of €18,000 + EU fees for PhD research (up to 4 years)", "levels": ["PhD"], "streams": ["All streams"], "eligibility": "All nationalities. Must be applying to a Trinity College Dublin research PhD. High-quality research proposal and faculty support required.", "requirements": ["First or upper-second class degree", "Trinity PhD program application", "Research proposal with Trinity supervisor", "Apply by January 31 for most funded positions"], "notes": "Funding often linked to specific research projects with individual supervisors. Contact faculty in advance to discuss opportunities.", "deadline": "2027-01-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "High", "link": "https://www.tcd.ie/Graduate_Studies/scholarships" },
+
+    { "id": "cambridge_international_scholarship", "name": "Cambridge International Scholarship (CISS)", "provider": "Cambridge Commonwealth, European & International Trust", "university": "University of Cambridge", "country": "United Kingdom", "countryCode": "GB", "amountType": "full", "amountDesc": "Full tuition and maintenance for PhD study at Cambridge", "levels": ["PhD"], "streams": ["All streams"], "eligibility": "Citizens of Commonwealth countries or other international students applying to Cambridge PhD programs. Outstanding academic achievement.", "requirements": ["Citizen of a Commonwealth or other eligible country", "Apply to Cambridge PhD program", "Outstanding first degree", "Apply by Gates Cambridge / Clarendon first deadline (December)", "No separate application — automatically considered"], "notes": "Auto-considered with Cambridge PhD application if submitted by first deadline. Around 15–20 awards per year.", "deadline": "2026-12-05", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.cambridgetrust.org/scholarships/cambridge-international-scholarship" },
+
+    { "id": "norwegian_quota", "name": "Norwegian Government Scholarship (Quota Scheme)", "provider": "Norwegian Directorate for Higher Education and Skills (HK-dir)", "university": null, "country": "Norway", "countryCode": "NO", "amountType": "partial", "amountDesc": "Monthly allowance (NOK 11,500), study materials grant, travel grant, and health insurance", "levels": ["Master", "PhD"], "streams": ["All streams"], "eligibility": "Citizens of qualifying developing countries and countries in Central and Eastern Europe. Must apply to a Norwegian institution under the Quota Scheme.", "requirements": ["Citizen of a quota-eligible country", "Bachelor's or Master's degree", "English or Norwegian proficiency", "Apply to a Norwegian higher education institution", "Norwegian institution must be part of the Quota Scheme"], "notes": "Administered by Norwegian universities — contact HK-dir or the specific institution for quota places available.", "deadline": "2026-12-01", "notificationDate": "2027-03-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://hkdir.no/en/scholarships" },
+
+    { "id": "adb_scholarship", "name": "Asian Development Bank (ADB) Scholarship", "provider": "Asian Development Bank Japan Scholarship Program (ADB-JSP)", "university": null, "country": "Japan", "countryCode": "JP", "amountType": "full", "amountDesc": "Full tuition, monthly living allowance, airfare, medical insurance, and doctoral study allowance", "levels": ["Master", "PhD"], "streams": ["Business & Economics", "Engineering & Technology", "Natural Sciences", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Citizens of ADB developing member countries. Postgraduate degree study at ADB-designated institutions in the Asia-Pacific. Age limit 35.", "requirements": ["Citizen of ADB Developing Member Country", "Under 35 years old", "Bachelor's degree with strong academic record", "2 years' professional work experience", "Apply to designated ADB-JSP institution"], "notes": "57 designated institutions in Asia-Pacific, Australia, and the UK. Must apply through an ADB-JSP designated university.", "deadline": "2027-01-31", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.adb.org/site/careers/japan-scholarship-program" },
+
+    { "id": "opec_fund_scholarship", "name": "OPEC Fund International Development Scholarship", "provider": "OPEC Fund for International Development", "university": null, "country": "Austria", "countryCode": "AT", "amountType": "full", "amountDesc": "Full tuition, monthly stipend, airfare, and health insurance", "levels": ["Master", "PhD"], "streams": ["Business & Economics", "Engineering & Technology", "Natural Sciences", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Citizens of developing countries with exceptional academic records. Programmes aligned with development goals.", "requirements": ["Citizen of eligible developing country", "Bachelor's degree", "Academic excellence", "English proficiency", "Field of study relevant to development"], "notes": "Focuses on development-oriented fields. Check OPEC Fund website for current open calls and eligible nationalities.", "deadline": "2027-01-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "High", "link": "https://opecfund.org/what-we-do/people/scholarship-program" },
+
+    { "id": "chinese_provincial", "name": "Chinese Provincial Government Scholarships (Various)", "provider": "Various Chinese Provincial Governments", "university": null, "country": "China", "countryCode": "CN", "amountType": "partial", "amountDesc": "Varies by province: typically ¥1,500–2,500/month stipend, accommodation, and partial tuition waiver", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "International students applying to universities in specific Chinese provinces. Each province sets its own eligibility rules.", "requirements": ["Not a Chinese national", "Apply to a university in the province offering the scholarship", "Academic merit", "Age limits vary by level and province"], "notes": "Provinces including Jiangsu, Guangdong, Beijing, Shanghai, Shandong, and Zhejiang offer their own scholarship programs. Often easier to obtain than national CSC.", "deadline": "2026-07-31", "notificationDate": "2026-10-31", "status": "open", "competitionLevel": "Medium", "link": "https://www.campuschina.org/universities/index.html" },
+
+    { "id": "peking_university_scholarship", "name": "Peking University International Scholarship", "provider": "Peking University", "university": "Peking University", "country": "China", "countryCode": "CN", "amountType": "partial", "amountDesc": "Varies: full tuition waiver, partial tuition waiver, or stipend depending on level of award", "levels": ["Bachelor", "Master", "PhD"], "streams": ["Arts & Humanities", "Business & Economics", "Natural Sciences", "Social Sciences", "Law"], "eligibility": "International students applying to Peking University. Strong academic record, often combined with CSC scholarship.", "requirements": ["Non-Chinese national", "Outstanding academic record", "Apply to PKU directly or via CSC", "Chinese or English proficiency (depending on program)"], "notes": "Many PKU international students hold both a CSC government scholarship and a PKU-specific award. Apply to both simultaneously.", "deadline": "2027-03-01", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.oir.pku.edu.cn/en/Admission" },
+
+    { "id": "sciences_po_scholarship", "name": "Sciences Po Foundation Scholarship", "provider": "Sciences Po Paris Foundation", "university": "Sciences Po Paris", "country": "France", "countryCode": "FR", "amountType": "partial", "amountDesc": "Varies: typically €5,000–€15,000 per year, sometimes combined with tuition waiver", "levels": ["Master"], "streams": ["Social Sciences", "Law", "Business & Economics", "Arts & Humanities"], "eligibility": "International students admitted to Sciences Po Master's programs who demonstrate financial need and academic merit.", "requirements": ["Admitted to Sciences Po Master's program", "Demonstrated financial need", "Outstanding academic record", "Submit financial evidence with application"], "notes": "Sciences Po also participates in the Eiffel Scholarship. Some awards are program-specific — check at point of admission.", "deadline": "2027-01-15", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.sciencespo.fr/en/academics/financial-aid-and-scholarships" },
+
+    { "id": "egyptmohe_scholarship", "name": "Egyptian Government Scholarship (Ministry of Higher Education)", "provider": "Ministry of Higher Education and Scientific Research, Egypt", "university": null, "country": "Egypt", "countryCode": "EG", "amountType": "full", "amountDesc": "Full tuition, accommodation, stipend, and airfare at Egyptian universities", "levels": ["Bachelor", "Master", "PhD"], "streams": ["All streams"], "eligibility": "Non-Egyptian Arab nationals and citizens of specific countries with bilateral agreements with Egypt. Study at Egyptian public universities.", "requirements": ["Non-Egyptian citizen of eligible country", "Academic merit", "Arabic proficiency (most programs in Arabic)", "Apply through Egyptian Embassy or MOHE in Egypt"], "notes": "Primarily for Arabic-speaking students or those from countries with bilateral agreements. Strong in medicine, engineering, and Arabic studies.", "deadline": "2026-09-30", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "Low", "link": "https://mohesr.gov.eg/en-us/Scholarship" },
+
+    { "id": "arab_fund_scholarship", "name": "Arab Fund Scholarship Program", "provider": "Arab Fund for Economic and Social Development", "university": null, "country": "Various", "countryCode": "SA", "amountType": "full", "amountDesc": "Full tuition, monthly stipend, airfare, and accommodation", "levels": ["Master", "PhD"], "streams": ["Engineering & Technology", "Natural Sciences", "Business & Economics", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Citizens of Arab countries with strong academic records and commitment to development in Arab world.", "requirements": ["Arab country citizen", "Bachelor's or Master's degree with excellence", "Admission to top university", "Commitment to work in Arab region after graduation", "Under 40 years old"], "notes": "Focus on technical and development fields that contribute to Arab world economic development.", "deadline": "2026-12-15", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://arabfund.org/en/scholarships" },
+
+    { "id": "pakistan_hec", "name": "HEC Overseas Scholarship (Pakistan)", "provider": "Higher Education Commission (HEC), Pakistan", "university": null, "country": "Pakistan", "countryCode": "PK", "amountType": "full", "amountDesc": "Full tuition, monthly stipend, airfare, medical insurance, and research allowance for study at top-ranked global universities", "levels": ["Master", "PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Medicine & Health Sciences", "Business & Economics"], "eligibility": "Pakistani nationals with exceptional academic records. Multiple programs: HRDI UET/UMT, Faculty Development, Indigenous, and others.", "requirements": ["Pakistani national", "For most programs: employed by a Pakistani HEC-recognized institution", "GRE/GMAT score (program specific)", "English proficiency (IELTS/TOEFL)", "Apply through HEC online portal"], "notes": "Priority to faculty and researchers who will return to Pakistani institutions. PhD programs are prioritized. Bonding clause applies.", "deadline": "2027-01-31", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Very High", "link": "https://www.hec.gov.pk/english/scholarships/pages/default.aspx" },
+
+    { "id": "conacyt_mexico", "name": "CONACYT Scholarships (Mexico)", "provider": "Consejo Nacional de Ciencia y Tecnología (CONACYT)", "university": null, "country": "Mexico", "countryCode": "MX", "amountType": "partial", "amountDesc": "Monthly stipend (MXN 14,000–32,000 depending on level), tuition support, and insurance", "levels": ["Master", "PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Mexican nationals pursuing postgraduate studies at recognized national or international institutions. Must be registered in Mexico's National Registry of Graduate Programs (PNPC).", "requirements": ["Mexican national", "Enrolled in or accepted to a PNPC-registered program", "Strong academic record", "Full-time enrollment", "Cannot hold another CONACYT scholarship simultaneously"], "notes": "Main vehicle for Mexican government support of postgraduate education. International scholarships also available for Mexicans studying abroad.", "deadline": "2026-09-15", "notificationDate": "2026-12-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://conacyt.mx/becar-posgrado" },
+
+    { "id": "cnpq_brazil", "name": "CNPq Research Scholarships (Brazil)", "provider": "National Council for Scientific and Technological Development (CNPq), Brazil", "university": null, "country": "Brazil", "countryCode": "BR", "amountType": "partial", "amountDesc": "Monthly stipend (BRL 2,200–9,000 depending on level), research allowance", "levels": ["Master", "PhD"], "streams": ["Natural Sciences", "Engineering & Technology", "Social Sciences", "Medicine & Health Sciences"], "eligibility": "Brazilian nationals or permanent residents enrolled in or accepted to Brazilian postgraduate programs, or Brazilians studying abroad through Ciência sem Fronteiras revival programs.", "requirements": ["Brazilian national or permanent resident", "Enrolled in a CAPES-rated graduate program", "Academic merit", "Research project with supervisor"], "notes": "CNPq offers IC (undergraduate), Master's, PhD, and postdoctoral scholarships. International Brazilian students may qualify for SWF (Science Without Borders) successor programs.", "deadline": "2026-10-31", "notificationDate": "2027-01-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.gov.br/cnpq/pt-br" },
+
+    { "id": "orange_tulip", "name": "Orange Tulip Scholarship (Netherlands)", "provider": "Nuffic / Nuffic Neso Netherlands", "university": null, "country": "Netherlands", "countryCode": "NL", "amountType": "partial", "amountDesc": "Varies: typically €5,000–full tuition depending on the partner institution and program", "levels": ["Bachelor", "Master"], "streams": ["All streams"], "eligibility": "Students from specific countries (China, Indonesia, Mexico, Russia, Vietnam, South Korea, and others) applying to Dutch universities. Each country has its own OTS program.", "requirements": ["Citizen of an OTS-eligible country", "Applying to a Dutch university", "Apply through Nuffic Neso office in your country", "Academic merit (GPA threshold varies)"], "notes": "The OTS is managed by Nuffic Neso offices in eligible countries. Not all countries participate. Check Nuffic website for your country's OTS office.", "deadline": "2027-02-01", "notificationDate": "2027-05-31", "status": "upcoming", "competitionLevel": "Medium", "link": "https://www.studyinholland.nl/scholarships/orange-tulip-scholarship" },
+
+    { "id": "joint_japan_wb", "name": "Joint Japan/World Bank Graduate Scholarship Program", "provider": "World Bank & Government of Japan", "university": null, "country": "Japan", "countryCode": "JP", "amountType": "full", "amountDesc": "Full tuition, monthly allowance, travel, and medical insurance", "levels": ["Master"], "streams": ["Business & Economics", "Engineering & Technology", "Social Sciences", "Natural Sciences"], "eligibility": "Citizens of World Bank member countries who are development professionals, under 45 years old, with 2+ years' work experience.", "requirements": ["Citizen of WB developing member country", "2+ years' development-related work experience", "Bachelor's degree", "Under 45 years old", "Accepted to JJ/WBGSP partner university", "Return to home country obligation"], "notes": "Study can take place in Japan, Europe, the Americas, Africa, or Asia depending on the partner university.", "deadline": "2027-03-01", "notificationDate": "2027-06-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.worldbank.org/en/programs/scholarships/brief/jj-wbgsp" },
+
+    { "id": "hec_paris_scholarship", "name": "HEC Paris Scholarship Programs", "provider": "HEC Paris", "university": "HEC Paris", "country": "France", "countryCode": "FR", "amountType": "partial", "amountDesc": "€5,000–€30,000 grants depending on financial need and academic merit", "levels": ["Master"], "streams": ["Business & Economics"], "eligibility": "International students admitted to HEC Paris MBA or Master's programs. Need-based and merit-based grants available.", "requirements": ["Admitted to HEC Paris program", "Financial need documentation", "Strong academic and professional record", "Apply during admissions process"], "notes": "HEC Paris offers 30+ scholarship programs for international students, including regional-specific awards (Africa, Asia, Americas).", "deadline": "2027-01-15", "notificationDate": "2027-04-30", "status": "upcoming", "competitionLevel": "High", "link": "https://www.hec.edu/en/msc-programs/financial-aid-scholarships" }
+
+  ]
 };
