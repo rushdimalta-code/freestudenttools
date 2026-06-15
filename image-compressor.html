@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free Image Compressor — Compress JPG, PNG & WebP Online</title>
   <meta name="description" content="Compress JPG, PNG, and WebP images free online. Reduce file size for email or uploads. No sign-up, no file uploads — runs 100% in your browser.">
   <meta name="keywords" content="free image compressor online, reduce image file size free, compress jpg png free, image size reducer no upload, compress image for email free, resize image no signup, webp compressor free">
@@ -98,18 +101,6 @@
     .preview-box img { width: 100%; height: 160px; object-fit: contain; background: var(--bg-gray); display: block; }
     @media (max-width: 480px) { .preview-grid { grid-template-columns: 1fr; } }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -124,14 +115,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -370,15 +364,59 @@
 <!-- SEO CONTENT SECTION -->
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
-    <h2>Why Reduce Image File Size Online?</h2>
-    <p>Large image files slow down websites, fail upload limits on university portals, and clog email attachments. Our free image compressor reduces JPG, PNG, and WebP file sizes by up to 85% — without visible quality loss — using your browser's native Canvas API. No upload, no server, no account.</p>
-      <p>You choose the output quality (1–100%) and output format. The tool processes images instantly on your device, so there is no waiting and no privacy risk. Download the compressed version in one click.</p>
-      <p>Students use this to resize profile photos for university applications, compress scanned documents before converting to PDF, reduce image attachments for emails, and optimise images for personal websites and portfolios.</p>
+    <h2>When Image File Size Actually Matters</h2>
+    <p>There are three situations where a too-large image causes a real problem: uploading a profile photo to a university portal, attaching a scanned document to an email, or adding images to a personal website or portfolio. Each has a different tolerance — and most students don't check the size limit until the upload fails.</p>
+    <p>University application portals typically cap photo uploads at 200 KB to 500 KB. The photo on your phone is almost certainly 3–6 MB. <a href="scholarships.html">Scholarship forms</a> often impose similar limits. Even email has a practical ceiling: most people won't open an email with a 15 MB attachment on a mobile connection. Compressing your image before uploading takes less than 10 seconds and eliminates the problem entirely.</p>
+
+    <h2>How the Compressor Works — No Upload Required</h2>
+    <p>Most image compression tools upload your file to a server, compress it remotely, and send it back. That introduces privacy risk, a dependency on internet speed, and usually a paid tier limit. Our tool does none of that.</p>
+    <p>Everything runs in your browser using the HTML5 Canvas API — the same technology built into every modern browser for rendering graphics. You load the image, choose your quality setting, and the Canvas element re-renders it at the target quality level. The compressed version is generated entirely on your device in under a second, with no server involved. Close the tab and there's no trace of the image anywhere outside your device.</p>
+
+    <h2>Understanding Quality Settings</h2>
+    <p>The quality slider goes from 1% to 100%, but you'll almost never use either extreme. Here's how to think about the ranges:</p>
+    <p><strong>70–85% quality</strong> is the sweet spot for most uses. You'll see file size reductions of 50–75% with almost no visible difference to the human eye. A 4 MB JPG portrait typically drops to under 800 KB at 80% quality. This is the right setting for scholarship profile photos, portfolio images, and university application uploads.</p>
+    <p><strong>50–70% quality</strong> delivers larger savings — often 75–88% size reduction. Some softening appears in complex textures, but plain backgrounds and text stay sharp. Use this for thumbnail images on personal websites, email attachments that don't need to print, and bulk compression of event photos.</p>
+    <p><strong>Below 50% quality</strong> produces the smallest files but visible compression artefacts. Appropriate for tiny thumbnails, icons, and images that are only viewed on small screens. Don't use it for any image that represents you professionally.</p>
+
+    <h2>JPEG vs WebP — Which Output Format Should You Choose?</h2>
+    <p>JPEG is the safe choice. Every device, browser, email client, and portal in the world supports it. If in doubt, output as JPEG. The one situation where it fails is images with transparent backgrounds — JPEG doesn't support transparency, so transparent areas render as white.</p>
+    <p>WebP is 25–35% smaller than JPEG at equivalent quality. Modern browsers all support it, and most social platforms accept it. It's the right choice for personal websites and portfolios. But some older university portals and email clients don't handle WebP yet, so check before submitting to an external system.</p>
+    <p>PNG input files can also be compressed and output as JPEG or WebP. Keep in mind that PNG is a lossless format — compressing a PNG to JPEG involves quality loss that wasn't there before. If the original PNG has a transparent background you want to preserve, stay with WebP output.</p>
+
+    <h2>Student Use Cases</h2>
+    <ul>
+      <li><strong>Scholarship application photos:</strong> Many <a href="scholarships.html">scholarship portals</a> require a profile photo under 300 KB. Phone photos are 10–20× too large. Compress to 80% quality, output as JPEG.</li>
+      <li><strong>University portal uploads:</strong> Check our <a href="admissions.html">admissions tracker</a> for deadlines — then make sure your photo meets the portal's size requirement before the night of the deadline.</li>
+      <li><strong>Portfolio websites:</strong> Large images slow page load significantly. A 3-second load time loses 40% of visitors. Each image on your portfolio should be under 200 KB for the web version.</li>
+      <li><strong>Email attachments:</strong> Before emailing a tutor or employer a set of images, compress each one to reduce the total attachment size below 10 MB.</li>
+      <li><strong>Scanned documents:</strong> If you scanned a document as an image rather than a PDF, compress it here before converting it to PDF with our <a href="ocr.html">OCR Scanner</a>.</li>
+    </ul>
+
     <h2>Frequently Asked Questions</h2>
-      <details class="faq-item"><summary>Is this image compressor free?</summary><div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs in your browser using the Canvas API.</p></div></details>
-      <details class="faq-item"><summary>What image formats are supported?</summary><div class="faq-answer"><p>You can upload JPG, PNG, WebP, and GIF images. Output can be saved as JPEG or WebP.</p></div></details>
-      <details class="faq-item"><summary>Are my images uploaded to a server?</summary><div class="faq-answer"><p>No. All compression happens inside your browser using the HTML5 Canvas API. Your image never leaves your device.</p></div></details>
-      <details class="faq-item"><summary>What is the difference between quality levels?</summary><div class="faq-answer"><p>Low (40%) gives the smallest file size with visible quality reduction. Medium (70%) balances size and quality well for most uses. High (85%) keeps quality close to the original with modest file size reduction.</p></div></details>
+    <details class="faq-item">
+      <summary>Is this image compressor really free?</summary>
+      <div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs in your browser using the Canvas API with no file size limit and no cap on how many images you compress.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>What image formats are supported?</summary>
+      <div class="faq-answer"><p>You can upload JPG, PNG, WebP, and GIF images. Output can be saved as JPEG or WebP. GIF files lose animation when compressed through this tool — for animated GIFs you'd need a dedicated GIF compressor.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Are my images uploaded to a server?</summary>
+      <div class="faq-answer"><p>No. All compression happens inside your browser using the HTML5 Canvas API. Your image never leaves your device. There are no server logs of your file. Close the tab and it's gone entirely.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>What quality setting should I use for a university portal?</summary>
+      <div class="faq-answer"><p>Start at 80%. That typically brings a phone photo from 4–6 MB down to 300–600 KB with no visible quality difference. If the portal requires under 200 KB, try 70%. If it requires under 100 KB, try 60% and check the preview before downloading.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I compress a PNG without losing the transparent background?</summary>
+      <div class="faq-answer"><p>Yes — output as WebP instead of JPEG. WebP supports transparency and compresses significantly smaller than PNG. If the system you're uploading to doesn't support WebP, flatten the transparency to a solid background before outputting as JPEG.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Does compressing reduce the pixel dimensions of my image?</summary>
+      <div class="faq-answer"><p>Not by default — the tool compresses quality, not dimensions. The pixel width and height stay the same; only the amount of data used to represent each pixel is reduced. If you also need to resize (e.g., a portal requires 300×400px), resize separately after compressing — most operating systems have built-in resize tools.</p></div>
+    </details>
 
     <h2>Related Free Student Tools</h2>
     <div class="related-tools-grid">

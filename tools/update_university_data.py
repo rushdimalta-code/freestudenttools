@@ -219,6 +219,25 @@ def update_universities() -> None:
     print(f"\n  Done — {changed} universities checked")
 
 
+def compute_status(deadline_str: str) -> str:
+    """Derive open/closing_soon/upcoming/closed from today vs deadline."""
+    if not deadline_str:
+        return "upcoming"
+    try:
+        deadline = datetime.date.fromisoformat(deadline_str)
+        today = datetime.date.today()
+        diff = (deadline - today).days
+        if diff < 0:
+            return "closed"
+        if diff <= 30:
+            return "closing_soon"
+        if diff <= 180:
+            return "open"
+        return "upcoming"
+    except ValueError:
+        return "upcoming"
+
+
 def update_scholarships() -> None:
     print("\n=== Updating scholarship data ===")
     data = load_existing_js(SCH_JS)
@@ -226,12 +245,26 @@ def update_scholarships() -> None:
         print("  [WARN] Could not load existing scholarships_data.js")
         data = {"lastUpdated": TODAY, "scholarships": []}
 
-    sch_map = {s["id"]: s for s in data.get("scholarships", [])}
-    changed = 0
+    scholarships = data.get("scholarships", [])
+    status_updated = 0
+
+    # Step 1: refresh status fields from current deadlines (no network call needed)
+    for s in scholarships:
+        new_status = compute_status(s.get("deadline", ""))
+        if s.get("status") != new_status:
+            print(f"  Status update [{s['id']}]: {s.get('status')} → {new_status}")
+            s["status"] = new_status
+            status_updated += 1
+
+    # Step 2: attempt to scrape deadline updates from official pages
+    sch_map = {s["id"]: s for s in scholarships}
+    deadline_updated = 0
 
     for source in SCHOLARSHIP_SOURCES:
         sid = source["id"]
-        print(f"\n  Processing {sid}...")
+        if sid not in sch_map:
+            continue
+        print(f"\n  Checking deadline for {sid}...")
 
         soup = fetch(source["url"])
         time.sleep(DELAY_BETWEEN)
@@ -239,29 +272,25 @@ def update_scholarships() -> None:
         if soup is None:
             continue
 
-        # Look for deadline dates on the page
         dates = extract_dates(soup, ["deadline", "apply", "close"])
-        if dates and sid in sch_map:
-            # Heuristic: if we find a future date, update the deadline field
-            for d in dates[:5]:
-                try:
-                    # Normalise ISO date
-                    parsed = datetime.date.fromisoformat(d[:10])
-                    if parsed > datetime.date.today():
-                        old = sch_map[sid].get("deadline", "")
-                        if str(parsed) != old:
-                            print(f"    Deadline update: {old} → {parsed}")
-                            sch_map[sid]["deadline"] = str(parsed)
-                        break
-                except ValueError:
-                    continue
-
-        changed += 1
+        for d in dates[:5]:
+            try:
+                parsed = datetime.date.fromisoformat(d[:10])
+                if parsed > datetime.date.today():
+                    old = sch_map[sid].get("deadline", "")
+                    if str(parsed) != old:
+                        print(f"    Deadline update: {old} → {parsed}")
+                        sch_map[sid]["deadline"] = str(parsed)
+                        sch_map[sid]["status"] = compute_status(str(parsed))
+                    deadline_updated += 1
+                    break
+            except ValueError:
+                continue
 
     data["scholarships"] = list(sch_map.values())
     data["lastUpdated"] = TODAY
     write_js(SCH_JS, "SCHOLARSHIP_DATA", data)
-    print(f"\n  Done — {changed} scholarships checked")
+    print(f"\n  Done — {status_updated} statuses refreshed, {deadline_updated} deadlines updated from web")
 
 
 # ─── ENTRYPOINT ───────────────────────────────────────────────────────────────

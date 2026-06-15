@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>About Us | FreeStudentTools</title>
   <meta name="description" content="About FreeStudentTools.com — free document tools for students. Learn why we built this and how it works.">
   <meta name="robots" content="index, follow">
@@ -23,18 +26,6 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- GA4: activated only after cookie consent via common.js -->
   <script>window.dataLayer = window.dataLayer || [];</script>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -48,15 +39,18 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
-        <li><a href="about.html" class="active">About</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -83,41 +77,38 @@
   <div class="container">
     <div class="static-page" style="max-width:800px">
       <h1>About FreeStudentTools</h1>
-      <p class="last-updated">Built for students, by people who get it.</p>
+      <p class="last-updated">Free tools for students who shouldn't have to pay for the basics.</p>
 
       <div class="prose">
-        <p>FreeStudentTools.com was created with a simple mission: give students access to professional-grade document tools — completely free, with zero compromises on privacy.</p>
+        <p>FreeStudentTools.com exists because the tools students actually need — OCR scanners, PDF converters, citation generators — are either locked behind €20-a-month subscriptions, or they're free in name only: your files get uploaded to a server, your email gets harvested, and a watermark gets slapped on the output.</p>
+        <p>We built a different kind of student tool site. Every tool here runs entirely in your browser. Your files never leave your device. There are no accounts, no email confirmations, no paywalls, and no watermarks. You open the tool, you use it, you download the result. That's it.</p>
 
-        <h2>Why We Built This</h2>
-        <p>Students constantly need to scan notes, convert PDFs, compress files for submission, merge documents, and generate citations. The tools that do this well are either expensive (Adobe Acrobat, iLovePDF Premium) or demand your email address, upload your files to their servers, and add watermarks to your documents.</p>
-        <p>That's not fair to students. So we built something better.</p>
+        <h2>What's Here</h2>
+        <p>Nine tools across two categories:</p>
+        <p><strong>Document tools</strong> — an OCR scanner that extracts text from images and scanned PDFs in 15+ languages; a PDF to Word and Excel converter with built-in OCR for scanned documents; a PDF compressor with three compression levels; an image compressor for JPG, PNG, and WebP; a PDF merger for combining up to 10 files; a PDF page extractor for pulling specific pages; and a citation generator for APA 7th, MLA 9th, and Chicago 17th edition.</p>
+        <p><strong>University Hub</strong> — an admissions tracker covering 1,500+ universities across 180+ countries with deadlines, intake dates, and housing information updated daily; a scholarships finder with 800+ opportunities from universities and governments worldwide; a university degree comparison tool for side-by-side tuition, cost of living, and course comparisons; and a student tips guide covering how to apply, write a reference letter, handle interviews, and manage money at university.</p>
 
-        <h2>How It Works (The Technical Part)</h2>
-        <p>Everything on FreeStudentTools.com runs <strong>directly in your browser</strong> using modern JavaScript libraries. No file ever leaves your device.</p>
+        <h2>How the Tools Actually Work</h2>
+        <p>Everything runs client-side using open-source JavaScript libraries. No server processes your files.</p>
         <ul>
-          <li><strong>OCR Scanner:</strong> Powered by Tesseract.js — professional-grade OCR running entirely in your browser. Supports 15+ languages.</li>
-          <li><strong>PDF Converter:</strong> Uses PDF.js (by Mozilla) to extract text, and docx/SheetJS libraries to build Word and Excel files. Built-in OCR for scanned PDFs.</li>
-          <li><strong>PDF Compressor:</strong> Uses PDF.js and pdf-lib to re-render and compress PDF pages entirely in-browser.</li>
-          <li><strong>Image Compressor:</strong> Uses the browser's native Canvas API to compress JPG, PNG, and WebP images — no external libraries required.</li>
-          <li><strong>PDF Merger:</strong> Combines multiple PDFs into one using pdf-lib, entirely client-side.</li>
-          <li><strong>PDF Page Extractor:</strong> Pulls specific pages or ranges from any PDF using pdf-lib. Supports formats like 1,3,5-8.</li>
-          <li><strong>Citation Generator:</strong> Generates APA 7th, MLA 9th, and Chicago 17th edition citations in pure JavaScript — no network requests of any kind.</li>
+          <li><strong>OCR Scanner:</strong> Tesseract.js v5 — professional OCR in the browser. Supports 15+ languages including Arabic, Chinese, French, Spanish, Russian, Japanese, and Korean.</li>
+          <li><strong>PDF Converter:</strong> PDF.js (Mozilla) reads the file locally. For text PDFs, text is extracted directly. For scanned PDFs, Tesseract.js runs OCR first. Output is built using docx.js (Word) or SheetJS (Excel).</li>
+          <li><strong>PDF Compressor:</strong> PDF.js and pdf-lib re-render each page at a reduced resolution. Low, medium, and high compression levels trade quality for file size.</li>
+          <li><strong>Image Compressor:</strong> The browser's native Canvas API — no external library needed. Compresses JPG, PNG, and WebP with before/after size comparison.</li>
+          <li><strong>PDF Merger &amp; Page Extractor:</strong> pdf-lib handles both — combining multiple PDFs and extracting pages or ranges (e.g. 1, 3, 5–8).</li>
+          <li><strong>Citation Generator:</strong> Pure JavaScript. No network requests of any kind. Supports websites, books, journal articles, and YouTube videos in APA 7th, MLA 9th, and Chicago 17th.</li>
         </ul>
 
-        <h2>Our Promise</h2>
-        <ul>
-          <li>✅ Always free — no hidden tiers, no watermarks</li>
-          <li>✅ No account, no email, no sign-up required</li>
-          <li>✅ No file storage — your documents stay on your device</li>
-          <li>✅ No ads near tool buttons — we comply with Google AdSense policies</li>
-          <li>✅ Mobile-friendly — works on any device</li>
-        </ul>
+        <h2>Privacy — What We Collect and What We Don't</h2>
+        <p>We don't collect your documents. Full stop. Every file you upload stays in your browser's memory for the duration of your session and is gone the moment you close the tab.</p>
+        <p>We do use Google Analytics (with your consent via the cookie banner) to understand how the site is being used — which tools get the most traffic, where people drop off, which pages load slowly. This helps us improve the site. The analytics data is anonymised: IP addresses are masked, and we don't track you across other websites.</p>
+        <p>Google AdSense serves display ads on the site. These ads allow us to keep the site free. Ad personalisation settings follow standard Google policy — you can opt out of personalised ads via Google's ad settings. We never place ads near tool buttons or inside the tool interfaces themselves.</p>
 
-        <h2>Keeping the Lights On</h2>
-        <p>This site is free because we display Google AdSense advertisements. These are standard display ads that appear around the page content — never inside the tools themselves, and never near action buttons. If you find the tools useful, simply leaving ads enabled is all the support we need.</p>
+        <h2>Keeping It Free</h2>
+        <p>The site runs on display advertising. No subscriptions, no data sales, no premium tiers. If you find the tools useful, leaving ads enabled is the only support we need — and even that's optional.</p>
 
         <h2>Contact</h2>
-        <p>Have feedback, found a bug, or have a tool request? We'd love to hear from you. <a href="contact.html">Get in touch.</a></p>
+        <p>Found a bug, have a tool request, or want to report an issue? <a href="contact.html">Get in touch here.</a> We read every message.</p>
       </div>
     </div>
   </div>

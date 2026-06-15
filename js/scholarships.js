@@ -18,8 +18,6 @@
     level: '',
     amountType: '',
     competition: '',
-    deadlineFrom: '',
-    deadlineTo: '',
     sort: 'deadline',
     expandedId: null
   };
@@ -44,11 +42,27 @@
 
   /* ===== POPULATE FILTERS ===== */
   function populateFilters() {
-    const data = window.SCHOLARSHIP_DATA;
-    fillSelect('filterCountry', data.countries);
-    fillSelect('filterStream', data.streams);
+    const scholarships = window.SCHOLARSHIP_DATA.scholarships;
+
+    const countries = unique(scholarships.map(function (s) { return s.country; })).sort();
+    const streams = unique(
+      scholarships.reduce(function (acc, s) {
+        s.streams.forEach(function (st) { if (st !== 'All streams') acc.push(st); });
+        return acc;
+      }, [])
+    ).sort();
+    const competitions = unique(scholarships.map(function (s) { return s.competitionLevel; }).filter(Boolean));
+    const compOrder = ['Medium', 'High', 'Very High', 'Extremely High'];
+    competitions.sort(function (a, b) { return compOrder.indexOf(a) - compOrder.indexOf(b); });
+
+    fillSelect('filterCountry', countries);
+    fillSelect('filterStream', streams);
     fillSelect('filterLevel', ['Bachelor', 'Master', 'PhD']);
-    fillSelect('filterCompetition', data.competitionLevels.filter(function (c) { return c !== 'All'; }));
+    fillSelect('filterCompetition', competitions);
+  }
+
+  function unique(arr) {
+    return arr.filter(function (v, i, a) { return a.indexOf(v) === i; });
   }
 
   function fillSelect(id, items) {
@@ -75,8 +89,6 @@
     bind('filterLevel', 'change', function (e) { state.level = e.target.value; state.page = 1; applyFilters(); });
     bind('filterAmount', 'change', function (e) { state.amountType = e.target.value; state.page = 1; applyFilters(); });
     bind('filterCompetition', 'change', function (e) { state.competition = e.target.value; state.page = 1; applyFilters(); });
-    bind('filterDeadlineFrom', 'change', function (e) { state.deadlineFrom = e.target.value; state.page = 1; applyFilters(); });
-    bind('filterDeadlineTo', 'change', function (e) { state.deadlineTo = e.target.value; state.page = 1; applyFilters(); });
     bind('sortSelect', 'change', function (e) { state.sort = e.target.value; applyFilters(); });
     bind('clearFilters', 'click', clearAll);
     bind('loadMore', 'click', loadMore);
@@ -110,8 +122,6 @@
     if (state.level) results = results.filter(function (s) { return s.levels.includes(state.level); });
     if (state.amountType) results = results.filter(function (s) { return s.amountType === state.amountType; });
     if (state.competition) results = results.filter(function (s) { return s.competitionLevel === state.competition; });
-    if (state.deadlineFrom) results = results.filter(function (s) { return s.deadline >= state.deadlineFrom; });
-    if (state.deadlineTo) results = results.filter(function (s) { return s.deadline <= state.deadlineTo; });
 
     results = sortResults(results);
     state.filtered = results;
@@ -139,9 +149,9 @@
 
   function clearAll() {
     state.search = ''; state.country = ''; state.stream = ''; state.level = '';
-    state.amountType = ''; state.competition = ''; state.deadlineFrom = ''; state.deadlineTo = '';
+    state.amountType = ''; state.competition = '';
     ['searchInput', 'filterCountry', 'filterStream', 'filterLevel', 'filterAmount',
-     'filterCompetition', 'filterDeadlineFrom', 'filterDeadlineTo'].forEach(function (id) {
+     'filterCompetition'].forEach(function (id) {
       const el = document.getElementById(id);
       if (el) el.value = '';
     });
@@ -379,31 +389,6 @@
     el.className = 'form-msg form-msg-' + type;
     el.style.display = 'block';
   }
-
-  /* ===== DEADLINE PRESETS ===== */
-  window.setScholarDeadlineRange = function (preset) {
-    const today = new Date();
-    let from, to;
-    if (preset === 'next_month') {
-      from = today;
-      to = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
-    } else if (preset === 'next_3') {
-      from = today;
-      to = new Date(today.getFullYear(), today.getMonth() + 3, today.getDate());
-    } else if (preset === 'next_6') {
-      from = today;
-      to = new Date(today.getFullYear(), today.getMonth() + 6, today.getDate());
-    }
-    if (from && to) {
-      const fmt = function (d) { return d.toISOString().split('T')[0]; };
-      const df = document.getElementById('filterDeadlineFrom');
-      const dt = document.getElementById('filterDeadlineTo');
-      if (df) { df.value = fmt(from); state.deadlineFrom = fmt(from); }
-      if (dt) { dt.value = fmt(to); state.deadlineTo = fmt(to); }
-      state.page = 1;
-      applyFilters();
-    }
-  };
 
 })();
 

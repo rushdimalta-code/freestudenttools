@@ -129,6 +129,7 @@ main { flex: 1; }
 .nav-logo:hover { text-decoration: none; }
 
 .nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-links .nav-divider { width: 1px; height: 14px; background: var(--border); margin: 0 6px; align-self: center; flex-shrink: 0; list-style: none; }
 
 .nav-links a {
   padding: 7px 13px;

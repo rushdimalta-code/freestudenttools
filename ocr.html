@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free OCR Scanner — Image to Text Online | FreeStudentTools</title>
   <meta name="description" content="Free online OCR tool. Extract text from images, scanned PDFs, and photos in 15+ languages. No sign-up, no file upload — runs 100% in your browser.">
   <meta name="keywords" content="free OCR scanner online, image to text free, extract text from image, scan to text online, OCR no signup, free OCR for students, photo to text converter, scanned document to text">
@@ -188,18 +191,6 @@
     .tool-main .action-bar { justify-content: center; }
     .tool-main .result-card-header { justify-content: space-between; }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -215,14 +206,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html" class="active">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Menu">
@@ -507,25 +501,41 @@
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
     <h2>Why Students Use This Free OCR Scanner</h2>
-    <p>When you photograph lecture notes, textbook pages, or printed handouts, you end up with images — not editable text. Our free OCR scanner converts those images into copy-paste text in seconds, supporting over 15 languages including Arabic, Chinese, French, Spanish, and German.</p>
-      <p>Unlike paid tools such as Adobe Acrobat or ABBYY FineReader, this OCR scanner runs entirely inside your browser using Tesseract.js — the same engine trusted by organisations worldwide. Your files never leave your device, there is no sign-up, and there are no watermarks on the output.</p>
-      <p>Common student uses: extracting text from scanned PDFs for assignments, converting photographed receipts for expense reports, pulling quotes from physical books for essays, and digitising printed lecture slides for revision notes.</p>
+    <p>When you photograph lecture notes, textbook pages, or printed handouts, you end up with images — not editable text you can actually work with. Our OCR scanner converts those images into copy-paste text in seconds, without asking for your email or uploading a single byte to any server.</p>
+    <p>Most paid OCR tools cost €10–€20 a month and still put a watermark on your output. Adobe Acrobat, ABBYY FineReader, and iLovePDF Premium all require accounts and subscriptions for the features students actually need. This tool uses Tesseract.js — the same open-source OCR engine powering enterprise software worldwide — and it runs entirely inside your browser. You don't pay for it. You don't sign up for it. You use it and move on.</p>
+
+    <h2>What OCR Actually Works Well On (And What It Struggles With)</h2>
+    <p>OCR isn't magic, and it's worth knowing the difference before you try to scan your handwritten notes and wonder why it came back garbled. Typed text, printed documents, textbook pages, and PDF scans of official documents all work extremely well — accuracy on clean printed text typically exceeds 95%.</p>
+    <p>Where it gets harder: handwritten notes, stylised fonts, very low-resolution photos, or documents photographed at an angle. If you're scanning something handwritten, don't expect clean output. If your image is dark or blurry, brighten and straighten it first. One good photo at close range beats five bad ones.</p>
+    <p>Scanned PDFs work just as well as image files — the tool extracts each page and runs OCR across all of them, then outputs everything as a single downloadable document.</p>
+
+    <h2>Specific Uses That Save Students Hours</h2>
+    <p>Pulling quotes from a physical book for an essay — photograph the page, run OCR, paste the text, cite it. No more retyping. Digitising printed lecture slides your professor refuses to upload. Converting a scanned journal article PDF into editable text so you can annotate it in Word. Extracting text from a photograph of a whiteboard taken during a seminar. Turning a printed lab report into a file you can actually edit before resubmitting.</p>
+    <p>International students use it constantly to handle documents in their home language that need to be shared with English-speaking institutions — the 15+ language support covers Arabic, French, German, Spanish, Italian, Portuguese, Russian, Chinese Simplified, Japanese, and Korean.</p>
+
+    <h2>How to Get the Best OCR Results</h2>
+    <p>Upload a sharp, well-lit image or a searchable PDF. Select the correct language from the dropdown — picking the wrong language is the single most common reason for garbled output, even when the image is perfect. For multi-page scanned PDFs, the tool processes every page automatically. For the output, choose .docx if you want to open it in Word; choose .txt if you just need raw text for pasting.</p>
+
     <h2>Frequently Asked Questions</h2>
       <details class="faq-item">
         <summary>Is this OCR tool completely free?</summary>
-        <div class="faq-answer"><p>Yes. The OCR Scanner on FreeStudentTools.com is 100% free with no sign-up, no watermarks, and no file size limits (up to browser memory).</p></div>
+        <div class="faq-answer"><p>Yes, completely free — no sign-up, no watermarks, and no file size limits beyond what your browser can hold in memory. There are no paid tiers and no features locked behind a paywall. The site runs on display ads, not subscriptions.</p></div>
       </details>
       <details class="faq-item">
         <summary>Does it work on scanned PDFs?</summary>
-        <div class="faq-answer"><p>Yes. The tool uses Tesseract.js to OCR each page of a scanned PDF and extract all text, even if the PDF has no text layer.</p></div>
+        <div class="faq-answer"><p>Yes. The tool uses Tesseract.js to scan each page of a PDF that contains images rather than a text layer. It processes the pages one by one and combines the output into a single downloadable file. If your PDF already has a text layer (i.e., you can highlight text in it normally), the tool extracts that text directly, which is faster and more accurate than OCR.</p></div>
       </details>
       <details class="faq-item">
         <summary>What languages does the OCR support?</summary>
-        <div class="faq-answer"><p>It supports 15+ languages including English, Arabic, French, German, Spanish, Italian, Portuguese, Russian, Chinese Simplified, Japanese, and Korean.</p></div>
+        <div class="faq-answer"><p>It supports 15+ languages: English, Arabic, French, German, Spanish, Italian, Portuguese, Russian, Chinese Simplified, Japanese, Korean, Dutch, Polish, Turkish, and Ukrainian. Select the correct language in the dropdown before starting — this is the most important setting for accuracy. If your document mixes languages, pick the dominant one.</p></div>
       </details>
       <details class="faq-item">
         <summary>Are my files uploaded to a server?</summary>
-        <div class="faq-answer"><p>No. All OCR processing runs entirely in your browser using Tesseract.js. Your files never leave your device.</p></div>
+        <div class="faq-answer"><p>No. All OCR processing runs inside your browser using Tesseract.js. Your files are never sent anywhere — not to our servers, not to any third party. When you close the tab, the file is gone from memory. There is nothing stored remotely.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Why is my OCR output full of symbols or gibberish?</summary>
+        <div class="faq-answer"><p>The most likely cause is the wrong language selected. Arabic text fed into the English OCR engine will produce nonsense. The second most common cause is a low-quality image — blurry, dark, or heavily compressed photos reduce accuracy dramatically. Try brightening and sharpening the image before uploading, or take a new photo with your camera closer to the document in good light.</p></div>
       </details>
 
     <h2>Related Free Student Tools</h2>

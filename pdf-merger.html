@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free PDF Merger — Combine Multiple PDFs Online | FreeStudentTools</title>
   <meta name="description" content="Merge multiple PDF files into one document free online. No sign-up, no file uploads — runs entirely in your browser using pdf-lib.">
   <meta name="keywords" content="pdf merger free, combine pdf files online, merge pdf no signup, join pdf files free, pdf combiner online, merge pdfs free no upload">
@@ -183,18 +186,6 @@
       .page-hero h1 { font-size: 1.8rem; }
     }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -209,14 +200,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -426,27 +420,61 @@
 <!-- SEO CONTENT SECTION -->
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
-    <h2>When to Merge PDF Files into One</h2>
-    <p>Submitting a university application often means combining a personal statement, transcript, reference letters, and a CV into a single PDF. Our free PDF merger combines multiple PDF files into one document in seconds — drag, reorder, merge, download. All processing happens locally in your browser.</p>
-      <p>Built on pdf-lib, the merger preserves the original quality and formatting of every page. There is no file size limit other than your browser memory, and no watermarks are added to the output.</p>
-      <p>Students use this to bundle application documents into one file, combine chapter PDFs from different sources into a single study guide, merge split scans of a single document, and package group project sections before submission.</p>
+    <h2>Why You Need a PDF Merger for University Applications</h2>
+    <p>University and scholarship applications almost always ask you to submit multiple documents — and almost always in a single file. Personal statement, transcript, reference letter, CV, English language certificate, financial statement: that's six separate PDFs, and the portal accepts one.</p>
+    <p>Some students email their documents separately and hope for the best. Admissions offices process hundreds of applications — a disorganised submission gets deprioritised or overlooked entirely. A single, well-ordered PDF signals you know what you're doing. It takes under 2 minutes to merge, and it makes a real difference.</p>
+
+    <h2>How to Merge PDFs in the Right Order</h2>
+    <p>The tool lets you drag files into any order before merging. Here's a sensible default order for an application package: personal statement first, academic transcript second, reference letters third (in reverse chronological order if there's more than one), CV fourth, supporting certificates last. Check the university's requirements — some specify the order explicitly in the application guide.</p>
+    <p>If you're managing applications to multiple universities through our <a href="admissions.html">admissions tracker</a>, keep a folder of your raw documents and reorder them per institution's preference before merging. Merging is non-destructive — your original files stay unchanged.</p>
+    <p>For <a href="scholarships.html">scholarship applications</a>, the order matters even more. The selection panel reads dozens of packages. Put your strongest document — usually the personal statement — first so it's seen before any decision is made.</p>
+
+    <h2>How the Merger Works — All in Your Browser</h2>
+    <p>The merger uses pdf-lib, an open-source JavaScript library. pdf-lib reads each PDF you add, copies the pages into a new document in the order you specify, and writes the combined file — all inside your browser. Nothing is uploaded to a server at any point.</p>
+    <p>This matters beyond privacy. Server-based PDF tools have size limits, queue times, and often watermark the output on free plans. Running locally means no wait time, no limit on file size (up to your browser's memory), and zero watermarks on the output. The merged PDF is byte-for-byte the same content as your originals combined.</p>
+
+    <h2>What the Merger Preserves</h2>
+    <p>pdf-lib copies PDF pages at the document level — not re-rendering them as images. This means text remains selectable, hyperlinks stay functional, and embedded fonts are preserved. If your original PDFs contain embedded fonts, bookmarks, or form fields, those carry over into the merged output.</p>
+    <p>One exception: if the PDFs use conflicting or non-standard fonts, the merged document may display those pages slightly differently depending on the viewer. This rarely happens with standard application documents like transcripts and reference letters, which are typically simple text documents.</p>
+
+    <h2>Common Student Use Cases</h2>
+    <ul>
+      <li><strong>University applications:</strong> Combine all required documents into the single PDF most portals require. Check the <a href="admissions.html">admissions tracker</a> for each institution's specific submission format and deadline.</li>
+      <li><strong>Scholarship submissions:</strong> Our <a href="scholarships.html">scholarships finder</a> lists 800+ opportunities — most require a bundled PDF of supporting documents. Merge everything before the deadline closes.</li>
+      <li><strong>Group project submissions:</strong> Different team members write different sections. Collect each section as a PDF and merge them into the final submission document before the deadline.</li>
+      <li><strong>Scanned multi-page documents:</strong> If you scan a single multi-page document one page at a time, you end up with individual page PDFs. Merge them back into one coherent document.</li>
+      <li><strong>Study guides:</strong> Combine chapter PDFs from different sources into a single study guide you can annotate in one file without switching between documents.</li>
+    </ul>
+
+    <h2>Limits and Workarounds</h2>
+    <p>You can merge up to 10 files in a single operation, with a combined total of up to 200 MB. If your documents exceed those limits — for instance, you're combining a high-resolution portfolio with a scanned transcript — compress the large files first using our <a href="compressor.html">PDF Compressor</a> before merging.</p>
+    <p>If you need to merge more than 10 files, do it in batches: merge the first 10, download the result, then add it as the first file in a new merge with the remaining documents.</p>
+
     <h2>Frequently Asked Questions</h2>
-      <details class="faq-item">
-        <summary>Is the PDF merger really free?</summary>
-        <div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using the open-source pdf-lib library.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>How many PDF files can I merge at once?</summary>
-        <div class="faq-answer"><p>You can merge up to 10 PDF files in a single operation. If you need to merge more, download the result and add it as the first file in a new batch.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Is there a file size limit?</summary>
-        <div class="faq-answer"><p>The combined total of all selected files must be under 200MB. Individual files can be any size as long as the total stays within this limit.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Are my files uploaded to a server?</summary>
-        <div class="faq-answer"><p>No. Everything runs inside your browser using pdf-lib. Your PDFs are never sent to any server and are cleared from memory when you close the tab.</p></div>
-      </details>
+    <details class="faq-item">
+      <summary>Is the PDF merger really free?</summary>
+      <div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using the open-source pdf-lib library. There's no account required and no limit on how many times you use it.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>How many PDF files can I merge at once?</summary>
+      <div class="faq-answer"><p>You can merge up to 10 PDF files in a single operation. The combined total of all files must be under 200 MB. If you need to merge more than 10 files, download the merged result and add it as the first file in a second merge batch.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Is there a file size limit?</summary>
+      <div class="faq-answer"><p>The combined total of all selected files must be under 200 MB. Individual files can be any size as long as the total stays within this limit. If you're over the limit, use the PDF Compressor first to reduce individual file sizes before merging.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Are my files uploaded to a server?</summary>
+      <div class="faq-answer"><p>No. Everything runs inside your browser using pdf-lib. Your PDFs are never sent to any server. Close the tab and the files are cleared from memory entirely — there's no server record of your documents at any point.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I change the order of pages after merging?</summary>
+      <div class="faq-answer"><p>Not with this tool — but you can reorder before merging by dragging files into the right order in the upload area. If you need to reorder individual pages within a merged document, use our PDF Page Extractor to pull specific pages out and re-merge them in the right sequence.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Will merging reduce the quality of my PDFs?</summary>
+      <div class="faq-answer"><p>No. pdf-lib copies PDF pages at the document level without re-rendering them as images. The merged output is identical in quality to the originals. Text stays selectable, fonts are preserved, and image resolution is completely unchanged.</p></div>
+    </details>
 
     <h2>Related Free Student Tools</h2>
     <div class="related-tools-grid">

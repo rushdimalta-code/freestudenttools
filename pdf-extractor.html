@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free PDF Page Extractor — Extract Pages from PDF Online</title>
   <meta name="description" content="Extract specific pages from any PDF for free. Enter page numbers or ranges like 1,3,5-8. No sign-up, no upload — runs entirely in your browser.">
   <meta name="keywords" content="pdf page extractor free, extract pages from pdf, split pdf pages online free, remove pages from pdf, pdf splitter no upload, extract pdf pages no signup">
@@ -193,18 +196,6 @@
     .stat-card .stat-value { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
     .stat-card .stat-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -219,14 +210,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -489,15 +483,63 @@
 <!-- SEO CONTENT SECTION -->
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
-    <h2>When to Extract Specific PDF Pages</h2>
-    <p>Downloaded a 200-page academic textbook but only need chapters 3 and 7? Our free PDF page extractor lets you pull out any page or page range — type ranges like <code>1,3,5-8,12</code> and download exactly what you need. No registration, no upload, no size cap.</p>
-      <p>The extractor uses pdf-lib to copy selected pages into a new PDF document entirely inside your browser. The output retains all original formatting, fonts, and images from the source document.</p>
-      <p>Common uses: extracting a single assignment brief from a large module handbook, pulling specific chapters from a downloaded textbook, isolating relevant pages from a research report, and separating a multi-person scanned submission into individual files.</p>
+    <h2>When You Only Need Part of a PDF</h2>
+    <p>You downloaded a 340-page module handbook. Your assignment brief is on pages 47 to 49. You need to share it with a classmate, attach it to a note, or print it — but emailing the full 340-page PDF is impractical and printing it is wasteful. The page extractor solves this in 20 seconds: type <code>47-49</code>, click extract, download a 3-page PDF.</p>
+    <p>This happens constantly with academic resources. Textbooks shared as single PDFs, research reports with specific appendices you need, multi-person scanned assignments where each student's work is in a known page range. The extractor handles all of it without any uploads or accounts.</p>
+
+    <h2>How to Use Page Ranges</h2>
+    <p>The page range input accepts comma-separated page numbers and hyphenated ranges. Some examples:</p>
+    <ul>
+      <li><code>5</code> — extract page 5 only</li>
+      <li><code>1,3,7</code> — extract pages 1, 3, and 7 (non-consecutive)</li>
+      <li><code>10-20</code> — extract pages 10 through 20 (an 11-page range)</li>
+      <li><code>1,5,10-15,22</code> — extract pages 1, 5, 10–15, and 22 in one operation</li>
+    </ul>
+    <p>Page numbers start at 1. If you enter pages in a non-sequential order (e.g., <code>15,3,8</code>), the output follows the order you entered — not the original document order. This is useful when you want to reorder sections from a source document.</p>
+
+    <h2>How the Extraction Works</h2>
+    <p>The extractor uses pdf-lib to copy selected pages from your source PDF into a new PDF document — entirely inside your browser. Nothing is uploaded. The process reads the source file in memory, identifies the pages you specified, copies their content (including fonts, images, and layout) into a new document, and generates the download. The source file is never modified.</p>
+    <p>Because pages are copied at the document level rather than re-rendered as images, text stays selectable and searchable in the extracted PDF. Hyperlinks within the extracted pages remain functional. Embedded fonts are preserved. The output is a fully formed PDF — not a flattened image file.</p>
+
+    <h2>Practical Student Use Cases</h2>
+    <ul>
+      <li><strong>Assignment briefs from module handbooks:</strong> Extract the 2–3 page brief from a 200-page handbook so you can share it with your group or keep it open without the full document in memory.</li>
+      <li><strong>Textbook chapters:</strong> Many universities share textbooks as single PDFs on their VLE. Extract specific chapters for offline revision or printing without the entire volume.</li>
+      <li><strong>Scholarship supporting documents:</strong> Some <a href="scholarships.html">scholarship applications</a> ask you to extract specific pages from a larger document — financial statements, academic award pages. Extract precisely what they ask for, nothing more.</li>
+      <li><strong>Splitting scanned group submissions:</strong> If a class submitted one scanned PDF with all students' work, you can extract your own pages and keep only your section.</li>
+      <li><strong>Research report appendices:</strong> Academic reports often have tables, datasets, or supplementary material in appendices. Extract and share just the appendix without sending the full 80-page report.</li>
+      <li><strong>University application packages:</strong> Use our <a href="admissions.html">admissions tracker</a> to stay on top of deadlines — and use the extractor when a portal asks for specific pages from a larger document you've already prepared.</li>
+    </ul>
+
+    <h2>Up to 50 Pages Per Operation</h2>
+    <p>You can extract up to 50 pages in a single operation from a source PDF up to 100 MB. If you need more than 50 pages, extract in two batches and use the <a href="pdf-merger.html">PDF Merger</a> to combine the two extracted PDFs into one document.</p>
+    <p>Very large source files (above 50 MB) may take a few seconds to load in the browser before extraction begins. This is the browser reading the file locally — there's no server queue and no upload time. Once the file loads, extraction itself is near-instant regardless of page count.</p>
+
     <h2>Frequently Asked Questions</h2>
-      <details class="faq-item"><summary>Is the PDF page extractor really free?</summary><div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using the open-source pdf-lib library.</p></div></details>
-      <details class="faq-item"><summary>What page range format should I use?</summary><div class="faq-answer"><p>Enter page numbers separated by commas. Use a hyphen for ranges. For example: 1,3,5-8,12 will extract pages 1, 3, 5, 6, 7, 8, and 12. Page numbers start at 1.</p></div></details>
-      <details class="faq-item"><summary>How many pages can I extract at once?</summary><div class="faq-answer"><p>You can extract up to 50 pages in a single operation. The source PDF can be up to 100MB.</p></div></details>
-      <details class="faq-item"><summary>Is my PDF uploaded to a server?</summary><div class="faq-answer"><p>No. Everything runs inside your browser using pdf-lib. Your PDF is never uploaded to any server and is cleared from memory when you close the tab.</p></div></details>
+    <details class="faq-item">
+      <summary>Is the PDF page extractor really free?</summary>
+      <div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using the open-source pdf-lib library. There's no account required and no cap on how many times you use it.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>What page range format should I use?</summary>
+      <div class="faq-answer"><p>Enter page numbers separated by commas and use a hyphen for ranges. For example: <code>1,3,5-8,12</code> will extract pages 1, 3, 5, 6, 7, 8, and 12. You can mix individual pages and ranges in any combination. Pages are output in the order you enter them, not necessarily document order.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>How many pages can I extract at once?</summary>
+      <div class="faq-answer"><p>You can extract up to 50 pages in a single operation from a source PDF up to 100 MB. If you need more than 50 pages, extract in two batches and use the PDF Merger to combine them. If your source file is larger than 100 MB, compress it first with the PDF Compressor.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Is my PDF uploaded to a server?</summary>
+      <div class="faq-answer"><p>No. Everything runs inside your browser using pdf-lib. Your PDF is never uploaded to any server and is cleared from memory when you close the tab. There's no server record of your document at any point.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Does the extracted PDF preserve the original quality?</summary>
+      <div class="faq-answer"><p>Yes. pdf-lib copies pages at the document level without re-rendering them as images. Text stays selectable, fonts are preserved, and image resolution is unchanged. The extracted PDF is identical in quality to the corresponding pages in the source document.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I use this to split a PDF into separate files?</summary>
+      <div class="faq-answer"><p>Yes — run multiple extractions from the same source file. Extract pages 1–10 into one file, then 11–20 into another, and so on. Each extraction creates a new download without modifying the source. It's the fastest way to split a large shared PDF into individual student submissions.</p></div>
+    </details>
 
     <h2>Related Free Student Tools</h2>
     <div class="related-tools-grid">

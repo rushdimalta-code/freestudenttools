@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free PDF to Word & Excel Converter Online | FreeStudentTools</title>
   <meta name="description" content="Convert PDF to editable Word (.docx) or Excel (.xlsx) free online. Built-in OCR for scanned PDFs. No watermarks, no sign-up, files never leave your browser.">
   <meta name="keywords" content="PDF to Word free, PDF to Excel free, convert PDF to Word no signup, PDF converter no watermark, free PDF to docx, scanned PDF to Word, PDF converter no upload, free PDF to xlsx">
@@ -205,18 +208,6 @@
     .tool-main .action-bar { justify-content: center; }
     .tool-main .result-card-header { justify-content: space-between; }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -231,14 +222,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html" class="active">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Menu">
@@ -490,15 +484,28 @@
 <!-- SEO CONTENT SECTION -->
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
-    <h2>Why Convert PDF to Word or Excel for Free?</h2>
-    <p>PDFs are great for sharing, but terrible for editing. When you need to adapt a research paper, update a CV, or extract data from a PDF table into a spreadsheet, you need an editable format. Our free PDF to Word converter turns any PDF into a fully editable .docx or .xlsx file in seconds — no subscription, no upload limit.</p>
-      <p>The converter uses PDF.js by Mozilla to read the file locally, then builds a Word or Excel document using open-source libraries. For scanned PDFs, it automatically runs OCR first — so even old, scanned documents come out as editable text.</p>
-      <p>Students use this to edit previous coursework drafts, reformat downloaded lecture slides, extract data tables from academic reports, and update old resumes saved as PDFs.</p>
+    <h2>When You Need to Edit a PDF — and Why It's Harder Than It Should Be</h2>
+    <p>PDFs are designed to look identical on every screen and printer. That's great for sharing, but it means the format locks content into place. When you need to edit a research paper, update a CV saved as a PDF, extract data from a table, or adapt a downloaded template, you're stuck — unless you convert it first.</p>
+    <p>Adobe Acrobat Pro costs around €23 a month and is the go-to for most people who need to do this regularly. But if you just need to convert one document, or do it a few times a month, you shouldn't need a subscription. This converter does the same job for free, entirely in your browser, with no account required.</p>
+
+    <h2>Two Output Formats — Which One You Need</h2>
+    <p>The converter gives you a choice: Word (.docx) or Excel (.xlsx). The right one depends on what's in your PDF.</p>
+    <p>Choose Word if your PDF contains paragraphs, headings, or any narrative text — essays, reports, articles, CVs, letters. The output will be a .docx file you can open in Microsoft Word, Google Docs, or LibreOffice and edit normally. Formatting is preserved where possible, though complex layouts with multiple columns or heavy design elements may need some tidying up.</p>
+    <p>Choose Excel if your PDF is primarily a table, dataset, or any structured data you need to work with in rows and columns — financial reports, grade sheets, research data, timetables. The .xlsx output lets you sort, filter, and calculate without retyping anything.</p>
+
+    <h2>What Happens With Scanned PDFs</h2>
+    <p>A lot of PDFs you'll encounter as a student — scanned journal articles, uploaded past papers, digitised textbook chapters — don't actually contain a text layer. They're images of pages, not searchable text. Try selecting text in one of these PDFs and you'll get nothing, or random characters.</p>
+    <p>This converter detects that automatically. When it finds a scanned PDF, it runs OCR (optical character recognition) on each page using Tesseract.js before building the Word or Excel output. The process takes a bit longer, but you end up with fully editable text. For best results on scanned documents, make sure the scan is clean and the language setting matches the document's language.</p>
+
+    <h2>Common Student Uses</h2>
+    <p>Editing a previous coursework draft your professor returned as a PDF. Updating a CV you only have in PDF format. Pulling a data table from an annual report into Excel for analysis. Converting a downloaded job description into an editable document to annotate. Extracting text from a printed lecture handout that was scanned and uploaded as a PDF.</p>
+
     <h2>Frequently Asked Questions</h2>
-      <details class="faq-item"><summary>Is this PDF to Word converter really free?</summary><div class="faq-answer"><p>Yes — completely free. No sign-up, no watermarks, no paid tier. The converter runs entirely in your browser using open-source libraries.</p></div></details>
-      <details class="faq-item"><summary>Does it work on scanned PDFs?</summary><div class="faq-answer"><p>Yes. If your PDF contains scanned images rather than a text layer, the tool automatically runs OCR (optical character recognition) to extract the text before converting.</p></div></details>
-      <details class="faq-item"><summary>Are my files uploaded to a server?</summary><div class="faq-answer"><p>No. All processing happens inside your browser. Your files are never sent to any server and are discarded when you close the tab.</p></div></details>
-      <details class="faq-item"><summary>What is the difference between Word and Excel output?</summary><div class="faq-answer"><p>Word (.docx) is best for documents with paragraphs, headings, and text content. Excel (.xlsx) is best for PDFs containing tables or structured data you want to edit in a spreadsheet.</p></div></details>
+      <details class="faq-item"><summary>Is this PDF to Word converter really free?</summary><div class="faq-answer"><p>Yes, completely free — no sign-up, no watermarks, no paid tier, no file size cap (beyond your browser's available memory). The converter runs entirely in your browser using open-source libraries (PDF.js by Mozilla, pdf-lib, docx.js, and SheetJS). There are no hidden costs.</p></div></details>
+      <details class="faq-item"><summary>Does it work on scanned PDFs?</summary><div class="faq-answer"><p>Yes. The tool detects when a PDF contains images rather than a text layer and automatically runs OCR before converting. This works on most scanned documents. For very blurry or low-resolution scans the accuracy may drop — in those cases, improving the scan quality first will give better results.</p></div></details>
+      <details class="faq-item"><summary>Are my files uploaded to a server?</summary><div class="faq-answer"><p>No. Everything happens locally inside your browser. Your PDF is read by PDF.js, processed in memory, and converted — all without leaving your device. The resulting Word or Excel file is built right in your browser and offered as a download. Nothing is sent to any server at any point.</p></div></details>
+      <details class="faq-item"><summary>What is the difference between the Word and Excel output?</summary><div class="faq-answer"><p>Word (.docx) is the right choice for text-heavy PDFs: essays, reports, CVs, articles, letters. Excel (.xlsx) is for PDFs that are primarily data tables or structured numerical content. If your PDF has both, convert to Word first — you can always paste specific tables into Excel manually.</p></div></details>
+      <details class="faq-item"><summary>Will the formatting look exactly the same after conversion?</summary><div class="faq-answer"><p>For simple documents with standard fonts and a single-column layout, formatting is preserved well. Complex PDFs with multi-column layouts, heavy graphic design, or unusual fonts will need some manual cleanup after conversion. The text content itself is extracted accurately — it's spacing, alignment, and visual layout that sometimes needs adjusting.</p></div></details>
 
     <h2>Related Free Student Tools</h2>
     <div class="related-tools-grid">

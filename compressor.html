@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free PDF Compressor — Reduce PDF Size Online | FreeStudentTools</title>
   <meta name="description" content="Compress PDF files free online — no sign-up needed. Reduce PDF size for email, course submissions, or storage. Runs in your browser, files never uploaded.">
   <meta name="keywords" content="free PDF compressor online, reduce PDF file size free, compress PDF no signup, PDF size reducer no upload, make PDF smaller free, compress PDF for email, PDF compressor for students, shrink PDF file free">
@@ -204,18 +207,6 @@
     .tool-main .action-bar { justify-content: center; }
     .tool-main .result-card-header { justify-content: space-between; }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -230,14 +221,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html" class="active">PDF Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -471,27 +465,62 @@
 <!-- SEO CONTENT SECTION -->
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
-    <h2>Why Compress a PDF Before Submitting?</h2>
-    <p>Most university portals, scholarship applications, and job platforms cap uploaded file sizes at 2 MB, 5 MB, or 10 MB. Scanned PDFs can easily exceed those limits. Our free PDF compressor reduces file size by up to 90% — letting you meet upload limits without paying for Adobe Acrobat or iLovePDF.</p>
-      <p>The compressor re-renders each PDF page as a compressed image using PDF.js and pdf-lib, entirely inside your browser. You choose the compression level — low (best quality), medium (balanced), or high (smallest file). No file is ever sent to a server.</p>
-      <p>Common uses: compressing scanned transcripts for university applications, reducing portfolio PDFs for email attachments, shrinking multi-chapter reports for online submission portals, and archiving large PDFs on limited storage devices.</p>
+    <h2>Why PDF File Size Matters More Than You Think</h2>
+    <p>Most students discover the problem at the worst moment: it's 11 PM, your application portal is open, and the system rejects your transcript because it's 8.4 MB and the limit is 5 MB. It happens constantly. University admissions portals, scholarship applications, and job boards all impose hard upload limits — and scanned documents routinely blow past them.</p>
+    <p>Scanned PDFs are the worst offenders. A flatbed scan at 300 DPI produces about 1 MB per page. Scan a 12-page transcript and you've already got 12 MB before you compress anything. <a href="scholarships.html">Scholarship portals</a> typically cap documents at 2–5 MB. <a href="admissions.html">University admissions systems</a> vary — some allow 10 MB, others only 2 MB — and the cap is rarely displayed prominently until you've already prepared the file.</p>
+    <p>Compressing your PDF to under 2 MB before you start uploading means you never hit that wall.</p>
+
+    <h2>How the Browser-Based Compressor Works</h2>
+    <p>Most online PDF compressors upload your file to a server, process it remotely, and send it back. Ours doesn't. All compression happens inside your browser using two open-source JavaScript libraries: PDF.js (built by Mozilla) renders each page, and pdf-lib rebuilds the document from those rendered images at a lower resolution. Your PDF never leaves your device.</p>
+    <p>The trade-off is that browser-side compression works by re-rendering pages as images. That means it's most effective on scanned PDFs and image-heavy documents — which are exactly the files students most often need to shrink. Text-heavy PDFs with vector graphics won't compress as dramatically because the text is already stored efficiently.</p>
+
+    <h2>Choosing the Right Compression Level</h2>
+    <p>The tool offers three levels, and the right choice depends on what the PDF contains and what you're using it for.</p>
+    <p><strong>Low compression</strong> targets roughly 40–50% size reduction. Use this for documents where quality matters — a portfolio, design work, or any PDF that will be printed or presented on screen at full size. The output is visually identical to the source in most cases.</p>
+    <p><strong>Medium compression</strong> hits around 60–75% reduction. This is the right level for the majority of student documents: transcripts, reference letters, personal statements combined into one file. The text stays sharp and readable; photo quality drops slightly but acceptably.</p>
+    <p><strong>High compression</strong> can cut file size by up to 90%. It's the right choice when you're up against a tight size limit — say, a 1 MB cap on a scholarship form — and the document doesn't need to look pristine. Bank statements, utility bills for visa applications, and multi-page scanned forms all compress well at this level.</p>
+
+    <h2>What Affects How Much Your File Shrinks</h2>
+    <p>Compression ratios aren't predictable to the decimal. Three things matter most:</p>
+    <p><strong>Page content:</strong> A page that's mostly white space with black text compresses much more than a page full of photographs. A scanned transcript with minimal graphics might drop from 1.2 MB to 80 KB on high compression. A page of colour charts might only go from 900 KB to 400 KB.</p>
+    <p><strong>Original scan resolution:</strong> If your transcript was scanned at 600 DPI, there's vastly more data to compress than a 150 DPI scan. Higher-resolution source files compress harder and produce smaller outputs.</p>
+    <p><strong>Number of pages:</strong> Compression ratio stays roughly constant per page. Total size scales linearly with page count.</p>
+
+    <h2>Common Student Scenarios</h2>
+    <p>Here are situations where compressing a PDF is worth 30 seconds of your time before uploading:</p>
+    <ul>
+      <li><strong>Scholarship applications:</strong> Many <a href="scholarships.html">scholarship portals</a> cap supporting documents at 2–5 MB. A single scanned transcript can already exceed that. Compress first.</li>
+      <li><strong>University applications:</strong> If you're tracking multiple applications through our <a href="admissions.html">admissions tracker</a>, different institutions have wildly different file size policies. A compressed copy means one file works everywhere.</li>
+      <li><strong>Email attachments:</strong> Gmail's 25 MB limit sounds generous until you're sending a 6-PDF application package. Compressed files also load faster for the recipient.</li>
+      <li><strong>Lab and research reports:</strong> Lab reports with embedded figures can balloon past 20 MB. Medium compression almost always brings these under the 10 MB submission cap.</li>
+      <li><strong>CV and covering letter:</strong> A 1-page CV should never exceed 500 KB. If yours does, it was probably exported at too high a DPI or built from scanned elements.</li>
+    </ul>
+
     <h2>Frequently Asked Questions</h2>
-      <details class="faq-item">
-        <summary>Is the PDF compressor really free?</summary>
-        <div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using open-source libraries.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What do the compression levels mean?</summary>
-        <div class="faq-answer"><p>Low compression gives a modest size reduction while keeping quality high. Medium balances size and quality. High gives the smallest file size, which may reduce image quality in the PDF.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Is there a file size limit?</summary>
-        <div class="faq-answer"><p>The tool supports PDFs up to 100MB. Larger files may be slow to process depending on your device.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>Are my files sent to a server?</summary>
-        <div class="faq-answer"><p>No. Everything runs inside your browser. Your PDF is never uploaded to any server and is deleted from memory when you close the tab.</p></div>
-      </details>
+    <details class="faq-item">
+      <summary>Is the PDF compressor really free?</summary>
+      <div class="faq-answer"><p>Yes — 100% free with no sign-up, no watermarks, and no paid tier. It runs entirely in your browser using open-source libraries. There's no account to create, no email required, and no limit on how many files you compress.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>What's the difference between the three compression levels?</summary>
+      <div class="faq-answer"><p>Low compression reduces file size by roughly 40–50% while keeping quality close to the original. Medium hits 60–75% reduction and is the best choice for most documents — transcripts, reference letters, and scanned forms all look fine. High compression can cut up to 90% of the original size and is best when you need the smallest file possible and the document doesn't need to look sharp.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Is there a file size limit?</summary>
+      <div class="faq-answer"><p>The tool handles PDFs up to 100 MB. Very large files (50 MB+) may take 30–60 seconds to process depending on your device. Your browser does all the work locally, so processing speed is tied to your CPU — a newer laptop will be noticeably faster than a budget phone.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Are my files sent to a server?</summary>
+      <div class="faq-answer"><p>No. Everything runs inside your browser using PDF.js and pdf-lib. Your PDF is never uploaded anywhere. When you close the tab, the file is cleared from your browser's memory entirely. There are no server logs of your document.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Will compression make text harder to read?</summary>
+      <div class="faq-answer"><p>On low and medium settings, text in scanned documents typically stays sharp enough for any admissions or HR reader. On high compression, very small fonts (below 8pt) may look slightly softer — but most documents don't use fonts that small. If you're unsure, run the file through medium first and check the preview before going higher.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I compress a PDF that was originally a Word or Excel file?</summary>
+      <div class="faq-answer"><p>Yes, though the results will be more modest than compressing a scanned document. Word/Excel PDFs are already text-based and compressed internally, so re-rendering them as images at lower resolution won't save as much space. For those files, low compression is usually the most appropriate setting.</p></div>
+    </details>
 
     <h2>Related Free Student Tools</h2>
     <div class="related-tools-grid">

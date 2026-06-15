@@ -1,6 +1,6 @@
 // ===== GOOGLE ANALYTICS 4 =====
 // Replace G-XXXXXXXXXX with your actual GA4 Measurement ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID = 'G-WX0M0TK16J';
 
 function initGA() {
   if (window._gaInitialised) return;

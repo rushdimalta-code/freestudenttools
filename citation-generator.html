@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="google-adsense-account" content="ca-pub-9843476971668607">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
   <title>Free Citation Generator — APA, MLA & Chicago | FreeStudentTools</title>
   <meta name="description" content="Generate free citations in APA 7th, MLA 9th, and Chicago 17th format. Cite websites, books, journal articles, and YouTube videos. No sign-up required.">
   <meta name="keywords" content="free citation generator, APA citation generator free, MLA citation generator, Chicago citation format, cite website free, bibliography generator no signup, reference generator students">
@@ -237,18 +240,6 @@
       .source-tab { padding: 8px 12px; font-size: 0.8rem; }
     }
   </style>
-<script async type="application/javascript"
-    src="https://news.google.com/swg/js/v1/swg-basic.js"></script>
-<script>
-  (self.SWG_BASIC = self.SWG_BASIC || []).push( basicSubscriptions => {
-    basicSubscriptions.init({
-      type: "NewsArticle",
-      isPartOfType: ["Product"],
-      isPartOfProductId: "CAow9_ffCw:openaccess",
-      clientOptions: { theme: "light", lang: "en" },
-    });
-  });
-</script>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
@@ -263,14 +254,17 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="admissions.html">Admissions</a></li>
         <li><a href="scholarships.html">Scholarships</a></li>
         <li><a href="compare.html">Compare</a></li>
-        <li><a href="ocr.html">OCR Scanner</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">PDF Compressor</a></li>
-        <li><a href="citation-generator.html" class="active">Citations</a></li>
         <li><a href="tips.html">Tips</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
+        <li><a href="ocr.html">OCR</a></li>
+        <li><a href="pdf-converter.html">PDF Converter</a></li>
+        <li><a href="compressor.html">Compressor</a></li>
+        <li><a href="citation-generator.html">Citations</a></li>
+        <li class="nav-divider" aria-hidden="true"></li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -517,15 +511,57 @@
 <!-- SEO CONTENT SECTION -->
 <section class="seo-content-section" aria-label="About this tool">
   <div class="container" style="max-width:860px">
-    <h2>Why Use a Free Citation Generator?</h2>
-    <p>Incorrect citations are one of the most common reasons student essays lose marks. Our free citation generator formats references in APA 7th, MLA 9th, and Chicago 17th edition — the three most widely required citation styles at universities worldwide — without requiring an account or internet connection after the page loads.</p>
-      <p>The generator runs 100% in JavaScript. Enter the source details (book, journal, website, or film), choose your style, and get a perfectly formatted citation you can copy directly into your reference list. No data is sent anywhere.</p>
-      <p>Students use this for essays, dissertations, lab reports, and research papers. It supports books, journal articles, websites, newspaper articles, films, and podcast episodes across all three major citation formats.</p>
+    <h2>Why Citations Still Trip Students Up</h2>
+    <p>Academic citation isn't complicated — but it's fiddly. A missing DOI, a wrong publication year, an author's initials in the wrong order: these are the kinds of errors that cost marks not because they reflect misunderstanding, but because they're hard to catch manually when you're formatting 15 references at midnight.</p>
+    <p>Incorrect citations are one of the most common reasons essays lose marks in graded modules. Plagiarism detection software doesn't catch wrong citations — they just quietly reduce your score. A citation generator eliminates that class of error entirely by formatting each reference from the structured information you provide.</p>
+
+    <h2>APA, MLA, or Chicago — Which One Do You Need?</h2>
+    <p>Your institution will tell you which style to use, and you should follow their guidance exactly. But if you're switching between courses or institutions, here's the practical distinction:</p>
+    <p><strong>APA 7th edition</strong> is the standard for psychology, education, social sciences, nursing, and most STEM fields. It emphasises the date of publication — the year appears immediately after the author's name — because in these fields, the currency of research matters. It's used at the majority of universities in North America, Australia, and increasingly in the UK and Europe.</p>
+    <p><strong>MLA 9th edition</strong> is used primarily in humanities courses — literature, languages, film studies, history, and philosophy. It places more emphasis on the location within the source (page numbers, volumes) and less emphasis on publication date.</p>
+    <p><strong>Chicago 17th edition</strong> (bibliography style) is common in history, arts, and publishing. It uses footnotes for in-text citation and a bibliography at the end. It's more verbose than the other two and is the style you're most likely to encounter in history dissertations and humanities journal submissions.</p>
+    <p>When in doubt, check the module handbook. Most departments specify the required style on the first page.</p>
+
+    <h2>What the Tool Supports</h2>
+    <p>The generator covers four source types that together account for the vast majority of student citations:</p>
+    <p><strong>Websites:</strong> Enter the author (if known), title, organisation/publisher, URL, and access date. APA and MLA require access dates for websites because web content changes. Chicago doesn't, but we include it optionally.</p>
+    <p><strong>Books:</strong> Author, title, year, publisher, and edition. For edited volumes where a chapter author differs from the book editor, cite the chapter separately and reference the book as the containing work.</p>
+    <p><strong>Journal articles:</strong> Author, article title, journal name, volume, issue, year, page range, and DOI. DOIs are recommended in APA 7th and mandatory in many journal submission guidelines — if you have one, always include it.</p>
+    <p><strong>YouTube videos:</strong> Creator or channel name, video title, upload date, and URL. Academic use of YouTube is increasingly common in media studies, politics, and education courses. APA 7th has a specific format for online video that differs from a standard website citation.</p>
+
+    <h2>How to Use the Saved Citations List</h2>
+    <p>The tool includes a citation list so you can build a full reference list in one session. Generate each citation, click "Add to List", and repeat for each source. When you're done, use "Copy All" to paste the complete list into your document, or "Download as .txt" to save it separately.</p>
+    <p>Order matters. APA and MLA sort alphabetically by author surname. Chicago sorts alphabetically by the first element of the citation (usually author surname). Sort the list in your document before submitting — citation generators produce individually correct citations but don't automatically sort the full list for you.</p>
+
+    <h2>What the Tool Doesn't Do (and Why)</h2>
+    <p>The citation generator doesn't auto-fill from URLs. Tools like Zotero or Citation Machine do — but they frequently get author names wrong, miss edition information, and pull incorrect publication years from page metadata that websites don't maintain carefully. The result is a citation that looks right but contains errors you won't catch until a marker does.</p>
+    <p>Manual entry means you control the accuracy. It takes 30 seconds more per source and produces a cleaner reference list. For 5–10 sources, that's under 5 minutes of total input.</p>
+
     <h2>Frequently Asked Questions</h2>
-      <details class="faq-item"><summary>Is the citation generator really free?</summary><div class="faq-answer"><p>Yes — 100% free with no account, no sign-up, and no paid tier required. The tool runs entirely in your browser.</p></div></details>
-      <details class="faq-item"><summary>Which citation formats does it support?</summary><div class="faq-answer"><p>The generator supports APA 7th edition, MLA 9th edition, and Chicago 17th edition (bibliography style).</p></div></details>
-      <details class="faq-item"><summary>Can I save multiple citations at once?</summary><div class="faq-answer"><p>Yes. Use the Add to List button to collect citations, then use Copy All or Download as .txt to export the full list.</p></div></details>
-      <details class="faq-item"><summary>Does the tool auto-fill citations from a URL?</summary><div class="faq-answer"><p>No — the tool does not fetch or scrape URLs. You enter the source details manually, which ensures accuracy. Always verify the final citation against your institution's style guide.</p></div></details>
+    <details class="faq-item">
+      <summary>Is the citation generator really free?</summary>
+      <div class="faq-answer"><p>Yes — 100% free with no account, no sign-up, and no paid tier required. The tool runs entirely in your browser using pure JavaScript. No data is sent to any server, and you can use it offline once the page has loaded.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Which citation formats does it support?</summary>
+      <div class="faq-answer"><p>The generator supports APA 7th edition, MLA 9th edition, and Chicago 17th edition (bibliography style). These three styles cover the citation requirements at the overwhelming majority of universities in the UK, US, Australia, Canada, and Europe.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Can I save multiple citations at once?</summary>
+      <div class="faq-answer"><p>Yes. Use the "Add to List" button after generating each citation. The list accumulates across all your sources in the same session. Use "Copy All" to paste the full list into your document, or "Download as .txt" to save it as a file. The list clears when you close or refresh the tab.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>Does the tool auto-fill citations from a URL?</summary>
+      <div class="faq-answer"><p>No — the tool requires manual entry of source details. This is intentional: auto-fill tools regularly pull incorrect metadata from webpages (wrong authors, outdated titles, missing dates), producing citations that look correct but contain errors. Manual entry is slower but accurate. For 5–10 sources, manual input takes under 5 minutes total.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>What if I need to cite a source type not listed?</summary>
+      <div class="faq-answer"><p>The four types (website, book, journal article, YouTube video) cover most student needs. For unusual sources — government documents, unpublished theses, conference proceedings, social media posts — refer to the Purdue OWL (for APA and MLA) or the Chicago Manual of Style online. These are the authoritative references your markers themselves consult.</p></div>
+    </details>
+    <details class="faq-item">
+      <summary>How accurate are the generated citations?</summary>
+      <div class="faq-answer"><p>The formatting logic follows the published style guides for APA 7th, MLA 9th, and Chicago 17th. The output is accurate as long as the information you enter is accurate. The most common student error is entering author names incorrectly (e.g., reversing given name and surname). Always verify the final citation against your institution's preferred style guide — some departments have minor in-house variations.</p></div>
+    </details>
 
     <h2>Related Free Student Tools</h2>
     <div class="related-tools-grid">
