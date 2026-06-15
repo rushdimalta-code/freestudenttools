@@ -24,14 +24,23 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 lxml python-dotenv
 
-      - name: Run data updater
+      - name: Update scholarship statuses and Tier 1 university deadlines
         run: python3 tools/update_university_data.py
+
+      - name: Refresh full university database (Mondays only)
+        run: |
+          if [ "$(date -u +%u)" = "1" ]; then
+            echo "Monday — refreshing universities_all.js from Hipolabs API..."
+            python3 tools/fetch_all_universities.py
+          else
+            echo "Not Monday — skipping full university database refresh"
+          fi
 
       - name: Commit updated data files
         run: |
           git config --local user.email "bot@freestudenttools.com"
           git config --local user.name "FreeStudentTools Data Bot"
-          git add data/universities.js data/scholarships_data.js
+          git add data/universities.js data/scholarships_data.js data/universities_all.js
           git diff --staged --quiet && echo "No data changes today" || \
             git commit -m "chore: daily data refresh $(date -u +%Y-%m-%d)"
 
