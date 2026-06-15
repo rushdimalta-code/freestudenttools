@@ -47,12 +47,21 @@
   /* ===== POPULATE FILTER DROPDOWNS ===== */
   function populateFilters() {
     const data = window.UNI_DATA;
+    const unis = data.universities || [];
 
-    fillSelect('filterCountry', data.countries);
-    fillSelect('filterRegion', data.regions);
-    fillSelect('filterStream', data.streams);
-    fillSelect('filterLevel', data.levels);
-    fillSelect('filterIntake', data.intakes);
+    const countries = data.countries || unique(unis.map(function(u) { return u.country; })).sort();
+    const regions = data.regions || unique(unis.map(function(u) { return u.region; }).filter(Boolean)).sort();
+    const streams = data.streams || unique(unis.reduce(function(a, u) { return a.concat(u.streams || []); }, [])).sort();
+    const levels = data.levels || ['Bachelor', 'Master', 'PhD'];
+    const intakes = data.intakes || unique(unis.reduce(function(a, u) {
+      return a.concat((u.admissions || []).map(function(d) { return d.intake; }));
+    }, [])).sort();
+
+    fillSelect('filterCountry', countries);
+    fillSelect('filterRegion', regions);
+    fillSelect('filterStream', streams);
+    fillSelect('filterLevel', levels);
+    fillSelect('filterIntake', intakes);
   }
 
   function fillSelect(id, items) {
