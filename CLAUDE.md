@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-16 (rev 6)_
+_Last updated: 2026-06-16 (rev 7)_
 
 ---
 
@@ -192,7 +192,7 @@ Active nav link is set by JS in `common.js` — do **not** hardcode `class="acti
 - about.html content corrected: 14 total tools (7 document + 7 hub), 246+ scholarships, 1,040+ universities
 
 Design tokens: `--primary: #1A73E8` · `--success: #10B981` · `--orange: #F7941D` · purple `#7C3AED`
-Font: Inter (400–800) via Google Fonts, loaded **async** (non-blocking). Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
+Font: Inter variable font (wght 100–900) — **self-hosted** (`/assets/fonts/inter-100-latin.woff2` + `inter-100-latinext.woff2`), `font-display: swap`, `@font-face` in `style.css`. No Google Fonts dependencies. Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
 
 ---
 
@@ -245,7 +245,7 @@ Keep all these CTAs. Do not remove on future edits.
 |---|---|---|---|
 | 1 | 🔴 Critical | `logo.png` = 1.15MB on every page — #1 LCP killer | `logo-sm.png` (54KB, 200×200) in all nav/footer img tags |
 | 2 | 🔴 Critical | No `width`/`height` on nav logos → CLS on every page | Added `width="44" height="44"` to all nav logo imgs |
-| 3 | 🔴 High | Google Fonts render-blocking on all 18 pages | Async load: `media="print"` + `onload` + `<noscript>` fallback |
+| 3 | 🔴 High | Google Fonts render-blocking on all 18 pages | Async load: `media="print"` + `onload` + `<noscript>` fallback — then fully replaced by self-hosted |
 | 4 | 🟠 High | CDN scripts not deferred — block `window.onload` | Added `defer` to all CDN `<script>` tags on tool pages |
 | 5 | 🟠 High | Static pages (about/contact/privacy/terms) had no hero | Added `.page-hero` sections to all 4 static pages |
 | 6 | 🟡 Medium | Weak `.page-hero` on tool pages (2rem, plain, no orbs) | 2.7rem h1, dual radial orbs, glass badge, 60px padding |
@@ -255,23 +255,25 @@ Keep all these CTAs. Do not remove on future edits.
 | 10 | 🟡 Medium | Poor cache strategy: data files 1hr, CSS/JS 1day | Upgraded: CSS/JS 7d + stale-while-revalidate, data 2hr |
 | 11 | 🟢 Low | CDN DNS not pre-resolved on tool pages | `dns-prefetch` for cdnjs, jsdelivr, unpkg |
 | 12 | 🟢 Low | About page had stale content (9 tools, 800+ scholarships) | Fixed to 14 tools, 246+ scholarships, 1,040+ unis |
+| 13 | 🔴 **P1** | `logo-sm.png` (54KB) served as PNG — no WebP | `logo-sm.webp` (5.3KB); all 18 pages use `<picture>` + `<source>` |
+| 14 | 🔴 **P1** | `universities_all.js` (395KB) loaded statically on compare.html | Removed static tag; lazy-loaded via `createElement('script')` after first paint; tier-1 shows immediately |
+| 15 | 🔴 **P1** | Self-hosted Inter not complete — Google Fonts still linked | `@font-face` in `style.css`; woff2 files in `/assets/fonts/`; all 18 pages cleaned of Google Fonts links |
 
-### Remaining Gaps (not yet implemented)
+### Remaining Gaps (P1 all resolved — P2/P3 remaining)
 
 | Priority | Action | Expected Gain |
 |---|---|---|
-| P1 | Convert `logo-sm.png` to WebP — `brew install webp && cwebp -q 85 assets/logo-sm.png -o assets/logo-sm.webp` then use `<picture>` element | Logo: 54KB → ~15KB |
-| P1 | Lazy-load `data/universities_all.js` (395KB) on compare.html — load only after selector interaction | compare.html initial load ~400KB lighter |
-| P2 | Self-host Inter font from fonts.google.com — eliminates 2 round-trips + GDPR concern | LCP -200–400ms |
 | P2 | Add Content-Security-Policy once AdSense live and CDN domains confirmed | Security score boost |
 | P3 | Add Netlify build step with clean-css — `style.css` 60KB raw → ~24KB minified | -36KB per page |
 | P3 | Add `<link rel="preload" as="script">` for Tesseract.js on ocr.html — starts download sooner | OCR ready time -500ms |
 
 **Logo:**
 - `assets/logo.png` (1.15MB, 1024×1024) — kept for `og:image`, favicon, apple-touch-icon, and JSON-LD only
-- `assets/logo-sm.png` (54KB, 200×200) — used in ALL nav and footer `<img>` tags
+- `assets/logo-sm.png` (54KB, 200×200) — PNG fallback in all nav and footer img tags
+- `assets/logo-sm.webp` (5.3KB) — WebP primary format; all 18 pages use `<picture><source type="image/webp">` + PNG fallback
 - Nav logos have `width="44" height="44" fetchpriority="high" loading="eager"` — do not change
 - Footer logos keep `loading="lazy"` — correct (below fold)
+- **Never replace `logo-sm.png`/`logo-sm.webp` with `logo.png` in img/picture tags**
 
 **CDN scripts:**
 - All CDN library `<script>` tags on tool pages have `defer` attribute — do not remove
@@ -306,7 +308,9 @@ Keep all these CTAs. Do not remove on future edits.
 - easedit.co CTAs on admissions/scholarships/compare/scholarship — keep them, don't overwrite
 - When adding scholarships: add to `scholarships_data.js` (compact format), update `lastUpdated`, update stats in `index.html` and `scholarships.html`, update this file
 - **Never add inline `.page-hero h1 { font-size }` overrides** — global CSS handles it at 2.7rem. All overrides were removed in rev 5
-- **Never replace `logo-sm.png` with `logo.png` in img tags** — og:image uses full logo, img tags use small logo
+- **Never replace `logo-sm.png` with `logo.png` in img tags** — og:image uses full logo, img tags use `<picture>` with WebP + PNG
+- **Never add Google Fonts links** — Inter is fully self-hosted in `/assets/fonts/`; `@font-face` is in `css/style.css`
+- **`compare.html` lazy-loads `universities_all.js`** — do not add it back as a static script tag; the dynamic loader in the IIFE handles it
 
 ---
 
