@@ -530,6 +530,59 @@ def generate_page(s, all_scholarships):
 </html>"""
 
 
+DATA_DRIVEN_PAGES = {
+    # These pages reflect live data — update their lastmod daily
+    "https://freestudenttools.com/scholarships.html",
+    "https://freestudenttools.com/admissions.html",
+    "https://freestudenttools.com/scholarship.html",
+}
+
+
+def update_sitemap(root, scholarships):
+    """Stamp today's date on all data-driven lastmod entries in sitemap.xml."""
+    sitemap_path = os.path.join(root, "sitemap.xml")
+    if not os.path.exists(sitemap_path):
+        print("sitemap.xml not found — skipping")
+        return
+
+    today_str = TODAY.strftime("%Y-%m-%d")
+    scholarship_ids = {s["id"] for s in scholarships}
+
+    with open(sitemap_path, "r", encoding="utf-8") as f:
+        xml = f.read()
+
+    # Split into <url>…</url> blocks and update selectively
+    def replace_lastmod(block):
+        # Extract loc
+        loc_m = re.search(r"<loc>(.*?)</loc>", block)
+        if not loc_m:
+            return block
+        loc = loc_m.group(1).strip()
+
+        should_update = (
+            loc in DATA_DRIVEN_PAGES
+            or any(f"/scholarship/{sid}" in loc for sid in scholarship_ids)
+        )
+        if should_update:
+            block = re.sub(
+                r"<lastmod>[^<]+</lastmod>",
+                f"<lastmod>{today_str}</lastmod>",
+                block,
+            )
+        return block
+
+    updated = re.sub(
+        r"(<url>[\s\S]*?</url>)",
+        lambda m: replace_lastmod(m.group(1)),
+        xml,
+    )
+
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(updated)
+
+    print(f"sitemap.xml — lastmod updated to {today_str} for data-driven pages")
+
+
 def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     data_path = os.path.join(root, "data", "scholarships_data.js")
@@ -556,6 +609,7 @@ def main():
         count += 1
 
     print(f"Generated {count} pages → {out_dir}/")
+    update_sitemap(root, scholarships)
 
 
 if __name__ == "__main__":

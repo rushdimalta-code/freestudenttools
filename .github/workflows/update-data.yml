@@ -39,16 +39,15 @@ jobs:
       - name: Regenerate static scholarship pages
         run: python3 tools/generate_scholarship_pages.py
 
-      - name: Commit updated data files
+      - name: Commit and push all updated files
         run: |
           git config --local user.email "bot@freestudenttools.com"
           git config --local user.name "FreeStudentTools Data Bot"
-          git add data/universities.js data/scholarships_data.js data/universities_all.js scholarship/
-          git diff --staged --quiet && echo "No data changes today" || \
-            git commit -m "chore: daily data refresh $(date -u +%Y-%m-%d)"
-
-      - name: Push changes
-        run: git push origin main
+          git add data/universities.js data/scholarships_data.js data/universities_all.js \
+                  scholarship/ sitemap.xml
+          git diff --staged --quiet && echo "No changes today — skipping commit" || \
+            git commit -m "chore: daily site refresh $(date -u +%Y-%m-%d)" && \
+            git push origin main
 
       - name: Trigger Netlify redeploy
         if: ${{ env.NETLIFY_DEPLOY_HOOK != '' }}
