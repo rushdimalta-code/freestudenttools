@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-16_
+_Last updated: 2026-06-16 (rev 3)_
 
 ---
 
@@ -26,10 +26,10 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 - `citation-generator.html` — APA 7th, MLA 9th, Chicago 17th — pure JS, no network
 
 **University Hub (5 pages):**
-- `admissions.html` — 1,500+ universities, deadline tracker
-- `scholarships.html` — 800+ scholarships, filter by country/funding/level
+- `admissions.html` — 1,500+ universities, deadline tracker (data from `data/universities.js` + `data/universities_all.js`)
+- `scholarships.html` — 163 scholarships in `data/scholarships_data.js`, filter by country/funding/level/deadline
 - `scholarship-guide.html` — Long-form guide (5,000 words) — linked from nav + scholarships page
-- `compare.html` — Side-by-side university comparison
+- `compare.html` — Side-by-side university comparison, 1,040+ universities (40 Tier-1 + 1,000 Tier-2), 16 streams
 - `tips.html` — Student tips guide (5,000 words) — Article + FAQPage schema
 
 **Static pages:** `about.html`, `contact.html`, `privacy.html`, `terms.html`
@@ -41,9 +41,24 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 - Static HTML/CSS/JS — one HTML file per tool, no build step
 - Hosted on Netlify (free tier) — `netlify.toml` configures caching headers + redirects
 - `css/style.css` — single shared stylesheet, CSS variables via `:root`
-- `js/common.js` — shared: GA4, AdSense deferred load, dropdown nav, cookie consent, back-to-top, utilities
-- `data/` — JSON data files for university/scholarship content
+- `js/common.js` — shared: GA4, AdSense deferred load, dropdown nav, cookie consent, back-to-top, scroll animations, utilities
+- `js/config.js` — `window.FST_CONFIG` with `GOOGLE_MAPS_KEY` (currently empty — needs Maps Embed API enabled in Google Cloud Console)
+- `data/` — JS data files exposed as `window.*` globals (see Data Files section below)
 - No backend, no auth, no user accounts
+
+---
+
+## Data Files
+
+| File | Global | Contents |
+|---|---|---|
+| `data/universities.js` | `window.UNI_DATA` | 40 Tier-1 universities — full admissions, accommodation, deadline, streams |
+| `data/universities_all.js` | `window.UNI_ALL` | 1,000 ranked universities — name, country, ranking, streams. **Auto-generated — never edit manually** |
+| `data/uni_guide.js` | `window.UNI_GUIDE` | 42 entries + 5 aliases — city, CoL, rental links, contacts, leisure |
+| `data/courses.js` | `window.COURSES_DATA` | 16 academic streams — curriculum, assessment, careers, uni-specific programme info |
+| `data/scholarships_data.js` | `window.SCHOLARSHIP_DATA` | 163 scholarships — last updated 2026-06-16 |
+
+To regenerate `universities_all.js`: `python3 tools/fetch_all_universities.py`
 
 ---
 
@@ -81,6 +96,29 @@ Mobile nav: flat list with section labels (`.nav-mobile-label`), also active cla
 
 ---
 
+## Visual Design (CDO — 2026-06-16 rev 3)
+
+`index.html` + `css/style.css`:
+
+- **Hero headline:** "Scholarships. Admissions. All Free. All in One Place." (was "Free Document Tools")
+- **Hero CTAs:** "Find Scholarships" → `scholarships.html` + "Browse Universities" → `admissions.html` (were OCR/PDF links)
+- **Hero:** animated floating color orbs (indigo/green/blue, CSS keyframes), gradient animated headline (blue→violet→cyan), shimmer indigo→violet CTA button
+- **Scholarship ticker:** scrolling marquee strip between hero and hub section — 16 real scholarship names with country flags, CSS `translateX` animation, pauses on hover
+- **Hub cards:** upgraded with `.hub-card-visual` header area — large emoji icon + country flags row + frosted-glass background panel per card
+- **Spotlight strip:** dark bar above hero, shows "Today's Tool" rotating by weekday (pure JS)
+- **Tool cards:** gradient top stripe + colored glow shadow on hover
+- **Scroll animations:** `[data-animate]` + `[data-delay="1"–"7"]` — IntersectionObserver stagger in `common.js`
+- **Counters:** hero stat numbers count up on load via `data-target` attribute
+- **Section headings:** gradient blue→violet underline on `.section-h-accent` elements
+- **Reduced motion:** all animated effects disabled via `prefers-reduced-motion`
+
+Design tokens: `--primary: #1A73E8` · `--success: #10B981` · `--orange: #F7941D` · purple `#7C3AED`
+Font: Inter (400–800) via Google Fonts. Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
+
+**Bot guard (2026-06-16):** `tools/update_university_data.py` — if `scholarships_data.js` has ≥50 scholarships, the daily bot skips list replacement and only refreshes status fields. The 163 scholarships are permanent.
+
+---
+
 ## AdSense — Why It Was Rejected & What's Fixed
 
 **Fixed (2026-06-16):**
@@ -114,7 +152,9 @@ Keep these CTAs. Do not remove on future edits.
 - Never hardcode `class="active"` on nav links — JS sets it via current URL
 - New pages must be added to: nav HTML (all pages), `sitemap.xml`, and `llms.txt`
 - Ad slot IDs in HTML are placeholders until AdSense approves the account — do not treat them as real
+- `data/universities_all.js` is auto-generated — never edit manually; run `python3 tools/fetch_all_universities.py` to regenerate
 - easedit.co CTAs on admissions/scholarships/compare — keep them, don't overwrite
+- Homepage hero stat "800+ Scholarships" is a marketing claim; actual tracked scholarships in `scholarships_data.js` = 163 — update hero stat when data catches up
 
 ---
 
@@ -128,6 +168,10 @@ Keep these CTAs. Do not remove on future edits.
 | `sitemap.xml` | All 17 pages, updated manually on new page adds |
 | `robots.txt` | AI crawler permissions |
 | `llms.txt` | AI citation structured content |
-| `data/` | University, scholarship, admissions JSON data |
+| `data/` | JS data files — universities, scholarships, guides, courses (see Data Files section) |
+| `tools/fetch_all_universities.py` | Regenerates `data/universities_all.js` from Hipolabs API + QS rankings |
+| `tools/update_university_data.py` | Updates individual university records |
+| `js/config.js` | `window.FST_CONFIG` — Google Maps API key |
 | `workflows/` | SOPs per tool |
 | `ANALYTICS-SETUP.md` | GA4 setup guide (historical — GA is now live) |
+| `COMMAND.md` | Full dev-workflow reference: file map, data schemas, compare.html internals, how to add unis/streams/scholarships |

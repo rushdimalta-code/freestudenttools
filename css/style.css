@@ -1837,9 +1837,78 @@ footer {
 /* Tools section soft gradient bg */
 .tools-section { background: linear-gradient(180deg, #F8FAFF 0%, #fff 100%); }
 
+/* ===== SCHOLARSHIP TICKER ===== */
+.schol-ticker {
+  background: linear-gradient(90deg, #0B1120 0%, #1E1B4B 50%, #0B1120 100%);
+  border-top: 1px solid rgba(99,102,241,.25);
+  border-bottom: 1px solid rgba(99,102,241,.25);
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-track {
+  display: inline-flex;
+  gap: 0;
+  animation: ticker-scroll 55s linear infinite;
+  will-change: transform;
+}
+.ticker-item {
+  display: inline-block;
+  padding: 0 32px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.8);
+  letter-spacing: 0.01em;
+  border-right: 1px solid rgba(99,102,241,.3);
+}
+.ticker-item:last-child { border-right: none; }
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.schol-ticker:hover .ticker-track { animation-play-state: paused; }
+
+/* ===== HUB CARD VISUAL HEADER ===== */
+.hub-card-visual {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+.hub-card-icon-wrap {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.hub-card-countries {
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,.75);
+  font-weight: 500;
+}
+
+/* ===== HERO h1 SIZING BOOST ===== */
+.hero h1 {
+  font-size: 3.5rem !important;
+  line-height: 1.1 !important;
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .hero h1 { font-size: 2.4rem !important; }
+  .hub-card-visual { padding: 10px 12px; }
+  .hub-card-icon-wrap { font-size: 1.6rem; }
+  .hub-card-countries { font-size: 0.95rem; }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hero-orb { animation: none !important; }
   .btn-cta-shine { animation: none !important; background: #1d4ed8; }
   .hero-h1-gradient { animation: none !important; }
+  .ticker-track { animation: none !important; }
 }
