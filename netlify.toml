@@ -7,6 +7,93 @@
   to = "/scholarship.html?id=:id"
   status = 200
 
+# Pretty URL rewrite for all static HTML pages (/contact → /contact.html etc.)
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/scholarships"
+  to = "/scholarships.html"
+  status = 200
+
+[[redirects]]
+  from = "/admissions"
+  to = "/admissions.html"
+  status = 200
+
+[[redirects]]
+  from = "/compare"
+  to = "/compare.html"
+  status = 200
+
+[[redirects]]
+  from = "/tips"
+  to = "/tips.html"
+  status = 200
+
+[[redirects]]
+  from = "/scholarship-guide"
+  to = "/scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/ocr"
+  to = "/ocr.html"
+  status = 200
+
+[[redirects]]
+  from = "/pdf-converter"
+  to = "/pdf-converter.html"
+  status = 200
+
+[[redirects]]
+  from = "/compressor"
+  to = "/compressor.html"
+  status = 200
+
+[[redirects]]
+  from = "/image-compressor"
+  to = "/image-compressor.html"
+  status = 200
+
+[[redirects]]
+  from = "/pdf-merger"
+  to = "/pdf-merger.html"
+  status = 200
+
+[[redirects]]
+  from = "/pdf-extractor"
+  to = "/pdf-extractor.html"
+  status = 200
+
+[[redirects]]
+  from = "/citation-generator"
+  to = "/citation-generator.html"
+  status = 200
+
+# Custom 404 fallback
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
 
 # Immutable static assets — 1 year cache
 [[headers]]
