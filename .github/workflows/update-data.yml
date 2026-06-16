@@ -36,11 +36,14 @@ jobs:
             echo "Not Monday — skipping full university database refresh"
           fi
 
+      - name: Regenerate static scholarship pages
+        run: python3 tools/generate_scholarship_pages.py
+
       - name: Commit updated data files
         run: |
           git config --local user.email "bot@freestudenttools.com"
           git config --local user.name "FreeStudentTools Data Bot"
-          git add data/universities.js data/scholarships_data.js data/universities_all.js
+          git add data/universities.js data/scholarships_data.js data/universities_all.js scholarship/
           git diff --staged --quiet && echo "No data changes today" || \
             git commit -m "chore: daily data refresh $(date -u +%Y-%m-%d)"
 
