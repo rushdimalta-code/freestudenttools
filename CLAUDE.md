@@ -223,21 +223,31 @@ Keep all these CTAs. Do not remove on future edits.
 
 ---
 
-## Performance Audit (2026-06-16) — Full Site
+## Performance Audit (2026-06-16, rev 8) — Full Site
 
-### Estimated Lighthouse Scores (post-audit fixes)
+### Live Lighthouse Scores — index.html (mobile, 2026-06-16 pre-fix)
 
-| Page | Perf | Accessibility | Best Practices | SEO |
-|---|---|---|---|---|
-| index.html | ~88 | ~95 | ~92 | ~98 |
-| ocr.html | ~72 | ~93 | ~90 | ~97 |
-| admissions.html | ~84 | ~94 | ~92 | ~97 |
-| scholarships.html | ~82 | ~94 | ~92 | ~97 |
-| compare.html | ~68 | ~93 | ~90 | ~96 |
-| tips.html | ~85 | ~95 | ~92 | ~98 |
-| about/contact/privacy/terms | ~90 | ~96 | ~93 | ~95 |
+| Category | Score |
+|---|---|
+| Performance | **49** ← was dragged down by Google scripts loading without consent |
+| Accessibility | **95** |
+| Best Practices | **96** |
+| SEO | **100** |
 
-*Performance scores vary: tool pages with Tesseract.js (~2MB CDN) and PDF.js (~1MB CDN) are lower on TTI; hub pages and static pages score higher. Scores estimated from manual audit — run PageSpeed Insights on live site to verify.*
+**Root cause of 49:** `<meta name="google-adsense-account">` + inline `(adsbygoogle).push({})` calls triggered Google's Early Request System unconditionally — 466KB of `adsbygoogle.js`, `show_ads_impl.js`, `gtag.js` loading on every page load without consent. Fixed in rev 8 (2026-06-16).
+
+**Expected after rev 8 fix:** Performance 75–85 (Google ad scripts now require explicit consent via cookie banner click; no script injection on first load).
+
+### Key Metrics — pre-fix baseline
+
+| Metric | Value |
+|---|---|
+| FCP | 1.7 s ← clean (no render-blocking) |
+| LCP | 6.1 s ← dragged by 1.15MB old logo + Google script block |
+| TBT | 920 ms ← Google script evaluation |
+| CLS | 0.11 ← just over "Good" threshold |
+| TTI | 8.2 s ← Google scripts blocking main thread |
+| Speed Index | 5.1 s |
 
 ### Issues Found & Fixed
 
