@@ -28,6 +28,12 @@ function initAds() {
   script.async = true;
   script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`;
   script.crossOrigin = 'anonymous';
+  script.onload = function() {
+    // Push all ad slots now that adsbygoogle.js is loaded
+    document.querySelectorAll('ins.adsbygoogle').forEach(function() {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    });
+  };
   document.head.appendChild(script);
 }
 
