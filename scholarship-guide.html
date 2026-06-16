@@ -48,11 +48,6 @@
     ]
   }
   </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* ===== SCHOLARSHIP GUIDE PAGE ===== */
@@ -262,7 +257,10 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
+        <picture>
+        <source srcset="assets/logo-sm.webp" type="image/webp">
         <img src="assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager">
+      </picture>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -674,31 +672,31 @@
           <div class="schol-cards">
             <div class="schol-card">
               <div class="schol-card-header">
-                <h3>Chevening Scholarships (UK)</h3>
+                <h3><a href="/scholarship/chevening">Chevening Scholarships (UK)</a></h3>
               </div>
               <p>Funded by the UK Foreign, Commonwealth &amp; Development Office. Full funding for a one-year master's degree at any UK university. Aimed at future leaders — professional experience is required (typically 2+ years). Opens September, deadline usually November. Around 1,700 awards annually across 160+ countries.</p>
             </div>
             <div class="schol-card">
               <div class="schol-card-header">
-                <h3>DAAD Scholarships (Germany)</h3>
+                <h3><a href="/scholarship/daad_study_scholarship">DAAD Scholarships (Germany)</a></h3>
               </div>
               <p>Deutsche Akademische Austauschdienst funds thousands of scholarships for international students to study in Germany. Multiple programs covering bachelor's, master's, and PhD levels. Many are discipline-specific. Germany charges low or no tuition at public universities, so DAAD funding typically covers living costs and a stipend. Highly undersubscribed relative to other top programs.</p>
             </div>
             <div class="schol-card">
               <div class="schol-card-header">
-                <h3>Erasmus+ (EU)</h3>
+                <h3><a href="/scholarship/erasmus_plus">Erasmus+ (EU)</a></h3>
               </div>
               <p>The EU's flagship education program. For EU-based students it funds periods of study or internship abroad within the EU. For students from partner countries outside the EU, Erasmus+ International Credit Mobility provides grants to study at European universities. Check your home institution for available agreements and funding amounts.</p>
             </div>
             <div class="schol-card">
               <div class="schol-card-header">
-                <h3>Commonwealth Scholarships (UK)</h3>
+                <h3><a href="/scholarship/commonwealth_scholarship">Commonwealth Scholarships (UK)</a></h3>
               </div>
               <p>For students from Commonwealth countries (53 nations across Africa, Asia, the Pacific, and the Caribbean). Fully funded master's and PhD places at UK universities. Specifically targeted at students from developing Commonwealth countries. Selection focuses on academic excellence and commitment to development impact in the home country.</p>
             </div>
             <div class="schol-card">
               <div class="schol-card-header">
-                <h3>Chinese Government Scholarship (CSC)</h3>
+                <h3><a href="/scholarship/chinese_gov_scholarship_a">Chinese Government Scholarship (CSC)</a></h3>
               </div>
               <p>One of the most underused major scholarship programs globally. Covers tuition, accommodation, health insurance, and a monthly stipend for full degree programs at Chinese universities. Hundreds of universities participate. Open to students worldwide. Many students from Africa, the Middle East, and Southeast Asia have used this to earn fully-funded degrees. Application is through your home country's education ministry or directly to the Chinese embassy.</p>
             </div>
@@ -796,7 +794,10 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo"><img src="assets/logo-sm.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
+        <div class="logo"><picture>
+          <source srcset="assets/logo-sm.webp" type="image/webp">
+          <img src="assets/logo-sm.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy">
+        </picture></div>
         <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">
