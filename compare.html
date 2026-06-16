@@ -724,9 +724,7 @@
   const tier1Names = new Set(tier1.map(u => u.name.toLowerCase()));
   function normName(n) { return n.toLowerCase().replace(/^(the |ethz - |eth\s-\s)/,'').replace(/[^a-z0-9]/g,' ').replace(/\s+/g,' ').trim(); }
   const tier1NormNames = new Set(tier1.map(u => normName(u.name)));
-  const tier2raw   = (window.UNI_ALL && window.UNI_ALL.universities) ? window.UNI_ALL.universities : [];
-  const tier2 = tier2raw.filter(u => !tier1Names.has(u.name.toLowerCase()) && !tier1NormNames.has(normName(u.name)));
-  const unis = [...tier1, ...tier2];
+  let unis = [...tier1];
 
   const guide = window.UNI_GUIDE || {};
   const coursesData = (window.COURSES_DATA && window.COURSES_DATA.streams) ? window.COURSES_DATA.streams : {};
@@ -2043,6 +2041,21 @@
   // ── Init ───────────────────────────────────────────────────────────────────
   populateDropdowns();
   populateCourseDropdown();
+
+  // Lazy-load tier-2 universities (395 KB) after first paint — keeps LCP clean
+  (function() {
+    var s = document.createElement('script');
+    s.src = 'data/universities_all.js';
+    s.onload = function() {
+      var t2raw = (window.UNI_ALL && window.UNI_ALL.universities) ? window.UNI_ALL.universities : [];
+      var t2 = t2raw.filter(function(u) {
+        return !tier1Names.has(u.name.toLowerCase()) && !tier1NormNames.has(normName(u.name));
+      });
+      unis = [...tier1, ...t2];
+      populateDropdowns();
+    };
+    document.body.appendChild(s);
+  })();
 
   if (params.get('a')) selA.value = params.get('a');
   if (params.get('b')) selB.value = params.get('b');
