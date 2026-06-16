@@ -53,16 +53,35 @@
     /* ===== COMPARE PAGE ===== */
     .compare-hero {
       background: linear-gradient(140deg, #0C4A6E 0%, #0369A1 55%, #0EA5E9 100%);
-      padding: 64px 0 48px;
+      padding: 60px 0 52px;
+      text-align: center;
       position: relative; overflow: hidden;
     }
     .compare-hero::before {
       content: '';
       position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(ellipse 60% 50% at 85% 30%, rgba(56,189,248,0.2) 0%, transparent 70%);
+      background: radial-gradient(ellipse 60% 50% at 85% 30%, rgba(56,189,248,0.22) 0%, transparent 70%),
+                  radial-gradient(ellipse 40% 40% at 5% 85%, rgba(14,165,233,0.12) 0%, transparent 60%);
     }
-    .compare-hero h1 { color: #fff; font-size: 2.5rem; letter-spacing: -0.03em; margin-bottom: 10px; }
-    .compare-hero p { color: #BAE6FD; font-size: 1rem; max-width: 560px; margin: 0 auto 0; }
+    .compare-hero h1 { color: #fff; font-size: 2.7rem; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 14px; }
+    .compare-hero p { color: #BAE6FD; font-size: 1rem; max-width: 600px; margin: 0 auto 24px; line-height: 1.7; }
+    .compare-hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.22);
+      color: #BAE6FD; font-size: 0.75rem; font-weight: 700;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 18px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .compare-hero-stats {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 4px;
+    }
+    .compare-hero-stat {
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 40px; padding: 7px 16px; backdrop-filter: blur(4px);
+    }
+    .compare-hero-stat strong { color: #fff; font-size: 1rem; font-weight: 700; }
+    .compare-hero-stat span { color: #BAE6FD; font-size: 0.78rem; }
 
     /* Disclaimer banner */
     .compare-disclaimer {
@@ -356,7 +375,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
-        <img src="assets/logo.png" alt="FreeStudentTools">
+        <img src="assets/logo-sm.png" alt="FreeStudentTools" fetchpriority="high" loading="eager">
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -430,9 +449,27 @@
 
 <!-- HERO -->
 <section class="compare-hero" aria-labelledby="compare-hero-heading">
-  <div class="container" style="text-align:center;position:relative;z-index:1">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="compare-hero-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      University Comparison Tool
+    </div>
     <h1 id="compare-hero-heading">Compare Universities Side-by-Side</h1>
-    <p>Pick any two universities from 1,000+ ranked institutions across 100+ countries — QS rankings, tuition fees, courses, cost of living, accommodation, and campus facilities. Free, no sign-up.</p>
+    <p>Pick any two universities from 1,040+ ranked institutions across 100+ countries — QS rankings, tuition fees, courses, cost of living, accommodation, and campus facilities. Free, no sign-up.</p>
+    <div class="compare-hero-stats" aria-label="Database stats">
+      <div class="compare-hero-stat">
+        <strong>1,040+</strong><span>Universities</span>
+      </div>
+      <div class="compare-hero-stat">
+        <strong>100+</strong><span>Countries</span>
+      </div>
+      <div class="compare-hero-stat">
+        <strong>16</strong><span>Subject Streams</span>
+      </div>
+      <div class="compare-hero-stat">
+        <strong>$0</strong><span>Always Free</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -623,7 +660,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
+        <div class="logo"><img src="assets/logo-sm.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
         <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">

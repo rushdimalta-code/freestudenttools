@@ -375,9 +375,9 @@ main { flex: 1; }
 
 /* ===== PAGE HERO (tool pages) ===== */
 .page-hero {
-  background: linear-gradient(135deg, #0B1120 0%, #0F2456 60%, #1A1040 100%);
+  background: linear-gradient(140deg, #0B1120 0%, #0F2456 55%, #1A1040 100%);
   border-bottom: none;
-  padding: 44px 0 40px;
+  padding: 60px 0 52px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -386,27 +386,81 @@ main { flex: 1; }
 .page-hero::before {
   content: '';
   position: absolute;
-  top: -40px; right: -40px;
-  width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%);
+  top: -60px; right: -60px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(59,130,246,0.22) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.page-hero h1 { font-size: 2rem; margin-bottom: 10px; color: #fff; }
-.page-hero p { font-size: 0.97rem; max-width: 620px; margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.7); }
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -40px;
+  width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero > .container { position: relative; z-index: 1; }
+
+.page-hero h1 {
+  font-size: 2.7rem;
+  margin-bottom: 14px;
+  color: #fff;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.page-hero p {
+  font-size: 1.02rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+}
 
 .page-hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--primary);
-  color: white;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #BAE6FD;
   font-size: 0.75rem;
-  font-weight: 600;
-  padding: 5px 13px;
+  font-weight: 700;
+  padding: 5px 14px;
   border-radius: 100px;
-  margin-bottom: 14px;
-  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Trust strip injected by common.js into .page-hero */
+.page-hero-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 22px;
+  gap: 0;
+}
+.page-hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255,255,255,0.68);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0 14px;
+  border-right: 1px solid rgba(255,255,255,0.14);
+}
+.page-hero-trust-item:last-child { border-right: none; }
+.page-hero-trust-item svg { color: #34D399; flex-shrink: 0; }
+
+@media (max-width: 640px) {
+  .page-hero { padding: 44px 0 40px; }
+  .page-hero h1 { font-size: 2rem; }
+  .page-hero-trust-item { padding: 3px 10px; font-size: 0.75rem; }
 }
 
 /* ===== TOOL CARDS (homepage) ===== */

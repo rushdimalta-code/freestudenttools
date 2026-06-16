@@ -123,6 +123,23 @@ function initCookieConsent() {
   });
 }
 
+// ===== PAGE HERO TRUST STRIP (tool pages) =====
+(function () {
+  var hero = document.querySelector('.page-hero');
+  if (!hero) return;
+  var checkIcon = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+  var strip = document.createElement('div');
+  strip.className = 'page-hero-trust';
+  strip.setAttribute('aria-label', 'Key guarantees');
+  strip.innerHTML =
+    '<span class="page-hero-trust-item">' + checkIcon + ' Browser-only processing</span>' +
+    '<span class="page-hero-trust-item">' + checkIcon + ' No file uploads</span>' +
+    '<span class="page-hero-trust-item">' + checkIcon + ' No sign-up</span>' +
+    '<span class="page-hero-trust-item">' + checkIcon + ' 100% free, always</span>';
+  var container = hero.querySelector('.container');
+  if (container) container.appendChild(strip);
+})();
+
 // ===== SCROLL ENTRANCE ANIMATIONS =====
 (function () {
   const els = document.querySelectorAll('[data-animate]');

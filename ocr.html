@@ -178,10 +178,7 @@
     }
     .options-panel-title svg { color: var(--text-secondary); }
 
-    /* Override base CSS page-hero h1 to match global h1 spec */
-    .page-hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; }
-
-    /* Center alignment */
+    /* Center alignment — page-hero base styles handle the rest */
     .page-hero { text-align: center; }
     .page-hero p { margin-left: auto; margin-right: auto; }
     .page-hero-badge { display: inline-flex; }
@@ -200,7 +197,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.png" alt="FreeStudentTools - Your Free Academic Toolkit">
+        <img src="assets/logo-sm.png" alt="FreeStudentTools" fetchpriority="high" loading="eager">
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -570,7 +567,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
+        <div class="logo"><img src="assets/logo-sm.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
         <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">
@@ -616,9 +613,9 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-<script src="https://unpkg.com/docx@8.5.0/build/index.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
+<script src="https://unpkg.com/docx@8.5.0/build/index.umd.js" defer></script>
 <script src="js/common.js"></script>
 <script src="js/ocr.js"></script>
 </body>
