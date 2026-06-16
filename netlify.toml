@@ -93,6 +93,32 @@
   to = "/citation-generator.html"
   status = 200
 
+# Blog post clean URLs
+[[redirects]]
+  from = "/blog/chevening-scholarship-guide"
+  to = "/blog/chevening-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/fulbright-scholarship-guide"
+  to = "/blog/fulbright-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/daad-scholarship-guide"
+  to = "/blog/daad-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/gates-cambridge-scholarship-guide"
+  to = "/blog/gates-cambridge-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/erasmus-mundus-guide"
+  to = "/blog/erasmus-mundus-guide.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
@@ -145,3 +171,14 @@
   for = "/robots.txt"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+# Blog HTML pages
+[[headers]]
+  for = "/blog/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"

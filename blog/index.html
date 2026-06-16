@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-9843476971668607">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>Scholarship Guides & Student Resources — FreeStudentTools Blog</title>
+  <meta name="description" content="Honest, practical guides on how to apply for Chevening, Fulbright, DAAD, Gates Cambridge, and Erasmus Mundus scholarships. No fluff. Real numbers. Written for students who actually want to get in.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/blog/">
+  <meta property="og:title" content="Scholarship Guides — FreeStudentTools Blog">
+  <meta property="og:description" content="Honest guides on Chevening, Fulbright, DAAD, Gates Cambridge, and Erasmus Mundus. Real eligibility, real application steps, real statistics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/blog/">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scholarship Guides — FreeStudentTools Blog">
+  <meta name="twitter:description" content="Honest guides on Chevening, Fulbright, DAAD, Gates Cambridge, and Erasmus Mundus.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "FreeStudentTools Blog",
+    "description": "Practical scholarship guides and student resources",
+    "url": "https://freestudenttools.com/blog/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FreeStudentTools",
+      "url": "https://freestudenttools.com"
+    }
+  }
+  </script>
+  <link rel="preload" href="/assets/fonts/inter-100-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .blog-hero {
+      background: linear-gradient(140deg, #0B1120 0%, #0F2456 50%, #1a1040 100%);
+      padding: 72px 0 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(99,102,241,.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blog-hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(16,185,129,.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .blog-hero > .container { position: relative; z-index: 1; text-align: center; }
+    .blog-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: .8rem; color: rgba(255,255,255,.7);
+      font-weight: 600; letter-spacing: .04em;
+      margin-bottom: 20px;
+    }
+    .blog-hero h1 {
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      font-weight: 800; color: #fff;
+      letter-spacing: -.025em; line-height: 1.15;
+      margin: 0 0 16px;
+    }
+    .blog-hero p {
+      font-size: 1.05rem; color: rgba(255,255,255,.65);
+      max-width: 540px; margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+    .blog-stats {
+      display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .blog-stat {
+      text-align: center;
+      font-size: .82rem; color: rgba(255,255,255,.5);
+    }
+    .blog-stat strong {
+      display: block;
+      font-size: 1.3rem; font-weight: 700; color: #fff;
+      margin-bottom: 3px;
+    }
+
+    /* Post grid */
+    .blog-body { background: #f8fafc; padding: 56px 0 80px; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      max-width: 1100px; margin: 0 auto; padding: 0 24px;
+    }
+    .blog-card {
+      background: #fff; border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+    }
+    .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,.10);
+    }
+    .blog-card-img {
+      width: 100%; height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #0B1120, #0F2456);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .blog-card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .blog-card-img-placeholder {
+      font-size: 3rem; opacity: .4;
+    }
+    .blog-card-content { padding: 22px 24px 26px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-tag {
+      display: inline-block;
+      background: #EFF6FF; color: #1A73E8;
+      border-radius: 100px; padding: 3px 10px;
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .06em; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .blog-card-tag.green { background: #ECFDF5; color: #059669; }
+    .blog-card-tag.purple { background: #F5F3FF; color: #7C3AED; }
+    .blog-card-tag.orange { background: #FFF7ED; color: #D97706; }
+    .blog-card-tag.red { background: #FEF2F2; color: #DC2626; }
+    .blog-card h2 {
+      font-size: 1.05rem; font-weight: 700; color: #0f172a;
+      line-height: 1.35; margin: 0 0 10px;
+    }
+    .blog-card p {
+      font-size: .88rem; color: #64748b;
+      line-height: 1.6; margin: 0 0 16px; flex: 1;
+    }
+    .blog-card-meta {
+      display: flex; align-items: center; gap: 12px;
+      font-size: .78rem; color: #94a3b8;
+    }
+    .blog-card-meta span { display: flex; align-items: center; gap: 4px; }
+    .blog-read-more {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: #1A73E8; font-size: .85rem; font-weight: 600;
+      margin-top: 14px; text-decoration: none;
+    }
+    .blog-read-more svg { transition: transform .2s; }
+    .blog-card:hover .blog-read-more svg { transform: translateX(3px); }
+
+    .blog-section-heading {
+      max-width: 1100px; margin: 0 auto 32px; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .blog-section-heading h2 {
+      font-size: 1.35rem; font-weight: 800; color: #0f172a;
+    }
+    .blog-section-heading span { font-size: .85rem; color: #94a3b8; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="FreeStudentTools home">
+        <picture>
+          <source srcset="/assets/logo-sm.webp" type="image/webp">
+          <img src="/assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager">
+        </picture>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            University Hub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/admissions.html">Admissions Tracker</a></li>
+            <li><a href="/scholarships.html">Scholarships Finder</a></li>
+            <li><a href="/scholarship-guide.html">Scholarship Guide</a></li>
+            <li><a href="/compare.html">Compare Degrees</a></li>
+            <li><a href="/tips.html">Student Tips</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Tools
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/ocr.html">OCR Scanner</a></li>
+            <li><a href="/pdf-converter.html">PDF Converter</a></li>
+            <li><a href="/compressor.html">PDF Compressor</a></li>
+            <li><a href="/image-compressor.html">Image Compressor</a></li>
+            <li><a href="/pdf-merger.html">PDF Merger</a></li>
+            <li><a href="/pdf-extractor.html">PDF Page Extractor</a></li>
+            <li><a href="/citation-generator.html">Citation Generator</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <span class="nav-mobile-label">University Hub</span>
+    <a href="/admissions.html">Admissions Tracker</a>
+    <a href="/scholarships.html">Scholarships Finder</a>
+    <a href="/scholarship-guide.html">Scholarship Guide</a>
+    <a href="/compare.html">Compare Degrees</a>
+    <a href="/tips.html">Student Tips</a>
+    <span class="nav-mobile-label">Tools</span>
+    <a href="/ocr.html">OCR Scanner</a>
+    <a href="/pdf-converter.html">PDF Converter</a>
+    <a href="/compressor.html">PDF Compressor</a>
+    <a href="/image-compressor.html">Image Compressor</a>
+    <a href="/pdf-merger.html">PDF Merger</a>
+    <a href="/pdf-extractor.html">PDF Page Extractor</a>
+    <a href="/citation-generator.html">Citation Generator</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</nav>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="blog-hero-badge">✍️ Scholarship Guides</div>
+    <h1>Actually useful scholarship guides</h1>
+    <p>No generic advice. Real eligibility rules, real deadlines, real acceptance rates — and the parts most guides skip over.</p>
+    <div class="blog-stats">
+      <div class="blog-stat"><strong>5</strong>Major scholarships</div>
+      <div class="blog-stat"><strong>£0</strong>Cost to apply</div>
+      <div class="blog-stat"><strong>100%</strong>Fully funded</div>
+    </div>
+  </div>
+</section>
+
+<!-- POSTS -->
+<section class="blog-body">
+  <div class="blog-section-heading">
+    <h2>Scholarship Guides</h2>
+    <span>5 guides</span>
+  </div>
+  <div class="blog-grid">
+
+    <a href="/blog/chevening-scholarship-guide" class="blog-card">
+      <div class="blog-card-img">
+        <img src="/assets/blog/chevening-hero.jpg" alt="How to apply for the Chevening Scholarship" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
+        <div class="blog-card-img-placeholder" style="display:none">🇬🇧</div>
+      </div>
+      <div class="blog-card-content">
+        <span class="blog-card-tag">UK · Fully Funded</span>
+        <h2>How to Apply for the Chevening Scholarship — and Actually Get It</h2>
+        <p>The UK's flagship scholarship funds 1,800 students a year from 160+ countries. The essays aren't hard. The interviews are. Here's what the selection panel is actually looking for.</p>
+        <div class="blog-card-meta">
+          <span>📅 June 2026</span>
+          <span>⏱ 9 min read</span>
+        </div>
+        <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="/blog/fulbright-scholarship-guide" class="blog-card">
+      <div class="blog-card-img">
+        <img src="/assets/blog/fulbright-hero.jpg" alt="How to apply for the Fulbright Scholarship" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
+        <div class="blog-card-img-placeholder" style="display:none">🇺🇸</div>
+      </div>
+      <div class="blog-card-content">
+        <span class="blog-card-tag green">USA · Fully Funded</span>
+        <h2>The Fulbright Scholarship: What Nobody Tells You Before You Apply</h2>
+        <p>The world's most recognised scholarship rejects over 85% of applicants — including strong ones. The difference usually isn't academic credentials. It's this.</p>
+        <div class="blog-card-meta">
+          <span>📅 June 2026</span>
+          <span>⏱ 10 min read</span>
+        </div>
+        <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="/blog/daad-scholarship-guide" class="blog-card">
+      <div class="blog-card-img">
+        <img src="/assets/blog/daad-hero.jpg" alt="DAAD scholarship application guide" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
+        <div class="blog-card-img-placeholder" style="display:none">🇩🇪</div>
+      </div>
+      <div class="blog-card-content">
+        <span class="blog-card-tag purple">Germany · Fully Funded</span>
+        <h2>DAAD Scholarship: Germany's Most Overlooked Fully-Funded Opportunity</h2>
+        <p>Most students applying to Germany skip DAAD because it looks complicated. It's not — but you do need to pick the right programme. There are 70+ of them and only a few actually matter for most applicants.</p>
+        <div class="blog-card-meta">
+          <span>📅 June 2026</span>
+          <span>⏱ 8 min read</span>
+        </div>
+        <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="/blog/gates-cambridge-scholarship-guide" class="blog-card">
+      <div class="blog-card-img">
+        <img src="/assets/blog/gates-cambridge-hero.jpg" alt="How to apply for the Gates Cambridge Scholarship" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
+        <div class="blog-card-img-placeholder" style="display:none">🎓</div>
+      </div>
+      <div class="blog-card-content">
+        <span class="blog-card-tag orange">Cambridge · Fully Funded</span>
+        <h2>The Gates Cambridge Scholarship: Why Smart People Get Rejected</h2>
+        <p>Around 90 scholarships. Over 5,000 applicants. The people who don't get it aren't the ones with weak academics — they're the ones who applied like it was a standard funding application. It isn't.</p>
+        <div class="blog-card-meta">
+          <span>📅 June 2026</span>
+          <span>⏱ 10 min read</span>
+        </div>
+        <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+    <a href="/blog/erasmus-mundus-guide" class="blog-card">
+      <div class="blog-card-img">
+        <img src="/assets/blog/erasmus-hero.jpg" alt="How to apply for Erasmus Mundus scholarship" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
+        <div class="blog-card-img-placeholder" style="display:none">🇪🇺</div>
+      </div>
+      <div class="blog-card-content">
+        <span class="blog-card-tag red">Europe · Fully Funded</span>
+        <h2>Erasmus Mundus: How to Pick the Right Programme (and Actually Get In)</h2>
+        <p>There are 140+ Erasmus Mundus programmes. Picking the wrong one is the most common mistake. The second most common mistake is applying to a programme that's full two years before it says it closes.</p>
+        <div class="blog-card-meta">
+          <span>📅 June 2026</span>
+          <span>⏱ 9 min read</span>
+        </div>
+        <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo" aria-label="FreeStudentTools home">
+          <picture>
+            <source srcset="/assets/logo-sm.webp" type="image/webp">
+            <img src="/assets/logo-sm.png" alt="FreeStudentTools" width="36" height="36" loading="lazy">
+          </picture>
+        </a>
+        <p class="footer-desc">Free browser-based tools for students. Files never leave your device.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>University Hub</h4>
+          <a href="/admissions.html">Admissions Tracker</a>
+          <a href="/scholarships.html">Scholarships Finder</a>
+          <a href="/scholarship-guide.html">Scholarship Guide</a>
+          <a href="/compare.html">Compare Degrees</a>
+          <a href="/tips.html">Student Tips</a>
+          <a href="/blog/">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <a href="/ocr.html">OCR Scanner</a>
+          <a href="/pdf-converter.html">PDF Converter</a>
+          <a href="/compressor.html">PDF Compressor</a>
+          <a href="/image-compressor.html">Image Compressor</a>
+          <a href="/pdf-merger.html">PDF Merger</a>
+          <a href="/pdf-extractor.html">PDF Page Extractor</a>
+          <a href="/citation-generator.html">Citation Generator</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 FreeStudentTools.com — All tools run in your browser. No data leaves your device.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/common.js" defer></script>
+</body>
+</html>
