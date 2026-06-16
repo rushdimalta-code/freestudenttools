@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-16 (rev 5)_
+_Last updated: 2026-06-16 (rev 6)_
 
 ---
 
@@ -187,8 +187,12 @@ Active nav link is set by JS in `common.js` — do **not** hardcode `class="acti
 - `compare.html` → `.compare-hero`: steel blue gradient `#0C4A6E → #0369A1 → #0EA5E9`, badge pill, 4 stats (1040+ unis, 100+ countries, 16 streams, $0)
 - `tips.html` → `.tips-hero`: indigo gradient `#1E1B4B → #4338CA → #6366F1`, pill, sticky category nav below
 
+### Static Pages (rev 6)
+- `about.html` / `contact.html` / `privacy.html` / `terms.html` — all now have full `.page-hero` sections (dark navy gradient, badge, h1, p). Previously: bare white h1 dumps with no visual header.
+- about.html content corrected: 14 total tools (7 document + 7 hub), 246+ scholarships, 1,040+ universities
+
 Design tokens: `--primary: #1A73E8` · `--success: #10B981` · `--orange: #F7941D` · purple `#7C3AED`
-Font: Inter (400–800) via Google Fonts. Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
+Font: Inter (400–800) via Google Fonts, loaded **async** (non-blocking). Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
 
 ---
 
@@ -219,23 +223,66 @@ Keep all these CTAs. Do not remove on future edits.
 
 ---
 
-## Performance (2026-06-16)
+## Performance Audit (2026-06-16) — Full Site
+
+### Estimated Lighthouse Scores (post-audit fixes)
+
+| Page | Perf | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| index.html | ~88 | ~95 | ~92 | ~98 |
+| ocr.html | ~72 | ~93 | ~90 | ~97 |
+| admissions.html | ~84 | ~94 | ~92 | ~97 |
+| scholarships.html | ~82 | ~94 | ~92 | ~97 |
+| compare.html | ~68 | ~93 | ~90 | ~96 |
+| tips.html | ~85 | ~95 | ~92 | ~98 |
+| about/contact/privacy/terms | ~90 | ~96 | ~93 | ~95 |
+
+*Performance scores vary: tool pages with Tesseract.js (~2MB CDN) and PDF.js (~1MB CDN) are lower on TTI; hub pages and static pages score higher. Scores estimated from manual audit — run PageSpeed Insights on live site to verify.*
+
+### Issues Found & Fixed
+
+| # | Severity | Issue | Fix Applied |
+|---|---|---|---|
+| 1 | 🔴 Critical | `logo.png` = 1.15MB on every page — #1 LCP killer | `logo-sm.png` (54KB, 200×200) in all nav/footer img tags |
+| 2 | 🔴 Critical | No `width`/`height` on nav logos → CLS on every page | Added `width="44" height="44"` to all nav logo imgs |
+| 3 | 🔴 High | Google Fonts render-blocking on all 18 pages | Async load: `media="print"` + `onload` + `<noscript>` fallback |
+| 4 | 🟠 High | CDN scripts not deferred — block `window.onload` | Added `defer` to all CDN `<script>` tags on tool pages |
+| 5 | 🟠 High | Static pages (about/contact/privacy/terms) had no hero | Added `.page-hero` sections to all 4 static pages |
+| 6 | 🟡 Medium | Weak `.page-hero` on tool pages (2rem, plain, no orbs) | 2.7rem h1, dual radial orbs, glass badge, 60px padding |
+| 7 | 🟡 Medium | compare.html hero: no badge, no stats, not centred | Badge pill + 4 stats cards + dual-orb background |
+| 8 | 🟡 Medium | Upload zone: flat `#F8FAFC` with basic dashed border | Gradient bg, hover glow + lift + icon scale, pill chip |
+| 9 | 🟡 Medium | Security headers missing: Permissions-Policy, HSTS | Added to `netlify.toml` headers block |
+| 10 | 🟡 Medium | Poor cache strategy: data files 1hr, CSS/JS 1day | Upgraded: CSS/JS 7d + stale-while-revalidate, data 2hr |
+| 11 | 🟢 Low | CDN DNS not pre-resolved on tool pages | `dns-prefetch` for cdnjs, jsdelivr, unpkg |
+| 12 | 🟢 Low | About page had stale content (9 tools, 800+ scholarships) | Fixed to 14 tools, 246+ scholarships, 1,040+ unis |
+
+### Remaining Gaps (not yet implemented)
+
+| Priority | Action | Expected Gain |
+|---|---|---|
+| P1 | Convert `logo-sm.png` to WebP — `brew install webp && cwebp -q 85 assets/logo-sm.png -o assets/logo-sm.webp` then use `<picture>` element | Logo: 54KB → ~15KB |
+| P1 | Lazy-load `data/universities_all.js` (395KB) on compare.html — load only after selector interaction | compare.html initial load ~400KB lighter |
+| P2 | Self-host Inter font from fonts.google.com — eliminates 2 round-trips + GDPR concern | LCP -200–400ms |
+| P2 | Add Content-Security-Policy once AdSense live and CDN domains confirmed | Security score boost |
+| P3 | Add Netlify build step with clean-css — `style.css` 60KB raw → ~24KB minified | -36KB per page |
+| P3 | Add `<link rel="preload" as="script">` for Tesseract.js on ocr.html — starts download sooner | OCR ready time -500ms |
 
 **Logo:**
 - `assets/logo.png` (1.15MB, 1024×1024) — kept for `og:image`, favicon, apple-touch-icon, and JSON-LD only
 - `assets/logo-sm.png` (54KB, 200×200) — used in ALL nav and footer `<img>` tags
-- Nav logos have `fetchpriority="high" loading="eager"` — do not change
+- Nav logos have `width="44" height="44" fetchpriority="high" loading="eager"` — do not change
 - Footer logos keep `loading="lazy"` — correct (below fold)
 
 **CDN scripts:**
 - All CDN library `<script>` tags on tool pages have `defer` attribute — do not remove
-- Execution order is preserved (defer is ordered), so dependent scripts still work correctly
+- Execution order is preserved (`defer` is ordered), so dependent scripts still run in correct sequence
 
 **Netlify caching (`netlify.toml`):**
 - CSS/JS: 7 days (`max-age=604800`) with `stale-while-revalidate=86400`
 - Data files: 2 hours (`max-age=7200`) with `stale-while-revalidate=3600`
 - Assets: 1 year immutable
 - HTML: no-cache + `must-revalidate`
+- Sitemap: 1 hour · robots.txt: 1 day
 
 **Security headers on all HTML pages:**
 - `X-Frame-Options: DENY`
@@ -243,13 +290,6 @@ Keep all these CTAs. Do not remove on future edits.
 - `Referrer-Policy: strict-origin-when-cross-origin`
 - `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
-
-**Pre-launch performance recommendations (not yet done):**
-1. Self-host Inter font — removes 2 render-blocking Google Fonts round-trips + GDPR third-party call
-2. Convert `assets/logo-sm.png` to WebP (`brew install webp` → `cwebp`) — would drop from 54KB to ~15KB
-3. Lazy-load `data/universities_all.js` (395KB) on compare.html — only needed after user interacts with selector
-4. Add Content-Security-Policy header once AdSense is live and all third-party domains are known
-5. Add minification step (clean-css) — style.css is 59KB raw, ~25KB minified
 
 ---
 
