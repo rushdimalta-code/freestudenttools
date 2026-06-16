@@ -238,16 +238,29 @@ Keep all these CTAs. Do not remove on future edits.
 
 **Expected after rev 8 fix:** Performance 75–85 (Google ad scripts now require explicit consent via cookie banner click; no script injection on first load).
 
-### Key Metrics — pre-fix baseline
+### Live Scores — after rev 8 fixes (2026-06-16)
 
-| Metric | Value |
-|---|---|
-| FCP | 1.7 s ← clean (no render-blocking) |
-| LCP | 6.1 s ← dragged by 1.15MB old logo + Google script block |
-| TBT | 920 ms ← Google script evaluation |
-| CLS | 0.11 ← just over "Good" threshold |
-| TTI | 8.2 s ← Google scripts blocking main thread |
-| Speed Index | 5.1 s |
+| Category | Before | After |
+|---|---|---|
+| **Performance** | 49 | **97** |
+| Accessibility | 95 | **95** |
+| Best Practices | 96 | **100** |
+| SEO | 100 | **100** |
+
+| Metric | Before | After |
+|---|---|---|
+| FCP | 1.7 s | **1.2 s** |
+| LCP | 6.1 s | **1.2 s** |
+| TBT | 920 ms | **30 ms** |
+| CLS | 0.11 | **~0.01** (font preload eliminates swap shift) |
+| TTI | 8.2 s | 6.2 s (Google auto-ads still evaluate async) |
+| Speed Index | 5.1 s | **2.3 s** |
+
+**What drove the 49 → 97 jump:**
+1. New logo.png: 1,150KB → 15KB (−99%) — LCP dropped 4.9s
+2. Removed 32 inline `adsbygoogle.push()` calls — stopped Early Request System from blocking main thread (TBT: 920ms → 30ms)
+3. Removed `window.dataLayer` init from HTML heads (was triggering GA4 pre-consent)
+4. `initAds()` now uses `onload` callback to push slots after script loads
 
 ### Issues Found & Fixed
 
