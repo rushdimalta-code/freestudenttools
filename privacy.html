@@ -20,9 +20,11 @@
   <meta name="twitter:title" content="Privacy Policy | FreeStudentTools">
   <meta name="twitter:description" content="We don't store any files or personal information. Your data stays in your browser.">
   <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- GA4: activated only after cookie consent via common.js -->
   <script>window.dataLayer = window.dataLayer || [];</script>
@@ -33,7 +35,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo-sm.png" alt="FreeStudentTools" fetchpriority="high" loading="eager">
+        <img src="assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager">
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -91,12 +93,21 @@
   </nav>
 </nav>
 
+<section class="page-hero" aria-labelledby="privacy-hero-heading">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Privacy Policy
+    </div>
+    <h1 id="privacy-hero-heading">Your Privacy Matters</h1>
+    <p>Your files never leave your device. No uploads, no tracking, no data sales — ever.</p>
+  </div>
+</section>
+
 <main>
   <div class="container">
     <div class="static-page" style="max-width:800px">
-      <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: April 2026</p>
-
+      <p class="last-updated" style="margin-top:0">Last updated: April 2026</p>
       <div class="prose">
         <p>This Privacy Policy explains how FreeStudentTools.com ("we", "our", "us") handles information when you use our website. We are committed to protecting your privacy.</p>
 

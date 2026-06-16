@@ -560,20 +560,29 @@ main { flex: 1; }
 
 /* ===== UPLOAD ZONE ===== */
 .upload-zone {
-  border: 2px dashed var(--border-dark);
-  border-radius: var(--radius-lg);
-  padding: 48px 24px;
+  border: 2px dashed #CBD5E1;
+  border-radius: var(--radius-xl);
+  padding: 52px 28px;
   text-align: center;
-  background: var(--bg-light);
+  background: linear-gradient(145deg, #F8FAFF 0%, #F1F5FD 100%);
   cursor: pointer;
-  transition: all var(--transition-md);
+  transition: all 0.22s ease;
   position: relative;
 }
 
 .upload-zone:hover,
 .upload-zone.drag-over {
   border-color: var(--primary);
-  background: var(--primary-light);
+  border-style: solid;
+  background: linear-gradient(145deg, #EFF6FF 0%, #E8F0FF 100%);
+  box-shadow: 0 0 0 4px rgba(26,115,232,0.08), 0 8px 24px rgba(26,115,232,0.1);
+  transform: translateY(-1px);
+}
+
+.upload-zone.drag-over {
+  border-color: #4F46E5;
+  background: linear-gradient(145deg, #F5F3FF 0%, #EEF2FF 100%);
+  box-shadow: 0 0 0 4px rgba(79,70,229,0.1), 0 8px 24px rgba(79,70,229,0.14);
 }
 
 .upload-zone input[type="file"] {
@@ -586,28 +595,35 @@ main { flex: 1; }
 }
 
 .upload-zone-icon {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   background: var(--bg-white);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-md);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 14px;
+  margin: 0 auto 16px;
   color: var(--text-muted);
-  transition: all var(--transition-md);
+  transition: all 0.22s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 .upload-zone:hover .upload-zone-icon {
   border-color: var(--primary);
   color: var(--primary);
   background: white;
+  box-shadow: 0 4px 14px rgba(26,115,232,0.18);
+  transform: scale(1.06);
 }
 
-.upload-zone h3 { color: var(--text-primary); margin-bottom: 6px; font-size: 1rem; }
-.upload-zone p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; }
-.upload-zone .file-types { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+.upload-zone h3 { color: var(--text-primary); margin-bottom: 6px; font-size: 1.05rem; font-weight: 600; }
+.upload-zone p { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.55; }
+.upload-zone .file-types {
+  font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(0,0,0,0.04); padding: 3px 10px; border-radius: 100px;
+}
 
 /* Legacy emoji icon support */
 .upload-icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }

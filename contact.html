@@ -20,9 +20,11 @@
   <meta name="twitter:title" content="Contact FreeStudentTools">
   <meta name="twitter:description" content="Feedback, bug reports, or tool requests — get in touch.">
   <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- GA4: activated only after cookie consent via common.js -->
   <script>window.dataLayer = window.dataLayer || [];</script>
@@ -33,7 +35,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo-sm.png" alt="FreeStudentTools" fetchpriority="high" loading="eager">
+        <img src="assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager">
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -91,11 +93,20 @@
   </nav>
 </nav>
 
+<section class="page-hero" aria-labelledby="contact-hero-heading">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </div>
+    <h1 id="contact-hero-heading">Get in Touch</h1>
+    <p>Found a bug, have a tool request, or just want to say hello? We read every message and reply within 48 hours.</p>
+  </div>
+</section>
+
 <main>
   <div class="container">
     <div class="static-page" style="max-width:700px">
-      <h1>Contact Us</h1>
-      <p class="last-updated">We'd love to hear from you.</p>
 
       <div class="prose" style="margin-bottom:32px">
         <p>Have a question, found a bug, or want to suggest a new tool? Fill out the form below and we'll get back to you as soon as possible.</p>

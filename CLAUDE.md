@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-16 (rev 4)_
+_Last updated: 2026-06-16 (rev 5)_
 
 ---
 
@@ -160,10 +160,9 @@ Active nav link is set by JS in `common.js` — do **not** hardcode `class="acti
 
 ---
 
-## Visual Design (CDO — 2026-06-16 rev 3)
+## Visual Design (CDO — 2026-06-16 rev 5)
 
-`index.html` + `css/style.css`:
-
+### Homepage (`index.html`)
 - **Hero headline:** "Scholarships. Admissions. All Free. All in One Place."
 - **Hero CTAs:** "Find Scholarships" → `scholarships.html` + "Browse Universities" → `admissions.html`
 - **Hero:** animated floating color orbs (indigo/green/blue, CSS keyframes), gradient animated headline, shimmer CTA button
@@ -174,6 +173,19 @@ Active nav link is set by JS in `common.js` — do **not** hardcode `class="acti
 - **Scroll animations:** `[data-animate]` + `[data-delay="1"–"7"]` — IntersectionObserver stagger in `common.js`
 - **Counters:** hero stat numbers count up on load via `data-target` attribute
 - **Reduced motion:** all animated effects disabled via `prefers-reduced-motion`
+
+### Tool Pages (`.page-hero`) — all 7 tools
+- Dark navy gradient bg `#0B1120 → #0F2456 → #1A1040` with dual radial orbs (blue top-right, purple bottom-left)
+- `h1`: 2.7rem, letter-spacing -0.025em, white — do NOT add inline font-size overrides (removed from all pages)
+- Badge: glass pill with `rgba(255,255,255,0.12)` bg + `#BAE6FD` text — not the old solid-blue style
+- **Trust strip:** auto-injected by `common.js` into every `.page-hero .container` — "Browser-only · No uploads · No sign-up · 100% free"
+- `.page-hero > .container` has `position:relative; z-index:1` to keep text above orbs
+
+### Hub Pages
+- `admissions.html` → `.admissions-hero`: dark blue gradient `#0F172A → #1E3A8A → #1d4ed8`, search bar, 3 stats
+- `scholarships.html` → `.scholar-hero`: dark green gradient `#064E3B → #065F46 → #047857`, search bar, 3 stats
+- `compare.html` → `.compare-hero`: steel blue gradient `#0C4A6E → #0369A1 → #0EA5E9`, badge pill, 4 stats (1040+ unis, 100+ countries, 16 streams, $0)
+- `tips.html` → `.tips-hero`: indigo gradient `#1E1B4B → #4338CA → #6366F1`, pill, sticky category nav below
 
 Design tokens: `--primary: #1A73E8` · `--success: #10B981` · `--orange: #F7941D` · purple `#7C3AED`
 Font: Inter (400–800) via Google Fonts. Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
@@ -207,6 +219,40 @@ Keep all these CTAs. Do not remove on future edits.
 
 ---
 
+## Performance (2026-06-16)
+
+**Logo:**
+- `assets/logo.png` (1.15MB, 1024×1024) — kept for `og:image`, favicon, apple-touch-icon, and JSON-LD only
+- `assets/logo-sm.png` (54KB, 200×200) — used in ALL nav and footer `<img>` tags
+- Nav logos have `fetchpriority="high" loading="eager"` — do not change
+- Footer logos keep `loading="lazy"` — correct (below fold)
+
+**CDN scripts:**
+- All CDN library `<script>` tags on tool pages have `defer` attribute — do not remove
+- Execution order is preserved (defer is ordered), so dependent scripts still work correctly
+
+**Netlify caching (`netlify.toml`):**
+- CSS/JS: 7 days (`max-age=604800`) with `stale-while-revalidate=86400`
+- Data files: 2 hours (`max-age=7200`) with `stale-while-revalidate=3600`
+- Assets: 1 year immutable
+- HTML: no-cache + `must-revalidate`
+
+**Security headers on all HTML pages:**
+- `X-Frame-Options: DENY`
+- `X-Content-Type-Options: nosniff`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`
+- `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+
+**Pre-launch performance recommendations (not yet done):**
+1. Self-host Inter font — removes 2 render-blocking Google Fonts round-trips + GDPR third-party call
+2. Convert `assets/logo-sm.png` to WebP (`brew install webp` → `cwebp`) — would drop from 54KB to ~15KB
+3. Lazy-load `data/universities_all.js` (395KB) on compare.html — only needed after user interacts with selector
+4. Add Content-Security-Policy header once AdSense is live and all third-party domains are known
+5. Add minification step (clean-css) — style.css is 59KB raw, ~25KB minified
+
+---
+
 ## Key Rules
 
 - Each tool is a separate HTML file — keep them independent
@@ -219,6 +265,8 @@ Keep all these CTAs. Do not remove on future edits.
 - `scholarship.html` must use **absolute paths** for all resources (`/css/`, `/js/`, `/data/`) — relative paths break under Netlify 200-rewrite
 - easedit.co CTAs on admissions/scholarships/compare/scholarship — keep them, don't overwrite
 - When adding scholarships: add to `scholarships_data.js` (compact format), update `lastUpdated`, update stats in `index.html` and `scholarships.html`, update this file
+- **Never add inline `.page-hero h1 { font-size }` overrides** — global CSS handles it at 2.7rem. All overrides were removed in rev 5
+- **Never replace `logo-sm.png` with `logo.png` in img tags** — og:image uses full logo, img tags use small logo
 
 ---
 
@@ -226,7 +274,7 @@ Keep all these CTAs. Do not remove on future edits.
 
 | File | Purpose |
 |---|---|
-| `js/common.js` | GA4, AdSense, nav dropdowns, cookie consent, back-to-top, shared utilities |
+| `js/common.js` | GA4, AdSense, nav dropdowns, cookie consent, back-to-top, scroll animations, **page-hero trust strip auto-inject** |
 | `js/scholarships.js` | Scholarship finder — filter, sort, render, expand cards. `perPage: 200` shows all 246 at once. Init uses readyState-aware retry loop (2s timeout) |
 | `css/style.css` | All styles — single file, CSS variables |
 | `netlify.toml` | Deploy config, cache headers, security headers, `/scholarship/:id` redirect |

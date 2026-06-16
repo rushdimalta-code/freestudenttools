@@ -20,9 +20,11 @@
   <meta name="twitter:title" content="About FreeStudentTools">
   <meta name="twitter:description" content="Free document tools for students. No sign-up, no file uploads, always free.">
   <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="stylesheet" href="css/style.css">
   <!-- GA4: activated only after cookie consent via common.js -->
   <script>window.dataLayer = window.dataLayer || [];</script>
@@ -33,7 +35,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo-sm.png" alt="FreeStudentTools" fetchpriority="high" loading="eager">
+        <img src="assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager">
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -91,20 +93,29 @@
   </nav>
 </nav>
 
+<section class="page-hero" aria-labelledby="about-hero-heading">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      About Us
+    </div>
+    <h1 id="about-hero-heading">Built for Students. Free Forever.</h1>
+    <p>No subscriptions. No file uploads. No watermarks. Just the tools you actually need, running entirely in your browser.</p>
+  </div>
+</section>
+
 <main>
   <div class="container">
     <div class="static-page" style="max-width:800px">
-      <h1>About FreeStudentTools</h1>
-      <p class="last-updated">Free tools for students who shouldn't have to pay for the basics.</p>
 
       <div class="prose">
         <p>FreeStudentTools.com exists because the tools students actually need — OCR scanners, PDF converters, citation generators — are either locked behind €20-a-month subscriptions, or they're free in name only: your files get uploaded to a server, your email gets harvested, and a watermark gets slapped on the output.</p>
         <p>We built a different kind of student tool site. Every tool here runs entirely in your browser. Your files never leave your device. There are no accounts, no email confirmations, no paywalls, and no watermarks. You open the tool, you use it, you download the result. That's it.</p>
 
         <h2>What's Here</h2>
-        <p>Nine tools across two categories:</p>
-        <p><strong>Document tools</strong> — an OCR scanner that extracts text from images and scanned PDFs in 15+ languages; a PDF to Word and Excel converter with built-in OCR for scanned documents; a PDF compressor with three compression levels; an image compressor for JPG, PNG, and WebP; a PDF merger for combining up to 10 files; a PDF page extractor for pulling specific pages; and a citation generator for APA 7th, MLA 9th, and Chicago 17th edition.</p>
-        <p><strong>University Hub</strong> — an admissions tracker covering 1,500+ universities across 180+ countries with deadlines, intake dates, and housing information updated daily; a scholarships finder with 800+ opportunities from universities and governments worldwide; a university degree comparison tool for side-by-side tuition, cost of living, and course comparisons; and a student tips guide covering how to apply, write a reference letter, handle interviews, and manage money at university.</p>
+        <p>Fourteen tools across two categories:</p>
+        <p><strong>Document tools (7)</strong> — an OCR scanner that extracts text from images and scanned PDFs in 15+ languages; a PDF to Word and Excel converter with built-in OCR for scanned documents; a PDF compressor with three compression levels; an image compressor for JPG, PNG, and WebP; a PDF merger for combining up to 10 files; a PDF page extractor for pulling specific pages; and a citation generator for APA 7th, MLA 9th, and Chicago 17th edition.</p>
+        <p><strong>University Hub (7)</strong> — an admissions tracker covering 1,000+ universities across 164 countries with deadlines, intake dates, and housing information updated daily; a scholarships finder with 246+ opportunities from governments and universities worldwide; a scholarship guide (5,000-word deep dive on how to win funding); a university degree comparison tool for side-by-side tuition, cost of living, and course comparisons across 1,040+ institutions; and a student tips guide covering how to apply, write a reference letter, handle interviews, and manage money at university.</p>
 
         <h2>How the Tools Actually Work</h2>
         <p>Everything runs client-side using open-source JavaScript libraries. No server processes your files.</p>
