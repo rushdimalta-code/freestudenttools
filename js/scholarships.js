@@ -23,17 +23,25 @@
   };
 
   /* ===== INIT ===== */
-  document.addEventListener('DOMContentLoaded', function () {
-    if (!window.SCHOLARSHIP_DATA) {
-      showError('Scholarship data failed to load. Please refresh.');
-      return;
+  function tryInit(attempt) {
+    if (window.SCHOLARSHIP_DATA) {
+      state.all = window.SCHOLARSHIP_DATA.scholarships;
+      populateFilters();
+      applyFilters();
+      bindEvents();
+      setLastUpdated();
+    } else if (attempt < 20) {
+      setTimeout(function () { tryInit(attempt + 1); }, 100);
+    } else {
+      showError('Scholarship data failed to load. Please refresh the page.');
     }
-    state.all = window.SCHOLARSHIP_DATA.scholarships;
-    populateFilters();
-    applyFilters();
-    bindEvents();
-    setLastUpdated();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { tryInit(0); });
+  } else {
+    tryInit(0);
+  }
 
   function setLastUpdated() {
     const el = document.getElementById('lastUpdated');
