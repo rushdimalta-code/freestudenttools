@@ -24,11 +24,25 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "How do I apply to university?", "acceptedAnswer": {"@type": "Answer", "text": "Start by shortlisting universities that genuinely match your goals — not just rankings. Check entry requirements, application portals (UCAS, Common App, local portals), required documents, and deadlines at least 6 months in advance."}},
-      {"@type": "Question", "name": "How do I ask for a reference letter?", "acceptedAnswer": {"@type": "Answer", "text": "Ask a teacher or professor who knows your work well — not just your favourite. Ask early (at least 6-8 weeks before the deadline), share your CV and personal statement draft, and remind them two weeks before the deadline."}},
-      {"@type": "Question", "name": "How can students save money at university?", "acceptedAnswer": {"@type": "Answer", "text": "Cook in bulk, use student discount cards (NUS, ISIC), buy second-hand textbooks, split subscriptions with flatmates, and always ask 'do you have a student discount?' everywhere you go."}}
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Student Tips — How to Apply, Save Money & Survive University",
+        "description": "Practical tips for students: how to apply to university, write a reference letter, nail interviews, save money, and navigate university life.",
+        "url": "https://freestudenttools.com/tips.html",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-06-15",
+        "publisher": { "@type": "Organization", "name": "FreeStudentTools", "url": "https://freestudenttools.com" },
+        "author": { "@type": "Organization", "name": "FreeStudentTools" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How do I apply to university?", "acceptedAnswer": {"@type": "Answer", "text": "Start by shortlisting universities that genuinely match your goals — not just rankings. Check entry requirements, application portals (UCAS, Common App, local portals), required documents, and deadlines at least 6 months in advance."}},
+          {"@type": "Question", "name": "How do I ask for a reference letter?", "acceptedAnswer": {"@type": "Answer", "text": "Ask a teacher or professor who knows your work well — not just your favourite. Ask early (at least 6-8 weeks before the deadline), share your CV and personal statement draft, and remind them two weeks before the deadline."}},
+          {"@type": "Question", "name": "How can students save money at university?", "acceptedAnswer": {"@type": "Answer", "text": "Cook in bulk, use student discount cards (NUS, ISIC), buy second-hand textbooks, split subscriptions with flatmates, and always ask 'do you have a student discount?' everywhere you go."}}
+        ]
+      }
     ]
   }
   </script>
@@ -248,8 +262,6 @@
       .tips-cta-strip { flex-direction: column; text-align: center; }
     }
   </style>
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9843476971668607" crossorigin="anonymous"></script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -263,17 +275,34 @@
       </a>
             <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li class="nav-divider" aria-hidden="true"></li>
-        <li><a href="admissions.html">Admissions</a></li>
-        <li><a href="scholarships.html">Scholarships</a></li>
-        <li><a href="compare.html">Compare</a></li>
-        <li><a href="tips.html">Tips</a></li>
-        <li class="nav-divider" aria-hidden="true"></li>
-        <li><a href="ocr.html">OCR</a></li>
-        <li><a href="pdf-converter.html">PDF Converter</a></li>
-        <li><a href="compressor.html">Compressor</a></li>
-        <li><a href="citation-generator.html">Citations</a></li>
-        <li class="nav-divider" aria-hidden="true"></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            University Hub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="admissions.html">Admissions Tracker</a></li>
+            <li><a href="scholarships.html">Scholarships Finder</a></li>
+            <li><a href="scholarship-guide.html">Scholarship Guide</a></li>
+            <li><a href="compare.html">Compare Degrees</a></li>
+            <li><a href="tips.html">Student Tips</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Tools
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="ocr.html">OCR Scanner</a></li>
+            <li><a href="pdf-converter.html">PDF Converter</a></li>
+            <li><a href="compressor.html">PDF Compressor</a></li>
+            <li><a href="image-compressor.html">Image Compressor</a></li>
+            <li><a href="pdf-merger.html">PDF Merger</a></li>
+            <li><a href="pdf-extractor.html">PDF Page Extractor</a></li>
+            <li><a href="citation-generator.html">Citation Generator</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -283,10 +312,13 @@
   </div>
     <nav class="nav-mobile" aria-label="Mobile navigation">
     <a href="index.html">Home</a>
-    <a href="admissions.html">Admissions</a>
-    <a href="scholarships.html">Scholarships</a>
+    <span class="nav-mobile-label">University Hub</span>
+    <a href="admissions.html">Admissions Tracker</a>
+    <a href="scholarships.html">Scholarships Finder</a>
+    <a href="scholarship-guide.html">Scholarship Guide</a>
     <a href="compare.html">Compare Degrees</a>
-    <a href="tips.html" class="active">Student Tips</a>
+    <a href="tips.html">Student Tips</a>
+    <span class="nav-mobile-label">Tools</span>
     <a href="ocr.html">OCR Scanner</a>
     <a href="pdf-converter.html">PDF Converter</a>
     <a href="compressor.html">PDF Compressor</a>
@@ -904,7 +936,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85"></div>
+        <div class="logo"><img src="assets/logo.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
         <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">

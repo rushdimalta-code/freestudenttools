@@ -1,5 +1,6 @@
 // ===== GOOGLE ANALYTICS 4 =====
 const GA_MEASUREMENT_ID = 'G-WX0M0TK16J';
+const ADSENSE_PUB_ID = 'ca-pub-9843476971668607';
 
 function initGA() {
   if (window._gaInitialised) return;
@@ -14,9 +15,20 @@ function initGA() {
   window.gtag = function() { dataLayer.push(arguments); };
   gtag('js', new Date());
   gtag('config', GA_MEASUREMENT_ID, {
-    anonymize_ip: true,        // GDPR: mask last IP octet
-    allow_google_signals: false // no cross-device tracking
+    anonymize_ip: true,
+    allow_google_signals: false
   });
+}
+
+function initAds() {
+  if (window._adsInitialised) return;
+  window._adsInitialised = true;
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_PUB_ID}`;
+  script.crossOrigin = 'anonymous';
+  document.head.appendChild(script);
 }
 
 // Track custom events — called from each tool JS file
@@ -28,21 +40,45 @@ window.trackEvent = function(eventName, params = {}) {
 
 // ===== NAVIGATION =====
 document.addEventListener('DOMContentLoaded', () => {
-  // Init GA if consent was previously given
+  // Init GA + Ads if consent was previously given
   if (localStorage.getItem('cookie_consent') === 'accepted') {
     initGA();
+    initAds();
   }
 
   // Mobile nav toggle
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileNav = document.querySelector('.nav-mobile');
   if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
   }
 
-  // Active nav link
+  // Dropdown nav
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const menu = btn.nextElementSibling;
+      const isOpen = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      // Close other dropdowns
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => {
+        if (m !== menu) { m.classList.remove('open'); m.previousElementSibling.setAttribute('aria-expanded', 'false'); }
+      });
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => {
+      m.classList.remove('open');
+      if (m.previousElementSibling) m.previousElementSibling.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Active nav link (desktop dropdown links + mobile links)
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(link => {
+  document.querySelectorAll('.nav-dropdown-menu a, .nav-mobile a').forEach(link => {
     if (link.getAttribute('href') === currentPath) link.classList.add('active');
   });
 
@@ -77,7 +113,8 @@ function initCookieConsent() {
   document.getElementById('cookieAccept')?.addEventListener('click', () => {
     localStorage.setItem('cookie_consent', 'accepted');
     banner.classList.remove('show');
-    initGA(); // Start GA only after user accepts
+    initGA();
+    initAds();
   });
 
   document.getElementById('cookieDecline')?.addEventListener('click', () => {
@@ -170,3 +207,16 @@ function downloadText(text, filename) {
   const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
   downloadBlob(blob, filename);
 }
+
+// ===== BACK TO TOP =====
+(function () {
+  const btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>';
+  document.body.appendChild(btn);
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+})();
