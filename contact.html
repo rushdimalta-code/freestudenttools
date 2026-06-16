@@ -110,7 +110,11 @@
         <p>Have a question, found a bug, or want to suggest a new tool? Fill out the form below and we'll get back to you as soon as possible.</p>
       </div>
 
-      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <div id="form-success" style="display:none" class="info-box" role="alert">
+        <strong>Message sent!</strong> Thanks for reaching out — we'll reply to your email within 48 hours.
+      </div>
+
+      <form class="contact-form" id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact">
         <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
         <div class="form-group">
@@ -134,8 +138,39 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+        <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">Send Message</button>
+        <p id="form-error" style="display:none;color:#dc2626;margin-top:12px;font-size:0.875rem">Something went wrong — please try again or email us directly.</p>
       </form>
+
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var form = this;
+          var btn = document.getElementById('submit-btn');
+          var err = document.getElementById('form-error');
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          err.style.display = 'none';
+          fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(new FormData(form)).toString()
+          })
+          .then(function(res) {
+            if (res.ok) {
+              form.style.display = 'none';
+              document.getElementById('form-success').style.display = 'block';
+            } else {
+              throw new Error('not ok');
+            }
+          })
+          .catch(function() {
+            btn.textContent = 'Send Message';
+            btn.disabled = false;
+            err.style.display = 'block';
+          });
+        });
+      </script>
 
       <div class="info-box" style="margin-top:32px">
         <strong>Privacy note:</strong> Messages are delivered securely via Netlify Forms. Your name and email are used solely to respond and are not sold or shared. See our <a href="privacy.html">Privacy Policy</a> for full details.
