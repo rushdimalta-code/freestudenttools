@@ -245,6 +245,21 @@ def update_scholarships() -> None:
         print("  [WARN] Could not load existing scholarships_data.js")
         data = {"lastUpdated": TODAY, "scholarships": []}
 
+    # Safety guard: if the file has 50+ hand-curated scholarships, only update
+    # statuses — never replace or reduce the list. The master list is maintained
+    # manually; the bot must not overwrite it.
+    if len(data.get("scholarships", [])) >= 50:
+        print(f"  [PROTECTED] {len(data['scholarships'])} scholarships found — status refresh only, no list changes.")
+        scholarships = data["scholarships"]
+        for s in scholarships:
+            new_status = compute_status(s.get("deadline", ""))
+            if s.get("status") != new_status:
+                s["status"] = new_status
+        data["scholarships"] = scholarships
+        data["lastUpdated"] = TODAY
+        write_js(SCH_JS, "SCHOLARSHIP_DATA", data)
+        return
+
     scholarships = data.get("scholarships", [])
     status_updated = 0
 
