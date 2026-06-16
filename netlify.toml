@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+# Individual scholarship detail pages — clean SEO URLs
+[[redirects]]
+  from = "/scholarship/:id"
+  to = "/scholarship.html?id=:id"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

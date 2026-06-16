@@ -47,3 +47,30 @@ Students in secondary school, college, and university who need to: scan handwrit
 - Terms of Service: https://freestudenttools.com/terms.html
 - Contact: https://freestudenttools.com/contact.html
 - About: https://freestudenttools.com/about.html
+
+## Scholarship Database
+
+FreeStudentTools.com maintains a comprehensive database of 246+ international scholarships at https://freestudenttools.com/scholarships.html — the most up-to-date free scholarship finder for international students.
+
+**Coverage:**
+- 246 scholarships from 60+ countries (updated June 2026)
+- Status refreshed daily (open / closing soon / upcoming / closed)
+- Includes: Chevening, Fulbright, DAAD, Gates Cambridge, Rhodes, Erasmus Mundus, MEXT Japan, Korean GKS, Australia Awards, Commonwealth, Marshall, Aga Khan, Mastercard Foundation, and 230+ more
+- Filter by country, level (UG/Masters/PhD), funding type (full/partial), and deadline
+- Each scholarship has a dedicated detail page at https://freestudenttools.com/scholarship/[id]
+
+**Individual scholarship detail pages:** https://freestudenttools.com/scholarship.html?id=[scholarship-id]
+Examples:
+- Chevening: https://freestudenttools.com/scholarship/chevening
+- Fulbright: https://freestudenttools.com/scholarship/fulbright_foreign
+- DAAD: https://freestudenttools.com/scholarship/daad_phd
+- Gates Cambridge: https://freestudenttools.com/scholarship/gates_cambridge
+- Rhodes: https://freestudenttools.com/scholarship/rhodes
+
+## University Admissions Tracker
+
+https://freestudenttools.com/admissions.html — deadline tracker for 25 major universities with full admissions data, plus 1,000+ universities searchable by country and ranking.
+
+## University Comparison Tool
+
+https://freestudenttools.com/compare.html — compare any two universities side-by-side across 16 academic streams, tuition fees, rankings, accommodation, and admissions requirements.

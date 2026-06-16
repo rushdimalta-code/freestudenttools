@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-9843476971668607">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
+  <!-- Dynamic meta — set by JS below -->
+  <title>Scholarship Details | FreeStudentTools</title>
+  <meta name="description" content="Full eligibility, funding amount, deadlines, and application tips for this scholarship. Updated 2026.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Scholarship Details | FreeStudentTools">
+  <meta property="og:description" content="Full eligibility, funding amount, deadlines, and application tips. Updated 2026.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://freestudenttools.com/scholarship.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Scholarship Details | FreeStudentTools">
+  <meta name="twitter:description" content="Full eligibility, funding amount, deadlines, and application tips. Updated 2026.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>window.dataLayer = window.dataLayer || [];</script>
+  <style>
+    .sch-hero { background: linear-gradient(135deg, #0B1120 0%, #1a1040 50%, #0F2456 100%); padding: 80px 0 50px; }
+    .sch-hero-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    .sch-breadcrumb { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 16px; }
+    .sch-breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .sch-breadcrumb a:hover { color: #fff; }
+    .sch-provider-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; padding: 6px 14px; font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+    .sch-title { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 800; color: #fff; line-height: 1.2; margin: 0 0 20px; }
+    .sch-meta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 28px; }
+    .sch-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 6px 12px; font-size: 0.82rem; color: rgba(255,255,255,0.85); font-weight: 600; }
+    .sch-tag.green { background: rgba(16,185,129,0.2); color: #6ee7b7; }
+    .sch-tag.blue { background: rgba(99,102,241,0.2); color: #a5b4fc; }
+    .sch-tag.orange { background: rgba(245,158,11,0.2); color: #fcd34d; }
+    .sch-tag.red { background: rgba(239,68,68,0.2); color: #fca5a5; }
+    .sch-amount-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 20px 24px; }
+    .sch-amount-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 6px; }
+    .sch-amount-text { font-size: 1rem; color: #6ee7b7; font-weight: 600; line-height: 1.4; }
+    .sch-deadline-badge { display: flex; align-items: center; gap: 10px; background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.25); border-radius: 10px; padding: 12px 18px; color: #fca5a5; font-size: 0.85rem; font-weight: 600; margin-top: 14px; }
+    .sch-deadline-badge.open { background: rgba(16,185,129,0.12); border-color: rgba(16,185,129,0.25); color: #6ee7b7; }
+    .sch-deadline-badge.upcoming { background: rgba(99,102,241,0.12); border-color: rgba(99,102,241,0.25); color: #a5b4fc; }
+    .sch-body { background: #f8fafc; }
+    .sch-layout { max-width: 860px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; }
+    @media (max-width: 720px) { .sch-layout { grid-template-columns: 1fr; } }
+    .sch-section { background: #fff; border-radius: 16px; padding: 28px; margin-bottom: 24px; border: 1px solid #e2e8f0; }
+    .sch-section h2 { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin: 0 0 16px; padding-bottom: 12px; border-bottom: 2px solid #f1f5f9; }
+    .sch-section p { color: #475569; line-height: 1.7; font-size: 0.95rem; margin: 0; }
+    .sch-req-list { list-style: none; margin: 0; padding: 0; }
+    .sch-req-list li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.92rem; color: #334155; }
+    .sch-req-list li:last-child { border-bottom: none; }
+    .sch-req-list li::before { content: "✓"; color: #10b981; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .faq-item { border-bottom: 1px solid #f1f5f9; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 16px 0; font-size: 0.95rem; font-weight: 600; color: #0f172a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .faq-q svg { flex-shrink: 0; transition: transform 0.2s; }
+    .faq-q.open svg { transform: rotate(180deg); }
+    .faq-a { font-size: 0.9rem; color: #475569; line-height: 1.7; padding-bottom: 16px; display: none; }
+    .faq-a.open { display: block; }
+    .sch-sidebar-card { background: #fff; border-radius: 16px; padding: 24px; border: 1px solid #e2e8f0; margin-bottom: 20px; }
+    .sch-sidebar-card h3 { font-size: 0.95rem; font-weight: 700; color: #0f172a; margin: 0 0 14px; }
+    .sch-info-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid #f8fafc; font-size: 0.85rem; }
+    .sch-info-row:last-child { border-bottom: none; }
+    .sch-info-label { color: #94a3b8; }
+    .sch-info-value { color: #1e293b; font-weight: 600; text-align: right; max-width: 160px; }
+    .sch-apply-btn { display: block; width: 100%; padding: 14px 24px; background: linear-gradient(135deg, #1A73E8, #7C3AED); color: #fff; border-radius: 12px; font-size: 0.95rem; font-weight: 700; text-align: center; text-decoration: none; transition: opacity 0.2s; margin-bottom: 12px; }
+    .sch-apply-btn:hover { opacity: 0.9; }
+    .sch-back-btn { display: block; width: 100%; padding: 12px 24px; background: #f1f5f9; color: #1e293b; border-radius: 12px; font-size: 0.9rem; font-weight: 600; text-align: center; text-decoration: none; transition: background 0.2s; }
+    .sch-back-btn:hover { background: #e2e8f0; }
+    .levels-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+    .level-chip { background: #f1f5f9; color: #334155; padding: 4px 10px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; }
+    .streams-wrap { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .stream-chip { background: #ede9fe; color: #5b21b6; padding: 4px 10px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; }
+    .related-list { list-style: none; margin: 0; padding: 0; }
+    .related-list li { padding: 8px 0; border-bottom: 1px solid #f1f5f9; }
+    .related-list li:last-child { border-bottom: none; }
+    .related-list a { color: #1A73E8; font-size: 0.88rem; font-weight: 600; text-decoration: none; }
+    .related-list a:hover { text-decoration: underline; }
+    .sch-cta-box { background: linear-gradient(135deg, #1A73E8, #7C3AED); border-radius: 16px; padding: 24px; color: #fff; margin-bottom: 20px; }
+    .sch-cta-box h3 { font-size: 1rem; font-weight: 700; margin: 0 0 8px; }
+    .sch-cta-box p { font-size: 0.85rem; opacity: 0.85; margin: 0 0 14px; line-height: 1.5; }
+    .sch-cta-box a { display: block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 10px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; text-align: center; transition: background 0.2s; }
+    .sch-cta-box a:hover { background: rgba(255,255,255,0.3); }
+    .sch-not-found { max-width: 600px; margin: 80px auto; text-align: center; padding: 40px 24px; }
+    .sch-not-found h2 { font-size: 1.5rem; color: #0f172a; margin-bottom: 12px; }
+    .sch-not-found p { color: #64748b; margin-bottom: 24px; }
+    .countdown-ring { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #64748b; }
+    .countdown-ring strong { color: #1e293b; }
+    .level-badge { display: inline-block; padding: 3px 10px; border-radius: 100px; font-size: 0.78rem; font-weight: 700; margin-right: 4px; }
+    .level-badge.bachelor { background: #dbeafe; color: #1d4ed8; }
+    .level-badge.master { background: #ede9fe; color: #5b21b6; }
+    .level-badge.phd { background: #fce7f3; color: #9d174d; }
+    .competition-bar { height: 6px; border-radius: 100px; background: #e2e8f0; margin-top: 8px; overflow: hidden; }
+    .competition-fill { height: 100%; border-radius: 100px; }
+    .competition-fill.low { background: #10b981; width: 25%; }
+    .competition-fill.medium { background: #f59e0b; width: 50%; }
+    .competition-fill.high { background: #f97316; width: 75%; }
+    .competition-fill.very-high { background: #ef4444; width: 95%; }
+    .timeline-steps { display: flex; flex-direction: column; gap: 0; }
+    .timeline-step { display: flex; gap: 16px; position: relative; padding-bottom: 20px; }
+    .timeline-step:last-child { padding-bottom: 0; }
+    .timeline-dot { width: 10px; height: 10px; border-radius: 50%; background: #1A73E8; flex-shrink: 0; margin-top: 5px; position: relative; }
+    .timeline-step:not(:last-child) .timeline-dot::after { content: ''; position: absolute; top: 10px; left: 4px; width: 2px; height: calc(100% + 10px); background: #e2e8f0; }
+    .timeline-step-body { font-size: 0.88rem; }
+    .timeline-step-label { font-weight: 700; color: #0f172a; }
+    .timeline-step-date { color: #64748b; margin-top: 2px; }
+  </style>
+</head>
+<body>
+<!-- NAV -->
+<script src="js/common.js" defer></script>
+
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo" aria-label="FreeStudentTools home">
+      <img src="assets/logo.png" alt="FreeStudentTools" width="32" height="32" loading="lazy">
+      <span>FreeStudentTools</span>
+    </a>
+    <div class="nav-desktop" role="menubar">
+      <div class="nav-group" role="none">
+        <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false" role="menuitem">University Hub <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="admissions.html" role="menuitem">🎓 Admissions Tracker</a>
+          <a href="scholarships.html" role="menuitem">💰 Scholarships Finder</a>
+          <a href="scholarship-guide.html" role="menuitem">📖 Scholarship Guide</a>
+          <a href="compare.html" role="menuitem">⚖️ Compare Degrees</a>
+          <a href="tips.html" role="menuitem">💡 Student Tips</a>
+        </div>
+      </div>
+      <div class="nav-group" role="none">
+        <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false" role="menuitem">Tools <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="nav-dropdown" role="menu">
+          <a href="ocr.html" role="menuitem">📷 OCR Scanner</a>
+          <a href="pdf-converter.html" role="menuitem">📄 PDF Converter</a>
+          <a href="compressor.html" role="menuitem">📦 PDF Compressor</a>
+          <a href="image-compressor.html" role="menuitem">🖼️ Image Compressor</a>
+          <a href="pdf-merger.html" role="menuitem">🔗 PDF Merger</a>
+          <a href="pdf-extractor.html" role="menuitem">✂️ PDF Extractor</a>
+          <a href="citation-generator.html" role="menuitem">📚 Citation Generator</a>
+        </div>
+      </div>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+    <span class="nav-mobile-label">University Hub</span>
+    <a href="admissions.html">Admissions Tracker</a>
+    <a href="scholarships.html">Scholarships Finder</a>
+    <a href="scholarship-guide.html">Scholarship Guide</a>
+    <a href="compare.html">Compare Degrees</a>
+    <a href="tips.html">Student Tips</a>
+    <span class="nav-mobile-label">Tools</span>
+    <a href="ocr.html">OCR Scanner</a>
+    <a href="pdf-converter.html">PDF Converter</a>
+    <a href="compressor.html">PDF Compressor</a>
+    <a href="image-compressor.html">Image Compressor</a>
+    <a href="pdf-merger.html">PDF Merger</a>
+    <a href="pdf-extractor.html">PDF Extractor</a>
+    <a href="citation-generator.html">Citation Generator</a>
+  </div>
+</nav>
+
+<!-- DATA -->
+<script src="data/scholarships_data.js"></script>
+
+<!-- MAIN CONTENT (rendered by JS) -->
+<div id="sch-page-root"></div>
+
+<!-- AD BOTTOM -->
+<div class="container" style="padding-bottom:40px">
+  <div aria-hidden="true" class="ad-container" style="margin-top:20px">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9843476971668607" data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><a href="index.html">FreeStudentTools</a> — free tools for students worldwide</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </div>
+    <div class="footer-copy">© 2026 FreeStudentTools. Free for everyone, forever.</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id') || params.get('slug') || '';
+  const root = document.getElementById('sch-page-root');
+
+  function flag(code) {
+    if (!code || code === 'EU') return '🌍';
+    if (code === 'Various' || code === 'various') return '🌐';
+    // Convert country code to flag emoji
+    return code.toUpperCase().split('').map(c => String.fromCodePoint(c.charCodeAt(0) + 127397)).join('');
+  }
+
+  function formatDate(iso) {
+    if (!iso) return 'Rolling';
+    try {
+      return new Date(iso + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    } catch { return iso; }
+  }
+
+  function daysUntil(iso) {
+    if (!iso) return null;
+    const d = new Date(iso + 'T00:00:00');
+    const diff = Math.round((d - new Date()) / 86400000);
+    return diff;
+  }
+
+  function statusLabel(s, deadline) {
+    const days = daysUntil(deadline);
+    if (s === 'closed' || (days !== null && days < 0)) return { text: 'Closed / Cycle Ended', cls: 'red' };
+    if (s === 'closing_soon' || (days !== null && days <= 30)) return { text: `Closing in ${days} days`, cls: 'orange' };
+    if (s === 'open' || (days !== null && days <= 180)) return { text: 'Open Now', cls: 'green' };
+    return { text: 'Opens Soon', cls: 'blue' };
+  }
+
+  function levelBadge(lv) {
+    const cls = lv === 'Bachelor' ? 'bachelor' : lv === 'Master' ? 'master' : 'phd';
+    return `<span class="level-badge ${cls}">${lv}</span>`;
+  }
+
+  function competitionBar(cl) {
+    const map = { 'Low': 'low', 'Medium': 'medium', 'High': 'high', 'Very High': 'very-high' };
+    const cls = map[cl] || 'medium';
+    return `<div class="competition-bar"><div class="competition-fill ${cls}"></div></div>`;
+  }
+
+  function buildFAQ(s) {
+    const faqs = [
+      { q: `What does the ${s.name} cover?`, a: s.amountDesc },
+      { q: `Who is eligible for the ${s.name}?`, a: s.eligibility },
+      { q: `When is the deadline for the ${s.name}?`, a: s.deadline ? `The deadline is ${formatDate(s.deadline)}. ${s.notificationDate ? 'Results are announced around ' + formatDate(s.notificationDate) + '.' : ''}` : 'Check the official website for the current cycle deadline.' },
+      { q: `What fields of study does the ${s.name} cover?`, a: (s.streams && s.streams[0] !== 'All streams') ? `The scholarship covers: ${s.streams.join(', ')}.` : 'The scholarship is open to students from all academic backgrounds and fields of study.' },
+    ];
+    if (s.notes) faqs.push({ q: `Is there anything special about the ${s.name}?`, a: s.notes });
+
+    const html = faqs.map(f => `
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">${f.q}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="faq-a">${f.a}</div>
+      </div>`).join('');
+
+    const ldFaq = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } }))
+    };
+
+    return { html, ldFaq };
+  }
+
+  function buildRelated(current, all) {
+    const related = all.filter(r =>
+      r.id !== current.id && (
+        r.country === current.country ||
+        (r.levels && current.levels && r.levels.some(l => current.levels.includes(l))) ||
+        (r.amountType === current.amountType)
+      )
+    ).slice(0, 6);
+    if (!related.length) return '';
+    return `<ul class="related-list">${related.map(r => `<li><a href="/scholarship.html?id=${r.id}">${flag(r.countryCode)} ${r.name}</a></li>`).join('')}</ul>`;
+  }
+
+  function buildTimeline(s) {
+    const steps = [];
+    if (s.deadline) steps.push({ label: 'Application Deadline', date: formatDate(s.deadline), dot: '#ef4444' });
+    if (s.notificationDate) steps.push({ label: 'Results Announced', date: formatDate(s.notificationDate), dot: '#10b981' });
+    steps.push({ label: 'Programme Start', date: 'Varies — check official website', dot: '#6366f1' });
+    return steps.map(st => `
+      <div class="timeline-step">
+        <div class="timeline-dot" style="background:${st.dot}"></div>
+        <div class="timeline-step-body">
+          <div class="timeline-step-label">${st.label}</div>
+          <div class="timeline-step-date">${st.date}</div>
+        </div>
+      </div>`).join('');
+  }
+
+  function render(s, all) {
+    const st = statusLabel(s.status, s.deadline);
+    const days = daysUntil(s.deadline);
+    const faq = buildFAQ(s);
+    const related = buildRelated(s, all);
+    const amtType = s.amountType === 'full' ? '🟢 Fully Funded' : s.amountType === 'partial' ? '🟡 Partial Funding' : '🔵 Variable';
+
+    // Set document meta
+    document.title = `${s.name} 2026–2027 — Eligibility, Funding & Deadline | FreeStudentTools`;
+    document.querySelector('meta[name="description"]').setAttribute('content',
+      `${s.name}: ${s.amountDesc.slice(0, 140)} — deadline ${formatDate(s.deadline)}. Full eligibility details, requirements, and application tips.`);
+    document.querySelector('meta[property="og:title"]') && document.querySelector('meta[property="og:title"]').setAttribute('content', `${s.name} 2026–2027 | FreeStudentTools`);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', `${amtType} — ${s.amountDesc.slice(0, 120)}`);
+    document.querySelector('meta[property="og:url"]') && document.querySelector('meta[property="og:url"]').setAttribute('content', `https://freestudenttools.com/scholarship.html?id=${s.id}`);
+    const canon = document.querySelector('link[rel="canonical"]') || document.createElement('link');
+    canon.rel = 'canonical';
+    canon.href = `https://freestudenttools.com/scholarship.html?id=${s.id}`;
+    if (!document.querySelector('link[rel="canonical"]')) document.head.appendChild(canon);
+
+    // Inject structured data
+    const ldScholarship = {
+      '@context': 'https://schema.org',
+      '@type': 'EducationalOccupationalCredential',
+      name: s.name,
+      description: s.eligibility,
+      url: s.link,
+      provider: { '@type': s.university ? 'CollegeOrUniversity' : 'Organization', name: s.provider || s.university || 'Various' },
+      offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD', description: s.amountDesc }
+    };
+
+    const ldScript = document.createElement('script');
+    ldScript.type = 'application/ld+json';
+    ldScript.text = JSON.stringify([ldScholarship, faq.ldFaq]);
+    document.head.appendChild(ldScript);
+
+    const breadcrumbLd = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://freestudenttools.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Scholarships', item: 'https://freestudenttools.com/scholarships.html' },
+        { '@type': 'ListItem', position: 3, name: s.name, item: `https://freestudenttools.com/scholarship.html?id=${s.id}` }
+      ]
+    };
+    const breadLd = document.createElement('script');
+    breadLd.type = 'application/ld+json';
+    breadLd.text = JSON.stringify(breadcrumbLd);
+    document.head.appendChild(breadLd);
+
+    const deadlineBadge = s.deadline ? `
+      <div class="sch-deadline-badge ${s.status === 'open' ? 'open' : s.status === 'upcoming' ? 'upcoming' : ''}">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        ${days !== null && days >= 0 ? `Closes in <strong>&nbsp;${days}&nbsp;</strong> days —&nbsp;` : ''}${formatDate(s.deadline)}${s.notificationDate ? ` &nbsp;·&nbsp; Results: ${formatDate(s.notificationDate)}` : ''}
+      </div>` : '';
+
+    root.innerHTML = `
+      <section class="sch-hero">
+        <div class="sch-hero-inner">
+          <div class="sch-breadcrumb">
+            <a href="/index.html">Home</a> › <a href="/scholarships.html">Scholarships</a> › ${s.name}
+          </div>
+          <div class="sch-provider-badge">${flag(s.countryCode)} ${s.provider || s.university || 'Various providers'}</div>
+          <h1 class="sch-title">${s.name}</h1>
+          <div class="sch-meta-row">
+            <span class="sch-tag ${st.cls === 'green' ? 'green' : st.cls === 'orange' ? 'orange' : st.cls === 'red' ? 'red' : 'blue'}">${st.text}</span>
+            <span class="sch-tag">${amtType}</span>
+            ${(s.levels || []).map(l => `<span class="sch-tag blue">${l}</span>`).join('')}
+            <span class="sch-tag">${s.competitionLevel || 'Competitive'} competition</span>
+          </div>
+          <div class="sch-amount-box">
+            <div class="sch-amount-label">Funding Package</div>
+            <div class="sch-amount-text">${s.amountDesc}</div>
+          </div>
+          ${deadlineBadge}
+        </div>
+      </section>
+
+      <div class="sch-body">
+        <div class="sch-layout">
+          <main>
+            <div class="sch-section">
+              <h2>About This Scholarship</h2>
+              <p>${s.eligibility}</p>
+              ${s.notes ? `<p style="margin-top:12px;padding-top:12px;border-top:1px solid #f1f5f9;color:#64748b;font-size:0.9rem;font-style:italic">${s.notes}</p>` : ''}
+            </div>
+
+            <div class="sch-section">
+              <h2>Eligibility Requirements</h2>
+              <ul class="sch-req-list">
+                ${(s.requirements || []).map(r => `<li>${r}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div class="sch-section">
+              <h2>Application Timeline</h2>
+              <div class="timeline-steps">${buildTimeline(s)}</div>
+            </div>
+
+            <div class="sch-section">
+              <h2>Frequently Asked Questions</h2>
+              ${faq.html}
+            </div>
+
+            <div class="sch-section" style="background:linear-gradient(135deg,#f0f4ff,#faf5ff);border-color:#c7d2fe">
+              <h2 style="color:#4c1d95">Scholarship Shortlisted? Prepare for the Interview.</h2>
+              <p>Most fully funded scholarships — Chevening, Rhodes, Gates Cambridge, Aga Khan — include a competitive interview round. <strong>Easedit.co</strong> is an AI-powered mock interview platform that simulates exactly those panel interviews, gives you a scored transcript, and sends a feedback report to your inbox.</p>
+              <a href="https://easedit.co" target="_blank" rel="noopener" style="display:inline-block;margin-top:14px;background:linear-gradient(135deg,#1A73E8,#7C3AED);color:#fff;padding:12px 24px;border-radius:10px;font-size:0.9rem;font-weight:700;text-decoration:none">Practice Now at easedit.co →</a>
+            </div>
+          </main>
+
+          <aside>
+            <div class="sch-sidebar-card">
+              <h3>Quick Facts</h3>
+              <div class="sch-info-row"><span class="sch-info-label">Country</span><span class="sch-info-value">${flag(s.countryCode)} ${s.country || 'Various'}</span></div>
+              <div class="sch-info-row"><span class="sch-info-label">Provider</span><span class="sch-info-value">${s.provider || s.university || '—'}</span></div>
+              <div class="sch-info-row"><span class="sch-info-label">Funding</span><span class="sch-info-value">${amtType}</span></div>
+              <div class="sch-info-row"><span class="sch-info-label">Deadline</span><span class="sch-info-value">${formatDate(s.deadline)}</span></div>
+              <div class="sch-info-row"><span class="sch-info-label">Competition</span><span class="sch-info-value">${s.competitionLevel || 'High'}</span></div>
+              ${competitionBar(s.competitionLevel || 'High')}
+            </div>
+
+            <div class="sch-sidebar-card">
+              <h3>Study Levels</h3>
+              <div class="levels-wrap">
+                ${(s.levels || ['All levels']).map(l => `<span class="level-chip">${l}</span>`).join('')}
+              </div>
+              <h3 style="margin-top:16px">Subject Areas</h3>
+              <div class="streams-wrap">
+                ${(s.streams || ['All streams']).map(st => `<span class="stream-chip">${st}</span>`).join('')}
+              </div>
+            </div>
+
+            <a href="${s.link}" target="_blank" rel="noopener" class="sch-apply-btn">Apply on Official Site →</a>
+            <a href="scholarships.html" class="sch-back-btn">← Browse All Scholarships</a>
+
+            ${related ? `<div class="sch-sidebar-card" style="margin-top:20px"><h3>Related Scholarships</h3>${related}</div>` : ''}
+
+            <div class="sch-cta-box">
+              <h3>Got an Interview Coming Up?</h3>
+              <p>Most scholarships include a competitive panel interview. Practice it before it counts.</p>
+              <a href="https://easedit.co" target="_blank" rel="noopener">Try Easedit.co Free →</a>
+            </div>
+          </aside>
+        </div>
+      </div>`;
+
+    // FAQ toggle
+    root.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ans = btn.nextElementSibling;
+        const isOpen = ans.classList.contains('open');
+        btn.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', !isOpen);
+        ans.classList.toggle('open', !isOpen);
+      });
+    });
+  }
+
+  function renderNotFound() {
+    root.innerHTML = `
+      <div class="sch-not-found">
+        <h2>Scholarship Not Found</h2>
+        <p>We couldn't find a scholarship with that ID. Browse our full database below.</p>
+        <a href="scholarships.html" style="display:inline-block;background:#1A73E8;color:#fff;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none">Browse Scholarships →</a>
+      </div>`;
+    document.title = 'Scholarship Not Found | FreeStudentTools';
+  }
+
+  function init() {
+    if (!window.SCHOLARSHIP_DATA) {
+      setTimeout(init, 100);
+      return;
+    }
+    const all = window.SCHOLARSHIP_DATA.scholarships || [];
+    const s = all.find(x => x.id === id);
+    if (s) {
+      render(s, all);
+    } else {
+      renderNotFound();
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

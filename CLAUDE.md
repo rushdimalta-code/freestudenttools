@@ -27,7 +27,7 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 
 **University Hub (5 pages):**
 - `admissions.html` — 1,500+ universities, deadline tracker (data from `data/universities.js` + `data/universities_all.js`)
-- `scholarships.html` — 163 scholarships in `data/scholarships_data.js`, filter by country/funding/level/deadline
+- `scholarships.html` — 246 scholarships in `data/scholarships_data.js`, filter by country/funding/level/deadline
 - `scholarship-guide.html` — Long-form guide (5,000 words) — linked from nav + scholarships page
 - `compare.html` — Side-by-side university comparison, 1,040+ universities (40 Tier-1 + 1,000 Tier-2), 16 streams
 - `tips.html` — Student tips guide (5,000 words) — Article + FAQPage schema
@@ -56,7 +56,7 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 | `data/universities_all.js` | `window.UNI_ALL` | 1,000 ranked universities — name, country, ranking, streams. **Auto-generated — never edit manually** |
 | `data/uni_guide.js` | `window.UNI_GUIDE` | 42 entries + 5 aliases — city, CoL, rental links, contacts, leisure |
 | `data/courses.js` | `window.COURSES_DATA` | 16 academic streams — curriculum, assessment, careers, uni-specific programme info |
-| `data/scholarships_data.js` | `window.SCHOLARSHIP_DATA` | 163 scholarships — last updated 2026-06-16 |
+| `data/scholarships_data.js` | `window.SCHOLARSHIP_DATA` | 246 scholarships — last updated 2026-06-16 |
 
 To regenerate `universities_all.js`: `python3 tools/fetch_all_universities.py`
 
@@ -115,7 +115,7 @@ Mobile nav: flat list with section labels (`.nav-mobile-label`), also active cla
 Design tokens: `--primary: #1A73E8` · `--success: #10B981` · `--orange: #F7941D` · purple `#7C3AED`
 Font: Inter (400–800) via Google Fonts. Hero bg: dark navy `#0B1120 → #0F2456 → #1A1040`.
 
-**Bot guard (2026-06-16):** `tools/update_university_data.py` — if `scholarships_data.js` has ≥50 scholarships, the daily bot skips list replacement and only refreshes status fields. The 163 scholarships are permanent.
+**Bot guard (2026-06-16):** `tools/update_university_data.py` — if `scholarships_data.js` has ≥50 scholarships, the daily bot skips list replacement and only refreshes status fields. The 246 scholarships are permanent.
 
 ---
 
@@ -154,7 +154,10 @@ Keep these CTAs. Do not remove on future edits.
 - Ad slot IDs in HTML are placeholders until AdSense approves the account — do not treat them as real
 - `data/universities_all.js` is auto-generated — never edit manually; run `python3 tools/fetch_all_universities.py` to regenerate
 - easedit.co CTAs on admissions/scholarships/compare — keep them, don't overwrite
-- Homepage hero stat "800+ Scholarships" is a marketing claim; actual tracked scholarships in `scholarships_data.js` = 163 — update hero stat when data catches up
+- Scholarship count in `scholarships_data.js` is now 246 — homepage and scholarships.html updated to reflect this
+- `scholarship.html` is a new dynamic detail page — routes `/scholarship.html?id=xxx` to per-scholarship profile with JSON-LD, FAQ, and full eligibility details
+- Netlify redirect `/scholarship/:id → /scholarship.html?id=:id` gives clean SEO URLs for all 246 scholarships
+- Sitemap.xml now includes 246 individual scholarship profile URLs for Google indexing
 
 ---
 
