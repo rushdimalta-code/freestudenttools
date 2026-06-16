@@ -7,11 +7,6 @@
   to = "/scholarship.html?id=:id"
   status = 200
 
-# Custom 404 — must come after all 200 rewrites
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
 
 # Immutable static assets — 1 year cache
 [[headers]]
