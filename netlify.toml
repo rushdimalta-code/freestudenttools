@@ -49,6 +49,11 @@
   status = 200
 
 [[redirects]]
+  from = "/compare-scholarships"
+  to = "/compare-scholarships.html"
+  status = 200
+
+[[redirects]]
   from = "/tips"
   to = "/tips.html"
   status = 200

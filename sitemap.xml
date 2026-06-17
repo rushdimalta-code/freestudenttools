@@ -1897,4 +1897,9 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://freestudenttools.com/compare-scholarships</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 </urlset>
