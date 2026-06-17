@@ -104,15 +104,8 @@
       display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
       font-size: .82rem; color: rgba(255,255,255,.5); margin-bottom: 36px;
     }
-    .blog-post-hero-stats {
-      display: flex; justify-content: center; align-items: stretch;
-      border-top: 1px solid rgba(255,255,255,.08); margin-top: 8px;
-    }
-    .hero-stat { flex: 1; text-align: center; padding: 28px 16px; border-right: 1px solid rgba(255,255,255,.08); }
-    .hero-stat:last-child { border-right: none; }
-    .hero-stat-value { font-size: 1.9rem; font-weight: 800; color: #fff; display: block; letter-spacing: -.02em; }
-    .hero-stat-label { font-size: .72rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .07em; display: block; margin-top: 4px; }
-    @media(max-width: 500px) { .hero-stat-value { font-size: 1.3rem; } .hero-stat { padding: 20px 8px; } }
+    .blog-post-hero-img-wrap { width: 100%; margin-top: 32px; overflow: hidden; }
+    .blog-post-hero-img-wrap img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
 
     .blog-post-body { background: #f8fafc; }
     .blog-post-layout {
@@ -298,11 +291,8 @@
       <span>📊 2–5% acceptance rate</span>
     </div>
   </div>
-  <div class="blog-post-hero-stats">
-    <div class="hero-stat"><strong class="hero-stat-value">2–5%</strong><span class="hero-stat-label">Acceptance rate</span></div>
-    <div class="hero-stat"><strong class="hero-stat-value">€1,400</strong><span class="hero-stat-label">Per month</span></div>
-    <div class="hero-stat"><strong class="hero-stat-value">24 mo</strong><span class="hero-stat-label">Duration</span></div>
-    <div class="hero-stat"><strong class="hero-stat-value">€33,600</strong><span class="hero-stat-label">Total stipend</span></div>
+  <div class="blog-post-hero-img-wrap">
+    <img src="/assets/blog/erasmus-hero.jpg" alt="Two international students collaborating at outdoor European cafe for Erasmus Mundus scholarship" loading="eager" width="1600" height="900">
   </div>
 </section>
 

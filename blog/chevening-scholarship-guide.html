@@ -118,15 +118,8 @@
       object-fit: cover; display: block;
       margin-top: 0;
     }
-    .blog-post-hero-stats {
-      display: flex; justify-content: center; align-items: stretch;
-      border-top: 1px solid rgba(255,255,255,.08); margin-top: 8px;
-    }
-    .hero-stat { flex: 1; text-align: center; padding: 28px 16px; border-right: 1px solid rgba(255,255,255,.08); }
-    .hero-stat:last-child { border-right: none; }
-    .hero-stat-value { font-size: 1.9rem; font-weight: 800; color: #fff; display: block; letter-spacing: -.02em; }
-    .hero-stat-label { font-size: .72rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .07em; display: block; margin-top: 4px; }
-    @media(max-width: 500px) { .hero-stat-value { font-size: 1.3rem; } .hero-stat { padding: 20px 8px; } }
+    .blog-post-hero-img-wrap { width: 100%; margin-top: 32px; overflow: hidden; }
+    .blog-post-hero-img-wrap img { width: 100%; max-height: 420px; object-fit: cover; display: block; }
 
     .blog-post-body { background: #f8fafc; padding: 0; }
     .blog-post-layout {
@@ -383,11 +376,8 @@
       <span>📊 2–3% acceptance rate</span>
     </div>
   </div>
-  <div class="blog-post-hero-stats">
-    <div class="hero-stat"><strong class="hero-stat-value">2–3%</strong><span class="hero-stat-label">Acceptance rate</span></div>
-    <div class="hero-stat"><strong class="hero-stat-value">£1,516</strong><span class="hero-stat-label">Monthly (London)</span></div>
-    <div class="hero-stat"><strong class="hero-stat-value">~1,700</strong><span class="hero-stat-label">Awards per year</span></div>
-    <div class="hero-stat"><strong class="hero-stat-value">160+</strong><span class="hero-stat-label">Eligible countries</span></div>
+  <div class="blog-post-hero-img-wrap">
+    <img src="/assets/blog/chevening-hero.jpg" alt="Professional woman preparing Chevening scholarship application at desk in London" loading="eager" width="1600" height="900">
   </div>
 </section>
 
