@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-17 (rev 9)_
+_Last updated: 2026-06-17 (rev 10)_
 
 ---
 
@@ -8,7 +8,7 @@ _Last updated: 2026-06-17 (rev 9)_
 
 Public static web app offering free browser-based tools for students. All processing is client-side — files never leave the user's device. No accounts, no sign-up, no paywalls.
 
-Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account created; **not yet approved** — reapply after verifying contact form and content depth.
+Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). **Review submitted 2026-06-16 19:16** — awaiting approval (2–4 weeks). Replace placeholder slot IDs after approval.
 
 ---
 
@@ -25,14 +25,14 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 - `pdf-extractor.html` — PDF page extractor via pdf-lib
 - `citation-generator.html` — APA 7th, MLA 9th, Chicago 17th — pure JS, no network
 
-**University Hub (6 pages):**
+**University Hub (7 pages):**
 - `admissions.html` — deadline tracker (data from `data/universities.js` + `data/universities_all.js`)
 - `scholarships.html` — 246 scholarships, filter by country/funding/level/deadline/competition
 - `scholarship.html` — individual scholarship detail page (dynamic, loads from `scholarships_data.js` via `?id=` param)
 - `scholarship-guide.html` — long-form guide (5,000 words)
 - `compare.html` — side-by-side university comparison, 1,040+ universities, 16 streams
+- `compare-scholarships.html` — side-by-side scholarship comparison (any 2 of 246+); popular pairs quick-pick; WebApplication + FAQPage + BreadcrumbList JSON-LD
 - `tips.html` — student tips guide (5,000 words) — Article + FAQPage schema
-- `compare-scholarships.html` — side-by-side scholarship comparison (any 2 of 246+)
 
 **Blog (live 2026-06-17):**
 - `blog/index.html` — blog listing page
@@ -44,7 +44,7 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 - All 5 posts: Article + FAQPage + BreadcrumbList JSON-LD, CCO voice, kie.ai hero images in `assets/blog/`
 - Source wiki: `/Users/rushdi/Downloads/Scholarships/` — Karpathy pattern, 5 entity pages
 
-**Static pages:** `about.html`, `contact.html`, `privacy.html`, `terms.html`
+**Static pages:** `about.html`, `contact.html`, `privacy.html`, `terms.html`, `404.html`, `contact-thanks.html`
 
 ---
 
@@ -107,7 +107,7 @@ print(len(d['scholarships']), 'scholarships')
   - `tips.html` — Article + FAQPage
   - `scholarship-guide.html` — Article
   - Tool pages — FAQPage
-- `sitemap.xml` — **264 URLs**: 18 core pages + **246 individual scholarship profile URLs** (`/scholarship/:id`). Resubmitted to Google Search Console 2026-06-16 (prior read: Apr 21 — only 16 pages discovered; all 264 now queued for crawl).
+- `sitemap.xml` — **265 URLs**: 19 core pages + **246 individual scholarship profile URLs** (`/scholarship/:id`). Submitted to Google Search Console 2026-06-16 — 264 pages discovered, Status: Success.
 - `robots.txt` — all major AI crawlers allowed (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
 - `llms.txt` — updated with scholarship database section for AI citation
 - Internal linking: scholarship cards link to detail pages (`/scholarship.html?id=...`), not directly to external sites
@@ -167,12 +167,14 @@ GitHub Actions cron at **06:00 UTC daily**. Three steps in sequence:
 ## Navigation
 
 Desktop nav uses **dropdown groups** (managed via JS in `common.js`):
-- **University Hub** → Admissions Tracker, Scholarships Finder, Scholarship Guide, Compare Degrees, Student Tips
+- **University Hub** → Admissions Tracker, Scholarships Finder, Scholarship Guide, Compare Degrees, **Compare Scholarships**, Student Tips
 - **Tools** → OCR Scanner, PDF Converter, PDF Compressor, Image Compressor, PDF Merger, PDF Page Extractor, Citation Generator
 
 Active nav link is set by JS in `common.js` — do **not** hardcode `class="active"` in HTML nav links.
 
 `scholarship.html` is NOT in the nav (it's a detail page accessed from scholarship cards) — this is intentional.
+
+**Pretty URL redirects:** All pages have explicit 200 rewrites in `netlify.toml` (e.g. `/scholarships` → `/scholarships.html`). Netlify does not auto-resolve Pretty URLs when other redirects exist in the config — explicit rules are required for every page. When adding a new page, add a redirect entry.
 
 ---
 
@@ -212,18 +214,22 @@ Font: Inter variable font (wght 100–900) — **self-hosted** (`/assets/fonts/i
 
 ---
 
-## AdSense — Why It Was Rejected & What's Fixed
+## AdSense — Status
 
-**Fixed (2026-06-16):**
-- Contact form was broken (`YOUR_FORM_ID` placeholder) → now uses Netlify Forms
-- `scholarship-guide.html` was orphaned (zero internal links) → now in nav + linked from scholarships page
+**Review submitted: 2026-06-16 19:16.** Awaiting Google decision (2–4 weeks).
+
+**What was fixed before reapplying:**
+- Contact form: broken `YOUR_FORM_ID` placeholder → Netlify Forms with plain POST to `/contact-thanks`; email notifications → `rushdimalta@gmail.com`
+- `scholarship-guide.html` was orphaned → now in nav + linked from scholarships page
 - AdSense script was loading before cookie consent → now deferred via `initAds()`
-- Content depth massively increased: 246 scholarships, individual detail pages for all 246, Dataset + FAQPage schema
+- Content depth: 246 scholarships, 246 static detail pages, Dataset + FAQPage schema, 700–1,044 words per tool page
+- `ads.txt` added: `google.com, pub-9843476971668607, DIRECT, f08c47fec0942fa0`
+- Canonical URLs: all pages now use clean URLs (`/scholarships` not `/scholarships.html`)
+- CSP (Content-Security-Policy) header added to all HTML pages in `netlify.toml`
+- Custom `404.html` page — branded with CTAs
 
-**Still required before reapplying:**
-- Confirm Netlify Forms email notifications are configured (Netlify dashboard → Forms)
-- Replace placeholder AdSense slot IDs (`1111111111` etc.) with real slot IDs after approval
-- Consider adding one more content guide (e.g. OCR or PDF tools guide)
+**After approval:**
+- Replace placeholder AdSense slot IDs (`1111111111`, `2222222222`, `3333333333`) with real slot IDs from AdSense dashboard
 
 ---
 
@@ -331,6 +337,7 @@ Keep all these CTAs. Do not remove on future edits.
 - `Referrer-Policy: strict-origin-when-cross-origin`
 - `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+- `Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' *.googletagmanager.com *.googlesyndication.com *.googleadservices.com cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com data:; img-src 'self' data: https:; frame-src *.doubleclick.net *.googlesyndication.com; connect-src 'self' *.google-analytics.com; object-src 'none'; base-uri 'self'`
 
 ---
 
@@ -405,8 +412,12 @@ Zero outstanding issues. Submit `sitemap.xml` to Google Search Console and monit
 | `js/common.js` | GA4, AdSense, nav dropdowns, cookie consent, back-to-top, scroll animations, **page-hero trust strip auto-inject** |
 | `js/scholarships.js` | Scholarship finder — filter, sort, render, expand cards. `perPage: 200` shows all 246 at once. Init uses readyState-aware retry loop (2s timeout) |
 | `css/style.css` | All styles — single file, CSS variables |
-| `netlify.toml` | Deploy config, cache headers, security headers, `/scholarship/:id` redirect |
-| `sitemap.xml` | 264 URLs — 18 core pages + 246 scholarship profile URLs. Auto-updated daily by generator. |
+| `netlify.toml` | Deploy config, cache headers, security+CSP headers, all Pretty URL 200 rewrites, `/scholarship/:id` rewrite, `/contact-thanks` redirect |
+| `sitemap.xml` | 265 URLs — 19 core pages + 246 scholarship profile URLs. Auto-updated daily by generator. |
+| `404.html` | Branded 404 page — CTAs to scholarships/admissions/compare/home |
+| `contact-thanks.html` | Post-form-submission thank-you page (Netlify Forms redirects here) |
+| `compare-scholarships.html` | Scholarship comparison tool — any 2 of 246, popular pairs, full side-by-side table |
+| `ads.txt` | AdSense authorized seller file — required for ad network approval |
 | `robots.txt` | AI crawler permissions |
 | `llms.txt` | AI citation structured content — includes scholarship database section |
 | `data/` | JS data files — universities, scholarships, guides, courses |
