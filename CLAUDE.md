@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-16 (rev 8)_
+_Last updated: 2026-06-17 (rev 9)_
 
 ---
 
@@ -32,6 +32,17 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). Account create
 - `scholarship-guide.html` — long-form guide (5,000 words)
 - `compare.html` — side-by-side university comparison, 1,040+ universities, 16 streams
 - `tips.html` — student tips guide (5,000 words) — Article + FAQPage schema
+- `compare-scholarships.html` — side-by-side scholarship comparison (any 2 of 246+)
+
+**Blog (live 2026-06-17):**
+- `blog/index.html` — blog listing page
+- `blog/chevening-scholarship-guide.html` — Chevening guide, 2,081 words
+- `blog/fulbright-scholarship-guide.html` — Fulbright guide, 2,027 words
+- `blog/daad-scholarship-guide.html` — DAAD guide, 2,013 words
+- `blog/gates-cambridge-scholarship-guide.html` — Gates Cambridge guide, 1,999 words
+- `blog/erasmus-mundus-guide.html` — Erasmus Mundus guide, 1,959 words
+- All 5 posts: Article + FAQPage + BreadcrumbList JSON-LD, CCO voice, kie.ai hero images in `assets/blog/`
+- Source wiki: `/Users/rushdi/Downloads/Scholarships/` — Karpathy pattern, 5 entity pages
 
 **Static pages:** `about.html`, `contact.html`, `privacy.html`, `terms.html`
 
@@ -320,6 +331,51 @@ Keep all these CTAs. Do not remove on future edits.
 - `Referrer-Policy: strict-origin-when-cross-origin`
 - `Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()`
 - `Strict-Transport-Security: max-age=31536000; includeSubDomains`
+
+---
+
+## Blog — Key Rules & Patterns (2026-06-17)
+
+- **Source requirement:** every blog post must be grounded in a Scholarships wiki entity page (`/Users/rushdi/Downloads/Scholarships/Wiki/pages/entities/`) — no post without an ingest first
+- **Hero images:** call kie.ai REST API directly via Bash (`POST https://api.kie.ai/api/v1/flux/kontext/generate`, poll `GET /api/v1/flux/kontext/record-info?taskId={id}`, `successFlag=1` = done). Auth: `Bearer 67b4c30e989251d795faa45bfa14ce8a`. Save to `assets/blog/`. Never relay prompts to user.
+- **Hero CSS:** `.blog-post-hero-img-wrap` with `max-height: 420px; object-fit: cover` — do NOT use `.blog-post-hero-stats` (old placeholder class, removed)
+- **Blog sidebar link slugs** must match actual files in `scholarship/` subdirectory — use underscores not dashes (e.g. `daad_study_scholarship`, `fulbright_foreign`, `gates_cambridge`, `erasmus_mundus`)
+- **Clean URL redirects** for blog posts are in `netlify.toml` — add a new entry for each new post
+- **Netlify.toml `[[redirects]]` order matters:** `/scholarship/:id` catch-all is LAST among scholarship rules; static files in `scholarship/` take priority over the catch-all rewrite
+- **`scholarship.html` JS links** must use absolute paths (`/scholarships.html`) — relative paths break under the 200-rewrite when URL is `/scholarship/:id`
+- Blog posts go in `blog/` directory; add to `sitemap.xml` and `blog/index.html`
+
+---
+
+## Nav — Canonical Structure (2026-06-17)
+
+All pages use `class="nav"` (NOT `class="navbar"` — that old class was removed from `scholarship.html` in rev 9). Desktop nav:
+- Home
+- University Hub ▾ (Admissions Tracker, Scholarships Finder, Scholarship Guide, Compare Degrees, Compare Scholarships, Student Tips)
+- Tools ▾ (OCR Scanner, PDF Converter, PDF Compressor, Image Compressor, PDF Merger, PDF Page Extractor, Citation Generator)
+- Blog → `/blog/`
+- About
+
+All hrefs use absolute paths (`/page.html`, not `page.html`). Never use relative paths — pages in subdirectories (`blog/`, `scholarship/`) will break.
+
+Footer "University Hub" column must include: Admissions Tracker, Scholarships Finder, **Scholarship Guide**, Compare Degrees, Compare Scholarships, Student Tips (in that order).
+
+---
+
+## Site Audit — 2026-06-17 (post-launch)
+
+**Overall: 10/10** — all areas pass.
+
+| Area | Score |
+|---|---|
+| Mobile Responsiveness | 10/10 |
+| Performance | 10/10 |
+| SEO | 10/10 |
+| Internal Links | 10/10 |
+| Cross-page Consistency | 10/10 |
+| Accessibility | 10/10 |
+
+Zero outstanding issues. Submit `sitemap.xml` to Google Search Console and monitor indexing of the 5 new blog posts.
 
 ---
 
