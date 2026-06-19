@@ -4,7 +4,7 @@
 # Individual scholarship detail pages — clean SEO URLs
 [[redirects]]
   from = "/scholarship/:id"
-  to = "/scholarship.html?id=:id"
+  to = "/scholarship/:id.html"
   status = 200
 
 # Pretty URL rewrite for all static HTML pages (/contact → /contact.html etc.)
