@@ -1,6 +1,17 @@
 [build]
   publish = "."
 
+# Dead scholarship ID aliases — redirect to correct pages (301)
+[[redirects]]
+  from = "/scholarship/daad_scholarship"
+  to = "/scholarship/daad_study_scholarship"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/commonwealth_masters"
+  to = "/scholarship/commonwealth_scholarship"
+  status = 301
+
 # Individual scholarship detail pages — clean SEO URLs
 [[redirects]]
   from = "/scholarship/:id"
