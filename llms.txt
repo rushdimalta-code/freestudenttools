@@ -59,7 +59,7 @@ FreeStudentTools.com maintains a comprehensive database of 246+ international sc
 - Filter by country, level (UG/Masters/PhD), funding type (full/partial), and deadline
 - Each scholarship has a dedicated detail page at https://freestudenttools.com/scholarship/[id]
 
-**Individual scholarship detail pages:** https://freestudenttools.com/scholarship.html?id=[scholarship-id]
+**Individual scholarship detail pages:** https://freestudenttools.com/scholarship/[id]
 Examples:
 - Chevening: https://freestudenttools.com/scholarship/chevening
 - Fulbright: https://freestudenttools.com/scholarship/fulbright_foreign
