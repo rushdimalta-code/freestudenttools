@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-19 (rev 11)_
+_Last updated: 2026-06-20 (rev 12)_
 
 ---
 
@@ -362,35 +362,57 @@ Keep all these CTAs. Do not remove on future edits.
 
 ---
 
-## Nav — Canonical Structure (2026-06-17)
+## Nav — Canonical Structure (2026-06-20 rev 12)
 
-All pages use `class="nav"` (NOT `class="navbar"` — that old class was removed from `scholarship.html` in rev 9). Desktop nav:
+All pages use `class="nav"` (NOT `class="navbar"` — that old class was removed from `scholarship.html` in rev 9). Desktop nav — identical across root pages, blog pages, and scholarship pages:
 - Home
-- University Hub ▾ (Admissions Tracker, Scholarships Finder, Scholarship Guide, Compare Degrees, Compare Scholarships, Student Tips)
+- University Hub ▾ (Admissions Tracker, Scholarships Finder, Scholarship Guide, Compare Degrees, **Compare Scholarships**, Student Tips)
 - Tools ▾ (OCR Scanner, PDF Converter, PDF Compressor, Image Compressor, PDF Merger, PDF Page Extractor, Citation Generator)
 - Blog → `/blog/`
 - About
 
+Mobile nav has the same items in the same order.
+
 All hrefs use absolute paths (`/page.html`, not `page.html`). Never use relative paths — pages in subdirectories (`blog/`, `scholarship/`) will break.
 
-Footer "University Hub" column must include: Admissions Tracker, Scholarships Finder, **Scholarship Guide**, Compare Degrees, Compare Scholarships, Student Tips (in that order).
+**Footer — canonical structure (all page types as of rev 12):**
+All pages use `<footer class="footer">` with `<div class="container">` wrapping three columns:
+- **University Hub:** Admissions Tracker, Scholarships Finder, Scholarship Guide, Compare Scholarships, Student Tips, Blog
+- **Document Tools:** OCR Scanner, PDF Converter, PDF Compressor, Image Compressor, PDF Merger, PDF Page Extractor, Citation Generator
+- **Company:** About, Contact, Privacy Policy, Terms of Use, Sitemap
+
+Footer brand: `<picture>` element with WebP + PNG logo fallback (`/assets/logo-sm.webp` + `/assets/logo-sm.png`). Never use a text link as the footer brand.
+
+Footer bottom: `© 2026 FreeStudentTools.com — All tools run in your browser. No data leaves your device.`
+
+Blog posts additionally have a "More Guides" footer column (scholarship guide links) — this is intentional and blog-only.
 
 ---
 
-## Site Audit — 2026-06-17 (post-launch)
+## Site Audit — 2026-06-20 (full consistency audit, rev 12)
 
-**Overall: 10/10** — all areas pass.
+**Overall: 10/10** — all issues from the full audit resolved and pushed.
 
-| Area | Score |
+**Fixes applied (2026-06-20, commit 7e637ec):**
+
+| Fix | Scope |
 |---|---|
-| Mobile Responsiveness | 10/10 |
-| Performance | 10/10 |
-| SEO | 10/10 |
-| Internal Links | 10/10 |
-| Cross-page Consistency | 10/10 |
-| Accessibility | 10/10 |
+| "Compare Scholarships" added to University Hub dropdown + mobile nav | 6 blog pages |
+| "Blog" link added to desktop + mobile nav | 246 scholarship pages |
+| "Compare Scholarships" added to University Hub dropdown + mobile nav | 246 scholarship pages |
+| Footer replaced: minimal text-only → 3-column (University Hub, Document Tools, Company) + image logo | 246 scholarship pages |
+| `meta description` added | `contact-thanks.html` |
+| Scholarship URL format corrected (`?id=` → `/scholarship/[id]`) | `llms.txt` line 62 |
 
-Zero outstanding issues. Submit `sitemap.xml` to Google Search Console and monitor indexing of the 5 new blog posts.
+**Pre-fix findings (for reference):**
+- Blog pages were missing "Compare Scholarships" from nav — users couldn't reach that feature from 6 pages
+- Scholarship pages were missing both "Compare Scholarships" and "Blog" link entirely — users on 246 pages had no nav path to either
+- Three different footer templates: root (4-column rich), blog (3-column + More Guides), scholarship (minimal text, no logo image)
+- `llms.txt` documented scholarship URLs as `/scholarship.html?id=[id]` — actual URL structure is `/scholarship/[id]`
+
+**Structured data:** Article + FAQPage + BreadcrumbList on all 5 blog posts — valid, no malformed JSON-LD found.
+**Broken links:** None found across 273 pages.
+**CSS:** Single shared stylesheet, consistent Inter font, consistent CSS variables — no conflicts.
 
 ---
 
