@@ -91,15 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cookie consent
   initCookieConsent();
 
-  // Click-to-browse + drag & drop on upload zones
+  // Drag & drop on upload zones (click handled natively by label element)
   document.querySelectorAll('.upload-zone').forEach(zone => {
     const input = zone.querySelector('input[type="file"]');
-
-    // Forward zone clicks to the file input.
-    // e.isTrusted=false means it's the synthetic bubble from input.click() itself — skip to avoid loop.
-    zone.addEventListener('click', e => {
-      if (input && e.isTrusted) input.click();
-    });
 
     zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
     zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));

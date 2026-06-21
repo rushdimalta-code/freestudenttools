@@ -605,14 +605,12 @@ main { flex: 1; }
   box-shadow: 0 0 0 4px rgba(79,70,229,0.1), 0 8px 24px rgba(79,70,229,0.14);
 }
 
+label.upload-zone {
+  display: block;
+}
+
 .upload-zone input[type="file"] {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
+  display: none;
 }
 
 .upload-zone-icon {
