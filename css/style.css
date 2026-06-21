@@ -606,7 +606,13 @@ main { flex: 1; }
 }
 
 .upload-zone input[type="file"] {
-  display: none;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .upload-zone-icon {
