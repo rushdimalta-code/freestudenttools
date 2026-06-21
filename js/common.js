@@ -91,14 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cookie consent
   initCookieConsent();
 
-  // Drag & drop on upload zones
+  // Click-to-browse + drag & drop on upload zones
   document.querySelectorAll('.upload-zone').forEach(zone => {
+    const input = zone.querySelector('input[type="file"]');
+
+    // Forward zone clicks to the file input.
+    // e.isTrusted=false means it's the synthetic bubble from input.click() itself — skip to avoid loop.
+    zone.addEventListener('click', e => {
+      if (input && e.isTrusted) input.click();
+    });
+
     zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
     zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
     zone.addEventListener('drop', e => {
       e.preventDefault();
       zone.classList.remove('drag-over');
-      const input = zone.querySelector('input[type="file"]');
       if (input && e.dataTransfer.files.length) {
         const dt = new DataTransfer();
         dt.items.add(e.dataTransfer.files[0]);
