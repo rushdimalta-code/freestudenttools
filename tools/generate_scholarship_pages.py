@@ -108,6 +108,7 @@ def build_related(current, all_s):
 
 
 NAV = """\
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <nav class="nav">
   <div class="container">
     <div class="nav-inner">
@@ -126,6 +127,7 @@ NAV = """\
             <li><a href="/scholarships.html">Scholarships Finder</a></li>
             <li><a href="/scholarship-guide.html">Scholarship Guide</a></li>
             <li><a href="/compare.html">Compare Degrees</a></li>
+            <li><a href="/compare-scholarships.html">Compare Scholarships</a></li>
             <li><a href="/tips.html">Student Tips</a></li>
           </ul>
         </li>
@@ -144,6 +146,7 @@ NAV = """\
             <li><a href="/citation-generator.html">Citation Generator</a></li>
           </ul>
         </li>
+        <li><a href="/blog/">Blog</a></li>
         <li><a href="/about.html">About</a></li>
       </ul>
       <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -156,6 +159,7 @@ NAV = """\
     <a href="/scholarships.html">Scholarships Finder</a>
     <a href="/scholarship-guide.html">Scholarship Guide</a>
     <a href="/compare.html">Compare Degrees</a>
+    <a href="/compare-scholarships.html">Compare Scholarships</a>
     <a href="/tips.html">Student Tips</a>
     <span class="nav-mobile-label">Tools</span>
     <a href="/ocr.html">OCR Scanner</a>
@@ -165,6 +169,7 @@ NAV = """\
     <a href="/pdf-merger.html">PDF Merger</a>
     <a href="/pdf-extractor.html">PDF Page Extractor</a>
     <a href="/citation-generator.html">Citation Generator</a>
+    <a href="/blog/">Blog</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
   </nav>
@@ -249,17 +254,44 @@ SCH_STYLES = """\
   </style>"""
 
 FOOTER = """\
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand"><a href="/index.html">FreeStudentTools</a> — free tools for students worldwide</div>
-    <div class="footer-links">
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="/sitemap.xml">Sitemap</a>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="/assets/logo-sm.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
+        <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
+      </div>
+      <div class="footer-col">
+        <h5>University Hub</h5>
+        <a href="/admissions.html">Admissions Tracker</a>
+        <a href="/scholarships.html">Scholarships Finder</a>
+        <a href="/compare.html">Compare Degrees</a>
+        <a href="/compare-scholarships.html">Compare Scholarships</a>
+        <a href="/tips.html">Student Tips</a>
+      </div>
+      <div class="footer-col">
+        <h5>Document Tools</h5>
+        <a href="/ocr.html">OCR Scanner</a>
+        <a href="/pdf-converter.html">PDF to Word / Excel</a>
+        <a href="/compressor.html">PDF Compressor</a>
+        <a href="/image-compressor.html">Image Compressor</a>
+        <a href="/pdf-merger.html">PDF Merger</a>
+        <a href="/pdf-extractor.html">PDF Page Extractor</a>
+        <a href="/citation-generator.html">Citation Generator</a>
+      </div>
+      <div class="footer-col">
+        <h5>Info</h5>
+        <a href="/blog/">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
     </div>
-    <div class="footer-copy">&copy; 2026 FreeStudentTools. Free for everyone, forever.</div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FreeStudentTools.com</span>
+      <div><a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a></div>
+    </div>
   </div>
 </footer>"""
 
