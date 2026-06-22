@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-22 (rev 13)_
+_Last updated: 2026-06-23 (rev 14)_
 
 ---
 
@@ -64,7 +64,7 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). **Review submi
 
 | File | Global | Contents |
 |---|---|---|
-| `data/universities.js` | `window.UNI_DATA` | 40 Tier-1 universities — full admissions, accommodation, deadline, streams |
+| `data/universities.js` | `window.UNI_DATA` | **27** universities — full admissions, accommodation, deadline, streams (verified via Playwright 2026-06-22) |
 | `data/universities_all.js` | `window.UNI_ALL` | 1,000 ranked universities — name, country, ranking, streams. **Auto-generated — never edit manually** |
 | `data/uni_guide.js` | `window.UNI_GUIDE` | 42 entries + 5 aliases — city, CoL, rental links, contacts, leisure |
 | `data/courses.js` | `window.COURSES_DATA` | 16 academic streams — curriculum, assessment, careers, uni-specific programme info |
@@ -402,7 +402,7 @@ Blog posts additionally have a "More Guides" footer column (scholarship guide li
 
 ## Site Audit — 2026-06-20 (full consistency audit, rev 12)
 
-**Overall: 10/10** — all issues from the full audit resolved and pushed.
+**Overall: 10/10** — all issues from the full audit resolved and pushed. For the 2026-06-23 bug fix audit (content accuracy + Formspree fix), see the Bug Fix Audit section below.
 
 **Fixes applied (2026-06-20, commit 7e637ec):**
 
@@ -424,6 +424,38 @@ Blog posts additionally have a "More Guides" footer column (scholarship guide li
 **Structured data:** Article + FAQPage + BreadcrumbList on all 5 blog posts — valid, no malformed JSON-LD found.
 **Broken links:** None found across 273 pages.
 **CSS:** Single shared stylesheet, consistent Inter font, consistent CSS variables — no conflicts.
+
+---
+
+## Bug Fix Audit — 2026-06-23 (rev 14)
+
+Six issues audited. Two confirmed non-bugs; four content/accuracy bugs fixed across 250+ files.
+
+### Confirmed non-bugs (no fix needed)
+
+| Issue | Verdict | Reason |
+|---|---|---|
+| Admissions/Scholarships shows "Loading..." | **Not a bug** | Client-side JS renders the cards. Static HTML crawlers (including AI fetchers) always see the placeholder — this is expected. Playwright verified: 27 unis + 246 scholarships render correctly in a real browser. |
+| Image compressor: `src=""` on both preview imgs | **Not a bug** | Preview `<img>` tags start empty inside `result-container` which is `display:none`. JS sets src to a blob URL after compression. Never visible to users. AI fetchers reporting this as `src="<>"` is a markdown formatting artefact (`![alt](<>)` = empty src). |
+
+### Fixes applied (commits 34e1612 + 310bacd)
+
+| # | File(s) | Bug | Fix |
+|---|---|---|---|
+| 1 | `privacy.html` §9 | Said "Formspree" — contact form actually uses **Netlify Forms** | Changed provider name + link to Netlify's privacy policy |
+| 2 | `scholarship-guide.html` | **7 occurrences** of "800+"/"over 800" — actual database has 246 | All replaced with "246"; second pass caught "We've compiled over 800..." in paragraph text |
+| 3 | `admissions.html` | All "1,500+"/"1,000+" university count claims — `UNI_DATA` has 27 universities | Replaced in meta description, og:description, twitter:description, JSON-LD, hero sub, hero stat, and FAQ answer |
+| 4 | `about.html` | "admissions tracker covering 1,000+ universities" | Changed to "27 universities" — same root cause |
+| 5 | `compare-scholarships.html` | Missing skip-link | Added `<a href="#main-content" class="skip-link">Skip to main content</a>` |
+| 6 | `tools/generate_scholarship_pages.py` + 246 scholarship pages | NAV missing Blog + Compare Scholarships; old minimal `site-footer` footer | Updated NAV (added skip-link, Compare Scholarships dropdown item, Blog in desktop + mobile); replaced footer with 3-column `footer-grid` matching all other pages; regenerated all 246 static files |
+
+### Content accuracy rules going forward
+
+- **admissions.html university count** = **27** (UNI_DATA entries with full data) — never inflate
+- **scholarships count** = **246** everywhere — scholarship-guide, scholarship page headers, scholarship finder stats. Update only when `scholarships_data.js` changes.
+- **compare.html university count** = **1,040+** (from UNI_ALL, 1,000 entries) — this is distinct from the 27 in UNI_DATA
+- **Contact form provider** = **Netlify Forms** — not Formspree. Privacy.html §9, contact.html, and any future reference must say Netlify Forms.
+- **Static crawlers see "Loading..."** on admissions + scholarships — this is permanent and expected behavior. It does affect Googlebot (JS executed with delay); pre-rendering the data into HTML would help SEO but is a separate project.
 
 ---
 
