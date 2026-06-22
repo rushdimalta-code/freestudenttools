@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-20 (rev 12)_
+_Last updated: 2026-06-22 (rev 13)_
 
 ---
 
@@ -203,8 +203,17 @@ Active nav link is set by JS in `common.js` — do **not** hardcode `class="acti
 - Dark navy gradient bg `#0B1120 → #0F2456 → #1A1040` with dual radial orbs (blue top-right, purple bottom-left)
 - `h1`: 2.7rem, letter-spacing -0.025em, white — do NOT add inline font-size overrides (removed from all pages)
 - Badge: glass pill with `rgba(255,255,255,0.12)` bg + `#BAE6FD` text — not the old solid-blue style
-- **Trust strip:** auto-injected by `common.js` into every `.page-hero .container` — "Browser-only · No uploads · No sign-up · 100% free"
+- **Trust strip:** auto-injected by `common.js` into every `.page-hero .container` — "Browser-only · No uploads · No sign-up · 100% free". Hidden on mobile (`@media ≤640px`) to reduce hero height.
 - `.page-hero > .container` has `position:relative; z-index:1` to keep text above orbs
+- **Mobile hero** (2026-06-22): padding reduced 44px/40px → 24px/18px, h1 1.65rem, trust strip hidden — tool card visible above fold at 390×844
+
+### Tool Section Layout (CDO — 2026-06-22)
+- `main#main-content { background: #EBF0F7 }` — steel-blue-gray separates tool area from hero and SEO content below
+- `.tool-main` is a **white card**: `background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 24px 24px 28px` — on mobile: `padding: 14px; border-radius: 12px`
+- `.tool-layout` grid (`1fr 300px`) collapses to single column at ≤900px
+- Upload zone sits inside the white card; the dashed border zone and card background create two-layer depth
+- **Cookie banner (desktop):** floating bottom-right card (`bottom: 24px; right: 24px; max-width: 400px; border-radius: 14px`) — not a full-width bottom wall
+- **Cookie banner (mobile):** compact full-width bottom bar (`border-radius: 12px 12px 0 0; padding: 12px 16px`) — row layout, small text
 
 ### Hub Pages
 - `admissions.html` → `.admissions-hero`: dark blue gradient `#0F172A → #1E3A8A → #1d4ed8`, search bar, 3 stats
@@ -338,6 +347,8 @@ Keep all these CTAs. Do not remove on future edits.
 - HTML: no-cache + `must-revalidate`
 - Sitemap: 1 hour · robots.txt: 1 day
 
+**CSS cache busting:** Because CSS is cached for 7 days, browser may serve stale `style.css` even after a Netlify deploy. Mitigate by appending a version query string to the stylesheet URL in all HTML files (e.g. `href="css/style.css?v=2"`). Currently at **v=2** (bumped 2026-06-22). When significant CSS changes go live, bump to `v=3`, `v=4`, etc. across all HTML pages.
+
 **Security headers on all HTML pages:**
 - `X-Frame-Options: DENY`
 - `X-Content-Type-Options: nosniff`
@@ -432,6 +443,13 @@ Blog posts additionally have a "More Guides" footer column (scholarship guide li
 - **Never replace `logo-sm.png` with `logo.png` in img tags** — og:image uses full logo, img tags use `<picture>` with WebP + PNG
 - **Never add Google Fonts links** — Inter is fully self-hosted in `/assets/fonts/`; `@font-face` is in `css/style.css`
 - **`compare.html` lazy-loads `universities_all.js`** — do not add it back as a static script tag; the dynamic loader in the IIFE handles it
+
+### Upload Zone Rules (2026-06-22)
+- All 6 tool page upload zones are `<label class="upload-zone" id="uploadZone" style="display:block">` — NOT `<div>`. This is the cross-browser click-to-browse fix (Safari blocks `input.click()` from JS handlers on different elements; `<label>` association is native and works everywhere).
+- The `<input type="file">` inside the label has `display: none` (CSS). Do NOT change to `opacity: 0` or `position: absolute` — browsers block the file picker on opacity-0 inputs (anti-phishing).
+- `label.upload-zone { display: block; }` must remain in `css/style.css`. The `style="display:block"` on the element itself is belt-and-suspenders for cached CSS.
+- **`js/common.js` has NO click handler for upload zones** — the label handles it natively. The drop handler IS still in common.js (uses `DataTransfer` + `input.dispatchEvent(new Event('change'))`).
+- **CSS cache busting:** Netlify caches `css/style.css` for 7 days. When making CSS changes that must reach users immediately, bump the version in all HTML files: `href="css/style.css?v=N"`. Currently at `v=2`. Increment N for the next significant update. Update all 17+ HTML pages (use the Python one-liner: `python3 -c "import os,re; [open(f,'w').write(re.sub(r'style\.css\?v=\d+','style.css?v=N',open(f).read())) for f in os.listdir('.') if f.endswith('.html')]"`)
 
 ---
 
