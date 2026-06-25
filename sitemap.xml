@@ -11,36 +11,36 @@
 
   <!-- Scholarship guide — high-value content page -->
   <url>
-    <loc>https://freestudenttools.com/scholarship-guide.html</loc>
-    <lastmod>2026-06-15</lastmod>
+    <loc>https://freestudenttools.com/scholarship-guide</loc>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <!-- Student Hub — high-intent, frequently updated -->
   <url>
-    <loc>https://freestudenttools.com/admissions.html</loc>
+    <loc>https://freestudenttools.com/admissions</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/scholarships.html</loc>
+    <loc>https://freestudenttools.com/scholarships</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/compare.html</loc>
+    <loc>https://freestudenttools.com/compare</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/tips.html</loc>
+    <loc>https://freestudenttools.com/tips</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -48,49 +48,49 @@
 
   <!-- Document tools -->
   <url>
-    <loc>https://freestudenttools.com/ocr.html</loc>
+    <loc>https://freestudenttools.com/ocr</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/pdf-converter.html</loc>
+    <loc>https://freestudenttools.com/pdf-converter</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/compressor.html</loc>
+    <loc>https://freestudenttools.com/compressor</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/image-compressor.html</loc>
+    <loc>https://freestudenttools.com/image-compressor</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/pdf-merger.html</loc>
+    <loc>https://freestudenttools.com/pdf-merger</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/pdf-extractor.html</loc>
+    <loc>https://freestudenttools.com/pdf-extractor</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/citation-generator.html</loc>
+    <loc>https://freestudenttools.com/citation-generator</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -98,39 +98,31 @@
 
   <!-- Static pages -->
   <url>
-    <loc>https://freestudenttools.com/about.html</loc>
+    <loc>https://freestudenttools.com/about</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/contact.html</loc>
+    <loc>https://freestudenttools.com/contact</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/privacy.html</loc>
+    <loc>https://freestudenttools.com/privacy</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://freestudenttools.com/terms.html</loc>
+    <loc>https://freestudenttools.com/terms</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-  </url>
-
-  <!-- Scholarship detail page -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <!-- Individual scholarship profiles (246 scholarships) -->
