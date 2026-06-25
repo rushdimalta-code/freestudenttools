@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-23 (rev 14)_
+_Last updated: 2026-06-25 (rev 15)_
 
 ---
 
@@ -107,11 +107,31 @@ print(len(d['scholarships']), 'scholarships')
   - `tips.html` — Article + FAQPage
   - `scholarship-guide.html` — Article
   - Tool pages — FAQPage
-- `sitemap.xml` — **265 URLs**: 19 core pages + **246 individual scholarship profile URLs** (`/scholarship/:id`). Submitted to Google Search Console 2026-06-16 — 264 pages discovered, Status: Success. All pages submitted for indexing via URL Inspection 2026-06-19.
+- `sitemap.xml` — **270 URLs**: 18 core pages (clean URLs, no `.html`) + 246 individual scholarship profile URLs + 5 blog posts + blog index. Submitted to Google Search Console 2026-06-16 — 271 pages discovered, Status: Success.
 - `robots.txt` — all major AI crawlers allowed (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
 - `llms.txt` — updated with scholarship database section for AI citation
 - Internal linking: scholarship cards link to detail pages (`/scholarship.html?id=...`), not directly to external sites
-- **Indexing status (2026-06-19):** Soft 404 on all 246 scholarship detail pages fixed (redirect was serving JS shell to Googlebot — now serves static HTML). All pages re-submitted. Core pages expected indexed within 2–5 days; scholarship detail pages 2–4 weeks.
+- **Indexing status (2026-06-19):** Soft 404 on all 246 scholarship detail pages fixed (redirect was serving JS shell to Googlebot — now serves static HTML). All pages re-submitted.
+- **Indexing status (2026-06-25):** GSC showed 4 indexed / 6 not indexed (data from 6/12). Two root causes diagnosed and fixed — see Sitemap Fix below.
+
+### Sitemap Fix — 2026-06-25
+
+**Root cause of "Alternate page with proper canonical tag" (3 pages):** Sitemap had `.html` URLs (e.g. `/admissions.html`) while every page's `<link rel="canonical">` used the clean URL (`/admissions`). Google crawled the sitemap URL, saw a different canonical, and correctly refused to index the `.html` version — indexing the canonical instead.
+
+**Root cause of "Page with redirect" (3 pages):** The two dead-URL 301 redirects (`/scholarship/daad_scholarship`, `/scholarship/commonwealth_masters`) were discovered by Google from internal links, plus `/scholarship.html` (JS fallback) was in the sitemap.
+
+**Fixes applied (commit e674d5a + 309778a):**
+- All 16 core page sitemap `<loc>` entries changed from `.html` to clean URLs — now match the canonicals exactly
+- `/scholarship.html` removed from sitemap — JS fallback, not indexable
+- `DATA_DRIVEN_PAGES` in `tools/generate_scholarship_pages.py` updated to clean URLs so the daily GitHub Actions bot updates lastmod on the correct entries
+
+**Sitemap rule going forward:** `sitemap.xml` canonical URL = whatever the `<link rel="canonical">` says on that page. Never add `.html` versions to the sitemap if the canonical omits the extension.
+
+**To ping Google after a sitemap update** (no "Test sitemap" button in GSC — it was removed):
+```
+https://www.google.com/ping?sitemap=https://freestudenttools.com/sitemap.xml
+```
+Open in browser — blank/brief response = success. Then use URL Inspection → "Request Indexing" for the 5 highest-value pages (GSC cap: ~10–12 manual requests/day).
 
 ---
 
@@ -168,6 +188,21 @@ GitHub Actions cron at **06:00 UTC daily**. Three steps in sequence:
 - Static scholarship pages: regenerated daily ✓
 - Actual deadline dates: manually maintained — accurate as of last edit ✗ (scraping is unreliable)
 - New scholarship cycles: need manual update when annual windows shift
+
+---
+
+## Link Building — Priority Targets (2026-06-25)
+
+New domain with zero external links = minimal crawl budget regardless of sitemap quality. External links are the unlock. Priority order:
+
+| # | Platform | How | Best content to link |
+|---|---|---|---|
+| 1 | **Reddit** | Post in relevant subs — genuine value, not raw link drops | r/scholarships (365k), r/ApplyingToCollege (900k), r/gradadmissions (180k) |
+| 2 | **Quora** | Answer questions like "How to apply for Chevening/Fulbright?" — cite blog guides as source | Blog posts: chevening, fulbright, gates-cambridge |
+| 3 | **Product Hunt** | One-time launch — "246 free scholarship profiles + browser tools" — gets DA 90 backlink | Homepage + scholarships finder |
+| 4 | **The Student Room** (thestudentroom.co.uk) | UK student forum, high DA, permanent threads — answer scholarship questions | Chevening + DAAD guides especially |
+
+Rule: answer a real question, then cite the page. Pure link drops get removed and look spammy to Google.
 
 ---
 
