@@ -564,9 +564,9 @@ def generate_page(s, all_scholarships):
 
 DATA_DRIVEN_PAGES = {
     # These pages reflect live data — update their lastmod daily
-    "https://freestudenttools.com/scholarships.html",
-    "https://freestudenttools.com/admissions.html",
-    "https://freestudenttools.com/scholarship.html",
+    # Clean URLs to match sitemap canonical entries (no .html extension)
+    "https://freestudenttools.com/scholarships",
+    "https://freestudenttools.com/admissions",
 }
 
 
