@@ -127,11 +127,10 @@ print(len(d['scholarships']), 'scholarships')
 
 **Sitemap rule going forward:** `sitemap.xml` canonical URL = whatever the `<link rel="canonical">` says on that page. Never add `.html` versions to the sitemap if the canonical omits the extension.
 
-**To ping Google after a sitemap update** (no "Test sitemap" button in GSC — it was removed):
-```
-https://www.google.com/ping?sitemap=https://freestudenttools.com/sitemap.xml
-```
-Open in browser — blank/brief response = success. Then use URL Inspection → "Request Indexing" for the 5 highest-value pages (GSC cap: ~10–12 manual requests/day).
+**To notify Google after a sitemap update** (ping URL deprecated June 2023 — returns 404):
+- GSC → Sitemaps → click the submitted sitemap URL → "Resubmit" (re-submits fresh read)
+- OR: GSC → URL Inspection → paste each important URL → "Request Indexing" (cap: ~10–12/day)
+- `lastmod` dates in the sitemap are the main signal — keep them accurate; Google uses them to prioritise recrawl
 
 ---
 
