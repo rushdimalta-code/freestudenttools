@@ -135,6 +135,107 @@
   to = "/blog/erasmus-mundus-guide.html"
   status = 200
 
+# New 20 blog posts — university admissions, financing, language tests, health, work, visas
+[[redirects]]
+  from = "/blog/university-admissions-interview-tell-me-about-yourself"
+  to = "/blog/university-admissions-interview-tell-me-about-yourself.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/university-admissions-interview-questions"
+  to = "/blog/university-admissions-interview-questions.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-write-university-personal-statement"
+  to = "/blog/how-to-write-university-personal-statement.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/conditional-vs-unconditional-university-offer"
+  to = "/blog/conditional-vs-unconditional-university-offer.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/real-cost-of-studying-abroad-2026"
+  to = "/blog/real-cost-of-studying-abroad-2026.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/student-bank-accounts-international-students"
+  to = "/blog/student-bank-accounts-international-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/tuition-fee-waivers-grants-international-students"
+  to = "/blog/tuition-fee-waivers-grants-international-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-budget-first-year-abroad"
+  to = "/blog/how-to-budget-first-year-abroad.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/ielts-vs-toefl-vs-duolingo-english-test"
+  to = "/blog/ielts-vs-toefl-vs-duolingo-english-test.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-prepare-ielts-8-weeks"
+  to = "/blog/how-to-prepare-ielts-8-weeks.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/health-insurance-international-students"
+  to = "/blog/health-insurance-international-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/student-mental-health-abroad"
+  to = "/blog/student-mental-health-abroad.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-many-hours-international-students-work"
+  to = "/blog/how-many-hours-international-students-work.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/finding-part-time-work-international-students"
+  to = "/blog/finding-part-time-work-international-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/uk-graduate-route-visa-2026"
+  to = "/blog/uk-graduate-route-visa-2026.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/usa-opt-stem-opt-guide-f1-students"
+  to = "/blog/usa-opt-stem-opt-guide-f1-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/germany-post-study-work-permit"
+  to = "/blog/germany-post-study-work-permit.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/canada-pgwp-post-graduate-work-permit"
+  to = "/blog/canada-pgwp-post-graduate-work-permit.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/student-accommodation-abroad-guide"
+  to = "/blog/student-accommodation-abroad-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/culture-shock-university-abroad"
+  to = "/blog/culture-shock-university-abroad.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
