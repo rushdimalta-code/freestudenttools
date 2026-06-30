@@ -1266,7 +1266,7 @@ footer {
   margin-bottom: 14px;
 }
 
-.footer-brand p { font-size: 0.875rem; line-height: 1.65; max-width: 280px; }
+.footer-brand p { font-size: 0.875rem; line-height: 1.65; max-width: 280px; color: #94A3B8; }
 
 .footer-col h5 {
   color: white;
