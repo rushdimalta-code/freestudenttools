@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-06-30",
+  "lastUpdated": "2026-07-01",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -367,7 +367,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "5–7 year program including 1–2 years of Japanese language preparation before starting the degree.",
       "deadline": "2026-06-30",
       "notificationDate": "2026-12-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://www.mext.go.jp/en/policy/education/highered/title02/detail02/sdetail02/1373897.htm"
     },
@@ -398,7 +398,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Specific countries covered and deadlines vary. Check DFAT website for your country. Some programs open June–August.",
       "deadline": "2026-07-31",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.dfat.gov.au/people-to-people/australia-awards"
     },
@@ -558,7 +558,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers citizens of 102+ Belt and Road countries. Specific to technical and STEM disciplines. Check CSC for partner university list.",
       "deadline": "2026-06-30",
       "notificationDate": "2026-09-30",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Medium",
       "link": "https://www.campuschina.org"
     },
@@ -2445,7 +2445,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Provinces including Jiangsu, Guangdong, Beijing, Shanghai, Shandong, and Zhejiang offer their own scholarship programs. Often easier to obtain than national CSC.",
       "deadline": "2026-07-31",
       "notificationDate": "2026-10-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.campuschina.org/universities/index.html"
     },
@@ -4689,7 +4689,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "CONICET funds the majority of scientific research in Argentina. Doctoral fellowships are competitive — apply through the CONICET online portal in April/May annually.",
       "deadline": "2026-06-30",
       "notificationDate": "2026-10-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.conicet.gov.ar/becas"
     },
@@ -5281,7 +5281,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Guangdong is China's wealthiest province and a major hub for international students. Often combined with university-specific awards. Apply through the university directly.",
       "deadline": "2026-07-31",
       "notificationDate": "2026-10-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.gdhed.edu.cn/en"
     },
@@ -5661,7 +5661,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "China-ASEAN relations drive numerous scholarship schemes — separate from CSC. Check the Chinese Embassy in your ASEAN country for current openings.",
       "deadline": "2026-07-31",
       "notificationDate": "2026-10-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.campuschina.org"
     },
@@ -6120,7 +6120,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The Endeavour Leadership Program merged with the Australia Awards for some regions. Check the current program status — structure changes periodically.",
       "deadline": "2026-07-31",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.dese.gov.au/endeavour-leadership-program"
     },
