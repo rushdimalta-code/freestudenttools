@@ -12,6 +12,36 @@
   to = "/scholarship/commonwealth_scholarship"
   status = 301
 
+[[redirects]]
+  from = "/scholarship/british_marshall_scheme"
+  to = "/scholarship/saltire_scotland"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/fao_scholarship"
+  to = "/scholarship/fao_italy_masters"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/wmo_fellowship"
+  to = "/scholarship/wmo_climate"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/ncaa_scholarship"
+  to = "/scholarship/ncaa_athletic"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/portuguese_scholarship"
+  to = "/scholarship/portuguese_camoes"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/spanish_gov_scholarship"
+  to = "/scholarship/aecid_spain"
+  status = 301
+
 # Individual scholarship detail pages — clean SEO URLs
 [[redirects]]
   from = "/scholarship/:id"

@@ -4915,99 +4915,6 @@ window.SCHOLARSHIP_DATA = {
       "link": "https://www.undp.org/careers"
     },
     {
-      "id": "fao_scholarship",
-      "name": "FAO/Italy Scholarships Programme",
-      "provider": "Food and Agriculture Organization (FAO) / Italian Government",
-      "university": null,
-      "country": "Italy",
-      "countryCode": "IT",
-      "amountType": "full",
-      "amountDesc": "Full tuition at selected Italian universities, monthly stipend, accommodation, and health insurance",
-      "levels": [
-        "Master"
-      ],
-      "streams": [
-        "Natural Sciences",
-        "Engineering & Technology",
-        "Social Sciences",
-        "Business & Economics"
-      ],
-      "eligibility": "Citizens of developing FAO member countries for master's programs in food, agriculture, sustainability, and nutrition at Italian universities.",
-      "requirements": [
-        "Citizen of a developing FAO member country",
-        "Bachelor's degree in relevant field",
-        "Professional experience in agriculture/nutrition preferred",
-        "English or Italian proficiency",
-        "Apply through FAO HR portal"
-      ],
-      "notes": "Joint program between FAO and the Italian government. Programs at universities including Bologna, Florence, Turin, and Padua.",
-      "deadline": "2026-11-30",
-      "notificationDate": "2027-02-28",
-      "status": "open",
-      "competitionLevel": "High",
-      "link": "https://www.fao.org/partnerships/scholar-ships/en"
-    },
-    {
-      "id": "wmo_fellowship",
-      "name": "WMO Fellowship Programme (Climate & Meteorology)",
-      "provider": "World Meteorological Organization (WMO)",
-      "university": null,
-      "country": "Various",
-      "countryCode": "CH",
-      "amountType": "full",
-      "amountDesc": "Full fellowship covering tuition, monthly allowance, and travel for meteorology and climate science training",
-      "levels": [
-        "Master",
-        "PhD"
-      ],
-      "streams": [
-        "Natural Sciences",
-        "Engineering & Technology"
-      ],
-      "eligibility": "Nationals of WMO member states (particularly developing countries) working in National Meteorological and Hydrological Services (NMHS). Focus on climate, weather, and water science.",
-      "requirements": [
-        "WMO member state citizen",
-        "Working in or nominated by National Meteorological Service",
-        "Science or engineering degree",
-        "English proficiency"
-      ],
-      "notes": "Specifically for climate, weather, and water professionals. Must have institutional nomination from your country's meteorological service.",
-      "deadline": "2026-10-31",
-      "notificationDate": "2026-12-31",
-      "status": "open",
-      "competitionLevel": "Medium",
-      "link": "https://public.wmo.int/en/about-us/fellowships"
-    },
-    {
-      "id": "ncaa_scholarship",
-      "name": "NCAA Athletic Scholarship (US College Sports)",
-      "provider": "NCAA (National Collegiate Athletic Association)",
-      "university": null,
-      "country": "United States",
-      "countryCode": "US",
-      "amountType": "full",
-      "amountDesc": "Full athletic scholarship covering tuition, room, board, and course-related fees — value varies ($20,000–$70,000/year)",
-      "levels": [
-        "Bachelor"
-      ],
-      "streams": [
-        "All streams"
-      ],
-      "eligibility": "Athletes with exceptional performance in NCAA sports (basketball, football, soccer, tennis, swimming, track, etc.) recruited by NCAA Division I or II universities. International athletes eligible.",
-      "requirements": [
-        "Elite athletic performance in a recognized NCAA sport",
-        "Academic eligibility (NCAA Eligibility Center registration)",
-        "Recruited by or apply to an NCAA program",
-        "Meet academic requirements (2.3 GPA core courses, SAT/ACT scores)"
-      ],
-      "notes": "NCAA scholarships are awarded by individual universities — not by NCAA itself. Must be recruited. International athletes CAN receive full athletic scholarships.",
-      "deadline": "2027-02-01",
-      "notificationDate": "2027-04-30",
-      "status": "upcoming",
-      "competitionLevel": "Very High",
-      "link": "https://www.ncaa.org/sports/2013/10/3/student-athlete-experience.aspx"
-    },
-    {
       "id": "sports_excellence_canada",
       "name": "Sport Canada Excellence Scholarship",
       "provider": "Sport Canada / Government of Canada",
@@ -5069,39 +4976,6 @@ window.SCHOLARSHIP_DATA = {
       "link": "https://hkdir.no/en/scholarships/aurora"
     },
     {
-      "id": "british_marshall_scheme",
-      "name": "Saltire Scholarship (Scotland)",
-      "provider": "Scottish Government",
-      "university": null,
-      "country": "United Kingdom",
-      "countryCode": "GB",
-      "amountType": "partial",
-      "amountDesc": "£8,000 toward tuition fees for one year of postgraduate study at a Scottish university",
-      "levels": [
-        "Master"
-      ],
-      "streams": [
-        "Engineering & Technology",
-        "Natural Sciences",
-        "Computer Science & IT",
-        "Business & Economics",
-        "Medicine & Health Sciences"
-      ],
-      "eligibility": "Citizens of Canada, China, India, Japan, Pakistan, and USA applying to postgraduate programs at Scottish universities. Focus on STEM and business.",
-      "requirements": [
-        "Citizen of Canada, China, India, Japan, Pakistan, or USA",
-        "Applying to a postgraduate program at a Scottish university",
-        "Academic merit",
-        "Apply through individual Scottish universities"
-      ],
-      "notes": "Scotland's flagship international scholarship attracts talent from 6 key markets. Apply directly through the Scottish university you are applying to.",
-      "deadline": "2026-12-31",
-      "notificationDate": "2027-03-31",
-      "status": "upcoming",
-      "competitionLevel": "Medium",
-      "link": "https://www.scotland.org/study/saltire-scholarships"
-    },
-    {
       "id": "ireland_govt_scholarship",
       "name": "Government of Ireland International Education Scholarship",
       "provider": "Irish Research Council / Department of Further and Higher Education",
@@ -5130,68 +5004,6 @@ window.SCHOLARSHIP_DATA = {
       "status": "upcoming",
       "competitionLevel": "Very High",
       "link": "https://research.ie/funding/goiies"
-    },
-    {
-      "id": "portuguese_scholarship",
-      "name": "Camões Institute Scholarship (Portugal)",
-      "provider": "Camões — Instituto da Cooperação e da Língua, Portugal",
-      "university": null,
-      "country": "Portugal",
-      "countryCode": "PT",
-      "amountType": "partial",
-      "amountDesc": "Monthly allowance and tuition support for Portuguese language study and academic programs in Portugal",
-      "levels": [
-        "Bachelor",
-        "Master",
-        "PhD"
-      ],
-      "streams": [
-        "All streams"
-      ],
-      "eligibility": "International students from Portuguese-speaking countries (CPLP members: Brazil, Cape Verde, Angola, Mozambique, etc.) and others interested in Portuguese language and culture.",
-      "requirements": [
-        "CPLP member country citizen or strong Portuguese language interest",
-        "Academic merit",
-        "Apply through Camões Institute or Portuguese Embassy",
-        "Portuguese language proficiency required or acquired through preparation program"
-      ],
-      "notes": "Strong focus on Lusophone countries. Also offers scholarships for Portuguese language study (language-learner grants).",
-      "deadline": "2026-11-30",
-      "notificationDate": "2027-03-31",
-      "status": "open",
-      "competitionLevel": "Medium",
-      "link": "https://www.instituto-camoes.pt/activity/o-que-fazemos/lingua-e-ensino/bolsas-de-estudo"
-    },
-    {
-      "id": "spanish_gov_scholarship",
-      "name": "Spanish Government Scholarship (MAEC-AECID)",
-      "provider": "Spanish Agency for International Development Cooperation (AECID)",
-      "university": null,
-      "country": "Spain",
-      "countryCode": "ES",
-      "amountType": "partial",
-      "amountDesc": "Monthly allowance (€1,000–1,100) plus tuition support for study at Spanish universities",
-      "levels": [
-        "Master",
-        "PhD"
-      ],
-      "streams": [
-        "All streams"
-      ],
-      "eligibility": "Citizens of priority development cooperation countries (Latin America, Africa, Middle East, Asia) for study in Spain. Also for Spaniards studying abroad through certain programs.",
-      "requirements": [
-        "Citizen of AECID priority country",
-        "Bachelor's degree",
-        "Spanish or English proficiency",
-        "Apply through AECID scholarship portal",
-        "Academic merit and development relevance"
-      ],
-      "notes": "AECID manages Spain's main international scholarship program. Strong focus on Latin America and the Caribbean. Also see: Fundación Carolina scholarships (Spain + LatAm).",
-      "deadline": "2026-12-15",
-      "notificationDate": "2027-04-30",
-      "status": "open",
-      "competitionLevel": "Medium",
-      "link": "https://www.aecid.es/EN/becas-y-lectorados"
     },
     {
       "id": "fundacion_carolina",
