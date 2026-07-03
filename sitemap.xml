@@ -1212,26 +1212,8 @@
     <priority>0.8</priority>
   </url>
   <!-- FAO/Italy Scholarships Programme -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/fao_scholarship</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- WMO Fellowship Programme (Climate & Meteorology) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/wmo_fellowship</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NCAA Athletic Scholarship (US College Sports) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/ncaa_scholarship</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Sport Canada Excellence Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/sports_excellence_canada</loc>
@@ -1247,12 +1229,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Saltire Scholarship (Scotland) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/british_marshall_scheme</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Government of Ireland International Education Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/ireland_govt_scholarship</loc>
@@ -1261,19 +1237,7 @@
     <priority>0.8</priority>
   </url>
   <!-- Camões Institute Scholarship (Portugal) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/portuguese_scholarship</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Spanish Government Scholarship (MAEC-AECID) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/spanish_gov_scholarship</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Fundación Carolina Scholarship (Spain—Latin America) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/fundacion_carolina</loc>
