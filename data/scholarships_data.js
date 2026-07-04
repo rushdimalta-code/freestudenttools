@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-04",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1128,7 +1128,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — around 100–150 scholarships per year globally. Financial need is as important as academic merit.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Extremely High",
       "link": "https://www.akdn.org/our-agencies/aga-khan-foundation/international-scholarship-programme"
     },
@@ -4055,7 +4055,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Dutch PhDs are employment contracts with full salary and benefits — not student scholarships. Vacancies posted continuously at careers.tudelft.nl.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.tudelft.nl/over-tu-delft/werken-bij-tu-delft/vacatures"
     },
@@ -4241,7 +4241,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The AU prioritizes Pan-African institutions like the Pan African University (PAU) which has 5 institutes across Africa covering STEM, social sciences, and governance.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://au.int/en/education"
     },
@@ -4522,7 +4522,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "LASPAU manages fellowship programs for Latin American governments and institutions. Not a direct application — must be nominated through bilateral programs.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://laspau.harvard.edu"
     },
@@ -4846,7 +4846,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "RICS offers multiple bursary and scholarship programs for students in property, construction, and land. Check RICS Foundation website for current open awards.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.rics.org/training-and-development/foundations"
     },
@@ -5062,7 +5062,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "IKY manages Greece's state scholarship program. Also administers EU/ESF-funded scholarships. Several programs for incoming international students under bilateral agreements.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.iky.gr/en"
     },
@@ -5282,7 +5282,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Israel's universities are world-class in tech, medicine, and STEM. Technion and Weizmann Institute are global leaders in science and engineering.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://mfa.gov.il/MFA/InternationalOrg/Scholarships"
     },
@@ -5410,7 +5410,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Canada participates in the Commonwealth Scholarship Plan as part of its Official Development Assistance. Deadlines vary by country.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.scholarships-bourses.gc.ca/scholarships-bourses/can/institutions/ccsf-pfcc.aspx"
     },
@@ -6627,7 +6627,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "CHED also has scholarships for non-faculty students through various programs. Faculty Development Programs are the largest channel for overseas study support.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://ched.gov.ph/scholarships"
     },
@@ -7258,7 +7258,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Scotland's flagship international scholarship attracts talent from 6 key markets. Apply directly through the Scottish university you are applying to.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.scotland.org/study/saltire-scholarships"
     },
@@ -7350,7 +7350,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "IKY manages Greece's state scholarship program. Also administers EU/ESF-funded scholarships. Several programs for incoming international students under bilateral agreements.",
       "deadline": "2026-12-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.iky.gr/en"
     },
