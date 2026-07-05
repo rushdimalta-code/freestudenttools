@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-04",
+  "lastUpdated": "2026-07-05",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1830,7 +1830,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Joint program by A*STAR, NUS, NTU, SUTD, and SIT. Three intakes per year. STEM-focused research scholarship.",
       "deadline": "2027-01-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.singa.a-star.edu.sg"
     },
@@ -6880,7 +6880,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "A year at Harvard — fellows take courses and develop professionally. The oldest journalism fellowship in the world (founded 1938).",
       "deadline": "2027-01-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://nieman.harvard.edu/fellowships/nieman-fellowships"
     },
