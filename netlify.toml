@@ -266,6 +266,11 @@
   to = "/blog/culture-shock-university-abroad.html"
   status = 200
 
+[[redirects]]
+  from = "/blog/uk-student-visa-guide-2026"
+  to = "/blog/uk-student-visa-guide-2026.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
