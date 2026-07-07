@@ -286,6 +286,21 @@
   to = "/blog/australia-student-visa-guide-2026.html"
   status = 200
 
+[[redirects]]
+  from = "/blog/rhodes-scholarship-guide"
+  to = "/blog/rhodes-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-write-scholarship-essay"
+  to = "/blog/how-to-write-scholarship-essay.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-prepare-scholarship-interview"
+  to = "/blog/how-to-prepare-scholarship-interview.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
