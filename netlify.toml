@@ -271,6 +271,21 @@
   to = "/blog/uk-student-visa-guide-2026.html"
   status = 200
 
+[[redirects]]
+  from = "/blog/canada-study-permit-guide-2026"
+  to = "/blog/canada-study-permit-guide-2026.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/usa-f1-student-visa-guide"
+  to = "/blog/usa-f1-student-visa-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/australia-student-visa-guide-2026"
+  to = "/blog/australia-student-visa-guide-2026.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
