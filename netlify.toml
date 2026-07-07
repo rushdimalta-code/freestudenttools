@@ -301,6 +301,21 @@
   to = "/blog/how-to-prepare-scholarship-interview.html"
   status = 200
 
+[[redirects]]
+  from = "/blog/scholarship-letter-of-recommendation-guide"
+  to = "/blog/scholarship-letter-of-recommendation-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/mext-japan-scholarship-guide"
+  to = "/blog/mext-japan-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/commonwealth-scholarship-guide"
+  to = "/blog/commonwealth-scholarship-guide.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
