@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-10",
+  "lastUpdated": "2026-07-11",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -5588,7 +5588,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Kellogg's Consortium Fellowship and diverse leadership awards are particularly notable. Many fellowships do not require separate application — merit-based at admission.",
       "deadline": "2027-01-07",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.kellogg.northwestern.edu/programs/full-time-mba/financing.aspx"
     },
