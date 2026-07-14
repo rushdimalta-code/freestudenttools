@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-13",
+  "lastUpdated": "2026-07-14",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1450,7 +1450,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Uniquely combines scholarship funding with a leadership development programme run by the Hoffmann Centre for Sustainable Resource Economy.",
       "deadline": "2027-01-10",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.ox.ac.uk/weidenfeld-hoffmann"
     },
@@ -7536,7 +7536,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Reuben College is focused on technology, sustainability, and society. Reuben scholarships are highly competitive but cover all costs.",
       "deadline": "2027-01-10",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.reuben.ox.ac.uk/courses-and-funding/funding"
     },
