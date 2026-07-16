@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-15",
+  "lastUpdated": "2026-07-16",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -524,7 +524,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Most applications close March–July annually. Two pathways: embassy nomination or university recommendation. One of the largest scholarship programs globally.",
       "deadline": "2026-07-15",
       "notificationDate": "2026-09-30",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Medium",
       "link": "https://www.campuschina.org"
     },
@@ -1360,7 +1360,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Associated with the CDU/CSU political tradition. Offers a broad ideological and cultural integration program.",
       "deadline": "2026-07-15",
       "notificationDate": "2026-11-30",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.kas.de/en/web/stipendium"
     },
