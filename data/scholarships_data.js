@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-16",
+  "lastUpdated": "2026-07-17",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -749,7 +749,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Institutions nominate candidates — contact your target French university directly to express interest and obtain their nomination.",
       "deadline": "2027-01-13",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.campusfrance.org/en/eiffel-scholarship-program-excellence"
     },
