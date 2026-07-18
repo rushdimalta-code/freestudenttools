@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-17",
+  "lastUpdated": "2026-07-18",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -6500,7 +6500,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers energy, climate, materials science, bioinformatics, and any computationally intensive science. Mandatory practicum at DOE labs (Argonne, Oak Ridge, Lawrence Berkeley, etc.).",
       "deadline": "2027-01-14",
       "notificationDate": "2027-04-15",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.krellinst.org/csgf"
     },
