@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-18",
+  "lastUpdated": "2026-07-19",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -458,7 +458,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Scholarships attached to specific Joint Master programs. Over 100 programs available. Each program has its own deadline — check the Erasmus Mundus Catalogue.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
     },
@@ -683,7 +683,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "100+ universities in Hungary. Applications open in November and close in January. Check the Stipendium Hungaricum portal for your country's sending organisation.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://stipendiumhungaricum.hu/apply"
     },
@@ -1545,7 +1545,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Applied for alongside TU Delft admissions application. Program-specific — check TU Delft's scholarship page for eligible programs.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.tudelft.nl/onderwijs/praktische-zaken/scholarships"
     },
@@ -2192,7 +2192,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Over 1,200 entrance awards distributed annually. Major entrance scholarships (e.g., Scholarships of Excellence) require separate application.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.mcgill.ca/studentaid/scholarships-awards"
     },
@@ -2512,7 +2512,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Sciences Po also participates in the Eiffel Scholarship. Some awards are program-specific — check at point of admission.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.sciencespo.fr/en/academics/financial-aid-and-scholarships"
     },
@@ -2772,7 +2772,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "HEC Paris offers 30+ scholarship programs for international students, including regional-specific awards (Africa, Asia, Americas).",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.hec.edu/en/msc-programs/financial-aid-scholarships"
     },
@@ -3356,7 +3356,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "LMU Excellent is a structured doctoral program with additional mentoring and networking. Separate from the Deutschlandstipendium. Apply via LMU Münster website.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.en.lmu.de/study_and_teaching/scholarships/index.html"
     },
@@ -4023,7 +4023,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "DTU is consistently ranked top 5 in Europe for engineering. PhD vacancies are advertised on dtu.dk/jobcenter. Apply to specific open positions.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.dtu.dk/english/education/phd/vacant_positions"
     },
@@ -5124,7 +5124,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "MRC DTPs are based at UK universities (UCL, Edinburgh, Cambridge, Oxford, Manchester, etc.). Each has its own application process and deadline. Check UKRI for the DTP list.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://mrc.ukri.org/skills-careers/studentships/mrc-doctoral-training-partnerships-dtps"
     },
@@ -5217,7 +5217,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of UK's leading STEM institutions. Auto-considered for all international undergraduates who meet the academic threshold.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.imperial.ac.uk/study/fees-and-funding/undergraduate/scholarships/presidents-undergraduate-scholarship"
     },
@@ -5559,7 +5559,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Wharton awards significant financial aid to MBA students. Forté Fellowship (women in business), Consortium fellowships (underrepresented minorities), and named awards.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://mba.wharton.upenn.edu/mba-program/financing-your-wharton-mba/fellowships-and-scholarships"
     },
@@ -5840,7 +5840,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Check the Forté Foundation website for the full list of partner schools. Each school manages its own Forté Fellowship within their admissions process.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.fortefoundation.org/fellowships"
     },
@@ -6023,7 +6023,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Only for US citizens/nationals/permanent residents from underrepresented minorities. Covers undergraduate through PhD in any field.",
       "deadline": "2027-01-15",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.gmsp.org"
     },
