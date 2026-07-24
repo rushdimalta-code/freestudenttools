@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-23",
+  "lastUpdated": "2026-07-24",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1032,7 +1032,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "15,000 government-sponsored places per year. Study in Russian may be required; language preparation programs are included.",
       "deadline": "2027-01-20",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://russia.study/en"
     },
@@ -3957,7 +3957,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Aalto is Finland's top technical university and renowned for design and innovation. Finland has tuition for non-EU students since 2017 — the scholarship offsets this.",
       "deadline": "2027-01-20",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.aalto.fi/en/study-at-aalto/scholarships-and-financial-aid"
     },
@@ -5530,7 +5530,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "LBS offers 60+ scholarships covering various demographics and nationalities. Named fellowships include the LBS Scholarship, Forté Fellowship, and regional awards.",
       "deadline": "2027-01-20",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.london.edu/masters-degrees/mba/fees-and-funding/scholarships"
     },
