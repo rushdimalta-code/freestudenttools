@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-07-25",
+  "lastUpdated": "2026-07-26",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -3203,7 +3203,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Warwick's flagship scholarship for international PhD students. Covers full overseas fees which is rare among UK scholarships.",
       "deadline": "2027-01-22",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_bursaries/chancellors"
     },
