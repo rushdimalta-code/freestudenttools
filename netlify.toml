@@ -139,6 +139,12 @@
   to = "/citation-generator.html"
   status = 200
 
+# Blog directory — no trailing slash variant
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+
 # Blog post clean URLs
 [[redirects]]
   from = "/blog/chevening-scholarship-guide"

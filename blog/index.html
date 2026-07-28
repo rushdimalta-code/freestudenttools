@@ -7,19 +7,19 @@
   <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/logo.png">
   <meta name="theme-color" content="#1d4ed8">
-  <title>Student Guides: Scholarships, Admissions, Visas & Student Life Abroad — FreeStudentTools Blog</title>
-  <meta name="description" content="Practical guides for international students: scholarship applications, university admissions, IELTS prep, health insurance, accommodation, part-time work, and post-study work visas. Real numbers, honest advice.">
+  <title>Student Guides: Scholarships, Visas, Study Abroad & More — FreeStudentTools Blog</title>
+  <meta name="description" content="35 practical guides for international students — scholarship applications (Chevening, Rhodes, Fulbright), student visas (UK, USA, Canada, Australia), IELTS prep, study costs, health insurance, and post-study work visas.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://freestudenttools.com/blog/">
-  <meta property="og:title" content="Scholarship Guides — FreeStudentTools Blog">
-  <meta property="og:description" content="Honest guides on Chevening, Fulbright, DAAD, Gates Cambridge, and Erasmus Mundus. Real eligibility, real application steps, real statistics.">
+  <meta property="og:title" content="Student Guides: Scholarships, Visas & Study Abroad — FreeStudentTools Blog">
+  <meta property="og:description" content="35 practical guides for international students — scholarships, student visas, study costs, IELTS prep, and life abroad. Real numbers, honest advice.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://freestudenttools.com/blog/">
-  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta property="og:image" content="https://freestudenttools.com/assets/blog/chevening-hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Scholarship Guides — FreeStudentTools Blog">
-  <meta name="twitter:description" content="Honest guides on Chevening, Fulbright, DAAD, Gates Cambridge, and Erasmus Mundus.">
-  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:title" content="Student Guides: Scholarships, Visas & Study Abroad — FreeStudentTools Blog">
+  <meta name="twitter:description" content="35 practical guides for international students — scholarships, student visas, study costs, IELTS prep, and life abroad.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/blog/chevening-hero.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -168,6 +168,40 @@
       font-size: 1.35rem; font-weight: 800; color: #0f172a;
     }
     .blog-section-heading span { font-size: .85rem; color: #94a3b8; }
+
+    /* Category jump nav */
+    .blog-cat-nav {
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0 24px;
+    }
+    .blog-cat-nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .blog-cat-nav-inner::-webkit-scrollbar { display: none; }
+    .blog-cat-nav-inner a {
+      white-space: nowrap;
+      padding: 12px 16px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: #64748b;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    .blog-cat-nav-inner a:hover {
+      color: #1A73E8;
+      border-bottom-color: #1A73E8;
+    }
   </style>
 </head>
 <body>
@@ -246,19 +280,34 @@
 <!-- HERO -->
 <section class="blog-hero">
   <div class="container">
-    <div class="blog-hero-badge">✍️ Scholarship Guides</div>
-    <h1>Actually useful scholarship guides</h1>
-    <p>No generic advice. Real eligibility rules, real deadlines, real acceptance rates — and the parts most guides skip over.</p>
+    <div class="blog-hero-badge">📖 Student Guides</div>
+    <h1>Guides that actually help international students</h1>
+    <p>35 in-depth guides covering scholarships, student visas, study costs, language tests, health, accommodation, and post-study work visas. Real numbers, honest advice.</p>
     <div class="blog-stats">
-      <div class="blog-stat"><strong>5</strong>Major scholarships</div>
-      <div class="blog-stat"><strong>£0</strong>Cost to apply</div>
-      <div class="blog-stat"><strong>100%</strong>Fully funded</div>
+      <div class="blog-stat"><strong>35</strong>Guides published</div>
+      <div class="blog-stat"><strong>8</strong>Topic categories</div>
+      <div class="blog-stat"><strong>£0</strong>Always free</div>
     </div>
   </div>
 </section>
 
+<!-- CATEGORY NAV -->
+<nav class="blog-cat-nav" aria-label="Blog categories">
+  <div class="blog-cat-nav-inner">
+    <a href="#scholarships">Scholarship Guides</a>
+    <a href="#strategy">Application Strategy</a>
+    <a href="#admissions">University Admissions</a>
+    <a href="#finance">Financing</a>
+    <a href="#language">Language Tests</a>
+    <a href="#life">Health & Life Abroad</a>
+    <a href="#work">Part-Time Work</a>
+    <a href="#visas">Student Visas</a>
+    <a href="#poststudy">Post-Study Visas</a>
+  </div>
+</nav>
+
 <!-- POSTS -->
-<section class="blog-body">
+<section class="blog-body" id="scholarships">
   <div class="blog-section-heading">
     <h2>Scholarship Guides</h2>
     <span>9 guides</span>
@@ -395,7 +444,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="strategy" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Scholarship Application Strategy</h2>
     <span>3 guides</span>
@@ -448,7 +497,7 @@
 </section>
 
 <!-- NEW POSTS: University Admissions & Life Abroad -->
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="admissions" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>University Admissions Guides</h2>
     <span>4 guides</span>
@@ -514,7 +563,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="finance" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Financing Your Studies</h2>
     <span>4 guides</span>
@@ -580,7 +629,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="language" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Language Tests</h2>
     <span>2 guides</span>
@@ -618,7 +667,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="life" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Health, Wellbeing &amp; Student Life</h2>
     <span>4 guides</span>
@@ -684,7 +733,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="work" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Part-Time Work Abroad</h2>
     <span>2 guides</span>
@@ -722,7 +771,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="visas" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Student Visas</h2>
     <span>4 guides</span>
@@ -788,7 +837,7 @@
   </div>
 </section>
 
-<section class="blog-body" style="padding-top:0">
+<section class="blog-body" id="poststudy" style="padding-top:0">
   <div class="blog-section-heading">
     <h2>Post-Study Work Visas</h2>
     <span>4 guides</span>
