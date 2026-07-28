@@ -75,7 +75,7 @@ https://freestudenttools.com/admissions.html — deadline tracker for 25 major u
 
 https://freestudenttools.com/compare.html — compare any two universities side-by-side across 16 academic streams, tuition fees, rankings, accommodation, and admissions requirements.
 
-## Blog — Student Guides (25 posts)
+## Blog — Student Guides (33 posts)
 
 In-depth, data-backed guides for international students covering scholarships, university admissions, financing, language tests, health, accommodation, part-time work, and post-study visas.
 
@@ -131,3 +131,21 @@ In-depth, data-backed guides for international students covering scholarships, u
 - https://freestudenttools.com/blog/usa-opt-stem-opt-guide-f1-students — USA OPT and STEM OPT guide for F-1 students 2026 (12+24 months)
 - https://freestudenttools.com/blog/germany-post-study-work-permit — Germany post-study work permit: 18-month job seeker visa explained
 - https://freestudenttools.com/blog/canada-pgwp-post-graduate-work-permit — Canada PGWP guide 2026: post-graduate work permit up to 3 years
+
+**New Scholarship Guides (July 2026)**
+- https://freestudenttools.com/blog/korea-gks-scholarship-guide — Korea GKS scholarship 2026: Embassy Track vs University Track, ₩1,000,000/month, 155 countries
+- https://freestudenttools.com/blog/turkiye-burslari-scholarship-guide — Türkiye Bursları scholarship 2026: 40-day window, ₺18,000/month, 180 countries
+
+**Study Strategy (July 2026)**
+- https://freestudenttools.com/blog/how-to-write-statement-of-purpose-masters — How to write a statement of purpose for a master's: paragraph structure, 7 common mistakes, scholarship SOP differences
+- https://freestudenttools.com/blog/how-to-choose-country-to-study-abroad — UK vs USA vs Canada vs Australia vs Germany: tuition, work rights, post-study visa, PR pathway comparison
+
+**Finance & Savings (July 2026)**
+- https://freestudenttools.com/blog/international-student-taxes-guide — International student taxes 2026: Form 8843 (USA), UK Self Assessment, Canada T1, Australia TFN — country-by-country
+- https://freestudenttools.com/blog/student-discounts-guide-international-students — Student discounts guide 2026: ISIC, GitHub Student Pack, software, travel, food — what's actually worth getting
+
+**Work Authorization (July 2026)**
+- https://freestudenttools.com/blog/cpt-vs-opt-international-student-internships — CPT vs OPT guide for F-1 students: eligibility, application steps, 12-month CPT cap, STEM OPT extension
+
+**Pre-Departure (July 2026)**
+- https://freestudenttools.com/blog/international-student-packing-checklist — International student packing checklist: documents, electronics, medicines, money, what not to pack, 12 pre-departure tasks

@@ -322,6 +322,47 @@
   to = "/blog/commonwealth-scholarship-guide.html"
   status = 200
 
+# New batch — July 2026 gap analysis posts
+[[redirects]]
+  from = "/blog/korea-gks-scholarship-guide"
+  to = "/blog/korea-gks-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/turkiye-burslari-scholarship-guide"
+  to = "/blog/turkiye-burslari-scholarship-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-write-statement-of-purpose-masters"
+  to = "/blog/how-to-write-statement-of-purpose-masters.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/international-student-taxes-guide"
+  to = "/blog/international-student-taxes-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/student-discounts-guide-international-students"
+  to = "/blog/student-discounts-guide-international-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/cpt-vs-opt-international-student-internships"
+  to = "/blog/cpt-vs-opt-international-student-internships.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/international-student-packing-checklist"
+  to = "/blog/international-student-packing-checklist.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/how-to-choose-country-to-study-abroad"
+  to = "/blog/how-to-choose-country-to-study-abroad.html"
+  status = 200
+
 # Custom 404 fallback
 [[redirects]]
   from = "/*"
