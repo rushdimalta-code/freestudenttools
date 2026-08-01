@@ -147,6 +147,28 @@
         </li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/about.html">About</a></li>
+        <li class="nav-lang-wrap">
+          <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language" aria-expanded="false" aria-haspopup="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="fstCurrentLang">EN</span>
+          </button>
+          <div class="lang-menu" id="fstLangMenu" role="menu">
+            <a href="#" onclick="fstSwitchLang('en');return false" role="menuitem">🇬🇧 English</a>
+            <a href="#" onclick="fstSwitchLang('zh-CN');return false" role="menuitem">🇨🇳 中文</a>
+            <a href="#" onclick="fstSwitchLang('ms');return false" role="menuitem">🇲🇾 Bahasa</a>
+            <a href="#" onclick="fstSwitchLang('hi');return false" role="menuitem">🇮🇳 हिन्दी</a>
+            <a href="#" onclick="fstSwitchLang('ta');return false" role="menuitem">🇸🇬 தமிழ்</a>
+            <a href="#" onclick="fstSwitchLang('ml');return false" role="menuitem">🇮🇳 മലയാളം</a>
+            <a href="#" onclick="fstSwitchLang('bn');return false" role="menuitem">🇧🇩 বাংলা</a>
+            <a href="#" onclick="fstSwitchLang('ar');return false" role="menuitem">🇸🇦 العربية</a>
+            <a href="#" onclick="fstSwitchLang('fr');return false" role="menuitem">🇫🇷 Français</a>
+            <a href="#" onclick="fstSwitchLang('es');return false" role="menuitem">🇪🇸 Español</a>
+            <a href="#" onclick="fstSwitchLang('ru');return false" role="menuitem">🇷🇺 Русский</a>
+            <a href="#" onclick="fstSwitchLang('tl');return false" role="menuitem">🇵🇭 Filipino</a>
+            <a href="#" onclick="fstSwitchLang('ko');return false" role="menuitem">🇰🇷 한국어</a>
+            <a href="#" onclick="fstSwitchLang('ja');return false" role="menuitem">🇯🇵 日本語</a>
+          </div>
+        </li>
       </ul>
       <button class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
@@ -171,6 +193,23 @@
     <a href="/blog/">Blog</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
+    <span class="nav-mobile-label nav-mobile-lang-label">🌐 Language</span>
+    <div class="lang-mobile-grid">
+      <a href="#" onclick="fstSwitchLang('zh-CN');return false">🇨🇳 中文</a>
+      <a href="#" onclick="fstSwitchLang('ms');return false">🇲🇾 Bahasa</a>
+      <a href="#" onclick="fstSwitchLang('hi');return false">🇮🇳 हिन्दी</a>
+      <a href="#" onclick="fstSwitchLang('ta');return false">🇸🇬 தமிழ்</a>
+      <a href="#" onclick="fstSwitchLang('ml');return false">🇮🇳 Malayalam</a>
+      <a href="#" onclick="fstSwitchLang('bn');return false">🇧🇩 বাংলা</a>
+      <a href="#" onclick="fstSwitchLang('ar');return false">🇸🇦 العربية</a>
+      <a href="#" onclick="fstSwitchLang('fr');return false">🇫🇷 Français</a>
+      <a href="#" onclick="fstSwitchLang('es');return false">🇪🇸 Español</a>
+      <a href="#" onclick="fstSwitchLang('ru');return false">🇷🇺 Русский</a>
+      <a href="#" onclick="fstSwitchLang('tl');return false">🇵🇭 Filipino</a>
+      <a href="#" onclick="fstSwitchLang('ko');return false">🇰🇷 한국어</a>
+      <a href="#" onclick="fstSwitchLang('ja');return false">🇯🇵 日本語</a>
+      <a href="#" onclick="fstSwitchLang('en');return false">🇬🇧 English</a>
+    </div>
   </nav>
 </nav>
 
@@ -331,5 +370,9 @@
 </div>
 
 <script src="/js/common.js"></script>
+  <div id="google_translate_element" style="display:none" aria-hidden="true"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+  <script src="/js/lang-switcher.js" defer></script>
 </body>
 </html>

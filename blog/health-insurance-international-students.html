@@ -194,6 +194,23 @@
     <a href="/blog/" style="color:#1A73E8;font-weight:700;">📖 Student Guides</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
+    <span class="nav-mobile-label nav-mobile-lang-label">🌐 Language</span>
+    <div class="lang-mobile-grid">
+      <a href="#" onclick="fstSwitchLang('zh-CN');return false">🇨🇳 中文</a>
+      <a href="#" onclick="fstSwitchLang('ms');return false">🇲🇾 Bahasa</a>
+      <a href="#" onclick="fstSwitchLang('hi');return false">🇮🇳 हिन्दी</a>
+      <a href="#" onclick="fstSwitchLang('ta');return false">🇸🇬 தமிழ்</a>
+      <a href="#" onclick="fstSwitchLang('ml');return false">🇮🇳 Malayalam</a>
+      <a href="#" onclick="fstSwitchLang('bn');return false">🇧🇩 বাংলা</a>
+      <a href="#" onclick="fstSwitchLang('ar');return false">🇸🇦 العربية</a>
+      <a href="#" onclick="fstSwitchLang('fr');return false">🇫🇷 Français</a>
+      <a href="#" onclick="fstSwitchLang('es');return false">🇪🇸 Español</a>
+      <a href="#" onclick="fstSwitchLang('ru');return false">🇷🇺 Русский</a>
+      <a href="#" onclick="fstSwitchLang('tl');return false">🇵🇭 Filipino</a>
+      <a href="#" onclick="fstSwitchLang('ko');return false">🇰🇷 한국어</a>
+      <a href="#" onclick="fstSwitchLang('ja');return false">🇯🇵 日本語</a>
+      <a href="#" onclick="fstSwitchLang('en');return false">🇬🇧 English</a>
+    </div>
   </nav>
 </nav>
 
@@ -389,5 +406,9 @@
   </div>
 </footer>
 <script src="/js/common.js" defer></script>
+  <div id="google_translate_element" style="display:none" aria-hidden="true"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}</script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+  <script src="/js/lang-switcher.js" defer></script>
 </body>
 </html>
