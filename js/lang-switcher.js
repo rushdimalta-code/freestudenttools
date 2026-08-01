@@ -6,16 +6,16 @@ var FST_BROWSER_LANG_MAP = {
   'ar':'ar','fr':'fr','es':'es','ru':'ru',
   'tl':'tl','fil':'tl',
   'ko':'ko','ja':'ja',
-  'de':'de'
+  'de':'de','pt':'pt'
 };
 
 // Supported lang codes
-var FST_SUPPORTED = ['zh-CN','zh-TW','ms','hi','ta','ml','bn','ar','fr','es','ru','tl','ko','ja','de'];
+var FST_SUPPORTED = ['zh-CN','zh-TW','ms','hi','ta','ml','bn','ar','fr','es','ru','tl','ko','ja','de','pt'];
 
 var FST_LANG_LABELS = {
   'en':'EN','zh-CN':'中文','ms':'MY','hi':'हि','ta':'தமிழ்',
   'ml':'ML','bn':'BN','ar':'AR','fr':'FR','es':'ES',
-  'ru':'RU','tl':'TL','ko':'한국','ja':'日本','de':'DE'
+  'ru':'RU','tl':'TL','ko':'한국','ja':'日本','de':'DE','pt':'PT'
 };
 
 function fstGetCookieLang() {
