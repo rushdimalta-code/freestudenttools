@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-01",
+  "lastUpdated": "2026-08-02",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1293,7 +1293,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Rooted in Green politics and feminist values. Strong social engagement is as important as academic achievement.",
       "deadline": "2026-09-01",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.boell.de/en/scholarships"
     },
