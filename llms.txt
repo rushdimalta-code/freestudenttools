@@ -157,3 +157,7 @@ In-depth, data-backed guides for international students covering scholarships, u
 **Arrival & Travel (August 2026)**
 - https://freestudenttools.com/blog/international-student-first-week-arrival-guide — First week arrival checklist 2026: BRP collection (UK 10-day window), bank account, GP registration, SIM card, day-by-day guide
 - https://freestudenttools.com/blog/cheap-flights-for-international-students — How to find cheap international student flights 2026: 2–6 month booking window, StudentUniverse, Google Flights price calendar, baggage cost math
+
+**Tools & Hubs (August 2026)**
+- https://freestudenttools.com/travel — International student travel hub: flight search (Travelpayouts), airport transfers via GetTransfer (1,000+ cities), flight delay compensation via AirHelp (EU261, up to €600), Yesim eSIM (200+ countries), health check requirements, arrival guides
+- https://freestudenttools.com/health-checks — Student health check requirements tool: select origin + destination country; shows TB test requirements, yellow fever vaccination, medical exam obligations, recommended vaccinations, health insurance rules, GP registration guidance by country

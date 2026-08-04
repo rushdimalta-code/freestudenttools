@@ -4,7 +4,7 @@
   <!-- Core pages -->
   <url>
     <loc>https://freestudenttools.com/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2124,6 +2124,12 @@
   </url>
   <url>
     <loc>https://freestudenttools.com/blog/international-student-first-week-arrival-guide</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freestudenttools.com/health-checks</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
