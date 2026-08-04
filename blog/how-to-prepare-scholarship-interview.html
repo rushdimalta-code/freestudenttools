@@ -313,6 +313,22 @@
 </section>
 
 <!-- READ NEXT -->
+
+<!-- Netlify Form (hidden) -->
+<form name="blog-feedback" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="page">
+  <input type="hidden" name="vote">
+  <input name="bot-field">
+</form>
+<!-- Feedback UI -->
+<div class="blog-feedback-section">
+  <p>Was this guide helpful?</p>
+  <div id="fstFbBtns">
+    <button class="fst-fb-btn fst-fb-yes" onclick="fstSubmitFeedback('yes')">&#128077; Yes, helpful</button>
+    <button class="fst-fb-btn fst-fb-no" onclick="fstSubmitFeedback('no')">&#128078; Needs improvement</button>
+  </div>
+  <p id="fstFbThanks" class="fst-fb-thanks" style="display:none">Thanks for your feedback! We read every response.</p>
+</div>
 <section class="read-next-section">
   <div class="container">
     <p class="read-next-label">Keep reading</p>

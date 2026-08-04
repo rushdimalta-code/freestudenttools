@@ -232,6 +232,36 @@ function downloadText(text, filename) {
   downloadBlob(blob, filename);
 }
 
+// ===== BLOG FEEDBACK =====
+function fstSubmitFeedback(vote) {
+  var slug = window.location.pathname.replace(/\/$/, '') || '/';
+  var key = 'fst_fb_' + slug;
+  if (localStorage.getItem(key)) return;
+  var data = new FormData();
+  data.append('form-name', 'blog-feedback');
+  data.append('page', slug);
+  data.append('vote', vote);
+  fetch('/', { method: 'POST', body: data })
+    .catch(function() {});
+  localStorage.setItem(key, vote);
+  var btns = document.getElementById('fstFbBtns');
+  var thanks = document.getElementById('fstFbThanks');
+  if (btns) btns.style.display = 'none';
+  if (thanks) thanks.style.display = 'block';
+}
+(function() {
+  var slug = window.location.pathname.replace(/\/$/, '') || '/';
+  var voted = localStorage.getItem('fst_fb_' + slug);
+  if (voted) {
+    window.addEventListener('DOMContentLoaded', function() {
+      var btns = document.getElementById('fstFbBtns');
+      var thanks = document.getElementById('fstFbThanks');
+      if (btns) btns.style.display = 'none';
+      if (thanks) thanks.style.display = 'block';
+    });
+  }
+})();
+
 // ===== BACK TO TOP =====
 (function () {
   const btn = document.createElement('button');
