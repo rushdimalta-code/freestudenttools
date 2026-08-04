@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-9843476971668607">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>Travel Hub for International Students — Flights, eSIM, Health Checks</title>
+  <meta name="description" content="Everything international students need for travel: find cheap flights, get an eSIM for 200+ countries, check health and vaccination requirements, and book accommodation.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/travel.html">
+  <meta property="og:title" content="Travel Hub for International Students — Flights, eSIM, Health Checks">
+  <meta property="og:description" content="Flights, eSIM for 200+ countries, health check requirements, and arrival guide — everything in one place for international student travel.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/travel.html">
+  <meta property="og:image" content="https://freestudenttools.com/assets/blog/cheap-flights-for-international-students-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Travel Hub for International Students — Flights, eSIM, Health Checks">
+  <meta name="twitter:description" content="Flights, eSIM, health requirements, and arrival checklists for international students.">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/blog/cheap-flights-for-international-students-hero.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Travel Hub for International Students",
+    "description": "Everything international students need for travel: cheap flights, eSIM data plans, health and vaccination requirements, and arrival guides.",
+    "url": "https://freestudenttools.com/travel.html",
+    "publisher": { "@type": "Organization", "name": "FreeStudentTools", "url": "https://freestudenttools.com" }
+  }
+  </script>
+  <link rel="preload" href="/assets/fonts/inter-100-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
+<script data-no-defer="1">
+  (function(){var s=document.createElement("script");s.async=1;s.src='https://emrldco.com/NTU4Mzg3.js?t=558387';document.head.appendChild(s);})();
+</script>
+  <style>
+    .travel-hero {
+      background: linear-gradient(140deg, #0B1120 0%, #0a2e47 50%, #0F2456 100%);
+      padding: 80px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .travel-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(14,165,233,.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .travel-hero>.container { position: relative; z-index: 1; }
+    .travel-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.03em;
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+    .travel-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.65);
+      max-width: 560px;
+      line-height: 1.7;
+      margin: 0 0 32px;
+    }
+    .travel-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .travel-stat strong { font-size: 1.5rem; font-weight: 800; color: #38bdf8; display: block; }
+    .travel-stat span { font-size: .8rem; color: rgba(255,255,255,.5); }
+    .travel-sections { padding: 56px 0 72px; }
+    .travel-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .travel-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      padding: 28px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .18s, box-shadow .18s;
+      display: flex;
+      flex-direction: column;
+    }
+    .travel-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.09); }
+    .travel-card-icon { font-size: 2rem; margin-bottom: 14px; }
+    .travel-card h2 { font-size: 1.1rem; font-weight: 800; color: #0f172a; margin: 0 0 8px; }
+    .travel-card p { font-size: .88rem; color: #64748b; line-height: 1.65; margin: 0 0 16px; flex: 1; }
+    .travel-card-cta { font-size: .82rem; font-weight: 700; color: #1A73E8; }
+    .travel-card.esim { border-top: 3px solid #10b981; }
+    .travel-card.flights { border-top: 3px solid #6366f1; }
+    .travel-card.health { border-top: 3px solid #f59e0b; }
+    .travel-card.arrival { border-top: 3px solid #0ea5e9; }
+    .section-label {
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+    .section-h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 8px;
+    }
+    .section-desc {
+      font-size: .95rem;
+      color: #64748b;
+      max-width: 600px;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .flights-widget-wrap {
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      border: 1px solid #bae6fd;
+      border-radius: 18px;
+      padding: 32px 28px;
+      margin-top: 32px;
+    }
+    .flights-widget-wrap h3 { font-size: 1rem; font-weight: 700; color: #0f172a; margin: 0 0 6px; }
+    .flights-widget-wrap p { font-size: .85rem; color: #475569; margin: 0 0 16px; }
+    .esim-card-inner {
+      background: linear-gradient(135deg, #ECFDF5, #D1FAE5);
+      border: 1px solid #A7F3D0;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-top: 24px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .esim-logo { font-size: 2.5rem; flex-shrink: 0; }
+    .esim-info h3 { font-size: 1rem; font-weight: 800; color: #065f46; margin: 0 0 4px; }
+    .esim-info p { font-size: .85rem; color: #047857; margin: 0 0 12px; line-height: 1.55; }
+    .esim-btn {
+      display: inline-block;
+      background: #10b981;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: .85rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .esim-btn:hover { background: #059669; }
+    .esim-disclosure { font-size: .72rem; color: #6b7280; margin-top: 8px; }
+    .health-tool-cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .15s;
+    }
+    .health-tool-cta:hover { box-shadow: 0 6px 20px rgba(0,0,0,.07); }
+    .health-tool-cta-icon { font-size: 2rem; flex-shrink: 0; }
+    .health-tool-cta-text h3 { font-size: .95rem; font-weight: 800; color: #92400e; margin: 0 0 4px; }
+    .health-tool-cta-text p { font-size: .83rem; color: #b45309; margin: 0; line-height: 1.55; }
+    .guide-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .guide-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      transition: box-shadow .15s;
+    }
+    .guide-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); }
+    .guide-card-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .guide-card strong { font-size: .88rem; color: #0f172a; display: block; margin-bottom: 3px; }
+    .guide-card span { font-size: .78rem; color: #94a3b8; }
+    .divider { border: none; border-top: 1px solid #e2e8f0; margin: 48px 0; }
+  </style>
+</head>
+<body class="page-wrapper">
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="FreeStudentTools home">
+        <picture><source srcset="/assets/logo-sm.webp" type="image/webp"><img src="/assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager"></picture>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">University Hub <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/admissions.html">Admissions Tracker</a></li>
+            <li><a href="/scholarships.html">Scholarships Finder</a></li>
+            <li><a href="/scholarship-guide.html">Scholarship Guide</a></li>
+            <li><a href="/compare.html">Compare Degrees</a></li>
+            <li><a href="/compare-scholarships.html">Compare Scholarships</a></li>
+            <li><a href="/tips.html">Student Tips</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Tools <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/ocr.html">OCR Scanner</a></li>
+            <li><a href="/pdf-converter.html">PDF Converter</a></li>
+            <li><a href="/compressor.html">PDF Compressor</a></li>
+            <li><a href="/image-compressor.html">Image Compressor</a></li>
+            <li><a href="/pdf-merger.html">PDF Merger</a></li>
+            <li><a href="/pdf-extractor.html">PDF Page Extractor</a></li>
+            <li><a href="/citation-generator.html">Citation Generator</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/" style="background:#EFF6FF;color:#1A73E8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <span class="nav-mobile-label">University Hub</span>
+    <a href="/admissions.html">Admissions Tracker</a>
+    <a href="/scholarships.html">Scholarships Finder</a>
+    <a href="/compare.html">Compare Degrees</a>
+    <a href="/tips.html">Student Tips</a>
+    <span class="nav-mobile-label">Tools</span>
+    <a href="/ocr.html">OCR Scanner</a>
+    <a href="/pdf-converter.html">PDF Converter</a>
+    <a href="/compressor.html">PDF Compressor</a>
+    <a href="/citation-generator.html">Citation Generator</a>
+    <a href="/blog/" style="color:#1A73E8;font-weight:700;">📖 Student Guides</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</nav>
+
+<!-- HERO -->
+<section class="travel-hero">
+  <div class="container">
+    <h1>Travel Hub for International Students</h1>
+    <p>Flights, eSIM data plans, health check requirements, and arrival checklists — everything you need before and during your journey to study abroad.</p>
+    <div class="travel-stats">
+      <div class="travel-stat"><strong>200+</strong><span>Countries covered</span></div>
+      <div class="travel-stat"><strong>40–60%</strong><span>Potential flight savings</span></div>
+      <div class="travel-stat"><strong>Free</strong><span>All tools &amp; checks</span></div>
+    </div>
+  </div>
+</section>
+
+<main class="travel-sections">
+  <div class="container">
+
+    <!-- QUICK LINKS -->
+    <div class="travel-card-grid">
+
+      <a href="#flights" class="travel-card flights">
+        <div class="travel-card-icon">✈️</div>
+        <h2>Find Cheap Flights</h2>
+        <p>Search flight deals and learn the booking strategy that saves international students 40–60% on long-haul routes.</p>
+        <span class="travel-card-cta">Find flights →</span>
+      </a>
+
+      <a href="#esim" class="travel-card esim">
+        <div class="travel-card-icon">📶</div>
+        <h2>eSIM for 200+ Countries</h2>
+        <p>Get data the moment you land — no queuing for a local SIM at the airport, no roaming bills. Plans from ~$4/day.</p>
+        <span class="travel-card-cta">Get connected →</span>
+      </a>
+
+      <a href="/health-checks.html" class="travel-card health">
+        <div class="travel-card-icon">🏥</div>
+        <h2>Health &amp; Vaccination Checks</h2>
+        <p>See what TB tests, yellow fever certificates, or medical exams you need based on your origin and destination country.</p>
+        <span class="travel-card-cta">Check requirements →</span>
+      </a>
+
+      <a href="/blog/international-student-first-week-arrival-guide" class="travel-card arrival">
+        <div class="travel-card-icon">🛬</div>
+        <h2>First Week Arrival Checklist</h2>
+        <p>Day-by-day guide: BRP collection (UK), bank account, GP registration, SIM card — in exactly the right order.</p>
+        <span class="travel-card-cta">Read checklist →</span>
+      </a>
+
+    </div>
+
+    <hr class="divider">
+
+    <!-- FLIGHTS -->
+    <div id="flights">
+      <p class="section-label">Flights</p>
+      <h2 class="section-h2">Search for Student Flights</h2>
+      <p class="section-desc">Compare hundreds of airlines and find the best price for your route. The widget below searches live prices from major carriers and booking platforms.</p>
+
+      <div class="flights-widget-wrap">
+        <h3>✈️ Flight Search</h3>
+        <p>Search flights by destination — includes budget carriers, major airlines, and student-friendly routes.</p>
+        <script async src="https://tpemb.com/content?currency=usd&trs=558387&shmarker=274673&locale=en&stops=any&show_hotels=true&border_radius=5&plain=true"></script>
+        <p style="font-size:.72rem;color:#94a3b8;margin:12px 0 0">Powered by Travelpayouts. Clicking "Book" takes you to the airline or booking platform website. FreeStudentTools may earn a commission at no extra cost to you.</p>
+      </div>
+
+      <div class="guide-cards" style="margin-top:20px">
+        <a href="/blog/cheap-flights-for-international-students" class="guide-card">
+          <div class="guide-card-icon">💡</div>
+          <div><strong>How to Find Cheap Flights as an International Student</strong><span>Booking windows, student fares, VPN trick, baggage math →</span></div>
+        </a>
+        <a href="/blog/international-student-packing-checklist" class="guide-card">
+          <div class="guide-card-icon">🧳</div>
+          <div><strong>What to Pack — Carry-on vs Checked Luggage</strong><span>Packing checklist + what to ship separately →</span></div>
+        </a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- eSIM -->
+    <div id="esim">
+      <p class="section-label">Connectivity</p>
+      <h2 class="section-h2">Stay Connected From the Moment You Land</h2>
+      <p class="section-desc">Roaming charges can hit £10–20/day if you're not prepared. An eSIM activates instantly on your phone before you board — no airport SIM queues, no physical card swap.</p>
+
+      <div class="esim-card-inner">
+        <div class="esim-logo">📱</div>
+        <div class="esim-info">
+          <h3>Yesim — eSIM for 200+ Countries</h3>
+          <p>Instant activation, covers 200+ countries, plans from ~$4/day. Works on any unlocked iPhone or Android with eSIM support. Buy before you fly — it starts working the moment you arrive.</p>
+          <a href="https://yesim.tpx.li/DLqJkHJU" rel="noopener sponsored" class="esim-btn">Get your Yesim eSIM →</a>
+          <p class="esim-disclosure">Affiliate disclosure: FreeStudentTools earns a small commission if you purchase through this link, at no extra cost to you.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:20px;font-size:.88rem;color:#64748b;line-height:1.7">
+        <p><strong>Does your phone support eSIM?</strong> Most phones from 2019 onwards support eSIM — including iPhone XS and later, Google Pixel 3 and later, and Samsung Galaxy S20 and later. You also need your phone to be <em>unlocked</em> (not carrier-locked to your home country network). Check in your phone settings under "Carrier" or "SIM".</p>
+        <p><strong>When to activate:</strong> Buy the eSIM before you travel. Activate it a few hours before landing so it's ready the moment you step off the plane. You can keep your home SIM active simultaneously for calls home.</p>
+        <p><strong>Getting a local permanent SIM:</strong> For your permanent local number (you'll need one for bank accounts and university admin), get a local SIM within 2–3 days of arrival. The eSIM bridges the gap until then.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- HEALTH CHECKS -->
+    <div id="health">
+      <p class="section-label">Health Requirements</p>
+      <h2 class="section-h2">Do You Need a Health Check or Vaccination Before You Travel?</h2>
+      <p class="section-desc">Some countries require TB tests, yellow fever certificates, or medical exams for student visa applicants — and these must be done in your home country before departure, not on arrival.</p>
+
+      <a href="/health-checks.html" class="health-tool-cta">
+        <div class="health-tool-cta-icon">🏥</div>
+        <div class="health-tool-cta-text">
+          <h3>Free Health Requirements Checker</h3>
+          <p>Select your origin country and destination to see exactly what health certificates and vaccinations you need. Covers TB, Yellow Fever, medical exams, and health insurance requirements.</p>
+        </div>
+      </a>
+
+      <div class="guide-cards" style="margin-top:20px">
+        <a href="/blog/health-insurance-international-students" class="guide-card">
+          <div class="guide-card-icon">💊</div>
+          <div><strong>Health Insurance for International Students</strong><span>NHS, OSHC, UHIP, private — what you need by country →</span></div>
+        </a>
+        <a href="/blog/student-mental-health-abroad" class="guide-card">
+          <div class="guide-card-icon">🧠</div>
+          <div><strong>Student Mental Health Abroad</strong><span>1 in 3 international students experiences depression or anxiety →</span></div>
+        </a>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ARRIVAL -->
+    <div id="arrival">
+      <p class="section-label">Arrival</p>
+      <h2 class="section-h2">First Week Checklist — What to Sort and When</h2>
+      <p class="section-desc">Miss one step in your first week and it cascades. BRP collection, bank account, GP registration — here's the order that matters.</p>
+
+      <div class="guide-cards">
+        <a href="/blog/international-student-first-week-arrival-guide" class="guide-card">
+          <div class="guide-card-icon">🛬</div>
+          <div><strong>First Week Arrival Checklist 2026</strong><span>Day-by-day: BRP, bank, GP, SIM, Anmeldung →</span></div>
+        </a>
+        <a href="/blog/international-student-packing-checklist" class="guide-card">
+          <div class="guide-card-icon">🧳</div>
+          <div><strong>International Student Packing Checklist</strong><span>What to bring, what to ship, what to buy →</span></div>
+        </a>
+        <a href="/blog/student-bank-accounts-international-students" class="guide-card">
+          <div class="guide-card-icon">🏦</div>
+          <div><strong>Bank Accounts for International Students</strong><span>Monzo, Wise, or local bank — which to open first →</span></div>
+        </a>
+        <a href="/blog/student-accommodation-abroad-guide" class="guide-card">
+          <div class="guide-card-icon">🏠</div>
+          <div><strong>Student Accommodation Abroad Guide</strong><span>Halls vs private — costs, timing, and what to check →</span></div>
+        </a>
+        <a href="/blog/how-to-budget-first-year-abroad" class="guide-card">
+          <div class="guide-card-icon">💰</div>
+          <div><strong>How to Budget Your First Year Abroad</strong><span>Month-by-month breakdown by country →</span></div>
+        </a>
+        <a href="/blog/culture-shock-university-abroad" class="guide-card">
+          <div class="guide-card-icon">🌍</div>
+          <div><strong>Culture Shock at University Abroad</strong><span>4 stages, what weeks 6–10 feel like, what helps →</span></div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="FreeStudentTools" width="36" height="36">
+        <p>Free tools and guides for international students worldwide.</p>
+      </div>
+      <div class="footer-links">
+        <div><strong>Travel</strong><a href="/travel.html">Travel Hub</a><a href="/blog/cheap-flights-for-international-students">Cheap Flights</a><a href="/blog/international-student-first-week-arrival-guide">First Week Checklist</a><a href="/health-checks.html">Health Checks</a></div>
+        <div><strong>Guides</strong><a href="/blog/">All Guides</a><a href="/scholarships.html">Scholarships</a><a href="/admissions.html">Admissions</a><a href="/tips.html">Student Tips</a></div>
+        <div><strong>About</strong><a href="/about.html">About Us</a><a href="/contact.html">Contact</a><a href="/privacy.html">Privacy</a><a href="/cookies.html">Cookies</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 FreeStudentTools.com — All tools are free, no sign-up required.</p></div>
+  </div>
+</footer>
+
+<div id="cookieBanner" class="cookie-banner">
+  <p>We use cookies to improve your experience. <a href="/cookies.html">Learn more</a></p>
+  <div class="cookie-actions">
+    <button id="cookieAccept" class="btn btn-primary btn-sm">Accept</button>
+    <button id="cookieDecline" class="btn btn-ghost btn-sm">Decline</button>
+  </div>
+</div>
+
+<script src="/js/common.js" defer></script>
+<script src="/js/lang-switcher.js" defer></script>
+</body>
+</html>
