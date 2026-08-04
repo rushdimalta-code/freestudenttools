@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-03",
+  "lastUpdated": "2026-08-04",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1000,7 +1000,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the world's most extensive scholarship programs. Study in any of 500+ Indian universities. Strong cultural exchange component.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://a2ascholarships.iccr.gov.in"
     },
@@ -1064,7 +1064,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "For Saudi nationals, not international students. One of the world's largest government-funded outbound programs.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.sacm.org.sa/en"
     },
@@ -1159,7 +1159,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply through a specific Mastercard Foundation partner university — not directly to the Foundation. Each has its own deadline.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://mastercardfdn.org/all/scholars"
     },
@@ -1763,7 +1763,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Priority given to Pacific Island countries. Managed by New Zealand High Commissions and Embassies.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.mfat.govt.nz/en/aid-and-development/new-zealand-scholarships"
     },
@@ -1798,7 +1798,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — only a few hundred places per year for overseas study. Selection involves interviews and psychological tests.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.jpa.gov.my/index.php/en/biasiswa"
     },
@@ -1930,7 +1930,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply to specific partner universities — not directly to AfDB. Check their website for current partner programs.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.afdb.org/en/topics-and-sectors/sectors/human-development/scholarships"
     },
@@ -2063,7 +2063,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Most NTU PhD students receive some form of funding — the Research Scholarship is the main vehicle. Competitive for top students.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.ntu.edu.sg/graduate-college/admissions/scholarships-and-financial-aid"
     },
@@ -2283,7 +2283,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Funding often linked to specific research projects with individual supervisors. Contact faculty in advance to discuss opportunities.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.tcd.ie/Graduate_Studies/scholarships"
     },
@@ -2379,7 +2379,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "57 designated institutions in Asia-Pacific, Australia, and the UK. Must apply through an ADB-JSP designated university.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.adb.org/site/careers/japan-scholarship-program"
     },
@@ -2414,7 +2414,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Focuses on development-oriented fields. Check OPEC Fund website for current open calls and eligible nationalities.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://opecfund.org/what-we-do/people/scholarship-program"
     },
@@ -2612,7 +2612,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Priority to faculty and researchers who will return to Pakistani institutions. PhD programs are prioritized. Bonding clause applies.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.hec.gov.pk/english/scholarships/pages/default.aspx"
     },
@@ -3084,7 +3084,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Imperial's most prestigious PhD award — around 50 per year across all faculties. Auto-considered with PhD applications submitted by January.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd-scholarships"
     },
@@ -3113,7 +3113,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "100 awards per year. Priority given to students from countries with fewer opportunities. Apply through UCL scholarship portal after receiving admission offer.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.ucl.ac.uk/scholarships/global-masters-scholarship"
     },
@@ -3233,7 +3233,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers the overseas fee premium only — often combined with a stipend from a UKRI grant or UCL departmental bursary to form a full package.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.ucl.ac.uk/scholarships/overseas-research-scholarship"
     },
@@ -3390,7 +3390,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply to the specific Heidelberg Graduate School that matches your field. Each has its own intake and deadline.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.uni-heidelberg.de/en/study/all-study-programs/doctoral-programs"
     },
@@ -3742,7 +3742,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Kyoto University can recommend promising students for MEXT scholarships through its own intake. Contact faculty directly with your CV and research proposal.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.kyoto-u.ac.jp/en/education-campus/procedures-entrance/scholarships"
     },
@@ -3924,7 +3924,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Automatically assessed with UQ admission application — no separate scholarship form. UQ is Australia's top-10 research-intensive university.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://scholarships.uq.edu.au/scholarship/uq-international-excellence-award"
     },
@@ -4271,7 +4271,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Named after Tanzania's founding father. One of the AU's flagship scholarships for intra-African postgraduate mobility. Check AU Commission for current partner universities.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://au.int/en/mnjnyerere"
     },
@@ -4305,7 +4305,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Rwanda invests heavily in elite education overseas. Top candidates are sent to Oxford, Cambridge, MIT, Harvard, and similar institutions.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.mineduc.gov.rw/index.php?id=73"
     },
@@ -4460,7 +4460,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "UWI is the premier university of the Caribbean. Open/merit scholarships available at all four campuses.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.uwi.edu/scholarships"
     },
@@ -4910,7 +4910,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "UNDP's academic scholarship programs are small in scale but provide access to strategic institutions. Check UNDP Procurement Notice or country offices.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.undp.org/careers"
     },
@@ -5154,7 +5154,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "27 BBSRC DTPs at major UK universities. Apply through the specific DTP. Most competitive programs have January–February deadlines for October entry.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://bbsrc.ukri.org/skills/investing-doctoral-training"
     },
@@ -5185,7 +5185,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "EPSRC funds the majority of engineering PhD positions at UK universities. Programs at Imperial, Cambridge, Oxford, Manchester, Edinburgh, Southampton, etc.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://epsrc.ukri.org/skills/students/dta"
     },
@@ -6278,7 +6278,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "ESRC funds the majority of social science PhD positions in the UK. DTPs at LSE, UCL, Edinburgh, Manchester, Bristol, Warwick, and others.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://esrc.ukri.org/skills-and-careers/doctoral-training/doctoral-training-partnerships"
     },
@@ -6308,7 +6308,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "AHRC funds the UK's leading humanities PhD programs. Consortia include the Open-Oxford-Cambridge DTP, the Midlands4Cities DTP, and London arts/humanities programs.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://ahrc.ukri.org/skills/phdstudents/ourfundingroutes/dtps"
     },
@@ -6694,7 +6694,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Part of the Young African Leaders Initiative (YALI). Not a degree program — a 6-week intensive at US universities. Very popular: over 50,000 applications for ~700 spots.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://yali.state.gov/washington"
     },
@@ -6849,7 +6849,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Not a degree — a research fellowship for working journalists. Fellows write research reports on issues in global journalism. Held at Oxford's Green Templeton College.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://reutersinstitute.politics.ox.ac.uk/fellowships/apply-fellowship"
     },
@@ -7137,7 +7137,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "NTU's research scholarship is one of the most generous in Asia. Some schools supplement to SGD $2,500–3,500. Excellent global career outcome for graduates.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.ntu.edu.sg/education/graduate-programme/research-scholarships"
     },
@@ -7225,7 +7225,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "UQ is ranked top 50 globally. The RTP scholarship funds both domestic and international PhD students at equivalent rates. Apply at least 6 months in advance.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://graduate-school.uq.edu.au/scholarships"
     },
@@ -7383,7 +7383,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "NATO Science Fellowships support research cooperation between member and partner countries. Check your national science agency for administration details.",
       "deadline": "2027-01-31",
       "notificationDate": "2027-03-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.nato.int/cps/en/natohq/topics_85425.htm"
     },
