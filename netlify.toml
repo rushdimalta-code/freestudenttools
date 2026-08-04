@@ -145,6 +145,11 @@
   to = "/blog/"
   status = 301
 
+[[redirects]]
+  from = "/search"
+  to = "/search.html"
+  status = 200
+
 # Blog post clean URLs
 [[redirects]]
   from = "/blog/chevening-scholarship-guide"

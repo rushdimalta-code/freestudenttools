@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-9843476971668607">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>Search FreeStudentTools — Guides, Tools & Scholarships</title>
+  <meta name="description" content="Search 43 student guides, 7 free PDF tools, and 200+ scholarships on FreeStudentTools. Find exactly what you need for studying abroad.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/search">
+  <meta property="og:title" content="Search FreeStudentTools">
+  <meta property="og:description" content="Search guides, tools, and scholarships for international students.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://freestudenttools.com/search">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Search FreeStudentTools">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  <link rel="preload" href="/assets/fonts/inter-100-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="stylesheet" href="/css/style.css">
+<script data-no-defer="1">
+  (function(){var s=document.createElement("script");s.async=1;s.src='https://emrldco.com/NTU4Mzg3.js?t=558387';document.head.appendChild(s);})();
+</script>
+  <style>
+    .search-hero {
+      background: linear-gradient(140deg, #0B1120 0%, #0F2456 60%, #1a1040 100%);
+      padding: 64px 0 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .search-hero::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(99,102,241,.2) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .search-hero > .container { position: relative; z-index: 1; }
+    .search-hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800; color: #fff;
+      letter-spacing: -.02em; margin: 0 0 24px;
+    }
+    .search-wrap {
+      max-width: 580px; margin: 0 auto;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 16px 52px 16px 20px;
+      border-radius: 14px;
+      border: 2px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .2s, background .2s;
+      box-sizing: border-box;
+    }
+    .search-input::placeholder { color: rgba(255,255,255,.4); }
+    .search-input:focus {
+      border-color: rgba(255,255,255,.4);
+      background: rgba(255,255,255,.12);
+    }
+    .search-clear {
+      position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; cursor: pointer;
+      color: rgba(255,255,255,.4); font-size: 1.2rem; line-height: 1;
+      display: none;
+    }
+    .search-hint {
+      font-size: .82rem; color: rgba(255,255,255,.4);
+      margin-top: 12px;
+    }
+
+    /* Results area */
+    .search-body {
+      background: #f8fafc;
+      min-height: 60vh;
+      padding: 40px 0 80px;
+    }
+    .search-body .container { max-width: 1100px; }
+    .search-status {
+      font-size: .9rem; color: #64748b;
+      padding: 0 24px;
+      margin-bottom: 24px;
+    }
+    .search-status strong { color: #0f172a; }
+
+    /* Filter tabs */
+    .search-filters {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      padding: 0 24px; margin-bottom: 28px;
+    }
+    .sf-btn {
+      border: 1.5px solid #e2e8f0;
+      background: #fff; color: #475569;
+      border-radius: 100px; padding: 6px 16px;
+      font-size: .8rem; font-weight: 600;
+      cursor: pointer; transition: all .15s;
+    }
+    .sf-btn.active {
+      background: #1A73E8; border-color: #1A73E8;
+      color: #fff;
+    }
+    .sf-btn:hover:not(.active) { border-color: #1A73E8; color: #1A73E8; }
+
+    /* Results grid */
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 0 24px;
+    }
+    .search-card {
+      background: #fff; border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      padding: 20px 22px 22px;
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+      transition: transform .18s, box-shadow .18s;
+    }
+    .search-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.09);
+    }
+    .search-card-with-img {
+      padding: 0;
+      overflow: hidden;
+    }
+    .search-card-with-img .sc-img {
+      width: 100%; height: 140px; object-fit: cover;
+      background: linear-gradient(135deg, #0B1120, #0F2456);
+    }
+    .search-card-with-img .sc-body {
+      padding: 16px 20px 20px;
+    }
+    .sc-tag {
+      display: inline-block;
+      background: #EFF6FF; color: #1A73E8;
+      border-radius: 100px; padding: 2px 9px;
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .05em; text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .sc-tag.tool { background: #ECFDF5; color: #059669; }
+    .sc-tag.hub { background: #F5F3FF; color: #7C3AED; }
+    .sc-title {
+      font-size: .98rem; font-weight: 700; color: #0f172a;
+      line-height: 1.35; margin: 0 0 8px;
+    }
+    .sc-desc {
+      font-size: .84rem; color: #64748b;
+      line-height: 1.55; margin: 0 0 14px; flex: 1;
+    }
+    .sc-url {
+      font-size: .75rem; color: #94a3b8;
+      display: flex; align-items: center; gap: 5px;
+    }
+
+    .search-empty {
+      text-align: center; padding: 60px 24px;
+      display: none;
+    }
+    .search-empty-icon { font-size: 3rem; margin-bottom: 16px; }
+    .search-empty h2 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 0 0 8px; }
+    .search-empty p { color: #64748b; font-size: .9rem; max-width: 380px; margin: 0 auto 20px; }
+    .search-suggestions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .search-sug {
+      background: #EFF6FF; color: #1A73E8;
+      border: none; cursor: pointer;
+      border-radius: 100px; padding: 7px 16px;
+      font-size: .82rem; font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* Default popular results */
+    .search-popular-label {
+      font-size: .78rem; font-weight: 700; color: #94a3b8;
+      text-transform: uppercase; letter-spacing: .08em;
+      padding: 0 24px; margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body class="page-wrapper">
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="FreeStudentTools home">
+        <picture>
+          <source srcset="/assets/logo-sm.webp" type="image/webp">
+          <img src="/assets/logo-sm.png" alt="FreeStudentTools" width="44" height="44" fetchpriority="high" loading="eager">
+        </picture>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            University Hub
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/admissions.html">Admissions Tracker</a></li>
+            <li><a href="/scholarships.html">Scholarships Finder</a></li>
+            <li><a href="/scholarship-guide.html">Scholarship Guide</a></li>
+            <li><a href="/compare.html">Compare Degrees</a></li>
+            <li><a href="/compare-scholarships.html">Compare Scholarships</a></li>
+            <li><a href="/tips.html">Student Tips</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Tools
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="nav-dropdown-menu">
+            <li><a href="/ocr.html">OCR Scanner</a></li>
+            <li><a href="/pdf-converter.html">PDF Converter</a></li>
+            <li><a href="/compressor.html">PDF Compressor</a></li>
+            <li><a href="/image-compressor.html">Image Compressor</a></li>
+            <li><a href="/pdf-merger.html">PDF Merger</a></li>
+            <li><a href="/pdf-extractor.html">PDF Page Extractor</a></li>
+            <li><a href="/citation-generator.html">Citation Generator</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/" style="background:#EFF6FF;color:#1A73E8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li class="nav-lang-wrap">
+          <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language" aria-expanded="false" aria-haspopup="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="fstCurrentLang" class="notranslate" translate="no">EN</span>
+          </button>
+          <div class="lang-menu notranslate" id="fstLangMenu" role="menu" translate="no">
+            <a href="#" onclick="fstSwitchLang('en');return false" role="menuitem">English</a>
+            <a href="#" onclick="fstSwitchLang('zh-CN');return false" role="menuitem">中文</a>
+            <a href="#" onclick="fstSwitchLang('ms');return false" role="menuitem">Bahasa</a>
+            <a href="#" onclick="fstSwitchLang('hi');return false" role="menuitem">हिन्दी</a>
+            <a href="#" onclick="fstSwitchLang('ta');return false" role="menuitem">தமிழ்</a>
+            <a href="#" onclick="fstSwitchLang('ml');return false" role="menuitem">മലയാളം</a>
+            <a href="#" onclick="fstSwitchLang('bn');return false" role="menuitem">বাংলা</a>
+            <a href="#" onclick="fstSwitchLang('ar');return false" role="menuitem">العربية</a>
+            <a href="#" onclick="fstSwitchLang('fr');return false" role="menuitem">Français</a>
+            <a href="#" onclick="fstSwitchLang('es');return false" role="menuitem">Español</a>
+            <a href="#" onclick="fstSwitchLang('ru');return false" role="menuitem">Русский</a>
+            <a href="#" onclick="fstSwitchLang('tl');return false" role="menuitem">Tagalog</a>
+            <a href="#" onclick="fstSwitchLang('ko');return false" role="menuitem">한국어</a>
+            <a href="#" onclick="fstSwitchLang('ja');return false" role="menuitem">日本語</a>
+            <a href="#" onclick="fstSwitchLang('de');return false" role="menuitem">Deutsch</a>
+            <a href="#" onclick="fstSwitchLang('pt');return false" role="menuitem">Português</a>
+          </div>
+        </li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <span class="nav-mobile-label">University Hub</span>
+    <a href="/admissions.html">Admissions Tracker</a>
+    <a href="/scholarships.html">Scholarships Finder</a>
+    <a href="/scholarship-guide.html">Scholarship Guide</a>
+    <a href="/compare.html">Compare Degrees</a>
+    <a href="/compare-scholarships.html">Compare Scholarships</a>
+    <a href="/tips.html">Student Tips</a>
+    <span class="nav-mobile-label">Tools</span>
+    <a href="/ocr.html">OCR Scanner</a>
+    <a href="/pdf-converter.html">PDF Converter</a>
+    <a href="/compressor.html">PDF Compressor</a>
+    <a href="/image-compressor.html">Image Compressor</a>
+    <a href="/pdf-merger.html">PDF Merger</a>
+    <a href="/pdf-extractor.html">PDF Page Extractor</a>
+    <a href="/citation-generator.html">Citation Generator</a>
+    <a href="/blog/" style="color:#1A73E8;font-weight:700;">📖 Student Guides</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</nav>
+
+<section class="search-hero">
+  <div class="container">
+    <h1>What are you looking for?</h1>
+    <div class="search-wrap">
+      <input type="search" class="search-input" id="searchInput" placeholder="Try: Chevening, IELTS, PDF converter, UK visa…" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Search site">
+      <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+    </div>
+    <p class="search-hint">Searching 43 guides, 7 tools, and 13 hubs</p>
+  </div>
+</section>
+
+<section class="search-body">
+  <div class="container">
+    <div id="searchStatus" class="search-status" style="display:none"></div>
+
+    <div class="search-filters" id="filterRow" style="display:none">
+      <button class="sf-btn active" data-cat="all" onclick="setFilter('all')">All</button>
+      <button class="sf-btn" data-cat="guide" onclick="setFilter('guide')">📖 Guides</button>
+      <button class="sf-btn" data-cat="tool" onclick="setFilter('tool')">🔧 Tools</button>
+      <button class="sf-btn" data-cat="hub" onclick="setFilter('hub')">🏛️ Hubs</button>
+    </div>
+
+    <div id="emptyState" class="search-empty">
+      <div class="search-empty-icon">🔍</div>
+      <h2>No results found</h2>
+      <p>Try different keywords, or browse these popular topics:</p>
+      <div class="search-suggestions">
+        <a class="search-sug" href="#" onclick="setQuery('Chevening');return false">Chevening</a>
+        <a class="search-sug" href="#" onclick="setQuery('IELTS');return false">IELTS</a>
+        <a class="search-sug" href="#" onclick="setQuery('UK visa');return false">UK visa</a>
+        <a class="search-sug" href="#" onclick="setQuery('scholarship');return false">Scholarship</a>
+        <a class="search-sug" href="#" onclick="setQuery('PDF');return false">PDF tool</a>
+      </div>
+    </div>
+
+    <!-- Default: popular picks shown before any search -->
+    <div id="popularLabel" class="search-popular-label">Popular guides</div>
+    <div id="searchGrid" class="search-grid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="FreeStudentTools" width="36" height="36">
+        <p>Free tools and guides for international students worldwide.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <strong>Tools</strong>
+          <a href="/ocr.html">OCR Scanner</a>
+          <a href="/pdf-converter.html">PDF Converter</a>
+          <a href="/compressor.html">PDF Compressor</a>
+          <a href="/citation-generator.html">Citation Generator</a>
+        </div>
+        <div>
+          <strong>Guides</strong>
+          <a href="/blog/">All Guides</a>
+          <a href="/scholarships.html">Scholarships</a>
+          <a href="/admissions.html">Admissions</a>
+          <a href="/tips.html">Student Tips</a>
+        </div>
+        <div>
+          <strong>About</strong>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/cookies.html">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 FreeStudentTools.com — All tools are free, no sign-up required.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cookieBanner" class="cookie-banner">
+  <p>We use cookies to improve your experience. <a href="/cookies.html">Learn more</a></p>
+  <div class="cookie-actions">
+    <button id="cookieAccept" class="btn btn-primary btn-sm">Accept</button>
+    <button id="cookieDecline" class="btn btn-ghost btn-sm">Decline</button>
+  </div>
+</div>
+
+<script src="/js/common.js" defer></script>
+<script src="/js/lang-switcher.js" defer></script>
+<script src="/js/search-index.js"></script>
+<script>
+(function(){
+  var input = document.getElementById('searchInput');
+  var clearBtn = document.getElementById('searchClear');
+  var grid = document.getElementById('searchGrid');
+  var status = document.getElementById('searchStatus');
+  var emptyState = document.getElementById('emptyState');
+  var filterRow = document.getElementById('filterRow');
+  var popularLabel = document.getElementById('popularLabel');
+
+  var activeCat = 'all';
+  var currentQuery = '';
+
+  // Popular defaults (shown before search)
+  var POPULAR_SLUGS = [
+    '/blog/chevening-scholarship-guide',
+    '/blog/fulbright-scholarship-guide',
+    '/blog/uk-student-visa-guide-2026',
+    '/blog/how-to-prepare-ielts-8-weeks',
+    '/blog/real-cost-of-studying-abroad-2026',
+    '/blog/personal-statement-guide-university',
+    '/blog/university-admission-interview-questions',
+    '/scholarships.html',
+    '/ocr.html',
+    '/citation-generator.html',
+    '/compressor.html',
+    '/admissions.html'
+  ];
+
+  function scoreEntry(entry, q) {
+    if (!q) return 0;
+    var haystack = (entry.t + ' ' + entry.d + ' ' + entry.g).toLowerCase();
+    var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+    var score = 0;
+    terms.forEach(function(term) {
+      if (entry.t.toLowerCase().includes(term)) score += 3;
+      if (entry.d.toLowerCase().includes(term)) score += 1;
+      if (entry.g.toLowerCase().includes(term)) score += 1;
+    });
+    return score;
+  }
+
+  function tagClass(cat) {
+    if (cat === 'tool') return 'sc-tag tool';
+    if (cat === 'hub') return 'sc-tag hub';
+    return 'sc-tag';
+  }
+
+  function renderCard(entry) {
+    var hasImg = entry.i && entry.i.indexOf('assets/blog') !== -1;
+    if (hasImg) {
+      return '<a href="' + entry.u + '" class="search-card search-card-with-img">' +
+        '<img class="sc-img" src="' + entry.i + '" alt="" loading="lazy" onerror="this.style.background=\'linear-gradient(135deg,#0B1120,#0F2456)\';this.style.display=\'block\'">' +
+        '<div class="sc-body">' +
+        '<span class="' + tagClass(entry.cat || 'guide') + '">' + entry.g + '</span>' +
+        '<div class="sc-title">' + entry.t + '</div>' +
+        '<div class="sc-desc">' + entry.d + '</div>' +
+        '</div></a>';
+    }
+    return '<a href="' + entry.u + '" class="search-card">' +
+      '<span class="' + tagClass(entry.cat || 'guide') + '">' + entry.g + '</span>' +
+      '<div class="sc-title">' + entry.t + '</div>' +
+      '<div class="sc-desc">' + entry.d + '</div>' +
+      '<div class="sc-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>freestudenttools.com' + entry.u + '</div>' +
+      '</a>';
+  }
+
+  function showPopular() {
+    var items = POPULAR_SLUGS.map(function(slug) {
+      return FST_SEARCH_INDEX.find(function(e) { return e.u === slug; });
+    }).filter(Boolean);
+    grid.innerHTML = items.map(renderCard).join('');
+    popularLabel.style.display = '';
+    status.style.display = 'none';
+    filterRow.style.display = 'none';
+    emptyState.style.display = 'none';
+  }
+
+  function runSearch(q) {
+    currentQuery = q;
+    if (!q.trim()) { showPopular(); clearBtn.style.display = 'none'; return; }
+    clearBtn.style.display = 'block';
+    popularLabel.style.display = 'none';
+
+    var results = FST_SEARCH_INDEX.map(function(e) {
+      return { entry: e, score: scoreEntry(e, q) };
+    }).filter(function(r) { return r.score > 0; });
+
+    // Category filter
+    if (activeCat !== 'all') {
+      results = results.filter(function(r) {
+        return (r.entry.cat || 'guide') === activeCat;
+      });
+    }
+
+    results.sort(function(a, b) { return b.score - a.score; });
+
+    if (results.length === 0) {
+      grid.innerHTML = '';
+      emptyState.style.display = 'block';
+      filterRow.style.display = 'none';
+      status.style.display = 'none';
+    } else {
+      emptyState.style.display = 'none';
+      filterRow.style.display = 'flex';
+      status.style.display = 'block';
+      status.innerHTML = '<strong>' + results.length + ' result' + (results.length !== 1 ? 's' : '') + '</strong> for "' + q + '"';
+      grid.innerHTML = results.map(function(r) { return renderCard(r.entry); }).join('');
+    }
+  }
+
+  window.setFilter = function(cat) {
+    activeCat = cat;
+    document.querySelectorAll('.sf-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.cat === cat);
+    });
+    runSearch(currentQuery);
+  };
+
+  window.setQuery = function(q) {
+    input.value = q;
+    runSearch(q);
+    input.focus();
+  };
+
+  input.addEventListener('input', function() { runSearch(this.value); });
+  clearBtn.addEventListener('click', function() {
+    input.value = '';
+    runSearch('');
+    input.focus();
+  });
+
+  // URL ?q= param support
+  var params = new URLSearchParams(window.location.search);
+  var initQ = params.get('q') || '';
+  if (initQ) { input.value = initQ; runSearch(initQ); }
+  else { showPopular(); }
+
+  // Assign cat field (tool/hub/guide) to each index entry
+  var TOOL_URLS = ['/ocr.html','/pdf-converter.html','/compressor.html','/image-compressor.html','/pdf-merger.html','/pdf-extractor.html','/citation-generator.html'];
+  var HUB_URLS = ['/scholarships.html','/compare-scholarships.html','/scholarship-guide.html','/admissions.html','/compare.html','/tips.html'];
+  FST_SEARCH_INDEX.forEach(function(e) {
+    if (TOOL_URLS.indexOf(e.u) !== -1) e.cat = 'tool';
+    else if (HUB_URLS.indexOf(e.u) !== -1) e.cat = 'hub';
+    else e.cat = 'guide';
+  });
+})();
+</script>
+</body>
+</html>

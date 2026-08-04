@@ -328,9 +328,17 @@
     <div class="blog-hero-badge">📖 Student Guides</div>
     <h1>Guides that actually help international students</h1>
     <p>35 in-depth guides covering scholarships, student visas, study costs, language tests, health, accommodation, and post-study work visas. Real numbers, honest advice.</p>
+    <div style="max-width:520px;margin:0 auto 24px;position:relative">
+      <input type="search" id="blogSearch" placeholder="Search guides… (e.g. IELTS, UK visa, scholarship)" autocomplete="off" autocorrect="off"
+        style="width:100%;padding:13px 44px 13px 18px;border-radius:12px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-size:.92rem;font-family:inherit;outline:none;box-sizing:border-box;transition:border-color .2s"
+        onfocus="this.style.borderColor='rgba(255,255,255,.4)'" onblur="this.style.borderColor='rgba(255,255,255,.15)'" oninput="fstBlogFilter(this.value)" aria-label="Filter guides">
+      <button onclick="document.getElementById('blogSearch').value='';fstBlogFilter('');" aria-label="Clear search"
+        style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.35);font-size:1.1rem;line-height:1">✕</button>
+    </div>
+    <div id="blogSearchStatus" style="font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:4px;min-height:1.2em"></div>
     <div class="blog-stats">
-      <div class="blog-stat"><strong>35</strong>Guides published</div>
-      <div class="blog-stat"><strong>8</strong>Topic categories</div>
+      <div class="blog-stat"><strong>43</strong>Guides published</div>
+      <div class="blog-stat"><strong>9</strong>Topic categories</div>
       <div class="blog-stat"><strong>£0</strong>Always free</div>
     </div>
   </div>
@@ -1109,6 +1117,45 @@
 </footer>
 
 <script src="/js/common.js" defer></script>
+<script>
+function fstBlogFilter(q) {
+  var cards = document.querySelectorAll('.blog-card');
+  var sections = document.querySelectorAll('.blog-body[id],.blog-body > [id]');
+  var status = document.getElementById('blogSearchStatus');
+  var term = q.trim().toLowerCase();
+  var shown = 0;
+
+  cards.forEach(function(card) {
+    var text = (card.querySelector('h2') ? card.querySelector('h2').textContent : '')
+      + ' ' + (card.querySelector('p') ? card.querySelector('p').textContent : '')
+      + ' ' + (card.querySelector('.blog-card-tag') ? card.querySelector('.blog-card-tag').textContent : '');
+    var match = !term || text.toLowerCase().includes(term);
+    card.style.display = match ? '' : 'none';
+    if (match) shown++;
+  });
+
+  // Hide empty section headings
+  document.querySelectorAll('.blog-section-heading').forEach(function(heading) {
+    var section = heading.nextElementSibling;
+    if (!section) return;
+    var visibleCards = section.querySelectorAll('.blog-card:not([style*="display: none"])');
+    var headerEl = heading.closest('section') || heading.parentElement;
+    // Find the whole section block to show/hide
+    var sectionBlock = heading.parentElement;
+    if (sectionBlock) {
+      var hasVisible = section.querySelectorAll('.blog-card').length &&
+        Array.from(section.querySelectorAll('.blog-card')).some(function(c){ return c.style.display !== 'none'; });
+      sectionBlock.style.display = (term && !hasVisible) ? 'none' : '';
+    }
+  });
+
+  if (term) {
+    status.textContent = shown ? shown + ' guide' + (shown !== 1 ? 's' : '') + ' match "' + q + '"' : 'No guides match "' + q + '"';
+  } else {
+    status.textContent = '';
+  }
+}
+</script>
   <div id="google_translate_element" style="display:none" aria-hidden="true"></div>
   <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}</script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
