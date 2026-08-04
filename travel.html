@@ -53,7 +53,7 @@
           {
             "@type": "Question",
             "name": "Do I need a travel eSIM or a local SIM card when I arrive as an international student?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Both — in sequence. An eSIM (like Yesim, which covers 200+ countries) gives you instant data the moment you land, without queuing for a local SIM at the airport. Once you're settled — usually within 2–3 days — buy a local SIM card for your permanent phone number, which you'll need for bank accounts and university administration." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Both — in sequence. An eSIM covers 200+ countries and gives you instant data the moment you land, without queuing for a local SIM at the airport. Once you're settled — usually within 2–3 days — buy a local SIM card for your permanent phone number, which you'll need for bank accounts and university administration." }
           }
         ]
       }
@@ -67,72 +67,87 @@
   (function(){var s=document.createElement("script");s.async=1;s.src='https://emrldco.com/NTU4Mzg3.js?t=558387';document.head.appendChild(s);})();
 </script>
   <style>
+    /* ── Hero ── */
     .travel-hero{background:linear-gradient(140deg,#0B1120 0%,#0a2e47 50%,#0F2456 100%);padding:80px 0 64px;position:relative;overflow:hidden}
-    .travel-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.2) 0%,transparent 70%);pointer-events:none}
+    .travel-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.18) 0%,transparent 70%);pointer-events:none}
     .travel-hero>.container{position:relative;z-index:1}
-    .travel-hero h1{font-size:clamp(2rem,4.5vw,3rem);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1.1;margin:0 0 16px}
-    .travel-hero p{font-size:1.05rem;color:rgba(255,255,255,.65);max-width:560px;line-height:1.7;margin:0 0 32px}
+    .travel-hero h1{font-size:clamp(2rem,4.5vw,2.75rem);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1.1;margin:0 0 14px}
+    .travel-hero p{font-size:1rem;color:rgba(255,255,255,.6);max-width:540px;line-height:1.7;margin:0 0 32px}
     .travel-stats{display:flex;gap:32px;flex-wrap:wrap}
-    .travel-stat strong{font-size:1.5rem;font-weight:800;color:#38bdf8;display:block}
-    .travel-stat span{font-size:.8rem;color:rgba(255,255,255,.5)}
-    .travel-sections{padding:56px 0 72px}
-    .travel-card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-top:32px}
-    .travel-card{background:#fff;border-radius:16px;border:1px solid #e2e8f0;padding:22px;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
-    .travel-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.09)}
-    .travel-card-icon{font-size:1.8rem;margin-bottom:12px}
-    .travel-card h2{font-size:1rem;font-weight:800;color:#0f172a;margin:0 0 6px}
-    .travel-card p{font-size:.83rem;color:#64748b;line-height:1.6;margin:0 0 14px;flex:1}
-    .travel-card-cta{font-size:.8rem;font-weight:700;color:#1A73E8}
-    .travel-card.esim{border-top:3px solid #10b981}
-    .travel-card.flights{border-top:3px solid #6366f1}
-    .travel-card.health{border-top:3px solid #f59e0b}
-    .travel-card.arrival{border-top:3px solid #0ea5e9}
-    .travel-card.transfer{border-top:3px solid #8b5cf6}
-    .travel-card.compensation{border-top:3px solid #ef4444}
-    .section-label{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:6px}
-    .section-h2{font-size:1.5rem;font-weight:800;color:#0f172a;margin:0 0 8px}
-    .section-desc{font-size:.95rem;color:#64748b;max-width:620px;line-height:1.65;margin:0}
-    .flights-widget-wrap{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1px solid #bae6fd;border-radius:18px;padding:32px 28px;margin-top:24px;overflow:hidden}
-    .flights-widget-wrap>p{font-size:.82rem;color:#475569;margin:0 0 16px}
-    .affiliate-card{border-radius:16px;padding:24px 28px;margin-top:24px;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
-    .affiliate-card.green{background:linear-gradient(135deg,#ECFDF5,#D1FAE5);border:1px solid #A7F3D0}
-    .affiliate-card.purple{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1px solid #C4B5FD}
-    .affiliate-card.red{background:linear-gradient(135deg,#FEF2F2,#FEE2E2);border:1px solid #FECACA}
-    .affiliate-card-icon{font-size:2.2rem;flex-shrink:0;margin-top:2px}
-    .affiliate-info{flex:1;min-width:220px}
-    .affiliate-info h3{font-size:1rem;font-weight:800;margin:0 0 4px}
-    .affiliate-card.green .affiliate-info h3{color:#065f46}
-    .affiliate-card.purple .affiliate-info h3{color:#4c1d95}
-    .affiliate-card.red .affiliate-info h3{color:#7f1d1d}
-    .affiliate-info p{font-size:.85rem;line-height:1.6;margin:0 0 12px}
-    .affiliate-card.green .affiliate-info p{color:#047857}
-    .affiliate-card.purple .affiliate-info p{color:#5b21b6}
-    .affiliate-card.red .affiliate-info p{color:#991b1b}
-    .aff-btn{display:inline-block;border-radius:8px;padding:10px 20px;font-size:.85rem;font-weight:700;text-decoration:none;transition:background .15s}
-    .aff-btn.green{background:#10b981;color:#fff}
-    .aff-btn.green:hover{background:#059669}
-    .aff-btn.purple{background:#7c3aed;color:#fff}
-    .aff-btn.purple:hover{background:#6d28d9}
-    .aff-btn.red{background:#ef4444;color:#fff}
-    .aff-btn.red:hover{background:#dc2626}
-    .aff-disclosure{font-size:.7rem;color:#6b7280;margin-top:8px;display:block}
-    .health-cta{display:flex;align-items:flex-start;gap:16px;background:#FFFBEB;border:1px solid #FDE68A;border-radius:14px;padding:20px 24px;margin-top:24px;text-decoration:none;color:inherit;transition:box-shadow .15s}
-    .health-cta:hover{box-shadow:0 6px 20px rgba(0,0,0,.07)}
-    .health-cta-icon{font-size:1.8rem;flex-shrink:0;margin-top:2px}
-    .health-cta-text h3{font-size:.95rem;font-weight:800;color:#92400e;margin:0 0 4px}
-    .health-cta-text p{font-size:.83rem;color:#b45309;margin:0;line-height:1.55}
-    .disclaimer-box{background:#FFF7ED;border:1px solid #FED7AA;border-left:4px solid #f97316;border-radius:10px;padding:14px 18px;margin-top:16px;font-size:.83rem;color:#7c2d12;line-height:1.6}
-    .disclaimer-box strong{color:#9a3412}
-    .guide-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:20px}
-    .guide-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;display:flex;gap:12px;align-items:flex-start;transition:box-shadow .15s}
-    .guide-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
-    .guide-card-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
-    .guide-card strong{font-size:.87rem;color:#0f172a;display:block;margin-bottom:2px}
-    .guide-card span{font-size:.77rem;color:#94a3b8}
-    .divider{border:none;border-top:1px solid #e2e8f0;margin:48px 0}
-    .helper-text{font-size:.88rem;color:#64748b;line-height:1.7;margin-top:20px}
-    .helper-text strong{color:#374151}
-    @media(max-width:640px){.affiliate-card{flex-direction:column}.affiliate-card-icon{font-size:1.8rem}}
+    .travel-stat strong{font-size:1.4rem;font-weight:800;color:#38bdf8;display:block}
+    .travel-stat span{font-size:.78rem;color:rgba(255,255,255,.45);letter-spacing:.01em}
+
+    /* ── Page layout ── */
+    .travel-main{padding:48px 0 80px;background:#f8fafc}
+    .travel-body{display:flex;flex-direction:column;gap:0}
+
+    /* ── Jump nav ── */
+    .jump-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+    .jump-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #e2e8f0;border-radius:100px;padding:7px 16px;font-size:.8rem;font-weight:600;color:#475569;text-decoration:none;transition:background .12s,color .12s,border-color .12s;white-space:nowrap}
+    .jump-pill:hover{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe}
+
+    /* ── Section block ── */
+    .t-section{padding:40px 0;border-top:1px solid #e2e8f0}
+    .t-section:first-of-type{border-top:none;padding-top:0}
+    .t-label{font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#94a3b8;margin:0 0 6px}
+    .t-h2{font-size:1.45rem;font-weight:800;color:#0f172a;margin:0 0 8px;line-height:1.25}
+    .t-desc{font-size:.93rem;color:#64748b;line-height:1.65;max-width:640px;margin:0}
+
+    /* ── Widget box ── */
+    .widget-box{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 24px 20px;margin-top:20px;box-shadow:0 1px 6px rgba(0,0,0,.05);overflow:hidden}
+    .widget-label{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:#64748b;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #f1f5f9}
+    .widget-label span{font-size:1rem}
+    .widget-disclosure{font-size:.68rem;color:#94a3b8;margin-top:12px;padding-top:10px;border-top:1px solid #f1f5f9;line-height:1.5}
+
+    /* ── Provider card ── */
+    .provider-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:22px 26px;margin-top:16px;display:flex;gap:18px;align-items:flex-start}
+    .provider-card.sky{border-left:4px solid #0ea5e9}
+    .provider-card.violet{border-left:4px solid #7c3aed}
+    .provider-card.rose{border-left:4px solid #e11d48}
+    .provider-card.emerald{border-left:4px solid #10b981}
+    .provider-card.amber{border-left:4px solid #f59e0b}
+    .pc-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px;line-height:1}
+    .pc-body{flex:1;min-width:0}
+    .pc-name{font-size:.92rem;font-weight:800;color:#0f172a;margin:0 0 4px}
+    .pc-desc{font-size:.83rem;color:#475569;line-height:1.6;margin:0 0 14px}
+    .pc-btn{display:inline-block;border-radius:8px;padding:9px 20px;font-size:.82rem;font-weight:700;text-decoration:none;transition:opacity .15s;white-space:nowrap}
+    .pc-btn:hover{opacity:.88}
+    .pc-btn.sky{background:#0ea5e9;color:#fff}
+    .pc-btn.violet{background:#7c3aed;color:#fff}
+    .pc-btn.rose{background:#e11d48;color:#fff}
+    .pc-btn.emerald{background:#10b981;color:#fff}
+    .pc-disclosure{display:block;font-size:.68rem;color:#94a3b8;margin-top:8px;line-height:1.4}
+
+    /* ── Helper notes ── */
+    .helper-note{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px 20px;margin-top:16px;font-size:.83rem;color:#475569;line-height:1.65}
+    .helper-note strong{color:#0f172a;font-weight:700}
+    .helper-note + .helper-note{margin-top:8px}
+
+    /* ── Health CTA ── */
+    .health-tool-cta{display:flex;align-items:flex-start;gap:16px;background:#fff;border:1px solid #e2e8f0;border-left:4px solid #f59e0b;border-radius:14px;padding:20px 24px;margin-top:20px;text-decoration:none;color:inherit;transition:box-shadow .15s}
+    .health-tool-cta:hover{box-shadow:0 4px 16px rgba(0,0,0,.07)}
+    .health-tool-cta .ic{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+    .health-tool-cta h3{font-size:.92rem;font-weight:800;color:#92400e;margin:0 0 3px}
+    .health-tool-cta p{font-size:.82rem;color:#b45309;margin:0;line-height:1.5}
+
+    /* ── Guide cards ── */
+    .guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:16px}
+    .guide-card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:13px 16px;text-decoration:none;color:inherit;display:flex;gap:10px;align-items:flex-start;transition:box-shadow .15s}
+    .guide-card:hover{box-shadow:0 3px 12px rgba(0,0,0,.07)}
+    .guide-card-ic{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+    .guide-card strong{font-size:.84rem;color:#0f172a;display:block;margin-bottom:2px;font-weight:700;line-height:1.35}
+    .guide-card span{font-size:.74rem;color:#94a3b8;line-height:1.4;display:block}
+
+    /* ── Disclaimer ── */
+    .page-disclosure{background:#f1f5f9;border-radius:10px;padding:16px 20px;margin-top:48px;font-size:.75rem;color:#64748b;line-height:1.65}
+    .page-disclosure strong{color:#475569}
+
+    @media(max-width:640px){
+      .travel-hero{padding:56px 0 44px}
+      .provider-card{flex-direction:column;gap:10px}
+      .jump-nav{gap:6px}
+      .jump-pill{font-size:.74rem;padding:6px 12px}
+    }
   </style>
 </head>
 <body class="page-wrapper">
@@ -195,6 +210,20 @@
   </nav>
 </nav>
 
+<!-- HERO -->
+<section class="travel-hero">
+  <div class="container">
+    <h1>International Student<br>Travel Hub</h1>
+    <p>Search flights, book airport transfers, claim compensation, get a travel eSIM, and check health requirements — all in one place, all free.</p>
+    <div class="travel-stats">
+      <div class="travel-stat"><strong>200+</strong><span>Countries with eSIM</span></div>
+      <div class="travel-stat"><strong>1,000+</strong><span>Cities for transfers</span></div>
+      <div class="travel-stat"><strong>€600</strong><span>Max flight compensation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY STRIP (after hero) -->
 <div class="guide-cat-strip" role="navigation" aria-label="Browse student guides by category">
   <div class="guide-cat-inner">
     <a href="/blog/#scholarships" class="gcat notranslate">🏆 Scholarships</a>
@@ -210,233 +239,196 @@
   </div>
 </div>
 
-<!-- HERO -->
-<section class="travel-hero">
-  <div class="container">
-    <h1>International Student Travel Hub</h1>
-    <p>Everything you need for the journey — flight search, airport transfers, eSIM data, flight compensation, and health check requirements, all in one place.</p>
-    <div class="travel-stats">
-      <div class="travel-stat"><strong>200+</strong><span>Countries with eSIM coverage</span></div>
-      <div class="travel-stat"><strong>1,000+</strong><span>Cities for airport transfers</span></div>
-      <div class="travel-stat"><strong>€600</strong><span>Max flight compensation</span></div>
-    </div>
-  </div>
-</section>
-
-<main class="travel-sections">
+<!-- MAIN -->
+<main class="travel-main">
   <div class="container">
 
-    <!-- QUICK NAV CARDS -->
-    <div class="travel-card-grid">
-      <a href="#flights" class="travel-card flights">
-        <div class="travel-card-icon">✈️</div>
-        <h2>Search Flights</h2>
-        <p>Compare prices from hundreds of airlines and booking platforms in one search.</p>
-        <span class="travel-card-cta">Search now →</span>
-      </a>
-      <a href="#transfers" class="travel-card transfer">
-        <div class="travel-card-icon">🚗</div>
-        <h2>Airport Transfers</h2>
-        <p>Pre-book a private transfer from the airport — no overpriced taxis, no getting lost.</p>
-        <span class="travel-card-cta">Book transfer →</span>
-      </a>
-      <a href="#compensation" class="travel-card compensation">
-        <div class="travel-card-icon">⚖️</div>
-        <h2>Flight Compensation</h2>
-        <p>Delayed or cancelled? Claim up to €600 compensation under EU rules — no win, no fee.</p>
-        <span class="travel-card-cta">Check eligibility →</span>
-      </a>
-      <a href="#esim" class="travel-card esim">
-        <div class="travel-card-icon">📶</div>
-        <h2>eSIM Data Plans</h2>
-        <p>Data in 200+ countries from the moment you land. No SIM queues, no roaming bills.</p>
-        <span class="travel-card-cta">Get eSIM →</span>
-      </a>
-      <a href="/health-checks.html" class="travel-card health">
-        <div class="travel-card-icon">🏥</div>
-        <h2>Health Check Tool</h2>
-        <p>See what TB tests, yellow fever certs, or medical exams you need for your destination.</p>
-        <span class="travel-card-cta">Check requirements →</span>
-      </a>
-      <a href="/blog/international-student-first-week-arrival-guide" class="travel-card arrival">
-        <div class="travel-card-icon">🛬</div>
-        <h2>Arrival Checklist</h2>
-        <p>Day-by-day guide for your first week: BRP, bank account, GP, SIM — in order.</p>
-        <span class="travel-card-cta">Read checklist →</span>
-      </a>
-    </div>
+    <!-- Jump nav -->
+    <nav class="jump-nav" aria-label="Jump to section">
+      <a href="#flights" class="jump-pill">✈️ Flights</a>
+      <a href="#transfers" class="jump-pill">🚗 Airport Transfers</a>
+      <a href="#compensation" class="jump-pill">⚖️ Compensation</a>
+      <a href="#esim" class="jump-pill">📶 eSIM</a>
+      <a href="#health" class="jump-pill">🏥 Health Checks</a>
+      <a href="#arrival" class="jump-pill">🛬 Arrival Guides</a>
+    </nav>
 
-    <hr class="divider">
+    <div class="travel-body">
 
-    <!-- FLIGHTS -->
-    <div id="flights">
-      <p class="section-label">Flights</p>
-      <h2 class="section-h2">How do you search for cheap student flights?</h2>
-      <p class="section-desc">Use the search widget below to compare live prices across hundreds of airlines. Then cross-check on Kiwi.com — it specialises in virtual interlining (mixing airlines mid-journey) which often finds routes that single-airline searches miss.</p>
+      <!-- ─── FLIGHTS ─── -->
+      <div id="flights" class="t-section">
+        <p class="t-label">Flights</p>
+        <h2 class="t-h2">How do you find cheap student flights?</h2>
+        <p class="t-desc">Use the search widget below to compare live prices across hundreds of airlines and booking platforms. Then cross-check on Kiwi.com — it specialises in virtual interlining, mixing airlines mid-journey to find cheaper routes that single-carrier searches miss.</p>
 
-      <div class="flights-widget-wrap">
-        <p style="font-size:.82rem;color:#0369a1;font-weight:600;margin:0 0 14px">✈️ Flight search — compare prices across airlines and booking platforms</p>
-        <script async src="https://tpemb.com/content?currency=usd&trs=558387&shmarker=274673&locale=en&stops=any&show_hotels=false&powered_by=false&border_radius=0" charset="utf-8"></script>
-        <p style="font-size:.7rem;color:#94a3b8;margin:14px 0 0;padding-top:12px;border-top:1px solid #e0f2fe">Powered by Travelpayouts. FreeStudentTools may earn an affiliate commission at no extra cost to you.</p>
-      </div>
-
-      <div class="kiwi-card" style="display:flex;align-items:center;gap:20px;background:linear-gradient(135deg,#fdf4ff,#fae8ff);border:1px solid #e9d5ff;border-radius:16px;padding:20px 24px;margin-top:16px;flex-wrap:wrap">
-        <div style="font-size:2rem;flex-shrink:0">🥝</div>
-        <div style="flex:1;min-width:200px">
-          <div style="font-weight:800;color:#581c87;margin-bottom:4px;font-size:.95rem">Also search on Kiwi.com — virtual interlining specialist</div>
-          <div style="font-size:.83rem;color:#7e22ce;line-height:1.6">Kiwi combines flights from different airlines into one booking, often finding cheaper routes to the same destination. Especially useful for long-haul student routes (Asia, Africa, South America → Europe/UK/USA).</div>
+        <!-- Travelpayouts flights widget 3414 -->
+        <div class="widget-box">
+          <div class="widget-label"><span>✈️</span> Live flight search — powered by Travelpayouts</div>
+          <script async src="https://tpemb.com/content?currency=usd&trs=558387&shmarker=274673&locale=en&stops=any&show_hotels=false&powered_by=false&border_radius=0" charset="utf-8"></script>
+          <p class="widget-disclosure">FreeStudentTools may earn an affiliate commission if you book — at no extra cost to you.</p>
         </div>
-        <a href="https://www.kiwi.com" rel="noopener" style="display:inline-block;background:#7c3aed;color:#fff;border-radius:8px;padding:11px 22px;font-size:.85rem;font-weight:700;text-decoration:none;white-space:nowrap;flex-shrink:0">Search Kiwi.com →</a>
-      </div>
 
-      <div class="guide-cards" style="margin-top:20px">
-        <a href="/blog/cheap-flights-for-international-students" class="guide-card">
-          <div class="guide-card-icon">💡</div>
-          <div><strong>How to Find Cheap Flights as an International Student</strong><span>2–6 month window, student fares, VPN, baggage math →</span></div>
-        </a>
-        <a href="/blog/international-student-packing-checklist" class="guide-card">
-          <div class="guide-card-icon">🧳</div>
-          <div><strong>International Student Packing Checklist</strong><span>What to bring, ship, and buy on arrival →</span></div>
-        </a>
-      </div>
-    </div>
+        <!-- Kiwi.com provider card -->
+        <div class="provider-card violet">
+          <div class="pc-icon">🥝</div>
+          <div class="pc-body">
+            <p class="pc-name">Kiwi.com — Virtual Interlining Specialist</p>
+            <p class="pc-desc">Kiwi combines flights from different airlines into a single booking, often finding cheaper routes that standard searches miss. Especially useful for long-haul student routes (Asia, Africa, South America → Europe, UK, USA). If it finds a connection Booking.com or Google Flights doesn't show, that's why.</p>
+            <a href="https://www.kiwi.com" rel="noopener" class="pc-btn violet">Search Kiwi.com →</a>
+          </div>
+        </div>
 
-    <hr class="divider">
-
-    <!-- AIRPORT TRANSFERS -->
-    <div id="transfers">
-      <p class="section-label">Airport Transfers</p>
-      <h2 class="section-h2">How do you book a reliable airport transfer as an international student?</h2>
-      <p class="section-desc">Arriving in a new country with heavy luggage and no local data is stressful enough. A pre-booked private transfer removes the guesswork — fixed price, driver waiting with your name, no negotiating at the rank.</p>
-
-      <div class="affiliate-card purple">
-        <div class="affiliate-card-icon">🚗</div>
-        <div class="affiliate-info">
-          <h3>GetTransfer — Pre-Book Airport Transfers in 1,000+ Cities</h3>
-          <p>Search and book a private or shared transfer from the airport to your accommodation before you travel. Covers major student destinations: London, New York, Berlin, Sydney, Toronto, Singapore, and 1,000+ cities worldwide. Fixed price — no surge pricing, no surprises.</p>
-          <a href="https://gettransfer.tpx.li/hVYkdFLv" rel="noopener sponsored" class="aff-btn purple">Book airport transfer →</a>
-          <span class="aff-disclosure">Affiliate disclosure: FreeStudentTools earns a commission if you book through this link, at no extra cost to you.</span>
+        <div class="guide-grid" style="margin-top:20px">
+          <a href="/blog/cheap-flights-for-international-students" class="guide-card">
+            <div class="guide-card-ic">💡</div>
+            <div><strong>How to Find Cheap Flights as an International Student</strong><span>2–6 month window, student fares, VPN trick, baggage math →</span></div>
+          </a>
+          <a href="/blog/international-student-packing-checklist" class="guide-card">
+            <div class="guide-card-ic">🧳</div>
+            <div><strong>International Student Packing Checklist</strong><span>What to bring, ship, and buy on arrival →</span></div>
+          </a>
         </div>
       </div>
 
-      <div class="helper-text">
-        <p><strong>When is a pre-booked transfer worth it?</strong> Almost always for your first arrival. You're jet-lagged, your phone may not have local data yet, you don't know the city's taxi zones, and you have more luggage than fits in a standard cab. The premium over public transport is usually £15–30 — worth it once.</p>
-        <p><strong>When to skip it:</strong> If your university has a free airport pick-up service (many do for international students around key arrival dates — check your international office website), use that instead.</p>
-      </div>
-    </div>
+      <!-- ─── AIRPORT TRANSFERS ─── -->
+      <div id="transfers" class="t-section">
+        <p class="t-label">Airport Transfers</p>
+        <h2 class="t-h2">How do you book a reliable airport transfer?</h2>
+        <p class="t-desc">Arriving with heavy luggage, jet-lagged, in a city you don't know — that's not the moment to haggle with a taxi. A pre-booked private transfer is a fixed price, driver waiting with your name, no negotiating at the rank.</p>
 
-    <hr class="divider">
-
-    <!-- FLIGHT COMPENSATION -->
-    <div id="compensation">
-      <p class="section-label">Flight Compensation</p>
-      <h2 class="section-h2">Can you claim compensation if your flight is delayed or cancelled?</h2>
-      <p class="section-desc">EU Regulation EC 261/2004 entitles passengers to €250–€600 if a flight departing from or arriving at an EU airport is delayed over 3 hours or cancelled without adequate notice. Most passengers never claim — not because they're ineligible, but because they don't know they can.</p>
-
-      <div class="flights-widget-wrap" style="background:linear-gradient(135deg,#fef2f2,#fee2e2);border-color:#fecaca">
-        <p style="font-size:.82rem;color:#991b1b;font-weight:600;margin:0 0 14px">⚖️ Flight compensation checker — enter your route to see if you're eligible</p>
-        <script async src="https://tpemb.com/content?trs=558387&shmarker=274673&lang=en&powered_by=false&campaign_id=120&promo_id=8679" charset="utf-8"></script>
-        <p style="font-size:.7rem;color:#94a3b8;margin:14px 0 0;padding-top:12px;border-top:1px solid #fecaca">Powered by Travelpayouts / AirHelp. No win, no fee — FreeStudentTools earns a commission only if compensation is awarded.</p>
-      </div>
-
-      <div class="helper-text">
-        <p><strong>What qualifies?</strong> Delays of 3+ hours, cancellations with less than 14 days' notice, and denied boarding due to overbooking. Extraordinary circumstances (severe weather, air traffic control strikes) are usually excluded — mechanical faults and operational issues are not.</p>
-        <p><strong>How far back can you claim?</strong> EU261 claims can go back up to 3 years in most EU countries, 6 years in the UK. If your flight last semester was delayed, it may still be claimable.</p>
-        <p><strong>AirHelp's fee:</strong> They take a percentage of the compensation won (typically 25–35%) — you keep the rest. If they lose, you pay nothing.</p>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- eSIM -->
-    <div id="esim">
-      <p class="section-label">Connectivity</p>
-      <h2 class="section-h2">Which eSIM works best for international students studying abroad?</h2>
-      <p class="section-desc">Roaming charges hit £10–20/day if you're not prepared. An eSIM activates on your phone instantly — no queuing for a SIM at the airport, no swapping physical cards. Buy it before you board and it starts working the moment you land.</p>
-
-      <div class="flights-widget-wrap" style="background:linear-gradient(135deg,#ecfdf5,#d1fae5);border-color:#a7f3d0">
-        <p style="font-size:.82rem;color:#065f46;font-weight:600;margin:0 0 14px">📶 eSIM search — find data plans for 200+ countries (activate before you board)</p>
-        <script async src="https://tpemb.com/content?trs=558387&shmarker=274673&locale=en&powered_by=false&promo_id=8588&color_button=%2300A991&color_focused=%23f2685f&secondary=%23FFFFFF" charset="utf-8"></script>
-        <p style="font-size:.7rem;color:#94a3b8;margin:14px 0 0;padding-top:12px;border-top:1px solid #a7f3d0">Powered by Travelpayouts / Airalo. FreeStudentTools may earn an affiliate commission at no extra cost to you.</p>
-      </div>
-
-      <div class="helper-text">
-        <p><strong>Does your phone support eSIM?</strong> iPhone XS (2018) and later, Google Pixel 3 (2018) and later, Samsung Galaxy S20 (2020) and later. Your phone must also be unlocked — not carrier-locked to your home network. Check in Settings → Mobile Data / Carrier.</p>
-        <p><strong>Get a local SIM within 2–3 days.</strong> Your permanent local number — needed for bank accounts, university admin, and landlords — should come from a local SIM. The eSIM bridges the gap until you can get to a phone shop.</p>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- HEALTH CHECKS -->
-    <div id="health">
-      <p class="section-label">Health Requirements</p>
-      <h2 class="section-h2">Do you need a health check or vaccination before studying abroad?</h2>
-      <p class="section-desc">Some countries require TB tests, yellow fever certificates, or medical exams as part of the student visa process. These must be completed in your home country before departure — not on arrival. Use the tool below to check what applies to your route.</p>
-
-      <a href="/health-checks.html" class="health-cta">
-        <div class="health-cta-icon">🏥</div>
-        <div class="health-cta-text">
-          <h3>Free Health Requirements Checker → health-checks.html</h3>
-          <p>Select your origin and destination country. See TB test requirements, yellow fever rules, medical exam requirements, recommended vaccinations, health insurance obligations, and GP registration guidance.</p>
+        <div class="provider-card violet">
+          <div class="pc-icon">🚗</div>
+          <div class="pc-body">
+            <p class="pc-name">GetTransfer — Pre-Book in 1,000+ Cities</p>
+            <p class="pc-desc">Private or shared transfers from the airport to your accommodation. Covers London, New York, Berlin, Sydney, Toronto, Singapore, and 1,000+ cities worldwide. Fixed price — no surge pricing, no surprises. Book before you fly so you're not scrambling at arrivals.</p>
+            <a href="https://gettransfer.tpx.li/hVYkdFLv" rel="noopener sponsored" class="pc-btn violet">Book airport transfer →</a>
+            <span class="pc-disclosure">Affiliate link — FreeStudentTools earns a commission if you book, at no extra cost to you.</span>
+          </div>
         </div>
-      </a>
 
-      <div class="disclaimer-box">
-        <strong>Important disclaimer:</strong> The health check information provided on <a href="/health-checks.html" style="color:#9a3412">freestudenttools.com/health-checks.html</a> is compiled from publicly available sources as a general guide only. It does not constitute medical or legal advice, may not reflect the latest official requirements, and should not be relied upon as complete or accurate. <strong>Always verify health and entry requirements directly with the official embassy, consulate, or government website of your destination country before travelling.</strong> FreeStudentTools accepts no responsibility for any errors, omissions, or outdated information on that page.
+        <div class="helper-note">
+          <strong>When it's worth it:</strong> Almost always for your first arrival. You're jet-lagged, your phone may not have local data yet, and you have more luggage than fits in a standard cab. The premium over public transport is usually £15–30 — worth it once.
+        </div>
+        <div class="helper-note">
+          <strong>When to skip it:</strong> Many universities offer free airport pick-ups around key international arrival dates. Check your international office website first.
+        </div>
       </div>
 
-      <div class="guide-cards" style="margin-top:20px">
-        <a href="/blog/health-insurance-international-students" class="guide-card">
-          <div class="guide-card-icon">💊</div>
-          <div><strong>Health Insurance for International Students</strong><span>NHS, OSHC, UHIP, private — by country →</span></div>
-        </a>
-        <a href="/blog/student-mental-health-abroad" class="guide-card">
-          <div class="guide-card-icon">🧠</div>
-          <div><strong>Student Mental Health Abroad</strong><span>1 in 3 experience anxiety or depression. What helps →</span></div>
-        </a>
+      <!-- ─── FLIGHT COMPENSATION ─── -->
+      <div id="compensation" class="t-section">
+        <p class="t-label">Flight Compensation</p>
+        <h2 class="t-h2">Can you claim if your flight was delayed or cancelled?</h2>
+        <p class="t-desc">EU Regulation EC 261/2004 entitles passengers to €250–€600 if a flight from or into an EU airport is delayed 3+ hours or cancelled. Most passengers never claim — not because they're ineligible, but because they don't know they can. The claim window goes back 3–6 years in most countries.</p>
+
+        <!-- Travelpayouts compensation widget 8679 -->
+        <div class="widget-box">
+          <div class="widget-label"><span>⚖️</span> Flight compensation checker — powered by AirHelp</div>
+          <script async src="https://tpemb.com/content?trs=558387&shmarker=274673&lang=en&powered_by=false&campaign_id=120&promo_id=8679" charset="utf-8"></script>
+          <p class="widget-disclosure">No win, no fee. FreeStudentTools earns a commission only if compensation is awarded — you pay nothing if unsuccessful.</p>
+        </div>
+
+        <div class="helper-note">
+          <strong>What qualifies:</strong> Delays of 3+ hours, cancellations with less than 14 days' notice, denied boarding due to overbooking. Extraordinary circumstances (severe weather, ATC strikes) are usually excluded — mechanical faults are not.
+        </div>
+        <div class="helper-note">
+          <strong>AirHelp's fee:</strong> They take a percentage of compensation won (typically 25–35%). You keep the rest. If they lose, you pay nothing.
+        </div>
       </div>
-    </div>
 
-    <hr class="divider">
+      <!-- ─── eSIM ─── -->
+      <div id="esim" class="t-section">
+        <p class="t-label">Connectivity</p>
+        <h2 class="t-h2">Which eSIM works best for international students?</h2>
+        <p class="t-desc">Roaming charges hit £10–20/day if you're unprepared. An eSIM activates on your phone instantly — no airport SIM queue, no physical card swap. Buy before you board and it starts working the moment you land. Works alongside your home SIM for calls and messages.</p>
 
-    <!-- ARRIVAL GUIDES -->
-    <div id="arrival">
-      <p class="section-label">Arrival</p>
-      <h2 class="section-h2">What do you need to sort in your first week abroad?</h2>
-      <p class="section-desc">Miss one step and it cascades. BRP collection, bank account, GP registration — here's the order that matters for each country.</p>
+        <!-- Travelpayouts Airalo eSIM widget 8588 -->
+        <div class="widget-box">
+          <div class="widget-label"><span>📶</span> eSIM search — find data plans for 200+ countries</div>
+          <script async src="https://tpemb.com/content?trs=558387&shmarker=274673&locale=en&powered_by=false&promo_id=8588&color_button=%2300A991&color_focused=%23f2685f&secondary=%23FFFFFF" charset="utf-8"></script>
+          <p class="widget-disclosure">Powered by Airalo via Travelpayouts. FreeStudentTools may earn an affiliate commission — at no extra cost to you.</p>
+        </div>
 
-      <div class="guide-cards">
-        <a href="/blog/international-student-first-week-arrival-guide" class="guide-card">
-          <div class="guide-card-icon">🛬</div>
-          <div><strong>First Week Arrival Checklist 2026</strong><span>Day-by-day: BRP, bank, GP, SIM, Anmeldung →</span></div>
-        </a>
-        <a href="/blog/international-student-packing-checklist" class="guide-card">
-          <div class="guide-card-icon">🧳</div>
-          <div><strong>International Student Packing Checklist</strong><span>What to bring, ship, and buy on arrival →</span></div>
-        </a>
-        <a href="/blog/student-bank-accounts-international-students" class="guide-card">
-          <div class="guide-card-icon">🏦</div>
-          <div><strong>Bank Accounts for International Students</strong><span>Monzo, Wise, or local bank — which first →</span></div>
-        </a>
-        <a href="/blog/student-accommodation-abroad-guide" class="guide-card">
-          <div class="guide-card-icon">🏠</div>
-          <div><strong>Student Accommodation Abroad Guide</strong><span>Halls vs private — costs, timing, what to check →</span></div>
-        </a>
-        <a href="/blog/how-to-budget-first-year-abroad" class="guide-card">
-          <div class="guide-card-icon">💰</div>
-          <div><strong>How to Budget Your First Year Abroad</strong><span>Month-by-month costs by country →</span></div>
-        </a>
-        <a href="/blog/culture-shock-university-abroad" class="guide-card">
-          <div class="guide-card-icon">🌍</div>
-          <div><strong>Culture Shock at University Abroad</strong><span>4 stages, weeks 6–10, what helps →</span></div>
-        </a>
+        <div class="helper-note">
+          <strong>eSIM compatibility:</strong> iPhone XS (2018) and later, Google Pixel 3 (2018) and later, Samsung Galaxy S20 (2020) and later. Phone must be unlocked — not carrier-locked to your home network. Check: Settings → Mobile Data → Add eSIM.
+        </div>
+        <div class="helper-note">
+          <strong>Get a local SIM within 2–3 days.</strong> Your permanent local number — needed for bank accounts, uni admin, and landlords — should come from a local SIM. The eSIM bridges the gap until you can get to a phone shop.
+        </div>
       </div>
-    </div>
 
-    <!-- GENERAL DISCLAIMER -->
-    <div style="margin-top:48px;padding:20px 24px;background:#f8fafc;border-radius:12px;border:1px solid #e2e8f0">
-      <p style="font-size:.78rem;color:#64748b;line-height:1.65;margin:0"><strong style="color:#374151">Affiliate disclosure &amp; general disclaimer:</strong> Some links on this page are affiliate links — FreeStudentTools may earn a commission if you purchase or book through them, at no extra cost to you. Affiliate relationships do not influence which services are listed or how they are described. All travel information is provided for general guidance only. Prices, availability, and terms of third-party services change frequently. FreeStudentTools is not responsible for any inaccuracies in third-party service information, flight prices, transfer availability, or eligibility assessments. Always confirm details directly with the service provider before purchasing.</p>
+      <!-- ─── HEALTH CHECKS ─── -->
+      <div id="health" class="t-section">
+        <p class="t-label">Health Requirements</p>
+        <h2 class="t-h2">Do you need health checks before studying abroad?</h2>
+        <p class="t-desc">Some countries require TB tests, yellow fever certificates, or medical exams as part of the student visa process. These must be done in your home country before departure — not on arrival. Use the free tool below to check exactly what applies to your route.</p>
+
+        <a href="/health-checks.html" class="health-tool-cta">
+          <div class="ic">🏥</div>
+          <div>
+            <h3>Free Health Requirements Checker</h3>
+            <p>Select your home country and study destination. Instantly see TB test requirements, yellow fever rules, medical exam obligations, recommended vaccinations, and health insurance requirements.</p>
+          </div>
+        </a>
+
+        <div class="guide-grid" style="margin-top:16px">
+          <a href="/blog/student-health-requirements-by-country" class="guide-card">
+            <div class="guide-card-ic">📋</div>
+            <div><strong>Health Requirements by Country 2026</strong><span>UK, USA, Canada, Australia, Germany — compared →</span></div>
+          </a>
+          <a href="/blog/health-insurance-international-students" class="guide-card">
+            <div class="guide-card-ic">💊</div>
+            <div><strong>Health Insurance for International Students</strong><span>NHS, OSHC, UHIP, private — by country →</span></div>
+          </a>
+          <a href="/blog/student-mental-health-abroad" class="guide-card">
+            <div class="guide-card-ic">🧠</div>
+            <div><strong>Student Mental Health Abroad</strong><span>1 in 3 experience anxiety or depression →</span></div>
+          </a>
+        </div>
+
+        <div class="helper-note" style="margin-top:16px;border-left:3px solid #f97316">
+          <strong>Important:</strong> Health requirement information on FreeStudentTools is a general guide only. Always verify directly with the official embassy or government website of your destination before travelling.
+        </div>
+      </div>
+
+      <!-- ─── ARRIVAL ─── -->
+      <div id="arrival" class="t-section">
+        <p class="t-label">Arrival</p>
+        <h2 class="t-h2">What do you need to sort in your first week abroad?</h2>
+        <p class="t-desc">Miss one step and it cascades. BRP collection, bank account, GP registration — here's the order that matters.</p>
+
+        <div class="guide-grid">
+          <a href="/blog/international-student-first-week-arrival-guide" class="guide-card">
+            <div class="guide-card-ic">🛬</div>
+            <div><strong>First Week Arrival Checklist 2026</strong><span>Day-by-day: BRP, bank, GP, SIM, Anmeldung →</span></div>
+          </a>
+          <a href="/blog/international-student-packing-checklist" class="guide-card">
+            <div class="guide-card-ic">🧳</div>
+            <div><strong>International Student Packing Checklist</strong><span>What to bring, ship, and buy on arrival →</span></div>
+          </a>
+          <a href="/blog/student-bank-accounts-international-students" class="guide-card">
+            <div class="guide-card-ic">🏦</div>
+            <div><strong>Bank Accounts for International Students</strong><span>Monzo, Wise, or local bank — which first →</span></div>
+          </a>
+          <a href="/blog/student-accommodation-abroad-guide" class="guide-card">
+            <div class="guide-card-ic">🏠</div>
+            <div><strong>Student Accommodation Abroad</strong><span>Halls vs private — costs, timing, what to check →</span></div>
+          </a>
+          <a href="/blog/how-to-budget-first-year-abroad" class="guide-card">
+            <div class="guide-card-ic">💰</div>
+            <div><strong>How to Budget Your First Year Abroad</strong><span>Month-by-month costs by country →</span></div>
+          </a>
+          <a href="/blog/culture-shock-university-abroad" class="guide-card">
+            <div class="guide-card-ic">🌍</div>
+            <div><strong>Culture Shock at University Abroad</strong><span>4 stages, weeks 6–10, what actually helps →</span></div>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /travel-body -->
+
+    <!-- Disclosure -->
+    <div class="page-disclosure">
+      <strong>Affiliate disclosure &amp; disclaimer:</strong> Some links on this page are affiliate links — FreeStudentTools may earn a commission if you purchase or book through them, at no extra cost to you. Affiliate relationships do not influence which services are listed or how they are described. All travel information is provided for general guidance only. Prices, availability, and eligibility assessments may change. Always confirm details directly with service providers before purchasing.
     </div>
 
   </div>
