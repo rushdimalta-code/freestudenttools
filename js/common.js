@@ -285,7 +285,13 @@ function fstSubmitFeedback(vote) {
     '<a href="/blog/#visas" class="gcat notranslate">🛂 Student Visas</a>' +
     '<a href="/blog/#poststudy" class="gcat notranslate">🌍 Post-Study Visas</a>' +
     '</div>';
-  nav.after(strip);
+  // Insert after the first <section> following the nav (the hero), matching blog/index.html pattern
+  var insertTarget = nav;
+  var nextEl = nav.nextElementSibling;
+  if (nextEl && nextEl.tagName === 'SECTION') {
+    insertTarget = nextEl;
+  }
+  insertTarget.after(strip);
 })();
 
 // ===== BACK TO TOP =====
