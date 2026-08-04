@@ -262,6 +262,44 @@ function fstSubmitFeedback(vote) {
   }
 })();
 
+// ===== GUIDE CATEGORY NAV STRIP =====
+(function () {
+  var nav = document.querySelector('nav.nav');
+  if (!nav) return;
+  var strip = document.createElement('div');
+  strip.className = 'guide-cat-strip';
+  strip.setAttribute('role', 'navigation');
+  strip.setAttribute('aria-label', 'Browse student guides by category');
+  strip.innerHTML =
+    '<div class="guide-cat-inner">' +
+    '<a href="/blog/#scholarships" class="gcat notranslate">🏆 Scholarships</a>' +
+    '<a href="/blog/#strategy" class="gcat notranslate">📝 Application Strategy</a>' +
+    '<a href="/blog/#admissions" class="gcat notranslate">🎓 University Admissions</a>' +
+    '<a href="/blog/#finance" class="gcat notranslate">💰 Financing</a>' +
+    '<a href="/blog/#language" class="gcat notranslate">🗣️ Language Tests</a>' +
+    '<a href="/blog/#arrival" class="gcat notranslate">✈️ Arrival & Travel</a>' +
+    '<a href="/blog/#life" class="gcat notranslate">🏥 Health & Life Abroad</a>' +
+    '<a href="/blog/#work" class="gcat notranslate">💼 Part-Time Work</a>' +
+    '<a href="/blog/#visas" class="gcat notranslate">🛂 Student Visas</a>' +
+    '<a href="/blog/#poststudy" class="gcat notranslate">🌍 Post-Study Visas</a>' +
+    '</div>';
+  nav.after(strip);
+  // Add styles once
+  if (!document.getElementById('gcatStyle')) {
+    var s = document.createElement('style');
+    s.id = 'gcatStyle';
+    s.textContent =
+      '.guide-cat-strip{background:#f8fafc;border-bottom:1px solid #e2e8f0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}' +
+      '.guide-cat-strip::-webkit-scrollbar{display:none}' +
+      '.guide-cat-inner{display:flex;align-items:center;gap:0;min-width:max-content;padding:0 16px;white-space:nowrap}' +
+      '.gcat{display:inline-block;padding:8px 14px;font-size:.78rem;font-weight:600;color:#475569;text-decoration:none;border-right:1px solid #e2e8f0;transition:background .12s,color .12s;flex-shrink:0}' +
+      '.gcat:hover{background:#eff6ff;color:#1d4ed8}' +
+      '.gcat:first-child{border-left:none}' +
+      '@media(max-width:768px){.gcat{padding:8px 10px;font-size:.72rem}}';
+    document.head.appendChild(s);
+  }
+})();
+
 // ===== BACK TO TOP =====
 (function () {
   const btn = document.createElement('button');
