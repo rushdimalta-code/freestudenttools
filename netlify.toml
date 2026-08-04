@@ -96,8 +96,13 @@
 
 [[redirects]]
   from = "/compare-health-requirements"
-  to = "/compare-health-requirements.html"
-  status = 200
+  to = "/blog/student-health-requirements-by-country"
+  status = 301
+
+[[redirects]]
+  from = "/compare-health-requirements.html"
+  to = "/blog/student-health-requirements-by-country"
+  status = 301
 
 [[redirects]]
   from = "/cookies"
