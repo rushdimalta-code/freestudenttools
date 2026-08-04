@@ -333,6 +333,27 @@
   to = "/blog/commonwealth-scholarship-guide.html"
   status = 200
 
+# New batch — August 2026: IELTS Speaking, Duolingo, Flights, Arrival
+[[redirects]]
+  from = "/blog/ielts-speaking-test-guide"
+  to = "/blog/ielts-speaking-test-guide.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/duolingo-english-test-guide-2026"
+  to = "/blog/duolingo-english-test-guide-2026.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/cheap-flights-for-international-students"
+  to = "/blog/cheap-flights-for-international-students.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog/international-student-first-week-arrival-guide"
+  to = "/blog/international-student-first-week-arrival-guide.html"
+  status = 200
+
 # New batch — July 2026 gap analysis posts
 [[redirects]]
   from = "/blog/korea-gks-scholarship-guide"
