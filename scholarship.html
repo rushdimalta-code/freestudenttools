@@ -11,6 +11,7 @@
   <title>Scholarship Details | FreeStudentTools</title>
   <meta name="description" content="Full eligibility, funding amount, deadlines, and application tips for this scholarship. Updated 2026.">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://freestudenttools.com/scholarship">
   <meta property="og:title" content="Scholarship Details | FreeStudentTools">
   <meta property="og:description" content="Full eligibility, funding amount, deadlines, and application tips. Updated 2026.">
   <meta property="og:type" content="article">
@@ -442,20 +443,20 @@
         <div class="sch-layout">
           <main>
             <div class="sch-section">
-              <h2>About This Scholarship</h2>
+              <h2>What Is This Scholarship?</h2>
               <p>${s.eligibility}</p>
               ${s.notes ? `<p style="margin-top:12px;padding-top:12px;border-top:1px solid #f1f5f9;color:#64748b;font-size:0.9rem;font-style:italic">${s.notes}</p>` : ''}
             </div>
 
             <div class="sch-section">
-              <h2>Eligibility Requirements</h2>
+              <h2>Who Can Apply?</h2>
               <ul class="sch-req-list">
                 ${(s.requirements || []).map(r => `<li>${r}</li>`).join('')}
               </ul>
             </div>
 
             <div class="sch-section">
-              <h2>Application Timeline</h2>
+              <h2>When Are the Deadlines?</h2>
               <div class="timeline-steps">${buildTimeline(s)}</div>
             </div>
 
