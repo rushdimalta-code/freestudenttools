@@ -35,7 +35,7 @@
   }
   </script>
   <link rel="preload" href="/assets/fonts/inter-100-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v=20260805">
   <style>
     .blog-hero {
       background: linear-gradient(140deg, #0B1120 0%, #0F2456 50%, #1a1040 100%);
@@ -174,8 +174,8 @@
       background: #fff;
       border-bottom: 1px solid #e2e8f0;
       position: sticky;
-      top: 0;
-      z-index: 100;
+      top: 64px;
+      z-index: 99;
       padding: 0 24px;
     }
     .blog-cat-nav-inner {
@@ -325,6 +325,22 @@
   </nav>
 </nav>
 
+<!-- CATEGORY NAV -->
+<nav class="blog-cat-nav" aria-label="Blog categories">
+  <div class="blog-cat-nav-inner">
+    <a href="#scholarships">Scholarship Guides</a>
+    <a href="#strategy">Application Strategy</a>
+    <a href="#admissions">University Admissions</a>
+    <a href="#finance">Financing</a>
+    <a href="#language">Language Tests</a>
+    <a href="#arrival">Arrival & Travel</a>
+    <a href="#life">Health & Life Abroad</a>
+    <a href="#work">Part-Time Work</a>
+    <a href="#visas">Student Visas</a>
+    <a href="#poststudy">Post-Study Visas</a>
+  </div>
+</nav>
+
 <!-- HERO -->
 <section class="blog-hero">
   <div class="container">
@@ -347,21 +363,6 @@
   </div>
 </section>
 
-<!-- CATEGORY NAV -->
-<nav class="blog-cat-nav" aria-label="Blog categories">
-  <div class="blog-cat-nav-inner">
-    <a href="#scholarships">Scholarship Guides</a>
-    <a href="#strategy">Application Strategy</a>
-    <a href="#admissions">University Admissions</a>
-    <a href="#finance">Financing</a>
-    <a href="#language">Language Tests</a>
-    <a href="#arrival">Arrival & Travel</a>
-    <a href="#life">Health & Life Abroad</a>
-    <a href="#work">Part-Time Work</a>
-    <a href="#visas">Student Visas</a>
-    <a href="#poststudy">Post-Study Visas</a>
-  </div>
-</nav>
 
 <!-- POSTS -->
 <section class="blog-body" id="scholarships">
@@ -1201,7 +1202,7 @@
   </div>
 </footer>
 
-<script src="/js/common.js" defer></script>
+<script src="/js/common.js?v=20260805" defer></script>
 <script>
 function fstBlogFilter(q) {
   var cards = document.querySelectorAll('.blog-card');

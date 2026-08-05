@@ -285,13 +285,9 @@ function fstSubmitFeedback(vote) {
     '<a href="/blog/#visas" class="gcat notranslate">Student Visas</a>' +
     '<a href="/blog/#poststudy" class="gcat notranslate">Post-Study Visas</a>' +
     '</div>';
-  // Insert after the first <section> following the nav (hero), matching blog/index.html pattern
-  var insertTarget = nav;
-  var nextEl = nav.nextElementSibling;
-  if (nextEl && nextEl.tagName === 'SECTION') {
-    insertTarget = nextEl;
-  }
-  insertTarget.after(strip);
+  // Anchor immediately after </nav> — the only position identical on all 310 pages.
+  // Hero markup varies (section/div/script), so "after the hero" is not reliable.
+  nav.after(strip);
 })();
 
 // ===== BACK TO TOP =====
