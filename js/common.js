@@ -264,8 +264,8 @@ function fstSubmitFeedback(vote) {
 
 // ===== GUIDE CATEGORY NAV STRIP =====
 (function () {
-  // Strip is now in static HTML on all root pages — only inject dynamically on blog posts
-  if (document.querySelector('.guide-cat-strip')) return;
+  // Don't inject if strip already in HTML, or if page has its own blog-cat-nav (blog/index.html)
+  if (document.querySelector('.guide-cat-strip') || document.querySelector('.blog-cat-nav')) return;
   var nav = document.querySelector('nav.nav');
   if (!nav) return;
   var strip = document.createElement('div');
@@ -274,18 +274,18 @@ function fstSubmitFeedback(vote) {
   strip.setAttribute('aria-label', 'Browse student guides by category');
   strip.innerHTML =
     '<div class="guide-cat-inner">' +
-    '<a href="/blog/#scholarships" class="gcat notranslate">🏆 Scholarships</a>' +
-    '<a href="/blog/#strategy" class="gcat notranslate">📝 Application Strategy</a>' +
-    '<a href="/blog/#admissions" class="gcat notranslate">🎓 University Admissions</a>' +
-    '<a href="/blog/#finance" class="gcat notranslate">💰 Financing</a>' +
-    '<a href="/blog/#language" class="gcat notranslate">🗣️ Language Tests</a>' +
-    '<a href="/blog/#arrival" class="gcat notranslate">✈️ Arrival & Travel</a>' +
-    '<a href="/blog/#life" class="gcat notranslate">🏥 Health & Life Abroad</a>' +
-    '<a href="/blog/#work" class="gcat notranslate">💼 Part-Time Work</a>' +
-    '<a href="/blog/#visas" class="gcat notranslate">🛂 Student Visas</a>' +
-    '<a href="/blog/#poststudy" class="gcat notranslate">🌍 Post-Study Visas</a>' +
+    '<a href="/blog/#scholarships" class="gcat notranslate">Scholarship Guides</a>' +
+    '<a href="/blog/#strategy" class="gcat notranslate">Application Strategy</a>' +
+    '<a href="/blog/#admissions" class="gcat notranslate">University Admissions</a>' +
+    '<a href="/blog/#finance" class="gcat notranslate">Financing</a>' +
+    '<a href="/blog/#language" class="gcat notranslate">Language Tests</a>' +
+    '<a href="/blog/#arrival" class="gcat notranslate">Arrival &amp; Travel</a>' +
+    '<a href="/blog/#life" class="gcat notranslate">Health &amp; Life Abroad</a>' +
+    '<a href="/blog/#work" class="gcat notranslate">Part-Time Work</a>' +
+    '<a href="/blog/#visas" class="gcat notranslate">Student Visas</a>' +
+    '<a href="/blog/#poststudy" class="gcat notranslate">Post-Study Visas</a>' +
     '</div>';
-  // Insert after the first <section> following the nav (the hero), matching blog/index.html pattern
+  // Insert after the first <section> following the nav (hero), matching blog/index.html pattern
   var insertTarget = nav;
   var nextEl = nav.nextElementSibling;
   if (nextEl && nextEl.tagName === 'SECTION') {
