@@ -17,6 +17,12 @@ from datetime import date, datetime
 SITE = "https://freestudenttools.com"
 TODAY = date.today()
 
+# Cache-busting version for /css/style.css and /js/common.js.
+# netlify.toml caches these for 7 days, so browsers keep running stale copies
+# unless the URL changes. Bump this whenever style.css or common.js changes,
+# and keep it identical to the ?v= value used across the other HTML pages.
+ASSET_VERSION = "20260805"
+
 
 def flag_emoji(code):
     if not code or code in ("EU", "Various", "various"):
@@ -447,7 +453,7 @@ def generate_page(s, all_scholarships):
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v={ASSET_VERSION}">
   <script>window.dataLayer = window.dataLayer || [];</script>
 {SCH_STYLES}
 </head>
@@ -557,7 +563,7 @@ def generate_page(s, all_scholarships):
   </div>
 </div>
 
-<script src="/js/common.js"></script>
+<script src="/js/common.js?v={ASSET_VERSION}"></script>
 </body>
 </html>"""
 
