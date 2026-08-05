@@ -124,11 +124,13 @@
     .helper-note + .helper-note{margin-top:8px}
 
     /* ── Health CTA ── */
-    .health-tool-cta{display:flex;align-items:flex-start;gap:16px;background:#fff;border:1px solid #e2e8f0;border-left:4px solid #f59e0b;border-radius:14px;padding:20px 24px;margin-top:20px;text-decoration:none;color:inherit;transition:box-shadow .15s}
-    .health-tool-cta:hover{box-shadow:0 4px 16px rgba(0,0,0,.07)}
+    .health-tool-cta{display:flex;align-items:flex-start;gap:16px;background:#fff;border:1px solid #e2e8f0;border-left:4px solid #f59e0b;border-radius:14px;padding:20px 24px;margin-top:20px;color:inherit}
     .health-tool-cta .ic{font-size:1.5rem;flex-shrink:0;margin-top:2px}
     .health-tool-cta h3{font-size:.92rem;font-weight:800;color:#92400e;margin:0 0 3px}
     .health-tool-cta p{font-size:.82rem;color:#b45309;margin:0;line-height:1.5}
+    .health-tool-btn{display:inline-flex;align-items:center;gap:7px;background:#f59e0b;color:#fff;border-radius:10px;padding:11px 22px;margin-top:16px;font-size:.9rem;font-weight:700;text-decoration:none;transition:background .15s}
+    .health-tool-btn:hover{background:#d97706}
+    .health-tool-btn:focus-visible{outline:3px solid #92400e;outline-offset:2px}
 
     /* ── Guide cards ── */
     .guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;margin-top:16px}
@@ -355,13 +357,14 @@
         <h2 class="t-h2">Do you need health checks before studying abroad?</h2>
         <p class="t-desc">Some countries require TB tests, yellow fever certificates, or medical exams as part of the student visa process. These must be done in your home country before departure — not on arrival. Use the free tool below to check exactly what applies to your route.</p>
 
-        <a href="/health-checks.html" class="health-tool-cta">
+        <div class="health-tool-cta">
           <div class="ic">🏥</div>
           <div>
             <h3>Free Health Requirements Checker</h3>
             <p>Select your home country and study destination. Instantly see TB test requirements, yellow fever rules, medical exam obligations, recommended vaccinations, and health insurance requirements.</p>
+            <a href="/health-checks" class="health-tool-btn">Check your requirements →</a>
           </div>
-        </a>
+        </div>
 
         <div class="guide-grid" style="margin-top:16px">
           <a href="/blog/student-health-requirements-by-country" class="guide-card">
