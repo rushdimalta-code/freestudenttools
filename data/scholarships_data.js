@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-04",
+  "lastUpdated": "2026-08-05",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -779,7 +779,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply through your chosen Dutch university — not through a central portal. Each university has its own deadline and eligibility criteria.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.studyinholland.nl/scholarships/holland-scholarship"
     },
@@ -870,7 +870,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Applicants apply to the program and the scholarship simultaneously. Programs offered at Flemish universities (KU Leuven, Ghent, etc.).",
       "deadline": "2027-02-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.vliruos.be/en/scholarships/6"
     },
@@ -2130,7 +2130,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Three award levels based on GPA. No separate application form — scholarship considered alongside master's application.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.universiteitleiden.nl/en/education/scholarships/leiden-university-excellence-scholarship"
     },
@@ -2709,7 +2709,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The OTS is managed by Nuffic Neso offices in eligible countries. Not all countries participate. Check Nuffic website for your country's OTS office.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.studyinholland.nl/scholarships/orange-tulip-scholarship"
     },
@@ -3775,7 +3775,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — very few awards per year. Combined with the national Holland Scholarship for maximum benefit.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.uva.nl/en/education/master-s/scholarships-and-grants/uva-scholarships/uva-scholarship.html"
     },
@@ -3804,7 +3804,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the most generous Dutch university scholarships. The home-institution nomination requirement means only one or two students per partner university can apply.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.rug.nl/education/international-students/scholarships-grants/rug-scholarship"
     },
@@ -4087,7 +4087,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "KTH is Scandinavia's leading technical university and Europe's top 10 for engineering. Sweden has tuition for non-EU students — scholarship offsets the cost.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.kth.se/en/studies/master/scholarships"
     },
@@ -6339,7 +6339,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Wellcome funds over 1,000 PhD students. Apply to specific Wellcome-funded programs at UCL, Edinburgh, Oxford, Cambridge, Sanger Institute, and others — not to Wellcome directly.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://wellcome.org/grant-funding/schemes/phd-fellowships"
     },
@@ -6975,7 +6975,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "EMBO has 1,800 member scientists. Fellowships are prestigious in life sciences. 'Outgoing' fellows go from Europe to labs outside Europe.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.embo.org/funding/fellowships-awards-and-grants/postdoctoral-fellowships"
     },
@@ -7005,7 +7005,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Sweden charges tuition for non-EU students — Lund scholarships cover the full fee. Lund is ranked top 100 globally with strong programs in sustainability, engineering, social sciences, and law.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.lunduniversity.lu.se/admissions/scholarships-and-funding/lund-university-global-scholarship"
     },
@@ -7035,7 +7035,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Utrecht Excellence Scholarship is among the most generous Dutch university scholarships for international students. Utrecht is ranked top 100 globally.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.uu.nl/en/education/masters-programmes/scholarships-and-grants/utrecht-excellence-scholarships"
     },
@@ -7476,7 +7476,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "NCAA scholarships are awarded by individual universities — not by NCAA itself. Must be recruited. International athletes CAN receive full athletic scholarships.",
       "deadline": "2027-02-01",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.ncaa.org/sports/2013/10/3/student-athlete-experience.aspx"
     },
