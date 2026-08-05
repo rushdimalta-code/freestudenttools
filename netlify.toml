@@ -28,6 +28,11 @@
   status = 301
 
 [[redirects]]
+  from = "/scholarship/ntu_singapore_pgrs"
+  to = "/scholarship/ntu_research_scholarship"
+  status = 301
+
+[[redirects]]
   from = "/scholarship/ncaa_scholarship"
   to = "/scholarship/ncaa_athletic"
   status = 301

@@ -591,7 +591,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.studyinkorea.go.kr/en/sub/gks/allnew_invite.do"
+      "link": "https://www.studyinkorea.go.kr"
     },
     {
       "id": "gks_undergraduate",
@@ -621,7 +621,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.studyinkorea.go.kr/en/sub/gks/allnew_invite.do"
+      "link": "https://www.studyinkorea.go.kr"
     },
     {
       "id": "turkiye_burslari",
@@ -751,7 +751,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.campusfrance.org/en/eiffel-scholarship-program-excellence"
+      "link": "https://www.campusfrance.org"
     },
     {
       "id": "holland_scholarship",
@@ -842,7 +842,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://oead.at/en/to-austria/grants-scholarships"
+      "link": "https://oead.at"
     },
     {
       "id": "vlir_uos",
@@ -872,7 +872,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.vliruos.be/en/scholarships/6"
+      "link": "https://www.vliruos.be"
     },
     {
       "id": "italian_gov_scholarship",
@@ -907,7 +907,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "Medium",
-      "link": "https://studyinitaly.esteri.it/en/home"
+      "link": "https://studyinitaly.esteri.it"
     },
     {
       "id": "polish_nawa",
@@ -970,7 +970,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.msmt.cz/areas-of-work/higher-education-institutions/scholarships"
+      "link": "https://www.msmt.cz"
     },
     {
       "id": "iccr_scholarship",
@@ -1034,7 +1034,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://russia.study/en"
+      "link": "https://russia.study"
     },
     {
       "id": "kasp_saudi",
@@ -1100,7 +1100,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://mohesr.gov.ae/en-us/Scholarship"
+      "link": "https://mohesr.gov.ae"
     },
     {
       "id": "aga_khan_scholarship",
@@ -1261,7 +1261,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.opensocietyfoundations.org/grants/open-society-scholarship-programs"
+      "link": "https://www.opensocietyfoundations.org"
     },
     {
       "id": "heinrich_boll",
@@ -1330,7 +1330,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.fes.de/en/studienfoerderung"
+      "link": "https://www.fes.de"
     },
     {
       "id": "konrad_adenauer",
@@ -1484,7 +1484,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://ethz.ch/en/studies/financial/scholarships/excellence-scholarship.html"
+      "link": "https://ethz.ch"
     },
     {
       "id": "epfl_excellence",
@@ -1516,7 +1516,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.epfl.ch/education/master/excellence-fellowship"
+      "link": "https://www.epfl.ch"
     },
     {
       "id": "tu_delft_excellence",
@@ -1547,7 +1547,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.tudelft.nl/onderwijs/praktische-zaken/scholarships"
+      "link": "https://www.tudelft.nl"
     },
     {
       "id": "nus_research_scholarship",
@@ -1576,7 +1576,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://ngs.nus.edu.sg/wp-content/uploads/2022/05/NUS-Graduate-School-Research-Scholarships-Brochure.pdf"
+      "link": "https://ngs.nus.edu.sg"
     },
     {
       "id": "anu_chancellors",
@@ -1638,7 +1638,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "Very High",
-      "link": "https://www.ed.ac.uk/student-funding/postgraduate/international/global/research"
+      "link": "https://www.ed.ac.uk"
     },
     {
       "id": "melbourne_research",
@@ -1800,7 +1800,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.jpa.gov.my/index.php/en/biasiswa"
+      "link": "https://www.jpa.gov.my"
     },
     {
       "id": "singa_singapore",
@@ -1964,7 +1964,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "Low",
-      "link": "https://www.roburse.ro/en"
+      "link": "https://www.roburse.ro"
     },
     {
       "id": "humphrey_fellowship",
@@ -2065,7 +2065,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.ntu.edu.sg/graduate-college/admissions/scholarships-and-financial-aid"
+      "link": "https://www.ntu.edu.sg"
     },
     {
       "id": "kaist_scholarship",
@@ -2132,7 +2132,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.universiteitleiden.nl/en/education/scholarships/leiden-university-excellence-scholarship"
+      "link": "https://www.universiteitleiden.nl"
     },
     {
       "id": "unsw_excellence",
@@ -2165,7 +2165,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.unsw.edu.au/study/scholarships/excellence-scholarships"
+      "link": "https://www.unsw.edu.au"
     },
     {
       "id": "mcgill_entrance",
@@ -2194,7 +2194,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.mcgill.ca/studentaid/scholarships-awards"
+      "link": "https://www.mcgill.ca"
     },
     {
       "id": "ghent_special",
@@ -2227,7 +2227,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.ugent.be/en/research/funding/bof/phd-scholarships"
+      "link": "https://www.ugent.be"
     },
     {
       "id": "ku_leuven_phd",
@@ -2285,7 +2285,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.tcd.ie/Graduate_Studies/scholarships"
+      "link": "https://www.tcd.ie"
     },
     {
       "id": "cambridge_international_scholarship",
@@ -2346,7 +2346,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://hkdir.no/en/scholarships"
+      "link": "https://hkdir.no"
     },
     {
       "id": "adb_scholarship",
@@ -2381,7 +2381,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.adb.org/site/careers/japan-scholarship-program"
+      "link": "https://www.adb.org"
     },
     {
       "id": "opec_fund_scholarship",
@@ -2416,7 +2416,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://opecfund.org/what-we-do/people/scholarship-program"
+      "link": "https://opecfund.org"
     },
     {
       "id": "chinese_provincial",
@@ -2482,7 +2482,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.oir.pku.edu.cn/en/Admission"
+      "link": "https://www.oir.pku.edu.cn"
     },
     {
       "id": "sciences_po_scholarship",
@@ -2545,7 +2545,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Low",
-      "link": "https://mohesr.gov.eg/en-us/Scholarship"
+      "link": "https://mohesr.gov.eg"
     },
     {
       "id": "arab_fund_scholarship",
@@ -2614,7 +2614,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.hec.gov.pk/english/scholarships/pages/default.aspx"
+      "link": "https://www.hec.gov.pk"
     },
     {
       "id": "conacyt_mexico",
@@ -2711,7 +2711,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.studyinholland.nl/scholarships/orange-tulip-scholarship"
+      "link": "https://www.studyinholland.nl"
     },
     {
       "id": "joint_japan_wb",
@@ -2745,7 +2745,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.worldbank.org/en/programs/scholarships/brief/jj-wbgsp"
+      "link": "https://www.worldbank.org"
     },
     {
       "id": "hec_paris_scholarship",
@@ -2774,7 +2774,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.hec.edu/en/msc-programs/financial-aid-scholarships"
+      "link": "https://www.hec.edu"
     },
     {
       "id": "harvard_gsas_fellowship",
@@ -2991,7 +2991,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Extremely High",
-      "link": "https://grad.uchicago.edu/financial-aid"
+      "link": "https://grad.uchicago.edu"
     },
     {
       "id": "duke_graduate_fellowship",
@@ -3086,7 +3086,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd-scholarships"
+      "link": "https://www.imperial.ac.uk"
     },
     {
       "id": "ucl_global_masters",
@@ -3115,7 +3115,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.ucl.ac.uk/scholarships/global-masters-scholarship"
+      "link": "https://www.ucl.ac.uk"
     },
     {
       "id": "lse_merit_award",
@@ -3147,7 +3147,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.lse.ac.uk/study-at-lse/graduate/fees-and-funding/scholarships-and-bursaries"
+      "link": "https://www.lse.ac.uk"
     },
     {
       "id": "manchester_presidents_award",
@@ -3176,7 +3176,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "upcoming",
       "competitionLevel": "Very High",
-      "link": "https://www.manchester.ac.uk/study/postgraduate-research/funding/president-doctoral-scholar-award"
+      "link": "https://www.manchester.ac.uk"
     },
     {
       "id": "warwick_chancellor_scholarship",
@@ -3205,7 +3205,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://warwick.ac.uk/services/dc/schols_fund/scholarships_and_bursaries/chancellors"
+      "link": "https://warwick.ac.uk"
     },
     {
       "id": "ucl_phd_excellence",
@@ -3235,7 +3235,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.ucl.ac.uk/scholarships/overseas-research-scholarship"
+      "link": "https://www.ucl.ac.uk"
     },
     {
       "id": "toronto_fellowship",
@@ -3293,7 +3293,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.grad.ubc.ca/awards/university-graduate-fellowship"
+      "link": "https://www.grad.ubc.ca"
     },
     {
       "id": "tum_scholarship",
@@ -3358,7 +3358,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.en.lmu.de/study_and_teaching/scholarships/index.html"
+      "link": "https://www.en.lmu.de"
     },
     {
       "id": "heidelberg_hgs_scholarship",
@@ -3392,7 +3392,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.uni-heidelberg.de/en/study/all-study-programs/doctoral-programs"
+      "link": "https://www.uni-heidelberg.de"
     },
     {
       "id": "rwth_aachen_scholarship",
@@ -3486,7 +3486,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://gradsch.hku.hk/prospective_students/scholarships_fees_and_funding"
+      "link": "https://gradsch.hku.hk"
     },
     {
       "id": "cuhk_scholarship",
@@ -3515,7 +3515,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.gs.cuhk.edu.hk/admissions/scholarships-fees"
+      "link": "https://www.gs.cuhk.edu.hk"
     },
     {
       "id": "tsinghua_intl_scholarship",
@@ -3551,7 +3551,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.tsinghua.edu.cn/en/Admissions/International_Students.htm"
+      "link": "https://www.tsinghua.edu.cn"
     },
     {
       "id": "fudan_intl_scholarship",
@@ -3615,7 +3615,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://en.snu.ac.kr/apply/tuition-scholarship"
+      "link": "https://en.snu.ac.kr"
     },
     {
       "id": "postech_scholarship",
@@ -3647,7 +3647,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://international.postech.ac.kr/admission/scholarship"
+      "link": "https://international.postech.ac.kr"
     },
     {
       "id": "tokyo_university_scholarship",
@@ -3679,7 +3679,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.u-tokyo.ac.jp/en/admissions/graduate/scholarship.html"
+      "link": "https://www.u-tokyo.ac.jp"
     },
     {
       "id": "waseda_scholarship",
@@ -3710,7 +3710,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.waseda.jp/inst/scholarships/en/top/outbound"
+      "link": "https://www.waseda.jp"
     },
     {
       "id": "kyoto_university_scholarship",
@@ -3744,7 +3744,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.kyoto-u.ac.jp/en/education-campus/procedures-entrance/scholarships"
+      "link": "https://www.kyoto-u.ac.jp"
     },
     {
       "id": "amsterdam_scholarship",
@@ -3777,7 +3777,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.uva.nl/en/education/master-s/scholarships-and-grants/uva-scholarships/uva-scholarship.html"
+      "link": "https://www.uva.nl"
     },
     {
       "id": "groningen_scholarship",
@@ -3836,7 +3836,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.uct.ac.za/main/apply/postgrad/pg-funding"
+      "link": "https://www.uct.ac.za"
     },
     {
       "id": "nus_soc_scholarship",
@@ -3866,7 +3866,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.comp.nus.edu.sg/programmes/pg/phd"
+      "link": "https://www.comp.nus.edu.sg"
     },
     {
       "id": "monash_scholarship",
@@ -3926,7 +3926,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://scholarships.uq.edu.au/scholarship/uq-international-excellence-award"
+      "link": "https://scholarships.uq.edu.au"
     },
     {
       "id": "aalto_scholarship",
@@ -3959,7 +3959,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.aalto.fi/en/study-at-aalto/scholarships-and-financial-aid"
+      "link": "https://www.aalto.fi"
     },
     {
       "id": "ku_copenhagen_scholarship",
@@ -4025,7 +4025,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.dtu.dk/english/education/phd/vacant_positions"
+      "link": "https://www.dtu.dk"
     },
     {
       "id": "tu_delft_phd",
@@ -4089,7 +4089,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.kth.se/en/studies/master/scholarships"
+      "link": "https://www.kth.se"
     },
     {
       "id": "nordic_scholarships",
@@ -4148,7 +4148,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.oph.fi/en/programmes-and-projects/scholarships-and-grants"
+      "link": "https://www.oph.fi"
     },
     {
       "id": "denmark_gov_scholarship",
@@ -4178,7 +4178,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "upcoming",
       "competitionLevel": "Medium",
-      "link": "https://www.ufm.dk/en/education/higher-education/international-students"
+      "link": "https://www.ufm.dk"
     },
     {
       "id": "kenyatta_scholarship",
@@ -4243,7 +4243,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://au.int/en/education"
+      "link": "https://au.int"
     },
     {
       "id": "mwalimu_nyerere",
@@ -4273,7 +4273,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://au.int/en/mnjnyerere"
+      "link": "https://au.int"
     },
     {
       "id": "great_minds_rwanda",
@@ -4307,7 +4307,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.mineduc.gov.rw/index.php?id=73"
+      "link": "https://www.mineduc.gov.rw"
     },
     {
       "id": "ghana_scholarship",
@@ -4431,7 +4431,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Low",
-      "link": "https://caricom.org/education-technology-and-economic-development"
+      "link": "https://caricom.org"
     },
     {
       "id": "uwi_scholarship",
@@ -4658,7 +4658,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.anid.cl/capital-humano/becas-al-extranjero"
+      "link": "https://www.anid.cl"
     },
     {
       "id": "argentina_conicet",
@@ -4755,7 +4755,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.usaid.gov/work-usaid/careers/dli"
+      "link": "https://www.usaid.gov"
     },
     {
       "id": "british_council_arts",
@@ -4816,7 +4816,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://calarts.edu/admissions/financial-aid/scholarships"
+      "link": "https://calarts.edu"
     },
     {
       "id": "rics_scholarship",
@@ -4880,7 +4880,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.who.int/careers/fellowships"
+      "link": "https://www.who.int"
     },
     {
       "id": "undp_scholarship",
@@ -4973,7 +4973,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://hkdir.no/en/scholarships/aurora"
+      "link": "https://hkdir.no"
     },
     {
       "id": "ireland_govt_scholarship",
@@ -5003,7 +5003,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "Very High",
-      "link": "https://research.ie/funding/goiies"
+      "link": "https://research.ie"
     },
     {
       "id": "fundacion_carolina",
@@ -5219,7 +5219,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.imperial.ac.uk/study/fees-and-funding/undergraduate/scholarships/presidents-undergraduate-scholarship"
+      "link": "https://www.imperial.ac.uk"
     },
     {
       "id": "newton_bhabha",
@@ -5412,7 +5412,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.scholarships-bourses.gc.ca/scholarships-bourses/can/institutions/ccsf-pfcc.aspx"
+      "link": "https://www.scholarships-bourses.gc.ca"
     },
     {
       "id": "korea_asean_scholarship",
@@ -5532,7 +5532,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.london.edu/masters-degrees/mba/fees-and-funding/scholarships"
+      "link": "https://www.london.edu"
     },
     {
       "id": "wharton_fellowship",
@@ -5561,7 +5561,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://mba.wharton.upenn.edu/mba-program/financing-your-wharton-mba/fellowships-and-scholarships"
+      "link": "https://mba.wharton.upenn.edu"
     },
     {
       "id": "kellogg_scholarship",
@@ -5590,7 +5590,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.kellogg.northwestern.edu/programs/full-time-mba/financing.aspx"
+      "link": "https://www.kellogg.northwestern.edu"
     },
     {
       "id": "google_generation_scholarship",
@@ -5745,7 +5745,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "Extremely High",
-      "link": "https://machinelearning.apple.com/programs/scholars"
+      "link": "https://machinelearning.apple.com"
     },
     {
       "id": "jpmorgan_scholarship",
@@ -5813,7 +5813,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.inlaksfoundation.org/scholarships/inlaks-shivdasani-award"
+      "link": "https://www.inlaksfoundation.org"
     },
     {
       "id": "forte_fellowship",
@@ -5842,7 +5842,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.fortefoundation.org/fellowships"
+      "link": "https://www.fortefoundation.org"
     },
     {
       "id": "joint_amu_intl",
@@ -5963,7 +5963,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "Low",
-      "link": "https://www.ucas.com/advisers/help-and-training/resources/student-finance-resource-hub"
+      "link": "https://www.ucas.com"
     },
     {
       "id": "ucas_early_decision",
@@ -5993,7 +5993,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-15",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.commonapp.org/apply/application-requirements/financial-aid"
+      "link": "https://www.commonapp.org"
     },
     {
       "id": "gates_millennium_scholars",
@@ -6056,7 +6056,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.jkcf.org/our-scholarships/graduate-arts-award"
+      "link": "https://www.jkcf.org"
     },
     {
       "id": "nsf_graduate_fellowship",
@@ -6151,7 +6151,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://careers.cern/students"
+      "link": "https://careers.cern"
     },
     {
       "id": "esa_research_fellowship",
@@ -6182,7 +6182,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.esa.int/About_Us/Careers_at_ESA/ESA_Research_Fellowships"
+      "link": "https://www.esa.int"
     },
     {
       "id": "mit_misti_internship",
@@ -6341,7 +6341,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://wellcome.org/grant-funding/schemes/phd-fellowships"
+      "link": "https://wellcome.org"
     },
     {
       "id": "loreal_women_science",
@@ -6598,7 +6598,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.nstda.or.th/scholarships"
+      "link": "https://www.nstda.or.th"
     },
     {
       "id": "ched_phil",
@@ -6661,7 +6661,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://vied.vn/en"
+      "link": "https://vied.vn"
     },
     {
       "id": "yali_mandela_washington",
@@ -6696,7 +6696,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://yali.state.gov/washington"
+      "link": "https://yali.state.gov"
     },
     {
       "id": "aauw_fellowship",
@@ -6820,7 +6820,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.hagueacademy.nl/courses-and-registration/fees-and-grants"
+      "link": "https://www.hagueacademy.nl"
     },
     {
       "id": "reuter_institute",
@@ -6851,7 +6851,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://reutersinstitute.politics.ox.ac.uk/fellowships/apply-fellowship"
+      "link": "https://reutersinstitute.politics.ox.ac.uk"
     },
     {
       "id": "nieman_fellowship",
@@ -6882,7 +6882,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://nieman.harvard.edu/fellowships/nieman-fellowships"
+      "link": "https://nieman.harvard.edu"
     },
     {
       "id": "riba_research",
@@ -6914,7 +6914,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.architecture.com/education-cpd-and-careers/scholarships-and-awards/the-riba-research-trust"
+      "link": "https://www.architecture.com"
     },
     {
       "id": "iaea_fellowship",
@@ -7007,7 +7007,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.lunduniversity.lu.se/admissions/scholarships-and-funding/lund-university-global-scholarship"
+      "link": "https://www.lunduniversity.lu.se"
     },
     {
       "id": "utrecht_excellence",
@@ -7108,40 +7108,6 @@ window.SCHOLARSHIP_DATA = {
       "link": "https://admission.kaist.ac.kr"
     },
     {
-      "id": "ntu_singapore_pgrs",
-      "name": "NTU Research Scholarship (Singapore)",
-      "provider": "Nanyang Technological University (NTU)",
-      "university": "Nanyang Technological University",
-      "country": "Singapore",
-      "countryCode": "SG",
-      "amountType": "full",
-      "amountDesc": "Full tuition waiver + SGD $2,200/month stipend for PhD research at NTU Singapore (top 15 globally in QS 2024)",
-      "levels": [
-        "PhD"
-      ],
-      "streams": [
-        "Natural Sciences",
-        "Engineering & Technology",
-        "Computer Science & IT",
-        "Business & Economics",
-        "Social Sciences"
-      ],
-      "eligibility": "International and Singaporean students applying to NTU PhD programs. All disciplines from STEM to humanities.",
-      "requirements": [
-        "Bachelor's or master's degree with strong academic record",
-        "Research proposal aligned with NTU faculty interests",
-        "Apply through NTU admissions portal",
-        "English proficiency",
-        "Supervisor agreement required for most disciplines"
-      ],
-      "notes": "NTU's research scholarship is one of the most generous in Asia. Some schools supplement to SGD $2,500–3,500. Excellent global career outcome for graduates.",
-      "deadline": "2027-01-31",
-      "notificationDate": "2027-04-30",
-      "status": "open",
-      "competitionLevel": "High",
-      "link": "https://www.ntu.edu.sg/education/graduate-programme/research-scholarships"
-    },
-    {
       "id": "kyoto_graduate",
       "name": "Kyoto University Graduate Scholarship (Japan)",
       "provider": "Kyoto University",
@@ -7169,7 +7135,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.kyoto-u.ac.jp/en/education-campus/campus/ikadai/kurashi/scholarship.html"
+      "link": "https://www.kyoto-u.ac.jp"
     },
     {
       "id": "oslo_intl_scholarship",
@@ -7198,7 +7164,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "upcoming",
       "competitionLevel": "High",
-      "link": "https://www.uio.no/english/studies/admission/master/scholarships"
+      "link": "https://www.uio.no"
     },
     {
       "id": "uq_graduate_school",
@@ -7291,7 +7257,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.instituto-camoes.pt/activity/o-que-fazemos/lingua-e-ensino/bolsas-de-estudo"
+      "link": "https://www.instituto-camoes.pt"
     },
     {
       "id": "aecid_spain",
@@ -7385,7 +7351,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.nato.int/cps/en/natohq/topics_85425.htm"
+      "link": "https://www.nato.int"
     },
     {
       "id": "wmo_climate",
@@ -7416,7 +7382,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://public.wmo.int/en/about-us/fellowships"
+      "link": "https://public.wmo.int"
     },
     {
       "id": "fao_italy_masters",
@@ -7449,7 +7415,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.fao.org/partnerships/scholar-ships/en"
+      "link": "https://www.fao.org"
     },
     {
       "id": "ncaa_athletic",
@@ -7509,7 +7475,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://hkdir.no/en/scholarships/aurora"
+      "link": "https://hkdir.no"
     },
     {
       "id": "oxford_reuben",
@@ -7538,7 +7504,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.reuben.ox.ac.uk/courses-and-funding/funding"
+      "link": "https://www.reuben.ox.ac.uk"
     },
     {
       "id": "adobe_research_fellowship",
@@ -7569,7 +7535,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://research.adobe.com/fellowship"
+      "link": "https://research.adobe.com"
     }
   ]
 };

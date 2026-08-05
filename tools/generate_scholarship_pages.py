@@ -302,6 +302,59 @@ FOOTER = """\
 </footer>"""
 
 
+TITLE_MAX = 65
+DESC_MAX = 155
+DESC_MIN = 70
+
+
+def _truncate(text, limit):
+    """Cut at a word boundary so nothing ends mid-word."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rstrip()
+    if " " in cut:
+        cut = cut[: cut.rfind(" ")]
+    return cut.rstrip(" ,;:—-")
+
+
+def build_title(name):
+    """Titles must stay under Google's ~65-char display cut-off.
+
+    Adds the richest suffix that still fits, dropping to a shorter one — and
+    finally to a trimmed bare name — for the long scholarship names.
+    """
+    for suffix in (
+        " 2026–2027 — Eligibility, Funding & Deadline | FreeStudentTools",
+        " 2026–2027 — Eligibility & Funding | FreeStudentTools",
+        " 2026–2027 | FreeStudentTools",
+        " | FreeStudentTools",
+    ):
+        if len(name) + len(suffix) <= TITLE_MAX:
+            return name + suffix
+    return _truncate(name, TITLE_MAX - 3) + "..."
+
+
+def build_description(name, amount_desc, deadline):
+    """Meta descriptions capped at 155 chars so Google doesn't truncate them."""
+    amount_desc = (amount_desc or "").strip().rstrip(".")
+    tail = f" Deadline {deadline}." if deadline else ""
+
+    for body in (
+        f"{name}: {amount_desc}.",
+        f"{name}: {amount_desc}."[:DESC_MAX],
+    ):
+        cand = _truncate(body, DESC_MAX - len(tail)) + tail
+        if len(cand) <= DESC_MAX:
+            break
+
+    # Pad thin entries so the snippet still earns its place in the SERP
+    if len(cand) < DESC_MIN:
+        extra = " Eligibility, funding and how to apply."
+        if len(cand) + len(extra) <= DESC_MAX:
+            cand += extra
+    return cand
+
+
 def generate_page(s, all_scholarships):
     sid = s["id"]
     name = s["name"]
@@ -315,9 +368,9 @@ def generate_page(s, all_scholarships):
         else "🔵 Variable"
     )
 
-    title = f"{name} 2026–2027 — Eligibility, Funding & Deadline | FreeStudentTools"
     amount_desc = s.get("amountDesc", "")
-    desc = f"{name}: {amount_desc[:140]} — deadline {fmt_date(s.get('deadline'))}. Full eligibility, requirements, and application tips."
+    title = build_title(name)
+    desc = build_description(name, amount_desc, fmt_date(s.get("deadline")))
 
     faqs = build_faq(s)
     related = build_related(s, all_scholarships)
@@ -453,6 +506,7 @@ def generate_page(s, all_scholarships):
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="preload" href="/css/style.css?v={ASSET_VERSION}" as="style">
   <link rel="stylesheet" href="/css/style.css?v={ASSET_VERSION}">
   <script>window.dataLayer = window.dataLayer || [];</script>
 {SCH_STYLES}
@@ -621,6 +675,66 @@ def update_sitemap(root, scholarships):
     print(f"sitemap.xml — lastmod updated to {today_str} for data-driven pages")
 
 
+INDEX_START = "<!-- SCHOLARSHIP-INDEX:START (generated — do not edit by hand) -->"
+INDEX_END = "<!-- SCHOLARSHIP-INDEX:END -->"
+
+
+def update_scholarship_index(root, scholarships):
+    """Write a static A–Z index of every scholarship into scholarships.html.
+
+    The finder UI renders its cards from scholarships_data.js at runtime, so
+    without this block the 240 detail pages have no crawlable inbound link and
+    are discoverable only via sitemap.xml. Regenerated on every run so it can
+    never drift from the data file.
+    """
+    path = os.path.join(root, "scholarships.html")
+    if not os.path.exists(path):
+        return
+
+    with open(path, "r", encoding="utf-8") as f:
+        page = f.read()
+
+    items = sorted(scholarships, key=lambda s: s.get("name", "").lower())
+    links = "\n".join(
+        '        <li><a href="/scholarship/{id}">{name}{country}</a></li>'.format(
+            id=H.escape(s["id"], quote=True),
+            name=H.escape(s.get("name", s["id"])),
+            country=(" — " + H.escape(s["country"])) if s.get("country") else "",
+        )
+        for s in items
+    )
+
+    block = (
+        f'{INDEX_START}\n'
+        '<section class="scholarship-index" aria-labelledby="scholarship-index-heading">\n'
+        '  <div class="container">\n'
+        f'    <h2 id="scholarship-index-heading">All {len(items)} scholarships A–Z</h2>\n'
+        '    <p>Every scholarship in our database has a full detail page with eligibility, '
+        'funding, deadlines and how to apply.</p>\n'
+        '    <ul class="scholarship-index-list">\n'
+        f'{links}\n'
+        '    </ul>\n'
+        '  </div>\n'
+        '</section>\n'
+        f'{INDEX_END}'
+    )
+
+    if INDEX_START in page and INDEX_END in page:
+        page = re.sub(
+            re.escape(INDEX_START) + r".*?" + re.escape(INDEX_END),
+            lambda _: block,
+            page,
+            flags=re.DOTALL,
+        )
+    else:
+        page = page.replace("</main>", "</main>\n\n" + block + "\n", 1)
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(page)
+
+    print(f"scholarships.html — static A–Z index refreshed ({len(items)} links)")
+
+
 def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     data_path = os.path.join(root, "data", "scholarships_data.js")
@@ -648,6 +762,7 @@ def main():
 
     print(f"Generated {count} pages → {out_dir}/")
     update_sitemap(root, scholarships)
+    update_scholarship_index(root, scholarships)
 
 
 if __name__ == "__main__":
