@@ -1,6 +1,21 @@
-// ===== GOOGLE ANALYTICS 4 =====
+// ===== GOOGLE ANALYTICS 4 (Consent Mode v2) =====
 const GA_MEASUREMENT_ID = 'G-WX0M0TK16J';
 const ADSENSE_PUB_ID = 'ca-pub-9843476971668607';
+
+window.dataLayer = window.dataLayer || [];
+window.gtag = function() { dataLayer.push(arguments); };
+
+// Consent defaults must be queued before gtag.js loads. Visitors who already
+// accepted get full tracking immediately; everyone else starts denied but
+// still counted via Google's cookieless "modeled" pings — instead of being
+// invisible until (if ever) they click the cookie banner.
+const priorConsent = localStorage.getItem('cookie_consent');
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: priorConsent === 'accepted' ? 'granted' : 'denied'
+});
 
 function initGA() {
   if (window._gaInitialised) return;
@@ -11,8 +26,6 @@ function initGA() {
   script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
   document.head.appendChild(script);
 
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function() { dataLayer.push(arguments); };
   gtag('js', new Date());
   gtag('config', GA_MEASUREMENT_ID, {
     anonymize_ip: true,
@@ -46,9 +59,11 @@ window.trackEvent = function(eventName, params = {}) {
 
 // ===== NAVIGATION =====
 document.addEventListener('DOMContentLoaded', () => {
-  // Init GA + Ads if consent was previously given
+  // GA always loads now — Consent Mode governs whether it uses cookies or
+  // falls back to cookieless modeled pings (see consent defaults above).
+  initGA();
+  // Ads still require explicit accept — unchanged.
   if (localStorage.getItem('cookie_consent') === 'accepted') {
-    initGA();
     initAds();
   }
 
@@ -120,13 +135,24 @@ function initCookieConsent() {
   document.getElementById('cookieAccept')?.addEventListener('click', () => {
     localStorage.setItem('cookie_consent', 'accepted');
     banner.classList.remove('show');
-    initGA();
+    gtag('consent', 'update', {
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+      analytics_storage: 'granted'
+    });
     initAds();
   });
 
   document.getElementById('cookieDecline')?.addEventListener('click', () => {
     localStorage.setItem('cookie_consent', 'declined');
     banner.classList.remove('show');
+    gtag('consent', 'update', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
   });
 }
 

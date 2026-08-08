@@ -21,7 +21,7 @@ TODAY = date.today()
 # netlify.toml caches these for 7 days, so browsers keep running stale copies
 # unless the URL changes. Bump this whenever style.css or common.js changes,
 # and keep it identical to the ?v= value used across the other HTML pages.
-ASSET_VERSION = "20260805"
+ASSET_VERSION = "20260808"
 
 
 def flag_emoji(code):
