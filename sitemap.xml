@@ -1115,7 +1115,7 @@
   </url>
   <!-- OAS Academic Scholarship Program -->
   <url>
-    <loc>https://freestudenttools.com/scholarship/OAS_scholarship</loc>
+    <loc>https://freestudenttools.com/scholarship/oas_scholarship</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1708,12 +1708,6 @@
     <priority>0.8</priority>
   </url>
   <!-- NTU Research Scholarship (Singapore) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/ntu_singapore_pgrs</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Kyoto University Graduate Scholarship (Japan) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/kyoto_graduate</loc>

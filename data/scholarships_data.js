@@ -4465,7 +4465,7 @@ window.SCHOLARSHIP_DATA = {
       "link": "https://www.uwi.edu/scholarships"
     },
     {
-      "id": "OAS_scholarship",
+      "id": "oas_scholarship",
       "name": "OAS Academic Scholarship Program",
       "provider": "Organization of American States (OAS)",
       "university": null,
