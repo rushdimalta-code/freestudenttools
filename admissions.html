@@ -98,11 +98,11 @@
       background: var(--bg-white); border: 1px solid var(--border);
       border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-sm);
     }
-    .filter-sidebar h3 {
+    .filter-sidebar h2 {
       font-size: 0.9rem; font-weight: 700; color: var(--text-primary);
       margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;
     }
-    .filter-sidebar h3 a { font-size: 0.78rem; font-weight: 500; color: var(--primary); cursor: pointer; }
+    .filter-sidebar h2 a { font-size: 0.78rem; font-weight: 500; color: var(--primary); cursor: pointer; }
     .filter-group { margin-bottom: 18px; }
     .filter-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
     .filter-group select, .filter-group input[type="date"], .filter-group input[type="text"] {
@@ -133,7 +133,7 @@
     .result-count { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); }
     .result-count span { color: var(--text-muted); font-weight: 400; }
     .sort-wrap { display: flex; align-items: center; gap: 8px; }
-    .sort-wrap label { font-size: 0.82rem; color: var(--text-muted); white-space: nowrap; }
+    .sort-wrap label { font-size: 0.82rem; color: #475569; white-space: nowrap; }
     .sort-wrap select { padding: 6px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.875rem; font-family: var(--font); color: var(--text-primary); background: var(--bg-white); }
 
     /* ===== UNIVERSITY CARDS ===== */
@@ -151,11 +151,11 @@
     .uni-meta { flex: 1; min-width: 0; }
     .uni-rank-flag { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
     .rank-badge {
-      background: var(--primary-light); color: var(--primary); font-size: 0.72rem;
+      background: var(--primary-light); color: #1D4ED8; font-size: 0.72rem;
       font-weight: 700; padding: 2px 8px; border-radius: 12px;
     }
     .flag-emoji { font-size: 1rem; }
-    .uni-country { font-size: 0.8rem; color: var(--text-muted); }
+    .uni-country { font-size: 0.8rem; color: #475569; }
     .uni-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
     .uni-name a { color: var(--text-primary); }
     .uni-name a:hover { color: var(--primary); text-decoration: none; }
@@ -164,7 +164,7 @@
       font-size: 0.72rem; background: var(--bg-gray); color: var(--text-secondary);
       padding: 2px 8px; border-radius: 12px; font-weight: 500;
     }
-    .tag-more { background: var(--primary-light); color: var(--primary); }
+    .tag-more { background: var(--primary-light); color: #1D4ED8; }
 
     .uni-card-aside { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex-shrink: 0; }
     .status-block { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; padding: 5px 12px; border-radius: 20px; }
@@ -241,10 +241,10 @@
     .newsletter-form input:focus { outline: none; border-color: #60A5FA; }
     .newsletter-form button {
       padding: 12px 24px; border-radius: 30px; border: none;
-      background: #3B82F6; color: #fff; font-weight: 600; font-size: 0.95rem;
+      background: #1D4ED8; color: #fff; font-weight: 600; font-size: 0.95rem;
       font-family: var(--font); cursor: pointer; transition: background 0.15s; white-space: nowrap;
     }
-    .newsletter-form button:hover { background: #2563EB; }
+    .newsletter-form button:hover { background: #1E40AF; }
     .newsletter-note { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
     .form-msg { margin-top: 12px; font-size: 0.875rem; display: none; }
     .form-msg-success { color: #6EE7B7; }
@@ -392,10 +392,10 @@
           </ul>
         </li>
         <li><a href="/travel.html">✈️ Travel</a></li>
-        <li><a href="/blog/" style="background:#EFF6FF;color:#1A73E8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
+        <li><a href="/blog/" style="background:#EFF6FF;color:#1D4ED8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
         <li><a href="about.html">About</a></li>
         <li class="nav-lang-wrap">
-          <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language" aria-expanded="false" aria-haspopup="true">
+          <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language, currently EN" aria-expanded="false" aria-haspopup="true">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span id="fstCurrentLang" class="notranslate" translate="no">EN</span>
           </button>
@@ -521,14 +521,14 @@
     <!-- ABOUT STRIP -->
     <div class="about-strip" style="margin-top:28px">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <p>Data covers the top 1,500 universities from the QS World University Rankings, THE, and ARWU. Admission dates are verified against official university websites and updated daily. Last updated: <strong id="lastUpdated">2026-04-12</strong> <span id="lastUpdatedTime" style="font-weight:400;color:#3b82f6;font-size:0.78rem"></span>. Always confirm directly with your target university before applying.</p>
+      <p>Data covers the top 1,500 universities from the QS World University Rankings, THE, and ARWU. Admission dates are verified against official university websites and updated daily. Last updated: <strong id="lastUpdated">2026-04-12</strong> <span id="lastUpdatedTime" style="font-weight:400;color:#1D4ED8;font-size:0.78rem"></span>. Always confirm directly with your target university before applying.</p>
     </div>
 
     <div class="admissions-body">
 
       <!-- FILTER SIDEBAR -->
       <aside class="filter-sidebar" aria-label="Filter universities">
-        <h3>Filter <a id="clearFilters" role="button" tabindex="0" aria-label="Clear all filters">Clear all</a></h3>
+        <h2>Filter <a id="clearFilters" role="button" tabindex="0" aria-label="Clear all filters">Clear all</a></h2>
 
         <div class="filter-group">
           <label for="filterCountry">Country</label>
@@ -614,7 +614,7 @@
         </div>
 
         <!-- Legend -->
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;font-size:0.78rem;color:var(--text-muted);align-items:center">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;font-size:0.78rem;color:#475569;align-items:center">
           <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:50%;background:var(--success);display:inline-block"></span>Open</span>
           <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:50%;background:var(--warning);display:inline-block"></span>Closing soon</span>
           <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block"></span>Upcoming</span>

@@ -223,7 +223,7 @@ SCH_STYLES = """\
     .sch-sidebar-card h3{font-size:.95rem;font-weight:700;color:#0f172a;margin:0 0 14px}
     .sch-info-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f8fafc;font-size:.85rem}
     .sch-info-row:last-child{border-bottom:none}
-    .sch-info-label{color:#94a3b8}
+    .sch-info-label{color:#475569}
     .sch-info-value{color:#1e293b;font-weight:600;text-align:right;max-width:160px}
     .sch-apply-btn{display:block;width:100%;padding:14px 24px;background:linear-gradient(135deg,#1A73E8,#7C3AED);color:#fff;border-radius:12px;font-size:.95rem;font-weight:700;text-align:center;text-decoration:none;transition:opacity .2s;margin-bottom:12px}
     .sch-apply-btn:hover{opacity:.9}
@@ -268,7 +268,7 @@ FOOTER = """\
         <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">
-        <h5>University Hub</h5>
+        <h4>University Hub</h4>
         <a href="/admissions.html">Admissions Tracker</a>
         <a href="/scholarships.html">Scholarships Finder</a>
         <a href="/compare.html">Compare Degrees</a>
@@ -276,7 +276,7 @@ FOOTER = """\
         <a href="/tips.html">Student Tips</a>
       </div>
       <div class="footer-col">
-        <h5>Document Tools</h5>
+        <h4>Document Tools</h4>
         <a href="/ocr.html">OCR Scanner</a>
         <a href="/pdf-converter.html">PDF to Word / Excel</a>
         <a href="/compressor.html">PDF Compressor</a>
@@ -286,7 +286,7 @@ FOOTER = """\
         <a href="/citation-generator.html">Citation Generator</a>
       </div>
       <div class="footer-col">
-        <h5>Info</h5>
+        <h4>Info</h4>
         <a href="/blog/">Blog</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
@@ -540,7 +540,7 @@ def generate_page(s, all_scholarships):
 
 <div class="sch-body">
   <div class="sch-layout">
-    <main>
+    <main id="main-content">
       <div class="sch-section">
         <h2>About This Scholarship</h2>
         <p>{H.escape(s.get('eligibility', ''))}</p>

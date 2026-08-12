@@ -648,7 +648,7 @@ label.upload-zone {
   transform: scale(1.06);
 }
 
-.upload-zone h3 { color: var(--text-primary); margin-bottom: 6px; font-size: 1.05rem; font-weight: 600; }
+.upload-zone h2 { color: var(--text-primary); margin-bottom: 6px; font-size: 1.05rem; font-weight: 600; }
 .upload-zone p { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.55; }
 .upload-zone .file-types {
   font-size: 0.75rem; color: var(--text-muted); margin-top: 10px;
@@ -830,6 +830,11 @@ label.upload-zone {
   white-space: nowrap;
   position: relative;
 }
+/* Used site-wide (dynamically rendered "Official site" / "Clear filters"
+   buttons) but had no rule at all — fell back to unstyled bare-link text
+   at #1A73E8, which is borderline-failing WCAG at these font sizes. */
+.btn-secondary { background: #fff; color: #1D4ED8; border: 1.5px solid var(--border); }
+.btn-secondary:hover { background: var(--bg-gray); text-decoration: none; }
 
 .btn:active { transform: scale(0.975); }
 
@@ -1299,6 +1304,7 @@ footer {
   font-size: 0.8rem;
 }
 
+.footer-bottom p { color: #94A3B8; }
 .footer-bottom a { color: #94A3B8; text-decoration: none; }
 .footer-bottom a:hover { color: white; }
 
@@ -1328,8 +1334,8 @@ footer {
   gap: 14px;
 }
 
-.cookie-inner p { font-size: 0.875rem; color: #CBD5E1; margin: 0; }
-.cookie-inner a { color: #60A5FA; text-decoration: underline; }
+.cookie-inner p, .cookie-banner p { font-size: 0.875rem; color: #CBD5E1; margin: 0; }
+.cookie-inner a, .cookie-banner a { color: #60A5FA; text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 
 .cookie-accept {
@@ -1347,7 +1353,12 @@ footer {
 
 .cookie-accept:hover { background: var(--primary-hover); }
 
-.cookie-decline {
+/* Selector was .cookie-decline but the button markup only ever carried
+   id="cookieDecline" + class="btn btn-ghost" — this rule never actually
+   applied, so the button fell back to --text-secondary (#475569, designed
+   for light backgrounds) against the dark cookie banner: 2.36:1, fails
+   WCAG AA. Retargeted to the id that's actually on the element. */
+#cookieDecline {
   background: transparent;
   color: #94A3B8;
   border: 1px solid #334155;
@@ -1359,7 +1370,7 @@ footer {
   font-family: var(--font);
 }
 
-.cookie-decline:hover { color: white; border-color: #64748B; }
+#cookieDecline:hover { color: white; border-color: #64748B; }
 
 /* ===== STATIC PAGES ===== */
 .static-page { padding: 48px 0 60px; }
@@ -1529,6 +1540,10 @@ footer {
   margin-bottom: 16px;
   font-size: 0.96rem;
 }
+/* Inline links in body text rely on color alone site-wide by default
+   (base `a` rule has no underline until hover) — fine for nav/buttons,
+   but WCAG 1.4.1 flags it for links inside a run of prose. */
+.seo-content-section p a { text-decoration: underline; }
 
 .seo-content-section ul {
   list-style: none;
@@ -1727,7 +1742,7 @@ footer {
 .status-open { background:#DCFCE7; color:#15803D; }
 .status-warning { background:#FEF3C7; color:#92400E; }
 .status-upcoming { background:#EFF6FF; color:#1D4ED8; }
-.status-closed { background:#F1F5F9; color:#64748B; }
+.status-closed { background:#F1F5F9; color:#475569; }
 
 /* Level badges */
 .level-badge { display:inline-flex; align-items:center; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:8px; margin-right:4px; margin-bottom:4px; }
@@ -1744,7 +1759,7 @@ footer {
 .schol-meta { flex:1; min-width:0; }
 .schol-top { display:flex; align-items:center; gap:8px; margin-bottom:8px; flex-wrap:wrap; }
 .schol-name { font-size:1.05rem; font-weight:700; color:var(--text-primary); margin:4px 0 6px; }
-.schol-provider { font-size:0.82rem; color:var(--text-muted); margin-bottom:8px; }
+.schol-provider { font-size:0.82rem; color:#475569; margin-bottom:8px; }
 .schol-amount-desc { font-size:0.85rem; color:var(--text-secondary); margin-bottom:10px; line-height:1.5; }
 .schol-tags { display:flex; flex-wrap:wrap; gap:3px; }
 .schol-aside { display:flex; flex-direction:column; align-items:flex-end; gap:6px; min-width:120px; }
@@ -1823,8 +1838,8 @@ footer {
 .scholar-body, .admissions-body { display:grid; grid-template-columns:220px 1fr; gap:24px; padding-top:24px; align-items:start; }
 @media (max-width:768px) { .scholar-body, .admissions-body { grid-template-columns:1fr; } }
 .filter-sidebar { background:#F8FAFC; border:1.5px solid var(--border); border-radius:var(--radius-lg); padding:20px; position:sticky; top:80px; }
-.filter-sidebar h3 { font-size:0.875rem; font-weight:700; color:var(--text-primary); margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
-.filter-sidebar h3 a { font-size:0.78rem; font-weight:600; color:var(--primary); cursor:pointer; }
+.filter-sidebar h2 { font-size:0.875rem; font-weight:700; color:var(--text-primary); margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; }
+.filter-sidebar h2 a { font-size:0.78rem; font-weight:600; color:var(--primary); cursor:pointer; }
 .filter-group { margin-bottom:14px; }
 .filter-group label { display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:5px; }
 .filter-group select, .filter-group input[type="date"] { width:100%; padding:7px 10px; border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:0.85rem; color:var(--text-primary); background:white; transition:border-color 0.15s; }
@@ -2131,7 +2146,7 @@ body{top:0!important}
 
 /* === Read Next Section === */
 .read-next-section{background:#f8fafc;border-top:1px solid #e2e8f0;padding:40px 0}
-.read-next-label{font-size:.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin:0 0 16px}
+.read-next-label{font-size:.75rem;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.08em;margin:0 0 16px}
 .read-next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:640px){.read-next-grid{grid-template-columns:1fr;gap:12px}}
 @media(max-width:900px) and (min-width:641px){.read-next-grid{grid-template-columns:repeat(2,1fr)}}
@@ -2152,9 +2167,9 @@ body{top:0!important}
 .blog-feedback-section{text-align:center;padding:28px 24px;background:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;margin:32px 0}
 .blog-feedback-section>p{font-size:.92rem;color:#475569;margin:0 0 14px;font-weight:500}
 .fst-fb-btn{border:none;cursor:pointer;border-radius:8px;padding:10px 22px;font-size:.88rem;font-weight:700;transition:all .15s;margin:0 6px;display:inline-flex;align-items:center;gap:6px}
-.fst-fb-yes{background:#dcfce7;color:#16a34a}
+.fst-fb-yes{background:#dcfce7;color:#166534}
 .fst-fb-yes:hover{background:#bbf7d0;transform:translateY(-1px)}
-.fst-fb-no{background:#fee2e2;color:#dc2626}
+.fst-fb-no{background:#fee2e2;color:#b91c1c}
 .fst-fb-no:hover{background:#fecaca;transform:translateY(-1px)}
 .fst-fb-thanks{font-size:.9rem;color:#16a34a;font-weight:600;margin:0}
 

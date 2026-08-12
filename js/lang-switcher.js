@@ -55,7 +55,14 @@ function fstLoadTranslateScript() {
   // Update button label for active non-English lang
   var lang = cookieLang;
   var el = document.getElementById('fstCurrentLang');
-  if (el && lang !== 'en') el.textContent = FST_LANG_LABELS[lang] || lang.toUpperCase();
+  if (el && lang !== 'en') {
+    var label = FST_LANG_LABELS[lang] || lang.toUpperCase();
+    el.textContent = label;
+    // Accessible name must contain the visible label (WCAG 2.5.3) — keep
+    // aria-label in sync since the visible text changes per active language.
+    var btn = document.getElementById('langBtn');
+    if (btn) btn.setAttribute('aria-label', 'Change language, currently ' + label);
+  }
 
   // Translation is active for this pageview — the widget must load now to
   // actually translate the DOM. Otherwise wait for the user to open the menu.

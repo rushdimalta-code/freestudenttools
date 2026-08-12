@@ -104,8 +104,8 @@
       background: var(--bg-white); border: 1px solid var(--border);
       border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-sm);
     }
-    .filter-sidebar h3 { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
-    .filter-sidebar h3 a { font-size: 0.78rem; font-weight: 500; color: var(--primary); cursor: pointer; }
+    .filter-sidebar h2 { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; }
+    .filter-sidebar h2 a { font-size: 0.78rem; font-weight: 500; color: var(--primary); cursor: pointer; }
     .filter-group { margin-bottom: 18px; }
     .filter-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.04em; }
     .filter-group select, .filter-group input[type="date"] {
@@ -126,7 +126,7 @@
     .results-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
     .result-count { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); }
     .sort-wrap { display: flex; align-items: center; gap: 8px; }
-    .sort-wrap label { font-size: 0.82rem; color: var(--text-muted); white-space: nowrap; }
+    .sort-wrap label { font-size: 0.82rem; color: #475569; white-space: nowrap; }
     .sort-wrap select { padding: 6px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.875rem; font-family: var(--font); color: var(--text-primary); background: var(--bg-white); }
 
     /* ===== SCHOLARSHIP CARDS ===== */
@@ -139,7 +139,7 @@
     .schol-card-body { padding: 20px 24px 16px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
     .schol-meta { flex: 1; min-width: 0; }
     .schol-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
-    .flag-country { font-size: 0.8rem; color: var(--text-muted); }
+    .flag-country { font-size: 0.8rem; color: #475569; }
 
     /* Amount badges */
     .amount-badge { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 12px; }
@@ -150,11 +150,11 @@
     .amount-varies { background: var(--bg-gray); color: var(--text-secondary); }
 
     .schol-name { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
-    .schol-provider { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
+    .schol-provider { font-size: 0.8rem; color: #475569; margin-bottom: 8px; }
     .schol-amount-desc { font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 10px; font-style: italic; }
     .schol-tags { display: flex; flex-wrap: wrap; gap: 5px; }
     .tag { font-size: 0.72rem; background: var(--bg-gray); color: var(--text-secondary); padding: 2px 8px; border-radius: 12px; font-weight: 500; }
-    .tag-more { background: var(--primary-light); color: var(--primary); }
+    .tag-more { background: var(--primary-light); color: #1D4ED8; }
     .level-badge { font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 10px; }
     .level-bachelor { background: #EDE9FE; color: #5B21B6; }
     .level-master { background: #ECFDF5; color: #065f46; }
@@ -169,7 +169,7 @@
     .status-warning .status-dot { background: var(--warning); animation: pulse 1.5s infinite; }
     .status-upcoming { background: var(--primary-light); color: #1e40af; }
     .status-upcoming .status-dot { background: var(--primary); }
-    .status-closed { background: var(--bg-gray); color: var(--text-muted); }
+    .status-closed { background: var(--bg-gray); color: #475569; }
     .status-closed .status-dot { background: var(--text-muted); }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
@@ -236,10 +236,10 @@
     .newsletter-form input:focus { outline: none; border-color: #34D399; }
     .newsletter-form button {
       padding: 12px 24px; border-radius: 30px; border: none;
-      background: #10B981; color: #fff; font-weight: 600; font-size: 0.95rem;
+      background: #047857; color: #fff; font-weight: 600; font-size: 0.95rem;
       font-family: var(--font); cursor: pointer; transition: background 0.15s; white-space: nowrap;
     }
-    .newsletter-form button:hover { background: #059669; }
+    .newsletter-form button:hover { background: #065F46; }
     .newsletter-note { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
     .form-msg { margin-top: 12px; font-size: 0.875rem; display: none; }
     .form-msg-success { color: #6EE7B7; }
@@ -333,10 +333,10 @@
           </ul>
         </li>
         <li><a href="/travel.html">✈️ Travel</a></li>
-        <li><a href="/blog/" style="background:#EFF6FF;color:#1A73E8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
+        <li><a href="/blog/" style="background:#EFF6FF;color:#1D4ED8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
         <li><a href="about.html">About</a></li>
         <li class="nav-lang-wrap">
-          <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language" aria-expanded="false" aria-haspopup="true">
+          <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language, currently EN" aria-expanded="false" aria-haspopup="true">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
             <span id="fstCurrentLang" class="notranslate" translate="no">EN</span>
           </button>
@@ -469,7 +469,7 @@
 
       <!-- FILTER SIDEBAR -->
       <aside class="filter-sidebar" aria-label="Filter scholarships">
-        <h3>Filter <a id="clearFilters" role="button" tabindex="0" aria-label="Clear all filters">Clear all</a></h3>
+        <h2>Filter <a id="clearFilters" role="button" tabindex="0" aria-label="Clear all filters">Clear all</a></h2>
 
         <div class="filter-group">
           <label for="filterCountry">Country</label>
@@ -529,11 +529,11 @@
         </div>
 
         <!-- Legend -->
-        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;font-size:0.78rem;color:var(--text-muted);align-items:center">
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;font-size:0.78rem;color:#475569;align-items:center">
           <span style="display:inline-block;background:#DCFCE7;color:#14532d;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:12px">Fully funded</span>
           <span style="display:inline-block;background:#FEF9C3;color:#713F12;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:12px">Partial</span>
           <span style="display:inline-block;background:#DBEAFE;color:#1e3a8a;font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:12px">Tuition only</span>
-          <span style="color:var(--error);font-weight:600">Red deadline = closing within 30 days</span>
+          <span style="color:#B91C1C;font-weight:600">Red deadline = closing within 30 days</span>
         </div>
 
         <div class="scholarship-list" id="scholarshipList" aria-live="polite" aria-label="Scholarship results">
