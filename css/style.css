@@ -1329,7 +1329,7 @@ footer {
 }
 
 .cookie-inner p { font-size: 0.875rem; color: #CBD5E1; margin: 0; }
-.cookie-inner a { color: #60A5FA; }
+.cookie-inner a { color: #60A5FA; text-decoration: underline; }
 .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
 
 .cookie-accept {
