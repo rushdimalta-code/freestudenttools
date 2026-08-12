@@ -1293,6 +1293,14 @@ footer {
 
 .footer-col a:hover { color: white; text-decoration: none; }
 
+/* Simpler-template pages (cookies, health-checks, scholarship.html,
+   search.html) use .footer-links without the .footer-col wrapper div
+   blog posts have — these links had zero styling and fell back to the
+   light-mode default color on the dark footer background. */
+.footer-links strong { display: block; color: white; font-size: 0.78rem; font-weight: 700; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links a { display: block; font-size: 0.875rem; color: #94A3B8; margin-bottom: 9px; text-decoration: none; transition: color var(--transition); }
+.footer-links a:hover { color: white; text-decoration: none; }
+
 .footer-bottom {
   border-top: 1px solid #1E293B;
   padding-top: 20px;
