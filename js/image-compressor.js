@@ -68,11 +68,32 @@ function handleFile(file) {
   fileSizeEl.textContent = formatBytes(file.size);
   fileInputSelected.classList.add('show');
   startBtn.disabled = false;
-  hideStatus();
   resultContainer.classList.remove('show');
   progressContainer.classList.remove('show');
   resetBtn.style.display = 'none';
+
+  // Canvas (the only compression path this tool has) can only ever emit
+  // PNG/JPEG/WebP — there is no way to write a GIF back out, animated or
+  // not. Warn up front rather than let someone compress an animated GIF
+  // and silently lose the animation with no explanation.
+  if (file.type === 'image/gif') {
+    showStatus('warning', 'GIF can\'t be compressed as a GIF in-browser — this will convert it to a static JPEG or WebP. If this GIF is animated, only the first frame will be kept.');
+  } else {
+    hideStatus();
+  }
+  updatePngHint();
 }
+
+function updatePngHint() {
+  const hint = document.getElementById('pngQualityHint');
+  if (!hint) return;
+  // Matches the same mimeType resolution compressImage() uses: output is
+  // only ever PNG when the source is PNG and the user hasn't overridden
+  // the format to JPEG/WebP.
+  const willOutputPng = selectedFile && selectedFile.type === 'image/png' && outputFormat.value === 'original';
+  hint.style.display = willOutputPng ? 'block' : 'none';
+}
+outputFormat.addEventListener('change', updatePngHint);
 
 startBtn.addEventListener('click', compressImage);
 resetBtn.addEventListener('click', resetAll);
@@ -158,7 +179,11 @@ async function compressImage() {
     resetBtn.style.display = '';
 
     if (saving <= 0) {
-      showStatus('warning', 'The compressed file is not smaller than the original. Try a lower quality level or JPEG/WebP output format.');
+      if (mimeType === 'image/png') {
+        showStatus('warning', 'PNG is lossless, so the quality slider has no effect on it — that\'s why the file didn\'t shrink. Change "Output Format" above to JPEG or WebP for a real size reduction.');
+      } else {
+        showStatus('warning', 'The compressed file is not smaller than the original. Try a lower quality level.');
+      }
     }
   } catch (err) {
     progressContainer.classList.remove('show');
