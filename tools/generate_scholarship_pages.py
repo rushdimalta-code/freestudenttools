@@ -264,7 +264,7 @@ FOOTER = """\
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo"><img src="/assets/logo-sm.png" alt="FreeStudentTools" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
+        <div class="logo"><img src="/assets/logo-sm.png" alt="FreeStudentTools" width="52" height="52" style="height:52px;width:auto;filter:brightness(0) invert(1);opacity:0.85" loading="lazy"></div>
         <p>Free browser-based tools for students — university comparison, scholarships, admissions &amp; document tools. No uploads, no fees, ever.</p>
       </div>
       <div class="footer-col">
