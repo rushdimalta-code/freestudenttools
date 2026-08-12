@@ -93,10 +93,7 @@
     .t-h2{font-size:1.45rem;font-weight:800;color:#0f172a;margin:0 0 8px;line-height:1.25}
     .t-desc{font-size:.93rem;color:#475569;line-height:1.65;max-width:640px;margin:0}
 
-    /* ── Widget box ── */
-    .widget-box{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 24px 20px;margin-top:20px;box-shadow:0 1px 6px rgba(0,0,0,.05);overflow:hidden}
-    .widget-label{display:flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;color:#64748b;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #f1f5f9}
-    .widget-label span{font-size:1rem}
+    /* ── Widget disclosure (still used by the Yesim card) ── */
     .widget-disclosure{font-size:.68rem;color:#475569;margin-top:12px;padding-top:10px;border-top:1px solid #f1f5f9;line-height:1.5}
 
     /* ── Provider card ── */
@@ -254,14 +251,7 @@
       <div id="flights" class="t-section">
         <p class="t-label">Flights</p>
         <h2 class="t-h2">How do you find cheap student flights?</h2>
-        <p class="t-desc">Use the search widget below to compare live prices across hundreds of airlines and booking platforms. Then cross-check on Kiwi.com — it specialises in virtual interlining, mixing airlines mid-journey to find cheaper routes that single-carrier searches miss.</p>
-
-        <!-- Travelpayouts flights widget 3414 -->
-        <div class="widget-box">
-          <div class="widget-label"><span>✈️</span> Live flight search — powered by Travelpayouts</div>
-          <script async src="https://tpemb.com/content?currency=usd&trs=558387&shmarker=274673&locale=en&stops=any&show_hotels=false&powered_by=false&border_radius=0&campaign_id=100&promo_id=3414" charset="utf-8"></script>
-          <p class="widget-disclosure">FreeStudentTools may earn an affiliate commission if you book — at no extra cost to you.</p>
-        </div>
+        <p class="t-desc">Start with Kiwi.com — it specialises in virtual interlining, mixing airlines mid-journey to find cheaper routes that single-carrier searches miss. Then cross-check against Google Flights' price calendar to confirm you've found the cheapest week to fly.</p>
 
         <!-- Kiwi.com provider card -->
         <div class="provider-card violet">
@@ -315,11 +305,13 @@
         <h2 class="t-h2">Can you claim if your flight was delayed or cancelled?</h2>
         <p class="t-desc">EU Regulation EC 261/2004 entitles passengers to €250–€600 if a flight from or into an EU airport is delayed 3+ hours or cancelled. Most passengers never claim — not because they're ineligible, but because they don't know they can. The claim window goes back 3–6 years in most countries.</p>
 
-        <!-- Travelpayouts compensation widget 8679 -->
-        <div class="widget-box">
-          <div class="widget-label"><span>⚖️</span> Flight compensation checker — powered by AirHelp</div>
-          <script async src="https://tpemb.com/content?trs=558387&shmarker=274673&lang=en&powered_by=false&campaign_id=120&promo_id=8679" charset="utf-8"></script>
-          <p class="widget-disclosure">No win, no fee. FreeStudentTools earns a commission only if compensation is awarded — you pay nothing if unsuccessful.</p>
+        <div class="provider-card rose">
+          <div class="pc-icon">⚖️</div>
+          <div class="pc-body">
+            <p class="pc-name">AirHelp — Flight Compensation Claims</p>
+            <p class="pc-desc">Check in a couple of minutes whether your delayed, cancelled, or overbooked flight qualifies for compensation. No win, no fee — AirHelp only takes a percentage if your claim succeeds.</p>
+            <a href="https://www.airhelp.com/en/" rel="noopener" target="_blank" class="pc-btn rose">Check your flight →</a>
+          </div>
         </div>
 
         <div class="helper-note">
@@ -451,7 +443,7 @@
 </footer>
 
 <div id="cookieBanner" class="cookie-banner">
-  <p>We use cookies to improve your experience. <a href="/cookies.html">Learn more</a></p>
+  <p>We use cookies to improve your experience. <a href="/cookies.html">Learn about our cookie policy</a></p>
   <div class="cookie-actions">
     <button id="cookieAccept" class="btn btn-primary btn-sm">Accept</button>
     <button id="cookieDecline" class="btn btn-ghost btn-sm">Decline</button>
@@ -460,29 +452,5 @@
 
 <script src="/js/common.js?v=20260808" defer></script>
 <script src="/js/lang-switcher.js" defer></script>
-<script>
-// Travelpayouts/AirHelp widgets inject their own iframes with no title
-// attribute — can't set it in static HTML since we don't control their
-// markup, so watch for it and label it from the nearest widget-label text.
-(function () {
-  function labelFrame(frame) {
-    if (!frame || frame.title) return;
-    var box = frame.closest('.widget-box');
-    var label = box && box.querySelector('.widget-label');
-    frame.title = label ? label.textContent.trim() : 'Travel booking widget';
-  }
-  document.querySelectorAll('.widget-box iframe').forEach(labelFrame);
-  var mo = new MutationObserver(function (mutations) {
-    mutations.forEach(function (m) {
-      m.addedNodes.forEach(function (node) {
-        if (node.nodeType !== 1) return;
-        if (node.tagName === 'IFRAME' && node.closest('.widget-box')) labelFrame(node);
-        node.querySelectorAll && node.querySelectorAll('.widget-box iframe').forEach(labelFrame);
-      });
-    });
-  });
-  mo.observe(document.body, { childList: true, subtree: true });
-})();
-</script>
 </body>
 </html>
