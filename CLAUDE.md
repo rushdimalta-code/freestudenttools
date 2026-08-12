@@ -527,6 +527,52 @@ Not fixed (out of scope, third-party): Travelpayouts flight-search widget's inte
 
 ---
 
+## Performance + Mobile-Overflow Follow-up — 2026-08-12 (same day, rev 16 continued)
+
+The accessibility pass above was necessary but not sufficient — a stop-hook review correctly flagged that "zero defect + maximum SEO/performance" needs actual Lighthouse/Core-Web-Vitals measurement and mobile testing beyond one viewport width, not just axe-core. This section covers that follow-up, run against the **live** production domain with the real Lighthouse CLI (`node .../lighthouse/cli/index.js`, mobile form factor).
+
+### Baseline scores (before this section's fixes)
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Homepage | 94 | 100 | 100 | 100 |
+| Blog post (Chevening) | 86 | 100 | 100 | 100 |
+| Tool page (OCR) | 71 | 100 | 100 | 100 |
+| scholarships.html | 59 | 100 | 100 | 100 |
+| compare.html | 100 | 100 | 100 | 100 |
+
+Accessibility/Best-Practices/SEO were already at 100 everywhere (confirms the earlier a11y pass held). Performance varied a lot page-to-page — investigated why.
+
+### Fixes applied
+
+1. **Hero image recompression (7.0MB → 4.9MB, -30%, all 48 `assets/blog/*.jpg`)** — Lighthouse's `image-delivery-insight` flagged 749 KiB of waste on the homepage alone: full hero-banner-resolution JPEGs (up to 1392×752, no compression) were being served into small homepage/blog-index thumbnail card slots too. Re-encoded all 48 as progressive JPEG, quality 80, 1400px width cap, metadata stripped, via ImageMagick. Visually verified several full-size before/after — no perceptible quality loss (66% size cut on the worst offenders: chevening, gates-cambridge, erasmus, rhodes). Homepage's own remaining image waste dropped 749 KiB → 386 KiB immediately.
+2. **Missing footer-logo `width`/`height` (257 files)** — the exact CLS bug already fixed on `index.html` in a prior session (see Performance Audit rev 8 below) had never propagated to any other page's footer, all 240 auto-generated scholarship pages, or the generator template itself — so it would have kept regressing on every `tools/generate_scholarship_pages.py` run. Fixed at the template level and in all existing output in one pass.
+3. **`scholarships.html` / tool pages' Performance score (59–74) is dominated by third-party scripts, not our code** — network-request inspection showed the biggest payloads are Google AdSense (`show_ads_impl_fy2021.js`, 165 KiB), GA4 (`gtag/js`, 189 KiB), and the AdSense iframe/`adsbygoogle.js` (~125 KiB combined) — ~480 KiB of ad/analytics JS is the actual bottleneck, not `scholarships_data.js` (only 55 KiB). This matches the standing conclusion in the Architecture Audit below ("uncontrollable without removing AdSense") — **deliberately not touched**, since removing/deferring monetization scripts further is a revenue decision, not a code-quality one, and out of scope for a unilateral fix.
+4. **LCP figures (6–7s) on lab/simulated-throttling runs are not matched by TBT (~180ms) or a genuine render-blocking problem** — `lcp-discovery-insight` scores perfect (image is `fetchpriority="high"`, discoverable in the initial HTML, not lazy-loaded) on every page checked; the gap is Lighthouse's mobile "simulated slow 4G + 4× CPU" throttling model rather than an actionable code defect. Real field data (CrUX) would be the authoritative next check if this needs revisiting, not further synthetic lab changes.
+
+### Mobile overflow — real bugs found only at 320px (not 375px)
+
+The earlier accessibility pass only checked 375px viewport overflow. Re-tested at **320px** (iPhone SE and similar — still meaningful device share) and **768px** across all 74 root+blog pages plus an 8-page scholarship sample. 768px was clean everywhere; 320px turned up 4 real, previously-undetected bugs:
+
+- **`admissions.html`**: `.admissions-body`'s desktop `align-items: flex-start` silently flips meaning once the existing mobile media query switches it to `flex-direction: column` — children stop stretching to full width and size to their own content instead, so the results column rendered ~365px wide inside a 320px viewport. Fixed by adding `align-items: stretch` to the existing mobile breakpoint.
+- **8 files' CSS Grid `minmax(Npx, 1fr)` where N ≥ 250** (`blog/index.html`'s 320px card grid, `search.html`, `index.html`, `health-checks.html`, `css/style.css`, 4 blog "keep reading" grids) — a fixed-px grid-track minimum that's wider than the space actually available after container padding on narrow screens. Fixed sitewide with the standard `minmax(min(Npx, 100%), 1fr)` pattern — a no-op above that width, only prevents narrow-screen overflow.
+- **3 visa-guide posts' numbered `.steps-list`, 1 accommodation post's `.accom-card`, `404.html`'s "Popular Guides" grid** — a long unbreakable token (a bare domain name like `immi.homeaffairs.gov.au`, a price range) inside a flex/grid item with no `min-width: 0` forced the track to the token's min-content width. Fixed with `min-width: 0` + `overflow-wrap: anywhere` — note **not** `overflow-wrap: break-word`, which does not affect a flex item's automatic minimum-size calculation the way `anywhere` does; this was empirically verified (break-word left the bug in place, anywhere fixed it). `404.html`'s rigid `repeat(3, 1fr)` grid was switched to `repeat(auto-fit, minmax(...))` for the same reason.
+
+Verified 0 overflow across all 74 root+blog pages + 8-page scholarship sample at both 320px and 768px, re-ran axe-core to confirm no accessibility regression, then re-verified against the **live** domain post-deploy.
+
+### Structured data + meta audit (full site, not a sample)
+
+- **314 JSON-LD blocks across every HTML file on the site parse without error** — zero malformed structured data.
+- **0 of 309 indexable pages missing title/meta-description/canonical/H1.** 7 auto-generated scholarship pages initially looked over the 65/160-char soft limits, but that was a false positive in the raw-HTML-source character count — their titles contain `&#x27;`/`&amp;` entities (e.g. "ANU Chancellor's...") which inflate the raw source length; the actual rendered/decoded title is under budget in every case. No fix needed or applied.
+
+### What's still not "maximum" and why that's a deliberate boundary, not an oversight
+
+- **Third-party ad/analytics payload (~480 KiB, AdSense + GA4)** is the dominant remaining performance cost on content pages — a monetization tradeoff, not a code defect, and not something to unilaterally reduce.
+- **Travelpayouts widget internal contrast** on `travel.html` (documented above) — vendor's own component, outside our DOM.
+- **Simulated-throttling LCP numbers (6–7s)** on lab runs, despite perfect LCP-discovery and low TBT — likely a throttling-model artifact rather than a real user-facing delay; would need CrUX field data to confirm either way.
+
+---
+
 ## Key Rules
 
 - Each tool is a separate HTML file — keep them independent
