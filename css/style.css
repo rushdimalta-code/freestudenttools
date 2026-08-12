@@ -1018,7 +1018,7 @@ label.upload-zone {
   margin: 0 auto 14px;
 }
 
-.download-card h4 { margin-bottom: 5px; font-size: 1.05rem; }
+.download-card h3, .download-card h4 { margin-bottom: 5px; font-size: 1.05rem; }
 .download-card p { font-size: 0.85rem; margin-bottom: 18px; }
 
 /* Result stats grid */
@@ -1103,7 +1103,7 @@ label.upload-zone {
   box-shadow: var(--shadow-xs);
 }
 
-.sidebar-card h4 {
+.sidebar-card h3, .sidebar-card h4 {
   color: var(--text-primary);
   margin-bottom: 14px;
   font-size: 0.875rem;
@@ -1273,7 +1273,7 @@ footer {
 
 .footer-brand p { font-size: 0.875rem; line-height: 1.65; max-width: 280px; color: #94A3B8; }
 
-.footer-col h5 {
+.footer-col h2, .footer-col h3, .footer-col h4 {
   color: white;
   font-size: 0.78rem;
   font-weight: 700;

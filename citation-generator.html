@@ -198,7 +198,7 @@
 
     /* Citation result section */
     .citation-result-section { margin-top: 24px; }
-    .citation-result-section h4 { font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+    .citation-result-section h2, .citation-result-section h4 { font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
 
     /* Copy btn inside citation output */
     .citation-copy-wrap { position: relative; }
@@ -218,7 +218,7 @@
 
     /* Saved list header */
     .saved-list-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 10px; }
-    .saved-list-header h4 { font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
+    .saved-list-header h3, .saved-list-header h4 { font-size: 0.88rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 0; }
     .saved-list-actions { display: flex; gap: 8px; }
 
     /* Citation item actions */
@@ -469,7 +469,7 @@
 
         <!-- Section 5: Generated citation output -->
         <div class="citation-result-section" id="citationResultSection">
-          <h4>Generated Citation</h4>
+          <h2>Generated Citation</h2>
           <div class="citation-copy-wrap">
             <div class="citation-output" id="citationOutput" aria-live="polite"></div>
             <button class="citation-copy-btn" id="copyBtn" aria-label="Copy citation to clipboard">
@@ -488,7 +488,7 @@
         <!-- Section 6 & 7: Saved citations list -->
         <div style="margin-top:32px" id="savedListSection">
           <div class="saved-list-header">
-            <h4>Saved Citations <span id="savedCount" style="font-weight:400;color:var(--text-muted);font-size:0.8rem;text-transform:none;letter-spacing:0;">(0)</span></h4>
+            <h3>Saved Citations <span id="savedCount" style="font-weight:400;color:var(--text-muted);font-size:0.8rem;text-transform:none;letter-spacing:0;">(0)</span></h3>
             <div class="saved-list-actions" id="exportBar" style="display:none">
               <button class="btn btn-outline btn-sm" id="copyAllBtn" aria-label="Copy all saved citations to clipboard">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
@@ -517,7 +517,7 @@
          data-ad-format="rectangle"></ins></div>
 
         <div class="sidebar-card" style="margin-top:20px">
-          <h4>How It Works</h4>
+          <h3>How It Works</h3>
           <ul class="how-it-works">
             <li><div class="step-num">1</div><div>Choose APA, MLA, or Chicago format</div></li>
             <li><div class="step-num">2</div><div>Select your source type (website, book, etc.)</div></li>
@@ -527,7 +527,7 @@
         </div>
 
         <div class="sidebar-card">
-          <h4>Format Quick Reference</h4>
+          <h3>Format Quick Reference</h3>
           <ul class="sidebar-list" style="font-size:0.82rem;line-height:1.6;color:var(--text-secondary);">
             <li style="padding:6px 0;border-bottom:1px solid var(--border);">
               <strong style="color:var(--primary);">APA 7th</strong> — Author, A. (Year). Title. Publisher. DOI
@@ -542,7 +542,7 @@
         </div>
 
         <div class="sidebar-card">
-          <h4>Other Tools</h4>
+          <h3>Other Tools</h3>
           <ul class="sidebar-list">
             <li>
               <a href="pdf-merger.html">
