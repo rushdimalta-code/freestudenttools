@@ -57,8 +57,13 @@ window.trackEvent = function(eventName, params = {}) {
   }
 };
 
-// ===== NAVIGATION =====
-document.addEventListener('DOMContentLoaded', () => {
+// GA/Ads fetch competes with the LCP-critical render path if kicked off at
+// DOMContentLoaded (fires before images/fonts finish downloading). Deferring
+// to requestIdleCallback (2s max timeout) doesn't meaningfully delay
+// tracking or ad delivery — it still fires within ~2s on any normal page —
+// but it stops third-party JS from contending for bandwidth during the
+// window that actually determines Core Web Vitals scores.
+function initThirdParty() {
   // GA always loads now — Consent Mode governs whether it uses cookies or
   // falls back to cookieless modeled pings (see consent defaults above).
   initGA();
@@ -66,7 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('cookie_consent') === 'accepted') {
     initAds();
   }
+}
+if ('requestIdleCallback' in window) {
+  requestIdleCallback(initThirdParty, { timeout: 2000 });
+} else {
+  window.addEventListener('load', initThirdParty);
+}
 
+// ===== NAVIGATION =====
+document.addEventListener('DOMContentLoaded', () => {
   // Mobile nav toggle
   const hamburger = document.querySelector('.nav-hamburger');
   const mobileNav = document.querySelector('.nav-mobile');
