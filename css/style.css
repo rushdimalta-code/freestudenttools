@@ -20,12 +20,12 @@
 
 /* ===== ROOT VARIABLES ===== */
 :root {
-  --primary: #1A73E8;
+  --primary: #1D4ED8;
   --primary-hover: #1557B0;
   --primary-active: #1044A3;
   --primary-light: #EFF6FF;
   --primary-border: #BFDBFE;
-  --orange: #F7941D;
+  --orange: #B45309;
   --orange-hover: #E07A0A;
   --orange-light: #FFF7ED;
   --success: #10B981;
@@ -37,7 +37,7 @@
   --error-light: #FEF2F2;
   --text-primary: #0F172A;
   --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-muted: #475569;
   --bg-white: #FFFFFF;
   --bg-light: #F8FAFC;
   --bg-gray: #F1F5F9;
@@ -47,7 +47,7 @@
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
   --shadow-lg: 0 12px 24px rgba(0,0,0,0.09), 0 4px 8px rgba(0,0,0,0.04);
-  --shadow-primary: 0 4px 14px rgba(26,115,232,0.25);
+  --shadow-primary: 0 4px 14px rgba(29,78,216,0.25);
   --radius-xs: 4px;
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -295,7 +295,7 @@ main { flex: 1; }
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(26,115,232,0.35);
+  box-shadow: 0 4px 12px rgba(29,78,216,0.35);
   opacity: 0;
   transform: translateY(12px);
   transition: opacity 0.25s, transform 0.25s;
@@ -607,7 +607,7 @@ main#main-content {
   border-color: var(--primary);
   border-style: solid;
   background: linear-gradient(145deg, #EFF6FF 0%, #E8F0FF 100%);
-  box-shadow: 0 0 0 4px rgba(26,115,232,0.08), 0 8px 24px rgba(26,115,232,0.1);
+  box-shadow: 0 0 0 4px rgba(29,78,216,0.08), 0 8px 24px rgba(29,78,216,0.1);
   transform: translateY(-1px);
 }
 
@@ -644,7 +644,7 @@ label.upload-zone {
   border-color: var(--primary);
   color: var(--primary);
   background: white;
-  box-shadow: 0 4px 14px rgba(26,115,232,0.18);
+  box-shadow: 0 4px 14px rgba(29,78,216,0.18);
   transform: scale(1.06);
 }
 
@@ -756,7 +756,7 @@ label.upload-zone {
 .option-group input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(26,115,232,0.1);
+  box-shadow: 0 0 0 3px rgba(29,78,216,0.1);
 }
 
 /* Styled select (reusable) */
@@ -778,7 +778,7 @@ label.upload-zone {
   transition: border-color var(--transition);
 }
 
-.select-styled:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,115,232,0.1); }
+.select-styled:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29,78,216,0.1); }
 
 .radio-group { display: flex; gap: 8px; flex-wrap: wrap; }
 
@@ -839,7 +839,7 @@ label.upload-zone {
 .btn:active { transform: scale(0.975); }
 
 .btn-primary { background: var(--primary); color: white; box-shadow: var(--shadow-primary); }
-.btn-primary:hover { background: var(--primary-hover); color: white; text-decoration: none; box-shadow: 0 4px 18px rgba(26,115,232,0.35); }
+.btn-primary:hover { background: var(--primary-hover); color: white; text-decoration: none; box-shadow: 0 4px 18px rgba(29,78,216,0.35); }
 .btn-primary:active { background: var(--primary-active); }
 .btn-primary:disabled { background: var(--text-muted); cursor: not-allowed; box-shadow: none; transform: none; }
 
@@ -1092,6 +1092,7 @@ label.upload-zone {
 }
 
 .info-box strong { color: var(--text-primary); }
+.info-box a { text-decoration: underline; }
 
 /* ===== SIDEBAR ===== */
 .sidebar-card {
@@ -1383,14 +1384,14 @@ footer {
 /* ===== STATIC PAGES ===== */
 .static-page { padding: 48px 0 60px; }
 .static-page h1 { margin-bottom: 8px; }
-.static-page .last-updated { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 40px; }
+.static-page .last-updated { font-size: 0.85rem; color: #475569; margin-bottom: 40px; }
 
 .prose h2 { font-size: 1.25rem; margin-top: 36px; margin-bottom: 12px; }
 .prose h3 { font-size: 1rem; margin-top: 24px; margin-bottom: 8px; }
 .prose p { margin-bottom: 16px; font-size: 0.95rem; }
 .prose ul { padding-left: 20px; list-style: disc; margin-bottom: 16px; }
 .prose ul li { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 6px; }
-.prose a { color: var(--primary); }
+.prose a { color: var(--primary); text-decoration: underline; }
 
 /* ===== CONTACT FORM ===== */
 .contact-form { max-width: 600px; }
@@ -1414,7 +1415,7 @@ footer {
 .form-group textarea { height: 130px; resize: vertical; }
 .form-group input:focus,
 .form-group textarea:focus,
-.form-group select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(26,115,232,0.1); }
+.form-group select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(29,78,216,0.1); }
 
 /* ===== TRUST / HERO COMPONENTS ===== */
 .hero-pill {
@@ -1551,7 +1552,7 @@ footer {
 /* Inline links in body text rely on color alone site-wide by default
    (base `a` rule has no underline until hover) — fine for nav/buttons,
    but WCAG 1.4.1 flags it for links inside a run of prose. */
-.seo-content-section p a { text-decoration: underline; }
+.seo-content-section p a, .seo-content-section ul li a { text-decoration: underline; }
 
 .seo-content-section ul {
   list-style: none;
@@ -1615,12 +1616,12 @@ footer {
 
 .faq-item:hover {
   border-color: #BFDBFE;
-  box-shadow: 0 2px 12px rgba(26,115,232,0.09);
+  box-shadow: 0 2px 12px rgba(29,78,216,0.09);
 }
 
 .faq-item[open] {
   border-color: #93C5FD;
-  box-shadow: 0 4px 16px rgba(26,115,232,0.12);
+  box-shadow: 0 4px 16px rgba(29,78,216,0.12);
 }
 
 .faq-item summary {
@@ -1695,7 +1696,7 @@ footer {
   border-color: var(--primary);
   color: var(--primary);
   background: #EFF6FF;
-  box-shadow: 0 4px 12px rgba(26,115,232,0.15);
+  box-shadow: 0 4px 12px rgba(29,78,216,0.15);
   text-decoration: none;
   transform: translateY(-2px);
 }
@@ -1732,7 +1733,7 @@ footer {
 }
 .schol-card:hover, .uni-card:hover {
   border-color: var(--primary-border);
-  box-shadow: 0 8px 24px rgba(26,115,232,0.1);
+  box-shadow: 0 8px 24px rgba(29,78,216,0.1);
   transform: translateY(-2px);
 }
 
@@ -1953,7 +1954,7 @@ footer {
 .tc-top-stripe.stripe-emerald { background: linear-gradient(90deg, #059669, #34D399); }
 
 /* Colored glow on card hover */
-.tool-card-home.c-blue:hover   { box-shadow: 0 12px 36px rgba(26,115,232,.18), var(--shadow-lg); }
+.tool-card-home.c-blue:hover   { box-shadow: 0 12px 36px rgba(29,78,216,.18), var(--shadow-lg); }
 .tool-card-home.c-green:hover  { box-shadow: 0 12px 36px rgba(16,185,129,.18), var(--shadow-lg); }
 .tool-card-home.c-purple:hover { box-shadow: 0 12px 36px rgba(124,58,237,.18), var(--shadow-lg); }
 .tool-card-home.c-orange:hover { box-shadow: 0 12px 36px rgba(247,148,29,.18), var(--shadow-lg); }
