@@ -23,6 +23,21 @@ function fstGetCookieLang() {
   return m ? decodeURIComponent(m[1]) : 'en';
 }
 
+// The Google Translate widget library (~250KB across its own JS/CSS/font
+// requests) was previously loaded eagerly on every pageview via a <script
+// defer> tag in <head>, even though most visitors never touch the language
+// switcher. Load it on demand instead: immediately if a translation is
+// already active (cookie set, so the page must actually render translated),
+// otherwise only on the visitor's first interaction with the language button.
+var fstTranslateScriptLoading = false;
+function fstLoadTranslateScript() {
+  if (fstTranslateScriptLoading || window.google && window.google.translate) return;
+  fstTranslateScriptLoading = true;
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  document.head.appendChild(s);
+}
+
 (function initLang() {
   var cookieLang = fstGetCookieLang();
 
@@ -41,6 +56,10 @@ function fstGetCookieLang() {
   var lang = cookieLang;
   var el = document.getElementById('fstCurrentLang');
   if (el && lang !== 'en') el.textContent = FST_LANG_LABELS[lang] || lang.toUpperCase();
+
+  // Translation is active for this pageview — the widget must load now to
+  // actually translate the DOM. Otherwise wait for the user to open the menu.
+  if (lang !== 'en') fstLoadTranslateScript();
 })();
 
 function fstSwitchLang(lang) {
@@ -60,6 +79,7 @@ function fstSwitchLang(lang) {
 
 function fstLangToggle(e) {
   e.stopPropagation();
+  fstLoadTranslateScript();
   var menu = document.getElementById('fstLangMenu');
   var btn = document.getElementById('langBtn');
   if (!menu) return;
