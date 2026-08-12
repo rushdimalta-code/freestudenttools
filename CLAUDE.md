@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-06-25 (rev 15)_
+_Last updated: 2026-08-12 (rev 16)_
 
 ---
 
@@ -490,6 +490,40 @@ Six issues audited. Two confirmed non-bugs; four content/accuracy bugs fixed acr
 - **compare.html university count** = **1,040+** (from UNI_ALL, 1,000 entries) — this is distinct from the 27 in UNI_DATA
 - **Contact form provider** = **Netlify Forms** — not Formspree. Privacy.html §9, contact.html, and any future reference must say Netlify Forms.
 - **Static crawlers see "Loading..."** on admissions + scholarships — this is permanent and expected behavior. It does affect Googlebot (JS executed with delay); pre-rendering the data into HTML would help SEO but is a separate project.
+
+---
+
+## Sitewide Accessibility Audit — 2026-08-12 (rev 16)
+
+Full WCAG 2A/AA sweep triggered by a `/goal` directive ("zero defect/errors, maximum SEO + web + mobile performance"). Verified with axe-core (not just Lighthouse spot-checks) across every root page, all 49 blog posts, and a scholarship-detail sample — not a subset. Root cause in every case: light/bright brand accent colors (chosen for visual pop) failing the 4.5:1 text-contrast minimum against their own light-tint backgrounds, plus a handful of plain-color links with no non-color distinction (underline).
+
+### Global CSS variable darkening (`css/style.css` `:root`)
+
+| Variable | Old | New | Why global, not per-instance |
+|---|---|---|---|
+| `--primary` | `#1A73E8` | `#1D4ED8` | Used 56× as both button-background (white text, was 4.51:1) and link-text (was 4.51:1 on white) — one change fixed both use cases everywhere, confirmed no dark-background usage exists via variable (dark footer text is separately hardcoded, unaffected) |
+| `--text-muted` | `#94A3B8` | `#475569` | Was 2.23–2.56:1 on every light background it touched (labels, captions, table cells) — the single most repeated violation sitewide |
+| `--orange` | `#F7941D` | `#B45309` | Was 2.15–2.28:1 as text/link color; only ever used as text, icon-color, border, or dot — darkening had zero downside |
+
+**Regression caught and fixed:** `contact-thanks.html`'s footer copyright line used `color:var(--text-muted)` *inline*, inheriting into the dark (`#0F172A`) footer — darkening the variable broke it (2.35:1). Fixed by hardcoding `#94A3B8` there directly, matching the pattern every other page's dark footer already uses (hardcoded, not the variable — confirmed via full-codebase grep that no other page has this same inline-override-in-dark-footer trap).
+
+### Per-post color fixes (all 49 `blog/*.html`, 338 individual `color:` property fixes)
+
+Every blog post carries its own inline `<style>` block (not shared CSS), each redeclaring the same bad brand colors independently — `#059669`/`#1A73E8`/`#D97706`/`#DC2626`/`#94A3B8`/`#0D9488`/`#F7941D` as text color on their light-tint backgrounds. Fixed via a position-tracked regex script matching only the `color:` property (never `background:`/`border-color:`) to guarantee zero risk of touching a background or accent color that didn't need to change. Verified with a git diff spot-check before trusting the bulk run.
+
+Also standardized `.blog-post-content a` / `.blog-body-wrap a` link rules to always carry `text-decoration: underline` (some had none, relying on browser default; some explicitly disabled it) — this is what WCAG's link-in-text-block rule actually requires distinct from color.
+
+### One-off bugs found only by live-browser axe testing (not visible from reading the CSS)
+
+- **`opacity: .6`/`.7` on already-dark text** (`blog/culture-shock-university-abroad.html` `.shock-stage-time`, `blog/fulbright-scholarship-guide.html` `.essay-pair-label`) — the declared `color` was fine on its own; the opacity blend toward the light background is what silently failed contrast. Removed the opacity; both pass ~7–9:1 now.
+- **Funnel-chart bars narrower than their own label** (`blog/gates-cambridge-scholarship-guide.html`) — bars at `width:3.3%`/`width:1.3%` were too narrow for their white text, which overflowed onto the wrapper's pale background instead (near-invisible, 1.09:1). Fixed properly, not cosmetically: added `min-width: fit-content` to `.funnel-bar` so a bar can never be narrower than its own label, regardless of the inline `width:X%`.
+- **Scrollable tables with no keyboard focus path** (`blog/student-health-requirements-by-country.html`, `blog/how-to-choose-country-to-study-abroad.html`) — `overflow-x:auto` tables had no way for keyboard users to scroll them. Added `tabindex="0"` directly on the `<table>`.
+
+### Verification method
+
+Static color-contrast math (relative luminance formula) to pick safe replacement shades, then live axe-core (`wcag2a`+`wcag2aa` rule sets) via Playwright against a local server for every change, then a second full pass after all fixes to catch regressions, then a third pass against the **live production domain** post-deploy. Also re-checked mobile viewport (375px) overflow on every heavily-edited page — none introduced. Final state: axe-core clean on all root pages (24/25 — the one exception is a third-party Travelpayouts widget's own internal contrast on `travel.html`, not our CSS) and 46/49 blog posts clean (3 "failures" are an unrelated third-party ad-network CORS console message on `localhost` only, confirmed absent on the live domain).
+
+Not fixed (out of scope, third-party): Travelpayouts flight-search widget's internal `.form-title__subtitle`/`.form-submit__content` contrast — it renders inside the vendor's own component, not our DOM.
 
 ---
 
