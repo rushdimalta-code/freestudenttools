@@ -1828,7 +1828,7 @@ window.UNI_DATA = {
           "notificationDate": "2027-04-30",
           "status": "upcoming",
           "tuitionUSD": 24000,
-          "link": "https://pg.ust.hk/our-programs"
+          "link": "https://prog-crs.hkust.edu.hk/pgprog"
         }
       ],
       "accommodation": {

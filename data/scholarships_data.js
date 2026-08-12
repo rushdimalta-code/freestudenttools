@@ -1452,7 +1452,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-06-30",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://www.ox.ac.uk/weidenfeld-hoffmann"
+      "link": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search/weidenfeld-hoffmann-scholarships-and-leadership-programme"
     },
     {
       "id": "eth_excellence",
@@ -1932,7 +1932,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.afdb.org/en/topics-and-sectors/sectors/human-development/scholarships"
+      "link": "https://www.afdb.org/en/about-us/careers/japan-africa-dream-scholarship-jads-program"
     },
     {
       "id": "romania_gov",
@@ -2928,7 +2928,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Extremely High",
-      "link": "https://gsas.columbia.edu/student-guide/financial-support"
+      "link": "https://www.gsas.columbia.edu/content/financial-support"
     },
     {
       "id": "ucb_graduate_funding",
@@ -3457,7 +3457,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Very High",
-      "link": "https://pg.ust.hk/prospective-students/scholarships-fees"
+      "link": "https://sfao.hkust.edu.hk/informationfor.php?program=postgraduates"
     },
     {
       "id": "hku_scholarship",
@@ -3897,7 +3897,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "upcoming",
       "competitionLevel": "Medium",
-      "link": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/international-leadership-scholarship"
+      "link": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z"
     },
     {
       "id": "uq_scholarship",
@@ -4942,7 +4942,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-11-30",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.canada.ca/en/canadian-heritage/services/funding/casc.html"
+      "link": "https://www.canada.ca/en/canadian-heritage/services/funding/athlete-assistance.html"
     },
     {
       "id": "aurora_scholarship",
@@ -5503,7 +5503,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-02-28",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.insead.edu/mba/fees-financing/scholarships"
+      "link": "https://www.insead.edu/master-programmes/master-business-administration/financing"
     },
     {
       "id": "lbs_scholarship",
@@ -6532,7 +6532,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://grants.nih.gov/grants/guide/pa-files/PA-23-264.html"
+      "link": "https://researchtraining.nih.gov/programs/fellowships/F31"
     },
     {
       "id": "lpdp_indonesia",
@@ -6946,7 +6946,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-01-31",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.iaea.org/services/fellowships"
+      "link": "https://www.iaea.org/services/key-programmes/together-for-more-women-in-nuclear/iaea-marie-sklodowska-curie-fellowship-programme"
     },
     {
       "id": "embo_fellowship",
