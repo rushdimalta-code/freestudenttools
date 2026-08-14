@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-08-14",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -809,7 +809,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Eligible countries rotate — check the Swedish Institute website for the current list. Applications open in February.",
       "deadline": "2027-02-10",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals"
     },
