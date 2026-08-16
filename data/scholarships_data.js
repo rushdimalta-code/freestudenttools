@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-15",
+  "lastUpdated": "2026-08-16",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1226,7 +1226,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — only ~130 awards per year worldwide for 7 Rotary Peace Centers. Applications close mid-May.",
       "deadline": "2026-09-15",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.rotary.org/en/our-programs/peace-fellowships"
     },
@@ -2646,7 +2646,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Main vehicle for Mexican government support of postgraduate education. International scholarships also available for Mexicans studying abroad.",
       "deadline": "2026-09-15",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://conacyt.mx/becar-posgrado"
     },
@@ -6149,7 +6149,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Working at CERN — the world's largest particle physics lab — is a career-defining experience. Students are enrolled at their home university but work full-time at CERN.",
       "deadline": "2026-09-15",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://careers.cern"
     },
@@ -6180,7 +6180,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "ESA facilities include ESTEC (Netherlands), ESAC (Spain), ESRIN (Italy), and ESOC (Germany). Prestigious postdoctoral fellowship for space scientists.",
       "deadline": "2026-09-15",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.esa.int"
     },
@@ -6435,7 +6435,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Also known as Amazon Research Awards (ARA) for faculty. The PhD Fellowship is separate — smaller scale but highly prestigious for CS PhD students.",
       "deadline": "2026-09-15",
       "notificationDate": "2026-12-15",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.amazon.science/research-awards"
     },
