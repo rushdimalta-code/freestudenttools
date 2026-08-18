@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-17",
+  "lastUpdated": "2026-08-18",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1731,7 +1731,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "70 fellowships per year. Must already be in negotiation with a Canadian university host supervisor. Extremely competitive.",
       "deadline": "2026-09-17",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://banting.fellowships-bourses.gc.ca"
     },
