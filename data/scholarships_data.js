@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-18",
+  "lastUpdated": "2026-08-19",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -2030,7 +2030,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply to a partner university and the scholarship simultaneously. Partner universities include Oxford, Harvard, Stanford, and 30+ others.",
       "deadline": "2027-02-15",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.worldbank.org/en/programs/scholarships"
     },
