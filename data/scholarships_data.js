@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-23",
+  "lastUpdated": "2026-08-24",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -651,7 +651,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the world's largest scholarship programs covering 180+ countries. Applications usually open in January.",
       "deadline": "2027-02-20",
       "notificationDate": "2027-06-01",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.turkiyeburslari.gov.tr"
     },
