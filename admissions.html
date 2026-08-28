@@ -47,7 +47,7 @@
   }
   </script>
   <link rel="preload" href="/assets/fonts/inter-100-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=20260808">
+  <link rel="stylesheet" href="css/style.css?v=20260829">
   <style>
     /* ===== ADMISSIONS PAGE STYLES ===== */
     .admissions-hero {
@@ -489,13 +489,13 @@
       University Admissions Tracker
     </div>
     <h1>University Admissions Tracker 2026 — Never Miss a Deadline Again</h1>
-    <p class="hero-sub">One place to track when applications open, when they close, what housing looks like, and what to expect. Updated daily. Full deadline and housing data.</p>
+    <p class="hero-sub">We monitor detailed deadline, intake and housing information for <strong><span data-stat="universities_detailed">27</span> leading universities</strong>. Our broader university index covers <span data-stat="universities_index" data-stat-plus="1">1,000+</span> institutions for discovery. Updated daily.</p>
     <div class="hero-search-wrap">
       <input type="search" id="searchInput" placeholder="Search university, country, or subject..." autocomplete="off" aria-label="Search universities">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat"><strong>27</strong><span>Universities</span></div>
+      <div class="hero-stat"><strong><span data-stat="universities_detailed">27</span></strong><span>Detailed Tracking</span></div>
       <div class="hero-stat"><strong>180+</strong><span>Countries</span></div>
       <div class="hero-stat"><strong>Daily</strong><span>Updates</span></div>
       <div class="hero-stat"><strong>Free</strong><span>Always</span></div>
@@ -521,7 +521,7 @@
     <!-- ABOUT STRIP -->
     <div class="about-strip" style="margin-top:28px">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <p>Data covers the top 1,000 universities from the QS World University Rankings, THE, and ARWU. Admission dates are verified against official university websites and updated daily. Last updated: <strong id="lastUpdated">2026-04-12</strong> <span id="lastUpdatedTime" style="font-weight:400;color:#1D4ED8;font-size:0.78rem"></span>. Always confirm directly with your target university before applying.</p>
+      <p>Detailed deadline, intake and housing data covers <span data-stat="universities_detailed">27</span> leading universities, verified against official university websites and updated daily. A broader discovery index covers <span data-stat="universities_index" data-stat-plus="1">1,000+</span> ranked institutions from QS, THE and ARWU. Last updated: <strong id="lastUpdated">2026-04-12</strong> <span id="lastUpdatedTime" style="font-weight:400;color:#1D4ED8;font-size:0.78rem"></span>. Always confirm directly with your target university before applying.</p>
     </div>
 
     <div class="admissions-body">
@@ -652,7 +652,7 @@
       </div>
       <div class="faq-item">
         <p class="faq-question">Which universities are covered?</p>
-        <p class="faq-answer">We track the top 1,000 universities from the QS World University Rankings, Times Higher Education, and ARWU Shanghai Ranking. Coverage spans 180+ countries including the US, UK, Australia, Canada, Germany, Singapore, Japan, and more.</p>
+        <p class="faq-answer">Our broader discovery index covers <span data-stat="universities_index" data-stat-plus="1">1,000+</span> ranked universities from QS, Times Higher Education and ARWU across 180+ countries. Detailed deadline, intake and housing tracking currently covers <span data-stat="universities_detailed">27</span> leading universities (see the question above).</p>
       </div>
       <div class="faq-item">
         <p class="faq-question">What does the degree level filter include?</p>
@@ -723,7 +723,7 @@
     </details>
     <details class="faq-item">
       <summary>Which universities are covered?</summary>
-      <div class="faq-answer"><p>We track 27 leading universities from the QS World University Rankings and Times Higher Education. Coverage spans including the US, UK, Australia, Canada, Germany, Singapore, Japan, and more. Use the country and region filters to see institutions in your target destinations.</p></div>
+      <div class="faq-answer"><p>Detailed tracking currently covers <span data-stat="universities_detailed">27</span> leading universities from the QS World University Rankings and Times Higher Education, spanning the US, UK, Australia, Canada, Germany, Singapore, Japan and more. Use the country and region filters to see institutions in your target destinations.</p></div>
     </details>
     <details class="faq-item">
       <summary>What does the degree level filter include?</summary>
@@ -828,10 +828,11 @@
 <script src="js/config.js"></script>
 <script src="data/universities.js"></script>
 <script src="data/uni_guide.js"></script>
-<script src="js/common.js?v=20260808"></script>
+<script src="js/common.js?v=20260829"></script>
+<script src="/data/site-stats.js?v=20260829" defer></script>
 <script src="js/admissions.js"></script>
   <div id="google_translate_element" style="display:none" aria-hidden="true"></div>
   <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}</script>
-  <script src="/js/lang-switcher.js?v=20260808" defer></script>
+  <script src="/js/lang-switcher.js?v=20260829" defer></script>
 </body>
 </html>

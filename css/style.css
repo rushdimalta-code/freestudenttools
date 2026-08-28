@@ -2231,7 +2231,7 @@ body{top:0!important}
 
 /* Action selector */
 .hx-actions { display:grid; gap:16px; grid-template-columns:repeat(2,1fr); }
-@media (min-width:900px){ .hx-actions{ grid-template-columns:repeat(5,1fr); } }
+@media (min-width:900px){ .hx-actions{ grid-template-columns:repeat(4,1fr); } }
 .hx-action { display:flex; flex-direction:column; background:var(--bg-white); border:1px solid var(--border);
   border-radius:14px; padding:22px; text-decoration:none; transition:border-color .15s, box-shadow .15s, transform .08s; }
 .hx-action:hover { border-color:var(--primary); box-shadow:0 8px 24px rgba(15,23,42,.08); transform:translateY(-3px); text-decoration:none; }
