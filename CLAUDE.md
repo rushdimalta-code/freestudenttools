@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-13 (rev 17)_
+_Last updated: 2026-08-28 (rev 19)_
 
 ---
 
@@ -27,22 +27,16 @@ Monetisation: Google AdSense (pub ID: `ca-pub-9843476971668607`). **Review submi
 
 **University Hub (7 pages):**
 - `admissions.html` — deadline tracker (data from `data/universities.js` + `data/universities_all.js`)
-- `scholarships.html` — 246 scholarships, filter by country/funding/level/deadline/competition
-- `scholarship.html` — individual scholarship detail page (dynamic, loads from `scholarships_data.js` via `?id=` param)
+- `scholarships.html` — 239 scholarships, filter by country/funding/level/deadline/competition
+- `scholarship.html` — individual scholarship detail page (dynamic, `noindex` JS template; real pages are the 239 static `scholarship/*.html` files)
 - `scholarship-guide.html` — long-form guide (5,000 words)
-- `compare.html` — side-by-side university comparison, 1,040+ universities, 16 streams
-- `compare-scholarships.html` — side-by-side scholarship comparison (any 2 of 246+); popular pairs quick-pick; WebApplication + FAQPage + BreadcrumbList JSON-LD
+- `compare.html` — side-by-side university comparison, 1,000 ranked universities, 16 streams
+- `compare-scholarships.html` — side-by-side scholarship comparison (any 2 of 239); popular pairs quick-pick; WebApplication + FAQPage + BreadcrumbList JSON-LD
 - `tips.html` — student tips guide (5,000 words) — Article + FAQPage schema
 
-**Blog (live 2026-06-17):**
-- `blog/index.html` — blog listing page
-- `blog/chevening-scholarship-guide.html` — Chevening guide, 2,081 words
-- `blog/fulbright-scholarship-guide.html` — Fulbright guide, 2,027 words
-- `blog/daad-scholarship-guide.html` — DAAD guide, 2,013 words
-- `blog/gates-cambridge-scholarship-guide.html` — Gates Cambridge guide, 1,999 words
-- `blog/erasmus-mundus-guide.html` — Erasmus Mundus guide, 1,959 words
-- All 5 posts: Article + FAQPage + BreadcrumbList JSON-LD, CCO voice, kie.ai hero images in `assets/blog/`
-- Source wiki: `/Users/rushdi/Downloads/Scholarships/` — Karpathy pattern, 5 entity pages
+**Canonical counts:** see `tools/SITE-FACTS.md` — 239 scholarships · 27 universities with full deadline data · 1,000 ranked universities · 48 blog guides · 7 document tools. Update **every** occurrence when a number changes (design.md §44).
+
+**Blog (live 2026-06-17):** 48 posts, all in `blog/` — Article + FAQPage + BreadcrumbList JSON-LD, CCO voice, kie.ai hero images in `assets/blog/`. Full list = the 48 `/blog/` `<loc>` entries in `sitemap.xml`. Source wiki: `/Users/rushdi/Downloads/Scholarships/` — Karpathy pattern.
 
 **Static pages:** `about.html`, `contact.html`, `privacy.html`, `terms.html`, `404.html`, `contact-thanks.html`
 
@@ -614,6 +608,54 @@ The rev 16 passes above were systematic sitewide sweeps. This round was differen
 - **PDF extractor and OCR "where's the output?" — confirmed not bugs**, via actual functional tests (a real generated 20-page test PDF, a real OCR'd test image), not just code review. Both display their output correctly — a download card with stats for the extractor, an extracted-text panel with Copy/Download buttons for OCR — immediately below the "success" status message. Easy to miss if you don't scroll past the banner, but nothing to fix.
 
 All of the above committed to `main` and verified live via fresh (cache-busted) fetches and Playwright runs against the production domain, not just local testing.
+
+---
+
+## GSC Indexing Investigation — 2026-08-25 (rev 18)
+
+Google Search Console sent a "New reasons prevent pages from being indexed... Excluded by 'noindex' tag" alert (Aug 23) against a backdrop of 227 not-indexed / 95 indexed pages. Investigated with real data instead of acting on the alert at face value — queried the Search Console API directly (service account credentials already live for this property via `easedit-mkt-agent/config/ga4_service_account.json`, `webmasters.readonly` scope, same one `monitor.py` uses for the daily FST report).
+
+**The noindex alert is a false alarm, not a bug.** Site-wide grep confirms `noindex` exists on exactly 4 files — `404.html`, `search.html`, `scholarship.html` (the unrendered JS template), `contact-thanks.html` — all already documented above as intentional. No `X-Robots-Tag` header rules exist in `netlify.toml` either, so there's no hidden second source. Ran the URL Inspection API (`urlInspection().index().inspect`) against a random sample of 35 real sitemap URLs (25 scholarship pages + 10 others, seeded for reproducibility): **zero** came back "excluded by noindex tag." GSC is just surfacing the same 4 known/intentional pages — nothing to fix.
+
+**The real story behind 227/322 not indexed** — coverage-state breakdown from that same 35-URL sample:
+
+| Coverage state | Share |
+|---|---|
+| Discovered – currently not indexed | 43% |
+| URL is unknown to Google | 29% |
+| Submitted and indexed | 26% |
+| Crawled – currently not indexed | 3% |
+
+This is Google deprioritizing crawl/index of a large batch of near-identical, database-generated scholarship detail pages (239 of them) — a crawl-budget/quality-priority decision on Google's end, not a technical defect on ours. Same root cause already diagnosed in the 2026-08-05 "239 orphaned pages" finding above. The fix applied then (static A–Z index added to `scholarships.html`, linking every scholarship detail page) is confirmed **live in production** (`curl`-verified against `freestudenttools.com/scholarships`) — it just hasn't moved Google's indexing decision yet as of this check.
+
+**Sitemap itself confirmed healthy via `sitemaps().list` API** — 309 URLs submitted, 0 errors, 0 warnings, last successfully downloaded by Google 2026-08-24 (one day before this check).
+
+**Conclusion — no code fix applied.** There was nothing broken to fix: the noindex alert is expected behavior on 4 intentional pages, and the unindexed-scholarship-page gap is a content-volume/crawl-priority issue already addressed with internal linking, not something further code changes resolve. Re-check indexing in 2-3 weeks; if the gap hasn't narrowed, the next lever is making individual scholarship pages more differentiated (real content depth work), not another technical audit.
+
+---
+
+## Redesign Programme — started 2026-08-28 (rev 19)
+
+The user supplied `design.md` — a full "student decision & application platform" redesign spec (repositioning FST from a tools directory to a DISCOVER → COMPARE → FUND → APPLY → PREPARE → ARRIVE journey; 51 sections; global design system, per-page specs, component library, phased priority order).
+
+### Direction — approved
+- **Mockups built** (`scratchpad/fst-mockups/`, 17 standalone HTML pages + `mockup.css`): homepage, scholarship finder, admissions tracker, compare universities, scholarship detail, compare scholarships, guides hub, guide template, health requirements, document-tool UI (+ OCR variant), travel, about, contact, privacy, terms, plus a design-system reference. Visual direction ("calm editorial + utility", Inter, navy/teal, 1200px grid) signed off by the user. These are throwaway visual artifacts — not production code.
+
+### Key architectural finding
+**Nav + footer are hand-written in all 313 HTML pages.** `js/common.js` only wires *behaviour* (dropdown/mobile toggles, active-link, cookie consent, guide-cat-strip injection, back-to-top) — it does **not** inject the `<nav>`/`<footer>` markup. So any nav/footer/redesign change without a build step = editing 313 files by hand. This is why the redesign needs a build step first.
+
+### Plan (review-then-push on every phase; FST has no staging — `main` = production)
+- **Phase 0 — build step (NOT started).** Introduce Eleventy (or plain Node templating). Hard rules, agreed with user: (1) flat `.html` filenames preserved — **zero URL changes**; (2) built output committed to the repo so a broken build never blocks a Netlify deploy; (3) normalised before/after HTML parity diff on every migrated page, blocking; (4) no client framework/hydration — HTML in, HTML out; (5) `netlify.toml` frozen; (6) no new programmatic thin pages. First step = wire build + migrate one low-traffic page (`terms.html`) + parity diff, no deploy until diff approved.
+- **Phase 1 — trust + counts (SHIPPED, see below).**
+- **Phase 2+ — nav/footer/homepage + hub redesigns**, on top of the build step, phased per design.md §46.
+
+### Phase 1 — shipped 2026-08-28 (commit `aff5f67`)
+Text/attribute-only changes across 16 files. **No** href/asset/CSS/JS/layout/nav/footer/`sitemap.xml`/`netlify.toml` changes.
+- **New `tools/SITE-FACTS.md`** — single source of truth for counts + approved privacy phrasing (design.md §44). Check it before changing any number.
+- **Count reconciliation** (verified against live data files): scholarships 246/246+/245/240 → **239** (`SCHOLARSHIP_DATA.scholarships.length`); guides 35 & 43 → **48** (`blog/*.html` = sitemap post count); universities-with-full-data 25+ → **27** (`UNI_DATA.universities.length`); ranked list "top 1,500"/"1,040+" → **1,000** (`UNI_ALL.universities.length`). Touched index, about, admissions, scholarships, scholarship-guide, compare, compare-scholarships, scholarship.html, blog/index, 404, llms.txt, 3 blog posts. `scholarships.html` `<title>` + OG/Twitter titles changed ("246+" → "239") — now accurate, keyword phrases retained.
+- **Privacy-claim accuracy** (GA4 + AdSense + contact form are live): removed "we collect zero personal data / no tracking" (`index.html`), "no uploads, no tracking, no data sales — ever" (`privacy.html`), "no data sales" (`about.html`). `about.html` "Fourteen tools" → "seven document tools + five-part Hub".
+- **Full-site audit** (`scratchpad/fst_audit.py`): 313 pages → **0 broken internal links**; 84 redirect rules → **0 bad targets, 0 chains**; orphans = 2 (`contact-thanks`, `search`) both intentional `noindex` utility pages → 0 real orphans; sitemap → 0 unresolved `<loc>`. Performance: zero asset/request change → Lighthouse-neutral.
+- **Push note:** the `update-data.yml` "daily site refresh" bot commits to `main` every day 06:00 UTC (regenerates `scholarship/*.html`, bumps `data/*.js` dates, rewrites `sitemap.xml`). Phase 1 was rebased over 15 such commits — **zero file overlap** — and all counts re-verified against the post-rebase data files before pushing.
 
 ---
 
