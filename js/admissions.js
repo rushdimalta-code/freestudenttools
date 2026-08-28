@@ -575,3 +575,34 @@
     // keep as-is
   }
 })();
+
+// ===== MOBILE: collapsible filter sidebar (rec #5) =====
+(function () {
+  var sidebar = document.querySelector('.filter-sidebar');
+  var body = document.querySelector('.admissions-body');
+  if (!sidebar || !body) return;
+
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'mobile-filter-toggle';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg><span>Filter universities</span><span class="mft-count" hidden></span>';
+  body.insertBefore(btn, sidebar);
+
+  btn.addEventListener('click', function () {
+    var open = sidebar.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+
+  function countActive() {
+    var n = 0;
+    sidebar.querySelectorAll('select').forEach(function (s) { if (s.value) n++; });
+    sidebar.querySelectorAll('input[type="date"]').forEach(function (s) { if (s.value) n++; });
+    sidebar.querySelectorAll('input[type="checkbox"]:checked').forEach(function () { n++; });
+    var c = btn.querySelector('.mft-count');
+    if (n > 0) { c.textContent = n; c.hidden = false; } else { c.hidden = true; }
+    if (typeof trackEvent === 'function' && n > 0) trackEvent('admissions_filter', { active: n });
+  }
+  sidebar.addEventListener('change', countActive);
+  countActive();
+})();
