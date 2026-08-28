@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-28 (rev 21)_
+_Last updated: 2026-08-28 (rev 22)_
 
 ---
 
@@ -711,6 +711,34 @@ Second, tighter spec ("improve coherence, don't rebuild visual identity"). Shipp
 - #17 country SEO flywheel (depends on #9)
 
 **Still to do (no build step):** #18 mobile + #20 accessibility spot-check of the new components (`.hx-*`, `.tool-next`, `.guide-next-actions`, `.upload-privacy-note`); wiring `tool_started`/`tool_completed` events into the 7 tool JS files.
+
+---
+
+## Strategy pivot + Phase 0 build step (rev 22, 2026-08-28)
+
+After shipping the recommendations batch, stepped back to "what actually improves this site's success." The answer is **not more architecture** — it's content quality. Two facts: AdSense rejected the site "low value content" (Jul 2026), and GSC shows 227/322 pages not indexed. Same story — Google thinks large parts of the site are thin. Ranked plan: (1) noindex the thin scholarship pages, (2) scale the blog (the proven SEO+GEO engine), (3) email deadline alerts as the one retention hook, (4) instrument the two high-intent funnels, (5) mobile UX of the data-heavy pages. Deprioritised: nav redesign, country hubs (#9 — bad timing to add thin pages), URL restructure (#14 — pure risk).
+
+### #1 — Index-quality curation (SHIPPED, `8961191`)
+`tools/generate_scholarship_pages.py` now has `KEEP_INDEXED` (139 ids: national government schemes, multilateral bank/UN programmes, globally-recognised named fellowships, the 10 blog-backed ones). The other **100 scholarship pages → `<meta robots="noindex, follow">`** — overwhelmingly single-institution awards (NUS / Harvard GSAS / Warwick / Leiden / Imperial / UCL / Manchester / Toronto / UBC …) where the university's own page always outranks a third-party listing. Pages stay live + in the finder + A-Z index — just out of Google's index. New `prune_sitemap_noindex()` removes them from `sitemap.xml` (239 → 139 scholarship `<loc>`; sitemap 309 → 209 URLs). Re-check GSC "indexed" count in 3–4 weeks — it should rise as a share of a smaller, higher-quality set.
+
+### #4 — Funnel instrumentation (SHIPPED, `ce01e0a`)
+- **All `js/*.js` page/tool scripts were unversioned** (audit blind spot — the `PERF_ASSET_NO_CACHEBUST` regex only matched leading-slash paths). Versioned all 10 to `/js/X.js?v=20260829`; audit regex fixed.
+- `data-track="scholarship_apply"` on every official-site Apply link (generator + finder's 2 outbound links) — the primary conversion event.
+- `data-track` `scholarship_filter` on all 6 finder filters; `trackEvent('tool_started', {tool})` on file-select in all 6 upload tools (completion events like `pdf_compressed` already existed → completion rate now computable).
+
+### Phase 0 — Eleventy build step (STARTED, `71ece52` + `3aa129f`)
+Incremental static templating so the nav/footer become one canonical partial (unblocks recommendation #4 nav redesign). Eleventy 3.0, no framework, `input: src/` → `output: .` (repo root), Eleventy only globs `src/**` and does not clean output → the other ~270 root `.html` files are untouched. Flat `<name>.html` filenames → zero URL changes. `netlify.toml` frozen, `publish = "."` unchanged — **Netlify does not run the build**, it serves committed static HTML; a broken local build can't block a deploy. `npm run build` regenerates migrated pages; commit the output.
+- `src/_includes/`: `layout.njk` + `_nav.njk` (verbatim canonical nav, 16-lang switcher, guide-cat-strip) + `_footer.njk` (canonical 4-col footer).
+- **Migrated so far (4/25 root pages):** `terms`, `privacy`, `contact`, `about`. Diffs = consistency fixes only (css/js → absolute paths, footer headings `<h2>/<h3>` → `<h4>`, missing "Scholarship Guide" footer link added, indentation).
+- **Remaining 21** are NOT uniform: ~4 on a divergent template (`cookies`/`404`/`contact-thanks`/`search` — different footer markup, stub navs), ~3 content pages with 185–213-line inline `<style>` (`tips`/`scholarship-guide`/`health-checks`), ~13 complex app/tool pages (`index`/`admissions`/`compare`×2/`scholarships`/`travel` + 7 tools — inline style + JS + ad slots + live tool JS, real regression risk). Each needs individual migration + browser check. Once all root pages are on `layout.njk`, swap `_nav.njk` for the redesigned nav — one file, applies everywhere.
+
+### Still to do (ranked)
+- **#2 scale the blog** — 48 → 80–100 genuinely useful guides on real search demand. Highest-ROI growth play (ChatGPT already cites the blog — GEO working). Ongoing CCO content work.
+- **#3 email deadline alerts** — the one retention hook. Needs backend: Netlify scheduled function + email provider querying `scholarships_data.js` / `universities.js` deadlines. Not yet built (infra decision required).
+- **#5 mobile UX** — filter UX on `admissions`, comparison tables on `compare`/`compare-scholarships`. Needs real device testing + targeted CSS.
+- Finish the Phase 0 migration (21 pages) then the nav redesign.
+
+Every change this session re-ran `tools/full_site_audit.py` → **0 issues** throughout.
 
 ---
 
