@@ -1,0 +1,13 @@
+{
+  "name": "freestudenttools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site build. Eleventy renders hand-authored pages in src/ to flat .html at the repo root. Non-migrated pages stay as static .html and are untouched. Built output is committed so a broken local build never blocks a Netlify deploy.",
+  "scripts": {
+    "build": "eleventy",
+    "watch": "eleventy --watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.0.0"
+  }
+}

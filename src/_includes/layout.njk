@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-9843476971668607">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="{{ robots or 'index, follow' }}">
+  <link rel="canonical" href="https://freestudenttools.com/{{ slug }}">
+  <meta property="og:title" content="{{ ogTitle or title }}">
+  <meta property="og:description" content="{{ ogDescription or description }}">
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:url" content="https://freestudenttools.com/{{ slug }}">
+  <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
+  <meta name="twitter:card" content="{{ twitterCard or 'summary_large_image' }}">
+  <meta name="twitter:title" content="{{ ogTitle or title }}">
+  <meta name="twitter:description" content="{{ twitterDescription or ogDescription or description }}">
+  <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
+  {%- if jsonld %}
+  <script type="application/ld+json">{{ jsonld | safe }}</script>
+  {%- endif %}
+  <link rel="preload" href="/assets/fonts/inter-100-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css?v=20260829">
+  <!-- GA4 uses Consent Mode v2 (always loads, cookieless until accept); AdSense still gated on explicit accept — see common.js --></head>
+<body class="{{ bodyClass or 'page-wrapper' }}">
+{% include "_nav.njk" %}
+{{ content | safe }}
+{% include "_footer.njk" %}
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>We use cookies to improve your experience and serve relevant ads. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="cookie-decline" id="cookieDecline">Decline</button>
+      <button class="cookie-accept" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/common.js?v=20260829"></script>
+{%- if extraScripts %}
+{{ extraScripts | safe }}
+{%- endif %}
+  <div id="google_translate_element" style="display:none" aria-hidden="true"></div>
+  <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',autoDisplay:false},'google_translate_element');}</script>
+  <script src="/js/lang-switcher.js?v=20260829" defer></script>
+</body>
+</html>
