@@ -20,6 +20,7 @@ function showCancel() { cancelBtn.style.display = 'inline-flex'; startBtn.disabl
 function hideCancel() { cancelBtn.style.display = 'none'; }
 
 fileInput?.addEventListener('change', e => {
+  if(window.trackEvent)trackEvent('tool_started',{tool:'ocr'});
   const file = e.target.files[0];
   if (!file) return;
   selectedFile = file;

@@ -43,6 +43,7 @@ document.querySelectorAll('input[name="mode"]').forEach(radio => {
 });
 
 fileInput?.addEventListener('change', e => {
+  if(window.trackEvent)trackEvent('tool_started',{tool:'pdf-converter'});
   const file = e.target.files[0];
   if (!file) return;
   selectedFile = file;

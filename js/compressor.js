@@ -26,6 +26,7 @@ document.querySelectorAll('input[name="compression"]').forEach(radio => {
 });
 
 fileInput?.addEventListener('change', e => {
+  if(window.trackEvent)trackEvent('tool_started',{tool:'pdf-compressor'});
   const file = e.target.files[0];
   if (!file) return;
   selectedFile = file;

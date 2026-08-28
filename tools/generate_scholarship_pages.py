@@ -636,7 +636,7 @@ def generate_page(s, all_scholarships):
         <div class="streams-wrap">{streams_html}</div>
       </div>
 
-      <a href="{H.escape(s.get('link', '#'))}" target="_blank" rel="noopener" class="sch-apply-btn">Apply on Official Site →</a>
+      <a href="{H.escape(s.get('link', '#'))}" target="_blank" rel="noopener" class="sch-apply-btn" data-track="scholarship_apply" data-track-label="{H.escape(sid)}">Apply on Official Site →</a>
       <a href="/scholarships.html" class="sch-back-btn">← Browse All Scholarships</a>
 
       {related_html}

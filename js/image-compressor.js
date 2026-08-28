@@ -60,6 +60,7 @@ uploadZone.addEventListener('drop', e => {
   else showStatus('error', 'Please drop image files only.');
 });
 fileInput.addEventListener('change', () => {
+  if(window.trackEvent)trackEvent('tool_started',{tool:'image-compressor'});
   addFiles(Array.from(fileInput.files));
   fileInput.value = ''; // allow re-selecting the same file(s) later
 });

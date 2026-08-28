@@ -309,7 +309,7 @@ nover = 0
 for hf in html_files:
     if hf.startswith("scholarship/"): continue
     txt = rd(hf)
-    for a in re.finditer(r'(?:href|src)=["\'](/(?:css|js)/[a-z0-9_.-]+\.(?:css|js))(["\'?])', txt):
+    for a in re.finditer(r'(?:href|src)=["\'](/?(?:css|js)/[a-z0-9_.-]+\.(?:css|js))(["\'?])', txt):
         if a.group(2) != "?":
             nover += 1
 if nover:

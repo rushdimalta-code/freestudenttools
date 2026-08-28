@@ -24,6 +24,7 @@ const statSize     = document.getElementById('statSize');
 // ── File input / drop handler ──────────────────────────────────────────────
 
 fileInput?.addEventListener('change', e => {
+  if(window.trackEvent)trackEvent('tool_started',{tool:'pdf-merger'});
   addFiles(Array.from(e.target.files));
   // Reset the input so re-selecting the same file fires change again
   fileInput.value = '';

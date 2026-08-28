@@ -92,12 +92,12 @@
       applyFilters();
     }, 250));
 
-    bind('filterCountry', 'change', function (e) { state.country = e.target.value; state.page = 1; applyFilters(); });
-    bind('filterStream', 'change', function (e) { state.stream = e.target.value; state.page = 1; applyFilters(); });
-    bind('filterLevel', 'change', function (e) { state.level = e.target.value; state.page = 1; applyFilters(); });
-    bind('filterAmount', 'change', function (e) { state.amountType = e.target.value; state.page = 1; applyFilters(); });
-    bind('filterCompetition', 'change', function (e) { state.competition = e.target.value; state.page = 1; applyFilters(); });
-    bind('sortSelect', 'change', function (e) { state.sort = e.target.value; applyFilters(); });
+    bind('filterCountry', 'change', function (e) {  if(window.trackEvent)trackEvent('scholarship_filter',{filter:'filterCountry'}); state.country = e.target.value; state.page = 1; applyFilters(); });
+    bind('filterStream', 'change', function (e) {  if(window.trackEvent)trackEvent('scholarship_filter',{filter:'filterStream'}); state.stream = e.target.value; state.page = 1; applyFilters(); });
+    bind('filterLevel', 'change', function (e) {  if(window.trackEvent)trackEvent('scholarship_filter',{filter:'filterLevel'}); state.level = e.target.value; state.page = 1; applyFilters(); });
+    bind('filterAmount', 'change', function (e) {  if(window.trackEvent)trackEvent('scholarship_filter',{filter:'filterAmount'}); state.amountType = e.target.value; state.page = 1; applyFilters(); });
+    bind('filterCompetition', 'change', function (e) {  if(window.trackEvent)trackEvent('scholarship_filter',{filter:'filterCompetition'}); state.competition = e.target.value; state.page = 1; applyFilters(); });
+    bind('sortSelect', 'change', function (e) {  if(window.trackEvent)trackEvent('scholarship_filter',{filter:'sortSelect'}); state.sort = e.target.value; applyFilters(); });
     bind('clearFilters', 'click', clearAll);
     bind('loadMore', 'click', loadMore);
     bind('newsletterForm', 'submit', handleNewsletter);
@@ -238,7 +238,7 @@
         '</button>' +
         '<div style="display:flex;gap:8px;align-items:center">' +
           '<a href="/scholarship.html?id=' + esc(s.id) + '" class="btn btn-primary btn-sm">Full Details →</a>' +
-          '<a href="' + esc(s.link) + '" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" title="Official website" style="padding:6px 10px">↗</a>' +
+          '<a href="' + esc(s.link) + '" target="_blank" rel="noopener" data-track="scholarship_apply" data-track-label="' + esc(s.id) + '" class="btn btn-ghost btn-sm" title="Official website" style="padding:6px 10px">↗</a>' +
         '</div>' +
       '</div>' +
       (isExpanded ? '<div class="schol-expanded">' + expandedHtml + '</div>' : '') +
@@ -279,7 +279,7 @@
 
     // Apply CTA + cross-reference guide
     html += '<div class="schol-apply-row">' +
-      '<a href="' + esc(s.link) + '" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">' +
+      '<a href="' + esc(s.link) + '" target="_blank" rel="noopener noreferrer" data-track="scholarship_apply" data-track-label="' + esc(s.id) + '" class="btn btn-primary btn-sm">' +
         '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>' +
         'Apply / Learn more at official page' +
       '</a>' +

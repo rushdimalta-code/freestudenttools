@@ -37,6 +37,7 @@ uploadZone.addEventListener('drop', e => {
   if (file) handleFile(file);
 });
 fileInput.addEventListener('change', () => {
+  if(window.trackEvent)trackEvent('tool_started',{tool:'pdf-extractor'});
   if (fileInput.files[0]) handleFile(fileInput.files[0]);
 });
 removeFileBtn.addEventListener('click', resetAll);
