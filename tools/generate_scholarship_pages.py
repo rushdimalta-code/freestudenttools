@@ -23,6 +23,50 @@ TODAY = date.today()
 # and keep it identical to the ?v= value used across the other HTML pages.
 ASSET_VERSION = "20260829"
 
+# ── Index-quality curation (2026-08-28) ──────────────────────────────────────
+# Only nationally/globally recognised schemes get indexed. Single-university
+# awards get noindex,follow: the university's own page always outranks a
+# third-party listing, so those pages only dilute the site's quality signal
+# and waste crawl budget. They stay live and in the finder — just out of the
+# index and the sitemap.
+KEEP_INDEXED = frozenset({
+    'aauw_fellowship', 'aauw_intl_fellowship', 'adb_scholarship', 'adobe_research_fellowship',
+    'aecid_spain', 'african_dev_bank', 'aga_khan_scholarship', 'ahrc_dtp',
+    'amazon_phd_fellowship', 'apple_scholarship', 'argentina_conicet', 'au_scholarship',
+    'australia_awards_africa', 'australia_awards_pacific', 'austrian_oead', 'banting_postdoc',
+    'bbsrc_dtp', 'cambridge_international_scholarship', 'cambridge_trust', 'canada_commonwealth',
+    'caricom_scholarship', 'cern_doctoral', 'chevening', 'chinese_gov_scholarship_a',
+    'cnpq_brazil', 'colciencias_colombia', 'commonwealth_scholarship', 'conacyt_mexico',
+    'conicyt_chile', 'csc_belt_road', 'czech_gov_scholarship', 'daad_doctoral',
+    'daad_helmut_schmidt', 'daad_research_grants', 'daad_study_scholarship', 'denmark_gov_scholarship',
+    'doe_csgf', 'egyptmohe_scholarship', 'eiffel_excellence', 'embo_fellowship',
+    'endeavour_australia', 'epsrc_dtp', 'erasmus_mundus', 'erasmus_plus',
+    'esa_research_fellowship', 'esrc_dtp', 'fao_italy_masters', 'fapesp_brazil',
+    'finland_gov_scholarship', 'ford_foundation_fellowship', 'forte_fellowship', 'friedrich_ebert',
+    'fulbright_foreign', 'fundacion_carolina', 'gates_cambridge', 'gates_millennium_scholars',
+    'ghana_scholarship', 'gks_graduate', 'gks_undergraduate', 'google_generation_scholarship',
+    'google_phd_fellowship', 'great_minds_rwanda', 'greek_gov_scholarship', 'heinrich_boll',
+    'hertz_foundation', 'holland_scholarship', 'horizon_msca_dn', 'humphrey_fellowship',
+    'iaea_fellowship', 'iccr_scholarship', 'iky_greece', 'inlaks_scholarship',
+    'insead_scholarship', 'ireland_govt_scholarship', 'islamic_dev_bank', 'israel_gov_scholarship',
+    'italian_gov_scholarship', 'jack_kent_cooke', 'joint_japan_wb', 'jpmorgan_scholarship',
+    'kasp_saudi', 'kellogg_scholarship', 'kenyatta_scholarship', 'konrad_adenauer',
+    'lbs_scholarship', 'loreal_women_science', 'lpdp_indonesia', 'malaysia_msd',
+    'marie_curie', 'marshall_scholarship', 'mastercard_foundation_scholars', 'medical_research_council',
+    'meta_fellowship', 'mext_research', 'mext_undergraduate', 'microsoft_scholarship',
+    'morocco_scholarship', 'mwalimu_nyerere', 'nato_science', 'new_zealand_gov',
+    'newton_bhabha', 'nih_f31', 'norwegian_quota', 'nrf_south_africa',
+    'nsf_graduate_fellowship', 'open_society_fellowship', 'orange_tulip', 'oxford_clarendon',
+    'oxford_weidenfeld', 'pakistan_hec', 'polish_nawa', 'portuguese_camoes',
+    'pronabec_peru', 'qualcomm_innovation_fellowship', 'rhodes_scholarship', 'romania_gov',
+    'rotary_peace_fellowship', 'russian_gov_scholarship', 'saltire_scotland', 'senegal_gov',
+    'soros_fellowship', 'stanford_knight_hennessy', 'stipendium_hungaricum', 'swedish_institute',
+    'swiss_excellence', 'thailand_gov', 'thailand_odos', 'turkiye_burslari',
+    'uk_great_scholarship', 'undp_scholarship', 'usaid_scholarship', 'vanier_canada',
+    'vietnam_vied', 'vlir_uos', 'wharton_fellowship', 'who_scholarship',
+    'wjwb_scholarship', 'wmo_climate', 'yali_mandela_washington',
+})
+
 
 def flag_emoji(code):
     if not code or code in ("EU", "Various", "various"):
@@ -358,6 +402,7 @@ def build_description(name, amount_desc, deadline):
 def generate_page(s, all_scholarships):
     sid = s["id"]
     name = s["name"]
+    robots_val = "index, follow" if sid in KEEP_INDEXED else "noindex, follow"
     canonical = f"{SITE}/scholarship/{sid}"
 
     flg = flag_emoji(s.get("countryCode", ""))
@@ -489,7 +534,7 @@ def generate_page(s, all_scholarships):
   <meta name="theme-color" content="#1d4ed8">
   <title>{H.escape(title)}</title>
   <meta name="description" content="{H.escape(desc)}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="{robots_val}">
   <link rel="canonical" href="{canonical}">
   <meta property="og:title" content="{H.escape(name)} 2026–2027 | FreeStudentTools">
   <meta property="og:description" content="{H.escape(amt_label)} — {H.escape(amount_desc[:120])}">
@@ -735,6 +780,33 @@ def update_scholarship_index(root, scholarships):
     print(f"scholarships.html — static A–Z index refreshed ({len(items)} links)")
 
 
+def prune_sitemap_noindex(root, scholarships):
+    """Remove <url> blocks for noindexed (single-university) scholarship pages.
+    A noindex page must not appear in the sitemap."""
+    sitemap_path = os.path.join(root, "sitemap.xml")
+    if not os.path.exists(sitemap_path):
+        return
+    noindex_ids = {s["id"] for s in scholarships if s["id"] not in KEEP_INDEXED}
+    with open(sitemap_path, "r", encoding="utf-8") as f:
+        xml = f.read()
+
+    def keep_block(m):
+        block = m.group(1)
+        loc = re.search(r"<loc>(.*?)</loc>", block)
+        if loc:
+            path = loc.group(1).rsplit("/scholarship/", 1)
+            if len(path) == 2 and path[1].strip().rstrip("/") in noindex_ids:
+                return ""  # drop it
+        return block
+
+    updated = re.sub(r"(\s*<url>[\s\S]*?</url>)", keep_block, xml)
+    # collapse any run of blank lines left behind
+    updated = re.sub(r"\n{3,}", "\n\n", updated)
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(updated)
+    print(f"sitemap.xml — pruned {len(noindex_ids)} noindexed scholarship URLs")
+
+
 def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     data_path = os.path.join(root, "data", "scholarships_data.js")
@@ -762,6 +834,7 @@ def main():
 
     print(f"Generated {count} pages → {out_dir}/")
     update_sitemap(root, scholarships)
+    prune_sitemap_noindex(root, scholarships)
     update_scholarship_index(root, scholarships)
 
 
