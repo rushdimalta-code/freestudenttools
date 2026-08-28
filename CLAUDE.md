@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-28 (rev 23)_
+_Last updated: 2026-08-28 (rev 24)_
 
 ---
 
@@ -747,6 +747,33 @@ Blog **48 → 52 posts**. Targeting confirmed search-demand gaps: `how-to-email-
 - **#4 nav redesign** — after Phase 0 completes, swap `src/_includes/_nav.njk` for the STUDY ABROAD / PREPARE / TOOLS / TRAVEL / GUIDES structure.
 
 Every change this session re-ran `tools/full_site_audit.py` → **0 issues** throughout.
+
+---
+
+## Indexing diagnosis + deeper sitemap cut (rev 24, 2026-08-28)
+
+GSC "Pages" export showed the real problem: **~230 URLs "Discovered – currently not indexed", Last crawled: N/A** — Google has not crawled them at all. Not a per-page quality verdict; a **crawl-budget / domain-authority** starvation. Even footer-linked core pages (`/about`, `/terms`, `/contact`, all tool pages, ~28 blog posts) sit uncrawled. Cause: a young, low-backlink domain whose sitemap was ~60% near-identical templated scholarship pages → Google throttles crawl of the whole domain.
+
+Commercial context: at ~110 users/week, AdSense-approved income ≈ $1–5/mo. **Decision (owner): do not reapply to AdSense until traffic is materially higher.** No urgency to chase the "low value content" rejection. The blog grows slowly on its own via Bing + ChatGPT citations.
+
+### Bot-vs-human analytics (SHIPPED, `d4574d8`)
+GA4 only auto-filters the IAB spider list; cloud-datacenter scrapers get through and were inflating the China row (15 users / ~1s sessions / today's screenshot). JS-only, additive, passive listeners:
+- `js/common.js` — `human_interaction` (fired once on first scroll/key/pointer/touch/wheel) + `engaged_10s` (10s of *visible* page time). A hit-and-leave scraper fires neither. Both carry `automation: navigator.webdriver`.
+- `js/lang-switcher.js` — `translate_ready` / `translate_blocked` (onload / onerror / 4s timeout on the Google Translate script). `translate_blocked` positively identifies Great-Firewall sessions, which otherwise look identical to a bounce.
+- **Usage:** in GA4 Explore, add segment "session includes `human_interaction`" as a comparison → bot-free view. Propagates to returning visitors over ~7 days (JS cache); new visitors immediately. No site-wide `?v=` bump done (analytics-only, 7-day rollout acceptable).
+
+### Sitemap cut 213 → 122 (SHIPPED, `063485e`)
+`KEEP_INDEXED` in `tools/generate_scholarship_pages.py` cut **139 → 48** — only scholarships with genuine standalone brand/search demand (Chevening, Fulbright, DAAD ×4, Erasmus ×2, Gates Cambridge, Rhodes, Marshall, Commonwealth, MEXT ×3, GKS ×2, Türkiye, Knight-Hennessy, Clarendon, Weidenfeld, Eiffel, Swedish Institute, Holland, Orange Tulip, Stipendium Hungaricum, Mastercard Foundation, Aga Khan, Inlaks, ICCR, Vanier, Banting, NSF GRFP, Soros, Rotary Peace, Cambridge Trust ×2, Gates Millennium, Jack Kent Cooke, Humphrey, MSCA, CSC China, Swiss Excellence, Austrian OeAD, Italy Gov, Ireland Gov, LPDP Indonesia, KASP Saudi, NZ Gov). Heuristic list — **refine against GSC Pages impression data when available**.
+- 191 scholarship pages now `noindex, follow` (was 100); still live, still in the finder + the `scholarships.html` A-Z index (regenerated to all 239 → **no orphans**), just out of Google's index + sitemap.
+- Sitemap: 53 blog + 21 root + 48 scholarship = **122** (was 213). Audit 0 issues.
+- Re-check GSC "indexed" count + crawl activity in 3–4 weeks. If the good pages start getting crawled, the cut worked.
+
+### Not done (owner deferred until deciding to actively grow the site)
+- **Backlinks** (8–15 real ones) — the actual fix for crawl-demand starvation. Biggest lever, real outreach effort.
+- **Category pages** replacing scholarship-page sprawl (~8 curated pages: "PhD scholarships in Germany", "Fully funded, no IELTS", etc.).
+- **Manual Request Indexing** for top ~25 pages in GSC.
+- **AdSense reapplication** — explicitly on hold pending traffic growth.
+- Keep scaling the blog (52 → 80–100) — still the passive growth engine, continue when convenient.
 
 ---
 
