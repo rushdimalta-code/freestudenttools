@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-28 (rev 20)_
+_Last updated: 2026-08-28 (rev 21)_
 
 ---
 
@@ -678,6 +678,39 @@ Comprehensive audit of all 313 pages: internal links, orphans, redirects, 404s, 
 **Verified non-issues:** ~245 images the raw scan flagged for "no dimensions" all sit in fixed-height / `aspect-ratio` containers (`.read-next-img`, `.guide-home-img` h:160, `.blog-card-img` h:200, `.blog-post-hero` h:420) → no layout shift. `/scholarship` (bare) resolves via Netlify pretty-URL to the noindex template — not a 404. `netlify.toml` unchanged.
 
 Re-run the auditor with `python3 scratchpad/fst_full_audit.py` (or keep a copy in `tools/`).
+
+---
+
+## Recommendations Batch — `freestudenttools_claude_code_changes.md` (rev 21, 2026-08-28)
+
+Second, tighter spec ("improve coherence, don't rebuild visual identity"). Shipped in commits `b81b9e3` (Wave 1 homepage `9190fa2` came first), `a4090e0`, `7ef4a0a`, `c214f51`. Every batch re-ran `tools/full_site_audit.py` → 0 issues.
+
+**Data note:** the spec asked for "246 scholarships / 47 guides / 1,500 universities" — none of those exist in the data files (239 / 48 / 1,000). Implemented with the **real** numbers per the spec's own rule #7 (no fabricated data).
+
+| # | Status |
+|---|---|
+| 1 · stats source of truth | ✅ `data/site-stats.js` — `window.FST_STATS` (239 / 196 open / 27 detailed unis / 1,000 index / 48 guides / 7 tools / 60 countries) + `FST_STAT_LABELS` + a self-contained renderer filling `[data-stat="KEY"]`. Self-executing script tag, no shared-file cache bump. Homepage + admissions counts converted. |
+| 2 · admissions 27-vs-index | ✅ Explicit everywhere: 27 = detailed deadline/intake/housing tracking, 1,000+ = broader discovery index. Hero, about-strip, both FAQ answers reworded; "Coverage spans including" grammar bug fixed. |
+| 3 · homepage task-first | ✅ Hero restored to "Scholarships. Admissions. All Free. All in One Place." + spec supporting line; CTAs "Find scholarships" / "Compare universities"; action selector 5→**4** cards per spec copy; `.hx-actions` grid 5→4 col. |
+| 5 · Travel → Student Travel | ✅ Already "International Student Travel Hub" (title/H1/meta). No change. |
+| 6 · university comparison result | ✅ `compare.html` — after the existing grouped table: **Estimated total annual cost** panel (tuition + living-midpoint×12, combined only when both USD, shows $/yr delta + which is lower); **Where each stands out** neutral bullets ("does not pick a winner"); CTA row (Explore A / Explore B / deadlines / scholarships). `_colTotals[]` surfaces the monthly total already computed in `costOfLivingRows()`. Methodology + data disclaimer untouched. |
+| 7 · scholarship comparison | ✅ `compare-scholarships.html` — **At a glance** compact card (Funding/Degree/Destination/Deadline/Competition); **Which may fit you better?** conditional "X may be more relevant if you…" from funding/level/competition/deadline ("not a personalised eligibility check"); **Build your shortlist** CTA. |
+| 10 · internal-linking ecosystem | ✅ Verified already substantial — 239 scholarship pages → related + comparison + finder + guide (generator); guides → products (#16) + tools; tools → next tools (#11); compare pages → admissions + scholarships. Only missing node = country hub (#9, build-step). |
+| 11 · tool "What's next?" | ✅ Static contextual 4-card section after `</main>` on all 7 tool pages. New `.tool-next` CSS. |
+| 12 · tool privacy strip | ✅ `common.js` injects "🔒 Your file stays on your device · Browser-based · No upload · No account · No storage" above every `.upload-zone`. New `.upload-privacy-note` CSS. |
+| 13 · contextual Easedit | ✅ Banners already page-contextual; button label → "Practise with Easedit →" ×3. |
+| 16 · guide "what to do next" | ✅ `.guide-next-actions` product-action block (2–3 topic-matched links into the tools/databases, not more posts) on all 48 guides, before "Keep reading". |
+| 21 · analytics events | ✅ `common.js` delegated `[data-track]` → `trackEvent`. Homepage wired (`home_task_click` 8, `home_tool_click` 7, `home_guide_click` 6); compare pages wired. Tool `tool_started/completed` still to wire in each tool JS. |
+| 15 · unique SEO titles/meta | ✅ Audit: 0 duplicate titles / descriptions across 313 pages. |
+| 19 · performance | ✅ Audit clean; asset `?v=` bumped site-wide `20260808 → 20260829` (313 files + generator `ASSET_VERSION`) so CSS/JS changes propagate. |
+
+**Blocked — need the build step (can't hand-edit 313 pages without breaking the gated link/SEO audit):**
+- #4 nav simplification (nav is hand-coded in every page; `common.js` only wires behaviour)
+- #9 country hubs (`/study/[country]`) — new template + generation
+- #14 URL restructure (`/universities/[uni]`, redirects for everything)
+- #17 country SEO flywheel (depends on #9)
+
+**Still to do (no build step):** #18 mobile + #20 accessibility spot-check of the new components (`.hx-*`, `.tool-next`, `.guide-next-actions`, `.upload-privacy-note`); wiring `tool_started`/`tool_completed` events into the 7 tool JS files.
 
 ---
 
