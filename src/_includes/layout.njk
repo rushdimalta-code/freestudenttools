@@ -7,18 +7,18 @@
   <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/logo.png">
   <meta name="theme-color" content="#1d4ed8">
-  <title>{{ title }}</title>
-  <meta name="description" content="{{ description }}">
+  <title>{{ title | safe }}</title>
+  <meta name="description" content="{{ description | safe }}">
   <meta name="robots" content="{{ robots or 'index, follow' }}">
   <link rel="canonical" href="https://freestudenttools.com/{{ slug }}">
-  <meta property="og:title" content="{{ ogTitle or title }}">
-  <meta property="og:description" content="{{ ogDescription or description }}">
+  <meta property="og:title" content="{{ (ogTitle or title) | safe }}">
+  <meta property="og:description" content="{{ (ogDescription or description) | safe }}">
   <meta property="og:type" content="{{ ogType or 'website' }}">
   <meta property="og:url" content="https://freestudenttools.com/{{ slug }}">
   <meta property="og:image" content="https://freestudenttools.com/assets/logo.png">
   <meta name="twitter:card" content="{{ twitterCard or 'summary_large_image' }}">
-  <meta name="twitter:title" content="{{ ogTitle or title }}">
-  <meta name="twitter:description" content="{{ twitterDescription or ogDescription or description }}">
+  <meta name="twitter:title" content="{{ (ogTitle or title) | safe }}">
+  <meta name="twitter:description" content="{{ (twitterDescription or ogDescription or description) | safe }}">
   <meta name="twitter:image" content="https://freestudenttools.com/assets/logo.png">
   {%- if jsonld %}
   <script type="application/ld+json">{{ jsonld | safe }}</script>

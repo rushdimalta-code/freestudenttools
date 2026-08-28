@@ -1,0 +1,66 @@
+---
+layout: layout.njk
+permalink: /contact.html
+slug: contact
+title: "Contact Us | FreeStudentTools"
+description: "Contact FreeStudentTools.com — send feedback, report a bug, or request a new tool. We read every message and reply within 48 hours."
+ogDescription: "Feedback, bug reports, or tool requests — get in touch with the FreeStudentTools team. We reply within 48 hours."
+twitterDescription: "Feedback, bug reports, or tool requests — get in touch with FreeStudentTools. We reply within 48 hours."
+twitterCard: summary
+jsonld: >-
+  {"@context":"https://schema.org","@type":"WebPage","name":"Contact Us","description":"Feedback, bug reports, or tool requests — get in touch with the FreeStudentTools team. We reply within 48 hours.","url":"https://freestudenttools.com/contact","isPartOf":{"@type":"WebSite","name":"FreeStudentTools","url":"https://freestudenttools.com/"}}
+---
+<section class="page-hero" aria-labelledby="contact-hero-heading">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </div>
+    <h1 id="contact-hero-heading">Get in Touch</h1>
+    <p>Found a bug, have a tool request, or just want to say hello? We read every message and reply within 48 hours.</p>
+  </div>
+</section>
+
+
+<main id="main-content">
+  <div class="container">
+    <div class="static-page" style="max-width:700px">
+
+      <div class="prose" style="margin-bottom:32px">
+        <p>Have a question, found a bug, or want to suggest a new tool? Fill out the form below and we'll get back to you as soon as possible.</p>
+      </div>
+
+      <form class="contact-form" name="contact" method="POST" action="/contact-thanks" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="feedback">General Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="tool-request">Tool Request</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+      </form>
+
+      <div class="info-box" style="margin-top:32px">
+        <strong>Privacy note:</strong> Messages are delivered securely via Netlify Forms. Your name and email are used solely to respond and are not sold or shared. See our <a href="privacy.html">Privacy Policy</a> for full details.
+      </div>
+
+    </div>
+  </div>
+</main>

@@ -1,0 +1,62 @@
+---
+layout: layout.njk
+permalink: /about.html
+slug: about
+title: "About Us | FreeStudentTools"
+description: "About FreeStudentTools.com — free OCR, PDF, and university tools for students. No sign-up, no file uploads, no hidden fees. Learn what we built and why."
+ogDescription: "Free OCR, PDF, and university tools for students worldwide. No sign-up, no file uploads, always free."
+twitterDescription: "Free document tools for students. No sign-up, no file uploads, always free."
+twitterCard: summary
+jsonld: >-
+  {"@context":"https://schema.org","@type":"WebPage","name":"About Us","description":"Free OCR, PDF, and university tools for students worldwide. No sign-up, no file uploads, always free.","url":"https://freestudenttools.com/about","isPartOf":{"@type":"WebSite","name":"FreeStudentTools","url":"https://freestudenttools.com/"}}
+---
+<section class="page-hero" aria-labelledby="about-hero-heading">
+  <div class="container">
+    <div class="page-hero-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+      About Us
+    </div>
+    <h1 id="about-hero-heading">Built for Students. Free Forever.</h1>
+    <p>No subscriptions. No file uploads. No watermarks. Just the tools you actually need, running entirely in your browser.</p>
+  </div>
+</section>
+
+
+<main id="main-content">
+  <div class="container">
+    <div class="static-page" style="max-width:800px">
+
+      <div class="prose">
+        <p>FreeStudentTools.com exists because the tools students actually need — OCR scanners, PDF converters, citation generators — are either locked behind €20-a-month subscriptions, or they're free in name only: your files get uploaded to a server, your email gets harvested, and a watermark gets slapped on the output.</p>
+        <p>We built a different kind of student tool site. Every tool here runs entirely in your browser. Your files never leave your device. There are no accounts, no email confirmations, no paywalls, and no watermarks. You open the tool, you use it, you download the result. That's it.</p>
+
+        <h2>What's Here</h2>
+        <p>Seven browser-based document tools, plus a five-part University Hub:</p>
+        <p><strong>Document tools (7)</strong> — an OCR scanner that extracts text from images and scanned PDFs in 15+ languages; a PDF to Word and Excel converter with built-in OCR for scanned documents; a PDF compressor with three compression levels; an image compressor for JPG, PNG, and WebP; a PDF merger for combining up to 10 files; a PDF page extractor for pulling specific pages; and a citation generator for APA 7th, MLA 9th, and Chicago 17th edition.</p>
+        <p><strong>University Hub (5)</strong> — an admissions tracker covering 27 leading universities with deadlines, intake dates, and housing information updated daily; a scholarships finder with 239 opportunities from governments and universities worldwide; a scholarship guide (5,000-word deep dive on how to win funding); a university degree comparison tool for side-by-side tuition, cost of living, and course comparisons across 1,000+ institutions; and a student tips guide covering how to apply, write a reference letter, handle interviews, and manage money at university.</p>
+
+        <h2>How the Tools Actually Work</h2>
+        <p>Everything runs client-side using open-source JavaScript libraries. No server processes your files.</p>
+        <ul>
+          <li><strong>OCR Scanner:</strong> Tesseract.js v5 — professional OCR in the browser. Supports 15+ languages including Arabic, Chinese, French, Spanish, Russian, Japanese, and Korean.</li>
+          <li><strong>PDF Converter:</strong> PDF.js (Mozilla) reads the file locally. For text PDFs, text is extracted directly. For scanned PDFs, Tesseract.js runs OCR first. Output is built using docx.js (Word) or SheetJS (Excel).</li>
+          <li><strong>PDF Compressor:</strong> PDF.js and pdf-lib re-render each page at a reduced resolution. Low, medium, and high compression levels trade quality for file size.</li>
+          <li><strong>Image Compressor:</strong> The browser's native Canvas API — no external library needed. Compresses JPG, PNG, and WebP with before/after size comparison.</li>
+          <li><strong>PDF Merger &amp; Page Extractor:</strong> pdf-lib handles both — combining multiple PDFs and extracting pages or ranges (e.g. 1, 3, 5–8).</li>
+          <li><strong>Citation Generator:</strong> Pure JavaScript. No network requests of any kind. Supports websites, books, journal articles, and YouTube videos in APA 7th, MLA 9th, and Chicago 17th.</li>
+        </ul>
+
+        <h2>Privacy — What We Collect and What We Don't</h2>
+        <p>We don't collect your documents. Full stop. Every file you upload stays in your browser's memory for the duration of your session and is gone the moment you close the tab.</p>
+        <p>We do use Google Analytics (with your consent via the cookie banner) to understand how the site is being used — which tools get the most traffic, where people drop off, which pages load slowly. This helps us improve the site. The analytics data is anonymised: IP addresses are masked, and we don't track you across other websites.</p>
+        <p>Google AdSense serves display ads on the site. These ads allow us to keep the site free. Ad personalisation settings follow standard Google policy — you can opt out of personalised ads via Google's ad settings. We never place ads near tool buttons or inside the tool interfaces themselves.</p>
+
+        <h2>Keeping It Free</h2>
+        <p>The site runs on display advertising. No subscriptions and no premium tiers. If you find the tools useful, leaving ads enabled is the only support we need — and even that's optional.</p>
+
+        <h2>Contact</h2>
+        <p>Found a bug, have a tool request, or want to report an issue? <a href="contact.html">Get in touch here.</a> We read every message.</p>
+      </div>
+    </div>
+  </div>
+</main>
