@@ -368,3 +368,49 @@ function fstSubmitFeedback(vote) {
     });
   }, { passive: true });
 })();
+
+// ===== BOT vs HUMAN SIGNAL =====
+// GA4 only auto-filters the IAB known-spider list. Cloud-datacenter scrapers
+// (Alibaba/Tencent/AWS/GCP ranges) sail through it and inflate low-quality
+// country rows with ~1s sessions. These two events let a real human be
+// separated from a hit-and-leave bot in every report:
+//   human_interaction  — fired once on the first genuine input gesture
+//   engaged_10s        — fired after 10s of *visible* time on the page
+// A scraper that loads and leaves fires neither. Build a GA4 comparison on
+// "sessions that include human_interaction" to get a clean human-only view.
+(function () {
+  function fire(name, params) {
+    if (typeof window.trackEvent === 'function') window.trackEvent(name, params || {});
+    else if (typeof gtag !== 'undefined') gtag('event', name, params || {});
+  }
+  var auto = navigator.webdriver === true; // true for most headless automation
+
+  // 1) First real interaction ------------------------------------------------
+  var interacted = false;
+  var evts = ['scroll', 'keydown', 'pointerdown', 'touchstart', 'wheel'];
+  function onInteract() {
+    if (interacted) return;
+    interacted = true;
+    evts.forEach(function (ev) { window.removeEventListener(ev, onInteract, listenOpts); });
+    fire('human_interaction', { automation: auto });
+  }
+  var listenOpts = { passive: true };
+  evts.forEach(function (ev) { window.addEventListener(ev, onInteract, listenOpts); });
+
+  // 2) 10s of visible time -------------------------------------------------
+  var startTs = Date.now(), hiddenTotal = 0, hiddenSince = null, sent = false;
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) { hiddenSince = Date.now(); }
+    else if (hiddenSince) { hiddenTotal += Date.now() - hiddenSince; hiddenSince = null; }
+  });
+  var iv = setInterval(function () {
+    if (sent) return;
+    var openHidden = hiddenSince ? Date.now() - hiddenSince : 0;
+    var visibleMs = Date.now() - startTs - hiddenTotal - openHidden;
+    if (visibleMs >= 10000) {
+      sent = true;
+      clearInterval(iv);
+      fire('engaged_10s', { automation: auto });
+    }
+  }, 2500);
+})();

@@ -35,6 +35,28 @@ function fstLoadTranslateScript() {
   fstTranslateScriptLoading = true;
   var s = document.createElement('script');
   s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+
+  // Reachability signal. The Great Firewall (and some corporate networks) hang
+  // requests to translate.google.com — the request neither loads nor errors
+  // for a long time, so the page sits half-rendered. Report whether Google's
+  // widget script actually came back so China / blocked sessions are
+  // distinguishable from real ones in GA4 (they otherwise look identical:
+  // ~1s session, near-zero events).
+  var settled = false;
+  function report(state, reason) {
+    if (settled) return;
+    settled = true;
+    if (typeof window.trackEvent === 'function') {
+      window.trackEvent('translate_' + state, reason ? { reason: reason } : {});
+    }
+  }
+  s.onload = function () { report('ready'); };
+  s.onerror = function () { report('blocked', 'error'); };
+  setTimeout(function () {
+    if (window.google && window.google.translate) report('ready');
+    else report('blocked', 'timeout');
+  }, 4000);
+
   document.head.appendChild(s);
 }
 
