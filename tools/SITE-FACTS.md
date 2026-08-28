@@ -12,7 +12,7 @@ Before changing any count in a page, check it against this table and update
 | `scholarship_countries` | 60+ | manual (not verified this pass) | Left as-is; verify before changing |
 | `admissions_universities_full` | **27** | `data/universities.js` (`window.UNI_DATA`) | Universities with full deadline / intake / housing data |
 | `ranked_universities` | **1,000** | `data/universities_all.js` (`window.UNI_ALL`) | Searchable ranked list; was shown as "1,500" and "1,040+" |
-| `guides` | **48** | `ls blog/*.html` minus `index.html` = 48; matches 48 post `<loc>` entries in `sitemap.xml` | Homepage showed 35; `llms.txt`, `404.html` and old CLAUDE.md said 43 — both stale |
+| `guides` | **52** | `ls blog/*.html` minus `index.html` = 52; matches 52 post `<loc>` entries in `sitemap.xml` | Homepage showed 35; `llms.txt`, `404.html` and old CLAUDE.md said 43 — both stale |
 | `document_tools` | **7** | OCR, PDF→Word/Excel, PDF compressor, image compressor, PDF merger, PDF extractor, citation generator | |
 | `hub_pages` | **5** | admissions, scholarships finder, scholarship guide, university compare, tips | `about.html` previously said "University Hub (7)" |
 | `homepage_stat_tools` | **9** | 7 document tools + compare + admissions (homepage framing) | Kept as-is; a framing choice, not a bug |

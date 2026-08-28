@@ -12,7 +12,7 @@ window.FST_STATS = {
   universities_detailed: 27,        // data/universities.js — full deadline/intake/housing tracking
   universities_index: 1000,         // data/universities_all.js — broader discovery index
   // guides — blog/*.html (excl. index) == sitemap /blog/ post entries
-  guides: 48,
+  guides: 52,
   // browser tools
   tools: 7,
   // countries represented across the scholarship database (not independently re-verified)
