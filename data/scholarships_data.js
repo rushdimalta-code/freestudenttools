@@ -4848,7 +4848,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://www.rics.org/training-and-development/foundations"
+      "link": "https://www.rics.org"
     },
     {
       "id": "who_scholarship",
