@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-28 (rev 19)_
+_Last updated: 2026-08-28 (rev 20)_
 
 ---
 
@@ -656,6 +656,28 @@ Text/attribute-only changes across 16 files. **No** href/asset/CSS/JS/layout/nav
 - **Privacy-claim accuracy** (GA4 + AdSense + contact form are live): removed "we collect zero personal data / no tracking" (`index.html`), "no uploads, no tracking, no data sales — ever" (`privacy.html`), "no data sales" (`about.html`). `about.html` "Fourteen tools" → "seven document tools + five-part Hub".
 - **Full-site audit** (`scratchpad/fst_audit.py`): 313 pages → **0 broken internal links**; 84 redirect rules → **0 bad targets, 0 chains**; orphans = 2 (`contact-thanks`, `search`) both intentional `noindex` utility pages → 0 real orphans; sitemap → 0 unresolved `<loc>`. Performance: zero asset/request change → Lighthouse-neutral.
 - **Push note:** the `update-data.yml` "daily site refresh" bot commits to `main` every day 06:00 UTC (regenerates `scholarship/*.html`, bumps `data/*.js` dates, rewrites `sitemap.xml`). Phase 1 was rebased over 15 such commits — **zero file overlap** — and all counts re-verified against the post-rebase data files before pushing.
+
+---
+
+## Full-Site Audit — 2026-08-28 (rev 20)
+
+Comprehensive audit of all 313 pages: internal links, orphans, redirects, 404s, SEO (structure / canonical / titles / meta / social tags), performance signals, robots.txt, llms.txt, and every external link. Auditor: `scratchpad/fst_full_audit.py` (10 categories). Shipped in commits `b10c8b0` + `53a0c88`.
+
+**Result — PASS on all 10 internal categories, 0 issues:**
+- 0 broken internal links (313 pages), 0 real orphans (`contact-thanks` + `search` are intentional noindex utility pages), 0 bad redirects / chains / loops (84 rules), 0 unresolved sitemap `<loc>`.
+- Every indexable page: 1 `<h1>`, `<title>` ≤65 chars (entity-decoded) and unique, unique meta description, self-referential absolute canonical, OG + Twitter tags, `lang` + `viewport`, JSON-LD. No duplicate titles or descriptions.
+
+**Fixes applied:**
+- **`/js/lang-switcher.js` + `/js/search-index.js`** had no `?v=` cache-bust on 72 pages → added `?v=20260808` (they were the only un-busted assets; risked stale multilang JS for 7 days after any change).
+- **4 blog posts** (`cheap-flights`, `duolingo-english-test-guide-2026`, `ielts-speaking-test-guide`, `international-student-first-week-arrival-guide`) — newer template variant where `.blog-post-hero-img` has `max-height` but no reserved aspect box, and the `<img>` had no `width`/`height` → CLS on the LCP image. Added `width="1200" height="630"` (all 4 heroes are 1200×630).
+- **`sitemap.xml`** — `compare-scholarships` was the only `<url>` missing `<lastmod>` → added.
+- **35 dead external links** (browser-UA-verified 404) remapped to each institution's verified-200 root domain (same approach as the 2026-08-05 batch): 28 bank student-account deep links in `compare.html`, 6 government visa/health pages in `health-checks.html`, 1 in `data/scholarships_data.js`.
+
+**External links — 424 unique URLs checked (browser user-agent):** 286 OK · 51 bot-blocked 403 (Cloudflare/WAF; fine for real users) · 4 JS template-literal false positives · **38 unverifiable `000`** (Cloudflare/Akamai JS challenge — `chevening.org`, `rhodeshouse.ox.ac.uk`, `canada.ca`, `campuschina.org`, `studyjapan.go.jp`, Russian banks, etc.; presumed live, **flagged for manual browser spot-check, NOT remapped**) · 35 confirmed dead → fixed. `nordea.dk` (405) / `commerzbank.de` (555) / `kotak.com` (403) left as-is — page alive, HEAD/method blocked, not a true 404.
+
+**Verified non-issues:** ~245 images the raw scan flagged for "no dimensions" all sit in fixed-height / `aspect-ratio` containers (`.read-next-img`, `.guide-home-img` h:160, `.blog-card-img` h:200, `.blog-post-hero` h:420) → no layout shift. `/scholarship` (bare) resolves via Netlify pretty-URL to the noindex template — not a 404. `netlify.toml` unchanged.
+
+Re-run the auditor with `python3 scratchpad/fst_full_audit.py` (or keep a copy in `tools/`).
 
 ---
 
