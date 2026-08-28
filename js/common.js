@@ -341,3 +341,30 @@ function fstSubmitFeedback(vote) {
     btn.classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
 })();
+
+// ===== TOOL PRIVACY STRIP near upload zone (recommendation #12) =====
+(function () {
+  document.querySelectorAll('.upload-zone').forEach(function (zone) {
+    if (zone.previousElementSibling && zone.previousElementSibling.classList.contains('upload-privacy-note')) return;
+    var note = document.createElement('p');
+    note.className = 'upload-privacy-note';
+    note.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> <strong>Your file stays on your device</strong> &middot; Browser-based processing &middot; No upload &middot; No account &middot; No storage';
+    zone.parentNode.insertBefore(note, zone);
+  });
+})();
+
+// ===== LIGHTWEIGHT EVENT TRACKING (recommendation #21) =====
+// Any element with data-track="event_name" fires window.trackEvent on click.
+// Optional data-track-label overrides the auto label (trimmed text content).
+(function () {
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-track]');
+    if (!el || typeof window.trackEvent !== 'function') return;
+    var name = el.getAttribute('data-track');
+    if (!name) return;
+    window.trackEvent(name, {
+      label: el.getAttribute('data-track-label') || (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60),
+      href: el.getAttribute('href') || undefined
+    });
+  }, { passive: true });
+})();

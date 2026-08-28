@@ -2295,3 +2295,29 @@ a.hx-card:hover { border-color:var(--border-dark); box-shadow:0 8px 24px rgba(15
 
 .hx-note { font-size:.9rem; color:var(--text-muted); }
 .hx-affil { font-size:.72rem; font-weight:650; color:#B45309; background:#FFFBEB; padding:2px 8px; border-radius:6px; }
+
+/* Tool upload privacy strip (recommendation #12) — injected by common.js before .upload-zone */
+.upload-privacy-note {
+  display: flex; align-items: center; justify-content: center; gap: 7px; flex-wrap: wrap;
+  margin: 0 0 12px; padding: 8px 14px;
+  font-size: 0.8rem; color: var(--text-secondary);
+  background: var(--bg-light); border: 1px solid var(--border); border-radius: var(--radius-sm);
+}
+.upload-privacy-note svg { color: #047857; flex-shrink: 0; }
+.upload-privacy-note strong { color: var(--text-primary); font-weight: 650; }
+
+/* Tool "what's next" contextual block (recommendation #11) */
+.tool-next { max-width: 860px; margin: 8px auto 0; padding: 0 24px; }
+.tool-next h2 { font-size: 1.2rem; margin-bottom: 14px; }
+.tool-next-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .tool-next-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .tool-next-grid { grid-template-columns: repeat(4, 1fr); } }
+.tool-next-card {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 14px 16px; background: var(--bg-white);
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  text-decoration: none; transition: border-color .15s, box-shadow .15s, transform .08s;
+}
+.tool-next-card:hover { border-color: var(--primary); box-shadow: var(--shadow-sm); transform: translateY(-2px); text-decoration: none; }
+.tool-next-card strong { color: var(--text-primary); font-size: 0.92rem; }
+.tool-next-card span { color: var(--text-secondary); font-size: 0.82rem; }
