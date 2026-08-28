@@ -575,6 +575,53 @@
     });
 
     html += '</tbody></table></div>';
+
+    // ── At a glance (rec #7) ────────────────────────────────────────────────
+    function glance(s) {
+      var fund = s.amountType === 'full' ? 'Fully funded' : s.amountType === 'partial' ? 'Partial' : 'Variable';
+      var lv = (s.levels || []).join(', ') || '—';
+      return '<div style="flex:1;min-width:190px">'
+        + '<div style="font-weight:700;font-size:0.92rem;margin-bottom:8px">' + s.name + '</div>'
+        + '<dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:0.83rem">'
+        + '<dt style="color:var(--text-muted)">Funding</dt><dd style="margin:0;font-weight:600">' + fund + '</dd>'
+        + '<dt style="color:var(--text-muted)">Degree</dt><dd style="margin:0;font-weight:600">' + lv + '</dd>'
+        + '<dt style="color:var(--text-muted)">Destination</dt><dd style="margin:0;font-weight:600">' + (s.country || '—') + '</dd>'
+        + '<dt style="color:var(--text-muted)">Deadline</dt><dd style="margin:0;font-weight:600">' + (s.deadline || 'Varies') + '</dd>'
+        + '<dt style="color:var(--text-muted)">Competition</dt><dd style="margin:0;font-weight:600">' + capFirst(s.competitionLevel) + '</dd>'
+        + '</dl></div>';
+    }
+    html += '<div style="margin-top:20px;padding:18px 20px;background:var(--bg-white);border:1px solid var(--border);border-radius:12px">'
+      + '<div style="font-weight:800;font-size:1rem;margin-bottom:12px">At a glance</div>'
+      + '<div style="display:flex;gap:24px;flex-wrap:wrap">' + glance(a) + glance(b) + '</div></div>';
+
+    // ── Which may fit you better? (conditional, never "best") ───────────────
+    function fitHints(s, other) {
+      var h = [];
+      if (s.amountType === 'full' && other.amountType !== 'full') h.push('you need full funding (tuition + living + travel)');
+      if ((s.levels || []).indexOf('PhD') > -1 && (other.levels || []).indexOf('PhD') < 0) h.push('you are applying for a PhD or research degree');
+      if ((s.levels || []).indexOf('Master') > -1 && (other.levels || []).indexOf('Master') < 0) h.push('you are applying for a taught master’s');
+      var lc = { 'medium': 1, 'high': 2, 'Very High': 3, 'Extremely High': 4 };
+      if ((lc[s.competitionLevel] || 2) < (lc[other.competitionLevel] || 2)) h.push('you want a slightly less competitive route');
+      if (s.deadline && other.deadline && s.deadline < other.deadline) h.push('an earlier deadline suits your timeline');
+      if (!h.length) h.push('its eligibility rules match your nationality and background');
+      return h;
+    }
+    function fitBlock(s, other) {
+      return '<div style="flex:1;min-width:190px"><div style="font-weight:700;font-size:0.9rem;margin-bottom:4px">'
+        + s.name + ' may be more relevant if:</div><ul style="margin:0;padding-left:18px;font-size:0.84rem;color:var(--text-secondary)">'
+        + fitHints(s, other).map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul></div>';
+    }
+    html += '<div style="margin-top:16px;padding:18px 20px;background:var(--bg-white);border:1px solid var(--border);border-radius:12px">'
+      + '<div style="font-weight:800;font-size:1rem;margin-bottom:12px">Which may fit you better?</div>'
+      + '<div style="display:flex;gap:24px;flex-wrap:wrap">' + fitBlock(a, b) + fitBlock(b, a) + '</div>'
+      + '<div style="margin-top:10px;font-size:0.74rem;color:var(--text-muted)">General guidance based on the data above — it is not a personalised eligibility check. If you qualify for both, applying to both is usually worthwhile.</div></div>';
+
+    // ── Build your shortlist ───────────────────────────────────────────────
+    html += '<div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">'
+      + '<strong style="font-size:0.9rem">Build your shortlist:</strong>'
+      + '<a href="/scholarships" data-track="cmpschol_browse_all" class="btn btn-primary btn-sm">Browse all scholarships</a>'
+      + '<a href="/admissions" data-track="cmpschol_to_admissions" class="btn btn-ghost btn-sm">Check university deadlines</a></div>';
+
     document.getElementById('compare-output').innerHTML = html;
   }
 

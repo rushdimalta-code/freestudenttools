@@ -829,6 +829,7 @@
   const emptyEl = document.getElementById('compareEmpty');
   let activeLevel = 'all';
   let activeStream = '';
+  const _colTotals = {}; // monthly cost-of-living totals per uni id, filled by costOfLivingRows() (rec #6)
 
   // ── Populate dropdowns ─────────────────────────────────────────────────────
   function populateDropdowns() {
@@ -1320,6 +1321,7 @@
       ? `<div style="font-size:0.74rem;color:var(--text-muted);margin-top:6px;line-height:1.5">${fallbackLabel} <a href="https://www.numbeo.com/cost-of-living/country_result.jsp?country=${encodeURIComponent(country)}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Verify on Numbeo ↗</a></div>`
       : `<div style="font-size:0.74rem;color:var(--text-muted);margin-top:6px;line-height:1.5">${notes ? notes + ' ' : ''}${source ? `<a href="${source}" target="_blank" rel="noopener noreferrer" style="color:var(--primary)">Source ↗</a>` : ''}</div>`;
 
+    _colTotals[id] = { min: totalMin, max: totalMax, cur };
     return `<div style="min-width:200px">${rows}${totalRow}${disclaimer}</div>`;
   }
 
@@ -2102,6 +2104,58 @@
           Copy comparison link
         </button>
       </div>
+
+      ${(function () {
+        // ── Estimated total annual cost (rec #6) ──────────────────────────────
+        function annual(id, tuition) {
+          const t = _colTotals[id];
+          const livingMid = t ? Math.round((t.min + t.max) / 2 * 12) : null;
+          const cur = t ? t.cur : 'USD';
+          const usd = (cur === 'USD');
+          return { livingMid, cur, usd, tuition: tuition > 0 ? tuition : null,
+                   total: (usd && livingMid != null && tuition > 0) ? livingMid + tuition : null };
+        }
+        const cA = annual(idA, minTuitionA), cB = annual(idB, minTuitionB);
+        function cell(u, c) {
+          const rows = [];
+          rows.push(`<div style="font-size:0.8rem;color:var(--text-secondary)">Tuition (from) <strong style="color:var(--text-primary)">${c.tuition ? '$' + c.tuition.toLocaleString() : '—'}</strong></div>`);
+          rows.push(`<div style="font-size:0.8rem;color:var(--text-secondary)">Living (est.) <strong style="color:var(--text-primary)">${c.livingMid != null ? fmtCurrency(c.livingMid, c.cur) : '—'}${c.livingMid != null && !c.usd ? ` <span style="font-weight:400">(${c.cur})</span>` : ''}</strong></div>`);
+          rows.push(`<div style="font-size:1.05rem;font-weight:800;color:var(--primary);margin-top:6px">${c.total != null ? '≈ $' + c.total.toLocaleString() + '/yr' : 'Partial data'}</div>`);
+          return `<div style="flex:1;min-width:180px"><div style="font-weight:700;font-size:0.9rem;margin-bottom:6px">${u.name}</div>${rows.join('')}</div>`;
+        }
+        let diff = '';
+        if (cA.total != null && cB.total != null) {
+          const d = Math.abs(cA.total - cB.total);
+          const cheaper = cA.total < cB.total ? uA.name : uB.name;
+          diff = `<div style="margin-top:12px;font-size:0.85rem;color:var(--text-secondary)"><strong style="color:#047857">${cheaper}</strong> is about <strong>$${d.toLocaleString()}/year</strong> lower on this estimate.</div>`;
+        }
+        // ── Where each stands out (neutral, no "winner") ──────────────────────
+        function standout(name, self, other, otherName) {
+          const pts = [];
+          if (self.tuition != null && other.tuition != null && self.tuition < other.tuition) pts.push('Lower tuition');
+          if (self.usd && other.usd && self.livingMid != null && other.livingMid != null && self.livingMid < other.livingMid) pts.push('Lower estimated living cost');
+          if (!pts.length) pts.push(`Broadly comparable to ${otherName} on cost`);
+          return `<div style="flex:1;min-width:180px"><div style="font-weight:700;font-size:0.9rem;margin-bottom:4px">${name}</div><ul style="margin:0;padding-left:18px;font-size:0.84rem;color:var(--text-secondary)">${pts.map(p => `<li>${p}</li>`).join('')}</ul></div>`;
+        }
+        return `
+      <div style="margin-top:20px;padding:18px 20px;background:var(--bg-white);border:1.5px solid var(--border);border-radius:var(--radius-lg)">
+        <div style="font-weight:800;font-size:1rem;margin-bottom:12px">Estimated total annual cost</div>
+        <div style="display:flex;gap:24px;flex-wrap:wrap">${cell(uA, cA)}${cell(uB, cB)}</div>
+        ${diff}
+        <div style="margin-top:10px;font-size:0.74rem;color:var(--text-muted)">Tuition = lowest listed for the selected level. Living = midpoint of the monthly estimate above &times; 12. Combined total shown only when both are in USD. Planning estimate only.</div>
+      </div>
+      <div style="margin-top:16px;padding:18px 20px;background:var(--bg-white);border:1.5px solid var(--border);border-radius:var(--radius-lg)">
+        <div style="font-weight:800;font-size:1rem;margin-bottom:12px">Where each university stands out</div>
+        <div style="display:flex;gap:24px;flex-wrap:wrap">${standout(uA.name, cA, cB, uB.name)}${standout(uB.name, cB, cA, uA.name)}</div>
+        <div style="margin-top:10px;font-size:0.74rem;color:var(--text-muted)">Based only on the data shown here. This tool does not pick a winner — visit each university for the full picture.</div>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+        ${uA.website ? `<a href="${uA.website}" target="_blank" rel="noopener noreferrer" data-track="compare_explore_uni" class="btn btn-secondary btn-sm">Explore ${uA.name} ↗</a>` : ''}
+        ${uB.website ? `<a href="${uB.website}" target="_blank" rel="noopener noreferrer" data-track="compare_explore_uni" class="btn btn-secondary btn-sm">Explore ${uB.name} ↗</a>` : ''}
+        <a href="/admissions" data-track="compare_to_admissions" class="btn btn-ghost btn-sm">Check admission deadlines</a>
+        <a href="/scholarships" data-track="compare_to_scholarships" class="btn btn-ghost btn-sm">Find scholarships</a>
+      </div>`;
+      })()}
     `;
 
     resultsEl.innerHTML = html;
