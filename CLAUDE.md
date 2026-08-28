@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-28 (rev 22)_
+_Last updated: 2026-08-28 (rev 23)_
 
 ---
 
@@ -714,7 +714,7 @@ Second, tighter spec ("improve coherence, don't rebuild visual identity"). Shipp
 
 ---
 
-## Strategy pivot + Phase 0 build step (rev 22, 2026-08-28)
+## Strategy pivot + Phase 0 build step (rev 22–23, 2026-08-28)
 
 After shipping the recommendations batch, stepped back to "what actually improves this site's success." The answer is **not more architecture** — it's content quality. Two facts: AdSense rejected the site "low value content" (Jul 2026), and GSC shows 227/322 pages not indexed. Same story — Google thinks large parts of the site are thin. Ranked plan: (1) noindex the thin scholarship pages, (2) scale the blog (the proven SEO+GEO engine), (3) email deadline alerts as the one retention hook, (4) instrument the two high-intent funnels, (5) mobile UX of the data-heavy pages. Deprioritised: nav redesign, country hubs (#9 — bad timing to add thin pages), URL restructure (#14 — pure risk).
 
@@ -732,11 +732,19 @@ Incremental static templating so the nav/footer become one canonical partial (un
 - **Migrated so far (4/25 root pages):** `terms`, `privacy`, `contact`, `about`. Diffs = consistency fixes only (css/js → absolute paths, footer headings `<h2>/<h3>` → `<h4>`, missing "Scholarship Guide" footer link added, indentation).
 - **Remaining 21** are NOT uniform: ~4 on a divergent template (`cookies`/`404`/`contact-thanks`/`search` — different footer markup, stub navs), ~3 content pages with 185–213-line inline `<style>` (`tips`/`scholarship-guide`/`health-checks`), ~13 complex app/tool pages (`index`/`admissions`/`compare`×2/`scholarships`/`travel` + 7 tools — inline style + JS + ad slots + live tool JS, real regression risk). Each needs individual migration + browser check. Once all root pages are on `layout.njk`, swap `_nav.njk` for the redesigned nav — one file, applies everywhere.
 
+### #5 — Mobile UX of data-heavy pages (SHIPPED, `49e6949`)
+- `admissions.html`: on ≤768px the filter sidebar collapses behind a "Filter universities" toggle (active-count badge, fires `admissions_filter`) so results show immediately. Logic in `admissions.js`.
+- `compare.html` + `compare-scholarships.html`: on mobile the row-label column is `position:sticky; left:0` so context stays visible while scrolling comparison columns, plus a "← Scroll to compare →" hint.
+- Still wants a real-device spot check.
+
+### #2 — 4 new blog guides (SHIPPED, `33d7c1f`)
+Blog **48 → 52 posts**. Targeting confirmed search-demand gaps: `how-to-email-a-professor-phd-position`, `proof-of-funds-student-visa`, `scholarship-rejected-how-to-reapply`, `motivation-letter-vs-scholarship-essay-vs-sop`. Each ~1,500–1,900-word article, Article + FAQPage (4 Q&A) + BreadcrumbList schema, ≥3 question H2s, kie.ai hero (<130 KB), sidebar quick-ref + TOC, inline tool CTA, "what should you do next?" block. Wired into `blog/index.html` (Application Strategy section), `sitemap.xml`, `llms.txt`; guide count updated in `data/site-stats.js`, homepage `data-stat`, `404.html`, `SITE-FACTS.md`. **`how-to-email-a-professor-phd-position-hero.jpg` is a placeholder** — kie.ai failed 4× on that concept; regenerate when convenient.
+
 ### Still to do (ranked)
-- **#2 scale the blog** — 48 → 80–100 genuinely useful guides on real search demand. Highest-ROI growth play (ChatGPT already cites the blog — GEO working). Ongoing CCO content work.
-- **#3 email deadline alerts** — the one retention hook. Needs backend: Netlify scheduled function + email provider querying `scholarships_data.js` / `universities.js` deadlines. Not yet built (infra decision required).
-- **#5 mobile UX** — filter UX on `admissions`, comparison tables on `compare`/`compare-scholarships`. Needs real device testing + targeted CSS.
-- Finish the Phase 0 migration (21 pages) then the nav redesign.
+- **Keep scaling the blog** — 52 → 80–100. This is the growth lever. Next gaps worth covering: "how to email a professor" follow-ups (research proposal, funding-first countries), country-specific proof-of-funds deep dives, "waitlisted for a scholarship — what now".
+- **#3 email deadline alerts** — the one retention hook. Needs backend: Netlify scheduled function + email provider (Resend/SendGrid) querying `scholarships_data.js` / `universities.js` deadlines. Not built — infra decision required.
+- **Phase 0 migration** — parked at 4/25 root pages (terms/privacy/contact/about). Layout has `pageStyles`/`cssPreload`/`keywords`/`jsonldRaw` hooks now. The remaining pages need careful per-page `<head>`-fidelity migration (the `tips`/`scholarship-guide` auto-extraction attempt dropped og:title/og:type/keywords/@graph and was reverted). Only finish this if the nav redesign becomes a priority.
+- **#4 nav redesign** — after Phase 0 completes, swap `src/_includes/_nav.njk` for the STUDY ABROAD / PREPARE / TOOLS / TRAVEL / GUIDES structure.
 
 Every change this session re-ran `tools/full_site_audit.py` → **0 issues** throughout.
 
