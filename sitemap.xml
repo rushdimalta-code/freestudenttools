@@ -211,19 +211,7 @@
     <priority>0.8</priority>
   </url>
   <!-- Australia Awards Scholarships — Africa -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/australia_awards_africa</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Australia Awards Scholarships — Pacific -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/australia_awards_pacific</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Erasmus Mundus Joint Master Degrees (EMJM) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/erasmus_mundus</loc>
@@ -246,12 +234,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Belt and Road Scholarship (Chinese Government) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/csc_belt_road</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Global Korea Scholarship (GKS) — Graduate -->
   <url>
     <loc>https://freestudenttools.com/scholarship/gks_graduate</loc>
@@ -316,12 +298,6 @@
     <priority>0.8</priority>
   </url>
   <!-- VLIR-UOS Scholarship (Belgium) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/vlir_uos</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Italian Government Scholarship (MAECI) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/italian_gov_scholarship</loc>
@@ -330,19 +306,7 @@
     <priority>0.8</priority>
   </url>
   <!-- Polish National Agency for Academic Exchange (NAWA) Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/polish_nawa</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Czech Government Development Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/czech_gov_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- ICCR Scholarship (India) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/iccr_scholarship</loc>
@@ -351,12 +315,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Russian Government Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/russian_gov_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- King Abdullah Scholarship Program (Saudi Arabia) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/kasp_saudi</loc>
@@ -380,12 +338,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Ford Foundation International Fellowship Program -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/ford_foundation_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Rotary Peace Fellowship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/rotary_peace_fellowship</loc>
@@ -394,33 +346,9 @@
     <priority>0.8</priority>
   </url>
   <!-- Open Society Foundations Scholarships -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/open_society_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Heinrich Böll Foundation Scholarship (Germany) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/heinrich_boll</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Friedrich Ebert Foundation Scholarship (Germany) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/friedrich_ebert</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Konrad Adenauer Foundation Scholarship (Germany) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/konrad_adenauer</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Knight-Hennessy Scholars Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/stanford_knight_hennessy</loc>
@@ -471,41 +399,11 @@
     <priority>0.8</priority>
   </url>
   <!-- Malaysian Government Scholarship (MSD Scholarship) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/malaysia_msd</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Singapore International Graduate Award (SINGA) -->
   <!-- Thailand Government Scholarship (ODOS) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/thailand_gov</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NRF-DSI Innovation Doctoral Scholarship (South Africa) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/nrf_south_africa</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- African Development Bank (AfDB) Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/african_dev_bank</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Romanian Government Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/romania_gov</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Hubert H. Humphrey Fellowship Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/humphrey_fellowship</loc>
@@ -514,12 +412,6 @@
     <priority>0.8</priority>
   </url>
   <!-- World Bank Group JJ/WBGSP Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/wjwb_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NTU Research Scholarship (Singapore) -->
   <!-- KAIST Graduate Scholarship (Korea) -->
   <!-- Leiden University Excellence Scholarship (LExS) -->
@@ -536,52 +428,16 @@
     <priority>0.8</priority>
   </url>
   <!-- Norwegian Government Scholarship (Quota Scheme) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/norwegian_quota</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Asian Development Bank (ADB) Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/adb_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- OPEC Fund International Development Scholarship -->
   <!-- Chinese Provincial Government Scholarships (Various) -->
   <!-- Peking University International Scholarship -->
   <!-- Sciences Po Foundation Scholarship -->
   <!-- Egyptian Government Scholarship (Ministry of Higher Education) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/egyptmohe_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Arab Fund Scholarship Program -->
   <!-- HEC Overseas Scholarship (Pakistan) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/pakistan_hec</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- CONACYT Scholarships (Mexico) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/conacyt_mexico</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- CNPq Research Scholarships (Brazil) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/cnpq_brazil</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Orange Tulip Scholarship (Netherlands) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/orange_tulip</loc>
@@ -590,12 +446,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Joint Japan/World Bank Graduate Scholarship Program -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/joint_japan_wb</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- HEC Paris Scholarship Programs -->
   <!-- Harvard GSAS Merit Fellowship -->
   <!-- MIT Presidential Fellowship -->
@@ -641,138 +491,30 @@
   <!-- KTH Royal Institute of Technology Scholarship (Sweden) -->
   <!-- Nordic Scholarships for Studies in the Baltic States and Russia -->
   <!-- Finland Government Scholarship Pool -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/finland_gov_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Danish Government Scholarships (State Educational Support) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/denmark_gov_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- East African Community Scholarship Program -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/kenyatta_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- African Union Commission Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/au_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Mwalimu Julius Nyerere African Union Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/mwalimu_nyerere</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Rwanda Government Scholarship (Presidential Scholars) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/great_minds_rwanda</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Ghana Scholarship Secretariat Award -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/ghana_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Moroccan Government Scholarship (AMCI) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/morocco_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Senegalese Government Scholarship (ENSETP/UCAD) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/senegal_gov</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- CARICOM Scholarship and Advanced Training Programme -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/caricom_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- University of the West Indies Scholarship -->
   <!-- OAS Academic Scholarship Program -->
   <!-- LASPAU Academic and Professional Programs Scholarship -->
   <!-- FAPESP São Paulo Research Scholarship (Brazil) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/fapesp_brazil</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Minciencias Scholarship (Colombia) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/colciencias_colombia</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- PRONABEC Scholarship (Peru — Beca Presidente de la República) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/pronabec_peru</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- ANID Scholarship (Chile — Becas Chile) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/conicyt_chile</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- CONICET Doctoral Fellowship (Argentina) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/argentina_conicet</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- AMIDEAST Education Abroad Scholarship -->
   <!-- USAID Development Leadership Initiative Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/usaid_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- British Council Arts Grants and Partnerships -->
   <!-- CalArts Scholarship (California Institute of the Arts) -->
   <!-- RICS Foundation Scholarship -->
   <!-- WHO Public Health Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/who_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- UNDP Academic Scholarship Program -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/undp_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- FAO/Italy Scholarships Programme -->
   <!-- WMO Fellowship Programme (Climate & Meteorology) -->
   <!-- NCAA Athletic Scholarship (US College Sports) -->
@@ -789,150 +531,30 @@
   <!-- Camões Institute Scholarship (Portugal) -->
   <!-- Spanish Government Scholarship (MAEC-AECID) -->
   <!-- Fundación Carolina Scholarship (Spain—Latin America) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/fundacion_carolina</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Greek State Scholarship Foundation (IKY) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/greek_gov_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Guangdong Government Scholarship (China) -->
   <!-- MRC Doctoral Training Partnership (UK) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/medical_research_council</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- BBSRC Doctoral Training Partnership (UK Biosciences) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/bbsrc_dtp</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- EPSRC Doctoral Training Partnership (UK Engineering) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/epsrc_dtp</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Imperial College London President's Undergraduate Scholarship -->
   <!-- Newton-Bhabha Fund (UK-India) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/newton_bhabha</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Israeli Government Excellence Scholarship (Masar) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/israel_gov_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- IsDB Scholarship Programme (Islamic Development Bank) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/islamic_dev_bank</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- GREAT Scholarship (UK) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/uk_great_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Australia-ASEAN Councils Scholarships -->
   <!-- Canada-Commonwealth Scholarship Plan -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/canada_commonwealth</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Korea-ASEAN Scholarship (NIIED) -->
   <!-- China-ASEAN Scholarship -->
   <!-- INSEAD MBA Scholarships -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/insead_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- London Business School MBA Scholarships -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/lbs_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Wharton MBA Fellowships (University of Pennsylvania) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/wharton_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Kellogg School of Management Scholarship (Northwestern) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/kellogg_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Google Generation Scholarship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/google_generation_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Microsoft Research PhD Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/microsoft_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Meta Research PhD Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/meta_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Qualcomm Innovation Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/qualcomm_innovation_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Apple Scholars in AI/ML PhD Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/apple_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- J.P. Morgan Scholarships -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/jpmorgan_scholarship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Inlaks Shivdasani Scholarship (India) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/inlaks_scholarship</loc>
@@ -941,12 +563,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Forté Fellowship (Women in Business) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/forte_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Aligarh Muslim University International Scholarships (India) -->
   <!-- Erasmus+ International Credit Mobility -->
   <url>
@@ -956,12 +572,6 @@
     <priority>0.8</priority>
   </url>
   <!-- Endeavour Leadership Program (Australia) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/endeavour_australia</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- UK University Early Application Tuition Discounts -->
   <!-- US University Early Decision / Priority Scholarship -->
   <!-- Gates Millennium Scholars Program -->
@@ -993,84 +603,18 @@
     <priority>0.8</priority>
   </url>
   <!-- CERN Doctoral Student Programme -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/cern_doctoral</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- ESA Research Fellowship Programme (European Space Agency) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/esa_research_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- MIT MISTI Global Teaching Labs (Fellowship) -->
   <!-- MSCA Doctoral Networks (Horizon Europe) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/horizon_msca_dn</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- ESRC Doctoral Training Partnership (UK Social Sciences) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/esrc_dtp</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- AHRC Doctoral Training Partnership (UK Arts & Humanities) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/ahrc_dtp</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Wellcome Trust PhD Studentship -->
   <!-- L'Oréal–UNESCO For Women in Science Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/loreal_women_science</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Google PhD Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/google_phd_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Amazon PhD Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/amazon_phd_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Hertz Foundation Fellowship (USA) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/hertz_foundation</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- DOE Computational Science Graduate Fellowship (USA) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/doe_csgf</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NIH F31 Ruth L. Kirschstein Predoctoral Fellowship (USA) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/nih_f31</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- LPDP Scholarship (Indonesia) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/lpdp_indonesia</loc>
@@ -1079,41 +623,11 @@
     <priority>0.8</priority>
   </url>
   <!-- Thailand Government Scholarship (Science & Technology) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/thailand_odos</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Philippines CHED Faculty Development Scholarship -->
   <!-- Vietnamese Government Scholarship (VIED) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/vietnam_vied</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Mandela Washington Fellowship for Young African Leaders -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/yali_mandela_washington</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- AAUW American Fellowship (Women — USA) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/aauw_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- AAUW International Fellowship (Women Globally — Study in USA) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/aauw_intl_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Cambridge Trust Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/cambridge_trust</loc>
@@ -1126,19 +640,7 @@
   <!-- Nieman Fellowship in Journalism (Harvard) -->
   <!-- RIBA Research Trust Award (Architecture) -->
   <!-- IAEA Marie Sklodowska-Curie Fellowship Programme (Nuclear Science — Women) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/iaea_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- EMBO Postdoctoral Fellowship (European Molecular Biology) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/embo_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Lund University Global Scholarship (Sweden) -->
   <!-- Utrecht Excellence Scholarship (Netherlands) -->
   <!-- ETH Zurich Excellence Scholarship (ESOP) -->
@@ -1148,64 +650,16 @@
   <!-- University of Oslo International Scholarship (Norway) -->
   <!-- UQ Graduate School Scholarship (Australia) -->
   <!-- Saltire Scholarship (Scotland) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/saltire_scotland</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Camões Institute Scholarship (Portugal) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/portuguese_camoes</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Spanish Government Scholarship (MAEC-AECID) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/aecid_spain</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- Greek State Scholarship Foundation Award (IKY) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/iky_greece</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NATO Science for Peace Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/nato_science</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- WMO Fellowship Programme (Climate & Meteorology) -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/wmo_climate</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- FAO/Italy Scholarships Programme -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/fao_italy_masters</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
   <!-- NCAA Athletic Scholarship (US College Sports) -->
   <!-- Aurora Scholarship Programme (Arctic Research — Norway) -->
   <!-- Oxford-Reuben Graduate Scholarship -->
   <!-- Adobe Research Fellowship -->
-  <url>
-    <loc>https://freestudenttools.com/scholarship/adobe_research_fellowship</loc>
-    <lastmod>2026-08-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <!-- Blog index -->
   <url>

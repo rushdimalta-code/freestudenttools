@@ -29,42 +29,28 @@ ASSET_VERSION = "20260829"
 # third-party listing, so those pages only dilute the site's quality signal
 # and waste crawl budget. They stay live and in the finder — just out of the
 # index and the sitemap.
+# Only scholarships with genuine standalone brand / search demand get their own
+# indexed page + sitemap entry. The other ~190 stay live and crawlable
+# (noindex, follow) via the A-Z index on scholarships.html, but are kept out of
+# the index and sitemap so a wall of near-identical templated pages doesn't
+# suppress crawling of the blog + tools. Heuristic marquee list — refine against
+# GSC "Pages" impression data when available.
 KEEP_INDEXED = frozenset({
-    'aauw_fellowship', 'aauw_intl_fellowship', 'adb_scholarship', 'adobe_research_fellowship',
-    'aecid_spain', 'african_dev_bank', 'aga_khan_scholarship', 'ahrc_dtp',
-    'amazon_phd_fellowship', 'apple_scholarship', 'argentina_conicet', 'au_scholarship',
-    'australia_awards_africa', 'australia_awards_pacific', 'austrian_oead', 'banting_postdoc',
-    'bbsrc_dtp', 'cambridge_international_scholarship', 'cambridge_trust', 'canada_commonwealth',
-    'caricom_scholarship', 'cern_doctoral', 'chevening', 'chinese_gov_scholarship_a',
-    'cnpq_brazil', 'colciencias_colombia', 'commonwealth_scholarship', 'conacyt_mexico',
-    'conicyt_chile', 'csc_belt_road', 'czech_gov_scholarship', 'daad_doctoral',
-    'daad_helmut_schmidt', 'daad_research_grants', 'daad_study_scholarship', 'denmark_gov_scholarship',
-    'doe_csgf', 'egyptmohe_scholarship', 'eiffel_excellence', 'embo_fellowship',
-    'endeavour_australia', 'epsrc_dtp', 'erasmus_mundus', 'erasmus_plus',
-    'esa_research_fellowship', 'esrc_dtp', 'fao_italy_masters', 'fapesp_brazil',
-    'finland_gov_scholarship', 'ford_foundation_fellowship', 'forte_fellowship', 'friedrich_ebert',
-    'fulbright_foreign', 'fundacion_carolina', 'gates_cambridge', 'gates_millennium_scholars',
-    'ghana_scholarship', 'gks_graduate', 'gks_undergraduate', 'google_generation_scholarship',
-    'google_phd_fellowship', 'great_minds_rwanda', 'greek_gov_scholarship', 'heinrich_boll',
-    'hertz_foundation', 'holland_scholarship', 'horizon_msca_dn', 'humphrey_fellowship',
-    'iaea_fellowship', 'iccr_scholarship', 'iky_greece', 'inlaks_scholarship',
-    'insead_scholarship', 'ireland_govt_scholarship', 'islamic_dev_bank', 'israel_gov_scholarship',
-    'italian_gov_scholarship', 'jack_kent_cooke', 'joint_japan_wb', 'jpmorgan_scholarship',
-    'kasp_saudi', 'kellogg_scholarship', 'kenyatta_scholarship', 'konrad_adenauer',
-    'lbs_scholarship', 'loreal_women_science', 'lpdp_indonesia', 'malaysia_msd',
-    'marie_curie', 'marshall_scholarship', 'mastercard_foundation_scholars', 'medical_research_council',
-    'meta_fellowship', 'mext_research', 'mext_undergraduate', 'microsoft_scholarship',
-    'morocco_scholarship', 'mwalimu_nyerere', 'nato_science', 'new_zealand_gov',
-    'newton_bhabha', 'nih_f31', 'norwegian_quota', 'nrf_south_africa',
-    'nsf_graduate_fellowship', 'open_society_fellowship', 'orange_tulip', 'oxford_clarendon',
-    'oxford_weidenfeld', 'pakistan_hec', 'polish_nawa', 'portuguese_camoes',
-    'pronabec_peru', 'qualcomm_innovation_fellowship', 'rhodes_scholarship', 'romania_gov',
-    'rotary_peace_fellowship', 'russian_gov_scholarship', 'saltire_scotland', 'senegal_gov',
-    'soros_fellowship', 'stanford_knight_hennessy', 'stipendium_hungaricum', 'swedish_institute',
-    'swiss_excellence', 'thailand_gov', 'thailand_odos', 'turkiye_burslari',
-    'uk_great_scholarship', 'undp_scholarship', 'usaid_scholarship', 'vanier_canada',
-    'vietnam_vied', 'vlir_uos', 'wharton_fellowship', 'who_scholarship',
-    'wjwb_scholarship', 'wmo_climate', 'yali_mandela_washington',
+    # Top global brand-name programmes
+    'chevening', 'fulbright_foreign', 'gates_cambridge', 'rhodes_scholarship',
+    'marshall_scholarship', 'commonwealth_scholarship', 'erasmus_mundus', 'erasmus_plus',
+    'daad_study_scholarship', 'daad_research_grants', 'daad_doctoral', 'daad_helmut_schmidt',
+    'mext_research', 'mext_undergraduate', 'gks_graduate', 'gks_undergraduate',
+    'turkiye_burslari', 'stanford_knight_hennessy', 'oxford_clarendon', 'oxford_weidenfeld',
+    'eiffel_excellence', 'swedish_institute', 'holland_scholarship', 'orange_tulip',
+    'stipendium_hungaricum', 'mastercard_foundation_scholars', 'aga_khan_scholarship',
+    'inlaks_scholarship', 'iccr_scholarship', 'vanier_canada', 'banting_postdoc',
+    'nsf_graduate_fellowship', 'soros_fellowship', 'rotary_peace_fellowship',
+    'cambridge_trust', 'cambridge_international_scholarship', 'gates_millennium_scholars',
+    'jack_kent_cooke', 'humphrey_fellowship', 'marie_curie',
+    # High-volume national / government programmes
+    'chinese_gov_scholarship_a', 'swiss_excellence', 'austrian_oead', 'italian_gov_scholarship',
+    'ireland_govt_scholarship', 'lpdp_indonesia', 'kasp_saudi', 'new_zealand_gov',
 })
 
 
