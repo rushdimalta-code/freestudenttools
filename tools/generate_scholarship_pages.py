@@ -767,6 +767,46 @@ def update_scholarship_index(root, scholarships):
     print(f"scholarships.html — static A–Z index refreshed ({len(items)} links)")
 
 
+def _read_lastupdated(path):
+    """Pull the "lastUpdated": "YYYY-MM-DD" value out of a data/*.js file."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            raw = f.read()
+    except OSError:
+        return None
+    m = re.search(r'"lastUpdated"\s*:\s*"([0-9-]+)"', raw)
+    return m.group(1) if m else None
+
+
+def stamp_last_updated(root, scholarships_lu, universities_lu):
+    """Write the real data-file lastUpdated date into the static
+    <strong id="lastUpdated"> fallback on scholarships.html / admissions.html.
+
+    JS overwrites this span on load, but crawlers, no-JS clients and the initial
+    paint all see whatever is hard-coded here — so a stale value (it was frozen
+    at 2026-04-12) makes the two flagship pages look abandoned. Stamp it daily
+    from the same source the JS uses."""
+    for fname, lu in (("scholarships.html", scholarships_lu),
+                      ("admissions.html", universities_lu)):
+        if not lu:
+            continue
+        path = os.path.join(root, fname)
+        if not os.path.exists(path):
+            continue
+        with open(path, "r", encoding="utf-8") as f:
+            page = f.read()
+        new = re.sub(
+            r'(<strong id="lastUpdated">)[^<]*(</strong>)',
+            lambda m: m.group(1) + lu + m.group(2),
+            page,
+            count=1,
+        )
+        if new != page:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(new)
+            print(f"{fname} — lastUpdated stamped {lu}")
+
+
 def prune_sitemap_noindex(root, scholarships):
     """Remove <url> blocks for noindexed (single-university) scholarship pages.
     A noindex page must not appear in the sitemap."""
@@ -823,6 +863,11 @@ def main():
     update_sitemap(root, scholarships)
     prune_sitemap_noindex(root, scholarships)
     update_scholarship_index(root, scholarships)
+    stamp_last_updated(
+        root,
+        data.get("lastUpdated"),
+        _read_lastupdated(os.path.join(root, "data", "universities.js")),
+    )
 
 
 if __name__ == "__main__":

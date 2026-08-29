@@ -44,7 +44,7 @@ jobs:
           git config --local user.email "bot@freestudenttools.com"
           git config --local user.name "FreeStudentTools Data Bot"
           git add data/universities.js data/scholarships_data.js data/universities_all.js \
-                  scholarship/ sitemap.xml
+                  scholarship/ sitemap.xml scholarships.html admissions.html
           git diff --staged --quiet && echo "No changes today — skipping commit" || \
             git commit -m "chore: daily site refresh $(date -u +%Y-%m-%d)" && \
             git push origin main
