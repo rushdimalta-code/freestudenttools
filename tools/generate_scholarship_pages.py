@@ -613,6 +613,7 @@ def generate_page(s, all_scholarships):
         <div class="sch-info-row"><span class="sch-info-label">Deadline</span><span class="sch-info-value">{fmt_date(s.get('deadline'))}</span></div>
         <div class="sch-info-row"><span class="sch-info-label">Competition</span><span class="sch-info-value">{H.escape(s.get('competitionLevel') or 'High')}</span></div>
         {competition_bar_html(s.get('competitionLevel') or 'High')}
+        <p style="font-size:.72rem;color:#64748B;margin:6px 0 0;line-height:1.45">Reflects acceptance rate vs. applications received, from published data where available. <a href="/compare-scholarships.html#competition" style="color:#1D4ED8">How we rate this</a></p>
       </div>
 
       <div class="sch-sidebar-card">
