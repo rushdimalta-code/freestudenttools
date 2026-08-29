@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-28 (rev 24)_
+_Last updated: 2026-08-29 (rev 25)_
 
 ---
 
@@ -774,6 +774,23 @@ GA4 only auto-filters the IAB spider list; cloud-datacenter scrapers get through
 - **Manual Request Indexing** for top ~25 pages in GSC.
 - **AdSense reapplication** — explicitly on hold pending traffic growth.
 - Keep scaling the blog (52 → 80–100) — still the passive growth engine, continue when convenient.
+
+---
+
+## Stat consistency + honest ad wording (rev 25, 2026-08-29, `8fdf6f8`)
+
+External review (Gemini, two passes) flagged number inconsistencies. Verified every cited figure against the code — most claims were stale/hallucinated ("246+ scholarships" exists nowhere; admissions page does NOT say "1,500 universities"), but three real drift bugs found and fixed:
+- `index.html` hero strip: **"9 Free Tools" → 7**, **"48 Student Guides" → 52** (both hardcoded `data-target`; now match `data/site-stats.js`, which is the single source of truth — `tools:7`, `guides:52`).
+- `compare.html`: **"1,040+" universities → "1,000+"** (×2 — visible hero stat + intro line; contradicted its own meta/FAQ. `universities_all.js` header says "Contains 1000 universities", 1000 entries confirmed).
+- `tips.html`: **"1,500+ universities tracked" → "1,000+"**.
+- `admissions.html` was already correct and well-worded (27 detailed / 1,000+ discovery, all `data-stat`-driven).
+- **Still not fully centralised:** the `index.html` / `compare.html` hero count-up stats use hardcoded `data-target` (drives the IntersectionObserver animation), not `data-stat`. Fixed the literals to match `site-stats.js`; wiring the animation to `site-stats.js` is a deferred nicety, not done.
+
+**About page ad wording (`about.html`) — removed false claims.** Was: *"Google AdSense serves display ads on the site"* and *"The site runs on display advertising."* Both untrue — AdSense is **not approved** (rejected Jul 2026), ad slots are placeholders, nothing serves. Now: *"We plan to fund the site with display advertising. No ads are running yet."* + *"No subscriptions, no premium tiers, no paywalls — ever… None is running yet."* **Kept** `<meta name="google-adsense-account" content="…">` on all pages — that's the site-ownership verification hook for a future application, not a user-facing claim. The site-wide cookie-banner line ("serve relevant ads") left as-is — forward-looking consent language, and changing it touches 300+ files.
+
+**Competition rating methodology.** The 239 generated scholarship pages showed "Competition: Very High" + a bar with no basis. Added a one-line caption under the bar (generator): *"Reflects acceptance rate vs. applications received, from published data where available"* + link to `/compare-scholarships.html#competition` (that page already carries a full methodology paragraph; added the `id` anchor).
+
+**Owner decision unchanged:** not reapplying to AdSense until traffic is materially higher. These were accuracy/trust fixes worth doing on their own merit, not AdSense prep.
 
 ---
 
