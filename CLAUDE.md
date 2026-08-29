@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-29 (rev 25)_
+_Last updated: 2026-08-29 (rev 26)_
 
 ---
 
@@ -791,6 +791,26 @@ External review (Gemini, two passes) flagged number inconsistencies. Verified ev
 **Competition rating methodology.** The 239 generated scholarship pages showed "Competition: Very High" + a bar with no basis. Added a one-line caption under the bar (generator): *"Reflects acceptance rate vs. applications received, from published data where available"* + link to `/compare-scholarships.html#competition` (that page already carries a full methodology paragraph; added the `id` anchor).
 
 **Owner decision unchanged:** not reapplying to AdSense until traffic is materially higher. These were accuracy/trust fixes worth doing on their own merit, not AdSense prep.
+
+---
+
+## Data-freshness reality check + honest copy (rev 26, 2026-08-29, `aa0c30f`)
+
+Live-site review raised: does the daily job actually verify deadlines against official sources, as the copy claims? **Investigated the automation directly — it does not.**
+
+**What `tools/update_university_data.py` (GitHub Action, 06:00 UTC daily) actually does:**
+- `universities.js`: **only bumps `lastUpdated`.** No bot commit in the entire git history has ever changed a university deadline/status/housing field.
+- `scholarships_data.js`: **only recalculates `status`** (open/closing_soon/closed) via `compute_status()` — pure local date math, no network.
+- The scraper *scaffolding* exists (URL lists for ~20 unis + ~10 scholarships, `fetch()`, `extract_dates()`) but: universities have **no registered parser** (hits the "just note we checked" branch, writes nothing); the scholarship `extract_dates()` heuristic has changed a real `deadline` **once, ever** (`5d9e3b8`). The list is hand-curated with an explicit `[PROTECTED]` guard ("bot must not overwrite it").
+- `universities_all.js` (1,000-uni discovery index) refreshes from Hipolabs API **Mondays only** — names/countries, not deadlines.
+
+**So the requirement was half-built:** daily status recalculation + page regen works; automated official-source verification was never finished.
+
+**Fixed the copy to match reality** (`admissions.html` ×3, `scholarships.html` ×2): "checks official university admissions pages daily and updates deadlines, statuses, and housing automatically" / "verified against official university websites and updated daily" → "compiled from official sources and reviewed regularly; application statuses are recalculated daily." Hero stat pill "Daily / Updates" → "Daily / Status Sync". Dropped an unbacked "within 24 hours" correction promise.
+
+**Stale `Last updated: 2026-04-12`:** was hard-coded in both pages' `<strong id="lastUpdated">`. JS (`scholarships.js` / `admissions.js`) overwrites it from the data file's `lastUpdated` for JS users, but crawlers / no-JS / initial paint saw April — on the two pages whose whole value is "current deadlines". `generate_scholarship_pages.py` now has `stamp_last_updated()` — rewrites that span from `scholarships_data.js` / `universities.js` `lastUpdated` on every daily run. `update-data.yml` `git add` now includes `scholarships.html admissions.html` (previously the bot's A-Z index regen wasn't committed either — same gap, now closed).
+
+**Deferred (owner: option C):** real automated deadline verification = its own scoped project. If pursued, prefer AI-assisted **quarterly** re-verification over daily scraping — 27 universities' deadlines move ~once a year, and daily scraping has real layout-drift / bot-blocking maintenance cost. Code already references `OPENAI_API_KEY` for an `ai_parse` path that was never wired up.
 
 ---
 
