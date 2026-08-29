@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-29 (rev 26)_
+_Last updated: 2026-08-29 (rev 27)_
 
 ---
 
@@ -811,6 +811,20 @@ Live-site review raised: does the daily job actually verify deadlines against of
 **Stale `Last updated: 2026-04-12`:** was hard-coded in both pages' `<strong id="lastUpdated">`. JS (`scholarships.js` / `admissions.js`) overwrites it from the data file's `lastUpdated` for JS users, but crawlers / no-JS / initial paint saw April — on the two pages whose whole value is "current deadlines". `generate_scholarship_pages.py` now has `stamp_last_updated()` — rewrites that span from `scholarships_data.js` / `universities.js` `lastUpdated` on every daily run. `update-data.yml` `git add` now includes `scholarships.html admissions.html` (previously the bot's A-Z index regen wasn't committed either — same gap, now closed).
 
 **Deferred (owner: option C):** real automated deadline verification = its own scoped project. If pursued, prefer AI-assisted **quarterly** re-verification over daily scraping — 27 universities' deadlines move ~once a year, and daily scraping has real layout-drift / bot-blocking maintenance cost. Code already references `OPENAI_API_KEY` for an `ai_parse` path that was never wired up.
+
+---
+
+## External data-verification service (rev 27, 2026-08-29)
+
+New sibling repo **`rushdimalta-code/fst-data-updater`** (private) + Railway project `fst-data-updater` — the "actually verify against official sources" job that the in-repo `update_university_data.py` never became.
+
+**Flow:** weekly cron (Mon 07:00 UTC) → Playwright renders each scholarship/university official page → Gemini Flash extracts deadline/funding/eligibility/status (must quote its source, returns null not a guess) → diff vs `data/scholarships_data.js` + `data/universities.js` → `status` changes auto-PR'd, everything else written to `state/pending_changes.json` + Telegram summary for human approval → `python main.py apply` opens a PR → Netlify deploys on merge.
+
+**Guardrails:** never rewrites the hand-curated list; surgical single-field edits by `id` (no reformat); null/low-relevance extractions are ignored; discovery of *new* scholarships is a disabled phase-2 stub that only ever writes `candidates.json`. The in-repo GitHub Action (`update-data.yml`) still runs and still only does status recalculation + page regen — the two coexist; the external service is what proposes real deadline/eligibility changes.
+
+**Status (2026-08-29):** Railway service deployed, Docker build from official Playwright image, `DRY_RUN=1`, non-secret vars set, deploy shows "Completed" (graceful no-op until secrets added). **Pending:** owner to set `GEMINI_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` in Railway vars; run once in dry-run; review; then add a fine-grained `GITHUB_TOKEN` (Contents+PRs rw on this repo) and flip `DRY_RUN=0`. 14 unit tests pass (diff + surgical-edit logic); full IO path not yet run end-to-end. See that repo's README.
+
+**FST-side follow-up:** add a per-university `admissionsUrl` to `universities.js` — the verifier currently checks `website` (homepage), which rarely shows deadlines.
 
 ---
 
