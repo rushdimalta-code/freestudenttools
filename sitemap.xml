@@ -20,14 +20,14 @@
   <!-- Student Hub — high-intent, frequently updated -->
   <url>
     <loc>https://freestudenttools.com/admissions</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://freestudenttools.com/scholarships</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
   </url>
@@ -129,84 +129,84 @@
   <!-- Fulbright Foreign Student Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/fulbright_foreign</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Chevening Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/chevening</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Commonwealth Scholarship and Fellowship Plan -->
   <url>
     <loc>https://freestudenttools.com/scholarship/commonwealth_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Gates Cambridge Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/gates_cambridge</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Rhodes Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/rhodes_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Marshall Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/marshall_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- DAAD Research Grants — Short-term -->
   <url>
     <loc>https://freestudenttools.com/scholarship/daad_research_grants</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- DAAD Doctoral Scholarships -->
   <url>
     <loc>https://freestudenttools.com/scholarship/daad_doctoral</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- DAAD Study Scholarships for Master's Programs -->
   <url>
     <loc>https://freestudenttools.com/scholarship/daad_study_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- DAAD Helmut Schmidt Programme -->
   <url>
     <loc>https://freestudenttools.com/scholarship/daad_helmut_schmidt</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- MEXT Japanese Government Scholarship — Research Student -->
   <url>
     <loc>https://freestudenttools.com/scholarship/mext_research</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- MEXT Japanese Government Scholarship — Undergraduate -->
   <url>
     <loc>https://freestudenttools.com/scholarship/mext_undergraduate</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -215,21 +215,21 @@
   <!-- Erasmus Mundus Joint Master Degrees (EMJM) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/erasmus_mundus</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Marie Skłodowska-Curie Actions Individual Fellowship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/marie_curie</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Chinese Government Scholarship — Type A (Full) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/chinese_gov_scholarship_a</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -237,63 +237,63 @@
   <!-- Global Korea Scholarship (GKS) — Graduate -->
   <url>
     <loc>https://freestudenttools.com/scholarship/gks_graduate</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Global Korea Scholarship (GKS) — Undergraduate -->
   <url>
     <loc>https://freestudenttools.com/scholarship/gks_undergraduate</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Türkiye Bursları Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/turkiye_burslari</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Stipendium Hungaricum Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/stipendium_hungaricum</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Swiss Government Excellence Scholarships -->
   <url>
     <loc>https://freestudenttools.com/scholarship/swiss_excellence</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Eiffel Excellence Scholarship Programme (France) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/eiffel_excellence</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Holland Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/holland_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Swedish Institute Scholarships for Global Professionals (SISGP) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/swedish_institute</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- OeAD Government Scholarship (Austria) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/austrian_oead</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -301,7 +301,7 @@
   <!-- Italian Government Scholarship (MAECI) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/italian_gov_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -310,7 +310,7 @@
   <!-- ICCR Scholarship (India) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/iccr_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -318,7 +318,7 @@
   <!-- King Abdullah Scholarship Program (Saudi Arabia) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/kasp_saudi</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -326,14 +326,14 @@
   <!-- Aga Khan Foundation International Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/aga_khan_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Mastercard Foundation Scholars Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/mastercard_foundation_scholars</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -341,7 +341,7 @@
   <!-- Rotary Peace Fellowship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/rotary_peace_fellowship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -352,21 +352,21 @@
   <!-- Knight-Hennessy Scholars Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/stanford_knight_hennessy</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Clarendon Fund Scholarships (Oxford) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/oxford_clarendon</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Weidenfeld-Hoffmann Scholarships (Oxford) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/oxford_weidenfeld</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -380,21 +380,21 @@
   <!-- Vanier Canada Graduate Scholarship (CGS) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/vanier_canada</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Banting Postdoctoral Fellowships (Canada) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/banting_postdoc</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- New Zealand Government Scholarships (NZAS) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/new_zealand_gov</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -407,7 +407,7 @@
   <!-- Hubert H. Humphrey Fellowship Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/humphrey_fellowship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -423,7 +423,7 @@
   <!-- Cambridge International Scholarship (CISS) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/cambridge_international_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -441,7 +441,7 @@
   <!-- Orange Tulip Scholarship (Netherlands) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/orange_tulip</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -524,7 +524,7 @@
   <!-- Government of Ireland International Education Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/ireland_govt_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -558,7 +558,7 @@
   <!-- Inlaks Shivdasani Scholarship (India) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/inlaks_scholarship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -567,7 +567,7 @@
   <!-- Erasmus+ International Credit Mobility -->
   <url>
     <loc>https://freestudenttools.com/scholarship/erasmus_plus</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -577,28 +577,28 @@
   <!-- Gates Millennium Scholars Program -->
   <url>
     <loc>https://freestudenttools.com/scholarship/gates_millennium_scholars</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Jack Kent Cooke Foundation Graduate Arts Award -->
   <url>
     <loc>https://freestudenttools.com/scholarship/jack_kent_cooke</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- NSF Graduate Research Fellowship Program (GRFP) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/nsf_graduate_fellowship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Paul & Daisy Soros Fellowships for New Americans -->
   <url>
     <loc>https://freestudenttools.com/scholarship/soros_fellowship</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -618,7 +618,7 @@
   <!-- LPDP Scholarship (Indonesia) -->
   <url>
     <loc>https://freestudenttools.com/scholarship/lpdp_indonesia</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -631,7 +631,7 @@
   <!-- Cambridge Trust Scholarship -->
   <url>
     <loc>https://freestudenttools.com/scholarship/cambridge_trust</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

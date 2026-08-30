@@ -1,5 +1,5 @@
 window.UNI_DATA = {
-  "lastUpdated": "2026-08-29",
+  "lastUpdated": "2026-08-30",
   "countries": [
     "Australia",
     "Canada",
