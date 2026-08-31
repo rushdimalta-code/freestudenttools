@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-30",
+  "lastUpdated": "2026-08-31",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -182,7 +182,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Only for U.S. citizens studying in the UK. Around 50 awards per year. Applications via U.S. college/university.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-01",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.marshallscholarship.org"
     },
@@ -589,7 +589,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Includes 1-year Korean language training before your degree begins. Two tracks: embassy recommendation and direct university application.",
       "deadline": "2026-09-30",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.studyinkorea.go.kr"
     },
@@ -619,7 +619,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Includes 1-year intensive Korean language course. Program lasts 5 years including language training.",
       "deadline": "2026-09-30",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.studyinkorea.go.kr"
     },
@@ -840,7 +840,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers both study and research scholarships. Programs vary by country of origin. Check bilateral agreements on the OeAD portal.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://oead.at"
     },
@@ -968,7 +968,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Applications made through Czech Embassies in your home country. Aimed at development cooperation partners.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.msmt.cz"
     },
@@ -1328,7 +1328,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Linked to the German Social Democratic Party values. International applicants must demonstrate German language proficiency.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.fes.de"
     },
@@ -2225,7 +2225,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "PhD positions in Belgium are employment contracts, not scholarships — PhD students receive a salary and social security. Contact faculty directly.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.ugent.be"
     },
@@ -2543,7 +2543,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Primarily for Arabic-speaking students or those from countries with bilateral agreements. Strong in medicine, engineering, and Arabic studies.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Low",
       "link": "https://mohesr.gov.eg"
     },
@@ -4146,7 +4146,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Finland offers tuition-free higher education for all — these grants support living costs for international researchers. Check EDUFI for current eligible countries.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.oph.fi"
     },
@@ -4367,7 +4367,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Morocco is a leading destination for African students. AMCI coordinates thousands of scholarships for African students annually.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Low",
       "link": "https://www.amci.ma"
     },
@@ -4398,7 +4398,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Senegal is a hub for Francophone African higher education. UCAD and ENSETP are the main institutions. Strong in law, social sciences, and medicine.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Low",
       "link": "https://www.mesri.gouv.sn"
     },
@@ -4940,7 +4940,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The tuition support+sport pursuit model. Apply through your national sports federation (Hockey Canada, Tennis Canada, etc.).",
       "deadline": "2026-09-30",
       "notificationDate": "2026-11-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.canada.ca/en/canadian-heritage/services/funding/athlete-assistance.html"
     },
@@ -5249,7 +5249,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The Newton Fund supports UK-India research partnerships. Multiple sub-programs for PhDs, postdocs, and institutions. Check British Council India for current calls.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.britishcouncil.in/programmes/higher-education/newton-bhabha"
     },
@@ -5318,7 +5318,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "IsDB covers 57 member countries across Africa, Asia, and the Middle East. One of the largest development-focused scholarship programs.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.isdb.org/scholarships"
     },
@@ -5871,7 +5871,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "AMU has a long tradition of educating international students from Muslim-majority countries. Islamic studies, medicine, engineering, and humanities are all available.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Low",
       "link": "https://www.amu.ac.in/international-students"
     },
@@ -6403,7 +6403,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Cannot apply directly — must be nominated by your university. Universities in North America, Europe, Asia, and Australia participate. Very high prestige in tech academia.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://research.google/outreach/phd-fellowship"
     },
@@ -6561,7 +6561,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "LPDP is Indonesia's most prestigious and largest scholarship fund — thousands of slots per year. Covers study in Indonesia and overseas. Very well-funded by Indonesia's education endowment.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.lpdp.kemenkeu.go.id"
     },
@@ -7103,7 +7103,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "KAIST is South Korea's top STEM university. Excellent research infrastructure. GKS scholarship through NIIED can supplement the base KAIST funding.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-15",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://admission.kaist.ac.kr"
     },
@@ -7533,7 +7533,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Cannot apply directly — nominated by faculty advisor. Includes a paid internship at Adobe Research in San Jose or Seattle. Research gift goes to the university, not the student.",
       "deadline": "2026-09-30",
       "notificationDate": "2026-12-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://research.adobe.com"
     }
