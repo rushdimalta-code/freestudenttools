@@ -825,7 +825,19 @@ New sibling repo **`rushdimalta-code/fst-data-updater`** (private) + Railway pro
 **Status (2026-08-29, end of day):** Fully deployed and validated end-to-end on Railway (project `fst-data-updater`, cron `0 7 * * 1`, Docker build off `mcr.microsoft.com/playwright/python`, persistent volume at `/app/state`). `GEMINI_API_KEY` set (interview-agent's `gemini-3.6-flash` key — skyplus's was invalid). **Telegram not used** — report goes to stdout / `state/last_report.md` / PR body. `DRY_RUN=1`, `MAX_ENTRIES=0`. 15 unit tests pass.
 - **Scope narrowed after first runs:** `deadline` + `notificationDate` = review-gated; `status` = auto; **eligibility/funding = FYI flag only, never a proposed edit** (Gemini was "summarising" precise funding lines like "Full tuition, living stipend, airfare…" down to "fully-funded scholarship" — would have degraded the data). Migrated to `google-genai` SDK; forced JSON mime; Chrome UA + `--disable-http2` for WAF/HTTP2-hostile gov sites.
 - **Real data bugs the tool already surfaced:** the 4 DAAD scholarship records (`daad_doctoral`, `daad_research_grants`, `daad_study_scholarship`, `daad_helmut_schmidt`) have `link` pointing at the DAAD database/overview page, not individual award pages; `australia_awards_africa` / `_pacific` links (`dfat.gov.au`) don't load at all; and several gov domains don't resolve (`ghanascholarships.gov.gh`, `mesri.gouv.sn`).
-- **Pending (owner):** review the first full dry-run's flags in `railway logs`; add `deadlineUrl` to scholarship records + `admissionsUrl` to universities (the verifier falls back to `link`/`website`, which are overview pages that don't show dates — this is why the first runs found 0 real deadline changes); then create a fine-grained `GITHUB_TOKEN` (Contents+PRs rw) and set `DRY_RUN=0`.
+- **University verification disabled** — `universities.js` records are a different shape (deadlines nested in `admissions[]`, no top-level `status`/`deadline`); the status rule was inventing `status:"upcoming"` for 20+ of them. `_university_targets()` returns `[]` until that structure is handled + `admissionsUrl` fields exist.
+
+**First full 266-record dry-run (2026-08-31) — real data errors found:**
+- `swedish_institute` — deadline stored `2027-02-10`, actually **2026-02-25** (a full year off, already closed); notification date also wrong; funding now SEK 12,000; eligible countries 34 not 43.
+- `google_phd_fellowship` — deadline stored `2026-09-30`, actually closed **2026-04-30**.
+- `kaist_scholarship` — deadline `2026-11-30` → **2026-09-01**.
+- `vanier_canada` — **programme discontinued**, merged into Canada Graduate Research Scholarship – Doctoral.
+- `marie_curie` / `horizon_msca_dn` / `embo_fellowship` — deadlines off by days–weeks.
+- `swiss_excellence` — funding CHF 2,450/mo, stored CHF 1,920.
+- Dead official domains: `sacm.org.sa`, `singa.a-star.edu.sg`, `mua.go.th`, `nrfscholarships.nrf.ac.za`, `ghanascholarships.gov.gh`, `mesri.gouv.sn`.
+- **~150 scholarship `link` fields point at an institution homepage or a scholarship-database root** (e.g. `ford_foundation_fellowship` → grants-database, `open_society_fellowship` → homepage, `daad_*` ×4 → the DAAD DB landing page, `campuschina.org/` → homepage). The tool flags these ("link no longer resolves to this award") rather than guessing — but it also can't verify their deadlines until the records get award-specific URLs.
+
+- **Pending (owner):** (1) fix the ~8 confirmed-wrong records above; (2) give the ~150 homepage-link scholarships a real award URL (or a `deadlineUrl`); (3) create a fine-grained `GITHUB_TOKEN` (Contents+PRs rw on this repo), `railway variable set … --stdin GITHUB_TOKEN`, then `railway variable set … DRY_RUN=0` to let the weekly cron open PRs. Until then it runs weekly, prints the report to `railway logs`, and changes nothing.
 
 **FST-side follow-up:** add a per-university `admissionsUrl` to `universities.js` — the verifier currently checks `website` (homepage), which rarely shows deadlines.
 
