@@ -4311,7 +4311,7 @@ window.SCHOLARSHIP_DATA = {
     },
     {
       "id": "ghana_scholarship",
-      "name": "Ghana Scholarship Secretariat Award",
+      "name": "Ghana Scholarships Authority Award",
       "provider": "Ghana Scholarship Secretariat",
       "university": null,
       "country": "Ghana",
@@ -4338,7 +4338,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "open",
       "competitionLevel": "Medium",
-      "link": "https://ghanascholarships.gov.gh"
+      "link": "https://scholarships.gov.gh/"
     },
     {
       "id": "morocco_scholarship",
@@ -4400,7 +4400,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "closing_soon",
       "competitionLevel": "Low",
-      "link": "https://www.mesri.gouv.sn"
+      "link": "https://mesrisenegal.sn/bourses-detudes/"
     },
     {
       "id": "caricom_scholarship",
