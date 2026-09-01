@@ -1036,38 +1036,7 @@ window.SCHOLARSHIP_DATA = {
       "competitionLevel": "Medium",
       "link": "https://russia.study"
     },
-    {
-      "id": "kasp_saudi",
-      "name": "King Abdullah Scholarship Program (Saudi Arabia)",
-      "provider": "Saudi Arabian Cultural Mission (SACM)",
-      "university": null,
-      "country": "Saudi Arabia",
-      "countryCode": "SA",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly allowance, airfare, health insurance, and housing allowance for Saudi nationals studying abroad",
-      "levels": [
-        "Bachelor",
-        "Master",
-        "PhD"
-      ],
-      "streams": [
-        "All streams"
-      ],
-      "eligibility": "Saudi Arabian nationals only. For study at accredited universities in approved countries (USA, UK, Canada, Australia, etc.).",
-      "requirements": [
-        "Saudi Arabian national",
-        "Enrolled at or accepted by an accredited foreign university",
-        "SACM approval of institution and program",
-        "Satisfactory academic progress",
-        "Service return obligation"
-      ],
-      "notes": "For Saudi nationals, not international students. One of the world's largest government-funded outbound programs.",
-      "deadline": "2027-01-31",
-      "notificationDate": "2027-04-30",
-      "status": "open",
-      "competitionLevel": "Medium",
-      "link": "https://www.sacm.org.sa/en"
-    },
+
     {
       "id": "khalifa_scholarship",
       "name": "Khalifa International Award for Education (UAE)",
@@ -1832,41 +1801,9 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.singa.a-star.edu.sg"
+      "link": "https://www.a-star.edu.sg/scholarships/astar-graduate-academy"
     },
-    {
-      "id": "thailand_gov",
-      "name": "Thailand Government Scholarship (ODOS)",
-      "provider": "Office of the Higher Education Commission (OHEC), Thailand",
-      "university": null,
-      "country": "Thailand",
-      "countryCode": "TH",
-      "amountType": "full",
-      "amountDesc": "Full tuition, monthly stipend, airfare, accommodation, and medical insurance",
-      "levels": [
-        "Master",
-        "PhD"
-      ],
-      "streams": [
-        "Engineering & Technology",
-        "Natural Sciences",
-        "Medicine & Health Sciences",
-        "Business & Economics"
-      ],
-      "eligibility": "Thai government officials and civil servants, and occasionally non-Thai nationals through bilateral programs. ODOS program primarily for Thai nationals.",
-      "requirements": [
-        "Thai national or bilateral partner citizen",
-        "Employed by Thai government (some programs)",
-        "English proficiency",
-        "Work in development-related field"
-      ],
-      "notes": "Primarily for Thai nationals pursuing overseas study. International students benefit via bilateral scholarship agreements with Thailand.",
-      "deadline": "2027-03-31",
-      "notificationDate": "2027-06-30",
-      "status": "upcoming",
-      "competitionLevel": "Medium",
-      "link": "https://www.mua.go.th/main2021"
-    },
+
     {
       "id": "nrf_south_africa",
       "name": "NRF-DSI Innovation Doctoral Scholarship (South Africa)",
@@ -1898,7 +1835,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "closing_soon",
       "competitionLevel": "Medium",
-      "link": "https://nrfscholarships.nrf.ac.za"
+      "link": "https://www.nrf.ac.za/nrf-for-post-graduate-students/bursaries-scholarships/"
     },
     {
       "id": "african_dev_bank",

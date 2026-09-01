@@ -50,7 +50,7 @@ KEEP_INDEXED = frozenset({
     'jack_kent_cooke', 'humphrey_fellowship', 'marie_curie',
     # High-volume national / government programmes
     'chinese_gov_scholarship_a', 'swiss_excellence', 'austrian_oead', 'italian_gov_scholarship',
-    'ireland_govt_scholarship', 'lpdp_indonesia', 'kasp_saudi', 'new_zealand_gov',
+    'ireland_govt_scholarship', 'lpdp_indonesia', 'new_zealand_gov',
 })
 
 
@@ -813,7 +813,8 @@ def prune_sitemap_noindex(root, scholarships):
     sitemap_path = os.path.join(root, "sitemap.xml")
     if not os.path.exists(sitemap_path):
         return
-    noindex_ids = {s["id"] for s in scholarships if s["id"] not in KEEP_INDEXED}
+    all_ids = {s["id"] for s in scholarships}
+    noindex_ids = {sid for sid in all_ids if sid not in KEEP_INDEXED}
     with open(sitemap_path, "r", encoding="utf-8") as f:
         xml = f.read()
 
@@ -822,8 +823,11 @@ def prune_sitemap_noindex(root, scholarships):
         loc = re.search(r"<loc>(.*?)</loc>", block)
         if loc:
             path = loc.group(1).rsplit("/scholarship/", 1)
-            if len(path) == 2 and path[1].strip().rstrip("/") in noindex_ids:
-                return ""  # drop it
+            if len(path) == 2:
+                sid = path[1].strip().rstrip("/")
+                # drop noindexed ones AND any id no longer in the data at all
+                if sid in noindex_ids or sid not in all_ids:
+                    return ""
         return block
 
     updated = re.sub(r"(\s*<url>[\s\S]*?</url>)", keep_block, xml)

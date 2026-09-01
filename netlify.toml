@@ -3,6 +3,16 @@
 
 # Dead scholarship ID aliases — redirect to correct pages (301)
 [[redirects]]
+  from = "/scholarship/kasp_saudi"
+  to = "/scholarships"
+  status = 301
+
+[[redirects]]
+  from = "/scholarship/thailand_gov"
+  to = "/scholarships"
+  status = 301
+
+[[redirects]]
   from = "/scholarship/OAS_scholarship"
   to = "/scholarship/oas_scholarship"
   status = 301

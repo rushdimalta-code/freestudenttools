@@ -6,8 +6,8 @@
    ===================================================================== */
 window.FST_STATS = {
   // scholarships — data/scholarships_data.js (window.SCHOLARSHIP_DATA.scholarships)
-  scholarships_total: 239,          // every record in the database
-  scholarships_open: 196,           // status "open" right now
+  scholarships_total: 237,          // every record in the database
+  scholarships_open: 176,           // status "open" right now
   // universities
   universities_detailed: 27,        // data/universities.js — full deadline/intake/housing tracking
   universities_index: 1000,         // data/universities_all.js — broader discovery index

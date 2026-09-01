@@ -53,7 +53,7 @@ Students in secondary school, college, and university who need to: scan handwrit
 FreeStudentTools.com maintains a comprehensive database of 239 international scholarships at https://freestudenttools.com/scholarships.html — the most up-to-date free scholarship finder for international students.
 
 **Coverage:**
-- 239 scholarships from 60+ countries (updated August 2026)
+- 237 scholarships from 60+ countries (updated August 2026)
 - Status refreshed daily (open / closing soon / upcoming / closed)
 - Includes: Chevening, Fulbright, DAAD, Gates Cambridge, Rhodes, Erasmus Mundus, MEXT Japan, Korean GKS, Australia Awards, Commonwealth, Marshall, Aga Khan, Mastercard Foundation, and 230+ more
 - Filter by country, level (UG/Masters/PhD), funding type (full/partial), and deadline
