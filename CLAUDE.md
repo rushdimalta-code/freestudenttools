@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-08-29 (rev 27)_
+_Last updated: 2026-09-01 (rev 28)_
 
 ---
 
@@ -837,9 +837,35 @@ New sibling repo **`rushdimalta-code/fst-data-updater`** (private) + Railway pro
 - Dead official domains: `sacm.org.sa`, `singa.a-star.edu.sg`, `mua.go.th`, `nrfscholarships.nrf.ac.za`, `ghanascholarships.gov.gh`, `mesri.gouv.sn`.
 - **~150 scholarship `link` fields point at an institution homepage or a scholarship-database root** (e.g. `ford_foundation_fellowship` → grants-database, `open_society_fellowship` → homepage, `daad_*` ×4 → the DAAD DB landing page, `campuschina.org/` → homepage). The tool flags these ("link no longer resolves to this award") rather than guessing — but it also can't verify their deadlines until the records get award-specific URLs.
 
-- **Pending (owner):** (1) fix the ~8 confirmed-wrong records above; (2) give the ~150 homepage-link scholarships a real award URL (or a `deadlineUrl`); (3) create a fine-grained `GITHUB_TOKEN` (Contents+PRs rw on this repo), `railway variable set … --stdin GITHUB_TOKEN`, then `railway variable set … DRY_RUN=0` to let the weekly cron open PRs. Until then it runs weekly, prints the report to `railway logs`, and changes nothing.
+- **Pending (owner):** items (1) and (2) below were largely actioned on 2026-09-01 — see the rev 28 section for what was fixed/removed and what's genuinely still open. (3) create a fine-grained `GITHUB_TOKEN` (Contents+PRs rw on this repo), `railway variable set … --stdin GITHUB_TOKEN`, then `railway variable set … DRY_RUN=0` to let the weekly cron open PRs. Until then it runs weekly, prints the report to `railway logs`, and changes nothing.
 
 **FST-side follow-up:** add a per-university `admissionsUrl` to `universities.js` — the verifier currently checks `website` (homepage), which rarely shows deadlines.
+
+---
+
+## Scholarship data corrections + verified-source policy (rev 28, 2026-09-01)
+
+Acted on the fst-data-updater findings. **16 scholarship records corrected; catalogue 239 → 237.**
+
+### Data / deadline / funding fixes (verified against official sources)
+`marie_curie` deadline 09-10→09-09 · `horizon_msca_dn` 11-15→11-24 · `embo_fellowship` 02-01→2027-01-22 · `swiss_excellence` CHF 1,920→2,450 (Federal Council increase, Jan 2026) + link · `swedish_institute` SEK 12,000, insurance dropped, country count softened · `google_phd_fellowship` bogus 2026-09-30→2027-04-30, status `upcoming`, link · `vanier_canada` **renamed → "Canada Graduate Research Scholarship – Doctoral (CGRS-D)"** (Vanier discontinued after fall-2024; replaced by CGRS-D, CAD $40k×3, now open to international students), link → NSERC · `eiffel_excellence` amounts €1,200/€2,100 (2026) + link → Campus France programme page.
+
+### Link fixes (each confirmed HTTP 200)
+`konrad_adenauer` → KAS international-talent-development page · `daad_helmut_schmidt` → official Helmut-Schmidt-Programme page · `friedrich_ebert` → DAAD database detail page · `ghana_scholarship` → `scholarships.gov.gh` (rebranded "Ghana Scholarships Authority"; record renamed) · `senegal_gov` → `mesrisenegal.sn/bourses-detudes/` · `nrf_south_africa` → `nrf.ac.za/.../bursaries-scholarships/` · `singa_singapore` → `a-star.edu.sg/scholarships/astar-graduate-academy` (SINGA's admin body; deep links 404 after A*STAR site rebuild).
+
+### Removed — no verifiable current official source (owner policy: keep only scholarships whose source can be verified + directly accessed)
+`kasp_saudi` (King Abdullah Scholarship Program — `sacm.org.sa` dead, appears wound down) · `thailand_gov` (ODOS — `mua.go.th` dead, ambiguous). Both also own-nationals-study-abroad schemes, outside the site's international-student audience. → `git rm` the 2 pages; `netlify.toml` 301s both IDs to `/scholarships`; `KEEP_INDEXED` 48→47; generator's `prune_sitemap_noindex` hardened to also drop sitemap locs for ids removed from the data entirely.
+
+### Consistency
+`data/site-stats.js` → `scholarships_total: 237`, `scholarships_open: 176`. Hardcoded `239` swept to `237` across all static copy that can't use a `data-stat` span — titles, meta, JSON-LD, hero text, blog CTAs (12 pages + 5 blog posts). `rgba(239,…)` colour values preserved. `llms.txt` updated. Audit 0 issues.
+
+### fst-data-updater — flag-noise fix (`cf1ed59`)
+Link flags now fire **only on a real HTTP failure** (4xx/5xx/DNS/timeout), not when Gemini merely can't read a JS-rendered page. `fetch.ok = (200 ≤ status < 400)`; `page_is_relevant:false` only surfaces on HIGH confidence as a "spot-check" note, never a proposed value. Was accidentally run on the old image once (`railway redeploy` ≠ new code — use `railway up`); redeployed correctly, run verifying. Expect weekly link flags to drop from ~155 to ~10.
+
+### Still pending (owner)
+- fst-data-updater `GITHUB_TOKEN` (fine-grained PAT, Contents+PRs rw) + `DRY_RUN=0` to enable weekly PRs. Full guide in chat 2026-09-01.
+- `australia_awards_africa` / `_pacific` — `dfat.gov.au` blocks the bot (timeout); links unverified, left as-is.
+- The remaining homepage-level scholarship links (~120) are mostly **not broken** — a dedicated domain like `gatescambridge.org` / `pdsoros.org` is the correct link; the tool over-flagged JS-heavy pages. The flag-noise fix above should clear most of these from the weekly report.
 
 ---
 
