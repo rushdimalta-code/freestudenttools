@@ -151,7 +151,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the world's oldest and most prestigious international scholarships. 100+ scholars selected annually worldwide.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.rhodeshouse.ox.ac.uk/scholarships"
     },
@@ -337,7 +337,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Embassy-recommended students are placed as research students first, then apply to graduate programs. Very prestigious and competitive.",
       "deadline": "2026-08-31",
       "notificationDate": "2027-01-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://www.mext.go.jp/en/policy/education/highered/title02/detail02/sdetail02/1373897.htm"
     },
@@ -429,7 +429,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers undergraduate programs — unlike most international scholarships. Pacific focus on development-related fields.",
       "deadline": "2026-08-31",
       "notificationDate": "2026-12-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Medium",
       "link": "https://www.dfat.gov.au/people-to-people/australia-awards/australia-awards-pacific"
     },
@@ -905,7 +905,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Strong emphasis on arts, architecture, music, and design. Scholarships for higher arts institutes (AFAM) also available.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://studyinitaly.esteri.it"
     },
@@ -1036,7 +1036,6 @@ window.SCHOLARSHIP_DATA = {
       "competitionLevel": "Medium",
       "link": "https://russia.study"
     },
-
     {
       "id": "khalifa_scholarship",
       "name": "Khalifa International Award for Education (UAE)",
@@ -1067,7 +1066,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "For UAE nationals studying internationally. Strong focus on strategic sectors aligned with UAE Vision 2030.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://mohesr.gov.ae"
     },
@@ -1803,7 +1802,6 @@ window.SCHOLARSHIP_DATA = {
       "competitionLevel": "High",
       "link": "https://www.a-star.edu.sg/scholarships/astar-graduate-academy"
     },
-
     {
       "id": "nrf_south_africa",
       "name": "NRF-DSI Innovation Doctoral Scholarship (South Africa)",
@@ -1833,7 +1831,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Multiple NRF scholarship streams available — check NRF Online for current calls. Innovation focus aligns with South Africa's national development goals.",
       "deadline": "2026-08-31",
       "notificationDate": "2026-12-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Medium",
       "link": "https://www.nrf.ac.za/nrf-for-post-graduate-students/bursaries-scholarships/"
     },
@@ -1934,7 +1932,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "This is a non-degree professional development program — participants are placed at US universities for 10 months, not to earn a degree.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.humphreyfellowship.org"
     },
@@ -3111,7 +3109,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Around 60 awards per year across the University. Covers UK tuition; international students may need an additional department bursary for the overseas fee difference.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.manchester.ac.uk"
     },
@@ -3582,7 +3580,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "POSTECH is a small, elite science and engineering university consistently ranked in the top 5 globally for STEM impact per paper.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-04-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://international.postech.ac.kr"
     },
@@ -4593,7 +4591,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Becas Chile was one of Latin America's largest overseas scholarship programs. Now managed by ANID after CONICYT restructuring. Covers 60+ countries.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.anid.cl"
     },
@@ -5285,7 +5283,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Awards are country-specific and subject-specific. Check British Council's GREAT page in your country for the current year's subjects and universities.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://study-uk.britishcouncil.org/scholarships/great-scholarships"
     },
@@ -5587,7 +5585,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — only about 10–20 fellows per year globally. Comes with access to Microsoft Research mentors and resources.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.microsoft.com/en-us/research/academic-program/phd-fellowship"
     },
@@ -5680,7 +5678,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apple's PhD fellowship program for AI/ML is relatively new and highly selective. Fellows receive mentorship from Apple researchers.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://machinelearning.apple.com"
     },
@@ -6533,7 +6531,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Thailand has multiple government scholarship programs managed by different ministries. Also check Royal Thai Government scholarships via the Office of Educational Affairs.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.nstda.or.th"
     },
