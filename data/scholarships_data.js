@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-08-31",
+  "lastUpdated": "2026-09-01",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -488,8 +488,8 @@ window.SCHOLARSHIP_DATA = {
         "Host institution in EU or associated country",
         "Research proposal"
       ],
-      "notes": "Competitive EU-funded postdoctoral fellowship. Annual call — apply in September, results in February/March.",
-      "deadline": "2026-09-10",
+      "notes": "Competitive EU-funded postdoctoral fellowship. Annual call — apply in September, results in February 2027.",
+      "deadline": "2026-09-09",
       "notificationDate": "2027-03-01",
       "status": "closing_soon",
       "competitionLevel": "Very High",
@@ -695,7 +695,7 @@ window.SCHOLARSHIP_DATA = {
       "country": "Switzerland",
       "countryCode": "CH",
       "amountType": "partial",
-      "amountDesc": "Monthly allowance (CHF 1,920), tuition exemption (some universities), accommodation supplement, and health insurance",
+      "amountDesc": "Monthly allowance (CHF 2,450 from 2026), tuition exemption (some universities), one-off housing allowance (CHF 600), and health insurance",
       "levels": [
         "Master",
         "PhD"
@@ -716,7 +716,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html"
+      "link": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships"
     },
     {
       "id": "eiffel_excellence",
@@ -791,14 +791,14 @@ window.SCHOLARSHIP_DATA = {
       "country": "Sweden",
       "countryCode": "SE",
       "amountType": "full",
-      "amountDesc": "Full tuition (paid directly to university), monthly living allowance (SEK 10,000–11,000), travel grant, and insurance",
+      "amountDesc": "Full tuition (paid directly to university), monthly living allowance (SEK 12,000), and a one-off travel grant (health insurance not included)",
       "levels": [
         "Master"
       ],
       "streams": [
         "All streams"
       ],
-      "eligibility": "Citizens of eligible countries (around 43 countries covered). Minimum 3,000 hours (approx. 1.5 years) of full-time work experience.",
+      "eligibility": "Citizens of eligible countries (a rotating list of roughly 30–40 countries, published each year). Minimum 3,000 hours (approx. 1.5 years) of full-time work experience.",
       "requirements": [
         "Citizen of an eligible country",
         "Bachelor's degree",
@@ -1672,13 +1672,13 @@ window.SCHOLARSHIP_DATA = {
     },
     {
       "id": "vanier_canada",
-      "name": "Vanier Canada Graduate Scholarship (CGS)",
+      "name": "Canada Graduate Research Scholarship – Doctoral (CGRS-D)",
       "provider": "Government of Canada",
       "university": null,
       "country": "Canada",
       "countryCode": "CA",
       "amountType": "partial",
-      "amountDesc": "CAD $50,000 per year for up to 3 years of doctoral study in Canada",
+      "amountDesc": "CAD $40,000 per year for 3 years (CAD $120,000 total) of doctoral study in Canada",
       "levels": [
         "PhD"
       ],
@@ -1696,12 +1696,12 @@ window.SCHOLARSHIP_DATA = {
         "Excellent academic record (GPA equivalent to A+ in last 2 years)",
         "Leadership qualities and research potential"
       ],
-      "notes": "You must be nominated by the university — contact the financial aid office of your target Canadian university to express interest.",
+      "notes": "Replaced the Vanier CGS and CGS-D from the 2025 competition, and now funds international students at Canadian institutions. Apply through your Canadian university — institutional deadlines vary (mid-September to early October); the agency deadline is around 1 November. Maximum of three applications per person.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "Extremely High",
-      "link": "https://vanier.gc.ca/en/home-accueil.html"
+      "link": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/cgrsd-besrd_eng.asp"
     },
     {
       "id": "banting_postdoc",
@@ -6245,8 +6245,8 @@ window.SCHOLARSHIP_DATA = {
         "Mobility rule: must move to a new country",
         "Apply to a specific MSCA Doctoral Network consortium project posting"
       ],
-      "notes": "MSCA Doctoral Networks replaced ITN (Innovative Training Networks). Each project recruits multiple PhD students across European universities. Apply to specific vacancies on EURAXESS or the project website.",
-      "deadline": "2026-11-15",
+      "notes": "MSCA Doctoral Networks replaced ITN (Innovative Training Networks). Each project recruits multiple PhD students across European universities. Apply to specific vacancies on EURAXESS or the project website. The 2026 consortium call closes 24 November 2026.",
+      "deadline": "2026-11-24",
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
@@ -6400,12 +6400,12 @@ window.SCHOLARSHIP_DATA = {
         "Research aligned with Google's technical focus areas",
         "Strong publication record or research output"
       ],
-      "notes": "Cannot apply directly — must be nominated by your university. Universities in North America, Europe, Asia, and Australia participate. Very high prestige in tech academia.",
-      "deadline": "2026-09-30",
-      "notificationDate": "2026-12-31",
-      "status": "closing_soon",
+      "notes": "Cannot apply directly — must be nominated by your university. Universities in North America, Europe, Asia, and Australia participate. Very high prestige in tech academia. The annual application window typically closes around the end of April; the 2026 cycle has closed.",
+      "deadline": "2027-04-30",
+      "notificationDate": "2027-08-31",
+      "status": "upcoming",
       "competitionLevel": "Very High",
-      "link": "https://research.google/outreach/phd-fellowship"
+      "link": "https://research.google/programs-and-events/phd-fellowship/"
     },
     {
       "id": "amazon_phd_fellowship",
@@ -6972,8 +6972,8 @@ window.SCHOLARSHIP_DATA = {
         "Strong research record and referee letters",
         "Apply through EMBO portal — two submission rounds per year (February and August)"
       ],
-      "notes": "EMBO has 1,800 member scientists. Fellowships are prestigious in life sciences. 'Outgoing' fellows go from Europe to labs outside Europe.",
-      "deadline": "2027-02-01",
+      "notes": "EMBO has 1,800 member scientists. Fellowships are prestigious in life sciences. 'Outgoing' fellows go from Europe to labs outside Europe. Applications are accepted year-round with fixed cut-off dates; the next hard deadline is 22 January 2027.",
+      "deadline": "2027-01-22",
       "notificationDate": "2027-05-31",
       "status": "open",
       "competitionLevel": "Very High",
