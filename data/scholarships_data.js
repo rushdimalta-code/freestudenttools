@@ -308,7 +308,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-03-01",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships"
+      "link": "https://www.daad.de/en/studying-in-germany/scholarships/daad-funding-programmes/helmut-schmidt-programme/"
     },
     {
       "id": "mext_research",
@@ -726,7 +726,7 @@ window.SCHOLARSHIP_DATA = {
       "country": "France",
       "countryCode": "FR",
       "amountType": "partial",
-      "amountDesc": "Monthly allowance (€1,181 Master's / €1,400 PhD), health insurance, and cultural allowances",
+      "amountDesc": "Monthly allowance (€1,200 Master's / €2,100 PhD, as of 2026), health insurance, and cultural allowances",
       "levels": [
         "Master",
         "PhD"
@@ -751,7 +751,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2027-04-30",
       "status": "open",
       "competitionLevel": "High",
-      "link": "https://www.campusfrance.org"
+      "link": "https://www.campusfrance.org/en/the-france-excellence-eiffel-scholarship-program"
     },
     {
       "id": "holland_scholarship",
@@ -1330,7 +1330,7 @@ window.SCHOLARSHIP_DATA = {
       "notificationDate": "2026-12-31",
       "status": "closing_soon",
       "competitionLevel": "High",
-      "link": "https://www.fes.de"
+      "link": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000153"
     },
     {
       "id": "konrad_adenauer",
@@ -1357,12 +1357,12 @@ window.SCHOLARSHIP_DATA = {
         "Christian democratic values",
         "Two application rounds per year (January and July)"
       ],
-      "notes": "Associated with the CDU/CSU political tradition. Offers a broad ideological and cultural integration program.",
+      "notes": "Associated with the CDU/CSU political tradition. Offers a broad ideological and cultural integration program. For non-EU students the closing date is 15 July each year; monthly grant around €992 (students) / €1,400 (PhD); minimum B2 German required.",
       "deadline": "2026-07-15",
       "notificationDate": "2026-11-30",
       "status": "closed",
       "competitionLevel": "High",
-      "link": "https://www.kas.de/en/web/stipendium"
+      "link": "https://www.kas.de/en/web/begabtenfoerderung-und-kultur/international-talent-development"
     },
     {
       "id": "stanford_knight_hennessy",
