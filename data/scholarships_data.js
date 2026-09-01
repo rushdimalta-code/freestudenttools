@@ -151,7 +151,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the world's oldest and most prestigious international scholarships. 100+ scholars selected annually worldwide.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.rhodeshouse.ox.ac.uk/scholarships"
     },
@@ -337,7 +337,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Embassy-recommended students are placed as research students first, then apply to graduate programs. Very prestigious and competitive.",
       "deadline": "2026-08-31",
       "notificationDate": "2027-01-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://www.mext.go.jp/en/policy/education/highered/title02/detail02/sdetail02/1373897.htm"
     },
@@ -809,7 +809,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Eligible countries rotate — check the Swedish Institute website for the current list. Applications open in February.",
       "deadline": "2027-02-10",
       "notificationDate": "2027-05-31",
-      "status": "open",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals"
     },
@@ -1668,7 +1668,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Replaced the Vanier CGS and CGS-D from the 2025 competition, and now funds international students at Canadian institutions. Apply through your Canadian university — institutional deadlines vary (mid-September to early October); the agency deadline is around 1 November. Maximum of three applications per person.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/cgrsd-besrd_eng.asp"
     },
@@ -1833,7 +1833,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Multiple NRF scholarship streams available — check NRF Online for current calls. Innovation focus aligns with South Africa's national development goals.",
       "deadline": "2026-08-31",
       "notificationDate": "2026-12-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Medium",
       "link": "https://www.nrf.ac.za/nrf-for-post-graduate-students/bursaries-scholarships/"
     },
@@ -1934,7 +1934,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "This is a non-degree professional development program — participants are placed at US universities for 10 months, not to earn a degree.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.humphreyfellowship.org"
     },
@@ -2034,7 +2034,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Almost all admitted international students at KAIST receive full financial support. KAIST consistently ranks in the global top 50 for engineering.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://admission.kaist.ac.kr/intl-graduate"
     },
@@ -4593,7 +4593,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Becas Chile was one of Latin America's largest overseas scholarship programs. Now managed by ANID after CONICYT restructuring. Covers 60+ countries.",
       "deadline": "2027-02-28",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.anid.cl"
     },
@@ -5587,7 +5587,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — only about 10–20 fellows per year globally. Comes with access to Microsoft Research mentors and resources.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.microsoft.com/en-us/research/academic-program/phd-fellowship"
     },
@@ -6340,7 +6340,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Cannot apply directly — must be nominated by your university. Universities in North America, Europe, Asia, and Australia participate. Very high prestige in tech academia. The annual application window typically closes around the end of April; the 2026 cycle has closed.",
       "deadline": "2027-04-30",
       "notificationDate": "2027-08-31",
-      "status": "upcoming",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://research.google/programs-and-events/phd-fellowship/"
     },
