@@ -809,7 +809,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Eligible countries rotate — check the Swedish Institute website for the current list. Applications open in February.",
       "deadline": "2027-02-10",
       "notificationDate": "2027-05-31",
-      "status": "open",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals"
     },
@@ -1667,7 +1667,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Replaced the Vanier CGS and CGS-D from the 2025 competition, and now funds international students at Canadian institutions. Apply through your Canadian university — institutional deadlines vary (mid-September to early October); the agency deadline is around 1 November. Maximum of three applications per person.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/cgrsd-besrd_eng.asp"
     },
@@ -2032,7 +2032,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Almost all admitted international students at KAIST receive full financial support. KAIST consistently ranks in the global top 50 for engineering.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://admission.kaist.ac.kr/intl-graduate"
     },
@@ -6338,7 +6338,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Cannot apply directly — must be nominated by your university. Universities in North America, Europe, Asia, and Australia participate. Very high prestige in tech academia. The annual application window typically closes around the end of April; the 2026 cycle has closed.",
       "deadline": "2027-04-30",
       "notificationDate": "2027-08-31",
-      "status": "upcoming",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://research.google/programs-and-events/phd-fellowship/"
     },
