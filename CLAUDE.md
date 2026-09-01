@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-09-01 (rev 28)_
+_Last updated: 2026-09-01 (rev 29)_
 
 ---
 
@@ -863,9 +863,30 @@ Acted on the fst-data-updater findings. **16 scholarship records corrected; cata
 Link flags now fire **only on a real HTTP failure** (4xx/5xx/DNS/timeout), not when Gemini merely can't read a JS-rendered page. `fetch.ok = (200 ≤ status < 400)`; `page_is_relevant:false` only surfaces on HIGH confidence as a "spot-check" note, never a proposed value. Was accidentally run on the old image once (`railway redeploy` ≠ new code — use `railway up`); redeployed correctly, run verifying. Expect weekly link flags to drop from ~155 to ~10.
 
 ### Still pending (owner)
-- fst-data-updater `GITHUB_TOKEN` (fine-grained PAT, Contents+PRs rw) + `DRY_RUN=0` to enable weekly PRs. Full guide in chat 2026-09-01.
 - `australia_awards_africa` / `_pacific` — `dfat.gov.au` blocks the bot (timeout); links unverified, left as-is.
-- The remaining homepage-level scholarship links (~120) are mostly **not broken** — a dedicated domain like `gatescambridge.org` / `pdsoros.org` is the correct link; the tool over-flagged JS-heavy pages. The flag-noise fix above should clear most of these from the weekly report.
+- The remaining homepage-level scholarship links (~120) are mostly **not broken** — a dedicated domain like `gatescambridge.org` / `pdsoros.org` is the correct link; the tool over-flagged JS-heavy pages. The flag-noise fix above cleared most from the weekly report.
+
+---
+
+## fst-data-updater — LIVE (rev 29, 2026-09-01)
+
+The verification service is fully live. `GITHUB_TOKEN` (fine-grained PAT, Contents+PRs rw on this repo) set, `DRY_RUN=0`. First auto-PR created: **[PR #1](https://github.com/rushdimalta-code/freestudenttools/pull/1)** `data: auto (status) changes`.
+
+**Division of labour (settled):**
+- The **in-repo daily bot** (`update-data.yml`, 06:00 UTC) owns `status` recalculation from stored deadlines — it always has. On 2026-09-01 it corrected `rhodes`/`mext_research`/`nrf_south_africa`/`humphrey`/`microsoft` → closing_soon/closed.
+- **fst-data-updater** owns what the daily bot can't do: **deadline / notificationDate changes** read off official pages (review-gated), plus link-health flags.
+- The two now **agree on status** — after the fixes below, fst-data-updater's status-auto computes from the same stored deadline the daily bot uses, so it rarely proposes a status change at all.
+
+**PR #1 → CLOSE, do not merge.** It was created by the *first* run, before the fixes and before that day's daily bot. Merging it would revert `swedish_institute`/`vanier_canada`/`kaist`/`google_phd_fellowship` to wrong `closed`/`closing_soon` states. Main is already correct.
+
+**Three tool fixes this session (all in `rushdimalta-code/fst-data-updater`):**
+- `cf1ed59` — link flags fire only on real HTTP failure (4xx/5xx/DNS/cert/timeout), not JS-render limits. Weekly link flags ~155 → ~47, and the 47 are genuine (403 bot-blocks on `adb.org`/`jhu.edu`/`monash.edu`/`insead.edu`/`undp.org`/`study-uk.britishcouncil.org`, expired certs on `nordplus.net`/`laspau.harvard.edu`, DNS fails on `campuschina.org` from Railway egress).
+- `e6fb6d0` — status auto-calc uses the **stored** deadline only, never a pending-review extracted one (was flipping status off unapproved dates).
+- `cc42180` — suppress "stale prior-cycle" date proposals: when the page shows a date already in the past and we store a future one (annual scholarships between cycles), keep our forward estimate. Was re-proposing `swedish_institute 2027-02-10 → 2026-02-25` and `google_phd 2027-04-30 → 2026-04-30` every run.
+
+**Ongoing workflow:** weekly Mon 07:00 UTC. Deadline changes land in `state/pending_changes.json` on the Railway volume → `railway ssh --service fst-data-updater` → `python main.py list` / `approve <id> <field>` / `apply` → PR. 20 unit tests pass.
+
+**⚠️ Token hygiene:** the `github_pat_…` was pasted into chat during setup. Owner to regenerate on GitHub (Fine-grained tokens → `fst-data-updater` → Regenerate) and re-set: `pbpaste | tr -d '\n' | railway variable set --service fst-data-updater --stdin GITHUB_TOKEN`.
 
 ---
 
