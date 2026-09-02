@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-09-01",
+  "lastUpdated": "2026-09-02",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1261,7 +1261,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Rooted in Green politics and feminist values. Strong social engagement is as important as academic achievement.",
       "deadline": "2026-09-01",
       "notificationDate": "2026-12-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.boell.de/en/scholarships"
     },
@@ -1604,7 +1604,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers the overseas premium only — covers cost difference between UK-home and international fees. Often combined with other awards.",
       "deadline": "2027-03-01",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://www.ed.ac.uk"
     },
@@ -2415,7 +2415,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Many PKU international students hold both a CSC government scholarship and a PKU-specific award. Apply to both simultaneously.",
       "deadline": "2027-03-01",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.oir.pku.edu.cn"
     },
@@ -2678,7 +2678,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Study can take place in Japan, Europe, the Americas, Africa, or Asia depending on the partner university.",
       "deadline": "2027-03-01",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.worldbank.org"
     },
@@ -3926,7 +3926,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "UCPH PhDs are salaried employees — contact faculty to find open funded PhD positions. Master's scholarships are competitive and limited.",
       "deadline": "2027-03-01",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://studies.ku.dk/masters/scholarships_and_financial_support"
     },
@@ -4052,7 +4052,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Promotes academic exchange between Nordic and Baltic/Russian academic communities. Check Nordic Council website for current cycle dates.",
       "deadline": "2027-03-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.nordplus.net"
     },
@@ -4111,7 +4111,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Denmark charges tuition for non-EU students but offers competitive scholarships. PhD positions at Danish universities are salaried employment contracts (~DKK 31,000/month).",
       "deadline": "2027-03-01",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.ufm.dk"
     },
@@ -7097,7 +7097,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Norway is tuition-free at public universities for all students — these grants cover living costs. UiO is ranked top 150 globally. Strong in social sciences, environmental sciences, law, and medicine.",
       "deadline": "2027-03-01",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.uio.no"
     },
