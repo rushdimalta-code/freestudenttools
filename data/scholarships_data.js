@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-09-09",
+  "lastUpdated": "2026-09-10",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -491,7 +491,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Competitive EU-funded postdoctoral fellowship. Annual call — apply in September, results in February 2027.",
       "deadline": "2026-09-09",
       "notificationDate": "2027-03-01",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/postdoctoral-fellowships"
     },
