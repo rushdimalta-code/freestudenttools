@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-09-01 (rev 29)_
+_Last updated: 2026-09-12 (rev 30)_
 
 ---
 
@@ -887,6 +887,23 @@ The verification service is fully live. `GITHUB_TOKEN` (fine-grained PAT, Conten
 **Ongoing workflow:** weekly Mon 07:00 UTC. Deadline changes land in `state/pending_changes.json` on the Railway volume → `railway ssh --service fst-data-updater` → `python main.py list` / `approve <id> <field>` / `apply` → PR. 20 unit tests pass.
 
 **⚠️ Token hygiene:** the `github_pat_…` was pasted into chat during setup. Owner to regenerate on GitHub (Fine-grained tokens → `fst-data-updater` → Regenerate) and re-set: `pbpaste | tr -d '\n' | railway variable set --service fst-data-updater --stdin GITHUB_TOKEN`.
+
+---
+
+## GPT content-roadmap review — queued for next week (rev 30, 2026-09-12)
+
+External review (GPT) proposed scaling 52 guides → ~100 via 9 clusters: country/destination hubs, cost/affordability pages, university-specific SEO pages (5/university × 27), scholarship-by-nationality/subject landing pages, admissions mechanics, academic-requirement pages, visa long-tail, careers/post-study, accommodation. Plus new calculator tools (cost calculator, funds calculator, GPA/IELTS converters, shortlist builder) and renaming Blog → "Student Guides."
+
+**Verified true (grep'd the live files):** the site does currently show stale figures — UK visa `£490` (GPT says now £558), Australia `AUD $710` + GTE terminology (GPT says GS replaced GTE + fee rose), Germany `120 days/year` work limit (GPT says 140 days/280 half-days), BRP collection still referenced in 7 files (UK moved toward digital eVisa). GPT's read of what's *on the site* checked out — not a hallucination like some earlier Gemini claims.
+
+**Gaps to close before executing, in order:**
+1. **Verify GPT's replacement figures against official sources first** (gov.uk, Australia Home Affairs, BAMF) — don't apply GPT's numbers on trust either, same discipline as the scholarship-data fixes this session.
+2. **No freshness-check covers blog prose.** `fst-data-updater` only verifies `scholarships_data.js` (+ disabled `universities.js`) — visa fees/work-hour limits/terminology living in blog HTML are unmonitored. Real gap, needs its own mechanism (facts aren't diffable JSON records here).
+3. **100 new pages risks repeating the crawl-budget mistake we just undid.** GSC still shows "crawled — not indexed" on real content; the gate is domain authority/backlinks, not page count. Content volume without a backlink push mostly produces more pages stuck in indexing limbo.
+4. **135 university sub-pages + dynamic scholarship-by-nationality pages are the same programmatic-thin pattern behind the original AdSense rejection.** Apply the same fewer-but-deeper discipline used on the scholarship KEEP_INDEXED cut (48→47) rather than one-page-per-query-variant by default.
+5. **Lower-risk, reasonable to prioritize as-is:** country/destination hubs (if hand-written, genuinely differentiated), the calculator tools (no crawl-budget cost), and Blog→"Student Guides" rename (already matches the parked Phase-0 nav redesign).
+
+**Not started.** Revisit next week — freshness-fact verification first, then decide which clusters (if any) proceed given the crawl-budget constraint.
 
 ---
 
