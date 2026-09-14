@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-09-13",
+  "lastUpdated": "2026-09-14",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1358,7 +1358,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Around 100 scholars per year across all Stanford graduate schools. One of the most generous scholarships in the world — covers any Stanford master's or PhD.",
       "deadline": "2026-10-14",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://knight-hennessy.stanford.edu"
     },
