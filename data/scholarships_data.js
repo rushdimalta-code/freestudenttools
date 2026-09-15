@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-09-14",
+  "lastUpdated": "2026-09-15",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -28,7 +28,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the most prestigious international scholarships. Each country has its own portal and deadline — check your national commission.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-03-01",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://foreign.fulbrightonline.org"
     },
@@ -242,7 +242,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "DAAD doctoral scholarships run for up to 4 years. Must have a German host supervisor lined up at application.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships"
     },
@@ -5616,7 +5616,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Around 10 fellows selected globally per year. Comes with a summer research internship at Meta AI.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://research.facebook.com/fellowship"
     },
@@ -6022,7 +6022,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the most prestigious early-career research fellowships in the US. Cannot be applied for after the second year of graduate study.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.nsfgrfp.org"
     },
