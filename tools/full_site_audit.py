@@ -385,5 +385,3 @@ for name, keys in CATS:
 print("\n" + "=" * 72)
 print(f"TOTAL ISSUES: {total}")
 print("=" * 72)
-# machine-readable summary for external-link stage
-json.dump({k: issues[k] for k in issues}, open("/private/tmp/claude-501/-Users-rushdi-Downloads-Trials/68df55cf-35af-49f2-afcd-58381e1e23c5/scratchpad/audit_issues.json","w"), indent=1)

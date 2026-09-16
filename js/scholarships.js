@@ -237,7 +237,7 @@
           '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left:4px;transform:rotate(' + (isExpanded ? '180deg' : '0') + ')"><polyline points="6 9 12 15 18 9"/></svg>' +
         '</button>' +
         '<div style="display:flex;gap:8px;align-items:center">' +
-          '<a href="/scholarship.html?id=' + esc(s.id) + '" class="btn btn-primary btn-sm">Full Details →</a>' +
+          '<a href="/scholarship/' + esc(s.id) + '" class="btn btn-primary btn-sm">Full Details →</a>' +
           '<a href="' + esc(s.link) + '" target="_blank" rel="noopener" data-track="scholarship_apply" data-track-label="' + esc(s.id) + '" class="btn btn-ghost btn-sm" title="Official website" style="padding:6px 10px">↗</a>' +
         '</div>' +
       '</div>' +
