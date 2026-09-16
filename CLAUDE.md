@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-09-12 (rev 30)_
+_Last updated: 2026-09-16 (rev 31)_
 
 ---
 
@@ -904,6 +904,16 @@ External review (GPT) proposed scaling 52 guides → ~100 via 9 clusters: countr
 5. **Lower-risk, reasonable to prioritize as-is:** country/destination hubs (if hand-written, genuinely differentiated), the calculator tools (no crawl-budget cost), and Blog→"Student Guides" rename (already matches the parked Phase-0 nav redesign).
 
 **Not started.** Revisit next week — freshness-fact verification first, then decide which clusters (if any) proceed given the crawl-budget constraint.
+
+---
+
+## GSC fix + IndexNow (rev 31, 2026-09-16)
+
+- **Fixed a real crawl-budget leak:** `js/scholarships.js` (finder's "Full Details" button, every card) + `compare-scholarships.html` were still generating links to the noindexed legacy `scholarship.html?id=X` route — GSC showed Google re-crawling fresh `?id=` junk as recently as Sep 12/14 instead of the 75 real pages still uncrawled ("Discovered — not indexed", stuck since the start). Both now link clean `/scholarship/<id>`.
+- Removed a stray debug line in `full_site_audit.py` (leftover hardcoded scratchpad path from an earlier session — broke the script).
+- **IndexNow key file added:** `d472f35d15ed1574094fec9842f90677.txt` at repo root, live. One-time bulk submission of all 121 sitemap URLs sent (`202 Accepted`). Pings Bing + Yandex instantly instead of waiting for their own crawl schedule — Bing Webmaster Tools flagged this as a top recommendation, and Bing is the one confirmed non-bot organic channel (GA4: `bing/organic` real sessions; Bing Search Performance 21.3K impressions/267 clicks, clearly trending up since Aug).
+- **Not yet wired into the daily automation** — the key file is a one-time setup + one bulk backfill. Pinging IndexNow automatically on every new/changed page (new blog post, scholarship data change) needs a decision: wire into `tools/generate_scholarship_pages.py` / the `update-data.yml` daily bot, only pinging URLs that actually changed (not all 239 scholarship pages every day — that's against IndexNow's intent and could get the key throttled).
+- **Bing Webmaster Tools confirms the same two things Google's GSC does:** not enough high-quality inbound links (same backlink gate), and noindex exclusions (the same intentional ~190-page scholarship curation) — both expected, not bugs.
 
 ---
 
