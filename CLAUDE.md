@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-09-16 (rev 31)_
+_Last updated: 2026-09-29 (rev 32)_
 
 ---
 
@@ -915,6 +915,22 @@ External review (GPT) proposed scaling 52 guides → ~100 via 9 clusters: countr
 - **Not yet wired into the daily automation** — the key file is a one-time setup + one bulk backfill. Pinging IndexNow automatically on every new/changed page (new blog post, scholarship data change) needs a decision: wire into `tools/generate_scholarship_pages.py` / the `update-data.yml` daily bot, only pinging URLs that actually changed (not all 239 scholarship pages every day — that's against IndexNow's intent and could get the key throttled).
 - **Bing Webmaster Tools confirms the same two things Google's GSC does:** not enough high-quality inbound links (same backlink gate), and noindex exclusions (the same intentional ~190-page scholarship curation) — both expected, not bugs.
 - **Verified the noindex flag's 3 example URLs** (`esrc_dtp`, `tsinghua_intl_scholarship`, `saltire_scotland`) — all correctly excluded from `KEEP_INDEXED`, not an accidental omission. Bing's "Recommended action" (strip the noindex tag) is a generic rule that can't distinguish deliberate curation from a mistake. **Permanently ignore this Bing recommendation** — acting on it would re-inflate the exact templated-page problem that caused the AdSense rejection.
+
+---
+
+## Keep-vs-kill decision + backlink push (rev 32, 2026-09-29)
+
+**Verdict: keep, conditionally.** On-site engineering is exhausted — content quality, crawl-budget leaks, data freshness, GSC/Bing report noise all addressed; every remaining GSC/Bing flag reviewed this month was noise, not a real issue (see rev 30/31). Real (non-bot) traffic is ~20–50/week, Google organic ≈1 session/28 days, position ~50, zero revenue. The one lever never tested: **backlinks/promotion.** Owner decision: commit real effort to it for a month rather than more on-site triage; if that effort doesn't happen, shelve the project rather than keep sinking engineering-only time into a fully-optimized site nobody links to.
+
+**4-week plan (not yet started):**
+1. Community seeding — r/scholarships, r/gradadmissions, r/ApplyingToCollege, r/IWantOut, r/AskAcademia, Quora (genuine answers only, not spam); tool-directory submissions (Product Hunt, AlternativeTo, SaaSHub, BetaList).
+2. `.edu` outreach — target list of ~40–50 university international-student-office "resources" pages + contact, short pitch email. Highest-quality backlinks available at this stage.
+3. Content partnerships — 10–15 complementary (non-competing) study-abroad blogs/creators, guest post or resource-swap pitch.
+4. One PR push — HARO-style journalist requests; the site has real data (239→237 scholarships, cross-country cost comparisons) worth pitching.
+
+**Outreach email workflow (owner decision):** owner will connect a dedicated inbox via the claude.ai Gmail connector (authorized on their end — not doable in a non-interactive session). Claude drafts every outreach/reply into **Drafts only**, owner reviews and sends. Deliberately not full send-autonomy — low-volume, high-stakes-per-email outreach to real institutional contacts, one bad email can burn a one-shot relationship. Loosen the review step later only if the template is clearly landing.
+
+**Next action:** build the `.edu` target list + outreach email template (not started).
 
 ---
 
