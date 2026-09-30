@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-09-29",
+  "lastUpdated": "2026-09-30",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -6402,7 +6402,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The Hertz Fellowship is among the most prestigious science fellowships in the US. Past fellows include Nobel laureates, MacArthur fellows, and tech founders.",
       "deadline": "2026-10-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.hertzfoundation.org/the-fellowship"
     },
