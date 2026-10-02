@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-01",
+  "lastUpdated": "2026-10-02",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -151,7 +151,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the world's oldest and most prestigious international scholarships. 100+ scholars selected annually worldwide.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-01-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://www.rhodeshouse.ox.ac.uk/scholarships"
     },
@@ -1667,7 +1667,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Replaced the Vanier CGS and CGS-D from the 2025 competition, and now funds international students at Canadian institutions. Apply through your Canadian university — institutional deadlines vary (mid-September to early October); the agency deadline is around 1 November. Maximum of three applications per person.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/cgrsd-besrd_eng.asp"
     },
@@ -1932,7 +1932,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "This is a non-degree professional development program — participants are placed at US universities for 10 months, not to earn a degree.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.humphreyfellowship.org"
     },
@@ -3484,7 +3484,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Tsinghua is China's top-ranked university and top 25 globally. Most international PhD students hold joint CSC + Tsinghua scholarship packages.",
       "deadline": "2027-03-31",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.tsinghua.edu.cn"
     },
@@ -3518,7 +3518,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Fudan is Shanghai's leading research university and strong in social sciences. Many awards available through the Shanghai Municipal Government Scholarship in parallel.",
       "deadline": "2027-03-31",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://isss.fudan.edu.cn/isss/scholarships.htm"
     },
@@ -3830,7 +3830,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Monash offers multiple scholarship tiers — leadership plus merit awards can be combined. Apply before March for July intake.",
       "deadline": "2027-03-31",
       "notificationDate": "2027-05-31",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Medium",
       "link": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-international-leadership-scholarship-5571Z"
     },
@@ -4936,7 +4936,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "60 awards per year across all disciplines. Ireland's flagship international scholarship. Apply directly to the Irish Research Council.",
       "deadline": "2027-03-31",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "Very High",
       "link": "https://research.ie"
     },
@@ -5585,7 +5585,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Highly competitive — only about 10–20 fellows per year globally. Comes with access to Microsoft Research mentors and resources.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://www.microsoft.com/en-us/research/academic-program/phd-fellowship"
     },
@@ -5678,7 +5678,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apple's PhD fellowship program for AI/ML is relatively new and highly selective. Fellows receive mentorship from Apple researchers.",
       "deadline": "2026-10-01",
       "notificationDate": "2027-02-28",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://machinelearning.apple.com"
     },
@@ -6053,7 +6053,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "30 fellows selected per year. Unique focus on immigration background and contribution. Program covers any US graduate school and any field.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.pdsoros.org"
     },
@@ -6660,7 +6660,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "AAUW also offers International Fellowships for women from outside the US studying in America. American Fellowship: US citizen or PR only.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.aauw.org/resources/programs/fellowships-grants/current-opportunities/american"
     },
@@ -6691,7 +6691,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Complements the American Fellowship — for non-US women studying in the US. Priority to women returning to serve their home countries after graduation.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.aauw.org/resources/programs/fellowships-grants/current-opportunities/international-fellowships"
     },
