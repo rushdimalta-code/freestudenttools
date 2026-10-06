@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-05",
+  "lastUpdated": "2026-10-06",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -58,7 +58,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply to 3 UK universities as part of the application. Opens September 2026, closes November 2026. Results announced June 2027.",
       "deadline": "2026-11-05",
       "notificationDate": "2027-06-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.chevening.org/scholarships"
     },
