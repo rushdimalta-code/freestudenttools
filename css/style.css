@@ -2335,3 +2335,60 @@ a.hx-card:hover { border-color:var(--border-dark); box-shadow:0 8px 24px rgba(15
 }
 .guide-next-actions li a:hover { background: #E0ECFD; transform: translateX(3px); text-decoration: none; }
 .guide-next-actions li a::after { content: "→"; margin-left: auto; }
+
+/* ===== Playful theme (2026-10) — overrides only; same markup ===== */
+:root{
+  --primary:#6C4CF1;--primary-hover:#5A3BDB;--primary-active:#4A2FC2;--primary-light:#F1EDFF;--primary-border:#D5CBFF;
+  --text-primary:#2B2250;--text-secondary:#4F4872;--text-muted:#5E567E;
+  --bg-light:#FFF8EC;--bg-gray:#F7EEDC;--border:#EDE3CF;
+  --pl-ink:#2B2250;--pl-line:#EDE3CF;--pl-yellow:#FFC93C;--pl-mint:#58CC9E;--pl-pink:#FF7A9A;--pl-sky:#7CC4FF;
+}
+body{background:#FFF8EC;color:var(--text-primary)}
+main#main-content{background:#FFF8EC}
+h1,h2,h3{letter-spacing:-.025em}
+h1,h2{font-weight:900}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:10px}
+/* nav */
+.nav{background:rgba(255,248,236,.92);border-bottom:0;box-shadow:0 3px 0 var(--pl-line)}
+.nav-links a{border-radius:12px;font-weight:700}
+.nav-dropdown-menu{border-radius:18px;border:2px solid var(--pl-line);box-shadow:0 8px 0 var(--pl-line)}
+/* buttons */
+.btn{border-radius:16px;font-weight:800;transition:transform .1s,box-shadow .1s}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 5px 0 var(--primary-active)}
+.btn-primary:hover{background:var(--primary-hover);transform:translateY(-2px);box-shadow:0 7px 0 var(--primary-active)}
+.btn-primary:active{transform:translateY(3px);box-shadow:0 2px 0 var(--primary-active)}
+.btn-outline,.btn-secondary,.btn-ghost{border-radius:16px;border:2px solid var(--pl-line);background:#fff;color:var(--pl-ink);box-shadow:0 5px 0 var(--pl-line)}
+.btn-outline:hover,.btn-secondary:hover,.btn-ghost:hover{transform:translateY(-2px);border-color:var(--primary)}
+.btn-success{background:#047857;box-shadow:0 5px 0 #065F46}
+/* heroes: deep purple family, rounded base (body-prefixed to beat per-page inline styles) */
+body .hero,body .page-hero,body .admissions-hero,body .scholar-hero,body .compare-hero,body .tips-hero,body .blog-post-hero{border-radius:0 0 44px 44px}
+body .hero,body .page-hero,body .blog-post-hero{background:linear-gradient(135deg,#2B2250 0%,#4A2FC2 100%)!important}
+body .admissions-hero{background:linear-gradient(135deg,#2B2250 0%,#5B3FD6 100%)!important}
+body .scholar-hero{background:linear-gradient(135deg,#0B4F45 0%,#12806A 100%)!important}
+body .compare-hero{background:linear-gradient(135deg,#2B2250 0%,#3B5BDB 100%)!important}
+body .tips-hero{background:linear-gradient(135deg,#7A1B3F 0%,#C23469 100%)!important}
+.hero h1,.page-hero h1{font-weight:900}
+.page-hero-badge,.hero-pill{background:var(--pl-yellow)!important;color:var(--pl-ink)!important;border:0!important;font-weight:800}
+/* surfaces */
+.tool-main{border-radius:28px;border:2px solid var(--pl-line);box-shadow:0 8px 0 var(--pl-line)}
+.upload-zone{border-radius:24px;border:3px dashed #CFC3FF;background:#FBF9FF}
+.upload-zone:hover{border-color:var(--primary);background:#F4F0FF}
+.tool-card-home,.guide-home-card,.hx-action,.hub-card,.privacy-feature-card,.blog-card,.scholar-card,.compare-card{
+  border-radius:24px;border:2px solid var(--pl-line);box-shadow:0 6px 0 var(--pl-line);background:#fff;
+  transition:transform .25s cubic-bezier(.3,1.6,.6,1),box-shadow .25s}
+.tool-card-home:hover,.guide-home-card:hover,.hx-action:hover,.hub-card:hover,.blog-card:hover,.scholar-card:hover{
+  transform:translateY(-4px) rotate(-.6deg);box-shadow:0 10px 0 var(--pl-line)}
+.tc-top-stripe{display:none}
+.tool-tag,.guide-home-tag,.hx-chip,.hx-badge{border-radius:999px;font-weight:800}
+.guide-home-img,.blog-card-img{border-radius:22px 22px 0 0;overflow:hidden}
+.blog-post-hero-img-wrap,.blog-post-hero-img{border-radius:28px;overflow:hidden}
+.blog-post-content h2{font-weight:900}
+.blog-post-content a{color:var(--primary)}
+.guide-next-actions,.tool-next{border-radius:28px;border:2px solid var(--pl-line);background:#fff;box-shadow:0 6px 0 var(--pl-line)}
+details{border-radius:18px}
+input[type=text],input[type=search],input[type=email],select,textarea{border-radius:14px;border:2px solid var(--pl-line)}
+input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+/* footer */
+.footer{background:#2B2250;border-radius:44px 44px 0 0;margin-top:40px}
+.cookie-banner,#cookieBanner{border-radius:22px}
+@media(prefers-reduced-motion:reduce){.btn,.tool-card-home,.guide-home-card,.hx-action,.hub-card,.blog-card,.scholar-card{transition:none!important;transform:none!important}}
