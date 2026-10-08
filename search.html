@@ -229,8 +229,8 @@
             <li><a href="/citation-generator.html">Citation Generator</a></li>
           </ul>
         </li>
-        <li><a href="/travel.html">✈️ Travel</a></li>
-        <li><a href="/blog/" style="background:#EFF6FF;color:#1D4ED8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
+        <li><a href="/travel.html"><span class="ic ic-plane" aria-hidden="true"></span> Travel</a></li>
+        <li><a href="/blog/" style="background:#EFF6FF;color:#1D4ED8;border-radius:6px;padding:5px 12px;font-weight:700;"><span class="ic ic-book" aria-hidden="true"></span> Guides</a></li>
         <li><a href="/about.html">About</a></li>
         <li class="nav-lang-wrap">
           <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language, currently EN" aria-expanded="false" aria-haspopup="true">
@@ -279,8 +279,8 @@
     <a href="/pdf-merger.html">PDF Merger</a>
     <a href="/pdf-extractor.html">PDF Page Extractor</a>
     <a href="/citation-generator.html">Citation Generator</a>
-    <a href="/travel.html">✈️ Travel Hub</a>
-    <a href="/blog/" style="color:#3B82F6;font-weight:700;">📖 Student Guides</a>
+    <a href="/travel.html"><span class="ic ic-plane" aria-hidden="true"></span> Travel Hub</a>
+    <a href="/blog/" style="color:#3B82F6;font-weight:700;"><span class="ic ic-book" aria-hidden="true"></span> Student Guides</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
   </nav>
@@ -305,7 +305,7 @@
     <h1>What are you looking for?</h1>
     <div class="search-wrap">
       <input type="search" class="search-input" id="searchInput" placeholder="Try: Chevening, IELTS, PDF converter, UK visa…" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Search site">
-      <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+      <button class="search-clear" id="searchClear" aria-label="Clear search"><span class="ic ic-cross" role="img" aria-label="No"></span></button>
     </div>
     <p class="search-hint">Searching 43 guides, 7 tools, and 13 hubs</p>
   </div>
@@ -318,13 +318,13 @@
 
     <div class="search-filters" id="filterRow" style="display:none">
       <button class="sf-btn active" data-cat="all" onclick="setFilter('all')">All</button>
-      <button class="sf-btn" data-cat="guide" onclick="setFilter('guide')">📖 Guides</button>
-      <button class="sf-btn" data-cat="tool" onclick="setFilter('tool')">🔧 Tools</button>
-      <button class="sf-btn" data-cat="hub" onclick="setFilter('hub')">🏛️ Hubs</button>
+      <button class="sf-btn" data-cat="guide" onclick="setFilter('guide')"><span class="ic ic-book" aria-hidden="true"></span> Guides</button>
+      <button class="sf-btn" data-cat="tool" onclick="setFilter('tool')"><span class="ic ic-tool" aria-hidden="true"></span> Tools</button>
+      <button class="sf-btn" data-cat="hub" onclick="setFilter('hub')"><span class="ic ic-bank" aria-hidden="true"></span> Hubs</button>
     </div>
 
     <div id="emptyState" class="search-empty">
-      <div class="search-empty-icon">🔍</div>
+      <div class="search-empty-icon"><span class="ic ic-search" aria-hidden="true"></span></div>
       <h2>No results found</h2>
       <p>Try different keywords, or browse these popular topics:</p>
       <div class="search-suggestions">

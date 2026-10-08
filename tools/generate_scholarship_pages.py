@@ -21,6 +21,9 @@ TODAY = date.today()
 # netlify.toml caches these for 7 days, so browsers keep running stale copies
 # unless the URL changes. Bump this whenever style.css or common.js changes,
 # and keep it identical to the ?v= value used across the other HTML pages.
+import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from build_icons import convert as convert_icons  # playful icon set (replaces stock emoji)
+
 ASSET_VERSION = "20261008"
 
 # ── Index-quality curation (2026-08-28) ──────────────────────────────────────
@@ -857,7 +860,7 @@ def main():
 
     count = 0
     for s in scholarships:
-        page = generate_page(s, scholarships)
+        page = convert_icons(generate_page(s, scholarships))[0]
         path = os.path.join(out_dir, f"{s['id']}.html")
         with open(path, "w", encoding="utf-8") as f:
             f.write(page)

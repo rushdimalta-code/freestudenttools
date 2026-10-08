@@ -248,8 +248,8 @@
             <li><a href="/citation-generator.html">Citation Generator</a></li>
           </ul>
         </li>
-        <li><a href="/travel.html">✈️ Travel</a></li>
-        <li><a href="/blog/" style="background:#EFF6FF;color:#1D4ED8;border-radius:6px;padding:5px 12px;font-weight:700;">📖 Guides</a></li>
+        <li><a href="/travel.html"><span class="ic ic-plane" aria-hidden="true"></span> Travel</a></li>
+        <li><a href="/blog/" style="background:#EFF6FF;color:#1D4ED8;border-radius:6px;padding:5px 12px;font-weight:700;"><span class="ic ic-book" aria-hidden="true"></span> Guides</a></li>
         <li><a href="/about.html">About</a></li>
         <li class="nav-lang-wrap">
           <button class="lang-toggle" id="langBtn" onclick="fstLangToggle(event)" aria-label="Change language, currently EN" aria-expanded="false" aria-haspopup="true">
@@ -298,11 +298,11 @@
     <a href="/pdf-merger.html">PDF Merger</a>
     <a href="/pdf-extractor.html">PDF Page Extractor</a>
     <a href="/citation-generator.html">Citation Generator</a>
-    <a href="/travel.html">✈️ Travel Hub</a>
-    <a href="/blog/" style="color:#3B82F6;font-weight:700;">📖 Student Guides</a>
+    <a href="/travel.html"><span class="ic ic-plane" aria-hidden="true"></span> Travel Hub</a>
+    <a href="/blog/" style="color:#3B82F6;font-weight:700;"><span class="ic ic-book" aria-hidden="true"></span> Student Guides</a>
     <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
-    <span class="nav-mobile-label nav-mobile-lang-label">🌐 Language</span>
+    <span class="nav-mobile-label nav-mobile-lang-label"><span class="ic ic-globe" aria-hidden="true"></span> Language</span>
     <div class="lang-mobile-grid">
       <a href="#" onclick="fstSwitchLang('zh-CN');return false">中文</a>
       <a href="#" onclick="fstSwitchLang('ms');return false">Bahasa</a>
@@ -344,7 +344,7 @@
 <!-- HERO -->
 <section class="blog-hero">
   <div class="container">
-    <div class="blog-hero-badge">📖 Student Guides</div>
+    <div class="blog-hero-badge"><span class="ic ic-book" aria-hidden="true"></span> Student Guides</div>
     <h1>Guides that actually help international students</h1>
     <p>52 in-depth guides covering scholarships, student visas, study costs, language tests, health, accommodation, and post-study work visas. Real numbers, honest advice.</p>
     <div style="max-width:520px;margin:0 auto 24px;position:relative">
@@ -352,7 +352,7 @@
         style="width:100%;padding:13px 44px 13px 18px;border-radius:12px;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-size:.92rem;font-family:inherit;outline:none;box-sizing:border-box;transition:border-color .2s"
         onfocus="this.style.borderColor='rgba(255,255,255,.4)'" onblur="this.style.borderColor='rgba(255,255,255,.15)'" oninput="fstBlogFilter(this.value)" aria-label="Filter guides">
       <button onclick="document.getElementById('blogSearch').value='';fstBlogFilter('');" aria-label="Clear search"
-        style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.35);font-size:1.1rem;line-height:1">✕</button>
+        style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:rgba(255,255,255,.35);font-size:1.1rem;line-height:1"><span class="ic ic-cross" role="img" aria-label="No"></span></button>
     </div>
     <div id="blogSearchStatus" style="font-size:.82rem;color:rgba(255,255,255,.45);margin-bottom:4px;min-height:1.2em"></div>
     <div class="blog-stats">
@@ -382,7 +382,7 @@
         <h2>How to Apply for the Chevening Scholarship — and Actually Get It</h2>
         <p>The UK's flagship scholarship funds 1,800 students a year from 160+ countries. The essays aren't hard. The interviews are. Here's what the selection panel is actually looking for.</p>
         <div class="blog-card-meta">
-          <span>📅 June 2026</span>
+          <span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span>
           <span>⏱ 9 min read</span>
         </div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -399,7 +399,7 @@
         <h2>The Fulbright Scholarship: What Nobody Tells You Before You Apply</h2>
         <p>The world's most recognised scholarship rejects over 85% of applicants — including strong ones. The difference usually isn't academic credentials. It's this.</p>
         <div class="blog-card-meta">
-          <span>📅 June 2026</span>
+          <span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span>
           <span>⏱ 10 min read</span>
         </div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -416,7 +416,7 @@
         <h2>DAAD Scholarship: Germany's Most Overlooked Fully-Funded Opportunity</h2>
         <p>Most students applying to Germany skip DAAD because it looks complicated. It's not — but you do need to pick the right programme. There are 70+ of them and only a few actually matter for most applicants.</p>
         <div class="blog-card-meta">
-          <span>📅 June 2026</span>
+          <span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span>
           <span>⏱ 8 min read</span>
         </div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -426,14 +426,14 @@
     <a href="/blog/gates-cambridge-scholarship-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/gates-cambridge-hero.jpg" alt="How to apply for the Gates Cambridge Scholarship" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🎓</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-cap" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Cambridge · Fully Funded</span>
         <h2>The Gates Cambridge Scholarship: Why Smart People Get Rejected</h2>
         <p>Around 90 scholarships. Over 5,000 applicants. The people who don't get it aren't the ones with weak academics — they're the ones who applied like it was a standard funding application. It isn't.</p>
         <div class="blog-card-meta">
-          <span>📅 June 2026</span>
+          <span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span>
           <span>⏱ 10 min read</span>
         </div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -450,7 +450,7 @@
         <h2>Erasmus Mundus: How to Pick the Right Programme (and Actually Get In)</h2>
         <p>There are 140+ Erasmus Mundus programmes. Picking the wrong one is the most common mistake. The second most common mistake is applying to a programme that's full two years before it says it closes.</p>
         <div class="blog-card-meta">
-          <span>📅 June 2026</span>
+          <span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span>
           <span>⏱ 9 min read</span>
         </div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
@@ -460,13 +460,13 @@
     <a href="/blog/rhodes-scholarship-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/rhodes-scholarship-guide-hero.jpg" alt="Oxford University at dusk — home of the Rhodes Scholarship" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🎓</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-cap" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag purple">Oxford · Fully Funded</span>
         <h2>Rhodes Scholarship Guide 2026: What They Actually Look For</h2>
         <p>Acceptance rates well below 1%. The 4 selection criteria and how they're actually weighted. Why brilliant academics get rejected and what the interview really tests.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 11 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 11 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -474,13 +474,13 @@
     <a href="/blog/commonwealth-scholarship-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/commonwealth-scholarship-guide-hero.jpg" alt="International students from Commonwealth nations at graduation" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🌍</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-globe" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">UK · Fully Funded</span>
         <h2>Commonwealth Scholarship Guide 2026: What Sets Applications Apart</h2>
         <p>Fully funded UK master's and PhD for citizens of lower and middle income Commonwealth countries. The development impact criterion is where most applications succeed or fail — not the academic record.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -494,7 +494,7 @@
         <span class="blog-card-tag red">Japan · Fully Funded</span>
         <h2>MEXT Japan Scholarship Guide 2026: Two Routes, One Goal</h2>
         <p>¥143,000/month, tuition waived, flights included. Embassy Recommendation and University Recommendation routes work completely differently — and most guides only explain one of them.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 11 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 11 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -508,7 +508,7 @@
         <span class="blog-card-tag green">South Korea · Fully Funded</span>
         <h2>Korea GKS Scholarship Guide 2026: Embassy Track vs University Track</h2>
         <p>₩1,000,000/month, 100% tuition, a full year of Korean language training, and 2,000+ places across 155 countries. Most applicants choose the wrong track for their profile — here's how not to.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 11 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 11 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -522,7 +522,7 @@
         <span class="blog-card-tag orange">Turkey · Fully Funded</span>
         <h2>Türkiye Bursları Scholarship Guide 2026: 40 Days, 12 Choices, One Shot</h2>
         <p>Free tuition, free dormitory, ₺18,000/month stipend — open to 180+ countries for just 40 days (January 10 to February 20). The application window is the hardest constraint. Here's what to do before it opens.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -540,13 +540,13 @@
     <a href="/blog/how-to-write-scholarship-essay" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-write-scholarship-essay-hero.jpg" alt="Student writing a scholarship essay with notes and laptop" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">✍️</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-pen" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Strategy · Writing</span>
         <h2>How to Write a Scholarship Essay That Actually Gets Funded</h2>
         <p>What selectors are actually reading for. Why most essays fail. The 5 structural elements that differentiate funded from rejected — without using templates.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -554,13 +554,13 @@
     <a href="/blog/how-to-prepare-scholarship-interview" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-prepare-scholarship-interview-hero.jpg" alt="Student at a scholarship panel interview" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🎤</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-mic" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Strategy · Interview</span>
         <h2>How to Prepare for a Scholarship Interview: What Panels Are Actually Testing</h2>
         <p>Panel interviews are not knowledge tests. Why agreeing with selectors when challenged is a mistake. How to hold a position under pressure without becoming defensive.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -568,13 +568,13 @@
     <a href="/blog/scholarship-letter-of-recommendation-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/scholarship-letter-of-recommendation-guide-hero.jpg" alt="Student with scholarship acceptance letter and recommendation documents" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📄</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-doc" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Strategy · References</span>
         <h2>How to Get a Strong Scholarship Letter of Recommendation</h2>
         <p>A generic letter is almost as damaging as a bad one. Who to ask, when to ask (3 months minimum for major scholarships), and what to send them so they can write specifically about you.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -582,13 +582,13 @@
     <a href="/blog/how-to-write-statement-of-purpose-masters" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-write-statement-of-purpose-masters-hero.jpg" alt="Graduate student writing at a sunlit university library desk with books and journals" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">✍️</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-pen" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Strategy · SOP Writing</span>
         <h2>How to Write a Statement of Purpose for a Master's (That Actually Works)</h2>
         <p>500–1,000 words to prove you've thought more clearly about your field than anyone else they'll read that day. Most SOPs fail before the second paragraph. Here's the structure that doesn't.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -602,20 +602,20 @@
         <span class="blog-card-tag">PhD Applications · Cold Email</span>
         <h2>How to Email a Professor for a PhD Position (and Funding)</h2>
         <p>Cold emails to professors get a 10–25% reply rate. When emailing actually matters by country, what to put in 150 words, and the one thing to do before you send.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
     <a href="/blog/proof-of-funds-student-visa" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/proof-of-funds-student-visa-hero.jpg" alt="A passport, printed bank statements and a calculator on a desk in morning light" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">💳</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-card" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Student Visas · Finance</span>
         <h2>Proof of Funds for a Student Visa: How Much, and How to Show It</h2>
         <p>UK, US, Canada and Australia each want a different amount held a different way. The exact living-cost figures, the 28-day rule, and the funding sources that get refused.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -628,20 +628,20 @@
         <span class="blog-card-tag">Scholarships · Strategy</span>
         <h2>Scholarship Rejected? How to Reapply and Actually Win Next Time</h2>
         <p>Most rejections aren't about being unqualified. The four real reasons, whether to reapply at all, and what to change in 6–12 months that isn't the essay.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
     <a href="/blog/motivation-letter-vs-scholarship-essay-vs-sop" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/motivation-letter-vs-scholarship-essay-vs-sop-hero.jpg" alt="Overhead view of a desk with three separate stacks of document drafts and a pen" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📝</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-clip" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Applications · Essay Types</span>
         <h2>Motivation Letter vs Scholarship Essay vs SOP: Which to Write When</h2>
         <p>Four documents, four jobs. When you need a motivation letter, a scholarship essay, an SOP or a personal statement — and exactly what content you can reuse.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -660,13 +660,13 @@
     <a href="/blog/university-admissions-interview-tell-me-about-yourself" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/university-admissions-interview-tell-me-about-yourself-hero.jpg" alt="Student confidently presenting in a university interview" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🎤</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-mic" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag purple">Admissions · Interview</span>
         <h2>How to Answer "Tell Me About Yourself" in a University Interview</h2>
         <p>Most students answer this chronologically. Admissions panels are looking for a story arc — present achievement, past foundation, future direction. Here's the exact formula.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -674,13 +674,13 @@
     <a href="/blog/university-admissions-interview-questions" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/university-admissions-interview-questions-hero.jpg" alt="Student preparing for university admissions interview questions" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📋</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-clip" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag purple">Admissions · Interview</span>
         <h2>10 University Admissions Interview Questions — What They're Really Testing</h2>
         <p>Every question has a surface question and a real question. Admissions panels use "Why this university?" to test intellectual fit — not enthusiasm. Here's what they're actually scoring.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -688,13 +688,13 @@
     <a href="/blog/how-to-write-university-personal-statement" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-write-university-personal-statement-hero.jpg" alt="Student writing a UCAS personal statement on laptop" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">✍️</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-pen" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag purple">Admissions · UCAS</span>
         <h2>How to Write a University Personal Statement That Gets You In</h2>
         <p>4,000 characters, 47 lines, and most students waste the first third on why they want to study. Tutors read hundreds of statements. Here's what makes yours stand out in the first paragraph.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -708,7 +708,7 @@
         <span class="blog-card-tag purple">Admissions · UCAS</span>
         <h2>Conditional vs Unconditional University Offer: What They Mean and What to Do</h2>
         <p>UCAS received 1.9 million conditional offers in 2023 vs just 87,000 unconditional. Understanding the difference — and the strategic implications — matters more than most students realise.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 6 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 6 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -716,13 +716,13 @@
     <a href="/blog/how-to-choose-country-to-study-abroad" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-choose-country-to-study-abroad-hero.jpg" alt="Glowing world map with flag pins for UK USA Canada Australia and Germany" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🌍</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-globe" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Destinations · 5 Countries</span>
         <h2>How to Choose Which Country to Study Abroad — UK vs USA vs Canada vs Australia vs Germany</h2>
         <p>Five countries, different costs, different work rights, different post-study paths. Most students choose on brand name alone. Here's the comparison that actually tells you which one fits your goals.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 11 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 11 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -740,13 +740,13 @@
     <a href="/blog/real-cost-of-studying-abroad-2026" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/real-cost-of-studying-abroad-2026-hero.jpg" alt="International student reviewing budget with calculator and country flags" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">💰</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-coin" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Finance · 5 Countries</span>
         <h2>The Real Cost of Studying Abroad in 2026: UK, USA, Germany, Canada, Australia</h2>
         <p>Tuition fees are the headline number. The number that actually determines your finances is total cost of attendance — and it can be 2–3× higher than tuition alone. Country by country breakdown.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -754,13 +754,13 @@
     <a href="/blog/student-bank-accounts-international-students" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/student-bank-accounts-international-students-hero.jpg" alt="International student using mobile banking app" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🏦</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-bank" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Finance · Banking</span>
         <h2>Best Bank Accounts for International Students 2026</h2>
         <p>Traditional banks charge 2–5% on international transfers. Wise charges 0.35–2.85%. Here's which account to open first, how to open it remotely, and how to avoid the fees that drain student budgets.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -768,13 +768,13 @@
     <a href="/blog/tuition-fee-waivers-grants-international-students" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/tuition-fee-waivers-grants-international-students-hero.jpg" alt="Student receiving tuition fee waiver or grant at university finance office" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🎓</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-cap" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag green">Finance · Waivers</span>
         <h2>Tuition Fee Waivers and Grants for International Students: How to Actually Get One</h2>
         <p>Most students never apply because they assume they won't qualify. UK PhD stipends start at £18,622/year. Department waivers can cut fees by 20–50%. The application process is simpler than you think.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -782,13 +782,13 @@
     <a href="/blog/how-to-budget-first-year-abroad" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-budget-first-year-abroad-hero.jpg" alt="Student planning monthly budget with spreadsheet and receipts" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📊</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-chart" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Finance · Budgeting</span>
         <h2>How to Budget Your First Year Abroad: A Month-by-Month Plan</h2>
         <p>Month 1 costs £1,200–£2,000 more than every month after it. Most students arrive underprepared for setup costs and overprepared for ongoing ones. Here's the correct budget model.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -802,7 +802,7 @@
         <span class="blog-card-tag orange">Finance · Taxes</span>
         <h2>International Student Taxes Guide 2026: USA, UK, Canada, Australia</h2>
         <p>Every F-1 student must file Form 8843 — even with zero income. Miss it and you risk your visa. Tax rules for international students are country-specific and counter-intuitive. Here's the real picture for each country.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -816,7 +816,7 @@
         <span class="blog-card-tag green">Finance · Savings</span>
         <h2>The Complete Student Discounts Guide for International Students 2026</h2>
         <p>The GitHub Student Developer Pack alone is worth $200,000+ in software. The ISIC card gives 150,000+ discounts in 130 countries. Most students ignore both. Here's what's actually worth getting.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -834,13 +834,13 @@
     <a href="/blog/ielts-speaking-test-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/ielts-speaking-test-guide-hero.jpg" alt="Student practising IELTS speaking test with examiner" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🎤</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-mic" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Language · IELTS Speaking</span>
         <h2>IELTS Speaking Test: How to Prepare for Parts 1, 2 and 3</h2>
         <p>Most candidates lose marks in Part 3 — not because their English is weak, but because they don't know what the examiner is actually evaluating. The 4-criterion breakdown and prep plan are here.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -848,13 +848,13 @@
     <a href="/blog/duolingo-english-test-guide-2026" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/duolingo-english-test-guide-hero.jpg" alt="Student taking the Duolingo English Test on a laptop" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📱</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-phone" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Language · Duolingo DET</span>
         <h2>Duolingo English Test 2026: Complete Preparation Guide</h2>
         <p>$65, results in 2 days, accepted at 5,000+ institutions. But the photo description questions trip up most first-timers — and some top universities still won't accept it. Here's everything you need to know.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -862,13 +862,13 @@
     <a href="/blog/ielts-vs-toefl-vs-duolingo-english-test" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/ielts-vs-toefl-vs-duolingo-english-test-hero.jpg" alt="Student taking an English language test" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📝</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-clip" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Language · Test Comparison</span>
         <h2>IELTS vs TOEFL vs Duolingo English Test: Which One Should You Take?</h2>
         <p>The answer depends on where you're applying. Duolingo saves you £150 but isn't accepted by most Russell Group or Ivy League universities. Here's the decision tree that matches your situation.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -876,13 +876,13 @@
     <a href="/blog/how-to-prepare-ielts-8-weeks" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-to-prepare-ielts-8-weeks-hero.jpg" alt="Student studying for IELTS with books and headphones" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">📚</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-book" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Language · IELTS Prep</span>
         <h2>How to Prepare for IELTS in 8 Weeks: A Week-by-Week Study Plan</h2>
         <p>8 weeks is enough to move a full band — if you're working on the right skills. Writing Task 2 is where most candidates lose marks they should keep. Week-by-week plan inside.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -900,13 +900,13 @@
     <a href="/blog/student-health-requirements-by-country" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/student-health-requirements-by-country-hero.jpg" alt="International student passport next to vaccination booklet and medical documents" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🏥</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-med" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag green">Health · Visa Requirements</span>
         <h2>Student Health Requirements by Country 2026 — TB Tests, Vaccinations, Medical Exams</h2>
         <p>Most students don't realise several countries require medical checks before the visa is issued. 8 destinations compared: UK, USA, Canada, Australia, Germany, Netherlands, France, Singapore.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -914,13 +914,13 @@
     <a href="/blog/health-insurance-international-students" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/health-insurance-international-students-hero.jpg" alt="International student at a modern clinic with a reassuring doctor" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🏥</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-med" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag green">Health · Insurance</span>
         <h2>Health Insurance for International Students: Country-by-Country Guide 2026</h2>
         <p>Free in the UK and Germany. Up to $4,000/year in the USA. Getting this wrong — or arriving without cover on day one — can mean catastrophic costs. Real numbers for every destination.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -928,13 +928,13 @@
     <a href="/blog/student-mental-health-abroad" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/student-mental-health-abroad-hero.jpg" alt="International student sitting quietly in a sunlit university campus garden" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">💙</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-heart" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag purple">Mental Health · Wellbeing</span>
         <h2>Student Mental Health Abroad: What No One Tells You Before You Leave</h2>
         <p>1 in 3 international students experiences depression or anxiety. Only 15% seek help. Here's what the difficult weeks actually look like — and what works when you're in the middle of them.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -942,13 +942,13 @@
     <a href="/blog/student-accommodation-abroad-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/student-accommodation-abroad-guide-hero.jpg" alt="Bright modern student accommodation room with large window" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🏠</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-house" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Accommodation · Student Life</span>
         <h2>Student Accommodation Abroad Guide 2026: Halls, Private Rentals, Homestay</h2>
         <p>University halls fill before June for September entry. Private student accommodation in London averages £700–£1,200/month. Every option compared — costs, pros, cons, when to book.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -956,13 +956,13 @@
     <a href="/blog/culture-shock-university-abroad" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/culture-shock-university-abroad-hero.jpg" alt="International students from diverse backgrounds studying together" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🌍</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-globe" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag purple">Culture Shock · Student Life</span>
         <h2>Culture Shock at University Abroad: The 4 Stages and How to Get Through Them</h2>
         <p>Weeks 6–10 are the hardest. Most students who withdraw do so in this window. What each stage feels like — and what actually moves you through to adaptation faster.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -970,13 +970,13 @@
     <a href="/blog/international-student-packing-checklist" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/international-student-packing-checklist-hero.jpg" alt="Open suitcase neatly packed with clothes, passport, and travel documents" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🧳</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-bag" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Life · Pre-Departure</span>
         <h2>International Student Packing Checklist: What to Pack, What to Leave, What to Sort Before You Leave</h2>
         <p>The document you forget costs more than everything else in your suitcase combined. The medicine you can't get abroad might not be available at your destination. The stuff you definitely don't need takes up the space you'll want for the things you'll buy when you arrive.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 8 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 8 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -994,13 +994,13 @@
     <a href="/blog/how-many-hours-international-students-work" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/how-many-hours-international-students-work-hero.jpg" alt="International student working at a café counter" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">💼</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-bag" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Work · Visa Rules</span>
         <h2>How Many Hours Can International Students Work? 2026 Rules by Country</h2>
         <p>Work the wrong number of hours and you risk your visa. UK: 20h/week. USA: 20h on-campus only. Canada: 24h. Australia: 48h/fortnight (changed 2023). Get this right before you start.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 6 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 6 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1008,13 +1008,13 @@
     <a href="/blog/finding-part-time-work-international-students" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/finding-part-time-work-international-students-hero.jpg" alt="International student working at a university library" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🔍</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-search" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag orange">Work · Job Search</span>
         <h2>Finding Part-Time Work as an International Student: What Actually Works</h2>
         <p>60% of on-campus jobs fill before they're posted publicly. Private tutoring pays £20–£50/hour from day one. Here's where to look, what pays best, and the one tactic that beats online applications.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 6 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 6 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1028,7 +1028,7 @@
         <span class="blog-card-tag green">Work · USA · CPT &amp; OPT</span>
         <h2>CPT vs OPT: The Complete Guide to Work Authorization for F-1 International Students</h2>
         <p>12 months of full-time CPT permanently eliminates your OPT eligibility. Most students don't know this until it's too late. Here's how CPT and OPT actually work — and the mistakes that cost people their post-graduation window.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1052,7 +1052,7 @@
         <span class="blog-card-tag">UK · Student Visa</span>
         <h2>UK Student Visa 2026: Complete Guide for International Students</h2>
         <p>The headline fee is £490 — but a 3-year degree student pays £2,818 before arriving. Here's what you actually need: CAS, 28-day bank statements, IHS, and when to apply.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1066,7 +1066,7 @@
         <span class="blog-card-tag red">Canada · Study Permit</span>
         <h2>Canada Study Permit 2026: Complete Guide for International Students</h2>
         <p>The permit fee is CAD $150 — but DLI verification, proof of funds, biometrics, and PGWP eligibility are what actually determine your outcome. Here's what you need to check before accepting an offer.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1080,7 +1080,7 @@
         <span class="blog-card-tag green">USA · F-1 Student Visa</span>
         <h2>USA F-1 Student Visa 2026: Complete Guide for International Students</h2>
         <p>$535 in fees before you even get an interview — and in India, China, or Nigeria, that interview might be 400+ days away. The I-20, SEVIS, DS-160, and OPT path explained.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 11 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 11 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1094,7 +1094,7 @@
         <span class="blog-card-tag orange">Australia · Subclass 500</span>
         <h2>Australia Student Visa (Subclass 500) 2026: Complete Guide</h2>
         <p>AUD $710 application fee plus mandatory OSHC health cover. The GTE requirement is where most applicants from high-risk countries fall over — not the fees. Here's the full picture.</p>
-        <div class="blog-card-meta"><span>📅 July 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> July 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1118,7 +1118,7 @@
         <span class="blog-card-tag">UK · Graduate Visa</span>
         <h2>UK Graduate Route Visa 2026: What It Is, Who Can Apply, and What You Can Do</h2>
         <p>£822, 2 years, any job at any level with no sponsor required. It can't be extended — and it doesn't lead directly to permanent residence. Here's exactly what it does and doesn't give you.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 6 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 6 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1132,7 +1132,7 @@
         <span class="blog-card-tag green">USA · OPT / STEM OPT</span>
         <h2>USA OPT and STEM OPT Guide for F-1 Students 2026</h2>
         <p>OPT processing takes 3–5 months. Apply 90 days before graduation or you'll spend months unable to work. STEM graduates get 24 additional months. Here's the full timeline and what goes wrong.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 7 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 7 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1146,7 +1146,7 @@
         <span class="blog-card-tag purple">Germany · Job Seeker Visa</span>
         <h2>Germany Post-Study Work Permit: 18-Month Job Seeker Visa Explained</h2>
         <p>18 months to find a qualifying job. Financial proof of ~€17,000 required. Job must match your qualification level. Here's exactly how to apply and what the hidden barriers actually are.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 6 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 6 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1160,7 +1160,7 @@
         <span class="blog-card-tag red">Canada · PGWP</span>
         <h2>Canada PGWP: Post-Graduate Work Permit Guide 2026</h2>
         <p>Programme length = permit length, up to 3 years. Open permit — any job, any employer. But 2024 changes mean not all Canadian programmes qualify anymore. Check your DLI before you enrol.</p>
-        <div class="blog-card-meta"><span>📅 June 2026</span><span>⏱ 6 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> June 2026</span><span>⏱ 6 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1179,13 +1179,13 @@
     <a href="/blog/international-student-first-week-arrival-guide" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/international-student-first-week-arrival-guide-hero.jpg" alt="International student arriving with suitcases at university" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">🛬</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-plane" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag">Arrival · Setup</span>
         <h2>First Week as an International Student: Complete Arrival Checklist 2026</h2>
         <p>BRP collection, bank account, GP registration, SIM card — in exactly the right order. Miss one step and it cascades. Here's the day-by-day checklist that keeps you ahead of it.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 10 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 10 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1193,13 +1193,13 @@
     <a href="/blog/cheap-flights-for-international-students" class="blog-card">
       <div class="blog-card-img">
         <img src="/assets/blog/cheap-flights-for-international-students-hero.jpg" alt="Student checking flight deals on laptop at airport" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.blog-card-img-placeholder').style.display='flex'">
-        <div class="blog-card-img-placeholder" style="display:none">✈️</div>
+        <div class="blog-card-img-placeholder" style="display:none"><span class="ic ic-plane" aria-hidden="true"></span></div>
       </div>
       <div class="blog-card-content">
         <span class="blog-card-tag green">Travel · Money</span>
         <h2>How to Find Cheap Flights as an International Student 2026</h2>
         <p>Booking "early" doesn't actually save money on most long-haul routes. The 2–6 month window does. Plus: student fares, VPN tricks, baggage math, and the tools that work.</p>
-        <div class="blog-card-meta"><span>📅 August 2026</span><span>⏱ 9 min read</span></div>
+        <div class="blog-card-meta"><span><span class="ic ic-cal" aria-hidden="true"></span> August 2026</span><span>⏱ 9 min read</span></div>
         <span class="blog-read-more">Read guide <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </a>
@@ -1229,7 +1229,7 @@
           <a href="/scholarship-guide.html">Scholarship Guide</a>
           <a href="/compare.html">Compare Degrees</a>
           <a href="/tips.html">Student Tips</a>
-          <a href="/blog/" style="color:#3B82F6;font-weight:700;">📖 Student Guides</a>
+          <a href="/blog/" style="color:#3B82F6;font-weight:700;"><span class="ic ic-book" aria-hidden="true"></span> Student Guides</a>
         </div>
         <div class="footer-col">
           <h4>Tools</h4>
