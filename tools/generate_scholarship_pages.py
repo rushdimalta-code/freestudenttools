@@ -24,7 +24,7 @@ TODAY = date.today()
 import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_icons import convert as convert_icons  # playful icon set (replaces stock emoji)
 
-ASSET_VERSION = "20261008"
+ASSET_VERSION = "20261009"
 
 # ── Index-quality curation (2026-08-28) ──────────────────────────────────────
 # Only nationally/globally recognised schemes get indexed. Single-university
