@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-09",
+  "lastUpdated": "2026-10-10",
   "scholarships": [
     {
       "id": "fulbright_foreign",
