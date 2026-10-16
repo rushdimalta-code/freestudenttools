@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-15",
+  "lastUpdated": "2026-10-16",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -28,7 +28,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the most prestigious international scholarships. Each country has its own portal and deadline — check your national commission.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-03-01",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://foreign.fulbrightonline.org"
     },
@@ -242,7 +242,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "DAAD doctoral scholarships run for up to 4 years. Must have a German host supervisor lined up at application.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-02-28",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships"
     },
@@ -274,7 +274,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "For study programs taught in German. Separate DAAD scholarships exist for English-taught programs in STEM fields.",
       "deadline": "2026-11-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.daad.de/en/study-and-research-in-germany/scholarships"
     },
@@ -1482,7 +1482,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Automatically considered during EPFL master's admissions if you are admitted — no separate scholarship application.",
       "deadline": "2026-11-15",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.epfl.ch"
     },
@@ -5436,7 +5436,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "INSEAD awards over €8 million in scholarships annually. Regional awards (Africa, Asia, Latin America) and named fellowships available. Apply during admissions process.",
       "deadline": "2026-11-15",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.insead.edu/master-programmes/master-business-administration/financing"
     },
@@ -5616,7 +5616,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Around 10 fellows selected globally per year. Comes with a summer research internship at Meta AI.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-02-28",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://research.facebook.com/fellowship"
     },
@@ -5926,7 +5926,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Priority deadlines at schools like Northeastern, Tulane, American University, and Elon University award merit scholarships on a first-come, first-served basis. Apply early for maximum scholarship consideration.",
       "deadline": "2026-11-15",
       "notificationDate": "2026-12-15",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.commonapp.org"
     },
@@ -6022,7 +6022,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the most prestigious early-career research fellowships in the US. Cannot be applied for after the second year of graduate study.",
       "deadline": "2026-10-15",
       "notificationDate": "2027-03-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://www.nsfgrfp.org"
     },
