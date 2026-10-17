@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-16",
+  "lastUpdated": "2026-10-17",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -4967,7 +4967,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of the most prestigious scholarships for Latin Americans studying in Spain. ~200–300 awards per year across disciplines. Opens February–April annually.",
       "deadline": "2027-04-15",
       "notificationDate": "2027-06-30",
-      "status": "upcoming",
+      "status": "open",
       "competitionLevel": "High",
       "link": "https://www.fundacioncarolina.es/becas"
     },
