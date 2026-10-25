@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-24",
+  "lastUpdated": "2026-10-25",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -6183,7 +6183,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "MSCA Doctoral Networks replaced ITN (Innovative Training Networks). Each project recruits multiple PhD students across European universities. Apply to specific vacancies on EURAXESS or the project website. The 2026 consortium call closes 24 November 2026.",
       "deadline": "2026-11-24",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks"
     },
