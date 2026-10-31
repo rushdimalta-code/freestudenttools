@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-10-30",
+  "lastUpdated": "2026-10-31",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1227,7 +1227,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Many different programs — Global Network Scholarship, Junior Faculty Development, and others. Check OSF website for current open programs.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.opensocietyfoundations.org"
     },
@@ -1542,7 +1542,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Most PhD students at NUS receive some form of funding. Top candidates receive full NUS Research Scholarship automatically.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://ngs.nus.edu.sg"
     },
@@ -2032,7 +2032,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Almost all admitted international students at KAIST receive full financial support. KAIST consistently ranks in the global top 50 for engineering.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://admission.kaist.ac.kr/intl-graduate"
     },
@@ -3358,7 +3358,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "RWTH Aachen ranks among the top 10 European technical universities. Many scholarships tied to research groups — contact faculty directly.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.rwth-aachen.de/go/id/bgkn"
     },
@@ -3612,7 +3612,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Most UTokyo PhD students receive MEXT funding or research assistantships. PEAK is UTokyo's flagship English UG program.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.u-tokyo.ac.jp"
     },
@@ -3799,7 +3799,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "NUS School of Computing is consistently top-5 globally for CS. Research groups in AI, systems, security, HCI, and data science. Most admitted students receive full funding.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.comp.nus.edu.sg"
     },
@@ -4526,7 +4526,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "One of Latin America's most generous national scholarship programs. Covers study at Oxford, MIT, ETH Zurich, etc. Bond: must return and work in Colombia.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://minciencias.gov.co/convocatorias/formacion-y-vinculacion-del-capital-humano-de-alto-nivel/becas-para-estudios-al"
     },
@@ -4654,7 +4654,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "AMIDEAST administers several US government and private foundation programs in the MENA region including English Access Microscholarship Program.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.amideast.org/our-work/find-a-scholarship"
     },
@@ -4718,7 +4718,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Multiple programs under the British Council arts umbrella. International collaboration grants pair artists from different countries. Separate from educational scholarships.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.britishcouncil.org/arts/cultural-skills-and-development"
     },
@@ -4906,7 +4906,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Aurora focuses on research cooperation in Arctic sciences. Strong in climate, ecology, marine science, and indigenous studies.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://hkdir.no"
     },
@@ -5711,7 +5711,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "J.P. Morgan scholarships often come with mentoring, networking, and fast-track to internship. Check local J.P. Morgan office for your country's program.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://careers.jpmorgan.com/global/en/students/programs/scholarships"
     },
@@ -5837,7 +5837,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply through your home university's international office — you cannot apply directly to Erasmus+. Your university must have an agreement with the European institution.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://erasmus-plus.ec.europa.eu"
     },
@@ -5896,7 +5896,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Universities including Exeter, Leeds, Sheffield, Birmingham, and Nottingham have historically offered early-bird incentives. Check directly at application — conditions change annually.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Low",
       "link": "https://www.ucas.com"
     },
@@ -6402,7 +6402,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "The Hertz Fellowship is among the most prestigious science fellowships in the US. Past fellows include Nobel laureates, MacArthur fellows, and tech founders.",
       "deadline": "2026-10-30",
       "notificationDate": "2027-03-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://www.hertzfoundation.org/the-fellowship"
     },
@@ -6594,7 +6594,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "VIED manages Vietnam's overseas scholarship programs. Also check 322/165 and 911 programs for doctoral training. Apply through your provincial Department of Education and Training.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://vied.vn"
     },
@@ -7068,7 +7068,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Kyoto University has produced the most Nobel Prize winners in Asia (18 as of 2024). Strong in physics, chemistry, biology, and humanities. MEXT scholarship application is the main funding route.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.kyoto-u.ac.jp"
     },
@@ -7190,7 +7190,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Strong focus on Lusophone countries. Also offers scholarships for Portuguese language study (language-learner grants).",
       "deadline": "2026-11-30",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.instituto-camoes.pt"
     },
@@ -7348,7 +7348,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Joint program between FAO and the Italian government. Programs at universities including Bologna, Florence, Turin, and Padua.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.fao.org"
     },
@@ -7408,7 +7408,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Aurora focuses on research cooperation in Arctic sciences. Strong in climate, ecology, marine science, and indigenous studies.",
       "deadline": "2026-11-30",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://hkdir.no"
     },
