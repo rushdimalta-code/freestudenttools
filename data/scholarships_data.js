@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-11-01",
+  "lastUpdated": "2026-11-02",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1667,7 +1667,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Replaced the Vanier CGS and CGS-D from the 2025 competition, and now funds international students at Canadian institutions. Apply through your Canadian university — institutional deadlines vary (mid-September to early October); the agency deadline is around 1 November. Maximum of three applications per person.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Extremely High",
       "link": "https://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/cgrsd-besrd_eng.asp"
     },
@@ -6053,7 +6053,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "30 fellows selected per year. Unique focus on immigration background and contribution. Program covers any US graduate school and any field.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-03-31",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "Very High",
       "link": "https://www.pdsoros.org"
     },
@@ -6660,7 +6660,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "AAUW also offers International Fellowships for women from outside the US studying in America. American Fellowship: US citizen or PR only.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.aauw.org/resources/programs/fellowships-grants/current-opportunities/american"
     },
@@ -6691,7 +6691,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Complements the American Fellowship — for non-US women studying in the US. Priority to women returning to serve their home countries after graduation.",
       "deadline": "2026-11-01",
       "notificationDate": "2027-04-30",
-      "status": "closing_soon",
+      "status": "closed",
       "competitionLevel": "High",
       "link": "https://www.aauw.org/resources/programs/fellowships-grants/current-opportunities/international-fellowships"
     },
