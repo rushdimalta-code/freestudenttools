@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-11-02",
+  "lastUpdated": "2026-11-03",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -120,7 +120,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "2,000+ applications received per year for ~80 awards. One of the most competitive scholarships globally.",
       "deadline": "2026-12-03",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.gatescambridge.org"
     },
