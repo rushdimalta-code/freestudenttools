@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-11-04",
+  "lastUpdated": "2026-11-05",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -1388,7 +1388,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Do not need to apply separately — auto-consideration with any Oxford graduate application submitted by December deadline. Around 150 awards per year.",
       "deadline": "2026-12-05",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.ox.ac.uk/clarendon"
     },
@@ -2248,7 +2248,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Auto-considered with Cambridge PhD application if submitted by first deadline. Around 15–20 awards per year.",
       "deadline": "2026-12-05",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.cambridgetrust.org/scholarships/cambridge-international-scholarship"
     },
