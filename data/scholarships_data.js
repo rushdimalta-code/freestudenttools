@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-11-07",
+  "lastUpdated": "2026-11-08",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -6465,7 +6465,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "F31 is the standard predoctoral fellowship mechanism at NIH. Multiple institutes offer F31 awards. Builds your CV for future R01 applications.",
       "deadline": "2026-12-08",
       "notificationDate": "2027-05-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://researchtraining.nih.gov/programs/fellowships/F31"
     },
