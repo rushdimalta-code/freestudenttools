@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-11-09",
+  "lastUpdated": "2026-11-10",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -5746,7 +5746,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Around 15–20 scholarships per year. Covers study at MIT, Harvard, Oxford, Cambridge, LSE, and equivalent institutions. Very generous cap.",
       "deadline": "2026-12-10",
       "notificationDate": "2027-05-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.inlaksfoundation.org"
     },
