@@ -62,6 +62,130 @@
   to = "/scholarship/aecid_spain"
   status = 301
 
+# Force-redirect .html URLs to canonical clean URLs
+# Netlify serves static files before redirect rules, so force=true is required.
+# Without this, internal links using .html extension cause Google to crawl and
+# track the .html URL as a separate page from the canonical clean URL.
+[[redirects]]
+  from = "/scholarship-guide.html"
+  to = "/scholarship-guide"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/image-compressor.html"
+  to = "/image-compressor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admissions.html"
+  to = "/admissions"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/scholarships.html"
+  to = "/scholarships"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compare.html"
+  to = "/compare"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compare-scholarships.html"
+  to = "/compare-scholarships"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tips.html"
+  to = "/tips"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ocr.html"
+  to = "/ocr"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pdf-converter.html"
+  to = "/pdf-converter"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/compressor.html"
+  to = "/compressor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pdf-merger.html"
+  to = "/pdf-merger"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pdf-extractor.html"
+  to = "/pdf-extractor"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/citation-generator.html"
+  to = "/citation-generator"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms.html"
+  to = "/terms"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/cookies.html"
+  to = "/cookies"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/health-checks.html"
+  to = "/health-checks"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/travel.html"
+  to = "/travel"
+  status = 301
+  force = true
+
 # Individual scholarship detail pages — clean SEO URLs
 [[redirects]]
   from = "/scholarship/:id"
