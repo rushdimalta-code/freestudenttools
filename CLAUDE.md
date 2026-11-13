@@ -1,6 +1,6 @@
 # CLAUDE.md — Free Student Tools
 
-_Last updated: 2026-10-16 (rev 33)_
+_Last updated: 2026-11-13 (rev 34)_
 
 ---
 
@@ -952,6 +952,36 @@ Owner asked for a creative overhaul ("boring" editorial → "playful illustrated
 
 ### Other open items (unchanged)
 - Google indexing: GSC 2026-10-07 shows 74 "Discovered – not indexed" (never crawled, incl. `/about`, tools, ~28 guides). Cause = crawl budget/no backlinks, not content. Plan: manual Request Indexing ~10/day (scholarship guides → visa/money guides → tools → rest) + the 4-week backlink plan (rev 32), still **not started**. Chrome extension profile (rushdi.hameed@gmail.com) lacks GSC access — use the owner's profile or add as user.
+
+---
+
+## GSC "Crawled – currently not indexed" audit (rev 34, 2026-11-13)
+
+40 pages in the "Crawled – currently not indexed" bucket in GSC. Investigated and triaged into 4 groups.
+
+**Group 1 — ~24 scholarship pages (last crawled Jun 16, 2026):**
+Mix of two sub-cases: (a) pages that ARE in `KEEP_INDEXED` (e.g. `gates_cambridge`, `vanier_canada`, `swiss_excellence`) but Google quality-rejected — templated content can't compete with the official scholarship sites. (b) pages with explicit `noindex` from the generator — these were crawled before or around the time `noindex` was set; on next recrawl Google will move them to "Excluded by noindex." Neither sub-case is a code bug. No fix applied.
+
+**Group 2 — `scholarship-guide.html`, `image-compressor.html` (and risk of all 20 root `.html` pages):**
+Root cause: internal nav links across 17 root HTML files use `.html` extension (e.g. `href="scholarship-guide.html"` not `href="/scholarship-guide"`). Netlify serves static files directly when the `.html` URL is requested — no redirect fires — so Google crawled the `.html` URL, saw the canonical pointing to the clean URL, and tracked the `.html` URL as a separate "crawled not indexed" page.
+
+**Fix applied — `netlify.toml`, commit `05b4f95`:** added `force = true` 301 redirects for all 20 root pages with clean URL equivalents. `force = true` is required because Netlify's default static-file-first behavior ignores redirect rules when a matching file exists. Chain: `/page.html` → 301 → `/page` → 200 rewrite → serves `/page.html` content. No redirect loop (the 301 source and 200 rewrite source are different paths).
+
+**Group 3 — `scholarship.html?id=rhodes_scholarship`, `scholarship.html?id=fulbright_foreign`:**
+The JS-rendered fallback shell already carries `noindex`. GSC tracks query-string URLs separately from the base URL. Working as intended — no fix needed.
+
+**Group 4 — 11 blog posts (last crawled Aug–Oct 2026):**
+Technical signals are correct: canonical URLs match sitemap, no noindex, clean URLs in all internal links. This is a content-quality threshold issue — Google decided these posts don't merit indexing relative to competing pages. The earlier 37 posts (pre-Aug 2026) are indexed; these 11 newer ones are still pending evaluation. No code fix possible here; the levers are content quality improvement and inbound links from other sites.
+
+**netlify.toml URL rule summary (post-fix):**
+Netlify processes redirect rules top-to-bottom. Rule priority order now in `netlify.toml`:
+1. Dead scholarship ID 301s (specific IDs → corrected ID or `/scholarships`)
+2. **NEW: Force 301s for `.html` → clean URL (all 20 root pages, `force = true`)**
+3. `/scholarship/:id` → `/scholarship/:id.html` (200 rewrite)
+4. Root page clean URL 200 rewrites
+5. Blog post clean URL 200 rewrites
+
+Do NOT add new pages with `.html` hrefs in nav/footer — always use the clean URL (`/page-name` not `page-name.html`). The long-term fix is replacing hard-coded nav/footer with Eleventy partials (Phase 0, parked).
 
 ---
 
