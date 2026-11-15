@@ -1,5 +1,5 @@
 window.SCHOLARSHIP_DATA = {
-  "lastUpdated": "2026-11-14",
+  "lastUpdated": "2026-11-15",
   "scholarships": [
     {
       "id": "fulbright_foreign",
@@ -89,7 +89,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Covers doctoral, master's, and split-site (PhD) awards. Managed in partnership with UK universities.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://cscuk.fcdo.gov.uk/scholarships"
     },
@@ -936,7 +936,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Multiple programs under NAWA covering short-term and full-degree scholarships. Check NAWA website for current open calls.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://nawa.gov.pl/en/students"
     },
@@ -1161,7 +1161,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Closed to new applications in some countries — check Ford Foundation website for active partner countries and organisations.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-05-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.fordfoundation.org/work/our-grants/grants-database"
     },
@@ -1450,7 +1450,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply to ETH Zurich master's program first — scholarship application submitted after conditional admission. Deadline: December 15.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://ethz.ch"
     },
@@ -1574,7 +1574,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "No separate application needed — automatically considered for all high-achieving international applicants to ANU.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-02-28",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://www.anu.edu.au/study/scholarships/find-a-scholarship/anu-chancellors-international-scholarship"
     },
@@ -2098,7 +2098,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Apply through UNSW admissions — no separate scholarship form. Automatically considered for high-achieving applicants.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-01-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.unsw.edu.au"
     },
@@ -2513,7 +2513,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Focus on technical and development fields that contribute to Arab world economic development.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "High",
       "link": "https://arabfund.org/en/scholarships"
     },
@@ -2740,7 +2740,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Harvard funds the vast majority of PhD students admitted to GSAS. Funding is multi-year and renewable. Apply to the PhD program — no separate scholarship form.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://gsas.harvard.edu/financial-support"
     },
@@ -2773,7 +2773,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Presidential Fellows are the cream of each year's admitted PhD class. Funding continues through research assistantships after year 1. Apply to MIT — fellowship is automatic if selected.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-15",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://gradadmissions.mit.edu/costs-funding/funding-mit-graduate-education"
     },
@@ -2802,7 +2802,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "Yale guarantees funding for all PhD students admitted to GSAS for the first 5–6 years. Apply to the doctoral program — automatic consideration.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://gsas.yale.edu/funding"
     },
@@ -2861,7 +2861,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "PhD students admitted to GSAS receive multi-year funding packages. Some departments offer named fellowships with additional funding.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://www.gsas.columbia.edu/content/financial-support"
     },
@@ -2924,7 +2924,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "UChicago offers one of the most comprehensive PhD funding packages in the US. Humanities and social sciences are fully guaranteed for 5 years.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Extremely High",
       "link": "https://grad.uchicago.edu"
     },
@@ -2986,7 +2986,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "JHU is known for research opportunities, especially in biomedical sciences and public health. PhD funding is near-universal.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://www.jhu.edu/graduate-studies"
     },
@@ -7004,7 +7004,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "ETH Zurich is ranked #7 globally and #1 in continental Europe. ESOP provides CHF 24,000/year — substantial but Switzerland is expensive. Separate from the base ETH scholarship.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-03-31",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Very High",
       "link": "https://esop.ethz.ch"
     },
@@ -7221,7 +7221,7 @@ window.SCHOLARSHIP_DATA = {
       "notes": "AECID manages Spain's main international scholarship program. Strong focus on Latin America and the Caribbean. Also see: Fundación Carolina scholarships.",
       "deadline": "2026-12-15",
       "notificationDate": "2027-04-30",
-      "status": "open",
+      "status": "closing_soon",
       "competitionLevel": "Medium",
       "link": "https://www.aecid.es/EN/becas-y-lectorados"
     },
